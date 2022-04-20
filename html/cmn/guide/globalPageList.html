@@ -23,7 +23,12 @@ nav ul li a {display:block; height:3.0rem; padding: 0 2.0rem; border-radius: 1.5
   padding: 0.8rem 0.6rem;
   border-bottom: 1px solid #eee;
 }
+tr td:nth-child(4),
+tr td:nth-child(5) {
+  text-align: center;
+}
 .tbl_wrap tr td a {color:#666; text-decoration: underline;}
+.notLink {color: #999;}
 @media screen and (max-width: 767px) {
   .contents > section[data-roll="guide"] {padding: 0 0 6.0rem;}
   .tbl_wrap tr th,
@@ -79,7 +84,7 @@ nav ul li a {display:block; height:3.0rem; padding: 0 2.0rem; border-radius: 1.5
 <script>
 var tBody = document.getElementById('guideList');
 var menuList = [
-  {'group':'메인', 'code':'HMN','depth1':'메인','name':'하나머니 메인','pageid':'HMN_001', 'status':'', 'date':'', 'remarks':'Native'},
+  {'group':'메인', 'code':'HMN','depth1':'메인','name':'하나머니 메인','pageid':'HMN_001', 'status':'X', 'date':'', 'remarks':'Native'},
   {'group':'', 'code':'HMN', 'depth1':'','name':'돈통 더보기','pageid':'HMN_101', 'status':'', 'date':'', 'remarks':''},
   {'group':'', 'code':'HMN', 'depth1':'','name':'돈통 전체보기','pageid':'HMN_102', 'status':'', 'date':'', 'remarks':''},
   {'group':'', 'code':'HMN', 'depth1':'','name':'하나머니 메인','pageid':'HMN_201', 'status':'', 'date':'', 'remarks':''},
@@ -131,10 +136,10 @@ var menuList = [
 
 
   {'group':'Util', 'code':'UTL','depth1':'이용안내','name':'하나머니 이용안내','pageid':'UTL_001', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'UTL','depth1':'전체메뉴','name':'전체메뉴','pageid':'UTL_101', 'status':'', 'date':'', 'remarks':''},
+  {'group':'', 'code':'UTL','depth1':'전체메뉴','name':'전체메뉴','pageid':'UTL_101', 'status':'X', 'date':'', 'remarks':'Native'},
 
 
-  {'group':'회원가입', 'code':'USR','depth1':'신규회원가입','name':'통합 약관동의','pageid':'USR_001', 'status':'', 'date':'', 'remarks':''},
+  {'group':'회원가입', 'code':'USR','depth1':'신규회원가입','name':'통합 약관동의','pageid':'USR_001', 'status':'X', 'date':'', 'remarks':'Native'},
   {'group':'', 'code':'USR','depth1':'글로벌월렛 가입','name':'글로벌 약관동의','pageid':'USR_101', 'status':'', 'date':'', 'remarks':''},
   {'group':'', 'code':'USR','depth1':'','name':'계좌연결','pageid':'USR_102', 'status':'', 'date':'', 'remarks':''},
   {'group':'', 'code':'USR','depth1':'','name':'카드발급 브릿지','pageid':'USR_103', 'status':'', 'date':'', 'remarks':''},
@@ -160,12 +165,17 @@ var menuList = [
 
 menuList.forEach(function(item, index){ 
   let tr;
+  let link = `<a href="/html/global/${item.code}/${item.pageid}.html" target="_blank" class="pageLink">${item.pageid}</a>`;
+  if (item.remarks === 'Native') {
+    link = `<span class="notLink">${item.pageid}</span>`;
+  }
+
   if (item.group !== ''){
     tr = `<tr id="${item.code}" class="group">
             <td>${item.group}</td>
             <td>${item.depth1}</td>
             <td>${item.name}</td>
-            <td><a href="/html/global/${item.code}/${item.pageid}.html" target="_blank">${item.pageid}</a></td>
+            <td>${link}</td>
             <td>${item.status}</td>
             <td>${item.date}</td>
             <td>${item.remarks}</td>
@@ -175,7 +185,7 @@ menuList.forEach(function(item, index){
             <td>${item.group}</td>
             <td>${item.depth1}</td>
             <td>${item.name}</td>
-            <td><a href="/html/global/${item.code}/${item.pageid}.html" target="_blank">${item.pageid}</a></td>
+            <td>${link}</td>
             <td>${item.status}</td>
             <td>${item.date}</td>
             <td>${item.remarks}</td>
@@ -184,6 +194,16 @@ menuList.forEach(function(item, index){
   tBody.innerHTML += tr;
   PageCount = index;
 });
+
+const linkBtns = document.querySelectorAll('.pageLink');
+for (linkBtn of linkBtns) {
+  linkBtn.addEventListener('click', (e) => {
+    let status = e.target.parentNode.nextElementSibling.textContent;
+    if (status === '' || status === 'X' || status === '작업중') {
+      e.preventDefault();
+    }
+  });
+}
 </script>
 </body>
 </html>
