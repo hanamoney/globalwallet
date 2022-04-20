@@ -4,27 +4,27 @@
 	font-family: 'Spoqa';
 	font-style: normal;
 	font-weight: 300;
-	src: url(/font/cmn/SpoqaHanSansNeo-Light.woff2) format('woff2'),
-		url(/font/cmn/NSpoqaHanSansNeo-Light.woff) format('woff'),
-		url(/font/cmn/SpoqaHanSansNeo-Light.otf) format('opentype');
+	src: url(/font/hmui/SpoqaHanSansNeo-Light.woff2) format('woff2'),
+		url(/font/hmui/NSpoqaHanSansNeo-Light.woff) format('woff'),
+		url(/font/hmui/SpoqaHanSansNeo-Light.otf) format('opentype');
 }
 
 @font-face {
 	font-family: 'Spoqa';
 	font-style: normal;
 	font-weight: 400;
-	src: url(/font/cmn/SpoqaHanSansNeo-Regular.woff2) format('woff2'),
-		url(/font/cmn/SpoqaHanSansNeo-Regular.woff) format('woff'),
-		url(/font/cmn/SpoqaHanSansNeo-Regular.otf) format('opentype');
+	src: url(/font/hmui/SpoqaHanSansNeo-Regular.woff2) format('woff2'),
+		url(/font/hmui/SpoqaHanSansNeo-Regular.woff) format('woff'),
+		url(/font/hmui/SpoqaHanSansNeo-Regular.otf) format('opentype');
 }
 
 @font-face {
 	font-family: 'Spoqa';
 	font-style: normal;
 	font-weight: 700;
-	src: url(/font/cmn/SpoqaHanSansNeo-Bold.woff2) format('woff2'),
-		url(/font/cmn/SpoqaHanSansNeo-Bold.woff) format('woff'),
-		url(/font/cmn/SpoqaHanSansNeo-Bold.otf) format('opentype');
+	src: url(/font/hmui/SpoqaHanSansNeo-Bold.woff2) format('woff2'),
+		url(/font/hmui/SpoqaHanSansNeo-Bold.woff) format('woff'),
+		url(/font/hmui/SpoqaHanSansNeo-Bold.otf) format('opentype');
 }
 
 /* [Reset] */
