@@ -9,14 +9,14 @@
 
   <link rel="stylesheet" href="/css/cmn/common.css">
   <style>
-#header {position:fixed; left:0; top:0; width:100vw; display: flex; flex-wrap: wrap; flex-direction: column; height: 9.0rem; background-color:#fff;}
+#header {width:100vw; display: flex; flex-wrap: wrap; flex-direction: column; height: 5.0rem; background-color:#fff;}
 h1 {text-align: center; font-size:1.8rem; font-weight:400; line-height: 5.0rem;}
 nav {width:100vw; height: 3.0rem;}
-nav ul {overflow-x: auto; width:100%; padding: 0 2.4rem; white-space: nowrap;}
+nav ul {overflow-x: auto; width:100%; white-space: nowrap;}
 nav ul li {display: inline-block;}
-nav ul li a {display:block; height:3.0rem; margin:0 0.4rem; padding: 0 2.0rem; border-radius: 1.5rem; background-color:#39C0B4; color:#fff; line-height:3.0rem;}
+nav ul li a {display:block; height:3.0rem; padding: 0 2.0rem; border-radius: 1.5rem; color:#000; font-size: 1.2rem; line-height:3.0rem;}
 ::-webkit-scrollbar {display: none;}
-.contents > section[data-roll="guide"] {padding: 12.0rem 2.4rem 6.0rem;}
+.contents > section[data-roll="guide"] {padding: 0 2.4rem 6.0rem;}
 .tbl_wrap {border-top: 1px solid #6E7D85;}
 .tbl_wrap tr th,
 .tbl_wrap tr td {
@@ -25,7 +25,7 @@ nav ul li a {display:block; height:3.0rem; margin:0 0.4rem; padding: 0 2.0rem; b
 }
 .tbl_wrap tr td a {color:#666; text-decoration: underline;}
 @media screen and (max-width: 767px) {
-  .contents > section[data-roll="guide"] {padding: 12.0rem 0 6.0rem;}
+  .contents > section[data-roll="guide"] {padding: 0 0 6.0rem;}
   .tbl_wrap tr th,
   .tbl_wrap tr td  {
     font-size: 1.2rem;
@@ -45,20 +45,6 @@ nav ul li a {display:block; height:3.0rem; margin:0 0.4rem; padding: 0 2.0rem; b
   <main id="root">
     <header id="header">
       <h1>화면리스트</h1>
-      <nav>
-        <ul>
-          <li><a href="#HMN">메인</a></li>
-          <li><a href="#TDL">조회</a></li>
-          <li><a href="#CHG">원화충전</a></li>
-          <li><a href="#RTN">환전</a></li>
-          <li><a href="#SET">관리</a></li>
-          <li><a href="#VDB">혜택</a></li>
-          <li><a href="#GSP">글로벌</a></li>
-          <li><a href="#UTL">유틸</a></li>
-          <li><a href="#USR">회원가입</a></li>
-          <li><a href="#PEX">포인트전환</a></li>
-        </ul>
-      </nav>
     </header>
 
     <div id="container" class="wrap_contents">
@@ -197,8 +183,7 @@ menuList.forEach(function(item, index){
   }
   tBody.innerHTML += tr;
   PageCount = index;
-});  
-
+});
 </script>
 </body>
 </html>
