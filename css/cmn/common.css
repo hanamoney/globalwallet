@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* [Font] */
+@font-face {
+	font-family: 'Spoqa';
+	font-style: normal;
+	font-weight: 300;
+	src: url(/font/cmn/SpoqaHanSansNeo-Light.woff2) format('woff2'),
+		url(/font/cmn/NSpoqaHanSansNeo-Light.woff) format('woff'),
+		url(/font/cmn/SpoqaHanSansNeo-Light.otf) format('opentype');
+}
+
+@font-face {
+	font-family: 'Spoqa';
+	font-style: normal;
+	font-weight: 400;
+	src: url(/font/cmn/SpoqaHanSansNeo-Regular.woff2) format('woff2'),
+		url(/font/cmn/SpoqaHanSansNeo-Regular.woff) format('woff'),
+		url(/font/cmn/SpoqaHanSansNeo-Regular.otf) format('opentype');
+}
+
+@font-face {
+	font-family: 'Spoqa';
+	font-style: normal;
+	font-weight: 700;
+	src: url(/font/cmn/SpoqaHanSansNeo-Bold.woff2) format('woff2'),
+		url(/font/cmn/SpoqaHanSansNeo-Bold.woff) format('woff'),
+		url(/font/cmn/SpoqaHanSansNeo-Bold.otf) format('opentype');
+}
+
+/* [Reset] */
+html,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul {
+  margin: 0;
+  padding: 0;
+}
+body,button,input,select,table,textarea {
+  font-size: 1.4rem;
+  line-height: normal;
+  font-family: 'Spoqa',-apple-system,helvetica,Apple SD Gothic Neo,sans-serif;
+  letter-spacing: -.5px;
+}
+body {
+  position: relative;
+  -webkit-text-size-adjust: none;
+  background-color: #fff;
+}
+html, body {
+  font-size: 10px;
+}
+fieldset,img {
+  border: 0;
+}
+ol,ul {
+  list-style: none;
+}
+address,em {
+  font-style: normal;
+}
+input, textarea, select {
+  outline: 0;
+  border-radius: 0;
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[readonly] {
+  -webkit-user-select: none;
+  user-select: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: 0;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+}
+table {
+  border-collapse: collapse;
+}
+caption {
+  display: none;
+}
+mark {
+  background: transparent;
+}
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* [Layout] */
+#wrap {
+  position: relative;
+  height: 100%;
+}
+#header {
+
+}
+
+/* [common] */
+* {box-sizing: border-box;}
+
+/* Title */
+
+/* Text */
+.txt_num {
+  letter-spacing: 0;
+}
+
+/* Align */
+
+/* Icon */
+
+/* Checkbox */
+
+/* Radio */
+
+/* Input text */
+
+/* Button */
+
+/* Table */
+
+/* tab */
+
+/* list */
+
+/* Box */
+
+/* message */
+
+/* Layer pop */
+
+/* Alert */
+
+/* Toast */
+
+/* Tooltip */
