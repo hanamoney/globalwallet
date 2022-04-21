@@ -1,7 +1,21 @@
 'use strict';
 var dim = '<div class="dim" aria-hidden="true"></div>';
+var ua = navigator.userAgent.toLocaleLowerCase();
+var isAOS = ua.indexOf('android') !== -1;
+var isiOS = ua.indexOf('iphone') !== -1;
+
+function androidV(ua) {
+  ua = (ua || navigator.userAgent).toLowerCase(); 
+  var match = ua.match(/android\s([0-9\.]*)/i);
+  return match ? match[1] : undefined;
+};
 
 $(function(){
+  if (isAOS) {
+    $('html').addClass('AOS');
+  } else {
+    $('html').addClass('iOS');
+  }
   registUI();
 });
 
