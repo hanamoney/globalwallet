@@ -2,31 +2,86 @@
 var dim = '<div class="dim" aria-hidden="true"></div>';
 
 $(function(){
-  console.log('load');
+  registUI();
 });
 
-// function openLayerPop($target) {
-//   var _this = $('body').find('.openPop');
-//   var _this_id = '#' + $target;
+var registUI = function(){
+  if ( $('.wrap_link_list').length ) { fnTabHightlight(); } // 링크 탭 하이라이트 
+  if ( $('.wrap_layer').length ) { fnLayerPop(); } // 레이어팝업
+};
 
-//   $(_this_id).toggleClass('show');
+var fnLayerPop = function() {
+  $('.fnOpenPop').on('click', function(){
+    var popId = $(this).attr('data-name');
+    fnOpenLayerPop(popId);
+  });
 
-//   if ( $(_this_id).hasClass('show') ) {
-//     $(_this_id).append('<div class="dim"></div>');
-//   };
+  $('.fnClosePop').on('click', function(){
+    var popId = $(this).closest('.wrap_layer').attr('id');
+    console.log(popId);
+    fnCloseLayerPop(popId);
+  });
+};
 
-//   $('body, html').toggleClass('open_pop');
-//   if ($(_this_id).find('h2').hasClass('tit_layer')) {
-//     $(_this_id).find('h2').attr('tabindex','0').focus();
-//   } else {
-//     $(_this_id).find('.inner_layer').children(':first').attr('tabindex','0').focus();
-//   }
+/**
+  * @name fnTabHightlight()
+  * @description 링크 탭 하이라이트 컬러
+  */
+var fnTabHightlight = function() {
+  $(document).on('touchstart', '.wrap_link_list a', function(e){
+    if (!$(this).hasClass('wrap_box')) {
+      $(this).addClass('active');
+    }
+  });
+  $(document).on('touchend', '.wrap_link_list a', function(e){
+    $(this).removeClass('active');
+  });
+}
+/**
+  * @name fnOpenLayerPop()
+  * @description 레이어팝업 열기
+  * @param {string} popID 팝업ID 
+  */
+var fnOpenLayerPop = function(popID) {
+  var $el = $('#' + popID);
 
-// }
+  if ($('.wrap_layer.show').length) {
+    var current = $('.wrap_layer.show').css('z-index');
+    var zIndex = parseInt(current) + 1;
+    $el.css('z-index', zIndex);
+  }
 
-// function closeLayerPop($target, $opener) {
-//   $target.removeClass('show');
-//   $('dim').remove();
-//   $('body, html').removeClass('open_pop');
-//   $opener.focus();
-// }
+  $('body').addClass('open_pop');
+  $el.addClass('show');
+  $el.append(dim);
+
+  if ($el.find('tit_layer').length) {
+    $el.find('.tit_layer').attr('tabindex','0').focus();
+  } else {
+    $el.find('.inner_layer').children(':first').attr('tabindex','0').focus();
+  }
+}
+
+/**
+  * @name fnOpenLayerPop()
+  * @description 레이어팝업 닫기
+  * @param {string} popID 팝업ID
+  * @param {string | Element} focusEl focus보낼 element
+  */
+var fnCloseLayerPop = function(popID, focusEl){
+  var $el = $('#' + popID);
+  var $focusEl;
+
+  console.log($el);
+  if (!focusEl) {
+    $focusEl = $('[data-name="' + popID + '"]');
+  }
+
+  $el.removeClass('show');
+  setTimeout(function(){
+    $el.find('.dim').remove();
+    $el.removeAttr('style');
+    $('body').removeClass('open_pop');
+    $focusEl.focus();
+  },300);
+}

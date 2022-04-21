@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>CHG_003</title>
+
+  <link rel="stylesheet" href="/css/hmui/common.css">
+  <link rel="stylesheet" href="/css/global/contents.css">
+  <script src="/js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="/js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>하나머니로 환전 신청</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="CHG">
+          
+        </section>
+        <!-- // section -->
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="popupId" class="wrap_layer type_full">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">충전할 화폐를 선택해 주세요.</h2>
+        </div>
+        <div class="content_layer">
+          <div class="section_chg_list type_line">
+            <ul>
+              <li>
+                <a href="#none">
+                  <span class="ico_hanamoney"></span>
+                  <span class="txt">하나머니</span>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <span class="ico_usd"></span>
+                  <span class="txt">하나머니</span>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <span class="ico_jpy"></span>
+                  <span class="txt">하나머니</span>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <span class="ico_eur"></span>
+                  <span class="txt">하나머니</span>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <span class="ico_gbp"></span>
+                  <span class="txt">하나머니</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="btn_close_layer fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // popup -->
+
+    <!-- confirm -->
+    <div id="confirmId" class="wrap_layer type_alert">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert">글로벌월렛을 사용하기 위해 계좌 연결이 필요해요! 계좌를 연결하러 가시겠어요?</p>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_secondary fnClosePop">아니오</button>
+            <button type="button" class="btn_full_primary fnClosePop">네</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // confirm -->
+  </main>
+  
+  
+  <script>
+    $(function(){
+      // 팝업오픈 퍼블확인용 스크립트 (실적용X)
+      fnOpenLayerPop('popupId');
+
+      // 컨펌창 오픈 테스트
+      $('.section_chg_list a').on('click', function(){
+        fnOpenLayerPop('confirmId');
+      });
+    });
+  </script>
+</body>
+</html>

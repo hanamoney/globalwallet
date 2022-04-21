@@ -41,16 +41,24 @@
 
         <!-- 하단고정 영역 -->
         <div class="section_bottom_fixed">
-          <div class="wrap_btn">
-            <button type="button">1만</button>
-            <button type="button">5만</button>
-            <button type="button">10만</button>
-            <button type="button">100만</button>
-            <button type="button">최대</button>
-            <span class="bubble"><em class="txt_num">1,251,230</em>까지 채울 수 있어요</span>
+          <div class="wrap_btn_box">
+            <ul>
+              <li><button type="button">1만</button></li>
+              <li><button type="button">5만</button></li>
+              <li><button type="button">10만</button></li>
+              <li><button type="button">100만</button></li>
+              <li>
+                <div class="tooltip_bubble right">
+                  <p><em class="txt_num">1,251,230</em>까지 채울 수 있어요</p>
+                  <span class="bubble_caret"></span>
+                </div>
+                <button type="button">최대</button>
+              </li>
+            </ul>
+            
           </div>
           <div class="wrap_btn_full">
-            <button type="button" class="btn_full_primary">충전하기</button>
+            <button type="button" class="btn_full_primary" disabled>충전하기</button>
           </div>
         </div>
         <!-- // 하단고정 영역 -->

@@ -76,6 +76,7 @@ button {
   -webkit-appearance: none;
   appearance: none;
   background-color: transparent;
+  color: inherit;
 }
 table {
   border-collapse: collapse;
@@ -96,6 +97,9 @@ mark {
 }
 
 /* [Layout] */
+body.overflow {
+  overflow: hidden;
+}
 #root {
   position: relative;
   height: 100%;
@@ -314,7 +318,7 @@ button[class^="btn"] {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 100;
 }
 .wrap_btn_full [class^="btn_full"]:first-child {
@@ -351,6 +355,32 @@ button[class^="btn"] {
   background-color: #F6F6F6;
   color: #D0D7D7;
 }
+.wrap_btn_box ul {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.wrap_btn_box ul li {
+  margin-left: 0.4rem;
+  width: 20%;
+}
+.wrap_btn_box button {
+  width: 100%;
+  height: 3.2rem;
+  border-radius: 0.4rem;
+  border: 1px solid #E3EBEE;
+  background-color: #fff;
+}
+.wrap_btn_box button:first-child {
+  margin-left: 0;
+}
+.section_bottom_fixed .wrap_btn_box {
+  position: fixed;
+  bottom: calc(6rem + 2.2rem);
+  right: 0;
+  left: 0;
+  padding: 0 1.5rem;
+}
 
 /* Table */
 
@@ -360,14 +390,30 @@ button[class^="btn"] {
 .wrap_link_list {
 
 }
-
+.wrap_link_list li {
+  overflow: hidden;
+  margin-top: 5px;
+}
+.wrap_link_list li:first-child {
+  margin-top: 0;
+}
+.wrap_link_list li a {
+  display: block;
+  width: 100%;
+  height: 6.0rem;
+  border-radius: 1.4rem;
+  -webkit-tap-highlight-color: transparent;
+}
+.wrap_link_list li a.active {
+  background-color: rgba(243,248,250,1);
+}
 /* Box */
 
 /* message */
 
 /* Layer pop */
 .dim {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -375,11 +421,106 @@ button[class^="btn"] {
   width: 100%;
   height: 100%;
   background-color: #000;
-  opacity: 0.5;
+  opacity: 0;
   z-index: 101;
+  will-change: opacity;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 .wrap_layer {
-  display: none;
+  visibility: hidden;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  will-change: visibility;
+  -webkit-transition: visibility 0.3s;
+  transition: visibility 0.3s;
+}
+.wrap_layer .inner_layer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2.4rem 2.4rem 0 0;
+  background-color: #fff;
+  z-index: 102;
+  will-change: transform;
+  -webkit-transform: translate3d(0px,100%,0px);
+  transform: translate3d(0px,100%,0px);
+  transition: transform 0.4s cubic-bezier(0.12, 0.86, 0.21, 1);
+}
+.wrap_layer .head_layer {
+  position: relative;
+  height: 5.4rem;
+}
+.wrap_layer .head_layer .tit_layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 3.0rem 5.5rem 0;
+  font-size: 2.0rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  text-align: center;
+}
+.wrap_layer.type_full .inner_layer {
+  height: 100%;
+  border-radius: 0;
+}
+.wrap_layer.type_full .head_layer {
+  height: 5.0rem;
+}
+.wrap_layer.type_full .head_layer .tit_layer {
+  padding: 0 4.6rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 5.0rem;
+}
+.wrap_layer.type_alert .inner_layer {
+  overflow: hidden;
+  right: 2.4rem;
+  left: 2.4rem;
+  border-radius: 1.4rem;
+}
+.wrap_layer.type_alert .content_layer {
+  padding: 2.0rem 2.0rem;
+}
+.wrap_layer.type_alert .txt_alert {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+.section_button_alert {
+  padding: 0;
+}
+.section_button_alert .wrap_btn_full {
+  position: relative;
+  padding: 0;
+}
+.section_button_alert .wrap_btn_full [class^="btn_full"] {
+  height: 5.4rem;
+  line-height: 5.4rem;
+}
+.wrap_layer.show {
+  visibility: visible;
+  opacity: 1;
+}
+.wrap_layer.show .dim {
+  opacity: 0.4;
+}
+.wrap_layer.show .inner_layer {
+  -webkit-transform: translate3d(0px, 0%, 0px);
+  transform: translate3d(0px, 0%, 0px);
+}
+.wrap_layer.type_alert.show .inner_layer {
+  bottom: 50%;
+  -webkit-transform: translate3d(0px, 50%, 0px);
+  transform: translate3d(0px, 50%, 0px);
 }
 
 /* Alert */
@@ -389,3 +530,21 @@ button[class^="btn"] {
 /* Tooltip */
 
 /* Bubble */
+.tooltip_bubble {
+  position: absolute;
+  top: -2.6rem;
+  color: #fff;
+}
+.tooltip_bubble.right {
+  right: 0;
+}
+.tooltip_bubble p {
+  padding: 0.6rem 1.2rem 0.5rem;
+  border-radius: 1.2rem;
+  background-color: #6E7D85;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.tooltip_bubble p em {
+  font-weight: 700;
+}
