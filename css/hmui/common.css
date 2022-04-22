@@ -471,6 +471,38 @@ a.wrap_box [class^="ico_arr_link"] {
 }
 
 /* message */
+.section_prc_complete {
+  padding-top: 4.0rem;
+}
+.section_prc_complete::before {
+  content: '';
+  display: block;
+  margin: 0 auto 1.8rem;
+  width: 6.0rem;
+  height: 6.0rem;
+}
+.section_prc_complete .txt_complete {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  font-weight: 300;
+  text-align: center;
+}
+.section_prc_complete .txt_complete em {
+  font-weight: 700;
+}
+.wrap_layer .section_prc_complete {
+  padding-bottom: 1.0rem;
+}
+.wrap_layer .section_prc_complete::before {
+  width: 5.4rem;
+  height: 5.4rem;
+  background: url('/images/hmui/ico_complete.png') no-repeat 50%;
+  background-size: 100%;
+}
+.wrap_layer .section_prc_complete .txt_complete {
+  font-size: 2.2rem;
+  line-height: 3.0rem;
+}
 
 /* Layer pop */
 .dim {
@@ -528,6 +560,9 @@ a.wrap_box [class^="ico_arr_link"] {
   line-height: 2.4rem;
   font-weight: 700;
   text-align: center;
+}
+.wrap_layer .content_layer {
+  padding-bottom: 3.0rem;
 }
 .wrap_layer.type_full .inner_layer {
   height: 100%;
