@@ -22,7 +22,6 @@ $(function(){
 var registUI = function(){
   if ( $('.wrap_link_list').length ) { fnTabHightlight(); } // 링크 탭 하이라이트 
   if ( $('.wrap_layer').length ) { fnLayerPop(); } // 레이어팝업
-  if ( $('input').length && $('.section_bottom_fixed').length ) { fnInpFixedBtn(); }
 };
 
 var fnLayerPop = function() {
