@@ -65,6 +65,10 @@ var fnOpenLayerPop = function(popID) {
     $el.css('z-index', zIndex);
   }
 
+  if ($('.section_bottom_fixed').length) {
+    $el.addClass('hasFixedBtn');
+  }
+
   $('body').addClass('open_pop');
   $el.addClass('show');
   $el.append(dim);

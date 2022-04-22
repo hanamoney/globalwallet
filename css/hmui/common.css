@@ -238,6 +238,8 @@ section[data-roll] {
   background-image: url('/images/hmui/btn_menu.png');
 }
 .btn_ico_close {
+  width: 2.6rem;
+  height: 2.6rem;
   background-image: url('/images/hmui/btn_close.png');
 }
 .btn_ico_card_header {
@@ -253,6 +255,25 @@ section[data-roll] {
 }
 .ico_arr_link_w {
   background-image: url('/images/hmui/ico_arr_link_w.png');
+}
+[class^="ico_cur_"] {
+  width: 3.0rem;
+  height: 3.0rem;
+}
+.ico_cur_hanamoney {
+  background-image: url('/images/hmui/ico_cur_hanamoney.png');
+}
+.ico_cur_usd {
+  background-image: url('/images/hmui/ico_cur_usd.png');
+}
+.ico_cur_jpy {
+  background-image: url('/images/hmui/ico_cur_jpy.png');
+}
+.ico_cur_eur {
+  background-image: url('/images/hmui/ico_cur_eur.png');
+}
+.ico_cur_gbp {
+  background-image: url('/images/hmui/ico_cur_gbp.png');
 }
 
 /* Checkbox */
@@ -446,6 +467,25 @@ button[class^="btn"] {
   padding-left: 1.0rem;
   font-size: 1.8rem;
 }
+.wrap_line_list {
+
+}
+.wrap_line_list li {
+  padding: 2.0rem 0;
+  border-bottom: 1px solid #E3EBEE;
+}
+.wrap_line_list li button {
+  display: flex;
+  align-items: center;
+}
+.wrap_line_list li .txt {
+  color: #000;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+.wrap_line_list [class^="ico_"] + .txt {
+  padding-left: 1.0rem;
+}
 
 /* Box */
 .wrap_box {
@@ -564,6 +604,11 @@ a.wrap_box [class^="ico_arr_link"] {
 .wrap_layer .content_layer {
   padding-bottom: 3.0rem;
 }
+.wrap_layer .btn_ico_close {
+  position: absolute;
+  top: 1.2rem;
+  right: 2.0rem;
+}
 .wrap_layer.type_full .inner_layer {
   height: 100%;
   border-radius: 0;
@@ -576,6 +621,13 @@ a.wrap_box [class^="ico_arr_link"] {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 5.0rem;
+}
+.wrap_layer.type_full .content_layer {
+  overflow-y: auto;
+  min-height: calc(100vh - 5.0rem);
+}
+.wrap_layer.type_full.hasFixedBtn .content_layer {
+  min-height: calc(100vh - 11.0rem);
 }
 .wrap_layer.type_alert .inner_layer {
   overflow: hidden;
