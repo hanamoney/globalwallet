@@ -473,12 +473,13 @@ button[class^="btn"] {
 
 }
 .wrap_line_list li {
-  padding: 2.0rem 0;
   border-bottom: 1px solid #E3EBEE;
 }
 .wrap_line_list li button {
   display: flex;
   align-items: center;
+  width: 100%;
+  padding: 2.0rem 0;
 }
 .wrap_line_list li .txt {
   color: #000;
