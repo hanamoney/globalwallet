@@ -22,6 +22,7 @@ $(function(){
 var registUI = function(){
   if ( $('.wrap_link_list').length ) { fnTabHightlight(); } // 링크 탭 하이라이트 
   if ( $('.wrap_layer').length ) { fnLayerPop(); } // 레이어팝업
+  if ( $('input').length && $('.section_bottom_fixed').length ) { fnInpFixedBtn(); }
 };
 
 var fnLayerPop = function() {
@@ -102,4 +103,23 @@ var fnCloseLayerPop = function(popID, focusEl){
     $('body').removeClass('open_pop');
     $focusEl.focus();
   },300);
+}
+
+var fnInpFixedBtn = function() {
+  console.log('1234');
+  var button = $('.section_bottom_fixed .wrap_btn_full')
+  var input = $('input');
+  var height = window.visualViewport.height;
+  var viewport = window.visualViewport;
+
+  window.addEventListener("scroll", () => input.blur());
+  window.visualViewport.addEventListener("resize", resizeHandler);
+
+  function resizeHandler() {
+    button.style.bottom = `${height - viewport.height + 10}px`;
+  }
+
+  function blurHandler() {
+    button.style.bottom = "10px";
+  }
 }
