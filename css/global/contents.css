@@ -5,10 +5,11 @@
   padding: 2.0rem 2.4rem 0;
 }
 .section_chg_list .wrap_link_list {
-  padding-top: 2.0rem;
+  padding-top: 1.0rem;
 }
 .section_chg_list .wrap_link_list a.wrap_box {
   height: auto;
+  margin-bottom: 1.5rem;
 }
 .section_chg_list .wrap_link_list .wrap_box .txt_bank {
   padding-top: 1.2rem;
