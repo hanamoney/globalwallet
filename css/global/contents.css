@@ -7,3 +7,33 @@
 .section_chg_list .wrap_link_list {
   padding-top: 2.0rem;
 }
+.section_chg_list .wrap_link_list a.wrap_box {
+  height: auto;
+}
+.section_chg_list .wrap_link_list .wrap_box .txt_bank {
+  padding-top: 1.2rem;
+  font-size: 2.0rem;
+  font-weight: 700;
+}
+.section_chg_list .wrap_link_list .wrap_box .txt_acc {
+  padding-top: 0.6rem;
+  font-size: 1.6rem;
+  letter-spacing: 0;
+}
+.section_chg_list .wrap_link_list .wrap_box .txt {
+  font-size: 2.0rem;
+  font-weight: 300;
+}
+.wrap_btn_box li:last-child .tooltip_bubble .bubble_caret {
+  left: auto;
+  right: calc(20% - 10px);
+}
+[class^="ico_chg_"] {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.ico_chg_01 {background-image: url('/images/hmui/ico_chg_01.png');}
+.ico_chg_02 {background-image: url('/images/hmui/ico_chg_02.png');}
+.ico_chg_03 {background-image: url('/images/hmui/ico_chg_03.png');}
+.ico_chg_04 {background-image: url('/images/hmui/ico_chg_04.png');}
+.ico_chg_05 {background-image: url('/images/hmui/ico_chg_05.png');}

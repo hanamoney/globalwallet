@@ -211,11 +211,23 @@ section[data-roll] {
 .txt_point_4 {
   color: #EC4361;
 }
+[class^="flag_fill"] {
+  display: inline-block;
+  height: 2.0rem;
+  padding: 0 0.9rem;
+  border-radius: 1.0rem;
+  font-size: 1.2rem;
+  line-height: 2.0rem;
+}
+.flag_fill_white {
+  background-color: #fff;
+}
 
 /* Align */
 
 /* Icon */
-[class^="btn_ico"] {
+[class^="btn_ico"],
+[class^="ico_"] {
   background-size: 100%;
   background-position: 50%;
 }
@@ -231,6 +243,18 @@ section[data-roll] {
 .btn_ico_card_header {
   background-image: url('/images/hmui/btn_card_header.png');
 }
+[class^="ico_arr_"] {
+  display: inline-block;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.ico_arr_link {
+  background-image: url('/images/hmui/ico_arr_link.png');
+}
+.ico_arr_link_w {
+  background-image: url('/images/hmui/ico_arr_link_w.png');
+}
+
 /* Checkbox */
 
 /* Radio */
@@ -398,16 +422,53 @@ button[class^="btn"] {
   margin-top: 0;
 }
 .wrap_link_list li a {
+  position: relative;
   display: block;
   width: 100%;
-  height: 6.0rem;
+  min-height: 6.0rem;
+  padding: 1.8rem 4.3rem 1.9rem 2.0rem;
   border-radius: 1.4rem;
   -webkit-tap-highlight-color: transparent;
+}
+.wrap_link_list li a:not(.wrap_box) {
+  display: flex;
+  padding-left: 2.2rem;
+  align-items: center;
+}
+.wrap_link_list a .ico_arr_link {
+  position: absolute;
+  right: 1.5rem;
 }
 .wrap_link_list li a.active {
   background-color: rgba(243,248,250,1);
 }
+.wrap_link_list .txt {
+  padding-left: 1.0rem;
+  font-size: 1.8rem;
+}
+
 /* Box */
+.wrap_box {
+  position: relative;
+  padding: 2.0rem;
+  background: linear-gradient(98.11deg, #11CDAB -18.09%, #2EBEC1 117.48%);
+  border-radius: 1.4rem;
+}
+.wrap_box.type_gradient .flag_fill_white {
+  color: #00928F;
+}
+.wrap_box.type_gradient [class^="txt"] {
+  color: #fff;
+}
+a.wrap_box {
+  padding-right: 4.3rem;
+}
+a.wrap_box [class^="ico_arr_link"] {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+}
 
 /* message */
 
@@ -465,7 +526,7 @@ button[class^="btn"] {
   padding: 3.0rem 5.5rem 0;
   font-size: 2.0rem;
   line-height: 2.4rem;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
 }
 .wrap_layer.type_full .inner_layer {
@@ -532,14 +593,14 @@ button[class^="btn"] {
 /* Bubble */
 .tooltip_bubble {
   position: absolute;
-  top: -2.6rem;
+  top: -3.9rem;
   color: #fff;
 }
 .tooltip_bubble.right {
   right: 0;
 }
 .tooltip_bubble p {
-  padding: 0.6rem 1.2rem 0.5rem;
+  padding: 0.5rem 1.2rem 0.6rem;
   border-radius: 1.2rem;
   background-color: #6E7D85;
   font-size: 1.2rem;
@@ -547,4 +608,17 @@ button[class^="btn"] {
 }
 .tooltip_bubble p em {
   font-weight: 700;
+}
+.tooltip_bubble .bubble_caret {
+  position: absolute;
+  bottom: -0.7rem;
+  left: 50%;
+  display: inline-block;
+  width: 0;
+	height: 0;
+	border-width: 0.7rem 0.5rem 0 0.5rem;
+	border-color: #6E7D85 transparent transparent transparent;
+	border-style: solid;
+  line-height: 1;
+  transform: translateX(-50%);
 }
