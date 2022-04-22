@@ -106,9 +106,8 @@ var fnCloseLayerPop = function(popID, focusEl){
 }
 
 var fnInpFixedBtn = function() {
-  console.log('1234');
-  var button = $('.section_bottom_fixed .wrap_btn_full')
-  var input = $('input');
+  var button = document.querySelector('.wrap_btn_full');
+  var input = document.querySelector('input');
   var height = window.visualViewport.height;
   var viewport = window.visualViewport;
 
