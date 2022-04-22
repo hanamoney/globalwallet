@@ -104,21 +104,3 @@ var fnCloseLayerPop = function(popID, focusEl){
     $focusEl.focus();
   },300);
 }
-
-var fnInpFixedBtn = function() {
-  var button = document.querySelector('.wrap_btn_full');
-  var input = document.querySelector('input');
-  var height = window.visualViewport.height;
-  var viewport = window.visualViewport;
-
-  window.addEventListener("scroll", () => input.blur());
-  window.visualViewport.addEventListener("resize", resizeHandler);
-
-  function resizeHandler() {
-    button.style.bottom = `${height - viewport.height + 10}px`;
-  }
-
-  function blurHandler() {
-    button.style.bottom = "10px";
-  }
-}
