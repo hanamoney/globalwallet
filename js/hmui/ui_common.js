@@ -20,11 +20,68 @@ $(function(){
 });
 
 var registUI = function(){
-  if ( $('.wrap_link_list').length ) { fnTabHightlight(); } // 링크 탭 하이라이트 
-  if ( $('.wrap_layer').length ) { fnLayerPop(); } // 레이어팝업
+  if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트 
+  if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
+  if ( $('.wrap_layer').length ) { _layerPop(); } // 레이어팝업
 };
 
-var fnLayerPop = function() {
+/**
+  * @name _tabHightlight()
+  * @description 링크 탭 하이라이트 컬러
+  */
+var _tabHightlight = function() {
+  $(document).on('touchstart', '.wrap_link_list a', function(e){
+    if (!$(this).hasClass('wrap_box')) {
+      $(this).addClass('active');
+    }
+  });
+  $(document).on('touchend', '.wrap_link_list a', function(e){
+    $(this).removeClass('active');
+  });
+};
+
+/**
+  * @name _iOSInpFixdPos()
+  * @description // iOS 키패드 오픈시 하단고정 영역 키패드 위로
+  */
+var _iOSInpFixdPos = function() {
+  var fixedEl = $('.section_bottom_fixed > div');
+  var inp = $('.inp');
+  var height = window.visualViewport.height;
+  var viewport = window.visualViewport;
+
+  window.addEventListener('scroll', inputBlur);
+  window.visualViewport.addEventListener('resize', resizeHandler);
+
+  function inputBlur() {
+    inp.blur();
+  }
+
+  function resizeHandler() {
+    fixedEl.each(function(idx, el) {
+      var $el = $(el);
+      var current = $el.css('bottom').replace(/[^0-9]/g, "");
+      var pos = -(height - viewport.height) + 'px';
+      
+      $el.css('transform', 'translateY(' +  pos + ')');
+    });
+  }
+
+  inp.on('blur', function() {
+    fixedEl.each(function() {
+      $(this).removeAttr('style');
+    });
+  });
+  // function blurHandler() {
+  //   button.style.bottom = "10px";
+  // }
+};
+
+/**
+  * @name _layerPop()
+  * @description // 레이어팝업
+  */
+var _layerPop = function() {
   $('.fnOpenPop').on('click', function(){
     var popId = $(this).attr('data-name');
     fnOpenLayerPop(popId);
@@ -37,20 +94,6 @@ var fnLayerPop = function() {
   });
 };
 
-/**
-  * @name fnTabHightlight()
-  * @description 링크 탭 하이라이트 컬러
-  */
-var fnTabHightlight = function() {
-  $(document).on('touchstart', '.wrap_link_list a', function(e){
-    if (!$(this).hasClass('wrap_box')) {
-      $(this).addClass('active');
-    }
-  });
-  $(document).on('touchend', '.wrap_link_list a', function(e){
-    $(this).removeClass('active');
-  });
-}
 /**
   * @name fnOpenLayerPop()
   * @description 레이어팝업 열기
@@ -102,4 +145,4 @@ var fnCloseLayerPop = function(popID, focusEl){
     $('body').removeClass('open_pop');
     $focusEl.focus();
   },300);
-}
+};

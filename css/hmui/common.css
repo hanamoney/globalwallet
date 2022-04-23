@@ -161,6 +161,10 @@ section[data-roll] {
   min-height: 6.0rem;
   padding: 0;
 }
+.iOS .section_bottom_fixed > div {
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.32, 0, 0.68, 1);
+}
 
 /* [common] */
 * {box-sizing: border-box;}
