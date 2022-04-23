@@ -329,12 +329,15 @@ section[data-roll] {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: 2px;
+  top: 1px;
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 0.5rem;
   background: url('/images/hmui/ico_err.png') 50%;
   background-size: 100%;
+}
+.iOS .box_inp.err + .txt_inp_guide::before {
+  top: 2px;
 }
 
 /* Button */
