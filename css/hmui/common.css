@@ -329,7 +329,7 @@ section[data-roll] {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: 1px;
+  top: 2px;
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 0.5rem;
