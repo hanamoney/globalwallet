@@ -386,7 +386,7 @@ section[data-roll] {
 .wrap_inp.type_cur {
   
 }
-.wrap_inp.type_cur .unit{
+.wrap_inp.type_cur .unit {
   position: absolute;
   top: 0.6rem;
   left: 0;
