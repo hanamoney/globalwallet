@@ -20,9 +20,26 @@ $(function(){
 });
 
 var registUI = function(){
+  if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트 
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
+  if ( $('.wrap_inp.type_cur').length ) { _inpCurrency(); } // 통화 입력창 인터렉션
+  if ( $('.wrap_tooltip').length ) { _tooltip(); } // 툴팁
   if ( $('.wrap_layer').length ) { _layerPop(); } // 레이어팝업
+};
+
+/**
+  * @name _headerControl()
+  * @description 스크롤에 따른 Header
+  */
+var _headerControl = function(){
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop() > 0) {
+      $('#header').addClass('scrolled');
+    }else {
+      $('#header').removeClass('scrolled');
+    }
+  });
 };
 
 /**
@@ -71,6 +88,56 @@ var _iOSInpFixdPos = function() {
     fixedEl.each(function() {
       $(this).removeAttr('style');
     });
+  });
+};
+
+/**
+  * @name _inpCurrency()
+  * @description // 통화 입력창 인터렉션
+  */
+var _inpCurrency = function() {
+  $('.wrap_inp.type_cur .inp').each(function(idx, el){
+    $(el).on('change, input', function(){
+      var val = $(this).val();
+
+      if (val.length > 0) {
+        $(this).closest('.box_inp').addClass('hasVal');
+      }else {
+        $(this).closest('.box_inp').removeClass('hasVal');
+      }
+    }); 
+
+  });
+};
+
+/**
+  * @name _tooltip()
+  * @description // 툴팁
+  */
+var _tooltip = function() {
+  var $focusEl;
+
+  $('.fnOpenTooltip').on('click', function(){
+    $focusEl = $(this);
+    var $tooltip = $('#' + $(this).attr('data-name'));
+    var posY = $focusEl.offset().top + $focusEl.outerHeight(true) + 5;
+    
+    if ($('.wrap_layer.show').length) {
+      var current = $('.wrap_layer.show').css('z-index');
+      var zIndex = parseInt(current) + 1;
+      $tooltip.css('z-index', zIndex);
+    }
+
+    $tooltip.css('top', posY);
+    $tooltip.addClass('show');
+    $tooltip.find('.inner_tooltip').children(':first').attr('tabindex','0').focus();
+  });
+
+  $('.fnCloseTooltip').on('click', function(){
+    var $tooltip = $(this).closest('.wrap_tooltip');
+
+    $tooltip.removeClass('show');
+    $focusEl.focus();
   });
 };
 
@@ -130,7 +197,6 @@ var fnCloseLayerPop = function(popID, focusEl){
   var $el = $('#' + popID);
   var $focusEl;
 
-  console.log($el);
   if (!focusEl) {
     $focusEl = $('[data-name="' + popID + '"]');
   }

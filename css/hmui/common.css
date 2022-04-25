@@ -114,8 +114,21 @@ body.overflow {
   top: 0;
   width: 100vw;
   height: 5.0rem;
-  background-color: #fff;
+  /* background-color: #fff; */
   z-index: 100;
+}
+#header.scrolled .inner_fixed::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255, 0.4);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  z-index: -1;
 }
 #header h1 {
   padding: 0 4.6rem;
@@ -226,6 +239,28 @@ section[data-roll] {
 .flag_fill_white {
   background-color: #fff;
 }
+.txt_balloon {
+  position: relative;
+  display: inline-block;
+  padding: 0.4rem 1.3rem;
+  border-radius: 1.2rem;
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  background: linear-gradient(98.11deg, #11CDAB -18.09%, #2EBEC1 117.48%);
+  transform: translateX(1px);
+}
+.txt_balloon::before {
+  content: '';
+  position: absolute;
+  left: -0.1rem;
+  bottom: 0;
+  display: inline-block;
+  width: 0.84rem;
+  height: 0.6rem;
+  background: url('/images/hmui/ico_balloon_caret.png') no-repeat 50%;
+  background-size: 100%;
+}
 
 /* Align */
 
@@ -248,6 +283,11 @@ section[data-roll] {
 }
 .btn_ico_card_header {
   background-image: url('/images/hmui/btn_card_header.png');
+}
+.btn_ico_tooltip {
+  width: 2.0rem;
+  height: 2.0rem;
+  background-image: url('/images/hmui/btn_tooltip.png');
 }
 [class^="ico_arr_"] {
   display: inline-block;
@@ -288,13 +328,13 @@ section[data-roll] {
 .inp {
   width: 100%;
   height: 45px;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.1rem;
   border-bottom: 1px solid #D0D4D7;
   font-size: 2.6rem;
   color: #252E33;
 }
 .inp:focus {
-  padding-bottom: 0.7rem;
+  padding-bottom: 0;
   border-bottom: 2px solid #4F5D64;
 }
 .inp[type="tel"],
@@ -310,10 +350,14 @@ section[data-roll] {
   color: #6E7D85;
   font-size: 1.3rem;
 }
+.txt_inp_guide.type_right {
+  text-align: right;
+}
 .wrap_inp {
   position: relative;
 }
 .box_inp {
+  position: relative;
   width: 100%;
 }
 .box_inp.err .inp {
@@ -339,6 +383,29 @@ section[data-roll] {
 .iOS .box_inp.err + .txt_inp_guide::before {
   top: 2px;
 }
+.wrap_inp.type_cur {
+  
+}
+.wrap_inp.type_cur .unit{
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
+  color: #848F95;
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+.wrap_inp.type_cur .inp {
+  transition: padding 0.1s ease-in-out;
+}
+.wrap_inp.type_cur .box_inp.hasVal .unit {
+  opacity: 1;
+}
+.wrap_inp.type_cur .box_inp.hasVal .inp {
+  padding-left: 5.5rem;
+}
+
 
 /* Button */
 a[class^="btn"],
@@ -686,6 +753,49 @@ a.wrap_box [class^="ico_arr_link"] {
 /* Toast */
 
 /* Tooltip */
+.wrap_tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+  padding: 1.6rem 3.8rem 1.6rem 1.4rem;
+  border-radius: 0.6rem;
+  border: 1px solid #6E7D85;
+  min-width: 15.0rem;
+  max-width: 26.0rem;
+  width: 72.2%;
+  will-change: opacity;
+  -webkit-box-shadow: 2px 8px 7px 0px rgba(0,0,0,0.2); 
+  box-shadow: 2px 8px 7px 0px rgba(0,0,0,0.2);
+  transform: translateX(-50%);
+  transition: opacity 0.2s ease-in-out;
+}
+.wrap_tooltip.show {
+  visibility: visible;
+  opacity: 1;
+}
+.wrap_tooltip .tit_tooltip {
+  padding-bottom: 1.0rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+}
+.wrap_tooltip .txt_tooltip {
+  color: #666;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.wrap_tooltip .txt_tooltip em {
+  color: #252E33;
+}
+.wrap_tooltip .btn_ico_close {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.0rem;
+  width: 1.8rem;
+  height: 1.8rem;
+}
 
 /* Bubble */
 .tooltip_bubble {

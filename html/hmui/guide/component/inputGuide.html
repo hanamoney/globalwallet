@@ -8,7 +8,9 @@
   <title>input guide</title>
 
   <link rel="stylesheet" href="/css/hmui/common.css">
-  <link rel="stylesheet" href="/css/hmui/contents.css">
+  <link rel="stylesheet" href="/css/global/contents.css">
+  <script src="/js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="/js/hmui/ui_common.js"></script>
 </head>
 <body>
   <main id="root">
@@ -26,29 +28,27 @@
 
           <div class="wrap_inp">
             <div class="box_inp">
-              <input type="text" class="inp" title="" placeholder="placeholder" value="" />
+              <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="레이블 미노출" value="" />
             </div>
-            <p class="txt_inp_guide">guide text</p>
+            <p class="txt_inp_guide">가이드텍스트</p>
           </div>
 
           <div class="wrap_inp">
-            <label for="" class="">label</label>
             <div class="box_inp err"><!-- valid err 클래스추가 -->
-              <input type="text" class="inp" title="" placeholder="placeholder" value="" />
+              <input type="text" inputmode="numeric" class="inp" title="레이블미노출 시 타이틀입력" title="" placeholder="에러타입" value="" />
             </div>
             <p class="txt_inp_guide">1,000하나머니부터 채울 수 있어요.</p>
           </div>
 
-          <div class="wrap_inp">
-            <label for="" class="">label</label>
+          <div class="wrap_inp type_cur">
             <div class="box_inp">
               <span class="unit">USD</span>
-              <input type="text" class="inp" title="" placeholder="placeholder" value="" />
+              <input type="text" inputmode="numeric" class="inp" title="" placeholder="얼마를 채울까요?" value="" />
             </div>
-            <p class="txt_inp_guide">guide text</p>
+            <p class="txt_inp_guide type_right">최대 <em>USD</em> <em class="txt_num">1,600</em></p>
           </div>
 
-          <div class="wrap_inp">
+          <div class="wrap_inp type_col">
             <label for="" class="">label</label>
             <div class="box_inp">
               <input type="text" class="inp" title="" placeholder="placeholder" value="" />
