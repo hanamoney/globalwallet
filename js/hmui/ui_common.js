@@ -72,9 +72,6 @@ var _iOSInpFixdPos = function() {
       $(this).removeAttr('style');
     });
   });
-  // function blurHandler() {
-  //   button.style.bottom = "10px";
-  // }
 };
 
 /**
