@@ -27,11 +27,12 @@
       <div class="contents">
         <section data-roll="CHG">
           <div class="section_form">
-            <div class="wrap_inp">
+            <div class="wrap_inp type_cur">
               <div class="box_inp"><!-- valid err 클래스추가 -->
-                <input type="text" inputmode="numeric" class="inp" title="충전 금액 입력" placeholder="얼마를 채울까요?" value="" autocomplete="off" />
+                <span class="unit">USD</span>
+                <input type="text" inputmode="numeric" class="inp" title="" placeholder="얼마를 채울까요?" value="" />
               </div>
-              <p class="txt_inp_guide">1,000하나머니 부터 채울 수 있어요.</p>
+              <p class="txt_inp_guide type_right">최대 <em>USD</em> <em class="txt_num">1,600</em></p>
             </div>
           </div>
         </section>
@@ -39,22 +40,6 @@
 
         <!-- 하단고정 영역 -->
         <div class="section_bottom_fixed">
-          <div class="wrap_btn_box">
-            <ul>
-              <li><button type="button">1만</button></li>
-              <li><button type="button">5만</button></li>
-              <li><button type="button">10만</button></li>
-              <li><button type="button">100만</button></li>
-              <li>
-                <div class="tooltip_bubble right">
-                  <p><em class="txt_num">1,251,230</em>까지 채울 수 있어요</p>
-                  <span class="bubble_caret"></span>
-                </div>
-                <button type="button">최대</button>
-              </li>
-            </ul>
-            
-          </div>
           <div class="wrap_btn_full">
             <button type="button" class="btn_full_primary" disabled>충전하기</button>
           </div>
