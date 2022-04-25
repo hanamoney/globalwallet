@@ -199,6 +199,8 @@ var fnCloseLayerPop = function(popID, focusEl){
 
   if (!focusEl) {
     $focusEl = $('[data-name="' + popID + '"]');
+  } else {
+    $focusEl = $(focusEl);
   }
 
   $el.removeClass('show');
@@ -208,4 +210,18 @@ var fnCloseLayerPop = function(popID, focusEl){
     $('body').removeClass('open_pop');
     $focusEl.focus();
   },300);
+};
+
+/**
+  * @name fnToastPop()
+  * @description 토스트팝업 열기
+  * @param {string} popID 팝업ID 
+  */
+var fnToastPop = function(popID) {
+  var $el = $('#' + popID);
+
+  $el.addClass('show');
+  setTimeout(function(){
+    $el.removeClass('show');
+  }, 3000);
 };
