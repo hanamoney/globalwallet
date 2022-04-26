@@ -38,3 +38,33 @@
 .ico_chg_03 {background-image: url('/images/hmui/ico_chg_03.png');}
 .ico_chg_04 {background-image: url('/images/hmui/ico_chg_04.png');}
 .ico_chg_05 {background-image: url('/images/hmui/ico_chg_05.png');}
+
+/* [CHG] - 외화충전 */
+.wrap_info_exchange {
+  height: 6.5rem;
+  padding: 3.0rem 2.4rem 1.5rem;
+}
+.wrap_info_exchange .txt_info {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #000;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  vertical-align: top;
+}
+.wrap_info_exchange .ico_cur_usd {
+  width: 1.8rem;
+  height: 1.8rem;
+  vertical-align: top;
+}
+.wrap_info_exchange > span {
+  display: inline-block;
+}
+.wrap_info_exchange .btn_ico_tooltip {
+  vertical-align: top;
+}
+.wrap_info_exchange .txt_balloon {
+  position: relative;
+  margin-left: 5px;
+  bottom: 8px;
+}

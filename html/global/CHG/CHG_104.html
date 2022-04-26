@@ -26,13 +26,21 @@
     <div id="contents" class="wrap_contents">
       <div class="contents">
         <section data-roll="CHG">
+          <div class="wrap_info_exchange">
+            <span class="txt_info"><span class="ico_cur_usd"></span> <span>USD</span> 1 = <span class="txt_num">1,249.12</span>원</span>
+            <button type="button" class="btn_ico_tooltip fnOpenTooltip" data-name="tooltip"><span class="blind">툴팁</span></button>
+            <span class="txt_balloon">무료환전</span>
+          </div>
           <div class="section_form">
             <div class="wrap_inp type_cur">
               <div class="box_inp"><!-- valid err 클래스추가 -->
                 <span class="unit">USD</span>
-                <input type="tel" inputmode="numeric" class="inp" title="" placeholder="얼마를 채울까요?" value="" />
+                <input type="tel" inputmode="numeric" class="inp" title="금액 입력" placeholder="얼마를 채울까요?" value="" />
               </div>
               <p class="txt_inp_guide type_right">최대 <em>USD</em> <em class="txt_num">1,600</em></p>
+            </div>
+            <div class="txt_inp_result">
+              <strong>하나머니 <span class="txt_num">1,600,000</span></strong>원이 필요해요.
             </div>
           </div>
         </section>
@@ -40,6 +48,24 @@
 
         <!-- 하단고정 영역 -->
         <div class="section_bottom_fixed">
+          <div class="wrap_chk">
+            <span class="chk_round">
+              <input type="checkbox" id="chk2" name="chk2" />
+              <label for="chk2">
+                <span class="label"><span>$</span><em class="txt_num">1,600.00</em> 모두 채우기</span>
+              </label>
+            </span>
+          </div>
+          
+          <!-- 정상적인 금액 입력 시 노출 -->
+          <div class="wrap_bubble">
+            <div class="tooltip_bubble">
+              <p class="txt_bold">환전 수수료 <em class="txt_num">5,500</em>원 혜택 받고</p>
+              <span class="bubble_caret"></span>
+            </div>
+          </div>
+          <!-- // 정상적인 금액 입력 시 노출 -->
+
           <div class="wrap_btn_full">
             <button type="button" class="btn_full_primary" disabled>충전하기</button>
           </div>
@@ -49,8 +75,14 @@
     </div>
     <!-- // contents-->
 
-    <!-- popup -->
-    <!-- // popup -->
+    <!-- tooltip -->
+    <div id="tooltip" class="wrap_tooltip">
+      <div class="inner_tooltip">
+        <p class="txt_tooltip">하나은행 <em class="txt_bold">매매기준율</em> 기준이에요.</p>
+        <button class="btn_ico_close fnCloseTooltip"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // tooltip -->
   </main>
 </body>
 </html>

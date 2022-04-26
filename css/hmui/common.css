@@ -267,6 +267,7 @@ section[data-roll] {
 /* Icon */
 [class^="btn_ico"],
 [class^="ico_"] {
+  display: inline-block;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 50%;
@@ -444,6 +445,17 @@ section[data-roll] {
 .txt_inp_guide.type_right {
   text-align: right;
 }
+.txt_inp_result {
+  margin-top: 2.0rem;
+  color: #000;
+  font-size: 2.0rem;
+  line-height: 2.8rem;
+  font-weight: 300;
+}
+.txt_inp_result strong {
+  color: #13C9BE;
+  font-weight: 700;
+}
 .wrap_inp {
   position: relative;
 }
@@ -509,6 +521,13 @@ section[data-roll] {
 }
 .wrap_inp.type_cur .box_inp.hasVal .inp {
   padding-left: 5.5rem;
+}
+.wrap_inp.type_cur .box_inp.err + .txt_inp_guide {
+  padding-left: 0;
+  text-align: left;
+}
+.wrap_inp.type_cur .box_inp.err + .txt_inp_guide::before {
+  display: none;
 }
 
 /* Button */
@@ -602,6 +621,23 @@ button[class^="btn"] {
   right: 0;
   left: 0;
   padding: 0 1.5rem;
+}
+.section_bottom_fixed .wrap_chk {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: calc(6rem + 2.0rem);
+  text-align: center;
+}
+.section_bottom_fixed > .wrap_bubble {
+  position: fixed;
+  bottom: calc(6rem - 1.8rem);
+  right: 0;
+  left: 0;
+  z-index: 101;
+}
+.section_bottom_fixed > .wrap_bubble .tooltip_bubble .bubble_caret {
+
 }
 
 /* Table */
@@ -886,12 +922,13 @@ a.wrap_box [class^="ico_arr_link"] {
   position: absolute;
   left: 50%;
   z-index: 10;
-  padding: 1.6rem 3.8rem 1.6rem 1.4rem;
-  border-radius: 0.6rem;
-  border: 1px solid #6E7D85;
   min-width: 15.0rem;
   max-width: 26.0rem;
   width: 72.2%;
+  padding: 1.6rem 3.8rem 1.6rem 1.4rem;
+  border-radius: 0.6rem;
+  border: 1px solid #6E7D85;
+  background-color: #fff;
   will-change: opacity;
   -webkit-box-shadow: 2px 8px 7px 0px rgba(0,0,0,0.2); 
   box-shadow: 2px 8px 7px 0px rgba(0,0,0,0.2);
@@ -928,10 +965,13 @@ a.wrap_box [class^="ico_arr_link"] {
 .tooltip_bubble {
   position: absolute;
   top: -3.9rem;
+  left: 50%;
   color: #fff;
+  transform: translateX(-50%);
 }
 .tooltip_bubble.right {
   right: 0;
+  transform: none;
 }
 .tooltip_bubble p {
   padding: 0.5rem 1.2rem 0.6rem;
