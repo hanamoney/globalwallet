@@ -29,7 +29,7 @@
 
 /* [Reset] */
 html,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul {
-  margin:0;padding:0;
+  border:0;outline:0;margin:0;padding:0;background:transparent;-webkit-appearance: none;
 }
 body,button,input,select,table,textarea {
   font-family: 'Spoqa',-apple-system,helvetica,Apple SD Gothic Neo,sans-serif;
@@ -45,9 +45,19 @@ body {
 }
 html, body {
   font-size: 10px;
+  -webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+h1, h2, h3, h4, h5, h6{
+  font-weight: normal;
+  text-align: left;
 }
 fieldset,img {
   border: 0;
+}
+img{
+  max-width: 100%;
+  height: auto;
 }
 ol,ul {
   list-style: none;
@@ -59,12 +69,19 @@ input, textarea, select {
   outline: 0;
   border-radius: 0;
   border: 0;
+  -webkit-border-radius:0;
   -webkit-appearance: none;
   appearance: none;
 }
 input[readonly] {
   -webkit-user-select: none;
   user-select: none;
+}
+textarea {
+  resize: none;
+}
+legend{ 
+  display: none;
 }
 a {
   text-decoration: none;
@@ -77,9 +94,11 @@ button {
   appearance: none;
   background-color: transparent;
   color: inherit;
+  text-transform: none;
 }
 table {
   border-collapse: collapse;
+  border-spacing: 0;
 }
 caption {
   display: none;
@@ -406,6 +425,7 @@ section[data-roll] {
 .chk_round label {
   border: 1px solid #E3EBEE;
   border-radius: 2.0rem;
+  background-color: #fff;
 }
 .chk_round label .label {
   padding: 1.0rem 4.0rem 1.0rem 1.3rem; 

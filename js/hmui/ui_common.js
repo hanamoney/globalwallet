@@ -23,7 +23,7 @@ var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트 
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
-  if ( $('.wrap_inp').length ) { _inpControl(); _inpClearValue(); } // 인풋 인터렉션
+  if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_tooltip').length ) { _tooltip(); } // 툴팁
   if ( $('.wrap_layer').length ) { _layerPop(); } // 레이어팝업
 };
@@ -105,18 +105,25 @@ var _inpControl = function() {
       }else {
         $(this).closest('.box_inp').removeClass('hasVal');
       }
-    }); 
+    });
+    
+    // 입력 삭제 
+    if ( $(el).siblings('.btn_ico_clear').length <= 0 ) {
+      $(el).closest('.box_inp').append('<button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>');
+    }
+    $('document').on('touchstart click', '.btn_clear', function() {
+      alert();
+      fnClearValue($(el));
+    });
   });
 };
 
 /**
-  * @name _inpClearValue()
-  * @description // 인풋 입력삭제 버튼 
+  * @name fnClearValue()
+  * @description // 인풋 value 초기화
   */
-var _inpClearValue = function() {
-  $(document).on('click','.btn_ico_clear', function(){
-    console.log('clear');
-  });
+var fnClearValue = function(el) {
+  $(el).val('').focus().click();
 };
 
 /**
