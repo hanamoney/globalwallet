@@ -28,9 +28,13 @@
         <section data-roll="guide">
           <button type="button" class="btn fnOpenPop" data-name="popupfullId">open Full-layer</button>
           <button type="button" class="btn fnOpenPop" data-name="popupId">open Bototm-layer</button>
+          <!-- 
           <button type="button" class="btn fnOpenPop" data-name="alertId">open Alert</button>
           <button type="button" class="btn fnOpenPop" data-name="confirmId">open Confirm</button>
+          -->
           <button type="button" class="btn_ico_tooltip fnOpenTooltip" data-name="tooltip"><span class="blind">툴팁</span></button>
+
+          <button type="button" class="btn testToast">토스트</button>
         </section>
         <!-- // section -->
 
@@ -135,7 +139,12 @@
   </main>
   
   <script>
-    
+    $(function(){
+      $('.testToast').on('click', function(){
+        // 토스트팝업 호출
+        fnToastPop('toast');
+      })
+    });
   </script>
 </body>
 </html>

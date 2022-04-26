@@ -406,7 +406,6 @@ section[data-roll] {
   padding-left: 5.5rem;
 }
 
-
 /* Button */
 a[class^="btn"],
 button[class^="btn"] {
@@ -424,7 +423,6 @@ button[class^="btn"] {
   color: #666;
   font-size: 1.4rem;
   text-decoration: underline;
-
 }
 [class^="wrap_btn"] {
   position: relative;
@@ -751,6 +749,30 @@ a.wrap_box [class^="ico_arr_link"] {
 /* Alert */
 
 /* Toast */
+.wrap_toast {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 500;
+  width: calc(100vw - 4.8rem);
+  margin: 0 2.4rem;
+  padding: 1.6rem 2.0rem;
+  border-radius: 1.4rem;
+  background-color: rgba(37,46,51,0.9);
+  will-change: transform;
+  -webkit-transform: translate3d(0px,100%,0px);
+  transform: translate3d(0px,100%,0px);
+  transition: transform 0.3s cubic-bezier(0.12, 0.86, 0.21, 1);
+}
+.wrap_toast.show {
+  -webkit-transform: translate3d(0px,-4.0rem,0px);
+  transform: translate3d(0px,-4.0rem,0px);
+}
+.wrap_toast {
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 2.0rem;
+}
 
 /* Tooltip */
 .wrap_tooltip {
