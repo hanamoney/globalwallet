@@ -184,7 +184,7 @@ section[data-roll] {
 
 /* Title */
 .wrap_tit {
-  padding: 4.0rem 2.4rem 0;  
+  padding: 3.0rem 2.4rem 0;  
 }
 .tit_page {
   font-size: 3.2rem;
@@ -203,6 +203,16 @@ section[data-roll] {
 .tit_sub {
 
 }
+.wrap_tit .txt {
+  color: #323E43;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 300;
+}
+.wrap_tit [class^="wrap_btn"] {
+  padding-top: 1.0rem;
+}
+
 /* Text */
 .txt_light {
   font-weight: 300;
@@ -216,17 +226,20 @@ section[data-roll] {
 .txt_num {
   letter-spacing: 0;
 }
+.txt_linethrough {
+  text-decoration: line-through;
+}
 .txt_point_1 {
-  color: #13C9BE;
+  color: #13C9BE !important;
 }
 .txt_point_2 {
-  color: #FF5833;
+  color: #FF5833 !important;
 }
 .txt_point_3 {
-  color: #844883
+  color: #844883 !important;
 }
 .txt_point_4 {
-  color: #EC4361;
+  color: #EC4361 !important;
 }
 [class^="flag_fill"] {
   display: inline-block;
@@ -325,6 +338,11 @@ section[data-roll] {
 }
 .ico_cur_gbp {
   background-image: url('/images/hmui/ico_cur_gbp.png');
+}
+.ico_present {
+  width: 3.3rem;
+  height: 3.5rem;
+  background-image: url('/images/hmui/ico_present.png');
 }
 
 /* Checkbox */
@@ -446,7 +464,7 @@ section[data-roll] {
   text-align: right;
 }
 .txt_inp_result {
-  margin-top: 2.0rem;
+  margin-top: 1.5rem;
   color: #000;
   font-size: 2.0rem;
   line-height: 2.8rem;
@@ -546,6 +564,7 @@ button[class^="btn"] {
 .btn_txt {
   color: #666;
   font-size: 1.4rem;
+  line-height: 2.6rem;
   text-decoration: underline;
 }
 [class^="wrap_btn"] {
@@ -645,8 +664,41 @@ button[class^="btn"] {
 /* tab */
 
 /* list */
-.wrap_link_list {
+.list_info {
 
+}
+.list_info li {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  padding: 0.5rem 0;
+  font-size: 0;
+}
+.list_info li:first-child {
+  margin-top: 0;
+}
+.list_info .tit,
+.list_info .txt {
+  color: #849594;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+.list_info .txt {
+  text-align: right;
+  color: #252E33;
+}
+.list_info .txt > span:not([class^="ico_cur"]) {
+  display: block;
+}
+.wrap_list {
+  padding: 1.6rem 0;
+  border-top: 1px solid #6E7D85;
+  border-bottom: 1px solid #EBEBEB;
+}
+.wrap_list .list_info .txt [class^="ico_cur"] {
+  width: 2.0rem;
+  height: 2.0rem;
+  vertical-align: top;
 }
 .wrap_link_list li {
   overflow: hidden;
@@ -682,9 +734,6 @@ button[class^="btn"] {
 .wrap_link_list [class^="ico_"] + .txt {
   padding-left: 1.0rem;
 }
-.wrap_line_list {
-
-}
 .wrap_line_list li {
   border-bottom: 1px solid #E3EBEE;
 }
@@ -716,6 +765,10 @@ button[class^="btn"] {
 .wrap_box.type_gradient [class^="txt"] {
   color: #fff;
 }
+.wrap_box.type_bluegrey {
+  border-radius: 1.0rem;
+  background: #F3F8FA;
+}
 a.wrap_box {
   padding-right: 4.3rem;
 }
@@ -725,17 +778,27 @@ a.wrap_box [class^="ico_arr_link"] {
   right: 1.5rem;
   transform: translateY(-50%);
 }
+.wrap_box.type_bluegrey .list_info .tit {
+  color: #4F5D64;
+  font-weight: 300;
+}
+.wrap_box .list_info li {
+  padding: 0.4rem 0 ;
+}
 
 /* message */
 .section_prc_complete {
-  padding-top: 4.0rem;
+  padding-top: 6.0rem;
+  text-align: center;
 }
 .section_prc_complete::before {
   content: '';
   display: block;
-  margin: 0 auto 1.8rem;
   width: 6.0rem;
   height: 6.0rem;
+  margin: 0 auto 3.2rem;
+  background: url('/images/hmui/ico_complete.png') no-repeat 50%;
+  background-size: 100%;
 }
 .section_prc_complete .txt_complete {
   font-size: 2.8rem;
@@ -746,18 +809,39 @@ a.wrap_box [class^="ico_arr_link"] {
 .section_prc_complete .txt_complete em {
   font-weight: 700;
 }
+.section_prc_complete .msg_benefit {
+  margin-top: 2.4rem;
+}
+.section_prc_complete .wrap_list {
+  margin-top: 4.0rem;
+}
 .wrap_layer .section_prc_complete {
+  padding-top: 4.0rem;
   padding-bottom: 1.0rem;
 }
 .wrap_layer .section_prc_complete::before {
   width: 5.4rem;
   height: 5.4rem;
-  background: url('/images/hmui/ico_complete.png') no-repeat 50%;
-  background-size: 100%;
+  margin-bottom: 1.8rem;
 }
 .wrap_layer .section_prc_complete .txt_complete {
   font-size: 2.2rem;
   line-height: 3.0rem;
+}
+.msg_benefit {
+  position: relative;
+  display: inline-block;
+  padding: 0.4rem 1.5rem 0.4rem 5.4rem;
+  border-radius: 2.0rem;
+  background-color: #F4F1F5;
+  color: #844883;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+}
+.msg_benefit .ico_present {
+  position: absolute;
+  top: -0.3rem;
+  left: 1.5rem;
 }
 
 /* Layer pop */
@@ -995,4 +1079,12 @@ a.wrap_box [class^="ico_arr_link"] {
 	border-style: solid;
   line-height: 1;
   transform: translateX(-50%);
+}
+
+/* Space */
+.wrap_box + .wrap_tit {
+  padding-top: 1.4rem;
+}
+.wrap_layer .content_layer .wrap_box {
+  margin: 2.4rem 2.4rem 0;
 }
