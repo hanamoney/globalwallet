@@ -23,7 +23,7 @@ var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트 
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
-  if ( $('.wrap_inp.type_cur').length ) { _inpCurrency(); } // 통화 입력창 인터렉션
+  if ( $('.wrap_inp').length ) { _inpControl(); _inpClearValue(); } // 인풋 인터렉션
   if ( $('.wrap_tooltip').length ) { _tooltip(); } // 툴팁
   if ( $('.wrap_layer').length ) { _layerPop(); } // 레이어팝업
 };
@@ -92,11 +92,11 @@ var _iOSInpFixdPos = function() {
 };
 
 /**
-  * @name _inpCurrency()
-  * @description // 통화 입력창 인터렉션
+  * @name _inpControl()
+  * @description // 인풋 입력창 인터렉션
   */
-var _inpCurrency = function() {
-  $('.wrap_inp.type_cur .inp').each(function(idx, el){
+var _inpControl = function() {
+  $('.wrap_inp .inp').each(function(idx, el){
     $(el).on('change, input', function(){
       var val = $(this).val();
 
@@ -106,7 +106,16 @@ var _inpCurrency = function() {
         $(this).closest('.box_inp').removeClass('hasVal');
       }
     }); 
+  });
+};
 
+/**
+  * @name _inpClearValue()
+  * @description // 인풋 입력삭제 버튼 
+  */
+var _inpClearValue = function() {
+  $(document).on('click','.btn_ico_clear', function(){
+    console.log('clear');
   });
 };
 

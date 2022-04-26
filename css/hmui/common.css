@@ -267,6 +267,7 @@ section[data-roll] {
 /* Icon */
 [class^="btn_ico"],
 [class^="ico_"] {
+  background-repeat: no-repeat;
   background-size: 100%;
   background-position: 50%;
 }
@@ -288,6 +289,11 @@ section[data-roll] {
   width: 2.0rem;
   height: 2.0rem;
   background-image: url('/images/hmui/btn_tooltip.png');
+}
+.btn_ico_clear {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url('/images/hmui/btn_clear.png');
 }
 [class^="ico_arr_"] {
   display: inline-block;
@@ -321,8 +327,93 @@ section[data-roll] {
 }
 
 /* Checkbox */
+.chk,
+.chk_round {
+  display: inline-block;
+}
+.chk input,
+.chk_round input {
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+.chk input + label,
+.chk_round input + label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.chk input + label::before,
+.chk input + label::after,
+.chk_round input + label::before,
+.chk_round input + label::after {
+  content: '';
+  display: inline-block;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.chk input + label::before,
+.chk_round input + label::before {
+  background-color: #D8E5E4;
+  border-radius: 50%;
+  transition: all 0.2s cubic-bezier(0.25, 0.25, 0.5, 1);
+}
+.chk input + label::after,
+.chk_round input + label::after {
+  background-image: url('/images/hmui/ico_chk.png');
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.chk .label {
+  padding-left: 1.0rem;
+  color: #6E7D85;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  text-decoration: underline;
+}
+.chk input:checked + label::before,
+.chk_round input:checked + label::before {
+  background-color: #13C9BE;
+}
+.chk input:checked + label .label {
+  color: #252E33;
+}
+.chk_round label {
+  border: 1px solid #E3EBEE;
+  border-radius: 2.0rem;
+}
+.chk_round label .label {
+  padding: 1.0rem 4.0rem 1.0rem 1.3rem; 
+  color: #323E43;
+  font-size: 1.4rem;
+}
+.chk_round input + label::before,
+.chk_round input + label::after {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  right: 0.8rem;
+  transform: translateY(-50%);
+}
+.chk_round input:checked + label {
+  border-color: #13C9BE;
+}
+.chk_round input:checked + label .label {
+  color: #13C9BE;
+}
 
 /* Radio */
+
+/* Switch */
+.wrap_switch {
+  display: inline-block;
+}
 
 /* Input text */
 .inp {
@@ -363,6 +454,20 @@ section[data-roll] {
 .box_inp.err .inp {
   padding-bottom: 0.7rem;
   border-bottom: 2px solid #EC4361;
+}
+.box_inp .btn_ico_clear {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+.box_inp.hasVal .inp:focus + .btn_ico_clear {
+  display: block;
+}
+.box_inp.hasVal .inp:focus {
+  padding-right: 2.8rem;
 }
 .box_inp.err + .txt_inp_guide {
   padding-left: 17px;

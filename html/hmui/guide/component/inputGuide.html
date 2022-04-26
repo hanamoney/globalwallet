@@ -29,6 +29,7 @@
           <div class="wrap_inp">
             <div class="box_inp">
               <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="레이블 미노출" value="" />
+              <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
             </div>
             <p class="txt_inp_guide">가이드텍스트</p>
           </div>
@@ -36,6 +37,7 @@
           <div class="wrap_inp">
             <div class="box_inp err"><!-- valid err 클래스추가 -->
               <input type="text" inputmode="numeric" class="inp" title="레이블미노출 시 타이틀입력" placeholder="valid error" value="" />
+              <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
             </div>
             <p class="txt_inp_guide">1,000하나머니부터 채울 수 있어요.</p>
           </div>
@@ -45,6 +47,7 @@
             <div class="box_inp">
               <span class="unit">USD</span>
               <input type="text" inputmode="numeric" class="inp" title="" placeholder="얼마를 채울까요?" value="" />
+              <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
             </div>
             <p class="txt_inp_guide type_right">최대 <em>USD</em> <em class="txt_num">1,600</em></p>
           </div>
@@ -60,26 +63,48 @@
             <p class="txt_inp_guide">guide text</p>
           </div> -->
 
-          <span class="chk_round">
+          <span class="chk">
             <input type="checkbox" id="chk1_1" name="chk1" />
-            <label for="">label</label>
+            <label for="chk1_1">
+              <span class="label">default</span>
+            </label>
           </span>
+          <span class="chk">
+            <input type="checkbox" id="chk1_2" name="chk1" checked/>
+            <label for="chk1_2">
+              <span class="label">checked</span>
+            </label>
+          </span>
+
+          <span class="chk_round">
+            <input type="checkbox" id="chk2" name="chk2" />
+            <label for="chk2">
+              <span class="label">label</span>
+            </label>
+          </span>
+          <br/>
+
+          <label for="switch1">label</label>
+          <div class="wrap_switch">
+            <input type="checkbox" id="switch1">
+            <span class="btn_switch"></span>
+          </div>
 
           <div class="wrap_chk">
             <p class="tit_form"></p>
             <ul class="box_chk">
               <li>
-                <input type="radio" id="" name="" >
-                <label for="">label</label>
+                <input type="radio" id="rdo1_1" name="rdo1" >
+                <label for="rdo1_1">label</label>
+              </li>
+              <li>
+                <input type="radio" id="rdo1_2" name="rdo1" >
+                <label for="rdo1_2">label</label>
               </li>
             </ul>
           </div>
           
-          <label for="switch1">label</label>
-          <div class="wrap_switch">
-            <input id="switch1" class="checkbox">
-            <span class="btn_switch"></span>
-          </div>
+          
 
         </section>
       </div>
