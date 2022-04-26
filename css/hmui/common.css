@@ -901,9 +901,9 @@ a.wrap_box [class^="ico_arr_link"] {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 102;
   border-radius: 2.4rem 2.4rem 0 0;
   background-color: #fff;
-  z-index: 102;
   will-change: transform;
   -webkit-transform: translate3d(0px,100%,0px);
   transform: translate3d(0px,100%,0px);
@@ -925,7 +925,13 @@ a.wrap_box [class^="ico_arr_link"] {
   text-align: center;
 }
 .wrap_layer .content_layer {
+  overflow-x: hidden;
+  overflow-y: auto;
   padding-bottom: 3.0rem;
+  max-height: calc(54rem - 5.4rem);
+}
+.wrap_layer.hasFixedBtn .content_layer {
+  max-height: calc(54rem - 5.4rem - 6.0rem);
 }
 .wrap_layer .btn_ico_close {
   position: absolute;
@@ -946,7 +952,6 @@ a.wrap_box [class^="ico_arr_link"] {
   line-height: 5.0rem;
 }
 .wrap_layer.type_full .content_layer {
-  overflow-y: auto;
   min-height: calc(100vh - 5.0rem);
 }
 .wrap_layer.type_full.hasFixedBtn .content_layer {
