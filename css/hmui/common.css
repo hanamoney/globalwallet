@@ -506,17 +506,20 @@ section[data-roll] {
   border-bottom: 2px solid #EC4361;
 }
 .box_inp .btn_ico_clear {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
+  z-index: 1;
   height: 100%;
 }
-.box_inp.hasVal .inp:focus + .btn_ico_clear {
-  display: block;
+.box_inp.hasVal .btn_ico_clear {
+  visibility: visible;
+  opacity: 1;
 }
-.box_inp.hasVal .inp:focus {
+.box_inp.hasVal .inp {
   padding-right: 2.8rem;
 }
 .box_inp.err + .txt_inp_guide {

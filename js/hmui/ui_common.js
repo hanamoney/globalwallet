@@ -16,6 +16,7 @@ $(function(){
   } else {
     $('html').addClass('iOS');
   }
+
   registUI();
 });
 
@@ -84,11 +85,11 @@ var _iOSInpFixdPos = function() {
     });
   }
 
-  inp.on('blur', function() {
-    fixedEl.each(function() {
-      $(this).removeAttr('style');
-    });
-  });
+  // inp.on('blur', function() {
+  //   fixedEl.each(function() {
+  //     $(this).removeAttr('style');
+  //   });
+  // });
 };
 
 /**
@@ -96,34 +97,49 @@ var _iOSInpFixdPos = function() {
   * @description // 인풋 입력창 인터렉션
   */
 var _inpControl = function() {
-  $('.wrap_inp .inp').each(function(idx, el){
-    $(el).on('change, input', function(){
-      var val = $(this).val();
+  _inpChkVal();
 
-      if (val.length > 0) {
-        $(this).closest('.box_inp').addClass('hasVal');
-      }else {
-        $(this).closest('.box_inp').removeClass('hasVal');
-      }
-    });
-    
-    // 입력 삭제 
+  var inp = $('.wrap_inp .inp');
+
+  // 입력 삭제 
+  inp.each(function(idx, el) {
     if ( $(el).siblings('.btn_ico_clear').length <= 0 ) {
       $(el).closest('.box_inp').append('<button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>');
     }
-    $('document').on('touchstart click', '.btn_clear', function() {
-      alert();
-      fnClearValue($(el));
+  });
+
+  $('.inp').bind('keyup change',function(){
+    _inpChkVal();
+  });
+
+  inp.on('focus blur', function(e){
+    _inpChkVal();
+
+    $('.btn_ico_clear').unbind('click').bind('click', function(e) {
+      e.stopPropagation();
+      $(this).siblings('.inp').val('').focus().click();
     });
+
+    if( $(this).val() !== '' && $(this).is(':focus') ){
+      $(this).closest('.box_inp').addClass('hasVal');
+    }
   });
 };
 
 /**
-  * @name fnClearValue()
-  * @description // 인풋 value 초기화
+  * @name _inpChkVal()
+  * @description // 인풋 value 
   */
-var fnClearValue = function(el) {
-  $(el).val('').focus().click();
+var _inpChkVal = function() {
+  $('.wrap_inp .inp').each(function(){
+    var val = $(this).val();
+
+    if (val.length > 0) {
+      $(this).closest('.box_inp').addClass('hasVal');
+    }else {
+      $(this).closest('.box_inp').removeClass('hasVal');
+    }
+  });
 };
 
 /**
