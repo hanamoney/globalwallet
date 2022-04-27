@@ -97,47 +97,54 @@ var _iOSInpFixdPos = function() {
   * @description // 인풋 입력창 인터렉션
   */
 var _inpControl = function() {
-  _inpChkVal();
-
   var inp = $('.wrap_inp .inp');
+  _inpChkVal(inp);
 
-  // 입력 삭제 
+  // 입력 삭제 버튼 추가
   inp.each(function(idx, el) {
     if ( $(el).siblings('.btn_ico_clear').length <= 0 ) {
       $(el).closest('.box_inp').append('<button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>');
     }
   });
 
-  $('.inp').bind('keyup change',function(){
-    _inpChkVal();
-  });
-
   inp.on('focus blur', function(e){
-    _inpChkVal();
+    _inpChkVal($(this));
 
-    $('.btn_ico_clear').unbind('click').bind('click', function(e) {
+    $(this).closest('.box_inp').find('.btn_ico_clear').unbind('click').bind('click', function(e) {
       e.stopPropagation();
       $(this).siblings('.inp').val('').focus().click();
+      $(this).closest('.box_inp').removeClass('show_btn');
     });
-
+    $(this).focusout(function(){
+      var $this = $(this);
+      setTimeout(function(){
+          $this.closest('.box_inp').removeClass('show_btn');
+      },100)
+    });
     if( $(this).val() !== '' && $(this).is(':focus') ){
-      $(this).closest('.box_inp').addClass('hasVal');
+      $(this).closest('.box_inp').addClass('show_btn');
     }
+  });
+
+  inp.bind('keyup change',function(){
+    $(this).closest('.box_inp').addClass('show_btn');
+    _inpChkVal($(this));
   });
 };
 
 /**
   * @name _inpChkVal()
-  * @description // 인풋 value 
+  * @description // 인풋 value에 따른 클래스
+  * @param {string | Element} el 인풋 
   */
-var _inpChkVal = function() {
-  $('.wrap_inp .inp').each(function(){
-    var val = $(this).val();
-
-    if (val.length > 0) {
+var _inpChkVal = function(el) {
+  $(el).each(function(){
+    if ($(this).val() !== '') {
       $(this).closest('.box_inp').addClass('hasVal');
-    }else {
+      $(this).closest('.box_inp').addClass('show_btn');
+    } else {
       $(this).closest('.box_inp').removeClass('hasVal');
+      $(this).closest('.box_inp').removeClass('show_btn');
     }
   });
 };
