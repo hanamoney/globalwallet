@@ -81,5 +81,5 @@
   height: 29.0rem;
   background: url('/images/global/visual_chg_103.png') no-repeat 50%;
   background-size: 100%;
-
+  z-index: 1;
 }

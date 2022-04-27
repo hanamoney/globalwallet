@@ -913,6 +913,7 @@ a.wrap_box [class^="ico_arr_link"] {
 
 /* message */
 .section_prc_complete {
+  position: relative;
   padding-top: 6.0rem;
   text-align: center;
 }
@@ -922,8 +923,32 @@ a.wrap_box [class^="ico_arr_link"] {
   width: 6.0rem;
   height: 6.0rem;
   margin: 0 auto 3.2rem;
+  border-radius: 50%;
+  background: linear-gradient(137.66deg, #19DDB8 16.87%, #D36BD6 84.47%);
+}
+.section_prc_complete::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 6.0rem;
+  left: calc(50% - 3.0rem);
+  width: 6.0rem;
+  height: 6.0rem;
   background: url('/images/hmui/ico_complete.png') no-repeat 50%;
   background-size: 100%;
+  will-change: transform;
+  animation: complete-animate 0.3s 0.3s ease-in-out forwards;
+}
+@keyframes complete-animate {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .section_prc_complete .txt_complete {
   font-size: 2.8rem;
@@ -948,6 +973,12 @@ a.wrap_box [class^="ico_arr_link"] {
   width: 5.4rem;
   height: 5.4rem;
   margin-bottom: 1.8rem;
+}
+.wrap_layer .section_prc_complete::after {
+  top: 4.0rem;
+  left: calc(50% - 2.7rem);
+  width: 5.4rem;
+  height: 5.4rem;
 }
 .wrap_layer .section_prc_complete .txt_complete {
   font-size: 2.2rem;
@@ -1218,6 +1249,9 @@ a.wrap_box [class^="ico_arr_link"] {
   position: relative;
   margin-top: -5.0rem;
   padding: 5.0rem 0 0;
+}
+.section_top_visual > * {
+  z-index: 2;
 }
 .section_top_visual .wrap_btn.type_full {
   padding: 3.0rem 2.4rem;
