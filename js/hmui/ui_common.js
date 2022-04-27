@@ -153,14 +153,22 @@ var _tooltip = function() {
     $focusEl = $(this);
     var $tooltip = $('#' + $(this).attr('data-name'));
     var posY = $focusEl.offset().top + $focusEl.outerHeight(true) + 5;
+    var posX = $focusEl.offset().left;
+    var winW = $(window).width();
+    var width = $tooltip.outerWidth(true);
+
+    console.log(posX);
     
     if ($('.wrap_layer.show').length) {
       var current = $('.wrap_layer.show').css('z-index');
       var zIndex = parseInt(current) + 1;
-      $tooltip.css('z-index', zIndex);
+      $tooltip.css({'z-index' : zIndex,});
     }
 
-    $tooltip.css('top', posY);
+    $tooltip.css({
+      'top': posY,
+      'left': '4.4rem',
+    });
     $tooltip.addClass('show');
     $tooltip.find('.inner_tooltip').children(':first').attr('tabindex','0').focus();
   });

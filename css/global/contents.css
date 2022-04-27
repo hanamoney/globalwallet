@@ -68,3 +68,18 @@
   margin-left: 5px;
   bottom: 8px;
 }
+.section_top_visual.chg_limit {
+  background: linear-gradient(137.12deg, #DAFFED 0%, #EFCBEB 123.54%);
+}
+.section_top_visual.chg_limit::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 24.2rem;
+  height: 29.0rem;
+  background: url('/images/global/visual_chg_103.png') no-repeat 50%;
+  background-size: 100%;
+
+}
