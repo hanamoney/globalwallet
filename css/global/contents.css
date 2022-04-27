@@ -83,3 +83,17 @@
   background-size: 100%;
   z-index: 1;
 }
+.wrap_item_benefit [class^="emoji_"] {
+  position: relative;
+}
+.wrap_item_benefit li .emoji_globe {
+  top: -0.3rem;
+  margin: 0 0.8rem 0 0.4rem;
+}
+.wrap_item_benefit li .emoji_atm {
+  margin: 0 0.7rem;
+}
+.wrap_item_benefit li .emoji_drone {
+  top: -0.5rem;
+  margin: 0 0.5rem 0 0.2rem;
+}

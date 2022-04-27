@@ -1321,7 +1321,7 @@ a.wrap_box [class^="ico_arr_link"] {
   font-weight: 700;
 }
 .list_benefit li .item_desc [class^="emoji_"] {
-  vertical-align: bottom;
+  vertical-align: top;
 }
 .wrap_item_benefit .wrap_btn_center {
   margin-bottom: 4.0rem;
