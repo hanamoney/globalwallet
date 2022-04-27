@@ -124,17 +124,15 @@ body.overflow {
   height: 100%;
 }
 #header {
-  position: relative;
-  height: 5.0rem;
-}
-#header .inner_fixed {
   position: fixed;
   left: 0;
   top: 0;
   width: 100vw;
   height: 5.0rem;
-  /* background-color: #fff; */
   z-index: 100;
+}
+#header .inner_fixed {
+  
 }
 #header.scrolled .inner_fixed::after {
   content: '';
@@ -180,6 +178,7 @@ section[data-roll] {
   overflow-x: hidden;
   width: 100vw;
   height:100%;
+  padding-top: 5.0rem;
   padding-bottom: 6.0rem;
 }
 [class^="section_"] {
@@ -1187,6 +1186,7 @@ a.wrap_box [class^="ico_arr_link"] {
 }
 .tooltip_bubble.right {
   right: 0;
+  left: auto;
   transform: none;
 }
 .tooltip_bubble p {
