@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>SET_001</title>
+
+  <link rel="stylesheet" href="/css/hmui/common.css">
+  <link rel="stylesheet" href="/css/global/contents.css">
+  <script src="/js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="/js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>하나머니  관리</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="SET">
+          <div class="section_set_list">
+            <ul class="wrap_list_box">
+              <li>
+                <div class="wrap_box">
+                  <span class="flag_fill">연결계좌</span>
+                  <p class="txt_bank">하나은행</p>
+                  <p class="txt_acc">379*****26507</p>
+                  <a href="#none" class="btn_txt">변경</a>
+                </div>
+              </li>
+              <!-- 계좌 미연결 케이스 -->
+              <li>
+                <a href="#none" class="wrap_box type_gradient">
+                  <p class="txt"><em class="txt_bold">계좌연결</em>하고<br/>간편하게 채워보세요.</p>
+                  <span class="ico_arr_link_w"></span>
+                </a>
+              </li>
+              <!-- // 계좌 미연결 케이스 -->
+              <li>
+                <div class="wrap_box">
+                  <label for="switch1">차액 충전</label>
+                  <div class="wrap_switch">
+                    <input type="checkbox" id="switch1">
+                    <span class="slider"></span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="wrap_box">
+                  <label for="switch2">자동 충전</label>
+                  <div class="wrap_switch">
+                    <input type="checkbox" id="switch2">
+                    <span class="slider"></span>
+                  </div>
+                  <div class="item_desc">
+                    <p class=""><em>1만 하나머니 미만</em>이 될 경우<br/><em>5만 하나머니</em> 채우기</p>
+                    <a href="#none" class="btn_txt">변경</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- // section -->
+      </div>
+    </div>
+    <!-- // contents-->
+  </main>
+  
+</body>
+</html>

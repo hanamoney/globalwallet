@@ -880,9 +880,13 @@ section[data-roll] {
 /* Box */
 .wrap_box {
   position: relative;
+  display: block;
   padding: 2.0rem;
-  background: linear-gradient(98.11deg, #11CDAB -18.09%, #2EBEC1 117.48%);
   border-radius: 1.4rem;
+  background-color: #F2F6F6;
+}
+.wrap_box.type_gradient {
+  background: linear-gradient(98.11deg, #11CDAB -18.09%, #2EBEC1 117.48%);
 }
 .wrap_box.type_gradient .flag_fill_white {
   color: #00928F;
@@ -890,7 +894,7 @@ section[data-roll] {
 .wrap_box.type_gradient [class^="txt"] {
   color: #fff;
 }
-.wrap_box.type_bluegrey {
+.wrap_box.bg_bluegrey {
   border-radius: 1.0rem;
   background: #F3F8FA;
 }
