@@ -616,7 +616,6 @@ section[data-roll] {
   width: 100%;
 }
 .box_inp.err .inp {
-  padding-bottom: 0.7rem;
   border-bottom: 2px solid #EC4361;
 }
 .box_inp .btn_ico_clear {
