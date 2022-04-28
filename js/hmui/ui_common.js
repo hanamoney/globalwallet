@@ -110,8 +110,7 @@ var _inpControl = function() {
   inp.on('focus blur', function(e){
     _inpChkVal($(this));
 
-    $(this).closest('.box_inp').find('.btn_ico_clear').unbind('click').bind('click', function(e) {
-      e.stopPropagation();
+    $(this).closest('.box_inp').find('.btn_ico_clear').bind('click', function() {
       $(this).siblings('.inp').val('').focus().click();
       $(this).closest('.box_inp').removeClass('show_btn');
     });
