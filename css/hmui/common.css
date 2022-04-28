@@ -255,7 +255,7 @@ section[data-roll] {
 .txt_num {
   letter-spacing: 0;
 }
-.txt_linethrough {
+.txt_cancel {
   text-decoration: line-through;
 }
 .txt_point_1 {
