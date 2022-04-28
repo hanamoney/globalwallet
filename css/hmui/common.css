@@ -1500,6 +1500,20 @@ a.wrap_box > .txt:first-child {
 .wrap_item_benefit .wrap_btn_center {
   margin-bottom: 4.0rem;
 }
+.wrap_item_benefit li,
+.wrap_item_benefit .tit_wrap {
+  will-change: transform, opacity;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+.wrap_item_benefit li.animate,
+.wrap_item_benefit .tit_wrap  {
+  animation-name: showItemUp;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 /* 유의사항 */
 .wrap_notice {
   margin-bottom: -6.0rem;

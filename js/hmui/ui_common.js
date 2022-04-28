@@ -25,6 +25,7 @@ var registUI = function(){
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트 
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
+  if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 인풋 인터렉션
   if ( $('.wrap_tooltip').length ) { _tooltip(); } // 툴팁
   if ( $('.wrap_layer').length ) { _layerPop(); } // 레이어팝업
 };
@@ -80,7 +81,7 @@ var _iOSInpFixdPos = function() {
   function resizeHandler() {
     fixedEl.each(function(idx, el) {
       var $el = $(el);
-      var current = $el.css('bottom').replace(/[^0-9]/g, "");
+      var current = $el.css('bottom').replace(/[^0-9]/g, '');
       var pos = -(height - viewport.height) + 'px';
       
       $el.css('transform', 'translateY(' +  pos + ')');
@@ -143,6 +144,28 @@ var _inpChkVal = function(el) {
     }
   });
 };
+
+/**
+  * @name _showBenefitList()
+  * @description // 툴팁
+  */
+var _showBenefitList = function() {
+  var $el = $('.wrap_item_benefit');
+  $el.waypoint({
+    handler: function() {
+      var current = parseFloat($el.find('.tit_wrap').css('animation-delay'));
+      
+      $el.find('.tit_wrap').addClass('animate');
+      $el.find('.list_benefit li').each(function(){
+        var delay = current + (($(this).index()+1)*0.2) + 's';
+        $(this).addClass('animate').css({
+          'animation-delay': delay
+        });
+      });
+    },
+    offset: '90%'
+  });
+}
 
 /**
   * @name _tooltip()

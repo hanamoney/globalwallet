@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@keyframes showItemUp {
+  0% {
+    transform: translateY(2.0rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
