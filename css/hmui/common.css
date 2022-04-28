@@ -953,9 +953,6 @@ button.wrap_box [class^="ico_arr_down"] {
   right: 1.9rem;
   bottom: 1.9rem;
 }
-a.wrap_box .txt:first-child {
-  padding: 1.0rem 0;
-}
 .wrap_box .txt_bank {
   padding-top: 1.2rem;
   font-size: 2.0rem;
@@ -967,19 +964,31 @@ a.wrap_box .txt:first-child {
   font-size: 1.6rem;
   letter-spacing: 0;
 }
-.wrap_box .tit {
+.wrap_box > .tit {
   font-size: 2.2rem;
   font-weight: 300;
 }
 .wrap_box .tit em {
   font-weight: 700;
 }
-.wrap_box .txt {
+.wrap_box > .txt {
   font-size: 2.0rem;
   font-weight: 300;
 }
+a.wrap_box > .txt:first-child {
+  padding: 1.0rem 0;
+}
+.wrap_box .txt_sub {
+  color: #6E7D85;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
 .wrap_box .txt_sub:first-child {
   margin-top: -0.5rem;
+}
+.wrap_box .txt_sub .txt_acc {
+  font-size: 1.4rem;
+  padding-top: 0;
 }
 .wrap_box .txt_sub + .txt_sub {
   margin-top: 0.8rem;
@@ -988,7 +997,8 @@ a.wrap_box .txt:first-child {
   padding-top: 0.6rem;
 }
 .wrap_box .list_info li {
-  padding: 0.4rem 0 ;
+  margin-top: -0.2rem;
+  padding: 0.5rem 0;
 }
 .wrap_box.type_bluegrey .list_info .tit {
   color: #4F5D64;
@@ -1513,5 +1523,6 @@ a.wrap_box .txt:first-child {
   padding-top: 1.4rem;
 }
 .wrap_layer .content_layer .wrap_box {
-  margin: 2.4rem 2.4rem 0;
+  width: calc(100vw - 4.8rem);
+  margin: 2.4rem auto 0;
 }
