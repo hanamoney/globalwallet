@@ -68,12 +68,14 @@ var _iOSInpFixdPos = function() {
   var height = window.visualViewport.height;
   var viewport = window.visualViewport;
 
-  window.addEventListener('scroll', inputBlur);
   window.visualViewport.addEventListener('resize', resizeHandler);
-
-  function inputBlur() {
-    inp.blur();
-  }
+  $(window).on('touchstart', function(e) {
+    var el = e.target.classList;
+    if (inp.is(':focus') && !el.contains('inp') && !el.contains('btn_ico_clear') ) {
+      inp.blur();
+      console.log(el);
+    }
+  })
 
   function resizeHandler() {
     fixedEl.each(function(idx, el) {
@@ -84,12 +86,6 @@ var _iOSInpFixdPos = function() {
       $el.css('transform', 'translateY(' +  pos + ')');
     });
   }
-
-  // inp.on('blur', function() {
-  //   fixedEl.each(function() {
-  //     $(this).removeAttr('style');
-  //   });
-  // });
 };
 
 /**
