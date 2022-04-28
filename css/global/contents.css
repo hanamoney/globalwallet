@@ -11,20 +11,6 @@
   height: auto;
   margin-bottom: 1.5rem;
 }
-.section_chg_list .wrap_link_list .wrap_box .txt_bank {
-  padding-top: 1.2rem;
-  font-size: 2.0rem;
-  font-weight: 700;
-}
-.section_chg_list .wrap_link_list .wrap_box .txt_acc {
-  padding-top: 0.6rem;
-  font-size: 1.6rem;
-  letter-spacing: 0;
-}
-.section_chg_list .wrap_link_list .wrap_box .txt {
-  font-size: 2.0rem;
-  font-weight: 300;
-}
 .wrap_btn_box li:last-child .tooltip_bubble .bubble_caret {
   left: auto;
   right: calc(20% - 10px);
@@ -96,4 +82,12 @@
 .wrap_item_benefit li .emoji_drone {
   top: -0.5rem;
   margin: 0 0.5rem 0 0.2rem;
+}
+
+/* [SET] - 하나머니 관리 */
+.section_set_list {
+  padding-top: 3.0rem;
+}
+.section_set_list .wrap_btn.type_full {
+  margin-top: 3.0rem;
 }
