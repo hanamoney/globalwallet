@@ -68,7 +68,7 @@ var _iOSInpFixdPos = function() {
   var height = window.visualViewport.height;
   var viewport = window.visualViewport;
 
-  window.addEventListener('scroll', inputBlur);
+  // window.addEventListener('scroll', inputBlur);
   window.visualViewport.addEventListener('resize', resizeHandler);
 
   function inputBlur() {
