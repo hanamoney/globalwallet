@@ -1048,6 +1048,7 @@ a.wrap_box > .txt:first-child {
   }
 }
 .section_prc_complete .txt_complete {
+  color: #6E7D85;
   font-size: 2.8rem;
   line-height: 3.2rem;
   font-weight: 300;
