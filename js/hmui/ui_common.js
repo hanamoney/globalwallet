@@ -163,12 +163,21 @@ var _showBenefitList = function() {
   list.each(function(){
     var $this = $(this);
     $this.waypoint({
+      element: this,
       handler: function() {
+        $this.addClass('transform active');
+        $('.list_benefit li.active').each(function(idx){
+          var delay = 0.1 * idx + 's';
+          $(this).css({
+            'transition-delay': delay
+          });
+        });
         setTimeout(function(){
-          $this.addClass('transform');
+          list.removeClass('active');
         },100);
+        
       },
-      offset: '100%' 
+      offset: '100%'
     });
   });
 }
