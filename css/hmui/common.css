@@ -333,7 +333,7 @@ section[data-roll] {
 .btn_ico_card_header {
   background-image: url('/images/hmui/btn_card_header.png');
 }
-.btn_ico_tooltip {
+.ico_tooltip {
   width: 2.0rem;
   height: 2.0rem;
   background-image: url('/images/hmui/btn_tooltip.png');
@@ -1355,6 +1355,36 @@ a.wrap_box > .txt:first-child {
 .section_top_visual .wrap_btn.type_full {
   padding: 3.0rem 2.4rem;
 }
+/* 환율정보 */
+.wrap_info_exchange {
+  height: 6.5rem;
+  padding: 3.0rem 2.4rem 1.5rem;
+}
+.wrap_info_exchange .btn_tooltip {
+  vertical-align: top;
+  height: 2.0rem;
+}
+.wrap_info_exchange .btn_tooltip .ico_tooltip {
+  vertical-align: top;
+}
+.wrap_info_exchange .txt_info {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #000;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  vertical-align: top;
+}
+.wrap_info_exchange .ico_cur_usd {
+  width: 1.8rem;
+  height: 1.8rem;
+  vertical-align: top;
+}
+.wrap_info_exchange .txt_balloon {
+  display: inline-block;
+  margin-left: 5px;
+  bottom: 8px;
+}
 /* 링크 리스트 */
 .wrap_link_list li:first-child {
   margin-top: 0;
@@ -1504,14 +1534,13 @@ a.wrap_box > .txt:first-child {
 .wrap_item_benefit .tit_wrap {
   will-change: transform, opacity;
   opacity: 0;
-  animation-delay: 0.3s;
+  transform: translateY(50%);
+  transition: all 0.4s ease-in-out;
 }
-.wrap_item_benefit li.animate,
-.wrap_item_benefit .tit_wrap  {
-  animation-name: showItemUp;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
+.wrap_item_benefit li.transform,
+.wrap_item_benefit .tit_wrap.transform {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* 유의사항 */
