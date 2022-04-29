@@ -131,9 +131,6 @@ body.overflow {
   height: 5.0rem;
   z-index: 100;
 }
-#header .inner_fixed {
-  
-}
 #header.scrolled .inner_fixed::after {
   content: '';
   position: absolute;
@@ -149,6 +146,7 @@ body.overflow {
 }
 #header h1 {
   padding: 0 4.6rem;
+  color: #000;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 5.0rem;
@@ -167,6 +165,12 @@ body.overflow {
 #header .btn_ico_menu,
 #header .btn_ico_card_header {
   right: 2.2rem;
+}
+#header.type_white h1 {
+  color: #fff;
+}
+#header.type_white.scrolled h1 {
+  color: #000;
 }
 .wrap_contents {
 
@@ -1479,6 +1483,9 @@ a.wrap_box > .txt:first-child {
 .list_benefit {
   padding-bottom: 4.0rem;
 }
+.list_benefit:first-child {
+  padding-top: 3.2rem;
+}
 .list_benefit li {
   display: flex;
   align-items: flex-start;
@@ -1568,4 +1575,33 @@ a.wrap_box > .txt:first-child {
 .wrap_layer .content_layer .wrap_box {
   width: calc(100vw - 4.8rem);
   margin: 2.4rem auto 0;
+}
+
+/* 캐릭터 이미지 */
+.img_character_aero {
+  display: inline-block;
+  width: 50.181vw;
+  height: 100%;
+  background: url('/images/hmui/character/img_character_aero.png') no-repeat 50%;
+  background-size: 100%;
+}
+[class^="img_cloud"] {
+  display: inline-block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.img_cloud1 {
+  bottom: 17.6vw;
+  left: 0;
+  width: 15.76vw;
+  height: 9.03vw;
+  background-image: url('/images/hmui/character/visual_usr_cloud1.png');
+}
+.img_cloud2 {
+  top: 13.33vw;
+  right: 0;
+  width: 30.05vw;
+  height: 15.94vw;
+  background-image: url('/images/hmui/character/visual_usr_cloud2.png');
 }

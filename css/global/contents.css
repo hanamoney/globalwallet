@@ -63,3 +63,34 @@
 .section_set_list .wrap_btn.type_full {
   margin-top: 3.0rem;
 }
+
+/* [USR] - 회원가입 */
+.section_top_visual.join_complete {
+  padding-bottom: 20.3rem;
+  background: linear-gradient(98.11deg, #11CDAB -18.09%, #2EBEC1 117.48%);
+}
+.section_top_visual.join_complete .wrap_tit > * {
+  color: #fff;
+}
+.visual_usr_character {
+  position: absolute;
+  right: 0;
+  bottom: -8.89vw;
+  left: 19.72vw;
+  width: 70.3vw;
+  height: 53.05vw;
+  text-align: center;
+}
+.visual_usr_character .img_character_aero,
+.visual_usr_character [class^="img_cloud"] {
+  will-change: transform;
+}
+.visual_usr_character .img_character_aero {
+  animation: itemUp10 0.6s forwards;
+}
+.visual_usr_character .img_cloud1 {
+  animation: itemUp10 0.3s forwards;
+}
+.visual_usr_character .img_cloud2 {
+  animation: itemUp10 0.4s forwards, itemFloat5 2s 0.4s ease-in-out infinite;
+}

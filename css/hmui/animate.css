@@ -1,12 +1,25 @@
 @charset "utf-8";
 
-@keyframes showItemUp {
+@keyframes itemUp10 {
   0% {
-    transform: translateY(2.0rem);
-    opacity: 0;
+    transform: translateY(1.0rem);
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
   }
 }
+@keyframes itemUp100 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes itemFloat5 {
+  0% {
+    transform: translateY(0); }
+  60% {
+    transform: translateY(0.5rem); }
+  100% {
+    transform: translateY(0); } }
