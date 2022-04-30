@@ -16,10 +16,22 @@
     transform: translateY(0);
   }
 }
+
+@keyframes itemFloat7 {
+  0% {
+    transform: translateY(0); }
+  45% {
+    transform: translateY(0.7rem); }
+  100% {
+    transform: translateY(0); 
+  } 
+}
 @keyframes itemFloat5 {
   0% {
     transform: translateY(0); }
   60% {
     transform: translateY(0.5rem); }
   100% {
-    transform: translateY(0); } }
+    transform: translateY(0); 
+  } 
+}
