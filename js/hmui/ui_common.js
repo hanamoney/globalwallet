@@ -26,6 +26,8 @@ var registUI = function(){
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
+  if ( $('.section_terms .btn_acco').length ) { _agreeAccoBtn(); } // 약관동의 아코디언 기능
+  if ( $('.section_terms .wrap_chk_all').length ) { _agreeCheckAll(); } // 약관전체동의
   if ( $('.wrap_tooltip').length ) { _tooltip(); } // 툴팁
   if ( $('.wrap_layer').length ) { _layerPop(); } // 레이어팝업
 };
@@ -35,11 +37,23 @@ var registUI = function(){
   * @description 스크롤에 따른 Header
   */
 var _headerControl = function(){
+  //  페이지 스크롤
   $(window).on('scroll', function() {
     if ($(window).scrollTop() > 0) {
       $('#header').addClass('scrolled');
     }else {
       $('#header').removeClass('scrolled');
+    }
+  });
+
+  // F-Pop 콘텐츠 스크롤
+  $('.wrap_layer.type_full .content_layer').on('scroll', function(){
+    var $this = $(this);
+    var $header = $this.closest('.inner_layer').find('.head_layer');
+    if ($this.scrollTop() > 0) {
+      $header.addClass('scrolled');
+    }else {
+      $header.removeClass('scrolled');
     }
   });
 };
@@ -154,30 +168,127 @@ var _showBenefitList = function() {
   var tit = $el.find('.tit_wrap');
   var list = $el.find('.list_benefit li');
 
-  tit.waypoint({
-    handler: function() {
-      $el.find('.tit_wrap').addClass('transform');
-    },
-    offset: '100%'
-  });
-  list.each(function(){
-    var $this = $(this);
-    $this.waypoint({
-      element: this,
+  if ($el.parents('.wrap_layer').length ){
+    // F-Pop 일 경우 
+    setTimeout(function(){
+      _titShow();
+      _listshow();
+    },400);
+  } else {
+    _titShow();
+    _listshow();
+  }
+
+  function _titShow() {
+    tit.waypoint({
       handler: function() {
-        $this.addClass('transform active');
-        $('.list_benefit li.active').each(function(idx){
-          var delay = 0.1 * idx + 's';
-          $(this).css({
-            'transition-delay': delay
-          });
-        });
-        setTimeout(function(){
-          list.removeClass('active');
-        },100);
-        
+        $el.find('.tit_wrap').addClass('transform');
       },
       offset: '100%'
+    });
+  }
+
+  function _listshow() {
+    list.each(function(){
+      var $this = $(this);
+      $this.waypoint({
+        element: this,
+        handler: function() {
+          $this.addClass('transform active');
+          $('.list_benefit li.active').each(function(idx){
+            var delay = 0.1 * idx + 's';
+            $(this).css({
+              'transition-delay': delay
+            });
+          });
+          setTimeout(function(){
+            list.removeClass('active');
+          },100);
+          
+        },
+        offset: '100%'
+      });
+    });
+  }
+}
+
+/**
+  * @name _agreeAccoBtn()
+  * @description // 약관동의 아코디언 버튼
+  */
+var _agreeAccoBtn = function() {
+  var accoBtn = $('.section_terms .btn_acco');
+  var chk = $('.section_terms .wrap_agree_list > li .chk input[type="checkbox"]');
+
+  accoBtn.on('click', function(){
+    var $this = $(this);
+    var $accoCont = $(this).closest('.box_chk').siblings('.wrap_acco');
+
+    if ($this.hasClass('on')) {
+      _closeAgreeAcco($this, $accoCont);
+    } else {
+      _openAgreeAcco($this, $accoCont);
+    }
+  });
+
+  var _openAgreeAcco = function(btn, acco){
+    $(btn).addClass('on');
+    $(acco).slideDown(300);
+  }
+
+  var _closeAgreeAcco = function(btn, acco){
+    $(btn).removeClass('on');
+    $(acco).slideUp(300);
+  }
+}
+
+/**
+  * @name _agreeCheckAll()
+  * @description // 약관전체동의
+  */
+var _agreeCheckAll = function() {
+  $('.section_terms').each(function(){
+    var $this = $(this);
+    var chkAllBtn = $this.find('.wrap_chk_all input[type="checkbox"]');
+    var agreeChk = $this.find('.wrap_agree_list li > .box_chk input[type="checkbox"]');
+    var subChk = $this.find('.wrap_agree_list .wrap_acco input[type="checkbox"]');
+
+    chkAllBtn.on('change', function(){
+      if( $(this).is(':checked') == false ){
+        agreeChk.prop('checked',false);
+        subChk.prop('checked',false);
+      }else{
+        agreeChk.prop('checked',true);
+        subChk.prop('checked',true);
+      }   
+    });
+
+    agreeChk.on('change', function(){
+      // 전체체크
+      if( agreeChk.length == $this.find('.wrap_agree_list li > .box_chk input[type="checkbox"]:checked').length ){
+        chkAllBtn.prop('checked',true);
+      }else{
+        chkAllBtn.prop('checked',false);
+      }
+
+      // 하위체크
+      var sub = $(this).closest('li').find('.chk.type_sub input[type="checkbox"]');
+      if( sub.length && $(this).is(':checked') == true ) {
+        sub.prop('checked',true);
+      } else if ( sub.length && $(this).is(':checked') == false ){
+        sub.prop('checked',false);
+      }
+    });
+
+    subChk.on('change', function(){
+      var checkedLength = $(this).closest('.chk_list').find('.chk.type_sub input:checked').length;
+      var parentChk = $(this).closest('.wrap_acco').siblings('.box_chk').find('input[type="checkbox"]');
+      if ( checkedLength <= 0) {
+        parentChk.prop('checked',false);
+        agreeChk.trigger('change');
+      } else {
+        parentChk.prop('checked',true);
+      }
     });
   });
 }
@@ -210,7 +321,7 @@ var _tooltip = function() {
       'left': '4.4rem',
     });
     $tooltip.addClass('show');
-    $tooltip.find('.inner_tooltip').children(':first').attr('tabindex','0').focus();
+    $tooltip.find('.inner_tooltip').children(':first').focus();
   });
 
   $('.fnCloseTooltip').on('click', function(){
@@ -261,9 +372,9 @@ var fnOpenLayerPop = function(popID) {
   $el.append(dim);
 
   if ($el.find('tit_layer').length) {
-    $el.find('.tit_layer').attr('tabindex','0').focus();
+    $el.find('.tit_layer').focus();
   } else {
-    $el.find('.inner_layer').children(':first').attr('tabindex','0').focus();
+    $el.find('.inner_layer').children(':first').focus();
   }
 }
 

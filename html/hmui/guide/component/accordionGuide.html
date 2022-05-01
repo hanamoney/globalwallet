@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>Accordion guide</title>
+
+  <link rel="stylesheet" href="/css/hmui/swiper.css">
+  <link rel="stylesheet" href="/css/hmui/animate.css">
+  <link rel="stylesheet" href="/css/hmui/common.css">
+  <link rel="stylesheet" href="/css/global/contents.css">
+  <script src="/js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="/js/hmui/lib/swiper.js"></script>
+  <script src="/js/hmui/lib/waypoints.min.js"></script>
+  <script src="/js/hmui/lib/jquery.counterup.js"></script>
+  <script src="/js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>페이지타이틀</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="guide">
+          <div class="section_terms">
+            <ul class="wrap_agree_list">
+              <li>
+                <p class="box_chk">
+                  <span class="chk">
+                    <input type="checkbox" id="chk1_2" name="chk1"/>
+                    <label for="chk1_2">
+                      <span class="label">[선택] 개인(신용)정보 수집 이용 동의</span>
+                    </label>
+                  </span>
+                  <span class="flag_terms_lv2">다소안심</span>
+                  <button type="button" class="ico_arr_down btn_acco"><span class="blind">자세히 보기</span></button>
+                </p>
+                <div class="wrap_acco">
+                  <p class="txt">하나머니 혜택 정보를 문자, 이메일, 전화, PUSH 알림으로 알려드려요.</p>
+                  <ul class="chk_list">
+                    <li>
+                      <span class="chk type_sub">
+                        <input type="checkbox" id="chk1_2_1" name="chk1_2"/>
+                        <label for="chk1_2_1">
+                          <span class="label">문자</span>
+                        </label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="chk type_sub">
+                        <input type="checkbox" id="chk1_2_2" name="chk1_2"/>
+                        <label for="chk1_2_2">
+                          <span class="label">이메일</span>
+                        </label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="chk type_sub">
+                        <input type="checkbox" id="chk1_2_3" name="chk1_2"/>
+                        <label for="chk1_2_3">
+                          <span class="label">전화</span>
+                        </label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="chk type_sub">
+                        <input type="checkbox" id="chk1_2_4" name="chk1_2"/>
+                        <label for="chk1_2_4">
+                          <span class="label">PUSH 알림</span>
+                        </label>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

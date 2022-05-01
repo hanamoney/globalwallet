@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>USR_103</title>
+
+  <link rel="stylesheet" href="/css/hmui/swiper.css">
+  <link rel="stylesheet" href="/css/hmui/animate.css">
+  <link rel="stylesheet" href="/css/hmui/common.css">
+  <link rel="stylesheet" href="/css/global/contents.css">
+  <script src="/js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="/js/hmui/lib/swiper.js"></script>
+  <script src="/js/hmui/lib/waypoints.min.js"></script>
+  <script src="/js/hmui/lib/jquery.counterup.js"></script>
+  <script src="/js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="USR">
+        </section>
+        <!-- // section -->
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="popupId" class="wrap_layer type_full">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">트래블로그 카드 신청</h2>
+        </div>
+        <div class="content_layer">
+          <div class="section_top_visual join_card">
+            <div class="wrap_tit">
+              <h2 class="tit_page"><em>카드 신청</em>만<br/>남았어요!</h2>
+              <p class="txt">해외여행 직구할 때 이만한 카드 없을걸요?</p>
+            </div>
+            <div class="visual_usr_card" aria-hidden="true">
+              <span class="img_card_travlog"></span>
+              <span class="img_character_1"></span>
+            </div>
+          </div>
+          <div class="wrap_item_benefit">
+            <ul class="list_benefit">
+              <li>
+                <span class="box"><span>1</span></span>
+                <div class="item_desc">
+                  <p class="tit">해외에서<span class="emoji_globe"></span>카드 결제하면</p>
+                  <p class="txt">해외 서비스 수수료와 국제 브랜드사 <em class="txt_point_1">수수료 모두 무료!!</em></p>
+                </div>
+              </li>
+              <li>
+                <span class="box"><span>2</span></span>
+                <div class="item_desc">
+                  <p class="tit">해외 ATM에서<span class="emoji_atm"></span>출금하면</p>
+                  <p class="txt">국제 브랜드사 수수료와 해외 현금 인출 <em class="txt_point_1">수수료 모두 하나머니가 내드려요!</em></p>
+                </div>
+              </li>
+              <li>
+                <span class="box"><span>3</span></span>
+                <div class="item_desc">
+                  <p class="tit">해외직구<span class="emoji_drone"></span>할 때</p>
+                  <p class="txt">해외직구라운지에서 결제하면 <em class="txt_point_1"><span class="txt_num">10</span>% 하나머니 캐시백</em>까지!</p>
+                </div>
+              </li>
+            </ul>
+            <div class="wrap_btn_center">
+              <a href="#none" class="btn_link">트래블로그 혜택 활용법 보기<span class="ico_arr_link_s"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="section_bottom_fixed">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_primary">카드 신청하기</button>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // popup -->
+  </main>
+
+  <script>
+    $(function(){
+      // 팝업오픈 퍼블확인용 스크립트
+      fnOpenLayerPop('popupId');
+    });
+  </script>
+</body>
+</html>
