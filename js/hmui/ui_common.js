@@ -303,22 +303,36 @@ var _tooltip = function() {
   $('.fnOpenTooltip').on('click', function(){
     $focusEl = $(this);
     var $tooltip = $('#' + $(this).attr('data-name'));
+    var winW = $(window).outerWidth();
+    var width = $tooltip.outerWidth(true)/2;
     var posY = $focusEl.offset().top + $focusEl.outerHeight(true) + 5;
-    var posX = $focusEl.offset().left;
-    var winW = $(window).width();
-    var width = $tooltip.outerWidth(true);
-
-    console.log(posX);
+    var posX = winW/2 - width; // default center
+    var btnX = 0;
     
+    // inside pop
     if ($('.wrap_layer.show').length) {
       var current = $('.wrap_layer.show').css('z-index');
       var zIndex = parseInt(current) + 1;
-      $tooltip.css({'z-index' : zIndex,});
+      $tooltip.css({'z-index' : zIndex});
+    }
+
+    // get Btn position
+    if ($focusEl.find('.ico_tooltip').length) {
+      btnX = $focusEl.find('.ico_tooltip').offset().left + ($focusEl.find('.ico_tooltip').outerWidth(true)/2);
+    } else {
+      btnX = $focusEl.offset().left + $focusEl.outerWidth(true)/2;
+    }
+
+    // calc position left
+    if ( btnX < winW/3 ) {
+      posX = '2.4rem';
+    } else if ( btnX > winW * 0.66 ) {
+      posX = winW - $tooltip.outerWidth(true) - 24;
     }
 
     $tooltip.css({
       'top': posY,
-      'left': '4.4rem',
+      'left': posX,
     });
     $tooltip.addClass('show');
     $tooltip.find('.inner_tooltip').children(':first').focus();
