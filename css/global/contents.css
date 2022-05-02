@@ -87,6 +87,17 @@
   display: block;
   text-align: center;
 }
+.visual_usr_card {
+
+}
+.img_card_travlog {
+  display: block;
+  margin: 0 auto;
+  width: 13.4rem;
+  height: 21.2rem;
+  background-color: #444;;
+  transform: rotate(-11.58deg);
+}
 .section_top_visual.join_complete {
   padding-bottom: 20.3rem;
   background: linear-gradient(98.11deg, #11CDAB -18.09%, #2EBEC1 117.48%);
