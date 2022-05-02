@@ -239,6 +239,12 @@ section[data-roll] {
   line-height: 2.4rem;
   font-weight: 300;
 }
+.wrap_tit .txt_2 {
+  color: #323E43;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #6E7D85;
+}
 .wrap_tit [class^="txt"] em {
   font-weight: 700;
 }
@@ -311,6 +317,21 @@ section[data-roll] {
   background: url('/images/hmui/ico_balloon_caret.png') no-repeat 50%;
   background-size: 100%;
 }
+[class^="flag_terms_"] {
+  display: inline-block;
+  min-width: 4.2rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.flag_terms_lv1 {background-color: #53BC8A;}
+.flag_terms_lv2 {background-color: #81BC53;}
+.flag_terms_lv3 {background-color: #E1C52D;}
+.flag_terms_lv4 {background-color: #E1792D;}
+.flag_terms_lv5 {background-color: #FF4236;}
+
 
 /* Align */
 
@@ -385,6 +406,11 @@ section[data-roll] {
   width: 2.0rem;
   height: 2.0rem;
   background-image: url('/images/hmui/ico_arr_down.png');
+}
+.ico_arr_down_2 {
+  width: 2.0rem;
+  height: 2.0rem;
+  background-image: url('/images/hmui/ico_arr_down_2.png');
 }
 [class^="ico_cur_"] {
   width: 3.0rem;
@@ -474,15 +500,16 @@ section[data-roll] {
   background-image: url('/images/hmui/ico_chk.png');
   background-size: 100%;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
+  transform: translateY(-50%);
 }
 .chk .label {
+  flex: 1;
   padding-left: 1.0rem;
   color: #6E7D85;
   font-size: 1.6rem;
   line-height: 2.2rem;
-  /* text-decoration: underline; */
 }
 .chk input:required + label {
   text-decoration: underline;
@@ -493,6 +520,23 @@ section[data-roll] {
 }
 .chk input:checked + label .label {
   color: #252E33;
+}
+.chk.type_sub label .label {
+  color: #849594;
+  font-size: 1.5rem;
+}
+.chk.type_sub input + label::before {
+  background-color: transparent;
+  transition: none;
+}
+.chk.type_sub input + label::after {
+  background-image: url('/images/hmui/ico_chk_default.png');
+}
+.chk.type_sub input:checked + label::after {
+  background-image: url('/images/hmui/ico_chk_checked.png');
+}
+.chk.type_sub input:checked + label .label {
+  color: #4F5D64;
 }
 .chk.type_box {
   display: block;
@@ -505,10 +549,7 @@ section[data-roll] {
 }
 .chk.type_box label::before,
 .chk.type_box label::after {
-  position: absolute;
-  top: 50%;
   left: 2.0rem;
-  transform: translateY(-50%);
 }
 .chk.type_box input:checked + label {
   background: linear-gradient(98.11deg, #11CDAB -18.09%, #2EBEC1 117.48%);
@@ -536,6 +577,18 @@ section[data-roll] {
 }
 .chk_round input:checked + label .label {
   color: #13C9BE;
+}
+.chk_list li {
+  margin-top: 1.0rem;
+}
+.chk_list.type_col {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  flex-wrap: wrap;
+}
+.chk_list.type_col li {
+  width: 50%;
 }
 
 /* Radio */
@@ -1207,7 +1260,7 @@ a.wrap_box > .txt:first-child {
 }
 .wrap_layer .btn_ico_close {
   position: absolute;
-  top: 1.2rem;
+  top: 2.8rem;
   right: 2.0rem;
   z-index: 100;
 }
@@ -1245,6 +1298,9 @@ a.wrap_box > .txt:first-child {
 .wrap_layer.type_full .content_layer {
   min-height: calc(100vh - 5.0rem);
   padding-top: 5.0rem;
+}
+.wrap_layer.type_full .btn_ico_close {
+  top: 1.2rem;
 }
 .wrap_layer.type_alert .inner_layer {
   overflow: hidden;
@@ -1416,10 +1472,49 @@ a.wrap_box > .txt:first-child {
 
 /* 약관동의 */
 .section_terms {
-
+  padding-top: 3.0rem
+}
+.wrap_chk_all .chk label {
+  padding: 2.0rem 0;
+}
+.wrap_chk_all .chk label .label {
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+}
+.wrap_agree_list .box_chk {
+  display: -webkit-box;
+  display: flex;
+  align-items: center;
+}
+.wrap_agree_list .box_chk .chk {
+  flex: 1;
+  vertical-align: top;
+}
+.wrap_agree_list .box_chk .chk label {
+  padding: 1.0rem 0;
+}
+.wrap_agree_list .box_chk [class^="flag_terms_"] {
+  margin-left: 1.0rem;
+}
+.wrap_agree_list .box_chk .btn_acco {
+  margin-left: 1.0rem;
 }
 .section_terms .wrap_acco {
   display: none;
+  padding-left: 3.2rem;
+}
+.section_terms .wrap_acco .txt {
+  color: #4F5D64;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  word-break: keep-all;
+}
+.section_terms .wrap_acco .txt:first-child {
+  margin-top: 0.4rem;
+}
+.section_terms .wrap_acco .txt + .chk_list {
+  margin-top: 0.3rem;
 }
 
 /* 환율정보 */
