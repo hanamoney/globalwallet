@@ -527,7 +527,7 @@ section[data-roll] {
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
-.chk input:required + label {
+.chk input:required + label .label {
   text-decoration: underline;
 }
 .chk input:checked + label::before,
