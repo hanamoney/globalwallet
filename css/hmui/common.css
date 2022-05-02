@@ -1248,7 +1248,7 @@ a.wrap_box > .txt:first-child {
   transition: visibility 0.3s;
 }
 .wrap_layer .inner_layer {
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
@@ -1291,7 +1291,10 @@ a.wrap_box > .txt:first-child {
   z-index: 100;
 }
 .wrap_layer.type_full .inner_layer {
-  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
   border-radius: 0;
 }
 .wrap_layer.type_full .head_layer {
@@ -1322,12 +1325,16 @@ a.wrap_box > .txt:first-child {
   line-height: 5.0rem;
 }
 .wrap_layer.type_full .content_layer {
-  min-height: 100vh;
-  max-height: 100vh;
+  max-height: none;
+  height: 100vh;
   padding-top: 5.0rem;
   padding-bottom: 6.0rem;
 }
+.wrap_layer.type_full .section_bottom_fixed {
+  min-height: auto;
+}
 .wrap_layer.type_full.hasFixedBtn .content_layer {
+  height: calc(100vh - 12.0rem);
   padding-bottom: 12.0rem;
 }
 .wrap_layer.type_full .btn_ico_close {
