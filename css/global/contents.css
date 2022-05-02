@@ -80,23 +80,32 @@
 }
 .section_top_visual.join_card {
   padding-bottom: 29.8rem;
-  background-color: pink;
 }
-.section_top_visual.join_card::after {
+.visual_usr_card::before {
   content: '카드디자인 확정 후 수정예정';
   display: block;
+  position: absolute;
+  top: 10px;
+  transform: rotate(-11.58deg);
+  color: #fff;
+  z-index: 10;
   text-align: center;
 }
 .visual_usr_card {
-
+  position: absolute;
+  left: 50%;
+  bottom: 3.2rem;
+  transform: translateX(-50%);
 }
 .img_card_travlog {
   display: block;
   margin: 0 auto;
   width: 13.4rem;
   height: 21.2rem;
+  border-radius: 0.8rem;
   background-color: #444;;
   transform: rotate(-11.58deg);
+  box-shadow: 6px 11px 14px rgba(0, 0, 0, 0.1);
 }
 .section_top_visual.join_complete {
   padding-bottom: 20.3rem;
