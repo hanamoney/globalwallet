@@ -65,12 +65,37 @@
 }
 
 /* [USR] - 회원가입 */
+.section_acc_list {
+  padding-top: 3.0rem;
+}
+.wrap_banner.usr_open_acc::after {
+  content: '이미지변경예정';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 12.9rem;
+  height: 6.8rem;
+  background: pink;
+}
+.section_top_visual.join_card {
+  padding-bottom: 29.8rem;
+  background-color: pink;
+}
+.section_top_visual.join_card::after {
+  content: '카드디자인 확정 후 수정예정';
+  display: block;
+  text-align: center;
+}
 .section_top_visual.join_complete {
   padding-bottom: 20.3rem;
   background: linear-gradient(98.11deg, #11CDAB -18.09%, #2EBEC1 117.48%);
 }
 .section_top_visual.join_complete .wrap_tit > * {
   color: #fff;
+}
+.section_top_visual.join_complete + .wrap_item_benefit .wrap_btn_center {
+  margin-bottom: 3.0rem;
 }
 .visual_usr_character {
   position: absolute;

@@ -206,6 +206,7 @@ var _showBenefitList = function() {
           },100);
           
         },
+        context: '.content_layer',
         offset: '100%'
       });
     });
