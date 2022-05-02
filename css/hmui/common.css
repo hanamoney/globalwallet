@@ -1290,11 +1290,10 @@ a.wrap_box > .txt:first-child {
   right: 2.0rem;
   z-index: 100;
 }
-.wrap_layer.type_full .inner_layer {
-  position: absolute;
+.wrap_layer.type_full.show .inner_layer  {
   top: 0;
-  bottom: 0;
-  width: 100%;
+}
+.wrap_layer.type_full .inner_layer {
   border-radius: 0;
 }
 .wrap_layer.type_full .head_layer {
@@ -1325,16 +1324,16 @@ a.wrap_box > .txt:first-child {
   line-height: 5.0rem;
 }
 .wrap_layer.type_full .content_layer {
-  max-height: none;
-  height: 100vh;
+  height: 100%;
+  max-height: 100vh;
   padding-top: 5.0rem;
   padding-bottom: 6.0rem;
 }
 .wrap_layer.type_full .section_bottom_fixed {
+  position: absolute;
   min-height: auto;
 }
 .wrap_layer.type_full.hasFixedBtn .content_layer {
-  height: calc(100vh - 12.0rem);
   padding-bottom: 12.0rem;
 }
 .wrap_layer.type_full .btn_ico_close {
