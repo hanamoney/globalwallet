@@ -352,6 +352,16 @@ section[data-roll] {
   background-size: 100%;
   background-position: 50%;
 }
+.logo_hanamoney {
+  display: inline-block;
+  position: absolute;
+  top: 1.6rem;
+  right: 2.4rem;
+  width: 8.6rem;
+  height: 1.8rem;
+  background: url('/images/hmui/logo_hanamoney.png') no-repeat 50%;
+  background-size: 100%;
+}
 .btn_ico_prev {
   background-image: url('/images/hmui/btn_back.png');
 }
@@ -393,6 +403,12 @@ section[data-roll] {
 }
 .btn_ico_clear:active::before {
   background-color: #00928F;
+}
+.btn_ico_download {
+  background-image: url('/images/hmui/ico_download.png');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 1.6rem;
 }
 [class^="ico_arr_"] {
   display: inline-block;
@@ -975,6 +991,12 @@ button.btn_secondery {
 .wrap_btn_full [class^="btn_full"]:only-child {
   width: 100%;
 }
+.wrap_btn_full.type_ico [class^="btn_full"]:first-child {
+  width: 6.0rem;
+}
+.wrap_btn_full.type_ico [class^="btn_full"]:last-child {
+  width: calc(100% - 6.0rem);
+}
 [class^="btn_full"] {
   width: 100%;
   height: 6.0rem;
@@ -1089,6 +1111,7 @@ button.btn_secondery {
   line-height: 2.2rem;
 }
 .list_info .tit {
+  padding-right: 1.0rem;
   text-align: left;
 }
 .list_info .txt {
@@ -1967,6 +1990,84 @@ a.wrap_box > .txt:first-child {
 .wrap_banner .btn_txt {
   margin-top: 0.8rem;
   font-size: 1.5rem;
+}
+
+/* 조회 리스트 */
+.section_list_trans {
+  padding: 0;
+}
+.trans_info {
+
+}
+.trans_info .txt_type {
+  display: block;
+  color: #4F5D64;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+.trans_info .tit {
+  display: block;
+  color: #4F5D64;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+}
+.trans_info .desc {
+  display: block;
+  color: #6E7D85;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+.trans_info .txt_amount {
+  display: block;
+  color: #252E33;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+}
+.trans_info .txt_amount.add {
+  color: #13C9BE;
+}
+.wrap_list_trans + .wrap_list_trans {
+  margin-top: 4.0rem;
+}
+.wrap_list_trans .tit_divider {
+  margin-bottom: 2.4rem;
+  padding: 0.8rem 2.4rem;
+  background-color: #F3F8FA;
+  color: #849594;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: 700;
+}
+.wrap_list_trans .trans_info {
+  padding: 0 2.4rem;
+}
+.wrap_list_trans .trans_info + .trans_info {
+  margin-top: 3.0rem;
+}
+.wrap_list_trans .trans_info > h4 {
+  
+}
+.wrap_list_trans .trans_info > ul > li {
+  padding-right: 1.6rem;
+} 
+.wrap_list_trans .trans_info .row {
+  display: flex;
+  justify-content: space-between;
+}
+/* 조회 상세 */
+.section_detail_trans {
+  text-align: center;
+}
+.wrap_top_info {
+  text-align: left;
+}
+.wrap_top_info + .msg_benefit {
+  margin-top: 2.4rem;
+}
+.section_detail_trans .wrap_list {
+  margin-top: 4.0rem;
 }
 
 /* Space */
