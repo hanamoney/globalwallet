@@ -1867,8 +1867,8 @@ a.wrap_box > .txt:first-child {
 /* 캐릭터 이미지 */
 .img_character_aero {
   display: inline-block;
-  width: 50.181vw;
-  height: 100%;
+  width: 41.11vw;
+  height: 54.44vw;
   background: url('/images/hmui/character/img_character_aero.png') no-repeat 50%;
   background-size: 100%;
 }

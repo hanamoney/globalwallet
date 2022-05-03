@@ -121,9 +121,9 @@
   position: absolute;
   right: 0;
   bottom: -8.89vw;
-  left: 19.72vw;
+  left: 17.78vw;
   width: 70.3vw;
-  height: 53.05vw;
+  height: 54.44vw;
   text-align: center;
 }
 .visual_usr_character .img_character_aero,
@@ -131,6 +131,7 @@
   will-change: transform;
 }
 .visual_usr_character .img_character_aero {
+  margin-left: -4.3rem;
   animation: itemUp10 0.6s forwards;
 }
 .visual_usr_character .img_cloud1 {
