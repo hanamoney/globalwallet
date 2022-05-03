@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="format-detection" content="telephone=no">
-  <title>input guide</title>
+  <title>form guide</title>
 
   <link rel="stylesheet" href="/css/hmui/common.css">
   <link rel="stylesheet" href="/css/global/contents.css">
@@ -105,20 +105,138 @@
             <label for="switch1" class="slider"></label>
           </div>
 
-          <div class="wrap_chk">
-            <p class="tit_form"></p>
-            <ul class="box_chk">
-              <li>
-                <input type="radio" id="rdo1_1" name="rdo1" >
-                <label for="rdo1_1">label</label>
-              </li>
-              <li>
-                <input type="radio" id="rdo1_2" name="rdo1" >
-                <label for="rdo1_2">label</label>
-              </li>
-            </ul>
-          </div> 
+          <div class="section_form">
+            <div class="wrap_inp">
+              <div class="head_form">
+                <p class="tit_form">조회기간</p>
+              </div>
+              <div class="box_inp">
+                <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="레이블 미노출" value="" />
+                <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
+              </div>
+              <p class="txt_inp_guide">가이드텍스트</p>
+            </div>
 
+            <div class="wrap_chk">
+              <div class="head_form">
+                <p class="tit_form">조회기간</p>
+              </div>
+              <ul class="rdo_list">
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo1_1" name="rdo1" checked >
+                    <label for="rdo1_1">이번달</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo1_2" name="rdo1" >
+                    <label for="rdo1_2">1개월</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo1_3" name="rdo1" >
+                    <label for="rdo1_3">3개월</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo1_4" name="rdo1" >
+                    <label for="rdo1_4">직접입력</label>
+                  </span>
+                </li>
+              </ul>
+              <!-- 직접입력 선택 시 노출 -->
+              <div class="box_date">
+                <button type="button" class="btn_sel_date">
+                  <span class="txt_num">2022.02.01</span>
+                </button>
+                <span class="tilde">~</span>
+                <button type="button" class="btn_sel_date">
+                  <span class="txt_num">2022.02.10</span>
+                </button>
+              </div>
+              <!-- // 직접입력 선택 시 노출 -->
+            </div>
+
+            <div class="wrap_chk">
+              <div class="head_form">
+                <p class="tit_form">조회기간</p>
+              </div>
+              <ul class="rdo_list">
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo2_1" name="rdo2" checked>
+                    <label for="rdo2_1">label</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo2_2" name="rdo2" >
+                    <label for="rdo2_2">label</label>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="wrap_chk">
+              <div class="head_form">
+                <p class="tit_form">4 column</p>
+              </div>
+              <ul class="rdo_list type_col_4">
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo3_1" name="rdo3" checked>
+                    <label for="rdo3_1">1</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo3_2" name="rdo3" >
+                    <label for="rdo3_2">2</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo3_3" name="rdo3" >
+                    <label for="rdo3_3">3</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo3_4" name="rdo3" >
+                    <label for="rdo3_4">4</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo3_5" name="rdo3" checked>
+                    <label for="rdo3_5">5</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo3_6" name="rdo3" >
+                    <label for="rdo3_6">6</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo3_7" name="rdo3" >
+                    <label for="rdo3_7">7</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo3_8" name="rdo3" >
+                    <label for="rdo3_8">8</label>
+                  </span>
+                </li>
+              </ul>
+            </div> 
+
+          </div>
         </section>
       </div>
     </div>
