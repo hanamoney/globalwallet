@@ -131,6 +131,9 @@ body.overflow {
   height: 5.0rem;
   z-index: 100;
 }
+#header.scrolled .inner_fixed {
+  position: relative;
+}
 #header.scrolled .inner_fixed::after {
   content: '';
   position: absolute;
@@ -202,6 +205,15 @@ section[data-roll] {
 .iOS .section_bottom_fixed > div {
   will-change: transform;
   transition: transform 0.3s cubic-bezier(0.32, 0, 0.68, 1);
+}
+.fnFixedTop {
+  z-index: 101;
+}
+.fnFixedTop.scrolled {
+  position: fixed;
+  top: 5.0rem;
+  right: 0;
+  left: 0;
 }
 
 /* [common] */
@@ -2024,6 +2036,7 @@ a.wrap_box > .txt:first-child {
   font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 700;
+  white-space: nowrap;
 }
 .trans_info .txt_amount.add {
   color: #13C9BE;
@@ -2058,10 +2071,24 @@ a.wrap_box > .txt:first-child {
 }
 /* 조회 상세 */
 .section_detail_trans {
+  padding-top: 2.4rem;
   text-align: center;
+}
+.section_detail_trans .trans_info .fnFixedTop.scrolled {
+  padding: 0 2.4rem;
+}
+.section_detail_trans .trans_info .fnFixedTop.scrolled .txt_type {
+  display: inline-block;
+}
+.section_detail_trans .trans_info .fnFixedTop.scrolled .txt_amount {
+  display: inline-block;
 }
 .wrap_top_info {
   text-align: left;
+}
+.wrap_top_info .txt_amount {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
 }
 .wrap_top_info + .msg_benefit {
   margin-top: 2.4rem;

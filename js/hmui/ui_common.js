@@ -22,6 +22,7 @@ $(function(){
 
 var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
+  if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage($('.fnFixedTop')); } // 스크롤에 따른 상단고정
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트 
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
@@ -38,6 +39,8 @@ var registUI = function(){
   */
 var _headerControl = function(){
   //  페이지 스크롤
+  var defaultHeight = 50; 
+
   $(window).on('scroll', function() {
     if ($(window).scrollTop() > 0) {
       $('#header').addClass('scrolled');
@@ -55,8 +58,50 @@ var _headerControl = function(){
     }else {
       $header.removeClass('scrolled');
     }
+
+    // 상단고정
+    var $fixedEl = $this.find('.fnFixedTop');
+    if ( $fixedEl.length ) {
+      var fixPos = $fixedEl.offset().top - defaultHeight;
+      var setHeight = parseInt($fixedEl.attr('data-height')) + defaultHeight;
+      _fixedContent($fixedEl, fixPos, $header, setHeight, $this);
+    }
   });
 };
+
+/**
+  * @name _fixedTopInPage()
+  * @description 페이지 스크롤에 따른 콘텐츠 상단고정
+  */
+var _fixedTopInPage = function(el) {
+  var $fixedEl = $(el);
+  var $scrlEl = $(window);
+  var $header = $fixedEl.closest('.wrap_contents').siblings('#header').find('.inner_fixed');
+  var headerHeight = $('#header').outerHeight(true);
+
+  var setHeight = headerHeight + parseInt($fixedEl.attr('data-height'));
+}
+
+/**
+  * @name _fixedContent()
+  * @description 스크롤에 따른 콘텐츠 상단고정
+  * @param {element | string} fixedEl 고정할 element
+  * @param {number} fixPos 고정할 element position top
+  * @param {element | string} header 고정헤더 element
+  * @param {setHeight} header 고정헤더 element 변경 height 
+  * @param {element | string} scrlEl 스크롤영역 element
+  */
+function _fixedContent(fixedEl, fixPos, header, setHeight, scrlEl) {
+  if ($(scrlEl).scrollTop() > fixPos ) {
+    $(fixedEl).addClass('scrolled');
+    $(header).css({
+      'height': setHeight,
+    })
+  } else {
+    $(fixedEl).removeClass('scrolled');
+    $(header).attr('style','');
+  }
+}
 
 /**
   * @name _tabHightlight()
@@ -88,7 +133,7 @@ var _iOSInpFixdPos = function() {
     var el = e.target.classList;
     if (inp.is(':focus') && !el.contains('inp') && !el.contains('btn_ico_clear') ) {
       inp.blur();
-      console.log(el);
+      console.log(el);1
     }
   })
 
