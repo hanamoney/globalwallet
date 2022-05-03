@@ -492,6 +492,8 @@ section[data-roll] {
   -webkit-box-align: center;
   align-items: center;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  
 }
 .chk input + label::before,
 .chk input + label::after,
