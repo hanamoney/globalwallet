@@ -115,7 +115,7 @@
   color: #fff;
 }
 .section_top_visual.join_complete + .wrap_item_benefit .wrap_btn_center {
-  margin-bottom: 3.0rem;
+  /* margin-bottom: 3.0rem; */
 }
 .visual_usr_character {
   position: absolute;
