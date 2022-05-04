@@ -1530,13 +1530,20 @@ a.wrap_box > .txt:first-child {
   transition: transform 0.3s cubic-bezier(0.12, 0.86, 0.21, 1);
 }
 .wrap_toast.show {
-  -webkit-transform: translate3d(0px,-4.0rem,0px);
-  transform: translate3d(0px,-4.0rem,0px);
+  -webkit-transform: translate3d(0px,-8.4rem,0px);
+  transform: translate3d(0px,-8.4rem,0px);
+}
+.wrap_toast.withFixedBtn.show {
+  -webkit-transform: translate3d(0px,-8.4rem,0px);
+  transform: translate3d(0px,-8.4rem,0px);
 }
 .wrap_toast {
   color: #fff;
   font-size: 1.8rem;
   line-height: 2.0rem;
+}
+.txt_toast {
+  text-align: center;
 }
 
 /* Tooltip */

@@ -125,6 +125,12 @@
       </div>
     </div>
     <!-- // popup -->
+
+    <!-- toast -->
+    <div id="toast" class="wrap_toast">
+      <p class="txt_toast">상세내역이 이미지로 저장됐어요.</p>
+    </div>
+    <!-- // toast -->
   </main>
   
   <script>
@@ -133,7 +139,9 @@
       fnOpenLayerPop('popupId');
 
       // 토스트 퍼블확인용 스크립트
-      fnToastPop('toast');
+      $('.btn_ico_download').on('click', function(){
+        fnToastPop('toast');
+      })
     });
   </script>
 </body>

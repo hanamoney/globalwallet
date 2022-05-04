@@ -478,7 +478,11 @@ var fnToastPop = function(popID) {
   var $el = $('#' + popID);
 
   $el.addClass('show');
+
+  if ( $('.wrap_btn_full').length && $('.wrap_btn_full').is(':visible') ) {
+    $el.addClass('withFixedBtn');
+  }
   setTimeout(function(){
-    $el.removeClass('show');
+    $el.removeClass('show withFixedBtn');
   }, 3000);
 };
