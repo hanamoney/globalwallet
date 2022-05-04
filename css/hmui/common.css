@@ -207,7 +207,15 @@ section[data-roll] {
   z-index: 101;
 }
 .fnFixedTop[data-visible-type="hidden"] {
-  display: none;
+  position: fixed;
+  top: 5.0rem;
+  right: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  will-change: visibility, opacity, transform;
+  transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out, transform 0.2s cubic-bezier(0.32, 0, 0.68, 1);
+  transform: translateY(1.0rem);
 }
 .fnFixedTop.scrolled {
   position: fixed;
@@ -216,7 +224,9 @@ section[data-roll] {
   left: 0;
 }
 .fnFixedTop[data-visible-type="hidden"].scrolled {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* [common] */
@@ -2069,6 +2079,9 @@ a.wrap_box > .txt:first-child {
 .section_detail_trans {
   padding-top: 2.5rem;
   text-align: center;
+}
+.section_detail_trans .fnFixedTop [class^="txt_"]{
+  transition: font-size 0.1s ease-in-out;
 }
 .section_detail_trans .fnFixedTop.scrolled {
   display: flex;

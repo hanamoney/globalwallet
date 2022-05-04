@@ -59,12 +59,12 @@ var _headerControl = function(){
     if ($this.scrollTop() > 0) {
       $header.addClass('scrolled');
       if ( $fixedEl.length ) {
-        _setFixedTop($fixedEl, $header, setHeight, $this);
+        _setFixedTop($fixedEl, $header, setHeight);
       }
     }else {
       $header.removeClass('scrolled');
       if ( $fixedEl.length ) {
-        _clearFixedTop($fixedEl, $header, $this);
+        _clearFixedTop($fixedEl, $header);
       }
     }
   });
@@ -76,7 +76,6 @@ var _headerControl = function(){
   */
 var _fixedTopInPage = function(el) {
   var $fixedEl = $(el);
-  var $scrlEl = $fixedEl.closest('section[data-roll]');
   var $header = $fixedEl.closest('.wrap_contents').siblings('#header').find('.inner_fixed');
   var headerHeight = $('#header').outerHeight(true);
 
@@ -84,9 +83,9 @@ var _fixedTopInPage = function(el) {
 
   $(window).on('scroll', function() {
     if ($(window).scrollTop() > 0) {
-      _setFixedTop($fixedEl, $header, setHeight, $scrlEl);
+      _setFixedTop($fixedEl, $header, setHeight);
     } else {
-      _clearFixedTop($fixedEl, $header, $scrlEl);
+      _clearFixedTop($fixedEl, $header);
     }
   });
 }
@@ -98,21 +97,16 @@ var _fixedTopInPage = function(el) {
   * @param {number} fixPos 고정할 element position top
   * @param {element | string} header 고정헤더 element
   * @param {setHeight} header 고정헤더 element 변경 height 
-  * @param {element | string} scrlEl 스크롤영역 element
   */
-function _setFixedTop(fixedEl, header, setHeight, scrlEl) {
+function _setFixedTop(fixedEl, header, setHeight) {
   $(fixedEl).addClass('scrolled');
   $(header).css({
     'height': setHeight,
   });
-  // scrlEl.css({
-  //   'padding-top': setHeight,
-  // });
 }
-function _clearFixedTop(fixedEl, header, scrlEl) {
+function _clearFixedTop(fixedEl, header) {
   $(fixedEl).removeClass('scrolled');
   $(header).attr('style','');
-  scrlEl.attr('style','');
 }
 
 /**
