@@ -2083,7 +2083,7 @@ a.wrap_box > .txt:first-child {
 .section_detail_trans .fnFixedTop {
   will-change: transform;
   transform: translateY(0);
-  transition: transform 0.1s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 .section_detail_trans .fnFixedTop.scrolled {
   top: 10.0rem;
