@@ -441,6 +441,9 @@ section[data-roll] {
   background-image: url('/images/hmui/btn_filter.png');
   background-size: 1.8rem auto;
 }
+.btn_info .ico_info {
+  margin-left: 0.4rem;
+}
 [class^="ico_arr_"] {
   display: inline-block;
   width: 1.8rem;
@@ -471,6 +474,11 @@ section[data-roll] {
   width: 1.6rem;
   height: 1.4rem;
   background-image: url('/images/hmui/ico_add.png');
+}
+.ico_info {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-image: url('/images/hmui/ico_info.png');
 }
 [class^="ico_cur_"] {
   width: 3.0rem;
@@ -1380,6 +1388,13 @@ a.wrap_box > .txt:first-child {
   top: -0.3rem;
   left: 1.5rem;
 }
+.msg_no_moneybag {
+  padding: 0.3rem 0 2.1rem;
+  text-align: center;
+}
+.msg_no_moneybag .wrap_ico_ccy span {
+  margin-left: -0.8rem;
+}
 
 /* Layer pop */
 .dim {
@@ -2071,6 +2086,9 @@ a.wrap_box > .txt:first-child {
 }
 
 /* 조회 리스트 */
+.section_info_list {
+  padding: 0;
+}
 .section_list_trans {
   padding: 0;
 }
@@ -2105,7 +2123,7 @@ a.wrap_box > .txt:first-child {
   margin-top: 4.0rem;
 }
 .wrap_list_trans .tit_divider {
-  margin-bottom: 2.4rem;
+  /* margin-bottom: 2.4rem; */
   padding: 0.8rem 2.4rem;
   background-color: #F3F8FA;
   color: #849594;
@@ -2114,6 +2132,7 @@ a.wrap_box > .txt:first-child {
   font-weight: 700;
 }
 .wrap_list_trans .trans_info {
+  margin-top: 2.4rem;
   padding: 0 2.4rem;
 }
 .wrap_list_trans .trans_info + .trans_info {
@@ -2132,7 +2151,22 @@ a.wrap_box > .txt:first-child {
 
 /* 조회 필터 */
 .wrap_filter {
+  padding: 0 2.4rem;
   text-align: right;
+}
+.wrap_filter .filter_list {
+  display: inline-block;
+  margin-right: 0.2rem;
+  vertical-align: top;
+}
+.wrap_filter .filter_list span {
+  display: inline-block;
+  padding: 0 0.8rem;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+.wrap_filter .btn_ico_filter {
+  margin-right: -0.2rem;
 }
 
 /* 조회 상세 */
@@ -2251,9 +2285,38 @@ a.wrap_box > .txt:first-child {
   margin-bottom: 2.8rem;
 }
 .section_moneybag .box_moneybag .total_amount {
+  margin-bottom: 3.0rem;
   font-size: 2.6rem;
   line-height: 3.2rem;
   font-weight: 700;
+}
+.section_moneybag .box_moneybag button.total_amount {
+  margin-bottom: 0;
+}
+.section_moneybag .box_moneybag button.total_amount .ico_arr_down_2 {
+  margin-left: 0.4rem;
+}
+.section_moneybag .box_moneybag .wrap_acco {
+  padding: 1.4rem 0 2.2rem;
+}
+.section_moneybag .box_moneybag .list_info li {
+  margin-top: 0;
+  padding: 0.2rem 0;
+}
+.section_moneybag .box_moneybag .list_info .tit {
+  display: inline-block;
+  color: #6E7D85;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.section_moneybag .box_moneybag .list_info .btn_info {
+  font-size: inherit;
+  line-height: inherit;
+}
+.section_moneybag .box_moneybag .list_info .txt {
+  color: #323E43;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
 }
 .section_moneybag .box_moneybag .box_btn_list {
   display: flex;
@@ -2263,10 +2326,12 @@ a.wrap_box > .txt:first-child {
 }
 .section_moneybag .box_moneybag .box_btn_list li {
   width: 100%;
+  padding: 0 0.7rem;
 }
 .section_moneybag .box_moneybag .box_btn_list li button {
   display: block;
   width: 100%;
+  padding: 1.5rem 0 1.7rem;
   text-align: center;
 }
 .section_moneybag .box_moneybag .box_btn_list li .btn_primary {
