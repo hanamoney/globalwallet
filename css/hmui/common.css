@@ -2080,8 +2080,14 @@ a.wrap_box > .txt:first-child {
   padding-top: 2.5rem;
   text-align: center;
 }
-.section_detail_trans .fnFixedTop [class^="txt_"]{
-  transition: font-size 0.1s ease-in-out;
+.section_detail_trans .fnFixedTop {
+  will-change: transform;
+  transform: translateY(0);
+  transition: transform 0.1s ease-in-out;
+}
+.section_detail_trans .fnFixedTop.scrolled {
+  top: 10.0rem;
+  transform: translateY(-100%);
 }
 .section_detail_trans .fnFixedTop.scrolled {
   display: flex;
