@@ -155,10 +155,9 @@ body.overflow {
 }
 #header button[class^="btn_ico"] {
   position: absolute;
-  top: 50%;
+  top: 1.2rem;
   width: 2.6rem;
   height: 2.6rem;
-  transform: translateY(-50%);
 }
 #header .btn_ico_prev {
   left: 2.0rem;
@@ -207,11 +206,17 @@ section[data-roll] {
 .fnFixedTop {
   z-index: 101;
 }
+.fnFixedTop[data-visible-type="hidden"] {
+  display: none;
+}
 .fnFixedTop.scrolled {
   position: fixed;
   top: 5.0rem;
   right: 0;
   left: 0;
+}
+.fnFixedTop[data-visible-type="hidden"].scrolled {
+  display: block;
 }
 
 /* [common] */
@@ -2096,7 +2101,7 @@ a.wrap_box > .txt:first-child {
   line-height: 3.6rem;
   font-weight: 700;
 }
-.wrap_top_info .trans_info .tit {
+.wrap_top_info .trans_info {
   margin-top: 1.6rem;
 }
 .wrap_top_info + .msg_benefit {
@@ -2104,6 +2109,14 @@ a.wrap_box > .txt:first-child {
 }
 .section_detail_trans .wrap_list {
   margin-top: 4.0rem;
+}
+
+/* 돈통 */
+.section_moneybag {
+  padding: 0;
+  margin-top: -5.0rem;
+  padding-top: 5.0rem;
+  background-color: pink;
 }
 
 /* Space */

@@ -22,7 +22,7 @@ $(function(){
 
 var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
-  if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage($('.fnFixedTop')); } // 스크롤에 따른 상단고정
+  if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage($('.fnFixedTop')); } // 스크롤에 따른 페이지 상단고정
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트 
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
@@ -53,18 +53,19 @@ var _headerControl = function(){
   $('.wrap_layer.type_full .content_layer').on('scroll', function(){
     var $this = $(this);
     var $header = $this.closest('.inner_layer').find('.head_layer');
+    var $fixedEl = $this.find('.fnFixedTop');
+    var setHeight = parseInt($fixedEl.attr('data-height')) + defaultHeight;
+
     if ($this.scrollTop() > 0) {
       $header.addClass('scrolled');
+      if ( $fixedEl.length ) {
+        _setFixedTop($fixedEl, $header, setHeight, $this);
+      }
     }else {
       $header.removeClass('scrolled');
-    }
-
-    // 상단고정
-    var $fixedEl = $this.find('.fnFixedTop');
-    if ( $fixedEl.length ) {
-      var fixPos = $fixedEl.offset().top - defaultHeight;
-      var setHeight = parseInt($fixedEl.attr('data-height')) + defaultHeight;
-      _fixedContent($fixedEl, fixPos, $header, setHeight, $this);
+      if ( $fixedEl.length ) {
+        _clearFixedTop($fixedEl, $header, $this);
+      }
     }
   });
 };
@@ -75,11 +76,19 @@ var _headerControl = function(){
   */
 var _fixedTopInPage = function(el) {
   var $fixedEl = $(el);
-  var $scrlEl = $(window);
+  var $scrlEl = $fixedEl.closest('section[data-roll]');
   var $header = $fixedEl.closest('.wrap_contents').siblings('#header').find('.inner_fixed');
   var headerHeight = $('#header').outerHeight(true);
 
   var setHeight = headerHeight + parseInt($fixedEl.attr('data-height'));
+
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop() > 0) {
+      _setFixedTop($fixedEl, $header, setHeight, $scrlEl);
+    } else {
+      _clearFixedTop($fixedEl, $header, $scrlEl);
+    }
+  });
 }
 
 /**
@@ -91,16 +100,19 @@ var _fixedTopInPage = function(el) {
   * @param {setHeight} header 고정헤더 element 변경 height 
   * @param {element | string} scrlEl 스크롤영역 element
   */
-function _fixedContent(fixedEl, fixPos, header, setHeight, scrlEl) {
-  if ($(scrlEl).scrollTop() > fixPos ) {
-    $(fixedEl).addClass('scrolled');
-    $(header).css({
-      'height': setHeight,
-    })
-  } else {
-    $(fixedEl).removeClass('scrolled');
-    $(header).attr('style','');
-  }
+function _setFixedTop(fixedEl, header, setHeight, scrlEl) {
+  $(fixedEl).addClass('scrolled');
+  $(header).css({
+    'height': setHeight,
+  });
+  // scrlEl.css({
+  //   'padding-top': setHeight,
+  // });
+}
+function _clearFixedTop(fixedEl, header, scrlEl) {
+  $(fixedEl).removeClass('scrolled');
+  $(header).attr('style','');
+  scrlEl.attr('style','');
 }
 
 /**
