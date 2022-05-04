@@ -142,9 +142,7 @@ body.overflow {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(255,255,255, 0.4);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  background-color: rgba(255,255,255, 0.7);
   z-index: -1;
 }
 #header h1 {
@@ -1431,9 +1429,7 @@ a.wrap_box > .txt:first-child {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(255,255,255, 0.4);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  background-color: rgba(255,255,255, 0.7);
   z-index: -1;
 }
 .wrap_layer.type_full .head_layer .tit_layer {
@@ -2011,12 +2007,6 @@ a.wrap_box > .txt:first-child {
 .trans_info {
 
 }
-.trans_info .txt_type {
-  display: block;
-  color: #4F5D64;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-}
 .trans_info .tit {
   display: block;
   color: #4F5D64;
@@ -2038,7 +2028,7 @@ a.wrap_box > .txt:first-child {
   font-weight: 700;
   white-space: nowrap;
 }
-.trans_info .txt_amount.add {
+.txt_amount.add {
   color: #13C9BE;
 }
 .wrap_list_trans + .wrap_list_trans {
@@ -2069,26 +2059,45 @@ a.wrap_box > .txt:first-child {
   display: flex;
   justify-content: space-between;
 }
+
 /* 조회 상세 */
 .section_detail_trans {
-  padding-top: 2.4rem;
+  padding-top: 2.5rem;
   text-align: center;
 }
-.section_detail_trans .trans_info .fnFixedTop.scrolled {
+.section_detail_trans .fnFixedTop.scrolled {
+  display: flex;
+  align-items: center;
+  height: 5.0rem;
   padding: 0 2.4rem;
 }
-.section_detail_trans .trans_info .fnFixedTop.scrolled .txt_type {
+.section_detail_trans .fnFixedTop.scrolled .txt_type {
   display: inline-block;
+  margin-right: 1.2rem;
+  padding-bottom: 0;
 }
-.section_detail_trans .trans_info .fnFixedTop.scrolled .txt_amount {
+.section_detail_trans .fnFixedTop.scrolled .txt_amount {
   display: inline-block;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
 }
 .wrap_top_info {
   text-align: left;
 }
+.wrap_top_info .txt_type {
+  display: block;
+  color: #4F5D64;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  padding-bottom: 0.4rem;
+}
 .wrap_top_info .txt_amount {
   font-size: 2.8rem;
   line-height: 3.6rem;
+  font-weight: 700;
+}
+.wrap_top_info .trans_info .tit {
+  margin-top: 1.6rem;
 }
 .wrap_top_info + .msg_benefit {
   margin-top: 2.4rem;
@@ -2133,4 +2142,17 @@ a.wrap_box > .txt:first-child {
   width: 30.05vw;
   height: 15.94vw;
   background-image: url('/images/hmui/character/visual_usr_cloud2.png');
+}
+
+@supports ((-webkit-backdrop-filter:none) or (backdrop-filter:none)) {
+  #header.scrolled .inner_fixed::after {
+    background-color: rgba(255,255,255, 0.4);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+  .wrap_layer.type_full .head_layer.scrolled::after {
+    background-color: rgba(255,255,255, 0.4);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
 }
