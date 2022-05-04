@@ -435,6 +435,12 @@ section[data-roll] {
   background-position: 50%;
   background-size: 1.6rem;
 }
+.btn_ico_filter {
+  width: 2.2rem;
+  height: 2.2rem;
+  background-image: url('/images/hmui/btn_filter.png');
+  background-size: 1.8rem auto;
+}
 [class^="ico_arr_"] {
   display: inline-block;
   width: 1.8rem;
@@ -485,6 +491,11 @@ section[data-roll] {
 .ico_cur_gbp {
   background-image: url('/images/hmui/ico_cur_gbp.png');
 }
+.ico_hanamoney {
+  width: 3.0rem;
+  height: 3.0rem;
+  background-image: url('/images/hmui/ico_hanamoney.png');
+}
 .ico_present {
   width: 3.3rem;
   height: 3.5rem;
@@ -509,6 +520,26 @@ section[data-roll] {
   width: 3.8rem;
   height: 3.3rem;
   background-image: url('/images/hmui/emoji_drone.png');
+}
+.emoji_cashback {
+  width: 2.8rem;
+  height: 2.8rem;
+  background-image: url('/images/hmui/emoji_cashback.png');
+}
+.emoji_burger {
+  width: 2.8rem;
+  height: 2.6rem;
+  background-image: url('/images/hmui/emoji_burger.png');
+}
+.emoji_mac {
+  width: 3.0rem;
+  height: 2.9rem;
+  background-image: url('/images/hmui/emoji_mac.png');
+}
+.emoji_cash {
+  width: 3.0rem;
+  height: 3.0rem;
+  background-image: url('/images/hmui/emoji_cash.png');
 }
 
 /* Checkbox */
@@ -1950,8 +1981,11 @@ a.wrap_box > .txt:first-child {
   line-height: 2.6rem;
   font-weight: 700;
 }
-.list_benefit li .item_desc .txt {
+.list_benefit li .item_desc .tit + .txt {
   margin-top: 0.6rem;
+}
+.list_benefit li .item_desc .txt {
+  
   color: #6E7D85;
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -1963,8 +1997,22 @@ a.wrap_box > .txt:first-child {
 .list_benefit li .item_desc [class^="emoji_"] {
   vertical-align: top;
 }
-.wrap_item_benefit .wrap_btn_center {
-  /* margin-bottom: 4.0rem; */
+.list_benefit.type_ico .box {
+  width: 5.4rem;
+  height: 5.4rem;
+}
+.list_benefit.type_ico li .item_desc .txt {
+  color: #4F5D64;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+.list_benefit.type_ico li .item_desc .txt + .tit {
+  padding-top: 0.2rem;
+}
+.list_benefit.type_ico li .item_desc .tit {
+  color: #252E33;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
 }
 .wrap_item_benefit li,
 .wrap_item_benefit .tit_wrap {
@@ -2082,6 +2130,11 @@ a.wrap_box > .txt:first-child {
   justify-content: space-between;
 }
 
+/* 조회 필터 */
+.wrap_filter {
+  text-align: right;
+}
+
 /* 조회 상세 */
 .section_detail_trans {
   padding-top: 2.5rem;
@@ -2139,10 +2192,90 @@ a.wrap_box > .txt:first-child {
 
 /* 돈통 */
 .section_moneybag {
+  position: relative;
   padding: 0;
   margin-top: -5.0rem;
   padding-top: 5.0rem;
-  background-color: pink;
+  background: linear-gradient(135deg, #E3E1FA 0%, #CBEFEE 100%);
+}
+.section_moneybag .wrap_moneybag_tab ul {
+  overflow-x: scroll;
+  display: flex;
+  width: 100%;
+  padding: 1.2rem 2.4rem;
+}
+.section_moneybag .wrap_moneybag_tab ul::-webkit-scrollbar {
+  display: none;
+}
+.section_moneybag .wrap_moneybag_tab ul li {
+  margin-left: 0.8rem;
+}
+.section_moneybag .wrap_moneybag_tab ul li:first-child {
+  margin-left: 0;
+}
+.section_moneybag .wrap_moneybag_tab ul li.on button {
+  background-color: #fff;
+}
+.section_moneybag .wrap_moneybag_tab button.txt_ccy {
+  padding: 0.6rem 1.2rem 0.6rem 0.6rem;
+  border-radius: 1.6rem;
+  white-space: nowrap;
+}
+.section_moneybag .txt_ccy {
+  
+}
+.section_moneybag .txt_ccy span:not([class^="ico_"]) {
+  display: inline-block;
+  vertical-align: top;
+  color: #000;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+.section_moneybag .txt_ccy [class^="ico_"] {
+  width: 2.0rem;
+  height: 2.0rem;
+  margin-right: 0.5rem;
+  vertical-align: top;
+}
+.section_moneybag .swiper-slide {
+  padding-bottom: 5.2rem;
+}
+.section_moneybag .box_moneybag {
+  overflow: hidden;
+  margin: 2.1rem 2.4rem 0;
+  padding: 1.6rem 2.0rem 0;
+  border-radius: 1.4rem;
+  background-color: rgba(255,255,255,0.7);
+}
+.section_moneybag .box_moneybag .txt_ccy {
+  margin-bottom: 2.8rem;
+}
+.section_moneybag .box_moneybag .total_amount {
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+}
+.section_moneybag .box_moneybag .box_btn_list {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 -2.0rem;
+  background-color: #fff;
+}
+.section_moneybag .box_moneybag .box_btn_list li {
+  width: 100%;
+}
+.section_moneybag .box_moneybag .box_btn_list li button {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.section_moneybag .box_moneybag .box_btn_list li .btn_primary {
+  background-color: transparent;
+  color: #13C9BE;
+  font-weight: 700;
+}
+.section_moneybag .swiper-pagination {
+  bottom: 3.0rem;
 }
 
 /* Space */

@@ -30,31 +30,194 @@
     <div id="contents" class="wrap_contents">
       <div class="contents">
         <section data-roll="TDL">
-          <div class="wrap_moneybag_tab fnFixedTop" data-visible-type="hidden" data-height="56">
-            <ul>
-              <li><button type="button" class="">하나머니</button></li>
-              <li><button type="button" class="">미국 USD</button></li>
-              <li><button type="button" class=""></button></li>
-              <li><button type="button" class="">미국 USD</button></li>
-            </ul>
-          </div>
           <div class="section_moneybag">
+            <!-- 외화 돈통 오픈 시 노출 -->
+            <div class="wrap_moneybag_tab fnFixedTop" data-visible-type="hidden" data-height="56">
+              <ul>
+                <li class="on"><button type="button" class="txt_ccy"><span class="ico_hanamoney"></span><span>하나머니</span></button></li>
+                <li><button type="button" class="txt_ccy"><span class="ico_cur_usd"></span><span>미국 USD</span></button></li>
+                <li><button type="button" class="txt_ccy"><span class="ico_cur_eur"></span><span>유럽 EUR</span></button></li>
+                <li><button type="button" class="txt_ccy"><span class="ico_cur_gbp"></span><span>영국 GBP</span></button></li>
+                <li><button type="button" class="txt_ccy"><span class="ico_cur_jpy"></span><span>일본 JPY</span></button></li>
+              </ul>
+            </div>
+            <!-- // 외화 돈통 오픈 시 노출 -->
+
             <div class="swiper-container">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">1</div>
-                <div class="swiper-slide">2</div>
-                <div class="swiper-slide">3</div>
+                <!-- 원화 -->
+                <div class="swiper-slide">
+                  <div class="box_moneybag">
+                    <h2 class="txt_ccy"><span class="ico_hanamoney"></span><span>하나머니</span></h2>
+                    <!-- CASE #1 잔액 0원 -->
+                    <!-- <p class="total_amount"><strong class="txt_num">0</strong>원</p> -->
+                    <button class="total_amount bth_acco"><strong class="txt_num">100,000,000</strong>원<span class="ico_arr_down_2"><span class="blind">상세보기</span></button>
+                    <div class="wrap_acco">
+                      <ul>
+                        <li>
+                          <span class="tit"><button type="button" class="">대기 하나머니<span class="ico"></span></button></span>
+                          <span class="txt"><em class="txt_num">1,600,000</em>원</span>
+                        </li>
+                        <li>
+                          <span class="tit">현금화가능 하나머니</span>
+                          <span class="txt"><em class="txt_num">1,600,000</em>원</span>
+                        </li>
+                        <li>
+                          <span class="tit">소멸예정 하나머니</span>
+                          <span class="txt"><em class="txt_num">1,600,000</em>원</span>
+                        </li>
+                        <li>
+                          <span class="tit">카드충전 하나머니</span>
+                          <span class="txt"><em class="txt_num">1,600,000</em>원</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <ul class="box_btn_list">
+                      <li><button type="button">포인트전환</button></li>
+                      <li><button type="button">충전</button></li>
+                      <li><button type="button">결제</button></li>
+                      <li><button type="button" class="btn_primary">무료송금</button></li>
+                      <li><button type="button" class="btn_primary">무료적립</button></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- // 원화 -->
+                <!-- 외화 USD -->
+                <div class="swiper-slide">
+                  <div class="box_moneybag">
+                    <h2 class="txt_ccy"><span class="ico_cur_usd"></span>미국 USD</h2>
+                    <p class="total_amount">$<strong class="txt_num">1,600.00</strong></p>
+                    <ul class="box_btn_list">
+                      <li><button type="button">환전</button></li>
+                      <li><button type="button" class="btn_primary">충전</button></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- // 외화 USD -->
+                <!-- 외화 EUR -->
+                <div class="swiper-slide">
+                  <div class="box_moneybag">
+                    <h2 class="txt_ccy"><span class="ico_cur_eur"></span>유럽 EUR</h2>
+                    <p class="total_amount">€<strong class="txt_num">1,600.00</strong></p>
+                    <ul class="box_btn_list">
+                      <li><button type="button">환전</button></li>
+                      <li><button type="button" class="btn_primary">충전</button></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- // 외화 EUR -->
+                <!-- 외화 GBP -->
+                <div class="swiper-slide">
+                  <div class="box_moneybag">
+                    <h2 class="txt_ccy"><span class="ico_cur_gbp"></span>영국 GBP</h2>
+                    <p class="total_amount">£<strong class="txt_num">1,600.00</strong></p>
+                    <ul class="box_btn_list">
+                      <li><button type="button">환전</button></li>
+                      <li><button type="button" class="btn_primary">충전</button></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- // 외화 GBP -->
+                <!-- 외화 JPY -->
+                <div class="swiper-slide">
+                  <div class="box_moneybag">
+                    <h2 class="txt_ccy"><span class="ico_cur_jpy"></span>일본 JPY</h2>
+                    <p class="total_amount">¥<strong class="txt_num">0</strong></p>
+                    <ul class="box_btn_list">
+                      <!-- <li><button type="button">환전</button></li> -->
+                      <li><button type="button" class="btn_primary">충전</button></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- // 외화 JPY -->
+                <!-- 외화돈통 미오픈 -->
+                <div class="swiper-slide">
+                  <div class="box_moneybag">
+                    <div class="msg_no_moneybag">
+                      <p class="wrap_ico_ccy"><span class="ico_cur_usd"></span><span class="ico_cur_eur"></span><span class="ico_cur_gbp"></span><span class="ico_cur_jpy"></span></p>
+                      <p class="tit">하나머니가 만든 수수료 없는 세상</p>
+                      <p class="txt">무료환전에 결제 수수료까지! 다~ 무료</p>
+                    </div>
+                    <ul class="box_btn_list">
+                      <li><button type="button" class="btn_primary">바로 혜택받기</button></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- // 외화돈통 미오픈 -->
               </div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
 
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <div class="section_moneybag_list">
+            <div class="wrap_link_benefit">
+              <!-- 이번달 받은 혜택이 있는 경우 -->
+              <a href="#none" class="">
+
+              </a>
+              <!-- 이번달 받은 혜택이 없는 경우 -->
+              <a href="#none" class="">
+
+              </a>
+            </div>
+            
+            <!-- 조회 -->
+            <div class="wrap_filter">
+              <p class=""><span>이번달</span><span>최신순</span><span>전체</span></p>
+              <button type="button" class="btn_ico_filter"><span class="blind">상세조회 설정</span></button>
+            </div>
+            <!-- // 조회 -->
+
+            <!-- 조회 리스트 -->
+            <div class="section_list_trans">
+            </div>
+            <!-- // 조회 리스트 -->
+          </div>
+
+          <!-- 외화돈통 미오픈 -->
+          <div class="wrap_item_benefit">
+            <h3 class="tit_wrap">트래블로그 서비스를<br/>이용한다면?</h3>
+            <ul class="list_benefit type_ico">
+              <li>
+                <span class="box"><span class="emoji_cashback"></span></span>
+                <div class="item_desc">
+                  <p class="txt">무료환전으로 $1,600 환전 시</p>
+                  <p class="tit">최대 85,579원을 내드려요</p>
+                </div>
+              </li>
+              <li>
+                <span class="box"><span class="emoji_burger"></span></span>
+                <div class="item_desc">
+                  <p class="txt">해외에서 쉑쉑버거 $5.29 결제 시</p>
+                  <p class="tit">해외결제 수수료 $0.6 내드려요</p>
+                </div>
+              </li>
+              <li>
+                <span class="box"><span class="emoji_mac"></span></span>
+                <div class="item_desc">
+                  <p class="txt">직구로 아이맥 $1,250.00 결제 시</p>
+                  <p class="tit">해외결제 수수료 $25.3 내드려요</p>
+                </div>
+              </li>
+              <li>
+                <span class="box"><span class="emoji_cash"></span></span>
+                <div class="item_desc">
+                  <p class="txt">해외에서 $10 출금 시</p>
+                  <p class="tit">해외출금 수수료 $3.13 내드려요</p>
+                </div>
+              </li>
+              <li>
+                <span class="box"><span class="emoji_cashback"></span></span>
+                <div class="item_desc">
+                  <p class="txt">국내에서도 사용할 수 있어요!</p>
+                  <p class="tit">원화 결제 시 0.3% 캐시백!</p>
+                </div>
+              </li>
+            </ul>
+            <p class="txt_guide">2022년04월28일(576회차) USD 기준</p>
+          </div>
+          <!-- // 외화돈통 미오픈 -->
+          
         </section>
         <!-- // section -->
       </div>
