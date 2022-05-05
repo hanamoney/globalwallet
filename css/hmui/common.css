@@ -2084,6 +2084,20 @@ a.wrap_box > .txt:first-child {
   margin-top: 0.8rem;
   font-size: 1.5rem;
 }
+.wrap_banner_box {
+  
+}
+.link_box {
+  display: block;
+  border-radius: 1.4rem;
+  background-color: #f6f6f6;
+}
+.link_box .tit {
+  font-weight: 300;
+}
+.link_box .tit em {
+  font-weight: 700;
+}
 
 /* 조회 리스트 */
 .section_list_trans {
