@@ -219,6 +219,7 @@ var _showBenefitList = function() {
   var tit = $el.find('.tit_wrap');
   var list = $el.find('.list_benefit li');
 
+  if (!$el.is(':visible')) return;
   if ($el.parents('.wrap_layer').length ){
     // F-Pop 일 경우 
     setTimeout(function(){
@@ -486,3 +487,44 @@ var fnToastPop = function(popID) {
     $el.removeClass('show withFixedBtn');
   }, 3000);
 };
+
+/**
+  * @name skeletonLoading.start();
+  * @description skeleton loading
+  * @param {Element | string} el loading element 
+  */
+var skeletonLoading = (function(){
+  var $el;
+
+  function _moneybagListLoading(el) {
+    var list = $(el).find('.wrap_list_trans');
+    var item = '<div class="trans_info skeleton">';
+        item += '<h4 class="skeleton-item"></h4>';
+        item += '<ul><li class="skeleton-item"></li><li class="skeleton-item"></li></ul>';
+        item += '</div>';
+
+    if ($(el).hasClass('skeletonLoading')) {
+      list.prepend(item);
+    } else {
+      $('.trans_info.skeleton').remove();
+    }
+  }
+
+  function start(el){
+    $el = $(el);
+    $el.addClass('skeletonLoading');
+    _moneybagListLoading($el);
+  }
+
+  function end(el){
+    $el = $(el);
+    setTimeout(function(){
+      $el.removeClass('skeletonLoading');
+    },300);
+  }
+
+  return {
+    start: start,
+    end: end
+  }
+})();

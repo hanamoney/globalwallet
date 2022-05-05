@@ -35,3 +35,62 @@
     transform: translateY(0); 
   } 
 }
+
+@-webkit-keyframes mesh {
+  0% {
+    -webkit-transform-origin: 50% -25%;
+            transform-origin: 50% -25%;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform-origin: 50% -25%;
+            transform-origin: 50% -25%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  50.00001% {
+    -webkit-transform-origin: 50% 125%;
+            transform-origin: 50% 125%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform-origin: 50% 125%;
+            transform-origin: 50% 125%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes mesh {
+  0% {
+    -webkit-transform-origin: 50% -25%;
+            transform-origin: 50% -25%;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform-origin: 50% -25%;
+            transform-origin: 50% -25%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  50.00001% {
+    -webkit-transform-origin: 50% 125%;
+            transform-origin: 50% 125%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform-origin: 50% 125%;
+            transform-origin: 50% 125%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes skeleton {
+  to {
+    background-position-x: -200%;
+  }
+}

@@ -8,6 +8,7 @@
   <title>TDL_001</title>
 
   <link rel="stylesheet" href="/css/hmui/swiper.css">
+  <link rel="stylesheet" href="/css/hmui/animate.css">
   <link rel="stylesheet" href="/css/hmui/common.css">
   <link rel="stylesheet" href="/css/global/contents.css">
   <script src="/js/hmui/lib/jquery-1.12.3.min.js"></script>
@@ -47,7 +48,7 @@
               <div class="swiper-wrapper">
                 <!-- 원화 -->
                 <div class="swiper-slide">
-                  <div class="box_moneybag">
+                  <div class="box_moneybag" data-ccy="krw">
                     <h2 class="txt_ccy"><span class="ico_hanamoney"></span><span>하나머니</span></h2>
                     <!-- CASE #1 잔액 0원 -->
                     <!-- <p class="total_amount"><strong class="txt_num">0</strong>원</p> -->
@@ -84,7 +85,7 @@
                 <!-- // 원화 -->
                 <!-- 외화 USD -->
                 <div class="swiper-slide">
-                  <div class="box_moneybag">
+                  <div class="box_moneybag" data-ccy="usd">
                     <h2 class="txt_ccy"><span class="ico_cur_usd"></span>미국 USD</h2>
                     <p class="total_amount">$<strong class="txt_num">1,600.00</strong></p>
                     <ul class="box_btn_list">
@@ -96,7 +97,7 @@
                 <!-- // 외화 USD -->
                 <!-- 외화 EUR -->
                 <div class="swiper-slide">
-                  <div class="box_moneybag">
+                  <div class="box_moneybag" data-ccy="eur">
                     <h2 class="txt_ccy"><span class="ico_cur_eur"></span>유럽 EUR</h2>
                     <p class="total_amount">€<strong class="txt_num">1,600.00</strong></p>
                     <ul class="box_btn_list">
@@ -108,7 +109,7 @@
                 <!-- // 외화 EUR -->
                 <!-- 외화 GBP -->
                 <div class="swiper-slide">
-                  <div class="box_moneybag">
+                  <div class="box_moneybag" data-ccy="gbp">
                     <h2 class="txt_ccy"><span class="ico_cur_gbp"></span>영국 GBP</h2>
                     <p class="total_amount">£<strong class="txt_num">1,600.00</strong></p>
                     <ul class="box_btn_list">
@@ -120,7 +121,7 @@
                 <!-- // 외화 GBP -->
                 <!-- 외화 JPY -->
                 <div class="swiper-slide">
-                  <div class="box_moneybag">
+                  <div class="box_moneybag" data-ccy="jpy">
                     <h2 class="txt_ccy"><span class="ico_cur_jpy"></span>일본 JPY</h2>
                     <p class="total_amount">¥<strong class="txt_num">0</strong></p>
                     <ul class="box_btn_list">
@@ -149,59 +150,67 @@
             <div class="swiper-pagination"></div>
           </div>
 
-          <div class="section_info_list">
-            <div class="wrap_link_benefit">
-              <!-- 이번달 받은 혜택이 있는 경우 -->
-              <a href="#none" class="">
+          <div class="wrap_link_benefit">
+            <!-- 이번달 받은 혜택이 있는 경우 -->
+            <a href="#none" class="">
 
-              </a>
-              <!-- 이번달 받은 혜택이 없는 경우 -->
-              <a href="#none" class="">
+            </a>
+            <!-- 이번달 받은 혜택이 없는 경우 -->
+            <a href="#none" class="">
 
-              </a>
-            </div>
-            
-            <!-- 조회 -->
+            </a>
+          </div>
+          
+          <!-- 조회 리스트 -->
+          <div class="section_list_trans">
+            <!-- 조회필터 -->
             <div class="wrap_filter">
               <p class="filter_list"><span>이번달</span><span>최신순</span><span>전체</span></p>
               <button type="button" class="btn_ico_filter"><span class="blind">상세조회 설정</span></button>
             </div>
-            <!-- // 조회 -->
+            <!-- // 조회필터 -->
 
-            <!-- 조회 리스트 -->
-            <div class="section_list_trans">
-              <!-- 내역없음 -->
-              <div class="msg_noresult">
-                <p class="">이번달에 거래하신 내역이 없어요</p>
-                <a href="#none" class="">무료적립받기</a>
-              </div>
-
-              <div class="wrap_list_trans">
-                <div class="trans_info">
-                  <h4>3월 24일 (토)</h4>
-                  <ul>
-                    <li>
-                      <div class="row">
-                        <strong class="tit">하나머니 → JPY</strong>
-                        <span class="txt_amount"><em class="txt_num">-20,000,000</em></span>
-                      </div>
-                      <div class="row">
-                        <ul class="desc"><li>시간</li><li>거래사유명</li></ul>
-                        <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
-                      </div>
-                      <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
-                      <span class="txt_sm">상품교환 전 취소 가능 <button type="button" class="btn_txt txt_point_1">취소</button></span>
-                      <button type="button" class="btn_ico_more"><span class="상세내역"></span></button>
-                    </li>
-                  </ul>
-                </div>
+            <!-- 내역없음 -->
+            <div class="msg_noresult">
+              <p class="">이번달에 거래하신 내역이 없어요</p>
+              <a href="#none" class="">무료적립받기</a>
+            </div>
+            
+            <div class="wrap_list_trans">
+              <div class="trans_info">
+                <h4>3월 24일 (토)</h4>
+                <ul>
+                  <li>
+                    <div class="row">
+                      <strong class="tit">하나머니 → JPY</strong>
+                      <span class="txt_amount"><em class="txt_num">-20,000,000</em></span>
+                    </div>
+                    <div class="row">
+                      <ul class="desc"><li>시간</li><li>거래사유명</li></ul>
+                      <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
+                    </div>
+                    <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
+                    <span class="txt_sm">상품교환 전 취소 가능 <button type="button" class="btn_txt txt_point_1">취소</button></span>
+                    <button type="button" class="btn_ico_more"><span class="상세내역"></span></button>
+                  </li>
+                </ul>
               </div>
             </div>
-            <!-- // 조회 리스트 -->
+
+            <!-- list loader -->
+            <div class="mesh-loader">
+              <div class="set-one">
+                  <div class="circle"></div><div class="circle"></div>
+              </div>
+              <div class="set-two">
+                <div class="circle"></div><div class="circle"></div>
+              </div>
+            </div>
           </div>
+          <!-- // 조회 리스트 -->
 
           <!-- 외화돈통 미오픈 -->
-          <div class="wrap_item_benefit">
+          <div class="wrap_item_benefit" style="display: none;">
             <h3 class="tit_wrap">트래블로그 서비스를<br/>이용한다면?</h3>
             <ul class="list_benefit type_ico">
               <li>
@@ -254,15 +263,75 @@
 
   <script>
   $(function(){
+    // 돈통 swipe option
     var swiper = new Swiper('.swiper-container', {
-      // Optional parameters
+      observer: true,
+      observeParents: true,
+      resistance: true,
+      resistanceRatio: 0,
       direction: 'horizontal',
-      loop: true,
+      loop: false,
+      autoHeight : true,
       pagination: {
         el: '.swiper-pagination',
       },
+      on : {
+        init: function(){
+          $(this.slides[0]).find('.total_amount .txt_num').counterUp({
+            delay: 20,
+            time: 700
+          });
+        },
+      }
     });
-  })
+
+    // 돈통 swipe 시
+    swiper.on('slideChange', function() {
+      var idx = this.realIndex;
+      var $active = $(this.slides[idx]);
+
+      activeSlide(idx);
+      $active.find('.total_amount .txt_num').counterUp({
+        delay: 20,
+        time: 700
+      });
+
+      // 돈통 미오픈 slide 인 경우
+      if ( $active.find('.msg_no_moneybag').length ){
+        $('.wrap_item_benefit').show();
+        _showBenefitList();
+      }
+    });
+
+    // 싱단고정 탭
+    $(document).on('click', '.wrap_moneybag_tab li', function(){
+      var tabIdx = $(this).index();
+      activeSlide(tabIdx);
+    });
+
+    var activeSlide = function(slideIdx){
+      var tab = $('.wrap_moneybag_tab');
+      tab.find('li').eq(slideIdx).addClass('on').siblings().removeClass('on');
+      var tabX = tab.find('li.on').offset().left - 24;
+      tab.find('ul').scrollLeft(tabX);
+      swiper.slideTo(slideIdx);
+
+      var ccy = $(swiper.slides[slideIdx]).find('.box_moneybag').data('ccy');
+      if ( ccy ) {
+        $('.section_moneybag').attr('data-ccy',ccy);
+      }
+
+      $(document).scrollTop(0);
+    };
+
+    // 로딩
+    //wrap_list_trans에 skeleton loading을 위한 element prepend 후 end 시 삭제
+    skeletonLoading.start('.section_list_trans');
+    setTimeout(function(){
+      skeletonLoading.end('.section_list_trans');
+    },2000);
+
+  });
   </script>
 </body>
 </html>

@@ -2086,9 +2086,6 @@ a.wrap_box > .txt:first-child {
 }
 
 /* 조회 리스트 */
-.section_info_list {
-  padding: 0;
-}
 .section_list_trans {
   padding: 0;
 }
@@ -2167,6 +2164,69 @@ a.wrap_box > .txt:first-child {
 }
 .wrap_filter .btn_ico_filter {
   margin-right: -0.2rem;
+}
+.skeletonLoading .skeleton-item {
+  border-radius: 0.8rem;
+  background-color: #f6f6f6;
+  background: linear-gradient(110deg, #f6f6f6 8%, #fbfbfb 18%, #f6f6f6 33%);
+  background-size: 200% 100%;
+  animation: 1.5s skeleton linear infinite;
+}
+.skeletonLoading .filter_list span,
+.skeletonLoading .btn_ico_filter {
+  height: 2.8rem;
+  border-radius: 0.8rem;
+  background-color: #f6f6f6;
+  background: linear-gradient(110deg, #f6f6f6 8%, #fbfbfb 18%, #f6f6f6 33%);
+  background-size: 200% 100%;
+  color: transparent;
+  animation: 1.5s skeleton linear infinite;
+  user-select: none;
+}
+.skeletonLoading .trans_info h4 {
+  height: 2.4rem;
+  margin-bottom: 1.7rem;
+}
+.skeletonLoading .trans_info > ul > li.skeleton-item {
+  height: 6.4rem;
+  margin-top: 1.1rem;
+}
+
+/* list loader */
+.mesh-loader {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 6.0rem;
+}
+.mesh-loader .circle {
+  position: absolute;
+  z-index: 10;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: -0.6rem;
+  border-radius: 50%;
+  -webkit-animation: mesh 3s ease-in-out infinite;
+  animation: mesh 3s ease-in-out infinite -1.5s;
+}
+.mesh-loader .set-one .circle {
+  background-color: #82e4df;
+}
+.mesh-loader .set-two .circle {
+  background-color: #eec1fe;
+}
+.mesh-loader > div .circle:last-child {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.mesh-loader > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.mesh-loader > div:last-child {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 /* 조회 상세 */
