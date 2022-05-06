@@ -2477,24 +2477,29 @@ a.wrap_box > .txt:first-child {
   line-height: 3.2rem;
   font-weight: 700;
 }
-.section_moneybag .box_moneybag button.total_amount {
+.section_moneybag .box_moneybag .btn_acco {
   margin-bottom: 0;
 }
 .section_moneybag .box_moneybag button.total_amount .ico_arr_down_2 {
   margin-left: 0.4rem;
 }
-.section_moneybag .box_moneybag .btn_acco:not(.on) {
-  margin-bottom: 3.0rem;
-}
 .section_moneybag .box_moneybag .btn_acco .ico_arr_down_2 {
-  will-change: transform;
+  will-change: margin;
 }
 .section_moneybag .box_moneybag .btn_acco.on .ico_arr_down_2 {
   transform: rotate(-180deg);
 }
+.section_moneybag .box_moneybag .btn_acco.on + .wrap_acco + .box_btn_list {
+  margin-top: 2.4rem;
+}
 .section_moneybag .box_moneybag .wrap_acco {
   display: none;
-  padding: 1.4rem 0 2.2rem;
+  padding: 1.4rem 0 0;
+  will-change: transform;
+  transform: translateY(0);
+}
+.section_moneybag .box_moneybag .wrap_acco + .box_btn_list {
+  margin-top: 3.0rem;
 }
 .section_moneybag .box_moneybag .list_info li {
   margin-top: 0;
