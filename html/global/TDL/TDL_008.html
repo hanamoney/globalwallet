@@ -21,9 +21,7 @@
   <main id="root">
     <header id="header">
       <div class="inner_fixed">
-        <button class="btn_ico_prev"><span class="blind">이전</span></button>
-        <h1>하나머니 조회</h1>
-        <button class="btn_ico_card_header"><span class="blind">트래블로그 혜택안내</span></button>
+        <h2 class="logo_hanamoney"><span class="blind">하나머니</span></h2>
       </div>
     </header>
     <!-- // header -->
@@ -31,20 +29,6 @@
     <div id="contents" class="wrap_contents">
       <div class="contents">
         <section data-roll="TDL">
-          
-        </section>
-        <!-- // section -->
-      </div>
-    </div>
-    <!-- // contents-->
-
-    <!-- popup -->
-    <div id="popupId" class="wrap_layer type_full">
-      <div class="inner_layer">
-        <div class="head_layer">
-          <h2 class="logo_hanamoney"><span class="blind">하나머니</span></h2>
-        </div>
-        <div class="content_layer">
           <div class="section_detail_trans">
             <div class="wrap_top_info">
               <div class="fnFixedTop" data-height="50">
@@ -59,7 +43,7 @@
               </div>
             </div>
 
-            <div class="msg_benefit"><span class="ico_present"></span><p>수수료 USD <em class="txt_num">13</em>을 아꼈어요!</p></div>
+            <div class="msg_benefit"><span class="ico_present"></span><p>수수료 USD <em class="txt_num">13.00</em>을 아꼈어요!</p></div>
 
             <div class="wrap_list">
               <ul class="list_info">
@@ -116,16 +100,20 @@
               </ul>
             </div>
           </div>
-        </div>
+        </section>
+        <!-- // section -->
+
+        <!-- 하단고정영역 -->
         <div class="section_bottom_fixed">
           <div class="wrap_btn_full type_ico">
             <button type="button" class="btn_full_secondary btn_ico_download"><span class="blind">저장하기</span></button>
             <button type="button" class="btn_full_primary fnClosePop">확인</button>
           </div>
         </div>
+        <!-- // 하단고정영역 -->
       </div>
     </div>
-    <!-- // popup -->
+    <!-- // contents-->
 
     <!-- toast -->
     <div id="toast" class="wrap_toast">
@@ -136,9 +124,6 @@
   
   <script>
     $(function(){
-      // 팝업오픈 퍼블확인용 스크립트
-      fnOpenLayerPop('popupId');
-
       // 토스트 퍼블확인용 스크립트
       $('.btn_ico_download').on('click', function(){
         fnToastPop('toast');
