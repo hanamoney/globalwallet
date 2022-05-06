@@ -377,17 +377,25 @@
     });
 
     // 싱단고정 탭
+    var fixedTab = $('.wrap_moneybag_tab');
+    var tabPosX = [0];
+    var tabLi = 0;
+    fixedTab.find('li').each(function(idx){
+      tabLi += $(this).outerWidth(true);
+      tabPosX[idx + 1] = tabLi;
+    });
     $(document).on('click', '.wrap_moneybag_tab li', function(){
       var tabIdx = $(this).index();
       activeSlide(tabIdx);
+      swiper.slideTo(tabIdx);
     });
 
     var activeSlide = function(slideIdx){
-      var tab = $('.wrap_moneybag_tab');
-      tab.find('li').eq(slideIdx).addClass('on').siblings().removeClass('on');
-      var tabX = tab.find('li').eq(slideIdx).offset().left;
-      tab.find('ul').scrollLeft(tabX);
-      swiper.slideTo(slideIdx);
+      var activeTab = fixedTab.find('li').eq(slideIdx);
+      if (!activeTab.hasClass('on')) {
+        activeTab.addClass('on').siblings().removeClass('on');
+        fixedTab.find('ul').scrollLeft(tabPosX[slideIdx]);
+      }
 
       var ccy = $(swiper.slides[slideIdx]).find('.box_moneybag').data('ccy');
       if ( ccy ) {
