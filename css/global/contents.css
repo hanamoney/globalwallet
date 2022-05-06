@@ -158,7 +158,7 @@
   overflow-x: scroll;
   display: flex;
   width: 100%;
-  padding: 1.2rem 2.4rem;
+  padding: 1.2rem 0;
 }
 .section_moneybag .wrap_moneybag_tab ul::-webkit-scrollbar {
   display: none;
@@ -167,7 +167,10 @@
   margin-left: 0.8rem;
 }
 .section_moneybag .wrap_moneybag_tab ul li:first-child {
-  margin-left: 0;
+  margin-left: 2.4rem;
+}
+.section_moneybag .wrap_moneybag_tab ul li:last-child {
+  margin-right: 2.4rem;
 }
 .section_moneybag .wrap_moneybag_tab ul li.on .txt_ccy {
   background-color: #6E7D85;
