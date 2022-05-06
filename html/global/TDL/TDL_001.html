@@ -40,6 +40,7 @@
                 <li><button type="button" class="txt_ccy"><span class="ico_cur_eur"></span><span>유럽 EUR</span></button></li>
                 <li><button type="button" class="txt_ccy"><span class="ico_cur_gbp"></span><span>영국 GBP</span></button></li>
                 <li><button type="button" class="txt_ccy"><span class="ico_cur_jpy"></span><span>일본 JPY</span></button></li>
+                <li><button type="button" class="txt_ccy"><span class="wrap_ico_ccy"><span class="ico_cur_usd"></span><span class="ico_cur_eur"></span><span class="ico_cur_gbp"></span><span class="ico_cur_jpy"></span></span><span>추가하기</span></button></li>
               </ul>
             </div>
             <!-- // 외화 돈통 오픈 시 노출 -->
@@ -48,11 +49,11 @@
               <div class="swiper-wrapper">
                 <!-- 원화 -->
                 <div class="swiper-slide">
-                  <div class="box_moneybag" data-ccy="krw">
+                  <div class="box_moneybag fnSimpleAcco" data-ccy="krw">
                     <h2 class="txt_ccy"><span class="ico_hanamoney"></span><span>하나머니</span></h2>
                     <!-- CASE #1 잔액 0원 -->
                     <!-- <p class="total_amount"><strong class="txt_num">0</strong>원</p> -->
-                    <button class="total_amount bth_acco"><strong class="txt_num">100,000,000</strong>원<span class="ico_arr_down_2"><span class="blind">상세보기</span></button>
+                    <button class="total_amount btn_acco"><strong class="txt_num">100,000,000</strong>원<span class="ico_arr_down_2"><span class="blind">상세보기</span></button>
                     <div class="wrap_acco">
                       <ul class="list_info">
                         <li>
@@ -153,16 +154,15 @@
           <div class="wrap_banner_box benefit_link">
             <!-- 이번달 받은 혜택이 있는 경우 -->
             <a href="#none" class="link_box benefit_montly">
-              <div class="row">
-                <p class="tit">
-                  <span class="ico_present"></span>
-                  <em>이번달 받은 혜택</em>
-                </p>
-                <span class="txt_total_benefit"><em class="txt_num">400,000</em>원</span>
-              </div>
+              <p class="tit">
+                <span class="ico_present"></span>
+                <em>이번달 받은 혜택</em>
+              </p>
+              <span class="txt_total_benefit"><em class="txt_num">400,000</em>원</span>
             </a>
             <!-- 이번달 받은 혜택이 없는 경우 -->
             <a href="#none" class="link_box benefit_others">
+              <span class="img_character_question"></span>
               <p class="tit">남들은<br><em>어떤 혜택을 받고 있을까요?</em></p>
             </a>
           </div>
@@ -176,32 +176,98 @@
             </div>
             <!-- // 조회필터 -->
 
-            <!-- 내역없음 -->
-            <div class="msg_noresult">
-              <p class="">이번달에 거래하신 내역이 없어요</p>
-              <a href="#none" class="">무료적립받기</a>
+            <div class="wrap_list_trans">
+              <div class="list_trans">
+                <div class="trans_info">
+                  <h4>3월 24일 (토)</h4>
+                  <ul>
+                    <li>
+                      <button type="button" class="row">
+                        <strong class="tit">하나머니 → JPY</strong>
+                        <span class="txt_amount"><em class="txt_num">-999,999,999</em></span>
+                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                      </button>
+                      <div class="row">
+                        <ul class="desc"><li>11:31</li><li>JPY 환전</li></ul>
+                        <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
+                      </div>
+                      <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
+                    </li>
+                    <li>
+                      <button type="button" class="row">
+                        <strong class="tit">스타벅스 선유도역 1번출구점 스타벅스</strong>
+                        <span class="txt_amount add"><em class="txt_num">999,999,999</em></span>
+                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                      </button>
+                      <div class="row">
+                        <ul class="desc"><li>11:31</li><li>JPY 환전</li></ul>
+                        <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
+                      </div>
+                      <p class="txt_sm">상품교환 전 취소 가능 <button type="button" class="btn_txt txt_point_1">취소</button></p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="trans_info">
+                  <h4>3월 23일 (금)</h4>
+                  <ul>
+                    <li>
+                      <div class="row">
+                        <strong class="tit">하나머니 → JPY</strong>
+                        <span class="txt_amount"><em class="txt_num">-20,000,000</em></span>
+                      </div>
+                      <div class="row">
+                        <ul class="desc"><li>11:31</li><li>JPY 환전</li></ul>
+                        <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+  
+              <div class="list_trans">
+                <h3 class="tit_divider">2021</h3>
+                <div class="trans_info foriegn"><!-- 외화일 경우 foriegn 클래스 추가 -->
+                  <h4>3월 24일 (토)</h4>
+                  <ul>
+                    <li>
+                      <div class="row">
+                        <button type="button" class="row">
+                          <strong class="tit">CATHAY UNITED BANK 130061971 CATHAY UNITED BANK 130061971</strong>
+                          <span class="txt_amount">-USD <em class="txt_num">999,999,999</em></span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                      </div>
+                      <div class="row">
+                        <ul class="desc"><li>12:59</li><li>하나머니 환전</li></ul>
+                        <span class="desc"><span class="blind">잔액</span><em class="txt_num">1042.00</em></span>
+                      </div>
+                      <span class="txt_noti">수수료면제 USD <em class="txt_num">3.78</em></span>
+                    </li>
+                    <li>
+                      <div class="row">
+                        <button type="button" class="row">
+                          <strong class="tit">CATHAY UNITED BANK 130061971 CATHAY UNITED BANK 130061971</strong>
+                          <span class="txt_amount add">USD <em class="txt_num">999,999,999</em></span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                      </div>
+                      <div class="row">
+                        <ul class="desc"><li>12:59</li><li>하나머니 환전</li></ul>
+                        <span class="desc"><span class="blind">잔액</span><em class="txt_num">1042.00</em></span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>  
             </div>
             
-            <div class="wrap_list_trans">
-              <div class="trans_info">
-                <h4>3월 24일 (토)</h4>
-                <ul>
-                  <li>
-                    <div class="row">
-                      <strong class="tit">하나머니 → JPY</strong>
-                      <span class="txt_amount"><em class="txt_num">-20,000,000</em></span>
-                    </div>
-                    <div class="row">
-                      <ul class="desc"><li>시간</li><li>거래사유명</li></ul>
-                      <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
-                    </div>
-                    <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
-                    <span class="txt_sm">상품교환 전 취소 가능 <button type="button" class="btn_txt txt_point_1">취소</button></span>
-                    <button type="button" class="btn_ico_more"><span class="상세내역"></span></button>
-                  </li>
-                </ul>
+            <!-- 내역없음 -->
+            <div class="msg_noresult">
+              <p class="tit">이번달에 거래하신 내역이 없어요</p>
+              <div class="wrap_btn">
+                <a href="#none" class="btn_box_sm">무료적립받기</a>
               </div>
             </div>
+            <!-- // 내역없음 -->
 
             <!-- list loader -->
             <div class="mesh-loader">
@@ -212,6 +278,7 @@
                 <div class="circle"></div><div class="circle"></div>
               </div>
             </div>
+            <!-- // list loader -->
           </div>
           <!-- // 조회 리스트 -->
 
@@ -255,7 +322,7 @@
                 </div>
               </li>
             </ul>
-            <p class="txt_guide">2022년04월28일(576회차) USD 기준</p>
+            <p class="txt_guide"><span class="ico_info"></span>2022년04월28일(576회차) USD 기준</p>
           </div>
           <!-- // 외화돈통 미오픈 -->
           
@@ -318,25 +385,34 @@
     var activeSlide = function(slideIdx){
       var tab = $('.wrap_moneybag_tab');
       tab.find('li').eq(slideIdx).addClass('on').siblings().removeClass('on');
-      var tabX = tab.find('li.on').offset().left - 24;
+      var tabX = tab.find('li').eq(slideIdx).offset().left;
       tab.find('ul').scrollLeft(tabX);
       swiper.slideTo(slideIdx);
 
       var ccy = $(swiper.slides[slideIdx]).find('.box_moneybag').data('ccy');
       if ( ccy ) {
         $('.section_moneybag').attr('data-ccy',ccy);
+      } else {
+        $('.section_moneybag').removeAttr('data-ccy');
       }
 
       $(document).scrollTop(0);
     };
 
-    // 로딩
-    //wrap_list_trans에 skeleton loading을 위한 element prepend 후 end 시 삭제
-    skeletonLoading.start('.section_list_trans');
-    setTimeout(function(){
-      skeletonLoading.end('.section_list_trans');
-    },2000);
+    // 원화돈통 잔액 터치 시 높이 계산
+    $(document).on('click', '.fnSimpleAcco .btn_acco', function(){
+      $(swiper.wrapperEl).css({'height':''});
+      setTimeout(function(){
+        swiper.update();
+        $(swiper.wrapperEl).css('height',swiper.height);
+      },300);
+    });
 
+    //로딩 시 wrap_list_trans에 skeleton loading을 위한 element prepend 후 end 시 삭제기능을 하는 함수 호출
+    skeletonLoading.start('.section_list_trans'); // 로딩 시
+    setTimeout(function(){
+      skeletonLoading.end('.section_list_trans'); // 로딩 완료
+    },2000);
   });
   </script>
 </body>

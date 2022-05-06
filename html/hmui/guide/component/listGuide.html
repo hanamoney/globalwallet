@@ -7,8 +7,15 @@
   <meta name="format-detection" content="telephone=no">
   <title>list guide</title>
 
+  <link rel="stylesheet" href="/css/hmui/swiper.css">
+  <link rel="stylesheet" href="/css/hmui/animate.css">
   <link rel="stylesheet" href="/css/hmui/common.css">
   <link rel="stylesheet" href="/css/global/contents.css">
+  <script src="/js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="/js/hmui/lib/swiper.js"></script>
+  <script src="/js/hmui/lib/waypoints.min.js"></script>
+  <script src="/js/hmui/lib/jquery.counterup.js"></script>
+  <script src="/js/hmui/ui_common.js"></script>
 </head>
 <body>
   <main id="root">
@@ -24,87 +31,104 @@
       <div class="contents">
         <section data-roll="guide">
 
-          <div class="wrap_filter">
-
-          </div>
+          <!-- 조회 리스트 -->
           <div class="section_list_trans">
-            <!-- year -->
-            <div class="wrap_list_trans">
-              <!-- date -->
-              <div class="trans_info">
-                <h4>3월 24일 (토)</h4>
-                <ul>
-                  <li>
-                    <div class="row">
-                      <strong class="tit">하나머니 → JPY</strong>
-                      <span class="txt_amount"><em class="txt_num">-20,000,000</em></span>
-                    </div>
-                    <div class="row">
-                      <ul class="desc"><li>시간</li><li>거래사유명</li></ul>
-                      <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
-                    </div>
-                    <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
-                    <span class="txt_sm">상품교환 전 취소 가능 <button type="button" class="btn_txt txt_point_1">취소</button></span>
-                    <button type="button" class="btn_ico_more"><span class="상세내역"></span></button>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <strong class="tit">하나머니 → JPY</strong>
-                      <span class="txt_amount"><em class="txt_num">-20,000,000</em></span>
-                    </div>
-                    <div class="row">
-                      <ul class="desc"><li>시간</li><li>거래사유명</li></ul>
-                      <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
-                    </div>
-                    <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
-                    <span class="txt_sm">상품교환 전 취소 가능 <button type="button" class="btn_txt txt_point_1">취소</button></span>
-                    <button type="button" class="btn_ico_more"><span class="상세내역"></span></button>
-                  </li>
-                </ul>
-              </div>
-              <!-- date -->
-              <div class="trans_info">
-                <h4>3월 24일 (토)</h4>
-                <ul>
-                  <li>
-                    <div class="row">
-                      <strong class="tit">하나머니 → JPY</strong>
-                      <span class="txt_amount"><em class="txt_num">-20,000,000</em></span>
-                    </div>
-                    <div class="row">
-                      <ul class=""><li>시간</li><li>거래사유명</li></ul>
-                      <span><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
-                    </div>
-                    <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
-                    <span class="txt_sm">상품교환 전 취소 가능 <button type="button" class="btn_txt txt_point_1">취소</button></span>
-                    <button type="button" class="btn_ico_more"><span class="상세내역"></span></button>
-                  </li>
-                </ul>
-              </div>
+            <!-- 조회필터 -->
+            <div class="wrap_filter">
+              <p class="filter_list"><span>이번달</span><span>최신순</span><span>전체</span></p>
+              <button type="button" class="btn_ico_filter"><span class="blind">상세조회 설정</span></button>
             </div>
-            <!-- year -->
+            <!-- // 조회필터 -->
+
+            <!-- 내역없음 -->
+            <div class="msg_noresult">
+              <p class="">이번달에 거래하신 내역이 없어요</p>
+              <a href="#none" class="">무료적립받기</a>
+            </div>
+
             <div class="wrap_list_trans">
-              <h3 class="tit_divider">2021</h3>
-              <div class="trans_info">
-                <h4>3월 24일 (토)</h4>
-                <ul>
-                  <li>
-                    <div class="row">
-                      <strong class="tit">하나머니 → JPY</strong>
-                      <span class="txt_amount"><em class="txt_num">-20,000,000</em></span>
-                    </div>
-                    <div class="row">
-                      <ul class=""><li>시간</li><li>거래사유명</li></ul>
-                      <span><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
-                    </div>
-                    <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
-                    <span class="txt_sm">상품교환 전 취소 가능 <button type="button" class="btn_txt txt_point_1">취소</button></span>
-                    <button type="button" class="btn_ico_more"><span class="상세내역"></span></button>
-                  </li>
-                </ul>
+              <div class="list_trans">
+                <div class="trans_info">
+                  <h4>3월 24일 (토)</h4>
+                  <ul>
+                    <li>
+                      <button type="button" class="row">
+                        <strong class="tit">하나머니 → JPY</strong>
+                        <span class="txt_amount"><em class="txt_num">-999,999,999</em></span>
+                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                      </button>
+                      <div class="row">
+                        <ul class="desc"><li>11:31</li><li>JPY 환전</li></ul>
+                        <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
+                      </div>
+                      <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
+                    </li>
+                    <li>
+                      <button type="button" class="row">
+                        <strong class="tit">스타벅스 선유도역 1번출구점 스타벅스</strong>
+                        <span class="txt_amount add"><em class="txt_num">999,999,999</em></span>
+                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                      </button>
+                      <div class="row">
+                        <ul class="desc"><li>11:31</li><li>JPY 환전</li></ul>
+                        <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
+                      </div>
+                      <p class="txt_sm">상품교환 전 취소 가능 <button type="button" class="btn_txt txt_point_1">취소</button></p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="trans_info">
+                  <h4>3월 23일 (금)</h4>
+                  <ul>
+                    <li>
+                      <div class="row">
+                        <strong class="tit">하나머니 → JPY</strong>
+                        <span class="txt_amount"><em class="txt_num">-20,000,000</em></span>
+                      </div>
+                      <div class="row">
+                        <ul class="desc"><li>11:31</li><li>JPY 환전</li></ul>
+                        <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+  
+              <div class="list_trans">
+                <h3 class="tit_divider">2021</h3>
+                <div class="trans_info foriegn"><!-- 외화일 경우 foriegn 클래스 추가 -->
+                  <h4>3월 24일 (토)</h4>
+                  <ul>
+                    <li>
+                      <div class="row">
+                        <button type="button" class="row">
+                          <strong class="tit">CATHAY UNITED BANK 130061971 CATHAY UNITED BANK 130061971</strong>
+                          <span class="txt_amount">-USD <em class="txt_num">999,999,999</em></span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                      </div>
+                      <div class="row">
+                        <ul class="desc"><li>12:59</li><li>하나머니 환전</li></ul>
+                        <span class="desc"><span class="blind">잔액</span><em class="txt_num">1042.00</em></span>
+                      </div>
+                      <span class="txt_noti">수수료면제 USD <em class="txt_num">3.78</em></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>  
+            </div>
+            
+            
+            <!-- list loader -->
+            <div class="mesh-loader">
+              <div class="set-one">
+                  <div class="circle"></div><div class="circle"></div>
+              </div>
+              <div class="set-two">
+                <div class="circle"></div><div class="circle"></div>
               </div>
             </div>
           </div>
+          <!-- // 조회 리스트 -->
         
           
 

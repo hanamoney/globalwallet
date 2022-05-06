@@ -27,6 +27,7 @@ var registUI = function(){
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
+  if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
   if ( $('.section_terms .btn_acco').length ) { _agreeAccoBtn(); } // 약관동의 아코디언 기능
   if ( $('.section_terms .wrap_chk_all').length ) { _agreeCheckAll(); } // 약관전체동의
   if ( $('.wrap_tooltip').length ) { _tooltip(); } // 툴팁
@@ -266,6 +267,25 @@ var _showBenefitList = function() {
 }
 
 /**
+  * @name _simpleAcco()
+  * @description // 단일 아코디언 버튼
+  */
+var _simpleAcco = function() {
+  var accoBtn = $('.fnSimpleAcco').find('.btn_acco');
+  accoBtn.on('click',function(){
+    var $accoCont = $(this).siblings('.wrap_acco');
+
+    if ($(this).hasClass('on')) {
+      $(this).removeClass('on');
+      $accoCont.slideUp(300);
+    } else {
+      $(this).addClass('on');
+      $accoCont.slideDown(300);
+    }
+  });
+}
+
+/**
   * @name _agreeAccoBtn()
   * @description // 약관동의 아코디언 버튼
   */
@@ -498,15 +518,17 @@ var skeletonLoading = (function(){
 
   function _moneybagListLoading(el) {
     var list = $(el).find('.wrap_list_trans');
-    var item = '<div class="trans_info skeleton">';
+    var item = '<div class="list_trans skeleton">';
+        item += '<div class="trans_info">';
         item += '<h4 class="skeleton-item"></h4>';
         item += '<ul><li class="skeleton-item"></li><li class="skeleton-item"></li></ul>';
+        item += '</div>';
         item += '</div>';
 
     if ($(el).hasClass('skeletonLoading')) {
       list.prepend(item);
     } else {
-      $('.trans_info.skeleton').remove();
+      $('.list_trans.skeleton').remove();
     }
   }
 
@@ -520,6 +542,7 @@ var skeletonLoading = (function(){
     $el = $(el);
     setTimeout(function(){
       $el.removeClass('skeletonLoading');
+      _moneybagListLoading($el);
     },300);
   }
 
