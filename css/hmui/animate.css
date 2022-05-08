@@ -4,6 +4,9 @@
   0% {
     transform: translateY(1.0rem);
   }
+  85% {
+    transform: translateY(-0.06rem);
+  }
   100% {
     transform: translateY(0);
   }
@@ -17,7 +20,7 @@
   }
 }
 
-@keyframes itemFloat7 {
+@keyframes cloud1 {
   0% {
     transform: translateY(0); }
   45% {
@@ -26,7 +29,7 @@
     transform: translateY(0); 
   } 
 }
-@keyframes itemFloat5 {
+@keyframes cloud2 {
   0% {
     transform: translateY(0); }
   60% {
@@ -34,6 +37,17 @@
   100% {
     transform: translateY(0); 
   } 
+}
+@keyframes cloudPop {
+  0% {
+    transform: scale(0.98) translateY(1.0rem);
+  }
+  75% {
+    transform: scale(1.01) translateY(-0.06rem);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
 }
 
 @-webkit-keyframes mesh {

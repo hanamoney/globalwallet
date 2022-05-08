@@ -135,10 +135,10 @@
   animation: itemUp10 0.6s forwards;
 }
 .visual_usr_character .img_cloud1 {
-  animation: itemUp10 0.3s forwards, itemFloat7 4s 0.4s ease-in-out infinite;
+  animation: cloudPop 0.3s forwards, cloud1 7s 0.3s ease-in-out infinite;
 }
 .visual_usr_character .img_cloud2 {
-  animation: itemUp10 0.4s forwards, itemFloat5 4s 0.5s ease-in-out infinite;
+  animation: cloudPop 0.4s forwards, cloud2 7s 0.8s ease-in-out infinite;
 }
 
 /* [TDL] - 하나머니 조회 */
