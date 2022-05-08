@@ -84,23 +84,25 @@ tr td:nth-child(5) {
 var tBody = document.getElementById('guideList');
 var menuList = [
   {'group':'메인', 'code':'HMN','depth1':'메인','name':'하나머니 메인','pageid':'HMN_001', 'status':'X', 'date':'', 'remarks':'Native'},
-  {'group':'', 'code':'HMN', 'depth1':'','name':'돈통 더보기','pageid':'HMN_101', 'status':'', 'date':'', 'remarks':''},
+  {'group':'', 'code':'HMN', 'depth1':'','name':'원화돈통 더보기','pageid':'HMN_101_1', 'status':'', 'date':'', 'remarks':''},
+  {'group':'', 'code':'HMN', 'depth1':'','name':'외화돈통 더보기','pageid':'HMN_101_2', 'status':'', 'date':'', 'remarks':''},
   {'group':'', 'code':'HMN', 'depth1':'','name':'돈통 전체보기','pageid':'HMN_102', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'HMN', 'depth1':'','name':'하나머니 메인','pageid':'HMN_201', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'HMN', 'depth1':'','name':'하나머니 메인','pageid':'HMN_202', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'HMN', 'depth1':'','name':'하나머니 메인','pageid':'HMN_203', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'HMN', 'depth1':'','name':'하나머니 메인','pageid':'HMN_204', 'status':'', 'date':'', 'remarks':''},
+  {'group':'', 'code':'HMN', 'depth1':'','name':'글로벌 하나머니 가입 유도 팝업','pageid':'HMN_201_1', 'status':'', 'date':'', 'remarks':''},
+  {'group':'', 'code':'HMN', 'depth1':'','name':'글로벌 하나머니 가입_계좌연결유도 팝업','pageid':'HMN_202_2', 'status':'', 'date':'', 'remarks':''},
+  {'group':'', 'code':'HMN', 'depth1':'','name':'카드발급 유도 팝업','pageid':'HMN_202', 'status':'', 'date':'', 'remarks':''},
+  {'group':'', 'code':'HMN', 'depth1':'','name':'카드발급 유도 팝업','pageid':'HMN_203', 'status':'X', 'date':'', 'remarks':'삭제'},
+  {'group':'', 'code':'HMN', 'depth1':'','name':'계좌연결 팝업','pageid':'HMN_204', 'status':'X', 'date':'', 'remarks':'삭제'},
 
 
-  {'group':'하나머니', 'code':'TDL','depth1':'조회','name':'하나머니 조회_원화','pageid':'TDL_001', 'status':'확인중', 'date':'', 'remarks':''},
+  {'group':'하나머니', 'code':'TDL','depth1':'조회','name':'하나머니 조회_원화','pageid':'TDL_001', 'status':'완료', 'date':'22.05.09', 'remarks':''},
   {'group':'', 'code':'TDL','depth1':'','name':'하나머니 조회_달러','pageid':'TDL_002', 'status':'X', 'date':'', 'remarks':'TDL_001'},
   {'group':'', 'code':'TDL','depth1':'','name':'하나머니 조회_유로','pageid':'TDL_003', 'status':'X', 'date':'', 'remarks':'TDL_001'},
   {'group':'', 'code':'TDL','depth1':'','name':'하나머니 조회_파운드','pageid':'TDL_004', 'status':'X', 'date':'', 'remarks':'TDL_001'},
   {'group':'', 'code':'TDL','depth1':'','name':'하나머니 조회_엔화','pageid':'TDL_005', 'status':'X', 'date':'', 'remarks':'TDL_001'},
   {'group':'', 'code':'TDL','depth1':'','name':'외화 돈통 미오픈','pageid':'TDL_100', 'status':'X', 'date':'', 'remarks':'TDL_001'},
   {'group':'', 'code':'TDL','depth1':'','name':'하나머니 안내','pageid':'TDL_006', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'TDL','depth1':'','name':'기간 설정','pageid':'TDL_007', 'status':'확인중', 'date':'', 'remarks':''},
-  {'group':'', 'code':'TDL','depth1':'','name':'상세 내역','pageid':'TDL_008', 'status':'확인중', 'date':'', 'remarks':''},
+  {'group':'', 'code':'TDL','depth1':'','name':'기간 설정','pageid':'TDL_007', 'status':'완료', 'date':'22.05.09', 'remarks':''},
+  {'group':'', 'code':'TDL','depth1':'','name':'상세 내역','pageid':'TDL_008', 'status':'완료', 'date':'22.05.09', 'remarks':''},
 
 
   {'group':'', 'code':'CHG','depth1':'원화 충전','name':'충전방식 선택','pageid':'CHG_001', 'status':'완료', 'date':'22.04.25', 'remarks':''},
@@ -139,10 +141,10 @@ var menuList = [
 
 
   {'group':'회원가입', 'code':'USR','depth1':'신규회원가입','name':'통합 약관동의','pageid':'USR_001', 'status':'X', 'date':'', 'remarks':'Native'},
-  {'group':'', 'code':'USR','depth1':'글로벌월렛 가입','name':'글로벌 약관동의','pageid':'USR_101', 'status':'확인중', 'date':'', 'remarks':''},
-  {'group':'', 'code':'USR','depth1':'','name':'계좌연결','pageid':'USR_102', 'status':'확인중', 'date':'', 'remarks':''},
-  {'group':'', 'code':'USR','depth1':'','name':'카드발급 브릿지','pageid':'USR_103', 'status':'확인중', 'date':'', 'remarks':''},
-  {'group':'', 'code':'USR','depth1':'','name':'글로벌웰렛 서비스 신청 완료','pageid':'USR_104', 'status':'확인중', 'date':'', 'remarks':''},
+  {'group':'', 'code':'USR','depth1':'글로벌월렛 가입','name':'글로벌 약관동의','pageid':'USR_101', 'status':'완료', 'date':'22.05.09', 'remarks':''},
+  {'group':'', 'code':'USR','depth1':'','name':'계좌연결','pageid':'USR_102', 'status':'완료', 'date':'22.05.09', 'remarks':'이미지 추후 css로 교체'},
+  {'group':'', 'code':'USR','depth1':'','name':'카드발급 브릿지','pageid':'USR_103', 'status':'확인중', 'date':'22.05.09', 'remarks':'이미지 추후 css로 교체'},
+  {'group':'', 'code':'USR','depth1':'','name':'글로벌웰렛 서비스 신청 완료','pageid':'USR_104', 'status':'완료', 'date':'22.05.09', 'remarks':''},
 
 
   {'group':'하나머니', 'code':'PEX','depth1':'포인트전환','name':'포인트전환 가이드','pageid':'PEX_001', 'status':'', 'date':'', 'remarks':''},
