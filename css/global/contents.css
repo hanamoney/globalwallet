@@ -81,31 +81,35 @@
 .section_top_visual.join_card {
   padding-bottom: 29.8rem;
 }
-.visual_usr_card::before {
-  content: '카드디자인 확정 후 수정예정';
-  display: block;
-  position: absolute;
-  top: 10px;
-  transform: rotate(-11.58deg);
-  color: #fff;
-  z-index: 10;
-  text-align: center;
-}
 .visual_usr_card {
   position: absolute;
   left: 50%;
-  bottom: 3.2rem;
+  bottom: 0;
+  width: 24.4rem;
+  height: 27.3rem;
   transform: translateX(-50%);
 }
-.img_card_travlog {
+.visual_usr_card  .img_card_travlog {
   display: block;
   margin: 0 auto;
   width: 13.4rem;
   height: 21.2rem;
+  margin-top: 1.0rem;
   border-radius: 0.8rem;
-  background-color: #444;;
+  background: url('/images/global/img_card_travlog.png') no-repeat 50%;
+  background-size: 100%;
   transform: rotate(-11.58deg);
   box-shadow: 6px 11px 14px rgba(0, 0, 0, 0.1);
+}
+.visual_usr_card .img_shoppingbag {
+  position: absolute;
+  top: 1.0rem;
+  right: 0;
+}
+.visual_usr_card .img_character_luggage {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 .section_top_visual.join_complete {
   padding-bottom: 20.3rem;
@@ -113,9 +117,6 @@
 }
 .section_top_visual.join_complete .wrap_tit > * {
   color: #fff;
-}
-.section_top_visual.join_complete + .wrap_item_benefit .wrap_btn_center {
-  /* margin-bottom: 3.0rem; */
 }
 .visual_usr_character {
   position: absolute;

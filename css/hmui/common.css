@@ -2577,6 +2577,12 @@ a.wrap_box > .txt:first-child {
 }
 
 /* 캐릭터 이미지 */
+[class^="img_character"] {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100%;
+}
 .img_character_aero {
   display: inline-block;
   width: 41.11vw;
@@ -2607,7 +2613,18 @@ a.wrap_box > .txt:first-child {
 .img_character_question {
   width: 7.2rem;
   height: 7.0rem;
-  background: url('/images/hmui/character/img_character_question.png') no-repeat 50%;
+  background-image: url('/images/hmui/character/img_character_question.png');
+}
+.img_character_luggage {
+  width: 9.7rem;
+  height: 15.5rem;
+  background-image: url('/images/hmui/character/img_character_luggage.png');
+}
+.img_shoppingbag {
+  display: inline-block;
+  width: 6.6rem;
+  height: 13.5rem;
+  background: url('/images/hmui/character/visual_shoppingbag.png') no-repeat 50%;
   background-size: 100%;
 }
 
