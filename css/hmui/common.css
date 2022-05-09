@@ -4,27 +4,27 @@
 	font-family: 'Spoqa';
 	font-style: normal;
 	font-weight: 300;
-	src: url(/font/hmui/SpoqaHanSansNeo-Light.woff2) format('woff2'),
-		url(/font/hmui/NSpoqaHanSansNeo-Light.woff) format('woff'),
-		url(/font/hmui/SpoqaHanSansNeo-Light.otf) format('opentype');
+	src: url(../../font/hmui/SpoqaHanSansNeo-Light.woff2) format('woff2'),
+		url(../../font/hmui/NSpoqaHanSansNeo-Light.woff) format('woff'),
+		url(../../font/hmui/SpoqaHanSansNeo-Light.otf) format('opentype');
 }
 
 @font-face {
 	font-family: 'Spoqa';
 	font-style: normal;
 	font-weight: 400;
-	src: url(/font/hmui/SpoqaHanSansNeo-Regular.woff2) format('woff2'),
-		url(/font/hmui/SpoqaHanSansNeo-Regular.woff) format('woff'),
-		url(/font/hmui/SpoqaHanSansNeo-Regular.otf) format('opentype');
+	src: url(../../font/hmui/SpoqaHanSansNeo-Regular.woff2) format('woff2'),
+		url(../../font/hmui/SpoqaHanSansNeo-Regular.woff) format('woff'),
+		url(../../font/hmui/SpoqaHanSansNeo-Regular.otf) format('opentype');
 }
 
 @font-face {
 	font-family: 'Spoqa';
 	font-style: normal;
 	font-weight: 700;
-	src: url(/font/hmui/SpoqaHanSansNeo-Bold.woff2) format('woff2'),
-		url(/font/hmui/SpoqaHanSansNeo-Bold.woff) format('woff'),
-		url(/font/hmui/SpoqaHanSansNeo-Bold.otf) format('opentype');
+	src: url(../../font/hmui/SpoqaHanSansNeo-Bold.woff2) format('woff2'),
+		url(../../font/hmui/SpoqaHanSansNeo-Bold.woff) format('woff'),
+		url(../../font/hmui/SpoqaHanSansNeo-Bold.otf) format('opentype');
 }
 
 /* [Reset] */
@@ -1873,6 +1873,40 @@ a.wrap_box > .txt:first-child {
 }
 .wrap_line_list [class^="ico_"] + .txt {
   padding-left: 1.0rem;
+}
+/* 바텀시트 링크 리스트 */
+.section_bottom_select {
+  padding: 0;
+}
+.section_bottom_select .wrap_link_list li {
+  margin-top: 0;
+}
+.section_bottom_select .wrap_link_list li a {
+  border-radius: 0;
+  padding: 1.6rem 2.4rem;
+}
+.section_bottom_select .wrap_link_list .txt {
+  display: inline-block;
+  color: #323E43;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.wrap_select_list li a {
+  display: block;
+  padding: 1.6rem 2.4rem;
+  -webkit-tap-highlight-color: transparent;
+}
+.wrap_select_list li a:active{
+  background: url('../../images/hmui/ico_chk_checked.png') no-repeat right 2.4rem top 50%;
+  background-size: 2.0rem;
+  
+
+}
+.wrap_select_list .txt {
+  display: inline-block;
+  color: #323E43;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
 }
 
 /* 박스형 리스트 */
