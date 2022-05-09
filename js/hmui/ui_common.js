@@ -325,14 +325,22 @@ var _agreeCheckAll = function() {
     var chkAllBtn = $this.find('.wrap_chk_all input[type="checkbox"]');
     var agreeChk = $this.find('.wrap_agree_list li > .box_chk input[type="checkbox"]');
     var subChk = $this.find('.wrap_agree_list .wrap_acco input[type="checkbox"]');
+    var requiredChk = $this.find('.wrap_agree_list li > .box_chk input[required]')
+    var submitBtn = $this.closest('.wrap_contents').find('.wrap_btn_full .btn_full_primary');
+
+    if ($this.parents('.wrap_layer').length) {
+      submitBtn = $this.closest('.wrap_layer').find('.wrap_btn_full .btn_full_primary');
+    }
 
     chkAllBtn.on('change', function(){
       if( $(this).is(':checked') == false ){
         agreeChk.prop('checked',false);
         subChk.prop('checked',false);
+        submitBtn.prop('disabled',true);
       }else{
         agreeChk.prop('checked',true);
         subChk.prop('checked',true);
+        submitBtn.prop('disabled',false);
       }   
     });
 
@@ -351,6 +359,14 @@ var _agreeCheckAll = function() {
       } else if ( sub.length && $(this).is(':checked') == false ){
         sub.prop('checked',false);
       }
+
+      // 필수체크 확인
+      if ( requiredChk.length !== $this.find('.wrap_agree_list li > .box_chk input[required]:checked').length ) {
+        submitBtn.prop('disabled',true);
+      } else {
+        submitBtn.prop('disabled',false);
+      }
+
     });
 
     subChk.on('change', function(){
