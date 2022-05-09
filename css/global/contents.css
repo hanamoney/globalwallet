@@ -69,14 +69,15 @@
   padding-top: 3.0rem;
 }
 .wrap_banner.usr_open_acc::after {
-  content: '이미지변경예정';
+  content: '';
   display: block;
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 12.9rem;
-  height: 6.8rem;
-  background: pink;
+  width: 10.2rem;
+  height: 7.3rem;
+  background: url('/images/hmui/img_bankbook.png') no-repeat 50%;
+  background-size: 100%;
 }
 .section_top_visual.join_card {
   padding-bottom: 29.8rem;
