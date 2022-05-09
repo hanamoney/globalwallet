@@ -19,11 +19,11 @@
   width: 2.8rem;
   height: 2.8rem;
 }
-.ico_chg_01 {background-image: url('/images/hmui/ico_chg_01.png');}
-.ico_chg_02 {background-image: url('/images/hmui/ico_chg_02.png');}
-.ico_chg_03 {background-image: url('/images/hmui/ico_chg_03.png');}
-.ico_chg_04 {background-image: url('/images/hmui/ico_chg_04.png');}
-.ico_chg_05 {background-image: url('/images/hmui/ico_chg_05.png');}
+.ico_chg_01 {background-image: url('../../images/hmui/ico_chg_01.png');}
+.ico_chg_02 {background-image: url('../../images/hmui/ico_chg_02.png');}
+.ico_chg_03 {background-image: url('../../images/hmui/ico_chg_03.png');}
+.ico_chg_04 {background-image: url('../../images/hmui/ico_chg_04.png');}
+.ico_chg_05 {background-image: url('../../images/hmui/ico_chg_05.png');}
 
 /* [CHG] - 외화충전 */
 .section_top_visual.chg_limit {
@@ -37,7 +37,7 @@
   display: block;
   width: 67.222vw;
   height: 80.556vw;
-  background: url('/images/global/visual_chg_103.png') no-repeat 50%;
+  background: url('../../images/global/visual_chg_103.png') no-repeat 50%;
   background-size: 100%;
   z-index: 1;
 }
@@ -96,7 +96,7 @@
   height: 21.2rem;
   margin-top: 1.0rem;
   border-radius: 0.8rem;
-  background: url('/images/global/img_card_travlog.png') no-repeat 50%;
+  background: url('../../images/global/img_card_travlog.png') no-repeat 50%;
   background-size: 100%;
   transform: rotate(-11.58deg);
   box-shadow: 6px 11px 14px rgba(0, 0, 0, 0.1);

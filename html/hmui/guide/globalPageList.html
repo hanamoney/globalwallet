@@ -7,7 +7,7 @@
   <meta name="format-detection" content="telephone=no">
   <title>Page list</title>
 
-  <link rel="stylesheet" href="/css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
   <style>
 #header {width:100vw; display: flex; flex-wrap: wrap; flex-direction: column; height: 5.0rem; background-color:#fff;}
 h1 {text-align: center; font-size:1.8rem; font-weight:400; line-height: 5.0rem;}
@@ -166,7 +166,7 @@ var menuList = [
 
 menuList.forEach(function(item, index){ 
   let tr;
-  let link = `<a href="/html/global/${item.code}/${item.pageid}.html" target="_blank" class="pageLink">${item.pageid}</a>`;
+  let link = `<a href="../../../html/global/${item.code}/${item.pageid}.html" target="_blank" class="pageLink">${item.pageid}</a>`;
   if (item.remarks === 'Native' || item.status === 'X') {
     link = `<span class="notLink">${item.pageid}</span>`;
   }

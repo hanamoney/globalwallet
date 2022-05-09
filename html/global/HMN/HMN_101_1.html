@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="format-detection" content="telephone=no">
-  <title>CHG_106</title>
+  <title>HMN_101_1</title>
 
-  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../..../../../css/hmui/swiper.css">
   <link rel="stylesheet" href="../../../css/hmui/animate.css">
   <link rel="stylesheet" href="../../../css/hmui/common.css">
   <link rel="stylesheet" href="../../../css/global/contents.css">
@@ -21,17 +21,15 @@
   <main id="root">
     <header id="header">
       <div class="inner_fixed">
-        <button class="btn_ico_prev"><span class="blind">이전</span></button>
-        <h1>외화 하나머니 충전</h1>
-        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+        <h1>하나머니</h1>
       </div>
     </header>
     <!-- // header -->
 
     <div id="contents" class="wrap_contents">
       <div class="contents">
-        <section data-roll="CHG">
-          
+        <section data-roll="TDL">
+
         </section>
         <!-- // section -->
       </div>
@@ -42,37 +40,49 @@
     <div id="popupId" class="wrap_layer">
       <div class="inner_layer">
         <div class="head_layer">
-          <h2 class="tit_layer">하나머니가 부족해요!</h2>
+          <h2 class="blind">돈통 더보기</h2>
         </div>
         <div class="content_layer">
-          <div class="wrap_box bg_bluegrey">
-            <ul class="list_info">
-              <li>
-                <span class="tit">필요한 하나머니</span>
-                <strong class="txt txt_point_1"><em class="txt_num">1,600,000</em>원</strong>
-              </li>
-              <li>
-                <span class="tit">보유한 하나머니</span>
-                <strong class="txt"><em class="txt_num">1,000,000</em>원</strong>
-              </li>
-            </ul>
-          </div>
-          <div class="wrap_tit">
-            <p class="txt">부족한 <strong class="txt_point_2"><em class="txt)txt_num">600,000</em></strong>원은<br/>
-              연결된 계좌에서 가져올까요?</p>
-              <div class="wrap_btn_right">
-                <a href="#none" class="btn_txt txt_point_1">금액을 다시 입력할래요</a>
+          <div class="section_form">
+            <div class="wrap_chk">
+              <div class="head_form">
+                <p class="tit_form">조회기간</p>
               </div>
+              <ul class="rdo_list">
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo1_1" name="rdo1" checked >
+                    <label for="rdo1_1">이번달</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo1_2" name="rdo1" >
+                    <label for="rdo1_2">1개월</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo1_3" name="rdo1" >
+                    <label for="rdo1_3">3개월</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="radio" id="rdo1_4" name="rdo1" >
+                    <label for="rdo1_4">직접입력</label>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
           </div>
         </div>
-        <div class="section_bottom_fixed">
-          <div class="wrap_btn_full">
-            <button type="button" class="btn_full_primary fnClosePop">네, 가져올게요</button>
-          </div>
-        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
       </div>
     </div>
     <!-- // popup -->
+
   </main>
   
   
