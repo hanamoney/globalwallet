@@ -246,3 +246,29 @@
   left: 1.2rem;
   bottom: 0;
 }
+
+/* [HMN] - 하나머니 메인 */
+.section_moneybag_all {
+  padding-top: 1.6rem;
+  height: 100%;
+}
+.section_moneybag_all.type_day {
+  background: linear-gradient(135deg, #5CE4C9 0%, #DD87E3 100%);
+}
+.wrap_moneybag_none::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 69.4vw;
+  background: url('../../images/global/bg_hmn_confetti.png') no-repeat 50% 0%;
+  background-size: 100% auto;
+}
+.wrap_moneybag_none  .wrap_box_blur {
+  z-index: 10;
+}
+.wrap_moneybag_none .wrap_box_opacity {
+  margin-top: 1.6rem;
+}

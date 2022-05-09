@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>HMN_102</title>
+
+  <link rel="stylesheet" href="../../..../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="HMN">
+
+        </section>
+        <!-- // section -->
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="popupId" class="wrap_layer type_full">
+      <div class="inner_layer">
+        <div class="content_layer type_full">
+          
+          <div class="section_moneybag_all type_day">
+            <!-- CASE #1,2 계좌연결 X -->
+            <div class="wrap_moneybag_none">
+              <a href="#none" class="wrap_box_blur" title="하나머니 조회">
+                <p class="txt_ccy">
+                  <span class="ico_hanamoney"></span>
+                  <span>하나머니</span>
+                  <span class="total_amount"><em class="txt_num">1,000,000</em>원</span>
+                </p>
+                <span class="ico_arr_link_s"></span>
+              </a>
+              <div class="wrap_box_opacity">
+                <div class="wrap_msg_info">
+                  <p class="tit">환전수수료<br>해외결제 수수료<br>해외 ATM 출금 수수료</p>
+                  <p class="txt">수수료 없는 세상을 경험하세요.</p>
+                  <div class="wrap_btn type_full">
+                    <button type="button" class="btn_box">계좌연결하고 수수료 0원 시작하기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // CASE #1,2 계좌연결 X -->
+
+            <!-- CASE #3 약관동의O 계좌연결O -->
+            <div class="wrap_moneybag_all">
+              <h2 class="blind">하나머니 전체보기</h2>
+              <ul>
+                <li>
+                  <a href="#none" class="txt_ccy">
+                    <span class="ico_hanamoney"></span>
+                    <span>하나머니</span>
+                    <span class="total_amount"><em class="txt_num">1,000,000</em>원</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#none" class="txt_ccy">
+                    <span class="ico_cur_usd"></span>
+                    <span>하나머니</span>
+                    <span class="total_amount"><em class="txt_num">1,000,000</em>원</span>
+                  </a>
+                </li>
+                <li>
+                  <p class="txt_ccy">
+                    <span class="ico_cur_jpy"></span>
+                    <span>하나머니</span>
+                    <span class="total_amount"><em class="txt_num">0</em>원</span>
+                  </p>
+                </li>
+                <li>
+                  <p class="txt_ccy">
+                    <span class="ico_cur_eur"></span>
+                    <span>하나머니</span>
+                    <span class="total_amount"><em class="txt_num">0</em>원</span>
+                  </p>
+                </li>
+                <li>
+                  <p class="txt_ccy">
+                    <span class="ico_cur_gbp"></span>
+                    <span>하나머니</span>
+                    <span class="total_amount"><em class="txt_num">0</em>원</span>
+                  </p>
+                </li>
+              </ul>
+              <p class="txt_center">이 외 지역에서는 달러머니를 이용하세요!</p>
+              <div class="visual_hmn_moneybag" aria-hidden="true">
+                <span class="img_rocket"></span>
+              </div>
+            </div>
+            <!-- // CASE #3 약관동의O 계좌연결O -->
+
+          </div>
+        </div>
+        <button class="btn_ico_close type_bottom fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // popup -->
+
+  </main>
+  
+  
+  <script>
+    // 팝업오픈 퍼블확인용 스크립트
+    $(function(){
+      fnOpenLayerPop('popupId');
+    });
+  </script>
+</body>
+</html>
