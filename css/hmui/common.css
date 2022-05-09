@@ -992,6 +992,11 @@ button.btn_secondery {
   line-height: 2.2rem;
   font-weight: 400;
 }
+.btn_box_m {
+  padding: 1.3rem 1.4rem 1.3rem;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+}
 .btn_box_big {
   padding: 1.5rem;
   font-size: 1.7rem;
@@ -1295,36 +1300,49 @@ a.wrap_box > .txt:first-child {
   color: #4F5D64;
   font-weight: 300;
 }
-.wrap_box_blur,
-.wrap_box_opacity {
+.wrap_box_blur {
+  overflow: hidden;
+  border-radius: 1.4rem;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+}
+.wrap_box_blur .inner_box {
+  overflow: hidden;
   position: relative;
   display: block;
   border-radius: 1.4rem;
-}
-.wrap_box_blur {
-  overflow: hidden;
   padding: 2.0rem;
-  border: 0.1rem solid rgba(255,255,255,0.3);
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
 }
-.wrap_box_blur::after {
+.wrap_box_blur .inner_box::before {
   content: '';
   display: block;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(139, 235, 229, 0.67) 100%);
+  opacity: 0.4;
+}
+.wrap_box_blur .inner_box::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 0.2rem);
+  height: calc(100% - 0.2rem);
   border-radius: 1.4rem;
-  background-color: rgba(255,255,255, 0.5);
-  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(139, 235, 229, 0.268) 100%), rgba(255, 255, 255, 0.5); */
+  border: 0.1rem solid rgba(255,255,255,0.3);
 }
 .wrap_box_opacity {
+  display: block;
+  border-radius: 1.4rem;
   background-color: rgba(255,255,255,0.7);
 }
 div[class^="wrap_box_"] .wrap_btn.type_full {
-
+  margin: 2.9rem -2.0rem -2.0rem;
+  padding: 0 0.8rem 0.8rem;
 }
 
 /* message */
@@ -1439,6 +1457,25 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .msg_noresult .wrap_btn {
   margin-top: 1.2rem;
+}
+.wrap_msg_info {
+  position: relative;
+  padding: 2.0rem;
+  text-align: center;
+}
+.wrap_msg_info .tit {
+  color: #252E33;
+  font-size: 2.4rem;
+  line-height: 3.0rem;
+  font-weight: 700;
+}
+.wrap_msg_info .txt {
+  color: #844883;
+  font-size: 16px;
+  line-height: 22px;
+}
+.wrap_msg_info .tit + .txt {
+  margin-top: 0.8rem;
 }
 
 /* Layer pop */
@@ -2750,9 +2787,8 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
   }
-  .wrap_box_blur::after {
-    background-color: rgba(255,255,255, 0.5);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+  .wrap_box_blur .inner_box {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
   }
 }

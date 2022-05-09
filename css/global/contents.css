@@ -249,11 +249,9 @@
 
 /* [HMN] - 하나머니 메인 */
 .section_moneybag_all {
-  padding-top: 1.6rem;
+  padding-top: calc(constant(safe-area-inset-top) + 1.6rem);
+  padding-top: calc(env(safe-area-inset-top) + 1.6rem);
   height: 100%;
-}
-.section_moneybag_all.type_day {
-  background: linear-gradient(135deg, #5CE4C9 0%, #DD87E3 100%);
 }
 .wrap_moneybag_none::before {
   content: '';
@@ -266,9 +264,56 @@
   background: url('../../images/global/bg_hmn_confetti.png') no-repeat 50% 0%;
   background-size: 100% auto;
 }
-.wrap_moneybag_none  .wrap_box_blur {
-  z-index: 10;
-}
 .wrap_moneybag_none .wrap_box_opacity {
   margin-top: 1.6rem;
+}
+.section_moneybag_all .txt_ccy {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 5.2rem;
+}
+.section_moneybag_all .txt_ccy [class^="ico_"] {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 4.0rem;
+  height: 4.0rem;
+  transform: translateY(-50%);
+}
+.wrap_moneybag_none .txt_ccy span:not(.total_amount) {
+  color: #4F5D64;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+}
+.wrap_moneybag_none .txt_ccy .total_amount {
+  color: #252E33;
+  font-size: 2.4rem;
+  line-height: 3.0rem;
+  font-weight: 700;
+}
+.wrap_moneybag_none .ico_arr_link_s {
+  position: absolute;
+  top: 50%;
+  right: 2.0rem;
+  transform: translateY(-50%);
+}
+.section_moneybag_all.type_day {
+  background: linear-gradient(135deg, #5CE4C9 0%, #DD87E3 100%);
+}
+.section_moneybag_all.type_day .wrap_msg_info .btn_primary {
+  background-color: #4F5D64;
+}
+.section_moneybag_all.type_night {
+  background: linear-gradient(165.96deg, #237373 0%, #5D3979 100%);
+}
+.section_moneybag_all.type_night .wrap_box_opacity {
+  background-color: rgba(0,0,0,0.15);
+}
+.section_moneybag_all.type_night .wrap_msg_info .tit {
+  color: #fff;
+}
+.section_moneybag_all.type_night .wrap_msg_info .txt {
+  color: rgba(255,255,255,0.8);
 }

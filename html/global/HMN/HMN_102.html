@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>HMN_102</title>
 
   <link rel="stylesheet" href="../../..../../../css/hmui/swiper.css">
@@ -38,23 +41,25 @@
       <div class="inner_layer">
         <div class="content_layer type_full">
           
-          <div class="section_moneybag_all type_day">
+          <div class="section_moneybag_all">
             <!-- CASE #1,2 계좌연결 X -->
             <div class="wrap_moneybag_none">
-              <a href="#none" class="wrap_box_blur" title="하나머니 조회">
-                <p class="txt_ccy">
-                  <span class="ico_hanamoney"></span>
-                  <span>하나머니</span>
-                  <span class="total_amount"><em class="txt_num">1,000,000</em>원</span>
-                </p>
-                <span class="ico_arr_link_s"></span>
-              </a>
+              <div class="wrap_box_blur">
+                <a href="#none" class="inner_box" title="하나머니 조회">
+                  <p class="txt_ccy">
+                    <span class="ico_hanamoney"></span>
+                    <span>하나머니</span>
+                    <span class="total_amount"><em class="txt_num">1,000,000</em>원</span>
+                  </p>
+                  <span class="ico_arr_link_s"></span>
+                </a>
+              </div>
               <div class="wrap_box_opacity">
                 <div class="wrap_msg_info">
                   <p class="tit">환전수수료<br>해외결제 수수료<br>해외 ATM 출금 수수료</p>
                   <p class="txt">수수료 없는 세상을 경험하세요.</p>
                   <div class="wrap_btn type_full">
-                    <button type="button" class="btn_box">계좌연결하고 수수료 0원 시작하기</button>
+                    <button type="button" class="btn_box_m btn_primary">계좌연결하고 수수료 0원 시작하기</button>
                   </div>
                 </div>
               </div>
@@ -119,8 +124,27 @@
   
   
   <script>
-    // 팝업오픈 퍼블확인용 스크립트
+    var xmlHttpRequest;
+    if ( window.XMLHttpRequest ) {
+      xmlHttpRequest = new XMLHttpRequest();
+    }
+    xmlHttpRequest.open('HEAD', window.location.href.toString(), false);
+    xmlHttpRequest.setRequestHeader("ContentType", "text/html");
+    xmlHttpRequest.send('');
+
+    var serverDate = xmlHttpRequest.getResponseHeader("Date");
+    var currentDate = new Date(serverDate);
+    var currentTime = currentDate.getHours();
+
     $(function(){
+      //  시각에 따른 클래스 설정
+      if ( currentTime > 5 && currentTime < 18 ) {
+        $('.section_moneybag_all').removeClass('type_night').addClass('type_day');
+      } else {
+        $('.section_moneybag_all').removeClass('type_day').addClass('type_night');
+      }
+
+      // 팝업 호출
       fnOpenLayerPop('popupId');
     });
   </script>
