@@ -1904,8 +1904,7 @@ a.wrap_box > .txt:first-child {
   padding: 1.6rem 2.4rem;
   -webkit-tap-highlight-color: transparent;
 }
-.wrap_select_list li a:active,
-.wrap_select_list li a:target {
+.wrap_select_list li a.active {
   background: url('../../images/hmui/ico_chk_checked.png') no-repeat right 2.4rem top 50%;
   background-size: 2.0rem;
 }

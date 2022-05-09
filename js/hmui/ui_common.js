@@ -24,6 +24,7 @@ var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage($('.fnFixedTop')); } // 스크롤에 따른 페이지 상단고정
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트 
+  if ( $('.wrap_select_list').length ) { _tabHighlightChk(); } // 링크 탭 하이라이트 체크타입
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
@@ -121,6 +122,21 @@ var _tabHightlight = function() {
     }
   });
   $(document).on('touchend', '.wrap_link_list a', function(e){
+    $(this).removeClass('active');
+  });
+};
+
+/**
+  * @name _tabHighlightChk()
+  * @description 링크 탭 하이라이트 체크타입
+  */
+var _tabHighlightChk = function() {
+  $(document).on('touchstart', '.wrap_select_list a', function(e){
+    if (!$(this).hasClass('wrap_box')) {
+      $(this).addClass('active');
+    }
+  });
+  $(document).on('touchend', '.wrap_select_list a', function(e){
     $(this).removeClass('active');
   });
 };
