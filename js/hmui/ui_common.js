@@ -28,6 +28,7 @@ var registUI = function(){
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
   if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
+  if ( $('.section_faq').length ) { _faqAcco(); } // 단일 아코디언
   if ( $('.section_terms .btn_acco').length ) { _agreeAccoBtn(); } // 약관동의 아코디언 기능
   if ( $('.section_terms .wrap_chk_all').length ) { _agreeCheckAll(); } // 약관전체동의
   if ( $('.wrap_tooltip').length ) { _tooltip(); } // 툴팁
@@ -281,6 +282,28 @@ var _simpleAcco = function() {
     } else {
       $(this).addClass('on');
       $accoCont.slideDown(300);
+    }
+  });
+}
+
+/**
+  * @name _faqAcco()
+  * @description // faq 아코디언
+  */
+var _faqAcco = function() {
+  var accoBtn = $('.section_faq').find('.btn_acco');
+  accoBtn.on('click',function(){
+    var $item = $(this).closest('li');
+    var $accoCont = $item.find('.wrap_acco');
+
+    if ($item.hasClass('on')) {
+      $item.removeClass('on');
+      $accoCont.slideUp(300);
+      $(this).attr('title', 'faq 상세 열기');
+    } else {
+      $item.addClass('on');
+      $accoCont.slideDown(300);
+      $(this).attr('title', 'faq 상세 닫기');
     }
   });
 }

@@ -163,7 +163,8 @@ body.overflow {
   left: 2.0rem;
 }
 #header .btn_ico_menu,
-#header .btn_ico_card_header {
+#header .btn_ico_card_header,
+#header .btn_ico_close {
   right: 2.2rem;
 }
 #header.type_white h1 {
@@ -237,9 +238,9 @@ section[data-roll] {
   padding: 3.0rem 2.4rem 0;  
 }
 .tit_page {
+  color: #252E33;
   font-size: 3.2rem;
   font-weight: 300;
-  color: #252E33;
 }
 .tit_page_bold {
   font-size: 3.2rem;
@@ -248,7 +249,18 @@ section[data-roll] {
 .tit_page em {
   font-size: inherit;
   line-height: inherit;
-  font-weight: bold;
+  font-weight: 700;
+}
+.tit_big {
+  color: #000;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+}
+.tit_big_bold {
+  color: #000;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+  font-weight: 700;
 }
 .tit_sub {
   font-size: 2.4rem;
@@ -264,6 +276,16 @@ section[data-roll] {
   color: #6E7D85;
   font-size: 1.6rem;
   line-height: 2.2rem;
+}
+.wrap_tit .tit {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  font-weight: 300;
+}
+.wrap_tit .tit em {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
 }
 .wrap_tit .txt {
   margin-top: 1.0rem;
@@ -1617,6 +1639,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   background-size: 1.4rem;
   transform: translateX(-50%);
 }
+.wrap_layer.type_center .inner_layer,
 .wrap_layer.type_alert .inner_layer {
   overflow: hidden;
   right: 2.4rem;
@@ -1653,10 +1676,25 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   -webkit-transform: translate3d(0px, 0%, 0px);
   transform: translate3d(0px, 0%, 0px);
 }
+.wrap_layer.type_center.show .inner_layer,
 .wrap_layer.type_alert.show .inner_layer {
   bottom: 50%;
   -webkit-transform: translate3d(0px, 50%, 0px);
   transform: translate3d(0px, 50%, 0px);
+}
+.wrap_layer.dim_gradient {
+  isolation: isolate;
+}
+.wrap_layer.dim_gradient .dim::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(110.55deg, #B6DD84 -37.18%, #2EBEC1 126.59%);
+  mix-blend-mode: multiply;
 }
 
 /* Alert */
@@ -1859,13 +1897,10 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 
 /* 폼 그룹 */
-.section_form {
-
-}
 .section_form .head_form {
   position: relative;
   padding-bottom: 0.8rem;
-}
+}å
 .section_form .tit_form {
   color: #252E33;
   font-size: 1.8rem;
@@ -1880,6 +1915,94 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .wrap_layer:not(.type_full) .section_form:first-child {
   padding-top: 0;
+}
+
+/*  FAQ */
+.section_faq {
+  padding: 5.0rem 0;
+  border-top: 0.8rem solid #F3F8FA;
+}
+.section_faq:last-child {
+  margin-bottom: -6.0rem;
+  padding-bottom: 6.0rem;
+}
+.section_faq [class^="tit_sub"] {
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+}
+.section_faq .tit_sub_center {
+  text-align: center;
+}
+.section_faq .wrap_faq_list {
+  margin-top: 2.0rem;
+  counter-reset: faq;
+}
+.section_faq .wrap_faq_list li {
+  margin-top: 0.3rem;
+  border-bottom: 0.1rem solid #E3EBEE;
+  counter-increment: faq;
+}
+.section_faq .wrap_faq_list li .btn_acco {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 2.0rem 5.4rem 2.0rem 5.8rem;
+}
+.section_faq .wrap_faq_list li .btn_acco span {
+  display: block;
+  color: #4F5D64;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  text-align: left;
+  word-break: keep-all;
+}
+.section_faq .wrap_faq_list li .btn_acco::before {
+  content: "Q" counter(faq);
+  display: inline-block;
+  position: absolute;
+  top: 2.0rem;
+  left: 2.4rem;
+  color: #4F5D64;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+}
+.section_faq .wrap_faq_list li .btn_acco::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 2.4rem;
+  width: 2.0rem;
+  height: 2.0rem;
+  background: url('../../images/hmui/ico_arr_down_2.png') no-repeat 50%;
+  background-size: 100%;
+  transform: translateY(-50%);
+}
+.section_faq .wrap_faq_list li .wrap_acco {
+  display: none;
+  padding: 2.4rem;
+  background-color: #F2F6F6;
+}
+.section_faq .wrap_faq_list li .box_ans {
+  color: #323E43;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  word-break: keep-all;
+}
+.section_faq .wrap_faq_list li.on {
+  border-color: #D8DFDF;
+}
+.section_faq .wrap_faq_list li.on .btn_acco span,
+.section_faq .wrap_faq_list li.on .btn_acco::before {
+  color: #13C9BE;
+}
+.section_faq .wrap_faq_list li.on .btn_acco::after {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.section_faq .wrap_btn_center {
+  margin-top: 3.0rem;
 }
 
 /* 환율정보 */
