@@ -2068,6 +2068,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 
 /* 바텀시트 메시지영역 */
 .wrap_bottom_msg {
+  position: relative;
   margin-bottom: -3.0rem;
   padding: 6.8rem 2.4rem 3.0rem;
 }

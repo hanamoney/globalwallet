@@ -429,3 +429,29 @@
   user-select: none;
   pointer-events: none;
 }
+.wrap_bottom_msg.hmn_201 {
+  background: url('../../images/global/bg_hmn_201.png') no-repeat 50%;
+  background-size: cover;
+}
+.wrap_bottom_msg.hmn_201::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 2.4rem;
+  bottom: 7.2rem;
+  width: 8.6rem;
+  height: 9.6rem;
+  background: url('../../images/hmui/img_zero_charge_2.png') no-repeat 50%;
+  background-size: 100%;
+}
+.wrap_bottom_msg.hmn_202::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 2.4rem;
+  bottom: 4.7rem;
+  width: 9.6rem;
+  height: 11.0rem;
+  background: url('../../images/hmui/img_zedo_charge_3.png') no-repeat 50%;
+  background-size: 100%;
+}
