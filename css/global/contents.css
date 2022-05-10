@@ -341,12 +341,33 @@
   background-size: 100%;
   transform: translateX(-50%);
 }
-.wrap_moneybag_all ul {
+.wrap_moneybag_all .list_moneybag {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+  transform: translateY(-70%);
+}
+.wrap_moneybag_all .list_moneybag::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 74%;
+  z-index: 10;
+  width: 24.72vh;
+  max-width: 17.8rem;
+  height: 70%;
+  max-height: 19.8rem;
+  background: url('../../images/global/visual_hmn_rocket.png') no-repeat 50%;
+  background-size: 100%;
+  user-select: none;
+  pointer-events: none;
+}
+.wrap_moneybag_all ul {
   display: table;
-  transform: translate(-50%, -60%);
+  margin: 0 auto;
 }
 .wrap_moneybag_all li {
   margin-top: 0.8rem;
@@ -405,19 +426,6 @@
   background: url('../../images/global/visual_hmn_102.png') no-repeat 50%;
   background-size: auto 100%;
   transform: translateX(-50%);
-  user-select: none;
-  pointer-events: none;
-}
-.wrap_moneybag_all .visual_hmn_moneybag .img_rocket {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  bottom: 18.61vh;
-  z-index: 10;
-  width: 24.72vh;
-  height: 27.5vh;
-  background: url('../../images/global/visual_hmn_rocket.png') no-repeat 50%;
-  background-size: 100%;
   user-select: none;
   pointer-events: none;
 }
