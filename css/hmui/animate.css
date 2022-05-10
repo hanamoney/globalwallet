@@ -19,6 +19,11 @@
     transform: translateY(0);
   }
 }
+@keyframes floating5 {
+  60% {
+    transform: translateY(0.5rem) rotate(-0.7deg);
+  }
+}
 
 @keyframes cloud1 {
   0% {
@@ -49,7 +54,6 @@
     transform: scale(1) translateY(0);
   }
 }
-
 @-webkit-keyframes mesh {
   0% {
     -webkit-transform-origin: 50% -25%;

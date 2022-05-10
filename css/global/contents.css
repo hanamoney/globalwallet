@@ -364,6 +364,9 @@
   background-size: 100%;
   user-select: none;
   pointer-events: none;
+  will-change: transform;
+  transform-origin: bottom right;
+  animation: floating5 6s 0.8s ease-in-out infinite;
 }
 .wrap_moneybag_all ul {
   display: table;
