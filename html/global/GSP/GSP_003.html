@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>GSP_003</title>
+
+  <link rel="stylesheet" href="../../..../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>하나머니로 환급</h1><!-- 2022.05.10 문구 변경 -->
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="GSP">
+
+        </section>
+        <!-- // section -->
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <!-- popup -->
+    <!-- case1 -->
+    <div id="popupId" class="wrap_layer type_center dim_gradient">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="tit"><em>잠깐! 외화 하나머니가<br>충분히 충전되어있나요?</em></p>
+          <p class="txt">만약 충분한 외화 하나머니가 있다면 ‘직구하러 가기’로 마음껏 혜택을 누려보세요.</p>
+          <div class="wrap_box bg_bluegrey">
+            <p>나의 외화 하나머니</p>
+            <ul class="list_info">
+              <li>
+                <span class="tit txt_ccy"><span class="ico_cur_usd"></span>미국 USD</span>
+                <strong class="txt txt_amount">$ <em class="txt_num">1,600</em></strong>
+              </li>
+              <li>
+                <span class="tit txt_ccy"><span class="ico_cur_eur"></span>유럽 EUR</span>
+                <strong class="txt txt_amount">€ <em class="txt_num">1,000</em></strong>
+              </li>
+              <li>
+                <span class="tit txt_ccy"><span class="ico_cur_jpy"></span>일본 JPY</span>
+                <strong class="txt txt_amount">¥ <em class="txt_num">1,000</em></strong>
+              </li>
+              <li>
+                <span class="tit txt_ccy"><span class="ico_cur_gbp"></span>영국 GBP</span>
+                <strong class="txt txt_amount empty">£ <em class="txt_num">0</em></strong><!-- 보유금액이 없는 경우 empty class추가 -->
+              </li>
+            </ul>
+          </div>
+          <div class="wrap_btn type_full">
+            <a href="#none" class="btn_box_big btn_secondery">충전부터 하기</a>
+            <a href="#none" class="btn_box_big btn_primary">직구하러 가기</a>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+
+    <!-- case2 -->
+    <div id="popupId2" class="wrap_layer type_center dim_gradient">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="tit">잠깐!<br><em>트래블로그 체크카드</em>가 있으면<br><em>더 강력한 직구혜택</em>을<br>누리실 수 있어요!</p>
+          <div class="wrap_btn type_full">
+            <a href="#none" class="btn_box_big btn_secondery">충전부터 하기</a>
+            <a href="#none" class="btn_box_big btn_primary">직구하러 가기</a>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // popup -->
+
+  </main>
+  
+  
+  <script>
+    // 팝업오픈 퍼블확인용 스크립트
+    $(function(){
+      fnOpenLayerPop('popupId');
+    });
+  </script>
+</body>
+</html>
