@@ -76,7 +76,7 @@
   bottom: 0;
   width: 10.2rem;
   height: 7.3rem;
-  background: url('/images/hmui/img_bankbook.png') no-repeat 50%;
+  background: url('../../images/hmui/img_bankbook.png') no-repeat 50%;
   background-size: 100%;
 }
 .section_top_visual.join_card {
