@@ -441,6 +441,11 @@ section[data-roll] {
   background-image: url('../../images/hmui/btn_filter.png');
   background-size: 1.8rem auto;
 }
+.btn_ico_more {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url('../../images/hmui/btn_more.png');
+}
 .btn_info .ico_info {
   margin-left: 0.4rem;
 }
@@ -1338,7 +1343,7 @@ a.wrap_box > .txt:first-child {
 .wrap_box_opacity {
   display: block;
   border-radius: 1.4rem;
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255,0.6);
 }
 div[class^="wrap_box_"] .wrap_btn.type_full {
   margin: 2.9rem -2.0rem -2.0rem;
@@ -2610,6 +2615,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   vertical-align: top;
 }
 .section_moneybag .box_moneybag {
+  position: relative;
   overflow: hidden;
   margin: 2.1rem 2.4rem 0;
   padding: 1.6rem 2.0rem 0;
@@ -2687,6 +2693,11 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   background-color: transparent;
   color: #13C9BE;
   font-weight: 700;
+}
+.section_moneybag .box_moneybag .btn_ico_more {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.2rem;
 }
 .section_moneybag .swiper-slide {
   padding-bottom: 5.2rem;
