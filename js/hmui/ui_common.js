@@ -463,15 +463,16 @@ var _tooltip = function() {
   * @description // 레이어팝업
   */
 var _layerPop = function() {
+  var $focusBtn;
   $('.fnOpenPop').on('click', function(){
     var popId = $(this).attr('data-name');
     fnOpenLayerPop(popId);
+    $focusBtn = $(this);
   });
 
   $('.fnClosePop').on('click', function(){
     var popId = $(this).closest('.wrap_layer').attr('id');
-    console.log(popId);
-    fnCloseLayerPop(popId);
+    fnCloseLayerPop(popId, $focusBtn);
   });
 };
 
