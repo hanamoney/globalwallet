@@ -141,7 +141,7 @@ var _iOSInpFixdPos = function() {
     var el = e.target.classList;
     if (inp.is(':focus') && !el.contains('inp') && !el.contains('btn_ico_clear') ) {
       inp.blur();
-      console.log(el);1
+      console.log(el);
     }
   })
 
