@@ -59,7 +59,9 @@
                     <input type="checkbox" id="chk1_1" name="chk1" required/>
                     <label for="chk1_1"></label>
                   </span>
-                  <button type="button" class="btn_txt label">[필수] 트래블로그 서비스 이용약관</button>
+                  <button type="button" class="btn_txt label fnOpenPop" data-name="popupfullId">[필수] 트래블로그 서비스 이용약관</button>
+                  <!-- fnOpenPop 클래스를 가지고 있는 버튼에 data-name 값 (오픈할 팝업 id값과 매칭) 체크하여 해당 팝업 오픈 
+                      또는 fnOpenPop 공통클래스 미사용시 해당버튼 클릭시 팝업 오픈 함수호출 fnOpenLayerPop('popupfullId'); -->
                 </p>
               </li>
               <li>
@@ -122,6 +124,22 @@
       </div>
     </div>
     <!-- // popup -->
+
+    <!-- 약관상세 팝업 -->
+    <div id="popupfullId" class="wrap_layer type_full">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">[필수] 트래블로그 서비스 이용약관</h2>
+        </div>
+        <div class="content_layer">
+          <div class="section_terms_detail">
+            약관내용
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // 약관상세 팝업 -->
   </main>
   
   

@@ -489,7 +489,7 @@ var fnOpenLayerPop = function(popID) {
     $el.css('z-index', zIndex);
   }
 
-  if ($('.section_bottom_fixed').length) {
+  if ($el.find('.section_bottom_fixed').length) {
     $el.addClass('hasFixedBtn');
   }
 

@@ -1566,10 +1566,10 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   overflow-x: hidden;
   overflow-y: auto;
   padding-bottom: 3.0rem;
-  max-height: calc(54rem - 5.4rem);
+  max-height: calc(50rem - 5.4rem);
 }
 .wrap_layer:not(.type_full).hasFixedBtn .content_layer {
-  max-height: calc(54rem - 5.4rem - 6.0rem);
+  max-height: calc(50rem - 5.4rem - 6.0rem);
 }
 .wrap_layer .btn_ico_close {
   position: absolute;
@@ -1685,7 +1685,10 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .wrap_layer.dim_gradient {
   isolation: isolate;
 }
-.wrap_layer.dim_gradient .dim::after {
+.wrap_layer.dim_gradient .dim {
+  opacity: 0.55;
+}
+.wrap_layer.dim_gradient::before {
   content: '';
   display: block;
   position: absolute;
@@ -1693,8 +1696,8 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(110.55deg, #B6DD84 -37.18%, #2EBEC1 126.59%);
-  mix-blend-mode: multiply;
+  background: linear-gradient(105.7deg, #45B155 -4.4%, #076157 104.12%);
+  opacity: 0.55;
 }
 
 /* Alert */
@@ -1894,6 +1897,14 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .section_terms .wrap_acco .txt + .chk_list {
   margin-top: 0.3rem;
+}
+
+/* 약관상세 */
+.section_terms_detail {
+  padding-top: 3.0rem;
+  font-size: 16px;
+  line-height: 22px;
+  color: #252E33;
 }
 
 /* 폼 그룹 */
@@ -2848,6 +2859,11 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   width: 2.4rem;
   background: #4F5D64;
   opacity: 1;
+}
+
+/* loop scroll contents */
+.wrap_loop_scrl {
+
 }
 
 /* Space */
