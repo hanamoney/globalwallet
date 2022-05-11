@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>VDB_003</title>
+
+  <link rel="stylesheet" href="../../..../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>혜택마스터</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="VDB">
+
+        </section>
+        <!-- // section -->
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="popupId" class="wrap_layer type_center dim_gradient">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="tit">혜택마스터들은<br><em>어떤 서비스를 쓸까요?</em></p>
+          <div class="list_benefit_tower">
+            <ul>
+              <li>+<em class="txt_num">13,500</em></li>
+              <li>+<em class="txt_num">2,500</em></li>
+              <li>+<em class="txt_num">1,200</em></li>
+              <li>+<em class="txt_num">500</em></li>
+              <li>+<em class="txt_num">150</em></li>
+            </ul>
+          </div>
+          <p class="txt">혜택마스터 TOP3가 이용하는<br>하나머니 알짜배기 서비스를 알아보세요!</p>
+          <div class="wrap_btn type_full">
+            <button type="button" class="btn_box_big btn_primary fnClosePop">혜택 마스터 엿보기</button>
+          </div>
+        </div>
+        <div class="wrap_fixed_outside">
+          <span class="chk type_sub">
+            <input type="checkbox" id="chk1" name="chk1"/>
+            <label for="chk1">
+              <span class="label">다시 보지 않기</span>
+            </label>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- // popup -->
+
+  </main>
+  
+  
+  <script>
+    // 팝업오픈 퍼블확인용 스크립트
+    $(function(){
+      fnOpenLayerPop('popupId');
+    });
+  </script>
+</body>
+</html>
