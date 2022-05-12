@@ -369,6 +369,10 @@ section[data-roll] {
 }
 .tit_section_2 {
   font-size: 2.4rem;
+  margin-bottom: 2.0rem;
+}
+.wrap_tit.type_center .tit {
+  text-align: center;
 }
 
 /* Text */
@@ -469,6 +473,22 @@ section[data-roll] {
   background-repeat: no-repeat;
   background-size: 3.4rem auto;
   background-position: 50%;
+}
+.wrap_hashtag.type_center {
+  text-align: center;
+}
+.wrap_hashtag .txt_hashtag {
+  display: inline-block;
+  color: #000;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+  word-break: keep-all;
+}
+.wrap_hashtag .txt_hashtag > span {
+  border-bottom: 0.1rem solid #000;
+}
+.wrap_hashtag .txt_hashtag > span em {
+  font-weight: 700;
 }
 
 /* Align */
@@ -589,6 +609,11 @@ section[data-roll] {
   width: 1.2rem;
   height: 1.2rem;
   background-image: url('../../images/hmui/ico_info.png');
+}
+.ico_info_2 {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-image: url('../../images/hmui/ico_info_2.png');
 }
 [class^="ico_cur_"] {
   width: 3.0rem;
@@ -1296,6 +1321,58 @@ button.btn_secondery {
 .section_bottom_fixed > .wrap_bubble .tooltip_bubble .bubble_caret {
 
 }
+/* dropdown */
+.wrap_dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 10 !important;
+}
+.btn_dropdown {
+  position: relative;
+  z-index: 11;
+  padding-right: 4.0rem;
+  border-bottom: 0.2rem solid #252E33;
+  font-size: 2.0rem;
+  line-height: 3.0rem;
+  font-weight: 700;
+}
+.btn_dropdown span {
+  display: block;
+}
+.btn_dropdown::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.3rem;
+  right: 0;
+  width: 2.0rem;
+  height: 2.0rem;
+  background: url('../../images/hmui/ico_arr_down.png') no-repeat 50%;
+  background-size: 100%;
+}
+.list_dropdown {
+  display: none;
+  position: absolute;
+  top: -1.6rem;
+  left: 50%;
+  z-index: 10;
+  width: calc(100% + 5.6rem);
+  padding: 5.8rem 0 1.6rem;
+  border-radius: 1.4rem;
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateX(-50%);
+  isolation: isolate;
+}
+.list_dropdown li + li {
+  margin-top: 0.6rem;
+}
+.list_dropdown button {
+  display: block;
+  width: 100%;
+  height: 3.0rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
 
 /* Table */
 
@@ -1437,6 +1514,9 @@ button.btn_secondery {
   border-radius: 1.0rem;
   background: #F3F8FA;
 }
+.wrap_box.bg_white {
+  background-color: #fff;
+}
 .wrap_box.no_arr {
   padding-right: 2.0rem;
 }
@@ -1550,6 +1630,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   padding: 0 0.8rem 0.8rem;
 }
 .box_card_type {
+  position: relative;
   padding: 2.4rem;
   border-radius: 2.0rem;
   background-color: #fff;
@@ -1563,6 +1644,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 [class^="tit_section"] + .box_card_type {
   margin-top: 2.0rem;
+}
+[class^="tit_section"] + .wrap_hashtag {
+  margin-top: 1.4rem;
 }
 
 /* message */
@@ -2045,6 +2129,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .section_top_visual .wrap_btn.type_full {
   padding: 3.0rem 2.4rem;
 }
+.section_top_visual .wrap_dropdown {
+  margin-top: 3rem;
+}
 
 /* 약관동의 */
 .section_terms {
@@ -2413,44 +2500,6 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   line-height: 1.8rem;
 }
 
-/* 바텀시트 메시지영역 */
-.wrap_bottom_msg {
-  position: relative;
-  margin-bottom: -3.0rem;
-  padding: 6.8rem 2.4rem 3.0rem;
-}
-.wrap_bottom_msg .txt_sub {
-  margin-top: 0;
-  color: #4F5D64;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-}
-.wrap_bottom_msg .tit_big {
-  margin-top: 1.6rem;
-  color: #323E43;
-  font-size: 3.2rem;
-  line-height: 4.2rem;
-  font-weight: 700;
-}
-.wrap_bottom_msg .tit_big + .tit {
-  font-size: 2.0rem;
-  line-height: 2.6rem;
-}
-.wrap_bottom_msg .tit {
-  margin-top: 0.4rem;
-  margin-bottom: 2.4rem;
-  color: #323E43;
-  font-size: 2.4rem;
-  line-height: 3.0rem;
-  font-weight: 700;
-}
-.wrap_bottom_msg .txt_center {
-  color: #849594;
-  font-size: 1.5rem;
-  line-height: 2.0rem;
-  text-align: center;
-}
-
 /* 혜택 리스트 */
 .wrap_item_benefit {
   padding: 3.0rem 2.4rem 4.0rem;
@@ -2568,6 +2617,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
+.list_benefit.box_white .box {
+  background-color: #fff;
+}
 .wrap_item_benefit li,
 .wrap_item_benefit .tit_wrap {
   will-change: transform, opacity;
@@ -2587,7 +2639,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   font-size: 1.4rem;
   line-height: 2.0rem;
 }
-.wrap_item_benefit .txt_guide .ico_info {
+.wrap_item_benefit .txt_guide [class^="ico_info"] {
   position: absolute;
   left: 0;
   top: 0.4rem;
@@ -2690,20 +2742,51 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   font-size: 1.4rem;
   line-height: 2.0rem;
 }
+.wrap_banner .txt_sub_2 {
+  margin-top: 0;
+  color: #4F5D64;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
 .wrap_banner .txt_sub:first-child {
   margin-top: 0;
 }
 .wrap_banner .txt_sub + .tit {
   margin-top: 0.8rem;
 }
+.wrap_banner .txt_center {
+  color: #849594;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  text-align: center;
+}
 .wrap_banner .tit {
   font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 700;
 }
+.wrap_banner .tit_big {
+  margin-top: 1.6rem;
+  color: #323E43;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+  font-weight: 700;
+}
+.wrap_banner .tit_2 {
+  margin-top: 0.4rem;
+  margin-bottom: 2.4rem;
+  color: #323E43;
+  font-size: 2.4rem;
+  line-height: 3.0rem;
+  font-weight: 700;
+}
 .wrap_banner .btn_txt {
   margin-top: 0.8rem;
   font-size: 1.5rem;
+}
+.wrap_banner .tit_big + .tit_2 {
+  font-size: 2.0rem;
+  line-height: 2.6rem;
 }
 .wrap_banner_box {
   
@@ -3215,9 +3298,15 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   width: calc(100vw - 4.8rem);
   margin: 2.4rem auto 0;
 }
+.wrap_layer .content_layer .wrap_banner {
+  position: relative;
+  margin-bottom: -3.0rem;
+  padding: 6.8rem 2.4rem 3.0rem;
+}
 
 /* 캐릭터 이미지 */
-[class^="img_character"] {
+[class^="img_character"],
+[class^="img_"]  {
   display: inline-block;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -3231,10 +3320,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   background-size: 100%;
 }
 [class^="img_cloud"] {
-  display: inline-block;
   position: absolute;
-  background-repeat: no-repeat;
-  background-size: 100%;
 }
 .img_cloud1 {
   bottom: 17.6vw;
@@ -3261,18 +3347,14 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   background-image: url('../../images/hmui/character/img_character_luggage.png');
 }
 .img_shoppingbag {
-  display: inline-block;
   width: 6.6rem;
   height: 13.5rem;
-  background: url('../../images/hmui/character/visual_shoppingbag.png') no-repeat 50%;
-  background-size: 100%;
+  background-image: url('../../images/hmui/character/visual_shoppingbag.png');
 }
 .img_mobile_shop {
-  display: inline-block;
   width: 13.4rem;
   height: 13.8rem;
-  background: url('../../images/hmui/character/visual_mobile_shop.png') no-repeat 50%;
-  background-size: 100%;
+  background-image: url('../../images/hmui/character/visual_mobile_shop.png');
 }
 .img_character_hahamom {
   width: 14.3rem;
@@ -3285,11 +3367,34 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   background-image: url('../../images/hmui/character/img_character_walk.png');
 }
 .img_drone_box {
-  display: inline-block;
   width: 11.1rem;
   height: 10.0rem;
-  background: url('../../images/hmui/character/visual_drone_box.png') no-repeat 50%;
-  background-size: 100%;
+  background-image: url('../../images/hmui/character/visual_drone_box.png');
+}
+.img_character_bebe_dance {
+  width: 7.1rem;
+  height: 10.8rem;
+  background-image: url('../../images/hmui/character/img_character_bebe_dance.png');
+}
+.img_character_feed {
+  width: 10rem;
+  height: 14.9rem;
+  background-image: url('../../images/hmui/character/img_character_feed.png');
+}
+.img_like {
+  width: 4.7rem;
+  height: 4.0rem;
+  background-image: url('../../images/hmui/character/visual_like.png');
+}
+.img_character_dance {
+  width: calc(100vw / 3);
+  height: 50vw;
+  background-image: url('../../images/hmui/character/img_character_dance.png');
+}
+.img_character_cry {
+  width: 20rem;
+  height: 18rem;
+  background-image: url('../../images/hmui/character/img_character_cry.png');
 }
 
 @supports ((-webkit-backdrop-filter:none) or (backdrop-filter:none)) {
@@ -3306,5 +3411,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   .wrap_box_blur .inner_box {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
+  }
+  .list_dropdown {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
   }
 }

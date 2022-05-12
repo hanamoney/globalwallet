@@ -34,11 +34,13 @@
           <div class="section_top_visual my_benefit">
             <div class="wrap_dropdown">
               <button type="button" class="btn_dropdown"><span>4월</span></button>
-              <ul class="list_dropdown">
-                <li><button type="button"><span>3월</span></button></li>
-                <li><button type="button"><span>2월</span></button></li>
-                <li><button type="button"><span>1월</span></button></li>
-              </ul>
+              <div class="list_dropdown">
+                <ul>
+                  <li><button type="button"><span>3월</span></button></li>
+                  <li><button type="button"><span>2월</span></button></li>
+                  <li><button type="button"><span>1월</span></button></li>
+                </ul>
+              </div>
             </div>
 
             <!-- CASE “모은 돈과 아낀 돈” 모두 있는 경우 -->
@@ -93,9 +95,9 @@
           <div class="section_cont vdb_accum">
             <!-- CASE #1 받은 돈이 있는 경우 노출 -->
             <div>
-              <h3 class="tit_section_2"><em>‘그 외 적립’</em>으로<br>가장 많이 모았어요!</h3>
+              <h3 class="tit_section_2"><em>‘포인트전환 적립’</em>으로<br>가장 많이 모았어요!</h3>
+              <span class="img_character_bebe_dance"></span>
               <div class="box_card_type">
-                <span class="img_character_bebe_dance"></span>
                 <ul class="wrap_vdb_list">
                   <li>
                     <p class="tit_counter"><span class="num">1</span><span>그 외 적립</span></p>
@@ -107,10 +109,10 @@
                     <div class="chart_coin"></div>
                     <p class="txt_amount"><em class="txt_num">70,000</em>원</p>
                   </li>
-                  <li>
-                    <p class="tit_counter"><span class="num">3</span><span>무료적립</span></p>
+                  <!-- 항목이 없는 경우 empty 클래스 추가-->
+                  <li class="empty">
+                    <p class="tit_counter"><span class="num">3</span><span></span></p>
                     <div class="chart_coin"></div>
-                    <p class="txt_amount"><em class="txt_num">10,000</em>원</p>
                   </li>
                 </ul>
               </div>
@@ -118,7 +120,7 @@
 
             <!-- CASE #2 받은 돈이 없는 경우 노출 -->
             <div>
-              <h3 class="tit_section_2"><em>‘그 외 적립’</em>으로<br>가장 많이 모았어요!</h3>
+              <h3 class="tit_section_2">하나머니에서는 <em>다양한</em><br><em>무료적립</em>을 받을 수 있어요!</h3>
               <div class="wrap_hashtag">
                 <span class="txt_hashtag">#<span>포인트전환 적립</span></span>
                 <span class="txt_hashtag">#<span>선물하기 적립</span></span>
@@ -137,7 +139,7 @@
             <div>
               <h3 class="tit_section_2">
                 <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip">
-                  <em>‘그 외 적립’</em>으로<br>가장 많이 모았어요!
+                  <em>‘해외 ATM 출금’</em>에서<br>가장  많이 아꼈어요!
                   <span class="ico_tooltip"><span class="blind">툴팁</span>
                 </button>
               </h3>
@@ -166,7 +168,7 @@
             <!-- CASE #4 아낀 돈이 없는 경우 노출 -->
             <div class="wrap_item_benefit">
               <h3 class="tit_section_2"><em>트래블로그 서비스</em>를 이용하면<br>이렇게 <em>아낄 수 있어요!</em></h3>
-              <ul class="list_benefit type_ico">
+              <ul class="list_benefit type_ico box_white">
                 <li>
                   <span class="box"><span class="emoji_cashback"></span></span>
                   <div class="item_desc">
@@ -196,7 +198,7 @@
                   </div>
                 </li>
               </ul>
-              <p class="txt_guide"><span class="ico_info"></span>2022년04월28일(576회차) USD 기준</p>
+              <p class="txt_guide"><span class="ico_info_2"></span>2022년04월28일(576회차) USD 기준</p>
               <div class="wrap_btn type_full">
                 <a href="#none" class="btn_box_m type_line rounded">트래블로그 혜택 자세히보기</a>
               </div>
@@ -210,14 +212,15 @@
             </div>
           </div>
 
-          <div class="section_cont">
+          <div class="section_cont vdb_recomm">
             <h3 class="tit_section_center_2">친구 추천하고<br><em><span class="txt_num">2,000</span>하나머니</em> 받으세요!</h3>
             <div class="visual_vdb_recomm">
-              <p class="img_vdb_recomm"></p>
+              <p class="img_character_feed"></p>
+              <span class="img_like"></span>
             </div>
-            <div class="wrap_hashtag">
+            <div class="wrap_hashtag type_center">
               <span class="txt_hashtag">#<span><em>생각보다 쓸데 많음</em></span></span>
-              <span class="txt_hashtag">#<span><em>출금</em>도 됨</span></span>
+              <span class="txt_hashtag">#<span><em>출금</em>도 됨</span></span><br>
               <span class="txt_hashtag">#<span><em>무한으로 친구추천가능</em></span></span>
               <span class="txt_hashtag">#<span>언제까지받을것인가</span></span>
             </div>

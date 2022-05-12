@@ -436,11 +436,11 @@
   user-select: none;
   pointer-events: none;
 }
-.wrap_bottom_msg.hmn_201 {
+.wrap_banner.hmn_201 {
   background: url('../../images/global/bg_hmn_201.png') no-repeat 50%;
   background-size: cover;
 }
-.wrap_bottom_msg.hmn_201::after {
+.wrap_banner.hmn_201::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -451,7 +451,7 @@
   background: url('../../images/hmui/img_zero_charge_2.png') no-repeat 50%;
   background-size: 100%;
 }
-.wrap_bottom_msg.hmn_202::after {
+.wrap_banner.hmn_202::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -595,3 +595,355 @@
 }
 
 /* [VDB] - 혜택 */
+/* 내가 받은 혜택 */
+.section_top_visual.my_benefit {
+  background: linear-gradient(157.38deg, #FFFAE0 -12.44%, #EBD6E6 103.69%, #F7FFDA 103.7%);
+  text-align: center;
+}
+.wrap_vdb_list {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap_vdb_list li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: calc((100% - 7.8vw)/3);
+  height: 22.1rem;
+  text-align: center;
+}
+.wrap_vdb_list .tit_counter {
+  margin-bottom: auto;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+.wrap_vdb_list .tit_counter .num {
+  display: inline-block;
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 1.4rem;
+  background: linear-gradient(110.55deg, #B6DD84 -37.18%, #2EBEC1 126.59%);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 3.3rem;
+  font-weight: 700;
+}
+.wrap_vdb_list .tit_counter span:not(.num) {
+  display: block;
+  max-width: 5.4rem;
+  margin: 1rem auto 0;
+  color: #13C9BE;
+  word-break: keep-all;
+}
+.wrap_vdb_list .txt_amount {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.chart_coin {
+  position: relative;
+  height: 10rem;
+}
+.chart_coin::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 5.7rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: #E1E7EA;
+  transform: translateX(-50%);
+}
+.wrap_vdb_list li.empty .chart_coin {
+  margin-bottom: 3.2rem;
+}
+.wrap_vdb_list li.empty::before,
+.wrap_vdb_list li.empty::after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 4.9rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  transform: translateX(-50%);
+}
+.wrap_vdb_list li.empty::before {
+  content: '';
+  background: url('../../images/global/bg_vdb_empty.png') no-repeat 50%;
+  background-size: 100%;
+}
+.wrap_vdb_list li.empty::after {
+  content: '텅';
+  color: #4F5D64;
+  font-size: 1.5rem;
+  line-height: 4.8rem;
+  font-weight: 700;
+  
+}
+.section_cont.vdb_saved .wrap_vdb_list .tit_counter .num {
+  background: linear-gradient(121.86deg, #FADA9D -17.27%, #D05BF9 143.28%);
+}
+.section_cont.vdb_saved .wrap_vdb_list .tit_counter span:not(.num) {
+  color: #E178AD;
+}
+.section_cont.vdb_accum {
+  position: relative;
+  padding-top: 6.5rem;
+  background: linear-gradient(157.38deg, #BBDDF2 -12.44%, #C3E1E2 48.65%, #EEF6EB 103.7%);
+}
+.section_cont.vdb_accum .img_character_bebe_dance {
+  position: absolute;
+  top: 5.8rem;
+  right: 14.4vw;
+  width: 19.7vw;
+  height: 30vw;
+}
+.section_cont.vdb_accum .wrap_hashtag + .img_character_bebe_dance {
+  position: static;
+  display: block;
+  margin: 2.0rem auto 0;
+}
+.section_cont.vdb_accum .wrap_btn.type_full {
+  margin-top: -2.1rem;
+}
+.section_cont.vdb_accum .box_card_type {
+  margin-top: 2.0rem;
+  z-index: 1;
+}
+.section_cont.vdb_saved {
+  background: linear-gradient(161.78deg, #F6F2EB -7.73%, #D7D8F3 63.83%, rgba(254, 197, 238, 0.81) 122.63%);
+}
+.section_cont.vdb_saved .tit_section_2 .btn_tooltip {
+  font-size: inherit;
+  text-align: left;
+}
+.section_cont.vdb_saved .wrap_item_benefit {
+  background-color: transparent;
+}
+.section_cont.vdb_recomm {
+  background: linear-gradient(164.5deg, rgba(245, 224, 212, 0.81) -4.92%, #D2FFF4 110.34%);
+}
+.visual_vdb_recomm {
+  position: relative;
+  margin: 1.2rem 0 2.4rem;
+  background: url('../../images/global/bg_vdb_recomm.png') no-repeat 50%;
+  background-size: 14.0rem auto;
+  text-align: center;
+}
+.visual_vdb_recomm::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 1;
+  width: 67px;
+  height: 69px;
+  box-shadow: 0px 10px 16px rgba(179, 211, 200, 0.6);
+  transform: translateX(-50%);
+}
+.visual_vdb_recomm .img_character_feed {
+  position: relative;
+  z-index: 2;
+  vertical-align: top;
+}
+.visual_vdb_recomm .img_like {
+  position: absolute;
+  top: 2.0rem;
+  right: 18.8vw;
+  z-index: 3;
+}
+@media screen and (max-width: 356px) {
+  .section_cont.vdb_accum .img_character_bebe_dance {
+    top: 7.0rem;
+    right: 10.7vw;
+    width: 18vw;
+  }
+}
+/* VDB_002 혜택마스터 */
+.section_top_visual.vdb_master {
+  min-height: 100vh;
+  padding: 5.0rem 2.4rem;
+  background: linear-gradient(180deg, #F7FAFA 0%, #D6EFE9 100%);
+  text-align: center;
+}
+.visual_vdb_total {
+  display: flex;
+  justify-content: center;
+  /* padding: 0 1.2rem; */
+}
+.visual_vdb_total .img_character_dance {
+  z-index: 1;
+  margin-top: 4.8rem;
+}
+.visual_vdb_total .bubble {
+  position: relative;
+  flex: 1;
+  display: inline-block;
+  min-width: 35.5vw;
+  padding: 13vw 0 11.6vw;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left top;
+}
+.visual_vdb_total .bubble p {
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.visual_vdb_total .bubble .total_amount {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.visual_vdb_total .bubble.accum {
+  background-image: url('../../images/global/bg_bubble.png');
+  transform: translateX(1.6rem);
+}
+.visual_vdb_total .bubble.saved {
+  background-image: url('../../images/global/bg_bubble_2.png');
+  transform: translateX(-1.6rem);
+}
+.visual_vdb_total .bubble.accum::before,
+.visual_vdb_total .bubble.accum::after,
+.visual_vdb_total .bubble.saved::before,
+.visual_vdb_total .bubble.saved::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100%;
+}
+.visual_vdb_total .bubble.accum::after {
+  right: 0;
+  bottom: 0;
+  width: 38.8vw;
+  height: 25.8vw;
+  background-image: url('../../images/hmui/character/visual_moneybag.png');
+}
+.visual_vdb_total .bubble.saved::after {
+  bottom: 0;
+  width: 22.2vw;
+  height: 22.2vw;
+  background-image: url('../../images/hmui/character/visual_bag.png');
+}
+.my_benefit_info .bubble.accum .total_amount {
+  color: #13C9BE;
+}
+.my_benefit_info .bubble.saved .total_amount {
+  color: #E178AD;
+}
+.my_benefit_info.no_accum .bubble.accum,
+.my_benefit_info.no_saved .bubble.saved {
+  display: none;
+}
+.my_benefit_info.no_accum .img_character_dance,
+.my_benefit_info.no_saved .img_character_dance {
+  width: 38.8vw;
+  height: 58.3vw;
+}
+.list_masters_benefit {
+  display: flex;
+  width: 100%;
+  counter-reset: masterslist;
+}
+.list_masters_benefit li {
+  position: relative;
+  width: calc((100% - 1.6rem)/3);
+  padding-bottom: 3.0rem;
+  counter-increment: masterslist;
+}
+.list_masters_benefit li + li {
+  margin-left: 0.8rem;
+}
+.list_masters_benefit li a {
+  display: block;
+  height: 18.8rem;
+  padding: 2.0rem 1.4rem 0;
+  border-radius: 1.4rem;
+}
+.list_masters_benefit li a::before {
+  content: counter(masterslist);
+  display: block;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+  font-weight: 700;
+}
+.list_masters_benefit li a span {
+  display: block;
+  padding-top: 0.4rem;
+  color: #000;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  word-break: keep-all;
+}
+.list_masters_benefit li a img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 25vw;
+  height: 25vw;
+  transform: translateX(-50%);
+}
+.category_card {
+  background-color: #FBFF78;
+}
+.category_evt {
+  background-color: #8BFFDC;
+}
+.category_free {
+  background-color: #B9ADFF;
+}
+.category_free span {
+  max-width: 3.6rem;
+}
+.category_point {
+  background-color: #FFE6B5;
+}
+.category_gift {
+  background-color: #FFB8B8;
+}
+.category_exch {
+  background-color: #ADC9FF;
+}
+.category_charge {
+  background-color: #CDFFCF;
+}
+.section_cont.vdb_travlog {
+  position: relative;
+  background: linear-gradient(154.58deg, #ECFFF7 -6.96%, rgba(226, 214, 252, 0.81) 113.47%);
+}
+.section_cont.vdb_travlog::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../images/global/bg_hmn_201.png') no-repeat left bottom;
+  background-size: 100% auto;
+  pointer-events: none;
+}
+.section_cont.vdb_travlog .wrap_banner {
+  padding-top: 0;
+}
+.section_cont.vdb_travlog .wrap_banner::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 1.4rem;
+  width: 23.8vw;
+  height: 26.6vw;
+  background: url('../../images/hmui/img_zero_charge_2.png') no-repeat 50%;
+  background-size: 100%;
+}
