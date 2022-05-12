@@ -472,6 +472,41 @@
   background: url('../../images/global/bg_gsp1_cloud.png') no-repeat 50%;
   background-size: 100%;
 }
+.visual_gsp_drone {
+  position: relative;
+  margin-top: 3.0rem;
+}
+.visual_gsp_drone + .box_card_type {
+  z-index: 20;
+}
+.visual_gsp_drone > p,
+.visual_gsp_shopping > p {
+  color: #4F5D64;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+.visual_gsp_drone::before,
+.visual_gsp_shopping::before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);
+}
+.visual_gsp_drone > p {
+  margin-bottom: 1.6rem;
+}
+.visual_gsp_shopping > p {
+  margin-bottom: 1.4rem;
+}
+.visual_gsp_shopping {
+  position: relative;
+  margin-top: 2.0rem;
+}
 /* 트래블로그 혜택안내 */
 .section_top_visual.travlog_benefit {
   background: linear-gradient(137.12deg, #DAFFED 0%, #EFCBEB 123.54%);

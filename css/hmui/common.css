@@ -246,6 +246,9 @@ section[data-roll] {
 .section_cont.type_sub {
   border-top: 0.8rem solid #F3F8FA;
 }
+.section_cont.type_narrow {
+  padding: 4.0rem 2.4rem;
+}
 .section_cont .wrap_tit {
   padding-top: 0;
 }
@@ -351,7 +354,6 @@ section[data-roll] {
   padding-top: 1.0rem;
 }
 [class^="tit_section"] {
-  margin-bottom: 3.0rem;
   font-size: 2.6rem;
   line-height: 3.2rem;
   font-weight: 300;
@@ -361,6 +363,9 @@ section[data-roll] {
 }
 [class^="tit_section_center"] {
   text-align: center;
+}
+.tit_section {
+  margin-bottom: 3.0rem;
 }
 .tit_section_2 {
   font-size: 2.4rem;
@@ -430,6 +435,16 @@ section[data-roll] {
   height: 0.6rem;
   background: url('../../images/hmui/ico_balloon_caret.png') no-repeat 50%;
   background-size: 100%;
+}
+.txt_highlight {
+  position: relative;
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  color: #4F5D64;
+  background: rgba(19, 201, 190, 0.2) left 50% bottom 0%;
+  background-size: 100% 0.8rem;
 }
 [class^="flag_terms_"] {
   display: inline-block;
@@ -1352,6 +1367,51 @@ button.btn_secondery {
 .wrap_link_list li {
   overflow: hidden;
   margin-top: 5px;
+}
+.list_num {
+  counter-reset: numberlist;
+} 
+.list_num li {
+  position: relative;
+  padding-left: 3.6rem;
+  counter-increment: numberlist;
+}
+.list_num li + li {
+  margin-top: 3.0rem;
+}
+.list_num li .tit {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  word-break: keep-all;
+}
+.list_num li .tit em {
+  font-weight: 700;
+}
+.list_num li .tit::before {
+  content: counter(numberlist);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  margin-right: 1.0rem;
+  border-radius: 50%;
+  background-color: #6E7D85;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+.list_num li .box_img {
+  overflow: hidden;
+  margin-top: 2.0rem;
+  border-radius: 0.8rem;
+  box-shadow: 0px 4px 8px rgba(136, 136, 136, 0.25);
+}
+.list_num li .box_img img {
+  display: block;
+  width: 100%;
 }
 
 /* Box */
@@ -2558,21 +2618,49 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .list_benefit_label .flag_free {
   position: absolute;
   right: -1.6rem;
-  top: -1.9rem;
-  width: 4.5rem;
-  height: 4.3rem;
+  top: -1.2rem;
+  width: 3.8rem;
+  height: 2.5rem;
   z-index: 10;
   background: url('../../images/hmui/flag_free.png') no-repeat 50%;
   background-size: 100%;
-}
-.list_benefit_label li [class^="emoji_"] {
-  
+  transform: rotate(-38.87deg);
 }
 .list_benefit_label.type_full {
   display: block;
 }
 .list_benefit_label.type_full li {
+  flex-direction: row;
+  justify-content: flex-start;
   width: 100%;
+  min-height: auto;
+  height: 5.1rem;
+  margin-top: 1.0rem;
+  padding: 0 2.4rem;
+  border-radius: 2.6rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  text-align: left;
+}
+.list_benefit_label.type_full li:first-child {
+  margin-top: 0;
+}
+.list_benefit_label.type_full li [class^="emoji_"] {
+  width: 3.6rem;
+  height: 3.6rem;
+  margin: 0 0.8rem;
+  vertical-align: top;
+}
+.list_benefit_label.type_full .flag_free {
+  top: 0.7rem;
+  right: -2.1rem;
+  width: 5.4rem;
+  height: 3.5rem;
+  transform: rotate(0);
+}
+[class^="tit_section"] + .list_benefit_label {
+  margin-top: 3.0rem;
 }
 
 /* 유의사항 */
