@@ -44,14 +44,16 @@
 .wrap_item_benefit [class^="emoji_"] {
   position: relative;
 }
-.wrap_item_benefit li .emoji_globe {
-  top: -0.3rem;
-  margin: 0 0.8rem 0 0.4rem;
+.wrap_item_benefit li .item_desc .emoji_globe {
+  top: -0.8rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  margin: 0 0.6rem 0 -0.2rem;
 }
-.wrap_item_benefit li .emoji_atm {
+.wrap_item_benefit li .item_desc .emoji_atm {
   margin: 0 0.7rem;
 }
-.wrap_item_benefit li .emoji_drone {
+.wrap_item_benefit li .item_desc .emoji_drone {
   top: -0.5rem;
   margin: 0 0.5rem 0 0.2rem;
 }
@@ -90,17 +92,19 @@
   height: 27.3rem;
   transform: translateX(-50%);
 }
-.visual_usr_card  .img_card_travlog {
+.img_card_travlog {
   display: block;
   margin: 0 auto;
   width: 13.4rem;
   height: 21.2rem;
-  margin-top: 1.0rem;
   border-radius: 0.8rem;
   background: url('../../images/global/img_card_travlog.png') no-repeat 50%;
   background-size: 100%;
   transform: rotate(-11.58deg);
   box-shadow: 6px 11px 14px rgba(0, 0, 0, 0.1);
+}
+.visual_usr_card  .img_card_travlog {
+  margin-top: 1.0rem;
 }
 .visual_usr_card .img_shoppingbag {
   position: absolute;
@@ -458,3 +462,101 @@
   background: url('../../images/hmui/img_zedo_charge_3.png') no-repeat 50%;
   background-size: 100%;
 }
+
+/* [GSP] - 글로벌 */
+/* 해외직구 매뉴얼 */
+.section_top_visual.overseas_purchage {
+  background: linear-gradient(144.83deg, #EDFFFE 10.24%, #BBCAFF 124.17%);
+}
+.visual_gsp_overseas {
+  background: url('../../images/global/bg_gsp1_cloud.png') no-repeat 50%;
+  background-size: 100%;
+}
+/* 트래블로그 혜택안내 */
+.section_top_visual.travlog_benefit {
+  background: linear-gradient(137.12deg, #DAFFED 0%, #EFCBEB 123.54%);
+}
+.visual_gsp_card {
+  background: url('../../images/global/bg_gsp2_cloud.png') no-repeat 50%;
+  background-size: 100%;
+}
+.section_cont.about_travlog {
+  background: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);
+  text-align: center;
+}
+.section_cont.about_travlog .tit_big_bold {
+  text-align: center;
+}
+/* 해외직구 라운지 */
+.banner_overseas_lounge .swiper-slide a {
+  display: block;
+}
+.banner_overseas_lounge .swiper-slide a img {
+  width: 100%;
+}
+.wrap_loop_scrl.overseas_store li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+}
+.banner_recomm_card {
+  margin: 3.0rem -2.4rem 0;
+  padding-left: 2.4rem;
+}
+.banner_recomm_card .swiper-slide {
+  width: 37.78vw;
+  margin-left: 2.0rem;
+}
+.banner_recomm_card .swiper-slide:first-child {
+  margin-left: 0;
+}
+.banner_recomm_card .swiper-slide a {
+  position: relative;
+  display: block;
+}
+.banner_recomm_card .swiper-slide .card_img {
+  position: relative;
+  width: 6.8rem;
+  height: 10.8rem;
+  margin-left: 2.4rem;
+  border-radius: 0.8rem;
+  transform: rotate(-11.58deg);
+  transform-origin: right bottom;
+}
+.banner_recomm_card .swiper-slide .card_img::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0.3rem;
+  z-index: -1;
+  width: 5.1rem;
+  height: 8.0rem;
+  box-shadow: 0px 4px 20px #121C4E;
+  transform: translateX(-50%);
+}
+.banner_recomm_card .swiper-slide .card_name {
+  margin-top: 4rem;
+  color: #000;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+}
+.banner_recomm_card .swiper-slide .card_desc {
+  margin-top: 1.0rem;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+  color: #4F5D64;
+  opacity: 0.6;
+}
+.banner_recomm_card .swiper-slide .card_name, 
+.banner_recomm_card .swiper-slide .card_desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+
+/* [VDB] - 혜택 */
