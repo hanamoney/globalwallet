@@ -20,16 +20,28 @@
 <body>
   <main id="root">
     <header id="header">
-      <div class="inner_fixed">
-        <h1>해외직구 매뉴얼</h1>
-        <button class="btn_ico_close"><span class="blind">닫기</span></button>
-      </div>
+      
     </header>
     <!-- // header -->
 
     <div id="contents" class="wrap_contents">
       <div class="contents">
         <section data-roll="GSP">
+
+        </section>
+        <!-- // section -->
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="popupId" class="wrap_layer type_full">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">해외직구 매뉴얼</h2>
+        </div>
+        <div class="content_layer">
+
           <div class="section_top_visual overseas_purchage">
             <div class="wrap_tit">
               <p class="txt">여행·직구할 땐? 트래블로그!</p>
@@ -182,26 +194,25 @@
               <a href="#none" class="btn_link">FAQ 더보기<span class="ico_arr_link_s"></span></a>
             </div>
           </div>
-        </section>
-        <!-- // section -->
-
-        <!-- 하단고정영역 -->
+          
+        </div>
         <div class="section_bottom_fixed">
           <div class="wrap_btn_full">
             <button type="button" class="btn_full_primary">직구하러 가기</button>
           </div>
         </div>
-        <!-- // 하단고정영역 -->
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
       </div>
     </div>
-    <!-- // contents-->
-
-    <!-- popup -->
     <!-- // popup -->
 
   </main>
   
   <script>
+  $(function(){
+    // 팝업 호출 param 오픈할 팝업 id
+    fnOpenLayerPop('popupId');
+  });
   </script>
 </body>
 </html>
