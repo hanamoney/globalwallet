@@ -1020,7 +1020,12 @@
   background-size: 100%;
 }
 .visual_vdb_total .bubble.accum::before {
-  
+  top: -1.3rem;
+  left: -0.4rem;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../images/global/bg_vdb_acumm.png');
+  background-position: top left;
 }
 .visual_vdb_total .bubble.accum::after {
   right: 0;
@@ -1028,6 +1033,9 @@
   width: 38.8vw;
   height: 25.8vw;
   background-image: url('../../images/hmui/character/visual_moneybag.png');
+}
+.visual_vdb_total .bubble.saved::before {
+  
 }
 .visual_vdb_total .bubble.saved::after {
   bottom: 0;
