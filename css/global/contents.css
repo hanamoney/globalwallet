@@ -975,10 +975,14 @@
 .visual_vdb_total {
   display: flex;
   justify-content: center;
+  margin-top: 2.0rem;
 }
 .visual_vdb_total .img_character_dance {
+  position: relative;
   z-index: 1;
   margin-top: 4.8rem;
+  margin-bottom: -0.4rem;
+  background-position-y: bottom;
 }
 .visual_vdb_total .bubble {
   position: relative;
@@ -1009,9 +1013,9 @@
   transform: translateX(-1.6rem);
 }
 .visual_vdb_total .bubble.accum::before,
-.visual_vdb_total .bubble.accum::after,
 .visual_vdb_total .bubble.saved::before,
-.visual_vdb_total .bubble.saved::after {
+.visual_vdb_total .img_character_dance::before,
+.visual_vdb_total .img_character_dance:after {
   content: '';
   display: block;
   position: absolute;
@@ -1027,18 +1031,26 @@
   background-image: url('../../images/global/bg_vdb_acumm.png');
   background-position: top left;
 }
-.visual_vdb_total .bubble.accum::after {
-  right: 0;
-  bottom: 0;
-  width: 38.8vw;
-  height: 25.8vw;
+.visual_vdb_total .bubble.saved::before {
+  top: -1.7rem;
+  right: -0.5rem;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../images/global/bg_vdb_saved.png');
+  background-position: top right;
+  background-size: 18.3vw auto;
+}
+.visual_vdb_total .img_character_dance::before {
+  left: -20vw;
+  bottom: -2.2rem;
+  z-index: 2;
+  width: calc(100vw/3);
+  height: 22.2vw;
   background-image: url('../../images/hmui/character/visual_moneybag.png');
 }
-.visual_vdb_total .bubble.saved::before {
-  
-}
-.visual_vdb_total .bubble.saved::after {
-  bottom: 0;
+.visual_vdb_total .img_character_dance::after {
+  bottom: -1.9rem;
+  right: -13.3vw;
   width: 22.2vw;
   height: 22.2vw;
   background-image: url('../../images/hmui/character/visual_bag.png');
@@ -1049,14 +1061,53 @@
 .my_benefit_info .bubble.saved .total_amount {
   color: #E178AD;
 }
+.my_benefit_info.no_saved .img_character_dance::before {
+  left: -25vw;
+  width: 38.8vw;
+  height: 25.8vw;
+}
+.my_benefit_info.no_accum .visual_vdb_total {
+  padding-right: 9.4vw;
+}
+.my_benefit_info.no_accum .bubble.saved {
+  transform: translateX(0);
+}
+.my_benefit_info.no_accum .img_character_dance {
+  margin-left: 13.8vw;
+}
+.my_benefit_info.no_accum .img_character_dance::after {
+  bottom: -1.1rem;
+  right: -27.6vw;
+  width: 27.7vw;
+  height: 27.7vw;
+}
+.my_benefit_info.no_saved .visual_vdb_total {
+  padding-left: 9.4vw;
+}
+.my_benefit_info.no_saved .bubble.accum {
+  transform: translateX(0);
+}
+.my_benefit_info.no_saved .img_character_dance {
+  margin-right: 13.8vw;
+}
 .my_benefit_info.no_accum .bubble.accum,
-.my_benefit_info.no_saved .bubble.saved {
+.my_benefit_info.no_saved .bubble.saved,
+.my_benefit_info.no_accum .img_character_dance::before,
+.my_benefit_info.no_saved .img_character_dance::after {
   display: none;
 }
 .my_benefit_info.no_accum .img_character_dance,
 .my_benefit_info.no_saved .img_character_dance {
   width: 38.8vw;
   height: 58.3vw;
+}
+.my_benefit_info.no_accum .bubble p ,
+.my_benefit_info.no_saved .bubble p {
+  font-size: 1.8rem;
+}
+.my_benefit_info.no_accum .bubble .total_amount,
+.my_benefit_info.no_saved .bubble .total_amount {
+  font-size: 2.0rem;
 }
 .list_masters_benefit {
   display: flex;
