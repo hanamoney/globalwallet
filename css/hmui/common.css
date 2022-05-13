@@ -3316,11 +3316,13 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 
 /* swiper pagination */
+.swiper-pagination,
 .swiper-container .swiper-pagination {
   left: 50%;
   transform: translateX(-50%);
   user-select: none;
 }
+.swiper-pagination .swiper-pagination-bullet,
 .swiper-container > .swiper-pagination .swiper-pagination-bullet {
   width: 0.6rem;
   height: 0.6rem;
@@ -3329,6 +3331,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   background: #4F5D64;
   opacity: 0.4;
 }
+.swiper-pagination .swiper-pagination-bullet-active,
 .swiper-container > .swiper-pagination .swiper-pagination-bullet-active {
   width: 2.4rem;
   background: #4F5D64;
