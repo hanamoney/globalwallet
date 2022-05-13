@@ -1959,6 +1959,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .wrap_layer.type_center .content_layer > [class^="tit"] em {
   font-weight: 700;
 }
+.wrap_layer.type_center .content_layer > [class^="tit"].type_full {
+  padding: 0;
+}
 .wrap_layer.type_center .content_layer > .tit_2 {
   font-size: 2.4rem;
   line-height: 3.0rem;
