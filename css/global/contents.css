@@ -1019,6 +1019,9 @@
   background-position: 50%;
   background-size: 100%;
 }
+.visual_vdb_total .bubble.accum::before {
+  
+}
 .visual_vdb_total .bubble.accum::after {
   right: 0;
   bottom: 0;
