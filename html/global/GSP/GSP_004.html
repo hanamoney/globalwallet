@@ -176,7 +176,6 @@
                   </a>
                 </li>
               </ul>
-              <div class="swiper-pagination"></div>
             </div>
           </div>
 
@@ -200,7 +199,28 @@
   
   <script>
   $(function(){
-
+    // 상단배너 2개 이상일 경우 swiper init
+    if ( $('.banner_overseas_lounge').find('.swiper-slide').length > 1 ){
+      var banSwiper = new Swiper('.banner_overseas_lounge', {
+        resistance: true,
+        resistanceRatio: 0,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: false,
+        },
+      });
+    }
+    // 카드추천 3개 이상일 경우 swiper init
+    if ( $('.banner_recomm_card').find('.swiper-slide').length > 2 ){
+      var recommCardSwiper = new Swiper('.banner_recomm_card', {
+        freeMode: true,
+        observer: true,
+        observeParents: true,
+        resistance: true,
+        resistanceRatio: 0,
+        slidesPerView: 'auto',
+      });
+    }
   });
   </script>
 </body>

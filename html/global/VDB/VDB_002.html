@@ -44,7 +44,8 @@
             <div class="swiper-container vdb_swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="tit_winner">
+                  <div class="tit_winner rank1">
+                    <p class="img_vdb_rank"></p>
                     <p>혜택받기 끝판왕</p>
                     <strong>1위 <span>김**</span></strong>
                   </div>
@@ -52,7 +53,8 @@
                   <p class="txt_amount">총 <em class="txt_num">9,999,999</em>원</p>
                 </div>
                 <div class="swiper-slide">
-                  <div class="tit_winner">
+                  <div class="tit_winner rank2">
+                    <p class="img_vdb_rank"></p>
                     <p>혜택받기 마스터</p>
                     <strong>2위 <span>우**</span></strong>
                   </div>
@@ -60,7 +62,8 @@
                   <p class="txt_amount">총 <em class="txt_num">8,999,999</em>원</p>
                 </div>
                 <div class="swiper-slide">
-                  <div class="tit_winner">
+                  <div class="tit_winner rank3">
+                    <p class="img_vdb_rank"></p>
                     <p>혜택받기 살림꾼</p>
                     <strong>3위 <span>하**</span></strong>
                   </div>
@@ -145,7 +148,18 @@
   </main>
   
   <script>
-    
+  //
+  $(function() {
+    // 데이터 불러 온 후 스와이퍼 init
+    var swiper = new Swiper(".vdb_swiper", {
+      loop: true,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: false,
+      },
+    });
+  });
   </script>
 </body>
 </html>

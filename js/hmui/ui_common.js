@@ -472,6 +472,9 @@ var _layerPop = function() {
 
   $('.fnClosePop').on('click', function(){
     var popId = $(this).closest('.wrap_layer').attr('id');
+    if ( !$focusBtn ) {
+      $focusBtn = $('[data-name="' + popId + '"]');
+    }
     fnCloseLayerPop(popId, $focusBtn);
   });
 };

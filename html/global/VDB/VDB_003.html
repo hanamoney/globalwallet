@@ -42,7 +42,7 @@
     <div id="popupId" class="wrap_layer type_center dim_gradient">
       <div class="inner_layer">
         <div class="content_layer">
-          <p class="tit">혜택마스터들은<br><em>어떤 서비스를 쓸까요?</em></p>
+          <p class="tit_2">혜택마스터들은<br><em>어떤 서비스를 쓸까요?</em></p>
           <div class="list_benefit_tower">
             <ul>
               <li>+<em class="txt_num">13,500</em></li>
@@ -60,7 +60,7 @@
         <div class="wrap_fixed_outside">
           <span class="chk type_sub">
             <input type="checkbox" id="chk1" name="chk1"/>
-            <label for="chk1" class="fnClosePop">
+            <label for="chk1" class="">
               <span class="label">다시 보지 않기</span>
             </label>
           </span>
@@ -76,6 +76,12 @@
     $(function(){
       // 팝업오픈 스크립트
       fnOpenLayerPop('popupId');
+
+      // 다시보지 않기 클릭시 팝업 닫기
+      $('#chk1').on('click', function() {
+        // param 닫을 팝업 id
+        fnCloseLayerPop('popupId');
+      }); 
     });
   </script>
 </body>

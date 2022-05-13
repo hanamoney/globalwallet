@@ -523,11 +523,17 @@
   text-align: center;
 }
 /* 해외직구 라운지 */
+.banner_overseas_lounge {
+  position: relative;
+}
 .banner_overseas_lounge .swiper-slide a {
   display: block;
 }
 .banner_overseas_lounge .swiper-slide a img {
   width: 100%;
+}
+.banner_overseas_lounge .swiper-pagination {
+  bottom: 2.0rem;
 }
 .wrap_loop_scrl.overseas_store li a {
   display: block;
@@ -541,10 +547,7 @@
 }
 .banner_recomm_card .swiper-slide {
   width: 37.78vw;
-  margin-left: 2.0rem;
-}
-.banner_recomm_card .swiper-slide:first-child {
-  margin-left: 0;
+  margin-right: 2.0rem;
 }
 .banner_recomm_card .swiper-slide a {
   position: relative;
@@ -768,15 +771,91 @@
 }
 /* VDB_002 혜택마스터 */
 .section_top_visual.vdb_master {
-  min-height: 100vh;
   padding: 5.0rem 2.4rem;
   background: linear-gradient(180deg, #F7FAFA 0%, #D6EFE9 100%);
   text-align: center;
 }
+.vdb_swiper {
+  margin-top: 1.0rem;
+  height: 40.2rem;
+  padding-top: 1.0rem;
+}
+.vdb_swiper .swiper-slide {
+  padding-top: 8.8rem;
+}
+.tit_winner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.tit_winner > p {
+  color: #323E43;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.tit_winner > strong {
+  display: block;
+  margin-top: 0.6rem;
+  color: #000;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+}
+.vdb_swiper .txt_amount {
+  margin-top: 1.0rem;
+  color: #13C9BE;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+}
+.tit_winner [class^="img_vdb_rank"] {
+  display: block;
+  width: 100%;
+  height: 1.6rem;
+  margin-bottom: 2.0rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: auto 100%;
+}
+.tit_winner.rank1 .img_vdb_rank {
+  background-image: url('../../images/global/img_vdb_rank_1.png');
+}
+.tit_winner.rank2 .img_vdb_rank {
+  background-image: url('../../images/global/img_vdb_rank_2.png');
+}
+.tit_winner.rank3 .img_vdb_rank {
+  background-image: url('../../images/global/img_vdb_rank_3.png');
+}
+.tit_winner.rank1 + .img_avatar::before {
+  background-color: #FFBF1C;
+}
+.tit_winner.rank2 + .img_avatar::before {
+  background-color: #C7DAE1;
+}
+.tit_winner.rank3 + .img_avatar::before {
+  background-color: #ECA17A;
+}
+.vdb_swiper .img_avatar {
+  position: relative;
+  height: 21.8rem;
+}
+.vdb_swiper .img_avatar::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 11.9rem;
+  height: 2.9rem;
+  border-radius: 50%;
+}
+.vdb_swiper .swiper-pagination {
+  left: 50%;
+  bottom: 2.4rem;
+}
 .visual_vdb_total {
   display: flex;
   justify-content: center;
-  /* padding: 0 1.2rem; */
 }
 .visual_vdb_total .img_character_dance {
   z-index: 1;
@@ -946,4 +1025,14 @@
   height: 26.6vw;
   background: url('../../images/hmui/img_zero_charge_2.png') no-repeat 50%;
   background-size: 100%;
+}
+.list_benefit_tower {
+  margin: 3.0rem 0;
+  text-align: center;
+}
+.list_benefit_tower li {
+  color: #13C9BE;
+  font-size: 2.0rem;
+  line-height: 3.2rem;
+  font-weight: 700;
 }
