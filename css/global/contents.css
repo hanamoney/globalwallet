@@ -110,6 +110,7 @@
   position: absolute;
   top: 1.0rem;
   right: 0;
+  transform: scaleX(-1);
 }
 .visual_usr_card .img_character_luggage {
   position: absolute;
@@ -464,23 +465,68 @@
 }
 
 /* [GSP] - 글로벌 */
-/* 해외직구 매뉴얼 */
+/* GSP_001 해외직구 매뉴얼 */
 .section_top_visual.overseas_purchage {
   background: linear-gradient(144.83deg, #EDFFFE 10.24%, #BBCAFF 124.17%);
 }
 .visual_gsp_overseas {
-  background: url('../../images/global/bg_gsp1_cloud.png') no-repeat 50%;
+  margin-top: 1.0rem;
+  height: 59.7vw;
+  background: url('../../images/global/bg_gsp1_cloud.png') no-repeat left bottom;
+  background-size: 100% auto;
+}
+.img_logo_amazone {
+  display: inline-block;
+  width: 6.0rem;
+  height: 2.1rem;  
+  background: url('../../images/hmui/company/logo_comp_amazon.png') no-repeat 50%;
   background-size: 100%;
+}
+.visual_gsp_overseas .img_character_hahamom {
+  position: absolute;
+  bottom: -7.5vw;
+  left: 36.3vw;
+  width: 39.7vw;
+  height: 53.8vw;
+}
+.visual_gsp_overseas .img_mobile_shop {
+  position: absolute;
+  bottom: -4.4vw;
+  left: 6.1vw;
+  width: 37.2vw;
+  height: 38.3vw;
+}
+.visual_gsp_overseas .img_shoppingbag {
+  position: absolute;
+  right: 6.9vw;
+  bottom: 10.2vw;
+  width: 24.1vw;
+  height: 49.4vw;
 }
 .visual_gsp_drone {
   position: relative;
-  margin-top: 3.0rem;
+  margin-top: 4.6rem;
+  padding-bottom: 1.6rem;
 }
-.visual_gsp_drone + .box_card_type {
+.visual_gsp_drone .img_drone_cloud {
+  position: absolute;
+  right: -0.8rem;
+  bottom: -1.3rem;
+  z-index: 21;
+}
+.visual_gsp_drone .img_logo_amazone,
+.visual_gsp_shopping .img_logo_amazone {
+  position: relative;
+  bottom: -0.2rem;
+  vertical-align: bottom;
+}
+.visual_gsp_drone + .box_card_type,
+.visual_gsp_shopping + .box_card_type {
   z-index: 20;
 }
 .visual_gsp_drone > p,
 .visual_gsp_shopping > p {
+  padding-left: 2.4rem;
   color: #4F5D64;
   font-size: 1.4rem;
   line-height: 2.0rem;
@@ -490,24 +536,77 @@
   content: '';
   display: block;
   position: absolute;
-  right: 0;
+  right: 1.3rem;
+  bottom: -2.9rem;
   z-index: 1;
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
   background: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);
 }
-.visual_gsp_drone > p {
-  margin-bottom: 1.6rem;
-}
-.visual_gsp_shopping > p {
-  margin-bottom: 1.4rem;
-}
 .visual_gsp_shopping {
   position: relative;
-  margin-top: 2.0rem;
+  margin-top: 2.8rem;
+  padding-bottom: 1.4rem;
 }
-/* 트래블로그 혜택안내 */
+.visual_gsp_shopping .img_character_shopping {
+  position: absolute;
+  right: 2.3rem;
+  bottom: -1.5rem;
+  z-index: 21;
+}
+.box_card_type.gsp_benifit {
+  text-align: center;
+}
+.box_card_type.gsp_benifit .wrap_box {
+  width: calc(100% + 3.0rem);
+  margin: 0 -1.5rem;
+  padding: 2.0rem 1.4rem 3.0rem;
+  z-index: 21;
+}
+.box_card_type.gsp_benifit .wrap_box p,
+.box_card_type.gsp_benifit .wrap_box strong {
+  display: block;
+  text-align: center;
+}
+.box_card_type.gsp_benifit .wrap_box p {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.box_card_type.gsp_benifit .wrap_box strong {
+  margin-top: 1.0rem;
+  font-size: 2.0rem;
+  line-height: 2.0rem;
+}
+.box_card_type.gsp_benifit .wrap_dis_tbl {
+  position: relative;
+  z-index: 22;
+  margin-top: -1.5rem;
+}
+.box_card_type.gsp_benifit .wrap_dis_tbl ul {
+  padding-top: 2.4rem;
+}
+.box_card_type.gsp_benifit .wrap_dis_tbl ul li {
+  vertical-align: top;
+}
+.box_card_type.gsp_benifit .wrap_dis_tbl ul li:nth-child(2) {
+  width: 4.0rem;
+}
+.box_card_type.gsp_benifit .wrap_dis_tbl .txt_ccy {
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+.box_card_type.gsp_benifit .wrap_dis_tbl .txt_ccy [class^="ico"] {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.box_card_type.gsp_benifit .wrap_dis_tbl .txt_amount {
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+}
+/* GSP_002 트래블로그 혜택안내 */
 .section_top_visual.travlog_benefit {
   background: linear-gradient(137.12deg, #DAFFED 0%, #EFCBEB 123.54%);
 }
@@ -699,7 +798,6 @@
   font-size: 1.5rem;
   line-height: 4.8rem;
   font-weight: 700;
-  
 }
 .section_cont.vdb_saved .wrap_vdb_list .tit_counter .num {
   background: linear-gradient(121.86deg, #FADA9D -17.27%, #D05BF9 143.28%);
@@ -757,7 +855,6 @@
   position: absolute;
   left: 50%;
   bottom: 0;
-  z-index: 1;
   width: 67px;
   height: 69px;
   box-shadow: 0px 10px 16px rgba(179, 211, 200, 0.6);

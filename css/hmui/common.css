@@ -418,6 +418,17 @@ section[data-roll] {
 .flag_fill_white {
   background-color: #fff;
 }
+.flag_fill_black {
+  background-color: #4F5D64;
+  color: #fff;
+}
+[class^="flag_fill"].type_tit {
+  height: 2.9rem;
+  padding: 0 1.2rem;
+  border-radius: 1.4rem;
+  font-size: 1.3rem;
+  line-height: 2.9rem;
+}
 .txt_balloon {
   position: relative;
   display: inline-block;
@@ -492,6 +503,14 @@ section[data-roll] {
 }
 
 /* Align */
+.wrap_dis_tbl > ul {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.wrap_dis_tbl > ul > li {
+  display: table-cell;
+}
 
 /* Icon */
 [class^="btn_ico"],
@@ -599,6 +618,11 @@ section[data-roll] {
   width: 2.0rem;
   height: 2.0rem;
   background-image: url('../../images/hmui/ico_arr_down_2.png');
+}
+.ico_arr_r {
+  width: 2.0rem;
+  height: 2.0rem;
+  background-image: url('../../images/hmui/ico_arr_r.png');
 }
 .ico_add {
   width: 1.6rem;
@@ -3481,6 +3505,11 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   height: 10.0rem;
   background-image: url('../../images/hmui/character/visual_drone_box.png');
 }
+.img_drone_cloud {
+  width: 12.2rem;
+  height: 8.4rem;
+  background-image: url('../../images/hmui/character/visual_drone_cloud.png');
+}
 .img_character_bebe_dance {
   width: 7.1rem;
   height: 10.8rem;
@@ -3505,6 +3534,11 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   width: 20rem;
   height: 18rem;
   background-image: url('../../images/hmui/character/img_character_cry.png');
+}
+.img_character_shopping {
+  width: 6.8rem;
+  height: 7.9rem;
+  background-image: url('../../images/hmui/character/img_character_shopping.png');
 }
 
 @supports ((-webkit-backdrop-filter:none) or (backdrop-filter:none)) {
