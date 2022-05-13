@@ -1107,6 +1107,7 @@
 }
 .my_benefit_info.no_accum .bubble .total_amount,
 .my_benefit_info.no_saved .bubble .total_amount {
+  margin-bottom: 0.3rem;
   font-size: 2.0rem;
 }
 .list_masters_benefit {
