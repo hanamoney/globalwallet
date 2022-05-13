@@ -891,7 +891,7 @@
   padding-top: 1.0rem;
 }
 .vdb_swiper .swiper-slide {
-  padding-top: 8.8rem;
+  padding-top: 9.8rem;
 }
 .tit_winner {
   position: absolute;
@@ -947,17 +947,26 @@
 }
 .vdb_swiper .img_avatar {
   position: relative;
+  display: block;
+  width: 100%;
   height: 21.8rem;
+}
+.vdb_swiper .img_avatar img {
+  width: auto;
+  height: 100%;
 }
 .vdb_swiper .img_avatar::before {
   content: '';
   display: block;
   position: absolute;
+  left: 50%;
   bottom: 0;
+  z-index: -1;
   width: 100%;
   max-width: 11.9rem;
   height: 2.9rem;
   border-radius: 50%;
+  transform: translateX(-50%);
 }
 .vdb_swiper .swiper-pagination {
   left: 50%;
