@@ -596,9 +596,21 @@
   text-overflow: ellipsis;
   word-break: keep-all;
 }
+/* GSP_003 */
+.wrap_box .gsp_info li {
+  padding: 0.4rem 0;
+}
+.wrap_box .gsp_info .tit,
+.wrap_box .gsp_info .txt {
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.wrap_box .gsp_info .txt.empty {
+  font-weight: 400;
+}
 
 /* [VDB] - 혜택 */
-/* 내가 받은 혜택 */
+/* VDB_001 내가 받은 혜택 */
 .section_top_visual.my_benefit {
   background: linear-gradient(157.38deg, #FFFAE0 -12.44%, #EBD6E6 103.69%, #F7FFDA 103.7%);
   text-align: center;

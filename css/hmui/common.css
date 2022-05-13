@@ -1549,6 +1549,11 @@ button.wrap_box [class^="ico_arr_down"] {
   font-size: 2.2rem;
   font-weight: 300;
 }
+.wrap_box > .tit_2 {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+}
 .wrap_box .tit em {
   font-weight: 700;
 }
@@ -1576,6 +1581,9 @@ a.wrap_box > .txt:first-child {
 }
 .wrap_box .txt_sub + .tit {
   padding-top: 0.6rem;
+}
+.wrap_box > .tit_2 + .list_info {
+  margin-top: 1.0rem;
 }
 .wrap_box .list_info li {
   margin-top: -0.2rem;
