@@ -605,6 +605,7 @@
   font-size: 2.0rem;
   line-height: 2.6rem;
   font-weight: 700;
+  word-break: keep-all;
 }
 /* GSP_002 트래블로그 혜택안내 */
 .section_top_visual.travlog_benefit {

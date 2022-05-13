@@ -3561,3 +3561,15 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
     backdrop-filter: blur(20px);
   }
 }
+
+@media screen and (max-width:359px) {
+  html, body {
+    font-size: 9px;
+  }
+  .wrap_layer .content_layer {
+    max-height: 500px;
+  }
+  .wrap_layer:not(.type_full).hasFixedBtn .content_layer {
+    max-height: calc(500px - 5.4rem - 6.0rem);
+  }
+}
