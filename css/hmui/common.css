@@ -3456,6 +3456,11 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   display: flex;
   justify-content: space-between;
 }
+.chart_bar_stacked .bar {
+  width: 50%;
+  will-change: width;
+  transition: width 0.3s cubic-bezier(0.3, 0.27, 0.02, 1.24);
+}
 .chart_bar_stacked .bar:first-child {
   background: linear-gradient(279.98deg, #B6DD84 -35.09%, #2EBEC1 112.45%);
 }

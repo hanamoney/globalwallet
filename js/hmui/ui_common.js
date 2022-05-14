@@ -28,6 +28,7 @@ var registUI = function(){
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
   if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
+  if ( $('.chart_bar_stacked').length ) { _barChartStacked(); } // stacked bar chart
   if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
   if ( $('.section_faq').length ) { _faqAcco(); } // faq 아코디언
   if ( $('.section_terms .btn_acco').length ) { _agreeAccoBtn(); } // 약관동의 아코디언 기능
@@ -214,6 +215,8 @@ var _inpChkVal = function(el) {
 };
 
 /*
+  * @name _dropDown()
+  * @description // dropdown 산텍
  */
 var _dropDown = function() {
   $('.wrap_dropdown').each(function() {
@@ -295,6 +298,16 @@ var _showBenefitList = function() {
       });
     });
   }
+}
+
+/**
+  * @name _barChartStacked()
+  * @description // animate stacked bar chart
+  */
+var _barChartStacked = function(){
+  $('.chart_bar_stacked').each(function(){
+    fnAnimateBar($(this));
+  });
 }
 
 /**
@@ -624,3 +637,23 @@ var skeletonLoading = (function(){
     end: end
   }
 })();
+
+/**
+  * @name fnAnimateBar()
+  * @description bar chart animation
+  * @param {Element | string} el bar chart element 
+  */
+var fnAnimateBar = function(el) {
+  var $el = $(el),
+      bar = $el.find('.bar');
+
+  $el.waypoint({
+    handler: function() {
+      bar.each(function() {
+        var percentage = $(this).data('percent') + '%';
+        $(this).css('width', percentage);
+      });
+    },
+    offset: '90%'
+  });
+}
