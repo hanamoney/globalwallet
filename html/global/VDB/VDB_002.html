@@ -33,7 +33,7 @@
         <section data-roll="VDB">
           <div class="section_top_visual vdb_master">
             <div class="wrap_dropdown">
-              <button type="button" class="btn_dropdown"><span>4월</span></button>
+              <button type="button" class="btn_dropdown"><span class="current">4월</span></button>
               <ul class="list_dropdown">
                 <li><button type="button"><span>3월</span></button></li>
                 <li><button type="button"><span>2월</span></button></li>
@@ -55,17 +55,6 @@
                   <p class="txt_amount">총 <em class="txt_num">9,999,999</em>원</p>
                 </div>
                 <div class="swiper-slide">
-                  <div class="tit_winner rank2">
-                    <p class="img_vdb_rank"></p>
-                    <p>혜택받기 마스터</p>
-                    <strong>2위 <span>우**</span></strong>
-                  </div>
-                  <div class="img_avatar" aria-hidden="true">
-                    <img src="../../../images/global/avatar/avatar_7.png">
-                  </div>
-                  <p class="txt_amount">총 <em class="txt_num">8,999,999</em>원</p>
-                </div>
-                <div class="swiper-slide">
                   <div class="tit_winner rank3">
                     <p class="img_vdb_rank"></p>
                     <p>혜택받기 살림꾼</p>
@@ -75,6 +64,17 @@
                     <img src="../../../images/global/avatar/avatar_8.png">
                   </div>
                   <p class="txt_amount">총 <em class="txt_num">7,999,999</em>원</p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="tit_winner rank2">
+                    <p class="img_vdb_rank"></p>
+                    <p>혜택받기 마스터</p>
+                    <strong>2위 <span>우**</span></strong>
+                  </div>
+                  <div class="img_avatar" aria-hidden="true">
+                    <img src="../../../images/global/avatar/avatar_7.png">
+                  </div>
+                  <p class="txt_amount">총 <em class="txt_num">8,999,999</em>원</p>
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -158,13 +158,34 @@
   $(function() {
     // 데이터 불러 온 후 스와이퍼 init
     var swiper = new Swiper(".vdb_swiper", {
+      // effect: 'coverflow',
+      // coverflowEffect: {
+      //   rotate: 0,
+      //   stretch: 0,
+      //   depth: 70,
+      //   modifier: 6,
+      //   slideShadows: false,
+      // },
       loop: true,
+      grabCursor: true,
       centeredSlides: true,
+      slidesPerView: 'auto',
       pagination: {
-        el: ".swiper-pagination",
-        clickable: false,
+        el: '.swiper-pagination',
       },
     });
+
+    // 스와이프 시
+    swiper.on('slideChange', function() {
+      var idx = this.realIndex;
+      var $active = $(this.slides[idx]);
+
+      // 정보 텍스트 animation
+
+      // bar chart animation 
+    });
+
+    // 월 선택 시 
   });
   </script>
 </body>

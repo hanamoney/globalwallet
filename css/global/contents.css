@@ -872,7 +872,7 @@
   right: 18.8vw;
   z-index: 3;
 }
-@media screen and (max-width: 356px) {
+@media screen and (max-width: 359px) {
   .section_cont.vdb_accum .img_character_bebe_dance {
     top: 7.0rem;
     right: 10.7vw;
@@ -889,9 +889,25 @@
   margin-top: 1.0rem;
   height: 40.2rem;
   padding-top: 1.0rem;
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+.vdb_swiper .swiper-wrapper {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 .vdb_swiper .swiper-slide {
+  width: 41.6vw;
   padding-top: 9.8rem;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition-duration: 300ms;
+}
+.vdb_swiper .swiper-slide.swiper-slide-prev {
+  transform: translate3d(3.2rem, 0, -40.0rem);
+}
+.vdb_swiper .swiper-slide.swiper-slide-next {
+  transform: translate3d(-1.6rem, 0, -80.0rem);
 }
 .tit_winner {
   position: absolute;

@@ -26,6 +26,7 @@ var registUI = function(){
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
+  if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
   if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
   if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
   if ( $('.section_faq').length ) { _faqAcco(); } // faq 아코디언
@@ -211,6 +212,35 @@ var _inpChkVal = function(el) {
     }
   });
 };
+
+/*
+ */
+var _dropDown = function() {
+  $('.wrap_dropdown').each(function() {
+    var $el = $(this);
+    var $btnDropDown = $(this).find('.btn_dropdown');
+    var $list = $(this).find('.list_dropdown');
+    var $selBtn = $list.find('button');
+
+    $btnDropDown.on('click', function() {
+      if ($el.hasClass('on')) {
+        $el.removeClass('on');
+      } else {
+        $el.addClass('on');
+      }
+    });
+  
+    $selBtn.on('click', function() {
+      var selected = $(this).find('span').text();
+      $el.find('.current').text(selected);
+      if ($el.hasClass('on')) {
+        $el.removeClass('on');
+      } else {
+        $el.addClass('on');
+      }
+    });
+  });
+}
 
 /**
   * @name _showBenefitList()
