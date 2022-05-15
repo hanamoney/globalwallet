@@ -168,7 +168,31 @@
   </main>
   
   <script>
-  //
+  // 캐릭터 랜덤 swiper init 전 설정
+  randomCharacter();
+  function randomCharacter() {
+    var randomArr = [];
+    while(randomArr.length < 3){
+      var num = Math.floor(Math.random() * 8) + 1;
+      if ( randomArr.indexOf(num) === -1) {
+        randomArr.push(num);
+      }
+    }
+
+    // 같은 성별의 캐릭터만 나왔을 경우 첫번째를 이성 캐릭터로 변경
+    if ( randomArr.every(num => num < 5 ) ){
+      randomArr[0] = Math.floor(Math.random()*(8-5+1)) + 5;
+    } else if ( randomArr.every(num => num > 4) ) {
+      randomArr[0] = Math.floor(Math.random()*(4-1+1)) + 1;
+    }
+
+    // 캐릭터이미지 url 변경
+    randomArr.map(function(num, idx) {
+      var url = '../../../images/global/avatar/avatar_' + num + '.png'; 
+      $('.swiper-slide').eq(idx).find('.img_avatar img').attr('src', url);
+    });
+  }
+
   $(function() {
     // swiper init
     var swiper = new Swiper(".vdb_swiper", {
