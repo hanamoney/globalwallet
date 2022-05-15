@@ -750,7 +750,7 @@ var fnVdbCoinChart = (function() {
             } 
           });
         },
-        offset: '70%',
+        offset: '80%',
       });
   
     });

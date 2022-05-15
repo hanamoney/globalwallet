@@ -817,11 +817,15 @@
   width: 4.8rem;
   height: 4.8rem;
   transform: translateX(-50%);
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.2s 0.2s ease-in-out; 
 }
 .wrap_vdb_list li.empty::before {
   content: '';
   background: url('../../images/global/bg_vdb_empty.png') no-repeat 50%;
   background-size: 100%;
+  
 }
 .wrap_vdb_list li.empty::after {
   content: '텅';
@@ -829,6 +833,10 @@
   font-size: 1.5rem;
   line-height: 4.8rem;
   font-weight: 700;
+}
+.wrap_vdb_list.transform li.empty::before,
+.wrap_vdb_list.transform li.empty::after {
+  opacity: 1;
 }
 .wrap_vdb_list li.empty .txt_amount {
   display: none;
