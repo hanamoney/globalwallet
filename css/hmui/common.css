@@ -3392,7 +3392,6 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   width: 100vw;
   height: 100%;
   margin: 0 -2.4rem;
-  padding-left: 1.9rem;
 }
 .wrap_loop_scrl ul {
   position: relative;
@@ -3406,8 +3405,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+  transition: transform 12s;
   transform: translateX(0);
 }
 .wrap_loop_scrl li {

@@ -28,6 +28,7 @@ var registUI = function(){
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
   if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
+  if ( $('.wrap_loop_scrl').length ) { _loopScrlCont(); } // 혜택리스트
   if ( $('.chart_bar_stacked').length ) { _barChartStacked(); } // stacked bar chart
   if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
   if ( $('.section_faq').length ) { _faqAcco(); } // faq 아코디언
@@ -298,6 +299,48 @@ var _showBenefitList = function() {
       });
     });
   }
+}
+
+/**
+  * @name _loopScrlCont()
+  * @description // 무한 자동 스크롤 컨텐츠
+  */
+var _loopScrlCont = function(){
+  $('.wrap_loop_scrl').find('ul').each(function(){
+    var $list = $(this),
+      listClass = $list.attr('class'),
+      dir = $list.attr('dir'),
+      $slide = $list.find('li').clone(),
+      length = $list.find('li').length,
+      width = $list.find('li').outerWidth(true),
+      left = -(width * length),
+      duration = 2000 * length;
+    if (dir === 'rtl') {
+      left = width * length;
+    }
+
+    $list.append($slide);
+    $list.prepend($slide.clone());
+    
+
+    $list.css({
+      'transform': 'translateX(' + left + 'px)',
+      'transition-duration': duration + 'ms',
+    });
+
+    var interval = setInterval(function(){
+      $list.css({
+        'transform': 'translateX(0)',
+        'transition-duration': '0s',
+      });
+      setTimeout(function(){
+        $list.css({
+          'transform': 'translateX(' + left + 'px)',
+          'transition-duration': duration + 'ms',
+        });
+      },10);
+    }, duration);
+  });
 }
 
 /**
