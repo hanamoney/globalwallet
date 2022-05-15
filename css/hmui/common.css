@@ -3457,6 +3457,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .chart_bar_stacked .bar {
   width: 50%;
+  min-width: 1.2rem;
   will-change: width;
   transition: width 0.3s cubic-bezier(0.3, 0.27, 0.02, 1.24);
 }

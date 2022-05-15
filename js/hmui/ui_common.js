@@ -721,7 +721,13 @@ var fnAnimateBar = function(el) {
         var rate = Math.round( ((amount / basis) * 100) );
         $(this).data('percent', rate);
         var percentage = $(this).data('percent') + '%';
+        if ( amount == 0 ) {
+          $(this).css('min-width','unset');
+        }else {
+          $(this).removeAttr('style');
+        }
         $(this).css('width', percentage);
+        
       });
     },
     offset: '90%'
