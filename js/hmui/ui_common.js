@@ -149,7 +149,6 @@ var _iOSInpFixdPos = function() {
     var el = e.target.classList;
     if (inp.is(':focus') && !el.contains('inp') && !el.contains('btn_ico_clear') ) {
       inp.blur();
-      console.log(el);
     }
   })
 
@@ -568,7 +567,6 @@ var _textFitToCont = function(){
   var $el = $('.fnFitToCont');
 
   var observer = new MutationObserver(function(e){
-    console.log('1234');
     resize();
   });
 
@@ -819,7 +817,6 @@ var fnVdbCoinChart = (function() {
   }
 
   function reset() {
-    console.log('reset');
     $el.find('.img_coin').remove();
     $el.removeClass('transform');
   }
