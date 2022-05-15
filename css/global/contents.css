@@ -824,6 +824,9 @@
   line-height: 4.8rem;
   font-weight: 700;
 }
+.wrap_vdb_list li.empty .txt_amount {
+  display: none;
+}
 .section_cont.vdb_saved .wrap_vdb_list .tit_counter .num {
   background: linear-gradient(121.86deg, #FADA9D -17.27%, #D05BF9 143.28%);
 }

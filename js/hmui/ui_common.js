@@ -30,6 +30,7 @@ var registUI = function(){
   if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
   if ( $('.wrap_loop_scrl').length ) { _loopScrlCont(); } // 혜택리스트
   if ( $('.chart_bar_stacked').length ) { _barChartStacked(); } // stacked bar chart
+  if ( $('.wrap_vdb_list').length ) { fnVdbCoinChart.animate(); } // 내가받은 혜택 동전차트 애니메이션 실행
   if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
   if ( $('.section_faq').length ) { _faqAcco(); } // faq 아코디언
   if ( $('.section_terms .btn_acco').length ) { _agreeAccoBtn(); } // 약관동의 아코디언 기능
@@ -712,17 +713,19 @@ var fnVdbCoinChart = (function() {
   function animate() {
     $el = $('.wrap_vdb_list');
     $el.each(function(idx, el){
-      var coinChart = new Waypoint({
-        element: $(el),
+      $(el).waypoint({
         handler: function() {
+          if ( $(el).hasClass('transform') ) { 
+            return;
+          }
           $(el).addClass('transform');
-          $(el).find('li').each(function(idx, listEl){
+          $(el).find('li').each(function(listIdx, listEl){
             if ( !$(this).hasClass('empty') ) {
               var chart = $(this).find('.chart_coin');
               var coinH = 6;
               
               // 첫번째 카테고리 기준 비율 계산 data-percent 설정
-              if ( idx > 0 ) {
+              if ( listIdx > 0 ) {
                 var basis = parseInt( $(el).find('li:first-child').find('.txt_num').text().replace(/,/g, ''), 10 );
                 var currentVal = parseInt( $(this).find('.txt_num').text().replace(/,/g, ''), 10 );
                 var rate = Math.round( ((currentVal / basis) * 100) );
@@ -738,15 +741,12 @@ var fnVdbCoinChart = (function() {
               } else {
                 var coins = new Array(coinSize).join('<p class="img_coin"></p>');
               };
-              console.log(coinSize);
-              console.log(percentage);
-              
+
               chart
                 .append(coins)
                 .find('.img_coin').last().addClass('last');
             } 
           });
-          this.destroy();
         },
         offset: '90%',
       });
@@ -755,10 +755,9 @@ var fnVdbCoinChart = (function() {
   }
 
   function reset() {
+    console.log('reset');
+    $el.find('.img_coin').remove();
     $el.removeClass('transform');
-    $('.chart_coin').each(function(){
-      $(this).find('.img_coin').remove();
-    });
   }
 
   return {

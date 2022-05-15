@@ -254,25 +254,20 @@
   
   <script>
     $(function(){
-      // 데이터 설정 후 fnCounterUp 실행 시 해당 elemnet counterup 실행
+      // 데이터 설정 후 fnCounterUp 해당 elemnet counterup 실행
       // param ( element, delay, time )
       fnCounterUp($('.fnCounterUp'), 20, 700);
 
-      // 동전 애니메이션
-      // 카테고리별 금액 data 변경 후 fnVdbCoinChart() 실행
-      fnVdbCoinChart.animate();
-      
         // 월 선택 시
       $('.list_dropdown').find('button').on('click', function(){
         // 동전 차트 초기화
         fnVdbCoinChart.reset();
 
-        // counterUp 실행
+        // 상단 총 금액 counterUp 실행
         fnCounterUp($('.fnCounterUp'), 20, 700);
 
-        // 카테고리별 금액 data 변경 후 fnVdbCoinChart() 실행
-        $('.wrap_vdb_list li').eq(1).find('.txt_num').text('3,000'); // 변경 확인용 
-        fnVdbCoinChart.animate();
+        // 카테고리별 금액 data 변경 확인용 
+        $('.wrap_vdb_list li').eq(1).find('.txt_num').text('3,000');
       });
     });
   </script>
