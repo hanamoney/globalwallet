@@ -36,6 +36,7 @@ var registUI = function(){
   
   if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
   if ( $('.wrap_loop_scrl').length ) { _loopScrlCont(); } // 무한스크롤링 컨텐츠
+  if ( $('.fnFitToCont').length ) { _textFitToCont(); } // 택스트 사이즈 조정
   
   if ( $('.chart_bar_stacked').length ) { _barChartStacked(); } // stacked bar chart
   if ( $('.wrap_vdb_list').length ) { fnVdbCoinChart.animate(); } // 내가받은 혜택 동전차트 애니메이션 실행
@@ -557,6 +558,35 @@ var _loopScrlCont = function(){
       },10);
     }, duration);
   });
+}
+
+/**
+  * @name _textFitToCont()
+  * @description // adjust font-size to fit 
+  */
+var _textFitToCont = function(){
+  var $el = $('.fnFitToCont');
+
+  var observer = new MutationObserver(function(e){
+    console.log('1234');
+    resize();
+  });
+
+  observer.observe($el.find('.txt_num')[0], {
+    childList: true,
+    characterData: true
+  });
+
+  function resize() {
+    $el.each(function(idx, el){
+      $(this).removeAttr('style');
+      var txt = $(this).find('.txt_num');
+      if ( txt.width() + 34 > $(this).width()) {
+        $(this).css('font-size', (parseInt($(this).css('font-size')) - 3) + "px");
+      }
+    });
+  }
+  resize();
 }
 
 /**
