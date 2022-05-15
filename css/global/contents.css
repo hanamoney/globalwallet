@@ -437,6 +437,11 @@
   user-select: none;
   pointer-events: none;
 }
+.wrap_layer:not(.show) .wrap_moneybag_all .visual_hmn_moneybag::before,
+.wrap_layer:not(.show) .wrap_moneybag_all .list_moneybag,
+.wrap_layer:not(.show) .wrap_moneybag_all .list_moneybag::after {
+  display: none;
+}
 .wrap_banner.hmn_201 {
   background: url('../../images/global/bg_hmn_201.png') no-repeat 50%;
   background-size: cover;
