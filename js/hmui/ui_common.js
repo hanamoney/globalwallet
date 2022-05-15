@@ -27,16 +27,19 @@ var registUI = function(){
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
-  if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
-  if ( $('.wrap_loop_scrl').length ) { _loopScrlCont(); } // 혜택리스트
-  if ( $('.chart_bar_stacked').length ) { _barChartStacked(); } // stacked bar chart
-  if ( $('.wrap_vdb_list').length ) { fnVdbCoinChart.animate(); } // 내가받은 혜택 동전차트 애니메이션 실행
   if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
   if ( $('.section_faq').length ) { _faqAcco(); } // faq 아코디언
   if ( $('.section_terms .btn_acco').length ) { _agreeAccoBtn(); } // 약관동의 아코디언 기능
   if ( $('.section_terms .wrap_chk_all').length ) { _agreeCheckAll(); } // 약관전체동의
   if ( $('.wrap_tooltip').length ) { _tooltip(); } // 툴팁
   if ( $('.wrap_layer').length ) { _layerPop(); } // 레이어팝업
+  
+  if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
+  if ( $('.wrap_loop_scrl').length ) { _loopScrlCont(); } // 무한스크롤링 컨텐츠
+  
+  if ( $('.chart_bar_stacked').length ) { _barChartStacked(); } // stacked bar chart
+  if ( $('.wrap_vdb_list').length ) { fnVdbCoinChart.animate(); } // 내가받은 혜택 동전차트 애니메이션 실행
+
 };
 
 /**
@@ -216,7 +219,7 @@ var _inpChkVal = function(el) {
   });
 };
 
-/*
+/**
   * @name _dropDown()
   * @description // dropdown 산텍
  */
@@ -248,117 +251,10 @@ var _dropDown = function() {
 }
 
 /**
-  * @name _showBenefitList()
-  * @description // 혜택리스트
-  */
-var _showBenefitList = function() {
-  var $el = $('.wrap_item_benefit');
-  var tit = $el.find('.tit_wrap');
-  var list = $el.find('.list_benefit li');
-
-  if (!$el.is(':visible')) return;
-  if ($el.parents('.wrap_layer').length ){
-    // F-Pop 일 경우 
-    setTimeout(function(){
-      _titShow();
-      _listshow();
-    },400);
-  } else {
-    _titShow();
-    _listshow();
-  }
-
-  function _titShow() {
-    tit.waypoint({
-      handler: function() {
-        $el.find('.tit_wrap').addClass('transform');
-      },
-      offset: '100%'
-    });
-  }
-
-  function _listshow() {
-    list.each(function(){
-      var $this = $(this);
-      $this.waypoint({
-        element: this,
-        handler: function() {
-          $this.addClass('transform active');
-          $('.list_benefit li.active').each(function(idx){
-            var delay = 0.1 * idx + 's';
-            $(this).css({
-              'transition-delay': delay
-            });
-          });
-          setTimeout(function(){
-            list.removeClass('active');
-          },100);
-          
-        },
-        context: '.content_layer',
-        offset: '100%'
-      });
-    });
-  }
-}
-
-/**
-  * @name _loopScrlCont()
-  * @description // 무한 자동 스크롤 컨텐츠
-  */
-var _loopScrlCont = function(){
-  $('.wrap_loop_scrl').find('ul').each(function(){
-    var $list = $(this),
-      listClass = $list.attr('class'),
-      dir = $list.attr('dir'),
-      $slide = $list.find('li').clone(),
-      length = $list.find('li').length,
-      width = $list.find('li').outerWidth(true),
-      left = -(width * length),
-      duration = 2000 * length;
-    if (dir === 'rtl') {
-      left = width * length;
-    }
-
-    $list.append($slide);
-    $list.prepend($slide.clone());
-    
-
-    $list.css({
-      'transform': 'translateX(' + left + 'px)',
-      'transition-duration': duration + 'ms',
-    });
-
-    var interval = setInterval(function(){
-      $list.css({
-        'transform': 'translateX(0)',
-        'transition-duration': '0s',
-      });
-      setTimeout(function(){
-        $list.css({
-          'transform': 'translateX(' + left + 'px)',
-          'transition-duration': duration + 'ms',
-        });
-      },10);
-    }, duration);
-  });
-}
-
-/**
-  * @name _barChartStacked()
-  * @description // animate stacked bar chart
-  */
-var _barChartStacked = function(){
-  $('.chart_bar_stacked').each(function(){
-    fnAnimateBar($(this));
-  });
-}
-
-/**
   * @name _simpleAcco()
   * @description // 단일 아코디언 버튼
   */
-var _simpleAcco = function() {
+ var _simpleAcco = function() {
   var accoBtn = $('.fnSimpleAcco').find('.btn_acco');
   accoBtn.on('click',function(){
     var $accoCont = $(this).siblings('.wrap_acco');
@@ -567,6 +463,113 @@ var _layerPop = function() {
 };
 
 /**
+  * @name _showBenefitList()
+  * @description // 혜택리스트
+  */
+var _showBenefitList = function() {
+  var $el = $('.wrap_item_benefit');
+  var tit = $el.find('.tit_wrap');
+  var list = $el.find('.list_benefit li');
+
+  if (!$el.is(':visible')) return;
+  if ($el.parents('.wrap_layer').length ){
+    // F-Pop 일 경우 
+    setTimeout(function(){
+      _titShow();
+      _listshow();
+    },400);
+  } else {
+    _titShow();
+    _listshow();
+  }
+
+  function _titShow() {
+    tit.waypoint({
+      handler: function() {
+        $el.find('.tit_wrap').addClass('transform');
+      },
+      offset: '100%'
+    });
+  }
+
+  function _listshow() {
+    list.each(function(){
+      var $this = $(this);
+      $this.waypoint({
+        element: this,
+        handler: function() {
+          $this.addClass('transform active');
+          $('.list_benefit li.active').each(function(idx){
+            var delay = 0.1 * idx + 's';
+            $(this).css({
+              'transition-delay': delay
+            });
+          });
+          setTimeout(function(){
+            list.removeClass('active');
+          },100);
+          
+        },
+        context: '.content_layer',
+        offset: '100%'
+      });
+    });
+  }
+}
+
+/**
+  * @name _loopScrlCont()
+  * @description // 무한 자동 스크롤 컨텐츠
+  */
+var _loopScrlCont = function(){
+  $('.wrap_loop_scrl').find('ul').each(function(){
+    var $list = $(this),
+      listClass = $list.attr('class'),
+      dir = $list.attr('dir'),
+      $slide = $list.find('li').clone(),
+      length = $list.find('li').length,
+      width = $list.find('li').outerWidth(true),
+      left = -(width * length),
+      duration = 2000 * length;
+    if (dir === 'rtl') {
+      left = width * length;
+    }
+
+    $list.append($slide);
+    $list.prepend($slide.clone());
+    
+
+    $list.css({
+      'transform': 'translateX(' + left + 'px)',
+      'transition-duration': duration + 'ms',
+    });
+
+    var interval = setInterval(function(){
+      $list.css({
+        'transform': 'translateX(0)',
+        'transition-duration': '0s',
+      });
+      setTimeout(function(){
+        $list.css({
+          'transform': 'translateX(' + left + 'px)',
+          'transition-duration': duration + 'ms',
+        });
+      },10);
+    }, duration);
+  });
+}
+
+/**
+  * @name _barChartStacked()
+  * @description // animate stacked bar chart
+  */
+var _barChartStacked = function(){
+  $('.chart_bar_stacked').each(function(){
+    fnAnimateBar($(this));
+  });
+}
+
+/**
   * @name fnOpenLayerPop()
   * @description 레이어팝업 열기
   * @param {string} popID 팝업ID 
@@ -683,6 +686,22 @@ var skeletonLoading = (function(){
 })();
 
 /**
+  * @name fnCounterUp()
+  * @description number counter up
+  * @param {Element | string} el element 
+  * @param {number} delay The delay in milliseconds per number count up
+  * @param {number} time The total duration of the count up animation
+  */
+var fnCounterUp = function(el, delay, time) {
+  var $el = $(el);
+
+  $el.counterUp({
+    delay: delay,
+    time: time
+  });
+}
+
+/**
   * @name fnAnimateBar()
   * @description bar chart animation
   * @param {Element | string} el bar chart element 
@@ -767,19 +786,3 @@ var fnVdbCoinChart = (function() {
     reset: reset
   }
 })();
-
-/**
-  * @name fnCounterUp()
-  * @description number counter up
-  * @param {Element | string} el element 
-  * @param {number} delay The delay in milliseconds per number count up
-  * @param {number} time The total duration of the count up animation
-  */
-var fnCounterUp = function(el, delay, time) {
-  var $el = $(el);
-
-  $el.counterUp({
-    delay: delay,
-    time: time
-  });
-}
