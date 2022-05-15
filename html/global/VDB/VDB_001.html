@@ -46,12 +46,12 @@
             <!-- CASE “모은 돈과 아낀 돈” 모두 있는 경우 -->
             <div class="my_benefit_info">
               <div class="wrap_tit type_center">
-                <h2 class="tit">총 <em class="txt_amount"><span class="txt_num">400,000</span>원</em> 혜택을<br>받았어요!</h2>
+                <h2 class="tit">총 <em class="txt_amount"><span class="txt_num fnCounterUp">400,000</span>원</em> 혜택을<br>받았어요!</h2>
               </div>
               <div class="visual_vdb_total">
-                <div class="bubble accum"><p class="total_amount"><em class="txt_num">999,999</em>원</p><p>모았어요!</p></div>
+                <div class="bubble accum"><p class="total_amount fnFitToCont"><em class="txt_num">999,999</em>원</p><p>모았어요!</p></div>
                 <span class="img_character_dance" aria-hidden="true"></span>
-                <div class="bubble saved"><p class="total_amount"><em class="txt_num">999,999</em>원</p><p>아꼈어요!</p></div>
+                <div class="bubble saved"><p class="total_amount fnFitToCont"><em class="txt_num">999,999</em>원</p><p>아꼈어요!</p></div>
               </div>
             </div>
 
@@ -61,33 +61,33 @@
                 <h2 class="tit"><em>나만 없어!</em><br>하나머니 혜택 ㅠㅠ</h2>
               </div>
               <div class="visual_vdb_total">
-                <div class="bubble accum"><p class="total_amount"><em class="txt_num">0</em>원</p><p>모았어요!</p></div>
+                <div class="bubble accum"><p class="total_amount fnFitToCont"><em class="txt_num">0</em>원</p><p>모았어요!</p></div>
                 <span class="img_character_cry" aria-hidden="true"></span><!--img_character_cry 이미지 변경 -->
-                <div class="bubble saved"><p class="total_amount"><em class="txt_num">0</em>원</p><p>아꼈어요!</p></div>
+                <div class="bubble saved"><p class="total_amount fnFitToCont"><em class="txt_num">0</em>원</p><p>아꼈어요!</p></div>
               </div>
             </div>
 
             <!-- CASE #2 ‘모은 돈”이 없는 경우 -->
             <div class="my_benefit_info no_accum"><!-- no_accum 클래스 추가 -->
               <div class="wrap_tit type_center">
-                <h2 class="tit">총 <em class="txt_amount"><span class="txt_num">400,000</span>원</em>을<br>아꼈어요!</h2>
+                <h2 class="tit">총 <em class="txt_amount"><span class="txt_num fnCounterUp">400,000</span>원</em>을<br>아꼈어요!</h2>
               </div>
               <div class="visual_vdb_total">
-                <div class="bubble accum"><p class="total_amount"><em class="txt_num">0</em>원</p><p>모았어요!</p></div>
+                <div class="bubble accum"><p class="total_amount fnFitToCont"><em class="txt_num">0</em>원</p><p>모았어요!</p></div>
                 <span class="img_character_dance" aria-hidden="true"></span>
-                <div class="bubble saved"><p class="total_amount"><em class="txt_num">999,999</em>원</p><p>아꼈어요!</p></div>
+                <div class="bubble saved"><p class="total_amount fnFitToCont"><em class="txt_num">999,999</em>원</p><p>아꼈어요!</p></div>
               </div>
             </div>
 
             <!-- CASE #3 ‘아낀 돈”이 없는 경우 -->
             <div class="my_benefit_info no_saved"><!-- no_saved 클래스 추가 -->
               <div class="wrap_tit type_center">
-                <h2 class="tit">총 <em class="txt_amount"><span class="txt_num">400,000</span>원</em>을<br>모았어요!</h2>
+                <h2 class="tit">총 <em class="txt_amount"><span class="txt_num fnCounterUp">400,000</span>원</em>을<br>모았어요!</h2>
               </div>
               <div class="visual_vdb_total">
-                <div class="bubble accum"><p class="total_amount"><em class="txt_num">999,999</em>원</p><p>모았어요!</p></div>
+                <div class="bubble accum"><p class="total_amount fnFitToCont"><em class="txt_num">999,999</em>원</p><p>모았어요!</p></div>
                 <span class="img_character_dance" aria-hidden="true"></span>
-                <div class="bubble saved"><p class="total_amount"><em class="txt_num">0</em>원</p><p>아꼈어요!</p></div>
+                <div class="bubble saved"><p class="total_amount fnFitToCont"><em class="txt_num">0</em>원</p><p>아꼈어요!</p></div>
               </div>
             </div>
           </div>
@@ -101,13 +101,13 @@
                 <ul class="wrap_vdb_list">
                   <li>
                     <p class="tit_counter"><span class="num">1</span><span>그 외 적립</span></p>
-                    <div class="chart_coin"></div>
-                    <p class="txt_amount"><em class="txt_num">100,000</em>원</p>
+                    <div class="chart_coin" data-percent="100"></div>
+                    <p class="txt_amount fnFitToCont"><em class="txt_num">100,000</em>원</p>
                   </li>
                   <li>
                     <p class="tit_counter"><span class="num">2</span><span>포인트전환 적립</span></p>
-                    <div class="chart_coin"></div>
-                    <p class="txt_amount"><em class="txt_num">70,000</em>원</p>
+                    <div class="chart_coin" data-percent="0"></div>
+                    <p class="txt_amount fnFitToCont"><em class="txt_num">70,000</em>원</p>
                   </li>
                   <!-- 항목이 없는 경우 empty 클래스 추가-->
                   <li class="empty">
@@ -148,13 +148,13 @@
                 <ul class="wrap_vdb_list">
                   <li>
                     <p class="tit_counter"><span class="num">1</span><span>해외 ATM 출금</span></p>
-                    <div class="chart_coin"></div>
-                    <p class="txt_amount"><em class="txt_num">100,000</em>원</p>
+                    <div class="chart_coin" data-percent="100"></div>
+                    <p class="txt_amount fnFitToCont"><em class="txt_num">100,000</em>원</p>
                   </li>
                   <li>
                     <p class="tit_counter"><span class="num">2</span><span>해외결제</span></p>
-                    <div class="chart_coin"></div>
-                    <p class="txt_amount"><em class="txt_num">70,000</em>원</p>
+                    <div class="chart_coin" data-percent="0"></div>
+                    <p class="txt_amount fnFitToCont"><em class="txt_num">70,000</em>원</p>
                   </li>
                   <!-- 항목이 없는 경우 empty 클래스 추가-->
                   <li class="empty">
@@ -253,7 +253,28 @@
   </main>
   
   <script>
-    
+    $(function(){
+      // 데이터 설정 후 fnCounterUp 실행 시 해당 elemnet counterup 실행
+      // param ( element, delay, time )
+      fnCounterUp($('.fnCounterUp'), 20, 700);
+
+      // 동전 애니메이션
+      // 카테고리별 금액 data 변경 후 fnVdbCoinChart() 실행
+      fnVdbCoinChart.animate();
+      
+        // 월 선택 시
+      $('.list_dropdown').find('button').on('click', function(){
+        // 동전 차트 초기화
+        fnVdbCoinChart.reset();
+
+        // counterUp 실행
+        fnCounterUp($('.fnCounterUp'), 20, 700);
+
+        // 카테고리별 금액 data 변경 후 fnVdbCoinChart() 실행
+        $('.wrap_vdb_list li').eq(1).find('.txt_num').text('3,000'); // 변경 확인용 
+        fnVdbCoinChart.animate();
+      });
+    });
   </script>
-</body>
+</body
 </html>

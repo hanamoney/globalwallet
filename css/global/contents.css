@@ -775,6 +775,30 @@
   background: #E1E7EA;
   transform: translateX(-50%);
 }
+.chart_coin .img_coin {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-size: 3.3rem auto;
+  transform: translateY(0);
+  transition: transform 0.2s;
+}
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(1) { transform: translateY(8.4rem); transition-delay: 1s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(2) { transform: translateY(7.8rem); transition-delay: 1.1s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(3) { transform: translateY(7.2rem); transition-delay: 1.2s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(4) { transform: translateY(6.6rem); transition-delay: 1.3s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(5) { transform: translateY(6.0rem); transition-delay: 1.4s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(6) { transform: translateY(5.4rem); transition-delay: 1.5s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(7) { transform: translateY(4.8rem); transition-delay: 1.6s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(8) { transform: translateY(4.2rem); transition-delay: 1.7s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(9) { transform: translateY(3.6rem); transition-delay: 1.8s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(10) { transform: translateY(3.6rem); transition-delay: 1.9s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(11) { transform: translateY(3.0rem); transition-delay: 2.0s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(12) { transform: translateY(2.4rem); transition-delay: 2.1s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(13) { transform: translateY(1.8rem); transition-delay: 2.2s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(14) { transform: translateY(1.2rem); transition-delay: 2.3s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(15) { transform: translateY(0.6rem); transition-delay: 2.4s; }
+
 .wrap_vdb_list li.empty .chart_coin {
   margin-bottom: 3.2rem;
 }

@@ -3594,6 +3594,11 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   height: 7.9rem;
   background-image: url('../../images/hmui/character/img_character_shopping.png');
 }
+.img_coin {
+  width: 3.3rem;
+  height: 1.3rem;
+  background-image: url('../../images/hmui/img_coin.png');
+}
 
 @supports ((-webkit-backdrop-filter:none) or (backdrop-filter:none)) {
   #header.scrolled .inner_fixed::after {

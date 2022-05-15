@@ -700,3 +700,85 @@ var fnAnimateBar = function(el) {
     offset: '90%'
   });
 }
+
+/**
+  * @name fnVdbCoinChart.animate()
+  * @description 내가받은 혜택 동전 애니메이션
+  * @url VDB_001
+  */
+var fnVdbCoinChart = (function() {
+  var $el;
+
+  function animate() {
+    $el = $('.wrap_vdb_list');
+    $el.each(function(idx, el){
+      var coinChart = new Waypoint({
+        element: $(el),
+        handler: function() {
+          $(el).addClass('transform');
+          $(el).find('li').each(function(idx, listEl){
+            if ( !$(this).hasClass('empty') ) {
+              var chart = $(this).find('.chart_coin');
+              var coinH = 6;
+              
+              // 첫번째 카테고리 기준 비율 계산 data-percent 설정
+              if ( idx > 0 ) {
+                var basis = parseInt( $(el).find('li:first-child').find('.txt_num').text().replace(/,/g, ''), 10 );
+                var currentVal = parseInt( $(this).find('.txt_num').text().replace(/,/g, ''), 10 );
+                var rate = Math.round( ((currentVal / basis) * 100) );
+  
+                chart.data('percent', rate);
+              }
+              
+              // data-percent 값을 가져와 coin 이미지 생성
+              var percentage = chart.data('percent');
+              var coinSize = parseInt( (chart.outerHeight(true) * percentage / 100) / coinH );
+              if (coinSize < 6) {
+                var coins = '<p class="img_coin"></p>';
+              } else {
+                var coins = new Array(coinSize).join('<p class="img_coin"></p>');
+              };
+              console.log(coinSize);
+              console.log(percentage);
+              
+              chart
+                .append(coins)
+                .find('.img_coin').last().addClass('last');
+            } 
+          });
+          this.destroy();
+        },
+        offset: '90%',
+      });
+  
+    });
+  }
+
+  function reset() {
+    $el.removeClass('transform');
+    $('.chart_coin').each(function(){
+      $(this).find('.img_coin').remove();
+    });
+  }
+
+  return {
+    animate: animate,
+    reset: reset
+  }
+})();
+
+/**
+  * @name fnCounterUp()
+  * @description number counter up
+  * @param {Element | string} el element 
+  * @param {number} delay The delay in milliseconds per number count up
+  * @param {number} time The total duration of the count up animation
+  */
+var fnCounterUp = function(el, delay, time) {
+  var $el = $(el);
+
+  $el.counterUp({
+    delay: delay,
+    time: time
+  });
+}
