@@ -180,9 +180,9 @@
     }
 
     // 같은 성별의 캐릭터만 나왔을 경우 첫번째를 이성 캐릭터로 변경
-    if ( randomArr.every(num => num < 5 ) ){
+    if ( randomArr.every(function(num) { num < 5 }) ){
       randomArr[0] = Math.floor(Math.random()*(8-5+1)) + 5;
-    } else if ( randomArr.every(num => num > 4) ) {
+    } else if ( randomArr.every(function(num) { num > 4 }) ) {
       randomArr[0] = Math.floor(Math.random()*(4-1+1)) + 1;
     }
 
