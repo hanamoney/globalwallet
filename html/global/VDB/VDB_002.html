@@ -209,9 +209,9 @@
       changeSlideInfo(idx, $active);
 
       // bar chart animation
-      // 모은돈, 아낀돈 비율 해당 bar element의 data-percent 값 변경 후 fnAnimateBar 실행
-      $('.chart_bar_stacked').find('.bar').eq(0).data('percent', 60);
-      $('.chart_bar_stacked').find('.bar').eq(1).data('percent', 40);
+      // 모은돈, 아낀돈 금액 data 변경 후 fnAnimateBar() 실헹하면 percentage 계산되어 bar chart 애니메이션
+      $('.chart_bar_stacked').find('.bar').eq(0).find('.txt_num').text('1,000,000'); //data 변경 확인용 
+      $('.chart_bar_stacked').find('.bar').eq(1).find('.txt_num').text('0');
       fnAnimateBar('.chart_bar_stacked');
     });
 

@@ -708,11 +708,18 @@ var fnCounterUp = function(el, delay, time) {
   */
 var fnAnimateBar = function(el) {
   var $el = $(el),
+      basis = 0,
       bar = $el.find('.bar');
+  bar.each(function(){
+    basis += parseInt( $(this).find('.txt_num').text().replace(/,/g, ''), 10 );
+  })
 
   $el.waypoint({
     handler: function() {
       bar.each(function() {
+        var amount = parseInt( $(this).find('.txt_num').text().replace(/,/g, ''), 10 );
+        var rate = Math.round( ((amount / basis) * 100) );
+        $(this).data('percent', rate);
         var percentage = $(this).data('percent') + '%';
         $(this).css('width', percentage);
       });
