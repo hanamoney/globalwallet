@@ -718,7 +718,6 @@ var fnVdbCoinChart = (function() {
           if ( $(el).hasClass('transform') ) { 
             return;
           }
-          $(el).addClass('transform');
           $(el).find('li').each(function(listIdx, listEl){
             if ( !$(this).hasClass('empty') ) {
               var chart = $(this).find('.chart_coin');
@@ -745,10 +744,13 @@ var fnVdbCoinChart = (function() {
               chart
                 .append(coins)
                 .find('.img_coin').last().addClass('last');
+              setTimeout(function(){
+                $(el).addClass('transform');
+              },100);
             } 
           });
         },
-        offset: '90%',
+        offset: '70%',
       });
   
     });
