@@ -3405,7 +3405,8 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  transition: transform 12s;
+  transition-timing-function: linear;
+  /* transition: transform 12s; */
   transform: translateX(0);
 }
 .wrap_loop_scrl li {
