@@ -522,41 +522,39 @@ var _showBenefitList = function() {
   * @description // 무한 자동 스크롤 컨텐츠
   */
 var _loopScrlCont = function(){
+  var styles = '';
   $('.wrap_loop_scrl').find('ul').each(function(){
     var $list = $(this),
       listClass = $list.attr('class'),
-      dir = $list.attr('dir'),
+      dir = $list.data('dir'),
       $slide = $list.find('li').clone(),
       length = $list.find('li').length,
       width = $list.find('li').outerWidth(true),
       left = -(width * length),
       duration = 2000 * length;
-    if (dir === 'rtl') {
-      left = width * length;
-    }
 
+    if (dir === 'rtl') {
+      // left = width * length;
+      
+      styles += '.' + listClass + ' { animation: ' + listClass + ' ' + duration + 'ms linear reverse infinite ; }';
+    } else {
+      
+      styles += '.' + listClass + ' { animation: ' + listClass + ' ' + duration + 'ms linear infinite; }';
+    }
+    
     $list.append($slide);
     $list.prepend($slide.clone());
-    
+    styles += '@keyframes ' + listClass + ' { ';
+    styles += '0% { transform: translateX(0) }';
+    styles += '100% { transform: translateX(' + left + 'px) }';
+    styles += '}';
 
-    $list.css({
-      'transform': 'translateX(' + left + 'px)',
-      'transition-duration': duration + 'ms',
-    });
-
-    var interval = setInterval(function(){
-      $list.css({
-        'transform': 'translateX(0)',
-        'transition-duration': '0s',
-      });
-      setTimeout(function(){
-        $list.css({
-          'transform': 'translateX(' + left + 'px)',
-          'transition-duration': duration + 'ms',
-        });
-      },10);
-    }, duration);
   });
+
+  var styleSheet = document.createElement('style');
+  styleSheet.type = 'text/css';
+  styleSheet.innerHTML = styles;
+  document.getElementsByTagName('head')[0].appendChild(styleSheet);
 }
 
 /**

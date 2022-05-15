@@ -3405,8 +3405,6 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  transition-timing-function: linear;
-  /* transition: transform 12s; */
   transform: translateX(0);
 }
 .wrap_loop_scrl li {
@@ -3415,13 +3413,8 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   height: 6.4rem;
   margin: 0 0.5rem;
   border-radius: 50%;
-  background-color: pink;
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
 }
 
 /* chart */
