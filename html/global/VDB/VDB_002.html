@@ -182,6 +182,8 @@
           var $active = $(this.slides[idx]); 
           // slide_info 변경
           changeSlideInfo(idx, $active);
+          // bar chart animation
+          fnAnimateBar('.chart_bar_stacked');
         },
       }
     });
