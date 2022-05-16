@@ -615,7 +615,7 @@ var fnOpenLayerPop = function(popID) {
 
   $('body').addClass('open_pop');
   $el.addClass('show');
-  $el.append(dim);
+  // $el.append(dim); 2022.05.16 native dim 사용으로 삭제
 
   if ($el.find('tit_layer').length) {
     $el.find('.tit_layer').focus();
@@ -642,7 +642,7 @@ var fnCloseLayerPop = function(popID, focusEl){
 
   $el.removeClass('show');
   setTimeout(function(){
-    $el.find('.dim').remove();
+    // $el.find('.dim').remove(); 2022.05.16 native dim 사용으로 삭제
     $el.removeAttr('style');
     $('body').removeClass('open_pop');
     $focusEl.focus();
