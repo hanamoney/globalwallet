@@ -2468,7 +2468,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   line-height: 2.0rem;
   vertical-align: top;
 }
-.wrap_info_exchange .ico_cur_usd {
+.wrap_info_exchange [class^="ico_cur_"] {
   width: 1.8rem;
   height: 1.8rem;
   vertical-align: top;
