@@ -40,7 +40,6 @@ body,button,input,select,table,textarea {
 body {
   position: relative;
   -webkit-text-size-adjust: none;
-  background-color: #fff;
   color: #252E33;
 }
 html, body {
@@ -177,7 +176,7 @@ body.overflow {
   background-image: url('../../images/hmui/btn_menu_w.png');
 }
 .wrap_contents {
-
+  background-color: #fff;
 }
 .contents {
 
@@ -3252,7 +3251,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   width: 100%;
   height: 100%;
   background-image: linear-gradient(135deg, #E3E1FA 0%, #CBEFEE 100%);
