@@ -624,17 +624,323 @@
   background: linear-gradient(137.12deg, #DAFFED 0%, #EFCBEB 123.54%);
 }
 .visual_gsp_card {
+  position: relative;
+  padding: 4.1rem 0;
   background: url('../../images/global/bg_gsp2_cloud.png') no-repeat 50%;
+  background-size: 19.4rem auto;
+  background-position: 26.1vw 4.6rem;
+}
+.visual_gsp_card .img_drone_box {
+  position: absolute;
+  top: 7.0rem;
+  left: 50%;
+  transform: translateX(40%);
+}
+.visual_gsp_card .img_card_travlog {
+  
+}
+.visual_gsp_card .img_character_walk {
+  position: absolute;
+  bottom: -2.4rem;
+  left: 50%;
+  transform: translateX(-121%);
+}
+.visual_gsp_card .img_character_walk::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -7.3rem;
+  left: 0.4rem;
+  width: 4.8rem;
+  height: 2.9rem;
+  background: url('../../images/hmui/character/visual_cloud2.png') no-repeat center;
   background-size: 100%;
 }
 .section_cont.about_travlog {
   background: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);
   text-align: center;
 }
+.section_cont.about_travlog .wrap_tit {
+
+}
 .section_cont.about_travlog .tit_big_bold {
   text-align: center;
 }
-/* 해외직구 라운지 */
+.section_cont.about_travlog .visual_gsp_travlog {
+  position: relative;
+  padding-top: 46.6vw;
+}
+.section_cont.about_travlog .visual_gsp_travlog::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2.1rem;
+  left: -1.2rem;
+  z-index: 1;
+  width: 98.3vw;
+  height: 49.4vw;
+  background: url('../../images/global/visual_gsp_travlog_2.png') no-repeat 50%;
+  background-size: 100% auto;
+}
+.section_cont.about_travlog .visual_gsp_travlog .img_card_travlog {
+  position: relative;
+}
+.section_cont.about_travlog .visual_gsp_travlog .img_card_travlog {
+  position: absolute;
+  top: 4.6rem;
+  left: 50%;
+  z-index: 1;
+  width: 9.2rem;
+  height: 14.6rem;
+  transform: translateX(-50%) rotate(-11.58deg);
+  
+}
+.section_cont.about_travlog .visual_gsp_travlog .img_card_travlog::before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.2rem;
+  z-index: -1;
+  width: 6.0rem;
+  height: 9.4rem;
+  box-shadow: 8px 12px 60px rgba(18, 28, 78, 0.5);
+}
+.section_cont.about_travlog .visual_gsp_travlog .img_card_travlog::after {
+  content: '';
+  display: block;
+  
+}
+.section_cont.about_travlog .visual_gsp_travlog .box_card_type {
+  padding: 5.0rem 0 2.0rem;
+  text-align: center;
+}
+.section_cont.about_travlog .visual_gsp_travlog .box_card_type em {
+  color: #FF6161;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+}
+.section_cont.about_travlog .visual_gsp_travlog .list_ccy {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+.section_cont.about_travlog .visual_gsp_travlog .list_ccy li {
+  padding: 0 1.0rem;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+  font-weight: 300;
+}
+.section_cont.about_travlog .visual_gsp_travlog .list_ccy li [class^="ico_cur"] {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+.section_cont.about_travlog > .txt_sub {
+  color: #252E33;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 300;
+}
+.section_cont.gsp_travlog_info .box_card_type {
+  padding: 2.4rem 1.2rem 3.0rem;
+}
+.section_cont.gsp_travlog_info .wrap_tit {
+  margin: 2.0rem 0;
+}
+.section_cont.gsp_travlog_info .wrap_tit:last-child {
+  margin-bottom: 0;
+}
+.section_cont.gsp_travlog_info .wrap_box {
+  margin: 2.0rem 0;
+  padding-bottom: 1.4rem;
+}
+.section_cont.gsp_travlog_info .wrap_box .txt_sub {
+  margin-top: 0;
+}
+.section_cont.gsp_travlog_info .wrap_box .img_character_bebe {
+  position: absolute;
+  right: 1.8rem;
+  bottom: 0;
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange {
+  position: relative;
+  width: 10.4rem;
+  height: 9.0rem;
+  margin: 2.0rem auto 0;
+  text-align: center;
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange .img_globe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange .img_globe::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9.0rem;
+  height: 9.0rem;
+  background: url('../../images/hmui/img_circular.png') no-repeat center;
+  background-size: 100%;
+  transform: translate(-50%, -50%);
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_krw {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_usd {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.section_cont.gsp_travlog_info .list_benefit_label {
+  margin: 3.9rem 1.2rem 3.0rem;
+}
+.visual_gsp_receipt .box {
+  position: relative;
+  padding: 2.4rem 1.8rem 6.6rem;
+  border-radius: 1.2rem;
+  background-color: #fff;
+  text-align: center;
+  z-index: 9;
+}
+.visual_gsp_receipt .box p {
+  color: #4F5D64;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.visual_gsp_receipt .box .txt {
+  color: #000;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  font-weight: 300;
+}
+.visual_gsp_receipt .box .img_ipad {
+  margin: 2.0rem 0;
+}
+.visual_gsp_receipt .box::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 2.0rem;
+  left: 1.8rem;
+  width: calc(100% - 3.6rem);
+  height: 1.6rem;
+  border-radius: 0.7rem;
+  background-color: #4d4d4d;
+}
+.visual_gsp_receipt .box::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 2.6rem;
+  left: 2.7rem;
+  width: calc(100% - 5.4rem);
+  height: 0.4rem;
+  border-radius: 0.2rem;
+  background-color: #000;
+}
+.visual_gsp_receipt .box_receipt {
+  position: relative;
+  z-index: 10;
+  width: 61vw;
+  margin: 0 auto;
+  padding: 0 1.6rem 3.4rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  transform: translateY(-2.7rem);
+}
+.visual_gsp_receipt .box_receipt::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -2.2rem;
+  width: 100%;
+  height: 2.2rem;
+  background: url('../../images/global/bg_receipt.png') repeat-x 0%;
+  background-size: auto 2.2rem;
+}
+.visual_gsp_receipt .box_receipt .flag_fill_point {
+  height: auto;
+  margin: 3.0rem auto 2.5rem;
+  padding: 0.6rem 1.4rem 0.5rem;
+  border-radius: 2.0rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+.visual_gsp_receipt .box_receipt .row,
+.visual_gsp_receipt .box_receipt ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.visual_gsp_receipt .box_receipt .row .txt {
+  color: #6E7D85;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+.visual_gsp_receipt .box_receipt .sub {
+  margin: 1.4rem 0 0.8rem;
+  color: #323E43;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+  font-weight: 700;
+  text-align: left;
+}
+.visual_gsp_receipt .box_receipt .txt_amount {
+  color: #000;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  font-weight: 700;
+}
+.visual_gsp_receipt .box_receipt ul li {
+  margin-top: 0.6rem;
+  color: #6E7D85;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+.visual_gsp_receipt .box_receipt ul li:first-child {
+  margin-top: 0;
+}
+.visual_gsp_receipt .box_receipt .txt_cancel {
+  color: #13C9BE;
+}
+.visual_gsp_receipt .box_receipt .txt_total {
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid #4F5D64;
+  color: #000;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  text-align: right;
+}
+.visual_gsp_receipt .box_receipt .txt_total + .txt_amount {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  text-align: right;
+}
+.visual_gsp_receipt .box_receipt .row + .row {
+  margin-top: 1.4rem;
+  border-top: 1px solid #E3EBEE;
+}
+.img_ipad {
+  width: 15.2rem;
+  height: 10.0rem;
+  background-image: url('../../images/global/img_ipad.png');
+}
+/* GSP_004 해외직구 라운지 */
 .banner_overseas_lounge {
   position: relative;
 }
