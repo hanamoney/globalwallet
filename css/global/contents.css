@@ -251,6 +251,13 @@
   left: 1.2rem;
   bottom: 0;
 }
+/* TDL_006 하나머니안내 */
+.section_tab.about_hanamoney .wrap_tab_btn.type_box {
+  padding-bottom: 6.2rem;
+}
+.section_tab.about_hanamoney .wrap_box {
+  margin-top: -3.2rem;
+}
 
 /* [HMN] - 하나머니 메인 */
 .section_moneybag_all {
@@ -704,6 +711,9 @@
 /* GSP_003 */
 .wrap_box .gsp_info li {
   padding: 0.4rem 0;
+}
+.wrap_box .gsp_info .tit {
+  color: #6E7D85;
 }
 .wrap_box .gsp_info .tit,
 .wrap_box .gsp_info .txt {

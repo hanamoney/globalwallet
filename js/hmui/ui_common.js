@@ -27,6 +27,7 @@ var registUI = function(){
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
+  if ( $('.wrap_tab_btn').length ) { _tabContents(); } // 탭
   if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
   if ( $('.section_faq').length ) { _faqAcco(); } // faq 아코디언
   if ( $('.section_terms .btn_acco').length ) { _agreeAccoBtn(); } // 약관동의 아코디언 기능
@@ -251,10 +252,32 @@ var _dropDown = function() {
 }
 
 /**
+  * @name _tabContents()
+  * @description // 탭
+  */
+var _tabContents = function() {
+  var $tabSection;
+  var $tabBtn = $('.wrap_tab_btn').find('.btn_tab_box');
+
+  $tabBtn.on('click', function() {
+    $tabSection = $(this).closest('.section_tab');
+    var idx = $(this).closest('li').index(),
+      $tabCont = $tabSection.find('.tab_cont');
+
+    $(this).closest('li').addClass('on').siblings().removeClass('on');
+    $tabCont.eq(idx).addClass('on').siblings().removeClass('on');
+
+    if ($tabSection.hasClass('type_fullpage')) {
+      $(document).scrollTop(0);
+    }
+  });
+}
+
+/**
   * @name _simpleAcco()
   * @description // 단일 아코디언 버튼
   */
- var _simpleAcco = function() {
+var _simpleAcco = function() {
   var accoBtn = $('.fnSimpleAcco').find('.btn_acco');
   accoBtn.on('click',function(){
     var $accoCont = $(this).siblings('.wrap_acco');
