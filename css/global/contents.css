@@ -487,13 +487,6 @@
   background: url('../../images/global/bg_gsp1_cloud.png') no-repeat left bottom;
   background-size: 100% auto;
 }
-.img_logo_amazone {
-  display: inline-block;
-  width: 6.0rem;
-  height: 2.1rem;  
-  background: url('../../images/hmui/company/logo_comp_amazon.png') no-repeat 50%;
-  background-size: 100%;
-}
 .visual_gsp_overseas .img_character_hahamom {
   position: absolute;
   bottom: -7.5vw;
@@ -693,7 +686,6 @@
   width: 9.2rem;
   height: 14.6rem;
   transform: translateX(-50%) rotate(-11.58deg);
-  
 }
 .section_cont.about_travlog .visual_gsp_travlog .img_card_travlog::before {
   content: '';
@@ -709,7 +701,14 @@
 .section_cont.about_travlog .visual_gsp_travlog .img_card_travlog::after {
   content: '';
   display: block;
-  
+  position: absolute;
+  right: -76%;
+  top: -13%;
+  width: 7.5rem;
+  height: 4.0rem;
+  background: url('../../images/global/visual_gsp_travlog.png') no-repeat 50%;
+  background-size: 100%;
+  transform: rotate(11.58deg);
 }
 .section_cont.about_travlog .visual_gsp_travlog .box_card_type {
   padding: 5.0rem 0 2.0rem;
@@ -939,6 +938,86 @@
   width: 15.2rem;
   height: 10.0rem;
   background-image: url('../../images/global/img_ipad.png');
+}
+.visual_gsp_atm {
+  margin: 2.0rem 0;
+  text-align: center;
+}
+.gsp_travlog_info .atm_info {
+  margin: 3.6rem 0 1.0rem;
+  text-align: center;
+}
+.gsp_travlog_info .atm_info .txt {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+.gsp_travlog_info .atm_info .emoji_atm {
+  width: 1.9rem;
+  height: 3.2rem;
+  margin: 0 0.3rem 0 0.6rem;
+  vertical-align: middle;
+}
+.gsp_travlog_info .atm_info strong {
+  margin-top: 1.0rem;
+  display: block;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+}
+.gsp_travlog_info .atm_info ul {
+  margin-top: 3.0rem;
+}
+.gsp_travlog_info .atm_info ul li {
+  display: inline-block;
+  width: auto;
+  padding: 0 1.5rem;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+}
+.gsp_travlog_info .atm_info [class^="img_logo"] {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.gsp_travlog_info .visual_gsp_cashback {
+  position: relative;
+  height: 38.8vw;
+  margin: 0 -1.2rem;
+}
+.gsp_travlog_info .visual_gsp_cashback .img_coinpop {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 10.9rem;
+  height: 10.5rem;
+  background-image: url('../../images/global/visual_gsp_coin.png');
+  transform: translateX(-56%);
+}
+.gsp_travlog_info .visual_gsp_cashback .img_confetti_1 {
+  position: absolute;
+  left: -6.6rem;
+  bottom: 2.5rem;
+  width: 111.1vw;
+  height: 40.8vw;
+  background-image: url('../../images/global/bg_gsp_confetti.png');
+}
+.gsp_travlog_info .visual_gsp_cashback .img_confetti_2 {
+  position: absolute;
+  right: -3.7rem;
+  bottom: 2.5rem;
+  width: 82.2vw;
+  height: 54.7vw;
+  background-image: url('../../images/global/bg_gsp_confetti_2.png');
+}
+.gsp_travlog_info .wrap_loop_scrl.gsp_kr_store {
+  overflow: hidden;
+  width: calc(100% + 2.4rem);
+  margin: 0 -1.2rem 4.0rem;
+}
+.gsp_travlog_info .wrap_loop_scrl.gsp_kr_store li {
+  width: 6.0rem;
+  height: 6.0rem;
+  margin: 0 0.6rem;
 }
 /* GSP_004 해외직구 라운지 */
 .banner_overseas_lounge {
