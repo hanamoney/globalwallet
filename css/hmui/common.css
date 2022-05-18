@@ -132,6 +132,7 @@ body.overflow {
 }
 #header.scrolled .inner_fixed {
   position: relative;
+  height: 5.0rem;
 }
 #header.scrolled .inner_fixed::after {
   content: '';
@@ -566,6 +567,13 @@ section[data-roll] {
   width: 8.6rem;
   height: 1.8rem;
   background: url('../../images/hmui/logo_hanamoney.png') no-repeat 50%;
+  background-size: 100%;
+}
+.logo_hanamoney_box {
+  display: inline-block;
+  width: 5.6rem;
+  height: 5.6rem;
+  background: url('../../images/hmui/logo_hanamoney_box.png') no-repeat 50%;
   background-size: 100%;
 }
 .btn_ico_prev {
