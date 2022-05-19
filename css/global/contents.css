@@ -2036,17 +2036,4 @@
     -webkit-filter: blur(5px);
     filter: blur(5px);
   }
-  /* .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide {
-    -webkit-filter: blur(3px);
-    filter: blur(3px);
-  } */
-  /* .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-prev,
-  .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-next {
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
-  } */
-  .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-active {
-    -webkit-filter: none;
-    filter: none;
-  }
 }
