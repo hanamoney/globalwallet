@@ -135,7 +135,7 @@
               <p class="txt_sub">계좌송금, 연락처송금 쉽고 빠르게!</p>
             </div>
             <div class="visual_utl_remitt" aria-hidden="true">
-              <span class="img_flip"></span>
+              <span class="flip_remitt"></span>
             </div>
             <div class="wrap_btn type_full">
               <a href="#none" class="btn_box_m btn_primary">무료송금하기</a>
@@ -196,8 +196,10 @@
         },
         on: {
           slideChange: function () {
-            $('.swiper-slide').removeAttr('style');
-            $('.swiper-slide-prev').before().css({'margin-bottom':'-6vw'});
+            var wrapperEl = $(this.wrapperEl);
+            wrapperEl.find('.swiper-slide').removeAttr('style');
+            wrapperEl.find('.swiper-slide-prev').css({'transform':'translate3d(25vw,8vw,0)'});
+            wrapperEl.find('.swiper-slide-next').next().next().css({'transform':'translate3d(25vw,-8vw,0)'});
           },
         },
       });
