@@ -1851,6 +1851,10 @@
 }
 .section_cont.guide_hanamoney_2 .utl_gift_store ul {
   margin-top: 1.2rem;
+  animation-play-state: paused;
+}
+.section_cont.guide_hanamoney_2.transform .utl_gift_store ul {
+  animation-play-state: running;
 }
 .section_cont.guide_hanamoney_2 .utl_gift_store ul:first-child {
   margin-top: 0;
@@ -1955,6 +1959,8 @@
   height: 8.0rem;
   margin: -0.6rem auto 0;
   transform-style: preserve-3d;
+}
+.section_cont.guide_hanamoney_5.transform .visual_utl_remitt .flip_remitt {
   -webkit-animation: filpHold180 6s ease-out infinite;
   animation: filpHold180 6s ease-out infinite;
 }
@@ -2000,7 +2006,6 @@
   background: url('../../images/global/bg_utl_app.png') no-repeat 50%;
   background-size: 100%;
   transform: scale(0.5);
-  animation: scalePop 0.3s cubic-bezier(0.24, 0, 0.5, 1) forwards, floatwithScale 6s 0.5s ease-in-out infinite;
 }
 .section_cont.guide_hanamoney_6 .wrap_tit .tit_section_center {
   margin-top: 2.0rem;
@@ -2012,6 +2017,9 @@
   margin: 18.8vw 0 0 -18.8vw;
   background: url('../../images/global/img_utl_handapp.png') no-repeat 50%;
   background-size: 100%;
+}
+.section_cont.guide_hanamoney_6.transform::before {
+  animation: scalePop 0.3s cubic-bezier(0.24, 0, 0.5, 1) forwards, floatwithScale 6s 0.5s ease-in-out infinite;
 }
 
 @supports ((-webkit-filter:none) or (filter:none)) {

@@ -847,3 +847,18 @@ var fnVdbCoinChart = (function() {
     reset: reset
   }
 })();
+
+/**
+  * @name fnCheckInView()
+  * @description 뷰포트 안에 있는 지 체크
+  * @param {Element | string} el 뷰포트 안에 있는지 체크할 element 
+  */
+var fnCheckInView = function(el) {
+  var posTop = $(el).offset().top;
+  var posBottom = posTop + $(el).outerHeight();
+
+  var viewTop = $(window).scrollTop();
+  var viewBottom = viewTop + $(window).height();
+
+  return posBottom > viewTop && posTop < viewBottom;
+}

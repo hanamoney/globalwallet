@@ -168,6 +168,7 @@
         freeMode: true,
         loop: true,
         slidesPerView: 'auto',
+        observeParents: true,
         autoplay: {
           delay: 3000,
           disableOnInteraction: false
@@ -180,9 +181,9 @@
         loop: true,
         centeredSlides: true,
         slidesPerView: 'auto',
-        autoplay: {
-          delay: 3000,
-        },
+        // autoplay: {
+        //   delay: 3000,
+        // },
       });
 
       // 포인트 swiper
@@ -197,6 +198,22 @@
         },
       });
 
+      // 스크롤에 따른 animation 시작
+      $(window).on('scroll', function(){
+        $('.section_cont').each(function(idx, el){
+          if ( fnCheckInView($(el))) {
+            if ($(el).hasClass('guide_hanamoney_1')) { accumSwiper.autoplay.start(); }
+            else if ($(el).hasClass('guide_hanamoney_3')) { chargeSwiper.autoplay.start(); }
+            else if ($(el).hasClass('guide_hanamoney_4')) { pointSwiper.autoplay.start(); }
+            else { $(el).addClass('transform'); }
+          } else {
+            if ($(el).hasClass('guide_hanamoney_1')) { accumSwiper.autoplay.stop(); }
+            else if ($(el).hasClass('guide_hanamoney_3')) { chargeSwiper.autoplay.stop(); }
+            else if ($(el).hasClass('guide_hanamoney_4')) { pointSwiper.autoplay.stop(); }
+            else { $(el).removeClass('transform'); }
+          }
+        });
+      });
 
     });
   </script>
