@@ -61,11 +61,15 @@ var _headerControl = function(){
   });
 };
 
-var _headerPopControl = function(){
+/**
+  * @name _headerControl()
+  * @description F-POP 콘텐츠 스크롤에 따른 Header
+  * @param {Element} el 팝업 element
+  */
+var _headerPopControl = function(el){
   var defaultHeight = 50; 
 
-  // F-Pop 콘텐츠 스크롤
-  $('.wrap_layer.type_full .content_layer').on('scroll', function(){
+  $(el).find('.content_layer').on('scroll', function(){
     var $this = $(this);
 
     var $header = $this.closest('.inner_layer').find('.head_layer');
@@ -653,7 +657,7 @@ var fnOpenLayerPop = function(popID) {
 
   // 풀팝업인 경우 헤더스크롤 이벤트 실행
   if ($el.hasClass('type_full')) {
-    _headerPopControl();
+    _headerPopControl($el);
   }
 
   // 딤 클릭 시 해당 팝업 닫기
