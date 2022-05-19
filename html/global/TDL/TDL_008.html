@@ -19,16 +19,28 @@
 </head>
 <body>
   <main id="root">
-    <header id="header">
-      <div class="inner_fixed">
-        <h2 class="logo_hanamoney"><span class="blind">하나머니</span></h2>
-      </div>
-    </header>
+    <header id="header"></header>
     <!-- // header -->
 
     <div id="contents" class="wrap_contents">
       <div class="contents">
         <section data-roll="TDL">
+          
+        </section>
+        <!-- // section -->
+
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <!-- 상세팝업 -->
+    <div id="popupId" class="wrap_layer type_full">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="logo_hanamoney"><span class="blind">하나머니</span></h2>
+        </div>
+
+        <div class="content_layer">
           <div class="section_detail_trans">
             <div class="wrap_top_info">
               <div class="fnFixedTop" data-height="50">
@@ -100,8 +112,7 @@
               </ul>
             </div>
           </div>
-        </section>
-        <!-- // section -->
+        </div>
 
         <!-- 하단고정영역 -->
         <div class="section_bottom_fixed">
@@ -113,7 +124,7 @@
         <!-- // 하단고정영역 -->
       </div>
     </div>
-    <!-- // contents-->
+    <!-- // 상세팝업 -->
 
     <!-- toast -->
     <div id="toast" class="wrap_toast">
@@ -124,7 +135,10 @@
   
   <script>
     $(function(){
-      // 토스트 퍼블확인용 스크립트
+      // 상세팝업호출 param 오픈할 팝업 id
+      fnOpenLayerPop('popupId');
+
+      // 토스트 팝업 호출
       $('.btn_ico_download').on('click', function(){
         fnToastPop('toast');
       })
