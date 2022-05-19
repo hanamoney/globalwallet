@@ -1865,12 +1865,26 @@
 }
 .section_cont.guide_hanamoney_3 .utl_charge_swiper {
   margin-top: 3.0rem;
+  padding-bottom: 3.0rem;
   perspective: 1200px;
 }
 .section_cont.guide_hanamoney_3 .utl_charge_swiper .swiper-slide {
   width: 20.0rem;
-  transform-style: preserve-3d;
+  transition-duration: 300ms;
+  transform: translate(0, 4.0rem);
 }
+.section_cont.guide_hanamoney_3 .utl_charge_swiper .swiper-slide-prev { 
+  transform: translate(8.0rem, 4.0rem);
+  opacity: 0.5;
+} 
+.section_cont.guide_hanamoney_3 .utl_charge_swiper .swiper-slide-next { 
+  transform: translate(-8.0rem, 4.0rem);
+  opacity: 0.5;
+} 
+.section_cont.guide_hanamoney_3 .utl_charge_swiper .swiper-slide-active { 
+  z-index: 1;
+  transform: translate(0, 0rem);
+} 
 .section_cont.guide_hanamoney_3 .wrap_btn.wrap_btn.type_full {
   margin-top: -1.0rem;
 }
@@ -1988,7 +2002,7 @@
   background: url('../../images/global/bg_utl_app.png') no-repeat 50%;
   background-size: 100%;
   transform: scale(0.5);
-  animation: scalePop 0.3s cubic-bezier(0.24, 0, 0.5, 1) forwards, floatwithScale 7s 0.5s ease-in-out infinite;
+  animation: scalePop 0.3s cubic-bezier(0.24, 0, 0.5, 1) forwards, floatwithScale 6s 0.5s ease-in-out infinite;
 }
 .section_cont.guide_hanamoney_6 .wrap_tit .tit_section_center {
   margin-top: 2.0rem;
@@ -2008,7 +2022,12 @@
     filter: blur(3px);
   }
   .vdb_swiper .swiper-slide.swiper-slide-next {
-    -webkit-filter: blur(rpx);
+    -webkit-filter: blur(4px);
     filter: blur(4px);
+  }
+  .section_cont.guide_hanamoney_3 .utl_charge_swiper .swiper-slide-prev,
+  .section_cont.guide_hanamoney_3 .utl_charge_swiper .swiper-slide-next {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
   }
 }

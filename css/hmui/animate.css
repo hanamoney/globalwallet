@@ -132,7 +132,7 @@
 
 @keyframes scalePop {
   90% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1.0);
