@@ -163,84 +163,8 @@
   
   <script>
     $(function(){
-      // 무한적립 swiper
-      var accumSwiper = new Swiper('.utl_accum_swiper', {
-        freeMode: true,
-        loop: true,
-        slidesPerView: 'auto',
-        observeParents: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false
-        },
-      });
-
-      // 수수료면제 swiper
-      var chargeSwiper = new Swiper('.utl_charge_swiper', {
-        allowTouchMove: false,
-        loop: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        // autoplay: {
-        //   delay: 3000,
-        // },
-      });
-
-      //포인트 swiper
-      var pointSwiper = new Swiper('.utl_point_swiper', {
-        direction: 'vertical',
-        allowTouchMove: false,
-        loop: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        autoplay: {
-          delay: 1000,
-        },
-        effect: 'coverflow',
-        coverflowEffect: {
-            rotate: 0,
-            stretch: 10,
-            depth: 500,
-            modifier: 1,
-            slideShadows : false,
-        },
-        on: {
-          init: function() {
-            var wrapperEl = $(this.wrapperEl);
-            
-            wrapperEl.find('.swiper-slide-prev').prev().addClass('swiper-slide-first').prevAll().addClass('prevAll');
-            wrapperEl.find('.swiper-slide-next').next().addClass('swiper-slide-last').nextAll().addClass('nextAll');
-          },
-          slideChange: function() {
-            var wrapperEl = $(this.wrapperEl);
-            wrapperEl.find('.swiper-slide').removeClass('prevAll nextAll swiper-slide-first swiper-slide-last');
-
-            var $active = wrapperEl.find('.swiper-slide').eq(this.activeIndex);
-
-            $active.prev().prev().addClass('swiper-slide-first').prevAll().addClass('prevAll');
-            $active.next().next().addClass('swiper-slide-last').nextAll().addClass('nextAll');
-            console.log(this.activeIndex);
-          },
-        }
-      });
-
-      // 스크롤에 따른 animation 시작
-      $(window).on('scroll', function(){
-        $('.section_cont').each(function(idx, el){
-          if ( fnCheckInView($(el))) {
-            if ($(el).hasClass('guide_hanamoney_1')) { accumSwiper.autoplay.start(); }
-            else if ($(el).hasClass('guide_hanamoney_3')) { chargeSwiper.autoplay.start(); }
-            else if ($(el).hasClass('guide_hanamoney_4')) { pointSwiper.autoplay.start(); }
-            else { $(el).addClass('transform'); }
-          } else {
-            if ($(el).hasClass('guide_hanamoney_1')) { accumSwiper.autoplay.stop(); }
-            else if ($(el).hasClass('guide_hanamoney_3')) { chargeSwiper.autoplay.stop(); }
-            else if ($(el).hasClass('guide_hanamoney_4')) { pointSwiper.autoplay.stop(); }
-            else { $(el).removeClass('transform'); }
-          }
-        });
-      });
-
+      // 하나머니 안내 트랜지션 컨트롤 호출
+      fnHanamoneyGuideControl();
     });
   </script>
 </body>
