@@ -2048,6 +2048,10 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   -webkit-transition: visibility 0.3s;
   transition: visibility 0.3s;
 }
+.wrap_layer[data-dim="true"] .dim {
+  background-color: #000;
+  opacity: 0.6;
+}
 .wrap_layer .inner_layer {
   position: absolute;
   right: 0;

@@ -59,10 +59,15 @@ var _headerControl = function(){
       $('#header').removeClass('scrolled');
     }
   });
+};
+
+var _headerPopControl = function(){
+  var defaultHeight = 50; 
 
   // F-Pop 콘텐츠 스크롤
   $('.wrap_layer.type_full .content_layer').on('scroll', function(){
     var $this = $(this);
+
     var $header = $this.closest('.inner_layer').find('.head_layer');
     var $fixedEl = $this.find('.fnFixedTop');
     var setHeight = parseInt($fixedEl.attr('data-height')) + defaultHeight;
@@ -79,7 +84,7 @@ var _headerControl = function(){
       }
     }
   });
-};
+}
 
 /**
   * @name _fixedTopInPage()
@@ -638,17 +643,27 @@ var fnOpenLayerPop = function(popID) {
 
   $('body').addClass('open_pop');
   $el.addClass('show');
-  // $el.append(dim); 2022.05.16 native dim 사용으로 삭제
+  $el.append(dim);
 
   if ($el.find('tit_layer').length) {
     $el.find('.tit_layer').focus();
   } else {
     $el.find('.inner_layer').children(':first').focus();
   }
+
+  // 풀팝업인 경우 헤더스크롤 이벤트 실행
+  if ($el.hasClass('type_full')) {
+    _headerPopControl();
+  }
+
+  // 딤 클릭 시 해당 팝업 닫기
+  $(document).on('click', '.dim', function() {
+    fnCloseLayerPop(popID);
+  });
 }
 
 /**
-  * @name fnOpenLayerPop()
+  * @name fnCloseLayerPop()
   * @description 레이어팝업 닫기
   * @param {string} popID 팝업ID
   * @param {string | Element} focusEl focus보낼 element
@@ -665,7 +680,7 @@ var fnCloseLayerPop = function(popID, focusEl){
 
   $el.removeClass('show');
   setTimeout(function(){
-    // $el.find('.dim').remove(); 2022.05.16 native dim 사용으로 삭제
+    $el.find('.dim').remove();
     $el.removeAttr('style');
     $('body').removeClass('open_pop');
     $focusEl.focus();
