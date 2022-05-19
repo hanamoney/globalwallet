@@ -207,14 +207,19 @@
         on: {
           init: function() {
             var wrapperEl = $(this.wrapperEl);
+            
             wrapperEl.find('.swiper-slide-prev').prev().addClass('swiper-slide-first').prevAll().addClass('prevAll');
             wrapperEl.find('.swiper-slide-next').next().addClass('swiper-slide-last').nextAll().addClass('nextAll');
           },
           slideChange: function() {
             var wrapperEl = $(this.wrapperEl);
             wrapperEl.find('.swiper-slide').removeClass('prevAll nextAll swiper-slide-first swiper-slide-last');
-            wrapperEl.find('.swiper-slide-prev').before().addClass('swiper-slide-first').prevAll().addClass('prevAll');
-            wrapperEl.find('.swiper-slide-next').next().next().addClass('swiper-slide-last').nextAll().addClass('nextAll');
+
+            var $active = wrapperEl.find('.swiper-slide').eq(this.activeIndex);
+
+            $active.prev().prev().addClass('swiper-slide-first').prevAll().addClass('prevAll');
+            $active.next().next().addClass('swiper-slide-last').nextAll().addClass('nextAll');
+            console.log(this.activeIndex);
           },
         }
       });
