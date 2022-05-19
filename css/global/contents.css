@@ -1915,33 +1915,47 @@
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   flex-direction: column;
-  align-items: flex-end;
   transform-style: preserve-3d;
 }
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide {
-  overflow: hidden;
-  width: 20vw;
-  height: 20vw;
-  opacity: 0.4;
-  border-radius: 2.0rem;
-  transform-style: preserve-3d;
+  width: 26.6vw;
+  height: 26.6vw;
+  opacity: 0.2;
   transition-duration: 300ms;
-  transform: translateY(6vw);
 }
-.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-prev,
-.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-next {
-  z-index: 1;
-  opacity: 0.7;
-  transform: translateX(-8.8vw) scale(1.1);
-}
-.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-next + .swiper-slide {
-  transform: translateY(-6vw);
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide img {
+  display: block;
+  border-radius: 2.0rem;
+  transform: translateX(0);
+  transition-duration: 300ms;
 }
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-active {
   z-index: 2;
   opacity: 1;
-  transform: translateX(-18.3vw) scale(1.3);
 }
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-active img {
+  border-radius: 3.0rem;
+}
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-prev,
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-next {
+  z-index: 1;
+  opacity: 0.6;
+}
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-prev img,
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-next img {
+  border-radius: 2.2rem;
+  transform: translateX(10vw);
+}
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-first img,
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-last img {
+  transform: translateX(34vw);
+}
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide.prevAll img,
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide.nextAll img {
+  transform: translateX(60vw);
+  visibility: hidden;
+}
+
 .section_cont.guide_hanamoney_5 {
   background: linear-gradient(157.38deg, #BBDDF2 -12.44%, #C3E1E2 48.65%, #EEF6EB 103.7%);
 }

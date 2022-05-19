@@ -115,11 +115,11 @@
             <div class="visual_utl_point">
               <div class="swiper-container utl_point_swiper">
                 <ul class="swiper-wrapper">
-                  <li class="swiper-slide"><img src="../../../images/global/logo_utl_naver.png" alt="네이버페이 포인트"></li>
-                  <li class="swiper-slide"><img src="../../../images/global/logo_utl_kpay.png" alt="카카오페이 머니"></li>
-                  <li class="swiper-slide"><img src="../../../images/global/logo_utl_coupang.png" alt="쿠팡캐시"></li>
-                  <li class="swiper-slide"><img src="../../../images/global/logo_utl_bonvoy.png" alt="메리어트 본보이"></li>
-                  <li class="swiper-slide"><img src="../../../images/global/logo_utl_united.png" alt="유나이티드항공"></li>
+                  <li class="swiper-slide swiper-slide-first"><img src="../../../images/global/logo_utl_naver.png" alt="네이버페이 포인트"></li>
+                  <li class="swiper-slide swiper-slide-prev"><img src="../../../images/global/logo_utl_kpay.png" alt="카카오페이 머니"></li>
+                  <li class="swiper-slide swiper-slide-active"><img src="../../../images/global/logo_utl_coupang.png" alt="쿠팡캐시"></li>
+                  <li class="swiper-slide swiper-slide-next"><img src="../../../images/global/logo_utl_bonvoy.png" alt="메리어트 본보이"></li>
+                  <li class="swiper-slide swiper-slide-last"><img src="../../../images/global/logo_utl_united.png" alt="유나이티드항공"></li>
                 </ul>
               </div>
             </div>
@@ -186,7 +186,7 @@
         // },
       });
 
-      // 포인트 swiper
+      //포인트 swiper
       var pointSwiper = new Swiper('.utl_point_swiper', {
         direction: 'vertical',
         allowTouchMove: false,
@@ -194,8 +194,29 @@
         centeredSlides: true,
         slidesPerView: 'auto',
         autoplay: {
-          delay: 2000,
+          delay: 1000,
         },
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 10,
+            depth: 500,
+            modifier: 1,
+            slideShadows : false,
+        },
+        on: {
+          init: function() {
+            var wrapperEl = $(this.wrapperEl);
+            wrapperEl.find('.swiper-slide-prev').prev().addClass('swiper-slide-first').prevAll().addClass('prevAll');
+            wrapperEl.find('.swiper-slide-next').next().addClass('swiper-slide-last').nextAll().addClass('nextAll');
+          },
+          slideChange: function() {
+            var wrapperEl = $(this.wrapperEl);
+            wrapperEl.find('.swiper-slide').removeClass('prevAll nextAll swiper-slide-first swiper-slide-last');
+            wrapperEl.find('.swiper-slide-prev').before().addClass('swiper-slide-first').prevAll().addClass('prevAll');
+            wrapperEl.find('.swiper-slide-next').next().next().addClass('swiper-slide-last').nextAll().addClass('nextAll');
+          },
+        }
       });
 
       // 스크롤에 따른 animation 시작
