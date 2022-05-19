@@ -205,7 +205,7 @@ section[data-roll] {
   transition: transform 0.3s cubic-bezier(0.32, 0, 0.68, 1);
 }
 .fnFixedTop {
-  z-index: 101;
+  z-index: 100;
 }
 .fnFixedTop[data-visible-type="hidden"] {
   position: fixed;
