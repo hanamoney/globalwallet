@@ -1313,7 +1313,7 @@ button.btn_secondery {
   left: 0;
   bottom: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 99;
 }
 .wrap_btn_full [class^="btn_full"]:first-child {
   width: 40%;
@@ -1394,7 +1394,7 @@ button.btn_secondery {
   bottom: calc(6rem - 1.8rem);
   right: 0;
   left: 0;
-  z-index: 101;
+  z-index: 100;
 }
 .section_bottom_fixed > .wrap_bubble .tooltip_bubble .bubble_caret {
 
@@ -2502,7 +2502,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .section_form .head_form {
   position: relative;
   padding-bottom: 0.8rem;
-}å
+}
 .section_form .tit_form {
   color: #252E33;
   font-size: 1.8rem;

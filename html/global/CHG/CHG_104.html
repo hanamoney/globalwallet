@@ -90,6 +90,29 @@
       </div>
     </div>
     <!-- // tooltip -->
+
+    <!-- confirm -->
+    <div id="confirmId" class="wrap_layer type_alert" data-dim="true"><!-- native dim 미사용 시 data-dim="true" 추가 -->
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert">계좌 잔액이 부족해요!<br>연결 계좌를 바꾸시겠어요?</p>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_secondary fnClosePop">아니오</button>
+            <button type="button" class="btn_full_primary fnClosePop">네</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // confirm -->
   </main>
+
+  <script>
+    $(function(){
+      // 컨펌호출 param 오픈할 레이어 id
+      fnOpenLayerPop('confirmId');
+    });
+  </script>
 </body>
 </html>
