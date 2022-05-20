@@ -910,9 +910,6 @@ var fnHanamoneyGuideControl = function() {
     loop: true,
     centeredSlides: true,
     slidesPerView: 'auto',
-    // autoplay: {
-    //   delay: 3000,
-    // },
   });
 
   //포인트 swiper
