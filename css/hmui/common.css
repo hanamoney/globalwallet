@@ -3690,15 +3690,11 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   position: absolute;
 }
 .img_cloud1 {
-  bottom: 17.6vw;
-  left: 0;
-  width: 15.76vw;
-  height: 9.03vw;
+  width: 21.1vw;
+  height: 13.8vw;
   background-image: url('../../images/hmui/character/visual_usr_cloud1.png');
 }
 .img_cloud2 {
-  top: 13.33vw;
-  right: 0;
   width: 30.05vw;
   height: 15.94vw;
   background-image: url('../../images/hmui/character/visual_usr_cloud2.png');
