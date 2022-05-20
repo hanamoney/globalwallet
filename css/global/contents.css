@@ -1918,8 +1918,6 @@
   transform: translateY(-50%);
   perspective: 1200px;
 }
-
-
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1991,8 +1989,8 @@
   transform-style: preserve-3d;
 }
 .section_cont.guide_hanamoney_5.transform .visual_utl_remitt .flip_remitt {
-  -webkit-animation: filpHold180 6s ease-out infinite;
-  animation: filpHold180 6s ease-out infinite;
+  -webkit-animation: filpHold180 4s ease-out infinite;
+  animation: filpHold180 4s ease-out infinite;
 }
 .section_cont.guide_hanamoney_5 .visual_utl_remitt .flip_remitt::before,
 .section_cont.guide_hanamoney_5 .visual_utl_remitt .flip_remitt::after {

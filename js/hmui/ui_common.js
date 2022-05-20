@@ -906,7 +906,6 @@ var fnHanamoneyGuideControl = function() {
 
   // 수수료면제 swiper
   var chargeSwiper = new Swiper('.utl_charge_swiper', {
-    allowTouchMove: false,
     loop: true,
     centeredSlides: true,
     slidesPerView: 'auto',
