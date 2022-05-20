@@ -662,6 +662,10 @@ var fnOpenLayerPop = function(popID) {
 
   // 딤 클릭 시 해당 팝업 닫기
   $(document).on('click', '.dim', function() {
+    // alert, comfirm일 경우 dim 클릭시 닫힘 기능 없음
+    if ($(this).closest('.wrap_layer').hasClass('type_alert')) { 
+      return;
+    }
     fnCloseLayerPop(popID);
   });
 }
@@ -918,9 +922,6 @@ var fnHanamoneyGuideControl = function() {
     loop: true,
     centeredSlides: true,
     slidesPerView: 'auto',
-    // autoplay: {
-    //   delay: 1000,
-    // },
     effect: 'coverflow',
     coverflowEffect: {
         rotate: 0,
