@@ -57,6 +57,10 @@
   top: -0.5rem;
   margin: 0 0.5rem 0 0.2rem;
 }
+.wrap_item_benefit li .item_desc .emoji_cash {
+  top: -0.3rem;
+  margin: 0 0.5rem 0 0.2rem;
+}
 
 /* [SET] - 하나머니 관리 */
 .section_set_list {
