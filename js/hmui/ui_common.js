@@ -945,7 +945,6 @@ var fnHanamoneyGuideControl = function() {
 
         $active.prev().prev().addClass('swiper-slide-first').prevAll().addClass('prevAll');
         $active.next().next().addClass('swiper-slide-last').nextAll().addClass('nextAll');
-        console.log(this.activeIndex);
       },
     }
   });
