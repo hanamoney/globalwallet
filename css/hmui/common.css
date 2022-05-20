@@ -2092,7 +2092,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   padding-bottom: 3.0rem;
   max-height: calc(50rem - 5.4rem);
 }
-.wrap_layer:not(.type_full,.type_center) .content_layer::after {
+.wrap_layer:not(.type_full,.type_center,.type_alert) .content_layer::after {
   content: '';
   position: fixed;
   bottom: 0;
