@@ -1124,6 +1124,12 @@ section[data-roll] {
   color: #13C9BE;
   font-weight: 700;
 }
+.txt_inp_result .txt_acc {
+  color: #6E7D85;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+  font-weight: 400;
+}
 .wrap_inp {
   position: relative;
 }

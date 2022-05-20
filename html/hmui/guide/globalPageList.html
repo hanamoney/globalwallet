@@ -24,6 +24,7 @@ nav ul li a {display:block; height:3.0rem; padding: 0 2.0rem; border-radius: 1.5
   padding: 0.8rem 0.6rem;
   border-bottom: 1px solid #eee;
 }
+.tbl_wrap tr td:last-child span { display: block; }
 tr td:nth-child(4),
 tr td:nth-child(5) {
   text-align: center;
@@ -111,15 +112,17 @@ var menuList = [
   {'group':'', 'code':'CHG','depth1':'','name':'충전 완료','pageid':'CHG_003', 'status':'완료', 'date':'22.04.25', 'remarks':''},
 
 
-  {'group':'', 'code':'CHG','depth1':'외화 충전','name':'화폐 선택','pageid':'CHG_101', 'status':'완료', 'date':'22.04.25', 'remarks':''},
-  {'group':'', 'code':'CHG','depth1':'','name':'최대 보유 금액 초과 시','pageid':'CHG_103', 'status':'완료', 'date':'22.05.02', 'remarks':''},
+  {'group':'', 'code':'CHG','depth1':'외화 충전','name':'화폐 선택','pageid':'CHG_101', 'status':'완료', 'date':'22.04.25', 'remarks':'<span>-22.05.20 페이지로 변경</span>'},
+  {'group':'', 'code':'CHG','depth1':'','name':'최대 보유 금액 초과 시','pageid':'CHG_103', 'status':'완료', 'date':'22.05.02', 'remarks':'<span>-22.05.20 문구변경</span>'},
   {'group':'', 'code':'CHG','depth1':'','name':'외화 충전 정보 입력','pageid':'CHG_104', 'status':'완료', 'date':'22.05.02', 'remarks':''},
   {'group':'', 'code':'CHG','depth1':'','name':'외화 충전 완료','pageid':'CHG_105', 'status':'완료', 'date':'22.05.02', 'remarks':''},
   {'group':'', 'code':'CHG','depth1':'','name':'부족한 계좌 자동충전 팝업','pageid':'CHG_106', 'status':'완료', 'date':'22.05.02', 'remarks':''},
 
 
-  {'group':'', 'code':'RTN','depth1':'하나머니로 환급','name':'하나머니로 환급 신청','pageid':'RTN_001', 'status':'완료', 'date':'22.05.02', 'remarks':''},
-  {'group':'', 'code':'RTN','depth1':'','name':'하나머니로 환급 완료','pageid':'RTN_002', 'status':'완료', 'date':'22.05.02', 'remarks':''},
+  {'group':'', 'code':'RTN','depth1':'하나머니로 환급','name':'하나머니로 환급 신청','pageid':'RTN_001', 'status':'완료', 'date':'22.05.02', 'remarks':'<span>-22.05.20 문구변경</span>'},
+  {'group':'', 'code':'RTN','depth1':'하나머니로 환급','name':'하나머니로 환급 신청 -케이스','pageid':'RTN_001_1', 'status':'완료', 'date':'22.05.20', 'remarks':''},
+  {'group':'', 'code':'RTN','depth1':'','name':'하나머니로 환급 완료','pageid':'RTN_002', 'status':'완료', 'date':'22.05.02', 'remarks':'<span>-22.05.20 문구변경</span>'},
+  {'group':'', 'code':'RTN','depth1':'','name':'하나머니로 환급 완료','pageid':'RTN_002_1', 'status':'완료', 'date':'22.05.20', 'remarks':''},
 
 
   {'group':'', 'code':'SET','depth1':'하나머니 관리','name':'하나머니 관리','pageid':'SET_001', 'status':'완료', 'date':'22.05.02', 'remarks':''},
@@ -131,10 +134,10 @@ var menuList = [
   {'group':'', 'code':'VDB','depth1':'','name':'이달의 혜택왕 소개','pageid':'VDB_003', 'status':'완료', 'date':'22.05.16', 'remarks':''},
 
 
-  {'group':'글로벌', 'code':'GSP','depth1':'해외직구1','name':'해외직구 매뉴얼','pageid':'GSP_001', 'status':'완료', 'date':'22.05.16', 'remarks':''},
+  {'group':'글로벌', 'code':'GSP','depth1':'해외직구1','name':'해외직구 매뉴얼','pageid':'GSP_001', 'status':'완료', 'date':'22.05.16', 'remarks':'<span>-22.05.20 문구변경</span>'},
   {'group':'', 'code':'GSP','depth1':'','name':'해외직구 Glab 이동시 노출팝업','pageid':'GSP_003', 'status':'완료', 'date':'22.05.16', 'remarks':''},
   {'group':'', 'code':'GSP','depth1':'','name':'기존 해외직구라운지 페이지','pageid':'GSP_004', 'status':'완료', 'date':'22.05.16', 'remarks':''},
-  {'group':'', 'code':'GSP','depth1':'외화 하나머니 소개','name':'트래블로그 혜택 안내','pageid':'GSP_002', 'status':'작업중', 'date':'', 'remarks':''},
+  {'group':'', 'code':'GSP','depth1':'외화 하나머니 소개','name':'트래블로그 혜택 안내','pageid':'GSP_002', 'status':'확인중', 'date':'', 'remarks':''},
 
 
   {'group':'Util', 'code':'UTL','depth1':'이용안내','name':'하나머니 이용안내','pageid':'UTL_001', 'status':'작업중', 'date':'', 'remarks':''},
@@ -142,10 +145,10 @@ var menuList = [
 
 
   {'group':'회원가입', 'code':'USR','depth1':'신규회원가입','name':'통합 약관동의','pageid':'USR_001', 'status':'X', 'date':'', 'remarks':'Native'},
-  {'group':'', 'code':'USR','depth1':'트래블로그 가입','name':'트래블로그 약관동의','pageid':'USR_101', 'status':'완료', 'date':'22.05.09', 'remarks':'<span>-22.05.12 약관상세팝업추가</span>'},
+  {'group':'', 'code':'USR','depth1':'트래블로그 가입','name':'트래블로그 약관동의','pageid':'USR_101', 'status':'완료', 'date':'22.05.09', 'remarks':'<span>-22.05.20 문구변경</span><span>-22.05.12 약관상세팝업추가</span>'},
   {'group':'', 'code':'USR','depth1':'','name':'계좌연결','pageid':'USR_102', 'status':'완료', 'date':'22.05.09', 'remarks':''},
-  {'group':'', 'code':'USR','depth1':'','name':'카드발급 브릿지','pageid':'USR_103', 'status':'완료', 'date':'22.05.09', 'remarks':''},
-  {'group':'', 'code':'USR','depth1':'','name':'트래블로그 서비스 신청 완료','pageid':'USR_104', 'status':'완료', 'date':'22.05.09', 'remarks':''},
+  {'group':'', 'code':'USR','depth1':'','name':'카드발급 브릿지','pageid':'USR_103', 'status':'완료', 'date':'22.05.09', 'remarks':'<span>-22.05.20 문구변경</span>'},
+  {'group':'', 'code':'USR','depth1':'','name':'트래블로그 서비스 신청 완료','pageid':'USR_104', 'status':'완료', 'date':'22.05.09', 'remarks':'<span>-22.05.20 문구변경</span>'},
 
 
   {'group':'하나머니', 'code':'PEX','depth1':'포인트전환','name':'포인트전환 가이드','pageid':'PEX_001', 'status':'', 'date':'', 'remarks':''},

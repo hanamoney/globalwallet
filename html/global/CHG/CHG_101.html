@@ -19,13 +19,59 @@
 </head>
 <body>
   <main id="root">
-    
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>충전 화폐 선택</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
     <!-- // header -->
 
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="CHG">
+          <div class="section_chg_list">
+            <ul class="wrap_line_list">
+              <li>
+                <button type="button">
+                  <span class="ico_cur_hanamoney"></span>
+                  <span class="txt">하나머니</span>
+                </button>
+              </li>
+              <li>
+                <button type="button">
+                  <span class="ico_cur_usd"></span>
+                  <span class="txt">미국 USD ($)</span>
+                </button>
+              </li>
+              <li>
+                <button type="button">
+                  <span class="ico_cur_jpy"></span>
+                  <span class="txt">일본 JPY (¥)</span>
+                </button>
+              </li>
+              <li>
+                <button type="button">
+                  <span class="ico_cur_eur"></span>
+                  <span class="txt">유럽 EUR (€)</span>
+                </button>
+              </li>
+              <li>
+                <button type="button">
+                  <span class="ico_cur_gbp"></span>
+                  <span class="txt">영국 GBP (£)</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
     <!-- // contents-->
 
-    <!-- popup -->
-    <div id="popupId" class="wrap_layer type_full">
+    <!-- 22.05.20 페이지로 변경 -->
+    <!-- <div id="popupId" class="wrap_layer type_full">
       <div class="inner_layer">
         <div class="head_layer">
           <h2 class="tit_layer">충전할 화폐를 선택해 주세요.</h2>
@@ -68,15 +114,11 @@
         </div>
         <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
       </div>
-    </div>
-    <!-- // popup -->
+    </div> -->
   </main>
 
   <script>
-    $(function(){
-      // 팝업오픈 퍼블확인용 스크립트
-      fnOpenLayerPop('popupId');
-    });
+    
   </script>
 </body>
 </html>
