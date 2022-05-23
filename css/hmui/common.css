@@ -534,7 +534,7 @@ section[data-roll] {
   word-break: keep-all;
 }
 .wrap_hashtag .txt_hashtag > span {
-  border-bottom: 0.1rem solid #000;
+  border-bottom: 1px solid #000;
 }
 .wrap_hashtag .txt_hashtag > span em {
   font-weight: 700;
@@ -954,7 +954,7 @@ section[data-roll] {
   display: inline-block;
   padding: 0.8rem 1.0rem;
   border-radius: 0.4rem;
-  border: 0.1rem solid #F3F8FA;
+  border: 1px solid #F3F8FA;
   background-color: #F3F8FA;
   color: #4F5D64;
   font-size: 1.5rem;
@@ -1007,7 +1007,7 @@ section[data-roll] {
   margin-top: 0.4rem;
   padding: 0.7rem 0 0.6rem;
   border-radius: 0.4rem;
-  border: 0.1rem solid #D0D7D7;
+  border: 1px solid #D0D7D7;
 }
 .box_date .btn_sel_date {
   flex: 1;
@@ -1088,7 +1088,7 @@ section[data-roll] {
 .inp {
   width: 100%;
   height: 45px;
-  padding-bottom: 0.1rem;
+  padding-bottom: 1px;
   border-bottom: 1px solid #D0D4D7;
   font-size: 2.6rem;
   color: #252E33;
@@ -1262,7 +1262,7 @@ button.btn_secondery {
   color: #252E33;
 }
 [class^="btn_box"].type_line {
-  border: 0.1rem solid #252E33;
+  border: 1px solid #252E33;
   background-color: transparent;
   color: #252E33;
 }
@@ -1409,7 +1409,7 @@ button.btn_secondery {
   position: relative;
   z-index: 11;
   padding-right: 4.0rem;
-  border-bottom: 0.2rem solid #252E33;
+  border-bottom: 2px solid #252E33;
   font-size: 2.0rem;
   line-height: 3.0rem;
   font-weight: 700;
@@ -1827,7 +1827,7 @@ a.wrap_box > .txt:first-child {
   width: calc(100% - 0.2rem);
   height: calc(100% - 0.2rem);
   border-radius: 1.4rem;
-  border: 0.1rem solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.3);
 }
 .wrap_box_opacity {
   display: block;
@@ -2581,7 +2581,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .section_faq .wrap_faq_list li {
   margin-top: 0.3rem;
-  border-bottom: 0.1rem solid #E3EBEE;
+  border-bottom: 1px solid #E3EBEE;
   counter-increment: faq;
 }
 .section_faq .wrap_faq_list li .btn_acco {
