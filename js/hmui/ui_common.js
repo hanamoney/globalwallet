@@ -22,7 +22,7 @@ $(function(){
 
 var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
-  if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage($('.fnFixedTop')); } // 스크롤에 따른 페이지 상단고정
+  if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
   if ( isiOS && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
@@ -94,8 +94,8 @@ var _headerPopControl = function(el){
   * @name _fixedTopInPage()
   * @description 페이지 스크롤에 따른 콘텐츠 상단고정
   */
-var _fixedTopInPage = function(el) {
-  var $fixedEl = $(el);
+var _fixedTopInPage = function() {
+  var $fixedEl = $('.wrap_contents').find('.fnFixedTop');
   var $header = $fixedEl.closest('.wrap_contents').siblings('#header').find('.inner_fixed');
   var headerHeight = $('#header').outerHeight(true);
 
@@ -645,7 +645,7 @@ var fnOpenLayerPop = function(popID) {
     $el.addClass('hasFixedBtn');
   }
 
-  $('body').addClass('open_pop');
+  $('body').addClass('overflow');
   $el.addClass('show');
   $el.append(dim);
 
@@ -690,7 +690,7 @@ var fnCloseLayerPop = function(popID, focusEl){
   setTimeout(function(){
     $el.find('.dim').remove();
     $el.removeAttr('style');
-    $('body').removeClass('open_pop');
+    $('body').removeClass('overflow');
     $focusEl.focus();
   },300);
 };
@@ -962,3 +962,80 @@ var fnHanamoneyGuideControl = function() {
     });
   });
 }
+
+/**
+  * @name fnLayerScreenShot.set();
+  * @description 레이어팝업 스크린샷을 위한 높이값 설정
+  * @param {Element} el 해당팝업 element 
+  */
+var fnLayerScreenShot = (function() {
+  var $el;
+
+  function set(el) {
+    $el = $(el);
+    $el.addClass('setScreenShot');
+
+    var height = $el.find('.content_layer').outerHeight(true);
+    $('body')
+      .css({
+        'min-height': '100vh',
+        'height': height,
+      });
+  }
+
+  function complete() {
+    $el.removeClass('setScreenShot');
+    $('body').removeAttr('style');
+  }
+
+  return {
+    set: set,
+    complete: complete
+  }
+})();
+
+/**
+  * @name fnLayerScreenShot.set();
+  * @description 레이어팝업 스크린샷을 위한 높이값 설정
+  * @param {Element} el 해당팝업 element 
+  */
+var fnLayerScreenShot2 = (function() {
+  var $el,
+      scrlTop,
+      page;
+
+  function set(el) {
+    $el = $(el);
+    scrlTop = $(document).scrollTop(); // 현재 스크롤 위치 저장
+    page = $el.siblings('.wrap_contents').find('section'); // 본 페이지
+    
+    $el.addClass('setScreenShot2'); // 팝업 높이제한 해제 후 팝업 콘텐츠 높이값 계산
+    var height = $el.find('.content_layer').outerHeight(true);
+    $el
+      .css({
+        'height': height,
+      });
+    // 팝업 높이 만큼 콘텐츠 영역 높이 설정 후 본 페이지 hidden, 스크롤 최상단으로 올려 팝업만 보이도록 설정
+    $('body')
+      .css({
+        'overflow-y': 'auto',
+        'min-height': '100vh',
+        'height': height,
+      });
+    page.hide();
+    $(document).scrollTop(0);
+    
+  }
+
+  function complete() {
+    $el.removeClass('setScreenShot2').removeAttr('style');
+    $('body').removeAttr('style');
+    page.show();
+    $(document).scrollTop(scrlTop); // 팝업 열었을 때의 스크롤 위치로 다시 이동
+  }
+
+  return {
+    set: set,
+    complete: complete
+  }
+})();
