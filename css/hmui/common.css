@@ -3221,7 +3221,11 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 700;
+  text-align: right;
   white-space: nowrap;
+}
+.trans_info .txt_amount em {
+  text-align: right;
 }
 .txt_amount.add {
   color: #13C9BE;
@@ -3268,6 +3272,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   margin-top: 3.0rem;
 }
 .list_trans .trans_info .tit {
+  flex: 1;
   padding-right: 1.0rem;
 }
 .list_trans .trans_info.foriegn .tit {
