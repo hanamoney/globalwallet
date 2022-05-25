@@ -2019,8 +2019,10 @@
 .section_cont.guide_hanamoney_6 {
   overflow: hidden;
   height: 127.7vw;
-  margin-bottom: -6.0rem;
   background: linear-gradient(180deg, #4F5D64 0%, #2E3B42 100%);
+}
+.section_cont.guide_hanamoney_6:last-child {
+  margin-bottom: -6.0rem;
 }
 .section_cont.guide_hanamoney_6::before {
   content: '';

@@ -164,7 +164,8 @@ body.overflow {
 }
 #header .btn_ico_menu,
 #header .btn_ico_card_header,
-#header .btn_ico_close {
+#header .btn_ico_close,
+#header .btn_ico_notice {
   right: 2.2rem;
 }
 #header.type_white h1 {
@@ -590,6 +591,9 @@ section[data-roll] {
 .btn_ico_card_header {
   background-image: url('../../images/hmui/btn_card_header.png');
 }
+.btn_ico_notice {
+  background-image: url('../../images/hmui/btn_notice.png');
+}
 .ico_tooltip {
   width: 2.0rem;
   height: 2.0rem;
@@ -723,6 +727,18 @@ section[data-roll] {
   width: 2.0rem;
   height: 2.0rem;
   background-image: url('../../images/hmui/ico_notice.png');
+}
+.ico_appstore {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.4rem;
+  background-image: url('../../images/hmui/ico_appstore.png');
+}
+.ico_playstore {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.4rem;
+  background-image: url('../../images/hmui/ico_playstore.png');
 }
 .emoji_globe {
   width: 4.0rem;
@@ -1217,6 +1233,10 @@ button.btn_primary {
   background-color: #13C9BE;
   color: #fff;
 }
+a.btn_primary_2,
+button.btn_primary_2 {
+  background-color: #00928F;
+}
 a.btn_secondery,
 button.btn_secondery {
   background-color: #E5EAED;
@@ -1329,6 +1349,9 @@ button.btn_secondery {
 }
 .wrap_btn_full.type_ico [class^="btn_full"]:last-child {
   width: calc(100% - 6.0rem);
+}
+.wrap_btn_full.type_col [class^="btn_full"] {
+  width: 50%;
 }
 [class^="btn_full"] {
   width: 100%;

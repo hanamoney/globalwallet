@@ -903,6 +903,11 @@ var fnHanamoneyGuideControl = function() {
       delay: 3000,
       disableOnInteraction: false
     },
+    on: {
+      init: function(swiper) {
+        this.slideTo(1);
+      }
+    }
   });
 
   // 수수료면제 swiper
