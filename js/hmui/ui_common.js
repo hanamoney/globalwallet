@@ -662,8 +662,9 @@ var fnOpenLayerPop = function(popID) {
 
   // 딤 클릭 시 해당 팝업 닫기
   $(document).on('click', '.dim', function() {
-    // alert, comfirm일 경우 dim 클릭시 닫힘 기능 없음
-    if ($(this).closest('.wrap_layer').hasClass('type_alert')) { 
+    var popup = $(this).closest('.wrap_layer');
+    // bottom sheet를 제외한 레이어 dim 클릭시 닫힘 기능 없음
+    if (popup.hasClass('type_alert') || popup.hasClass('type_center') || popup.hasClass('type_full')) { 
       return;
     }
     fnCloseLayerPop(popID);
