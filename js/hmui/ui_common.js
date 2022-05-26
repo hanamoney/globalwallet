@@ -948,6 +948,11 @@ var fnHanamoneyGuideControl = function() {
         $active.prev().prev().addClass('swiper-slide-first').prevAll().addClass('prevAll');
         $active.next().next().addClass('swiper-slide-last').nextAll().addClass('nextAll');
       },
+      slideChangeTransitionEnd: function() {
+        var wrapperEl = $(this.wrapperEl);
+        var $active = wrapperEl.find('.swiper-slide').eq(this.activeIndex);
+        wrapperEl.find('.swiper-slide').removeClass('prevAll nextAll');
+      }
     }
   });
 

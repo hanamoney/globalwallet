@@ -1934,9 +1934,17 @@
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide img {
   display: block;
   border-radius: 2.0rem;
-  transform: translateX(60vw);
+  transform: translateX(34vw);
   transition-duration: 300ms;
   visibility: hidden;
+}
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-duplicate.swiper-slide-duplicate-active,
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-duplicate.swiper-slide-duplicate-prev,
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-duplicate.swiper-slide-duplicate-next {
+  opacity: 0;
+}
+.section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide.prevAll img {
+  transform: translateX(64vw);
 }
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-active {
   z-index: 2;
