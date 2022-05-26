@@ -2059,6 +2059,9 @@
 .section_cont.guide_hanamoney_6.transform::before {
   animation: scalePop 0.3s cubic-bezier(0.24, 0, 0.5, 1) forwards, floatwithScale 6s 0.5s ease-in-out infinite;
 }
+.inapp .section_cont.guide_hanamoney_tit {
+  padding-top: 0;
+}
 
 @supports ((-webkit-filter:none) or (filter:none)) {
   .vdb_swiper .swiper-slide.swiper-slide-prev {
