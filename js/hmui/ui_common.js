@@ -33,7 +33,7 @@ var registUI = function(){
   if ( $('.section_terms .btn_acco').length ) { _agreeAccoBtn(); } // 약관동의 아코디언 기능
   if ( $('.section_terms .wrap_chk_all').length ) { _agreeCheckAll(); } // 약관전체동의
   if ( $('.wrap_tooltip').length ) { _tooltip(); } // 툴팁
-  if ( $('.wrap_layer').length ) { _layerPop(); } // 레이어팝업
+  if ( $('.wrap_layer').length ) { _layerPop(); exeTransitionInLayer(); } // 레이어팝업
   
   if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
   if ( $('.wrap_loop_scrl').length ) { _loopScrlCont(); } // 무한스크롤링 컨텐츠
@@ -504,12 +504,9 @@ var _showBenefitList = function() {
   var list = $el.find('.list_benefit li');
 
   if (!$el.is(':visible')) return;
-  if ($el.parents('.wrap_layer').length ){
-    // F-Pop 일 경우 
-    setTimeout(function(){
-      _titShow();
-      _listshow();
-    },400);
+  if ($el.parents('.wrap_layer').length && !$el.parents('.wrap_layer').hasClass('show')){
+    // F-Pop 일 경우
+    return;
   } else {
     _titShow();
     _listshow();
@@ -646,7 +643,7 @@ var fnOpenLayerPop = function(popID) {
   }
 
   $('body').addClass('overflow');
-  $el.addClass('show');
+  $el.addClass('show').trigger('layerOpened');
   $el.append(dim);
 
   if ($el.find('tit_layer').length) {
@@ -713,6 +710,32 @@ var fnToastPop = function(popID) {
     $el.removeClass('show withFixedBtn');
   }, 3000);
 };
+
+/**
+  * @name exeTransitionInLayer()
+  * @description 팝업 오픈시 트랜지션 실행
+  */
+var exeTransitionInLayer = function() {
+  var popup = $('.wrap_layer');
+
+  popup.on('layerOpened', function(e) {
+    var $this = $(e.target);
+
+    // wrap_item_benefit 
+    if ($this.find('.wrap_item_benefit')) {
+      setTimeout(function(){
+        _showBenefitList();
+      }, 300);
+    }
+    
+    // USR_103
+    if ($this.find('.visual_usr_card')) {
+      setTimeout(function(){
+        $this.find('.visual_usr_card').addClass('transform');
+      }, 300);
+    }
+  });
+}
 
 /**
   * @name skeletonLoading.start();

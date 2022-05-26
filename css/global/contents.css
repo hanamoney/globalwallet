@@ -86,15 +86,20 @@
   background-size: 100%;
 }
 .section_top_visual.join_card {
-  padding-bottom: 29.8rem;
+  /* padding-bottom: 29.8rem; */
+}
+.section_top_visual.join_card + .wrap_item_benefit {
+  padding-top: 1.8rem;
 }
 .visual_usr_card {
-  position: absolute;
+  /* position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 0; */
   width: 24.4rem;
   height: 27.3rem;
-  transform: translateX(-50%);
+  margin: 3.5rem auto 0;
+  transform: translateY(3rem);
+  animation: itemUp30 0.4s 0.2s forwards;
 }
 .img_card_travlog {
   display: block;
@@ -115,6 +120,18 @@
   top: 1.0rem;
   right: 0;
   transform: scaleX(-1);
+}
+.visual_usr_card.transform .img_shoppingbag {
+  animation: shoppingbag-animate 6s ease-in-out infinite;
+}
+@keyframes shoppingbag-animate {
+  0% {
+    transform: translateY(0) scaleX(-1); }
+  40% {
+    transform: translateY(1.2rem) scaleX(-1); }
+  100% {
+    transform: translateY(0) scaleX(-1); 
+  }
 }
 .visual_usr_card .img_character_luggage {
   position: absolute;

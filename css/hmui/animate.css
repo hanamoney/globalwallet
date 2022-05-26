@@ -11,9 +11,23 @@
     transform: translateY(0);
   }
 }
+@keyframes itemUp30 {
+  0% {
+    transform: translateY(3.0rem);
+  }
+  90% {
+    transform: translateY(-0.1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @keyframes itemUp100 {
   0% {
     transform: translateY(100%);
+  }
+  85% {
+    transform: translateY(-2%);
   }
   100% {
     transform: translateY(0);
