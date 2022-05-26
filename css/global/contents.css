@@ -1876,6 +1876,7 @@
   background: linear-gradient(161.78deg, #F6F2EB -7.73%, #D7D8F3 63.83%, rgba(254, 197, 238, 0.81) 122.63%);
 }
 .section_cont.guide_hanamoney_3 .utl_charge_swiper {
+  overflow: visible;
   margin-top: 3.0rem;
   padding-bottom: 3.0rem;
   perspective: 1200px;
