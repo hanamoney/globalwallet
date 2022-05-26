@@ -1544,6 +1544,7 @@ button.btn_secondery {
   display: block;
 }
 .section_tab.type_fullpage {
+  min-height: calc(100vh - 6.0rem);
   margin-top: -5.0rem;
 }
 .section_tab.type_fullpage .wrap_tab_btn.type_box {
