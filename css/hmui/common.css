@@ -3065,6 +3065,12 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .list_benefit_label:not(.type_full) li.transform .flag_free {
   animation: freeLabel 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
+.list_benefit_label:not(.type_full) li.transform:nth-child(2) .flag_free {
+  animation-delay: 0.1s;
+}
+.list_benefit_label:not(.type_full) li.transform:nth-child(3) .flag_free {
+  animation-delay: 0.2s;
+}
 .list_benefit_label.type_full li.transform .flag_free {
   animation: freeLabelFull 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
