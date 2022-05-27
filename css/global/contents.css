@@ -529,6 +529,9 @@
   width: 24.1vw;
   height: 49.4vw;
 }
+.visual_gsp_overseas.transform .img_shoppingbag {
+  animation: floating10 4s ease-in-out infinite;
+}
 .visual_gsp_drone {
   position: relative;
   margin-top: 4.6rem;
@@ -643,15 +646,19 @@
   background: url('../../images/global/bg_gsp2_cloud.png') no-repeat 50%;
   background-size: 19.4rem auto;
   background-position: 26.1vw 4.6rem;
+  animation: itemUp30 0.4s forwards;
 }
 .visual_gsp_card .img_drone_box {
   position: absolute;
   top: 7.0rem;
   left: 50%;
   transform: translateX(40%);
+  animation: drone-float 6s 0.6s ease-in-out infinite;
 }
-.visual_gsp_card .img_card_travlog {
-  
+@keyframes drone-float {
+  60% {
+    transform: translateX(40%) translateY(1.5rem);
+  }
 }
 .visual_gsp_card .img_character_walk {
   position: absolute;
@@ -669,6 +676,7 @@
   height: 2.9rem;
   background: url('../../images/hmui/character/visual_cloud2.png') no-repeat center;
   background-size: 100%;
+  animation: floating10 6s ease-in-out infinite;
 }
 .section_cont.about_travlog {
   background: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);

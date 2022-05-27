@@ -38,6 +38,11 @@
     transform: translateY(0.5rem) rotate(-0.7deg);
   }
 }
+@keyframes floating10 {
+  60% {
+    transform: translateY(1.0rem);
+  }
+}
 
 @keyframes cloud1 {
   0% {

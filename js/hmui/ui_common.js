@@ -566,11 +566,10 @@ var _showBenefitLabel = function() {
         $this.addClass('transform');
       },
       context: '.content_layer',
-      offset: '80%'
+      offset: '85%'
     });
   });
 }
-
 
 /**
   * @name _loopScrlCont()
@@ -773,6 +772,13 @@ var exeTransitionInLayer = function() {
       setTimeout(function(){
         $this.find('.visual_usr_card').addClass('transform');
       }, 200);
+    }
+
+    // GSP_001
+    if ($this.find('.visual_gsp_overseas')) {
+      setTimeout(function(){
+        $this.find('.visual_gsp_overseas').addClass('transform');
+      }, 300);
     }
   });
 }
