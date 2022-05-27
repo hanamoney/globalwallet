@@ -85,21 +85,17 @@
   background: url('../../images/hmui/img_bankbook.png') no-repeat 50%;
   background-size: 100%;
 }
-.section_top_visual.join_card {
-  /* padding-bottom: 29.8rem; */
-}
 .section_top_visual.join_card + .wrap_item_benefit {
   padding-top: 1.8rem;
 }
 .visual_usr_card {
-  /* position: absolute;
-  left: 50%;
-  bottom: 0; */
   width: 24.4rem;
   height: 27.3rem;
   margin: 3.5rem auto 0;
   transform: translateY(3rem);
-  animation: itemUp30 0.4s 0.2s forwards;
+}
+.visual_usr_card.transform {
+  animation: itemUp30 0.4s forwards;
 }
 .img_card_travlog {
   display: block;
@@ -112,7 +108,7 @@
   transform: rotate(-11.58deg);
   box-shadow: 6px 11px 14px rgba(0, 0, 0, 0.1);
 }
-.visual_usr_card  .img_card_travlog {
+.visual_usr_card .img_card_travlog {
   margin-top: 1.0rem;
 }
 .visual_usr_card .img_shoppingbag {
