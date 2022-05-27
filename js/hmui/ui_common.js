@@ -739,7 +739,7 @@ var exeTransitionInLayer = function() {
     if ($this.find('.visual_usr_card')) {
       setTimeout(function(){
         $this.find('.visual_usr_card').addClass('transform');
-      }, 300);
+      }, 200);
     }
   });
 }
