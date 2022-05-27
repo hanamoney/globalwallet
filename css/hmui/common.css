@@ -3026,6 +3026,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   z-index: 10;
   background: url('../../images/hmui/flag_free.png') no-repeat 50%;
   background-size: 100%;
+  opacity: 0;
   transform: rotate(-38.87deg);
 }
 .list_benefit_label.type_full {
@@ -3061,8 +3062,40 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   height: 3.5rem;
   transform: rotate(0);
 }
+.list_benefit_label:not(.type_full) li.transform .flag_free {
+  animation: freeLabel 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+.list_benefit_label.type_full li.transform .flag_free {
+  animation: freeLabelFull 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
 [class^="tit_section"] + .list_benefit_label {
   margin-top: 3.0rem;
+}
+@keyframes freeLabel {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-38.87deg);
+  }
+  85% {
+    transform: scale(1.1) rotate(-38.87deg);
+  }
+  100% { 
+    opacity: 1;
+    transform: scale(1) rotate(-38.87deg);
+  }  
+}
+@keyframes freeLabelFull {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  85% {
+    transform: scale(1.1);
+  }
+  100% { 
+    opacity: 1;
+    transform: scale(1);
+  }  
 }
 
 /* 유의사항 */

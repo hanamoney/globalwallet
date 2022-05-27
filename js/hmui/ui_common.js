@@ -35,7 +35,8 @@ var registUI = function(){
   if ( $('.wrap_tooltip').length ) { _tooltip(); } // 툴팁
   if ( $('.wrap_layer').length ) { _layerPop(); exeTransitionInLayer(); } // 레이어팝업
   
-  if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트
+  if ( $('.wrap_item_benefit .list_benefit').length ) { _showBenefitList(); } // 혜택리스트 애니메이션
+  if ( $('.list_benefit_label').length ) { _showBenefitLabel(); } // 혜택리스트 라벨 애니메이션
   if ( $('.wrap_loop_scrl').length ) { _loopScrlCont(); } // 무한스크롤링 컨텐츠
   if ( $('.fnFitToCont').length ) { _textFitToCont(); } // 택스트 사이즈 조정
   
@@ -545,6 +546,31 @@ var _showBenefitList = function() {
     });
   }
 }
+/**
+  * @name _showBenefitLabel()
+  * @description // 혜택리스트 라벨 애니메이션
+  */
+var _showBenefitLabel = function() {
+  var $el = $('.list_benefit_label li');
+  
+  if (!$el.is(':visible')) return;
+  // F-Pop 일 경우
+  if ($el.parents('.wrap_layer').length && !$el.parents('.wrap_layer').hasClass('show')){
+    return;
+  }
+
+  $el.each(function(){
+    var $this = $(this);
+    $this.waypoint({
+      handler: function() {
+        $this.addClass('transform');
+      },
+      context: '.content_layer',
+      offset: '90%'
+    });
+  });
+}
+
 
 /**
   * @name _loopScrlCont()
@@ -725,6 +751,13 @@ var exeTransitionInLayer = function() {
     if ($this.find('.wrap_item_benefit')) {
       setTimeout(function(){
         _showBenefitList();
+      }, 300);
+    }
+
+    // list_benefit_label
+    if ($this.find('.list_benefit_label')) {
+      setTimeout(function(){
+        _showBenefitLabel();
       }, 300);
     }
 
