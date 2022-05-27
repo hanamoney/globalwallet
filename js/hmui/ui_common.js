@@ -566,7 +566,7 @@ var _showBenefitLabel = function() {
         $this.addClass('transform');
       },
       context: '.content_layer',
-      offset: '90%'
+      offset: '80%'
     });
   });
 }
