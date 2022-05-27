@@ -682,15 +682,13 @@
   background: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);
   text-align: center;
 }
-.section_cont.about_travlog .wrap_tit {
-
-}
 .section_cont.about_travlog .tit_big_bold {
   text-align: center;
 }
 .section_cont.about_travlog .visual_gsp_travlog {
   position: relative;
   padding-top: 46.6vw;
+  transform: translateY(3.0rem);
 }
 .section_cont.about_travlog .visual_gsp_travlog::before {
   content: '';
@@ -766,6 +764,12 @@
   height: 2.4rem;
   margin-bottom: 0.6rem;
 }
+.section_cont.about_travlog .visual_gsp_travlog.transform {
+  animation: itemUp30 0.4s forwards;
+}
+.section_cont.about_travlog .visual_gsp_travlog.transform::before {
+  animation: floatwithScale 6s 0.5s ease-in-out infinite;
+}
 .section_cont.about_travlog > .txt_sub {
   color: #252E33;
   font-size: 1.8rem;
@@ -810,13 +814,12 @@
   content: '';
   display: block;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: -1.95rem;
+  left: -1.95rem;
   width: 9.0rem;
   height: 9.0rem;
   background: url('../../images/hmui/img_circular.png') no-repeat center;
   background-size: 100%;
-  transform: translate(-50%, -50%);
 }
 .section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_krw {
   position: absolute;
@@ -827,6 +830,12 @@
   position: absolute;
   right: 0;
   bottom: 0;
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange.transform  .img_globe::before {
+  animation: rotate360 4s linear infinite;
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange.transform  .img_coin_krw {
+  
 }
 .section_cont.gsp_travlog_info .list_benefit_label {
   margin: 3.9rem 1.2rem 3.0rem;
@@ -971,6 +980,10 @@
 .visual_gsp_atm {
   margin: 2.0rem 0;
   text-align: center;
+  transform: translateY(3.0rem);
+}
+.visual_gsp_atm.transform {
+  animation: itemUp30 0.4s forwards;
 }
 .gsp_travlog_info .atm_info {
   margin: 3.6rem 0 1.0rem;
@@ -1020,7 +1033,9 @@
   width: 10.9rem;
   height: 10.5rem;
   background-image: url('../../images/global/visual_gsp_coin.png');
-  transform: translateX(-56%);
+  transform: translateX(-56%) scale(0.5);
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform-origin: center bottom;
 }
 .gsp_travlog_info .visual_gsp_cashback .img_confetti_1 {
   position: absolute;
@@ -1029,6 +1044,9 @@
   width: 111.1vw;
   height: 40.8vw;
   background-image: url('../../images/global/bg_gsp_confetti.png');
+  transform: scale(0);
+  transition: all 0.3s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform-origin: center bottom;
 }
 .gsp_travlog_info .visual_gsp_cashback .img_confetti_2 {
   position: absolute;
@@ -1037,6 +1055,18 @@
   width: 82.2vw;
   height: 54.7vw;
   background-image: url('../../images/global/bg_gsp_confetti_2.png');
+  transform: scale(0);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform-origin: center bottom;
+}
+.gsp_travlog_info .visual_gsp_cashback.transform .img_coinpop {
+  transform: translateX(-56%) scale(1);
+}
+.gsp_travlog_info .visual_gsp_cashback.transform .img_confetti_1 {
+  transform: scale(1);
+}
+.gsp_travlog_info .visual_gsp_cashback.transform .img_confetti_2 {
+  transform: scale(1);
 }
 .gsp_travlog_info .wrap_loop_scrl.gsp_kr_store {
   overflow: hidden;

@@ -169,6 +169,12 @@
   } 
 }
 
+@keyframes rotate360 {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
 @keyframes skeleton {
   to {
     background-position-x: -200%;

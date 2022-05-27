@@ -39,8 +39,9 @@ var registUI = function(){
   if ( $('.list_benefit_label').length ) { _showBenefitLabel(); } // 혜택리스트 라벨 애니메이션
   if ( $('.wrap_loop_scrl').length ) { _loopScrlCont(); } // 무한스크롤링 컨텐츠
   if ( $('.fnFitToCont').length ) { _textFitToCont(); } // 택스트 사이즈 조정
-  
   if ( $('.chart_bar_stacked').length ) { _barChartStacked(); } // stacked bar chart
+
+  if ( $('.gsp_travlog_info').length ) { _gspTravlogInfo(); } // 트래블로그 혜택안내 애니메이션 실행
   if ( $('.wrap_vdb_list').length ) { fnVdbCoinChart.animate(); } // 내가받은 혜택 동전차트 애니메이션 실행
 
 };
@@ -588,11 +589,8 @@ var _loopScrlCont = function(){
       duration = 2000 * length;
 
     if (dir === 'rtl') {
-      // left = width * length;
-      
       styles += '.' + listClass + ' { animation: ' + listClass + ' ' + duration + 'ms linear reverse infinite ; }';
     } else {
-      
       styles += '.' + listClass + ' { animation: ' + listClass + ' ' + duration + 'ms linear infinite; }';
     }
     
@@ -602,7 +600,6 @@ var _loopScrlCont = function(){
     styles += '0% { transform: translateX(0) }';
     styles += '100% { transform: translateX(' + left + 'px) }';
     styles += '}';
-
   });
 
   var styleSheet = document.createElement('style');
@@ -1039,6 +1036,34 @@ var fnHanamoneyGuideControl = function() {
         else if ($(el).hasClass('guide_hanamoney_4')) { pointSwiper.autoplay.stop(); }
         else { $(el).removeClass('transform'); }
       }
+    });
+  });
+}
+
+
+/**
+  * @name _gspTravlogInfo()
+  * @description 애니메이트 콘텐츠 트랜지션 공통 컨트롤
+  * @url GSP_002
+ */
+var _gspTravlogInfo = function(){
+  var $el = $('.gsp_travlog_info').closest('[data-roll="GSP"]').find('[data-animate="trans"]');
+
+  $el.each(function(){
+    var $this = $(this);
+    var $transCont = $this.find('[class^="visual_gsp_"]');
+
+    if ( !$transCont.length ) {
+      $transCont = $this;
+    }
+
+    $transCont.waypoint({
+      element: this,
+      handler: function() {
+        $transCont.addClass('transform');
+        this.destroy();
+      },
+      offset: '80%'
     });
   });
 }
