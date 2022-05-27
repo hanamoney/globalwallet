@@ -727,6 +727,13 @@ var exeTransitionInLayer = function() {
         _showBenefitList();
       }, 300);
     }
+
+    // VDB_003
+    if ($this.find('.list_benefit_tower')) {
+      setTimeout(function(){
+        $this.find('.list_benefit_tower li').addClass('transform');
+      }, 300);
+    }
     
     // USR_103
     if ($this.find('.visual_usr_card')) {

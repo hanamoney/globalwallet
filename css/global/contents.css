@@ -1701,6 +1701,27 @@
   font-size: 2.0rem;
   line-height: 3.2rem;
   font-weight: 700;
+  transform: translateY(100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.list_benefit_tower li.transform {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.list_benefit_tower li:first-child {
+  transition-delay: 0.4s;
+}
+.list_benefit_tower li:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.list_benefit_tower li:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.list_benefit_tower li:nth-child(4) {
+  transition-delay: 0.1s;
 }
 
 /* [UTL] - Utill */
