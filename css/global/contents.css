@@ -683,6 +683,10 @@
   background: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);
   text-align: center;
 }
+.section_cont.about_travlog .wrap_tit {
+  margin: 0 -2.4rem;
+  padding: 0;
+}
 .section_cont.about_travlog .tit_big_bold {
   text-align: center;
 }
