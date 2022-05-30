@@ -140,13 +140,13 @@
 
       $('.btn_ico_download').on('click', function(){
         // 스크린샷 높이해제 param 해당팝업 element
-        fnLayerScreenShot.set($('#popupId'));
-        // fnLayerScreenShot2.set($('#popupId'));
+        // fnLayerScreenShot.set($('#popupId'));
+        fnLayerScreenShot2.set($('#popupId'));
 
         setTimeout(function(){
           // 스크린샷 완료 후 원래 상태로
-          fnLayerScreenShot.complete();
-          // fnLayerScreenShot2.complete();
+          // fnLayerScreenShot.complete();
+          fnLayerScreenShot2.complete();
 
           // 토스트 팝업 호출 param 해당팝업 id
           fnToastPop('toast');
