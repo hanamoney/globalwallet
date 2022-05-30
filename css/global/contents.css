@@ -821,21 +821,48 @@
   background: url('../../images/hmui/img_circular.png') no-repeat center;
   background-size: 100%;
 }
-.section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_krw {
+.section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_krw,
+.section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_usd {
   position: absolute;
+  background-image: none;
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_krw {
   left: 0;
   top: 0;
 }
 .section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_usd {
-  position: absolute;
   right: 0;
   bottom: 0;
 }
-.section_cont.gsp_travlog_info .visual_gsp_exchange.transform  .img_globe::before {
+.section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_krw::before,
+.section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_usd::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_krw::before {
+  background-image: url('../../images/hmui/img_coin_krw.png');
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_usd::before {
+  background-image: url('../../images/hmui/img_coin_usd.png');
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_globe::before {
   animation: rotate360 4s linear infinite;
 }
-.section_cont.gsp_travlog_info .visual_gsp_exchange.transform  .img_coin_krw {
-  
+.section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_krw {
+  animation: rotate360 4s linear infinite;
+  transform-origin: 5.2rem 4.5rem;
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_usd {
+  animation: rotate360 4s linear infinite;
+  transform-origin: -2.0rem -1.4rem;
+}
+.section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_krw::before,
+.section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_usd::before {
+  animation: rotate360 4s linear infinite reverse;
 }
 .section_cont.gsp_travlog_info .list_benefit_label {
   margin: 3.9rem 1.2rem 3.0rem;
