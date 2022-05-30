@@ -336,100 +336,6 @@
       </div>
     </div>
     <!-- // contents-->
-
-
-    <div id="popupId" class="wrap_layer type_full">
-      <div class="inner_layer">
-        <div class="head_layer">
-          <h2 class="logo_hanamoney"><span class="blind">하나머니</span></h2>
-        </div>
-
-        <div class="content_layer">
-          <div class="section_detail_trans">
-            <div class="wrap_top_info">
-              <div class="fnFixedTop" data-height="50">
-                <p class="txt_type">송금</p>
-                <p class="txt_amount"><em class="num">2,000,000</em>원</p>
-                <!-- 충전 케이스 시 add 클래스 추가  -->
-                <!-- <p class="txt_amount add">USD <em class="num">2,000,000</em></p> -->
-              </div>
-              <div class="trans_info">
-                <p class="tit">하나머니 → JPY</strong>
-                <p class="desc">2022.03.08(월) 23:00</p>
-              </div>
-            </div>
-
-            <div class="msg_benefit"><span class="ico_present"></span><p>수수료 USD <em class="txt_num">13.00</em>을 아꼈어요!</p></div>
-
-            <div class="wrap_list">
-              <ul class="list_info">
-                <!-- 원화 케이스 -->
-                <li>
-                  <span class="tit">입금계좌번호</span>
-                  <span class="txt"><em>하나은행</em> <em>19200000990</em></span>
-                </li>
-                <li>
-                  <span class="tit">보내는 분</span>
-                  <span class="txt">이하나</span>
-                </li>
-                <li>
-                  <span class="tit">거래사유</span>
-                  <span class="txt">계좌송금</span>
-                </li>
-                <li>
-                  <span class="tit txt_point_3">송금수수료</span>
-                  <strong class="txt txt_point_3"><em class="txt_num">0</em>원</strong>
-                </li>
-                <!-- // 원화 케이스 -->
-                <!-- 외화 케이스 -->
-                <li>
-                  <span class="tit">출금수단</span>
-                  <span class="txt">태국</span>
-                </li>
-                <li>
-                  <span class="tit">출금수단</span>
-                  <span class="txt">트래블로그 카드명 풀네임</span>
-                </li>
-                <li>
-                  <span class="tit">현지출금통화금액</span>
-                  <span class="txt">THB <em class="txt_num">55,178.18</em></span>
-                </li>
-                <li>
-                  <span class="tit">적용환율</span>
-                  <span class="txt">
-                    <span class="ico_cur_usd"></span> <em>USD</em> 1 = <em>THB</em> <em class="txt_num">54,603.37</em>
-                  </span>
-                </li>
-                <li>
-                  <span class="tit">기타통화 환전수수료</span>
-                  <span class="txt">USD <em class="txt_num">1.90</em></span>
-                </li>
-                <li>
-                  <span class="tit">거래사유</span>
-                  <span class="txt">THB ATM출금</span>
-                </li>
-                <li>
-                  <span class="tit txt_point_3">해외 ATM출금 수수료</span>
-                  <strong class="txt txt_point_3 txt_cancel">USD <em class="txt_num">13</em></strong>
-                </li>
-                <!-- // 외화 케이스 -->
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- 하단고정영역 -->
-        <div class="section_bottom_fixed">
-          <div class="wrap_btn_full type_ico">
-            <button type="button" class="btn_full_secondary btn_ico_download"><span class="blind">저장하기</span></button>
-            <button type="button" class="btn_full_primary fnClosePop">확인</button>
-          </div>
-        </div>
-        <!-- // 하단고정영역 -->
-      </div>
-    </div>
-    <!-- // 상세팝업 -->
-
   </main>
   
 
@@ -520,23 +426,6 @@
     setTimeout(function(){
       skeletonLoading.end('.section_list_trans'); // 로딩 완료
     },2000);
-
-    fnOpenLayerPop('popupId');
-    $('.btn_ico_download').on('click', function(){
-        // 스크린샷 높이해제 param 해당팝업 element
-        fnLayerScreenShot.set($('#popupId'));
-        // fnLayerScreenShot2.set($('#popupId'));
-
-        setTimeout(function(){
-          // 스크린샷 완료 후 원래 상태로
-          fnLayerScreenShot.complete();
-          // fnLayerScreenShot2.complete();
-
-          // 토스트 팝업 호출 param 해당팝업 id
-          fnToastPop('toast');
-        },3000);
-        // setTimeout은 상태변화 확인 위한 임의 function
-      })
   });
   </script>
 </body>
