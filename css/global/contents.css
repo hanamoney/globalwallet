@@ -1034,7 +1034,7 @@
   line-height: 2.6rem;
 }
 .gsp_travlog_info .atm_info ul {
-  margin-top: 3.0rem;
+  margin: 3.0rem 0 2.0rem;
 }
 .gsp_travlog_info .atm_info ul li {
   display: inline-block;
@@ -1046,7 +1046,6 @@
 }
 .gsp_travlog_info .atm_info [class^="img_logo"] {
   display: block;
-  margin-bottom: 0.8rem;
 }
 .gsp_travlog_info .visual_gsp_cashback {
   position: relative;

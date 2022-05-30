@@ -540,6 +540,14 @@ section[data-roll] {
 .wrap_hashtag .txt_hashtag > span em {
   font-weight: 700;
 }
+.txt_sup {
+  position: relative;
+}
+.txt_sup::after {
+  content: '*';
+  display: inline-block;
+  vertical-align: top;
+}
 
 /* Align */
 .wrap_dis_tbl > ul {
@@ -3142,6 +3150,14 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .wrap_notice .txt_basis + .txt_basis {
   margin-top: 0.6rem;
 }
+.wrap_notice .list_txt .txt_black {
+  color: #252E33;
+}
+.wrap_notice .list_txt + .list_txt {
+  margin-top: 2.4rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid #EBEBEB;
+}
 
 /* 배너영역 */
 .wrap_banner {
@@ -3932,13 +3948,13 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   background-size: 100%;
 }
 .img_logo_master {
-  width: 6.6rem;
-  height: 4.0rem;
+  width: 9.7rem;
+  height: 8.0rem;
   background-image: url('../../images/hmui/company/logo_comp_master.png');
 }
 .img_logo_cirrus {
-  width: 6.6rem;
-  height: 4.0rem;
+  width: 9.7rem;
+  height: 8.0rem;
   background-image: url('../../images/hmui/company/logo_comp_cirrus.png');
 }
 
