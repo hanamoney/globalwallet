@@ -1986,6 +1986,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .section_prc_complete .wrap_list {
   margin-top: 4.0rem;
 }
+.section_prc_complete + .wrap_notice {
+  margin-top: 4.0rem;
+}
 .wrap_layer .section_prc_complete {
   padding-top: 4.0rem;
   padding-bottom: 1.0rem;
