@@ -2319,6 +2319,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .wrap_layer.type_full.setScreenShot .inner_layer .content_layer {
   max-height: unset;
+  min-height: 100vh;
 }
 .wrap_layer.type_full.setScreenShot .section_bottom_fixed {
   display: none;
