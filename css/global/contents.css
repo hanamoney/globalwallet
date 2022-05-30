@@ -854,20 +854,26 @@
 .section_cont.gsp_travlog_info .visual_gsp_exchange .img_coin_usd::before {
   background-image: url('../../images/hmui/img_coin_usd.png');
 }
-.section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_globe::before {
+.section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_globe::before,
+.section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_krw,
+.section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_usd {
+  -webkit-animation: rotate360 4s linear infinite;
   animation: rotate360 4s linear infinite;
 }
 .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_krw {
-  animation: rotate360 4s linear infinite;
+  -webkit-transform-origin: 5.2rem 4.5rem;
   transform-origin: 5.2rem 4.5rem;
 }
 .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_usd {
-  animation: rotate360 4s linear infinite;
+  -webkit-transform-origin: -2.0rem -1.4rem;
   transform-origin: -2.0rem -1.4rem;
 }
 .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_krw::before,
 .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_usd::before {
+  -webkit-animation: rotate360 4s linear infinite reverse;
   animation: rotate360 4s linear infinite reverse;
+  -webkit-transform-origin: center;
+  transform-origin: center;
 }
 .section_cont.gsp_travlog_info .list_benefit_label {
   margin: 3.9rem 1.2rem 3.0rem;
