@@ -3153,6 +3153,10 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .wrap_notice .txt_basis + .txt_basis {
   margin-top: 0.6rem;
 }
+.wrap_notice .list_txt.type_sub li {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
 .wrap_notice .list_txt .txt_black {
   color: #252E33;
 }
