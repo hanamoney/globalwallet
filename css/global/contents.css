@@ -1365,6 +1365,10 @@
   font-size: inherit;
   text-align: left;
 }
+.section_cont.vdb_saved .tit_section_2 .btn_tooltip .ico_tooltip {
+  position: relative;
+  top: 0.4rem;
+}
 .section_cont.vdb_saved .wrap_item_benefit {
   background-color: transparent;
 }
