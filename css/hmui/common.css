@@ -2971,6 +2971,20 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .list_benefit.box_white .box {
   background-color: #fff;
 }
+.list_benefit li > a {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  width: 100%;
+}
+.list_benefit li > a .item_desc .tit {
+  display: inline-block;
+  padding-right: 1.7rem;
+  background: url('../../images/hmui/ico_arr_link_s.png') no-repeat;
+  background-size: 1.6rem;
+  background-position: right 0 top 0.5rem;
+}
 .wrap_item_benefit li,
 .wrap_item_benefit .tit_wrap {
   will-change: transform, opacity;
