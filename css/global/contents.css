@@ -2201,3 +2201,19 @@
     filter: blur(5px);
   }
 }
+
+/* style for Galaxy fold */
+@media screen and (min-width:768px) {
+  .list_masters_benefit li a {
+    height: auto;
+    padding-bottom: 2.0rem;
+  }
+  .list_masters_benefit li a img {
+    top: 12%;
+    right: 0;
+    left: unset;
+    width: 14vw;
+    height: 14vw;
+    transform: none;
+  }
+}
