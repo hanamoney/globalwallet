@@ -2219,4 +2219,27 @@
   .list_masters_benefit .category_free span {
     max-width: none;
   }
+
+  /* GSP_002 */
+  .section_cont.about_travlog .visual_gsp_travlog {
+    padding-top: 16.8rem;
+  }
+  .section_cont.about_travlog .visual_gsp_travlog::before {
+    width: 35.4rem;
+    height: 18.6rem;
+    margin-left: 28%;
+  }
+  .gsp_travlog_info .visual_gsp_cashback {
+    height: 14.0rem;
+  }
+  .gsp_travlog_info .visual_gsp_cashback .img_confetti_1 {
+    left: 22%;
+    width: 40.0rem;
+    height: 14.7rem;
+  }
+  .gsp_travlog_info .visual_gsp_cashback .img_confetti_2 {
+    right: 22%;
+    width: 29.6rem;
+    height: 19.7rem;
+  }
 }
