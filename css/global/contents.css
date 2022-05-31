@@ -2225,21 +2225,25 @@
     padding-top: 16.8rem;
   }
   .section_cont.about_travlog .visual_gsp_travlog::before {
+    left: 50%;
     width: 35.4rem;
     height: 18.6rem;
-    margin-left: 28%;
+    margin-left: -17.7rem;
   }
   .gsp_travlog_info .visual_gsp_cashback {
     height: 14.0rem;
   }
   .gsp_travlog_info .visual_gsp_cashback .img_confetti_1 {
-    left: 22%;
+    left: 50%;
     width: 40.0rem;
     height: 14.7rem;
+    margin-left: -20.0rem;
   }
   .gsp_travlog_info .visual_gsp_cashback .img_confetti_2 {
-    right: 22%;
+    right: auto;
+    left: 50%;
     width: 29.6rem;
     height: 19.7rem;
+    margin-left: -10.0rem;
   }
 }
