@@ -1357,8 +1357,6 @@
   position: absolute;
   top: 5.8rem;
   right: 14.4vw;
-  width: 19.7vw;
-  height: 30vw;
 }
 .section_cont.vdb_accum .wrap_hashtag + .img_character_bebe_dance {
   position: static;
@@ -1415,7 +1413,9 @@
 .visual_vdb_recomm .img_like {
   position: absolute;
   top: 2.0rem;
-  right: 18.8vw;
+  left: 50%;
+  margin-left: 6rem;
+  transform: translateX(-50%);
   z-index: 3;
 }
 @media screen and (max-width: 359px) {
@@ -2202,7 +2202,6 @@
   }
 }
 
-/* style for Galaxy fold */
 @media screen and (min-width:768px) {
   /* VDB_002 */
   .list_masters_benefit li a {
