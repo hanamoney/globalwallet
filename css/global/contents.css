@@ -143,28 +143,29 @@
 }
 .visual_usr_character {
   position: absolute;
-  right: 0;
-  bottom: -8.89vw;
-  left: 17.78vw;
-  width: 70.3vw;
-  height: 54.44vw;
+  bottom: -3.6rem;
+  left: 50%;
+  width: 25.3rem;
+  height: 19.6rem;
+  margin-left: 3%;
   text-align: center;
+  transform: translateX(-50%);
 }
 .visual_usr_character .img_character_aero,
 .visual_usr_character [class^="img_cloud"] {
   will-change: transform;
 }
 .visual_usr_character .img_character_aero {
-  margin-left: -4.3rem;
+  margin-left: -1.6vw;
   animation: itemUp10 0.6s forwards;
 }
 .visual_usr_character .img_cloud1 {
-  bottom: 15.1vw;
-  left: -3.1vw;
+  bottom: 5.8rem;
+  left: 0;
   animation: cloudPop 0.3s forwards, cloud1 7s 0.3s ease-in-out infinite;
 }
 .visual_usr_character .img_cloud2 {
-  top: 13.33vw;
+  top: 4.9rem;
   right: 0;
   animation: cloudPop 0.4s forwards, cloud2 7s 0.8s ease-in-out infinite;
 }

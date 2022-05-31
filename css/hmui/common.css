@@ -3828,8 +3828,8 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .img_character_aero {
   display: inline-block;
-  width: 41.11vw;
-  height: 54.44vw;
+  width: 14.8rem;
+  height: 19.6rem;
   background: url('../../images/hmui/character/img_character_aero.png') no-repeat 50%;
   background-size: 100%;
 }
@@ -3837,13 +3837,13 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   position: absolute;
 }
 .img_cloud1 {
-  width: 21.1vw;
-  height: 13.8vw;
+  width: 8.2rem;
+  height: 5.4rem;
   background-image: url('../../images/hmui/character/visual_usr_cloud1.png');
 }
 .img_cloud2 {
-  width: 30.05vw;
-  height: 15.94vw;
+  width: 10.8rem;
+  height: 5.7rem;
   background-image: url('../../images/hmui/character/visual_usr_cloud2.png');
 }
 .img_character_question {
