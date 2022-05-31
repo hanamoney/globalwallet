@@ -506,30 +506,30 @@
 }
 .visual_gsp_overseas {
   margin-top: 1.0rem;
-  height: 59.7vw;
-  background: url('../../images/global/bg_gsp1_cloud.png') no-repeat left bottom;
-  background-size: 100% auto;
+  height: 22.5rem;
+  background: url('../../images/global/bg_gsp1_cloud.png') no-repeat right bottom;
+  background-size: auto 100%;
 }
 .visual_gsp_overseas .img_character_hahamom {
   position: absolute;
-  bottom: -7.5vw;
-  left: 36.3vw;
-  width: 39.7vw;
-  height: 53.8vw;
+  bottom: -2.7rem;
+  left: 50%;
+  margin-left: 2.3rem;
+  transform: translateX(-50%);
 }
 .visual_gsp_overseas .img_mobile_shop {
   position: absolute;
-  bottom: -4.4vw;
-  left: 6.1vw;
-  width: 37.2vw;
-  height: 38.3vw;
+  bottom: -1.6rem;
+  left: 50%;
+  margin-left: -15.6rem;
 }
 .visual_gsp_overseas .img_shoppingbag {
   position: absolute;
-  right: 6.9vw;
-  bottom: 10.2vw;
-  width: 24.1vw;
-  height: 49.4vw;
+  left: 50%;
+  bottom: 4.2rem;
+  width: 8.7rem;
+  height: 17.8rem;
+  margin-left: 7.2rem;
 }
 .visual_gsp_overseas.transform .img_shoppingbag {
   animation: floating10 4s ease-in-out infinite;
@@ -2218,6 +2218,11 @@
   }
   .list_masters_benefit .category_free span {
     max-width: none;
+  }
+
+  /* GSP_001 */
+  .visual_gsp_overseas {
+    background-position-x: center;
   }
 
   /* GSP_002 */
