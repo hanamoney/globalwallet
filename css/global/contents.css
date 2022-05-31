@@ -2202,7 +2202,7 @@
   }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:500px) {
   /* VDB_002 */
   .list_masters_benefit li a {
     height: auto;
