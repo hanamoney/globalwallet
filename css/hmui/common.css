@@ -3902,8 +3902,8 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   background-image: url('../../images/hmui/character/visual_like.png');
 }
 .img_character_dance {
-  width: calc(100vw / 3);
-  height: 50vw;
+  width: 12.0rem;
+  height: 18.0rem;
   background-image: url('../../images/hmui/character/img_character_dance.png');
 }
 .img_character_cry {

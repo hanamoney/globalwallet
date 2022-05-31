@@ -1556,8 +1556,8 @@
   position: relative;
   flex: 1;
   display: inline-block;
-  min-width: 35.5vw;
-  padding: 13vw 0 11.6vw;
+  max-width: 16.0rem;
+  padding: 4.8rem 0 11.6vw;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: left top;
@@ -1606,22 +1606,26 @@
   height: 100%;
   background-image: url('../../images/global/bg_vdb_saved.png');
   background-position: top right;
-  background-size: 18.3vw auto;
+  background-size: 6.6rem auto;
 }
 .visual_vdb_total .img_character_dance::before {
-  left: -20vw;
-  bottom: -2.2rem;
+  bottom: -1.8rem;
+  left: 50%;
   z-index: 2;
-  width: calc(100vw/3);
-  height: 22.2vw;
+  width: 12.0rem;
+  height: 8.0rem;
+  margin-left: -7.0rem;
   background-image: url('../../images/hmui/character/visual_moneybag.png');
+  transform: translateX(-50%);
 }
 .visual_vdb_total .img_character_dance::after {
-  bottom: -1.9rem;
-  right: -13.3vw;
-  width: 22.2vw;
-  height: 22.2vw;
+  bottom: -1.5rem;
+  left: 50%;
+  width: 8.0rem;
+  height: 8.0rem;
+  margin-left: 6.2rem;
   background-image: url('../../images/hmui/character/visual_bag.png');
+  transform: translateX(-50%);
 }
 .my_benefit_info .bubble.accum .total_amount {
   color: #13C9BE;
@@ -1630,9 +1634,10 @@
   color: #E178AD;
 }
 .my_benefit_info.no_saved .img_character_dance::before {
-  left: -25vw;
-  width: 38.8vw;
-  height: 25.8vw;
+  bottom: -2.5rem;
+  width: 14.0rem;
+  height: 9.3rem;
+  margin-left: -8.7rem;
 }
 .my_benefit_info.no_accum .visual_vdb_total {
   padding-right: 9.4vw;
@@ -1645,9 +1650,9 @@
 }
 .my_benefit_info.no_accum .img_character_dance::after {
   bottom: -1.1rem;
-  right: -27.6vw;
-  width: 27.7vw;
-  height: 27.7vw;
+  width: 10rem;
+  height: 10rem;
+  margin-left: 9.4rem;
 }
 .my_benefit_info.no_saved .visual_vdb_total {
   padding-left: 9.4vw;
@@ -1666,8 +1671,8 @@
 }
 .my_benefit_info.no_accum .img_character_dance,
 .my_benefit_info.no_saved .img_character_dance {
-  width: 38.8vw;
-  height: 58.3vw;
+  width: 13.2rem;
+  height: 20.3rem;
 }
 .my_benefit_info.no_accum .bubble p ,
 .my_benefit_info.no_saved .bubble p {
@@ -2204,6 +2209,11 @@
 }
 
 @media screen and (min-width:500px) {
+  /* VDB_001 */
+  .visual_vdb_total .bubble {
+    padding-top: 6.4rem;
+  }
+
   /* VDB_002 */
   .list_masters_benefit li a {
     height: auto;
