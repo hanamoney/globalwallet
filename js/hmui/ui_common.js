@@ -1027,7 +1027,7 @@ var fnHanamoneyGuideControl = function() {
     $('.section_cont').each(function(idx, el){
       if ( fnCheckInView($(el))) {
         if ($(el).hasClass('guide_hanamoney_1')) { accumSwiper.autoplay.start(); }
-        else if ($(el).hasClass('guide_hanamoney_3')) { chargeSwiper.autoplay.start(); }
+        else if ($(el).hasClass('guide_hanamoney_3')) { chargeSwiper.params.autoplay.disableOnInteraction = false; chargeSwiper.autoplay.start(); }
         else if ($(el).hasClass('guide_hanamoney_4')) { pointSwiper.params.autoplay.delay = 1000; pointSwiper.autoplay.start(); }
         else { $(el).addClass('transform'); }
       } else {
