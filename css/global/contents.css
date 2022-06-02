@@ -61,6 +61,21 @@
   top: -0.3rem;
   margin: 0 0.5rem 0 0.2rem;
 }
+.section_chg_list.chg_list_acc li {
+  margin-top: 1.0rem;
+}
+.section_chg_list.chg_list_acc .wrap_link_list {
+  padding-top: 0;
+}
+.section_chg_list.chg_list_acc .wrap_link_list a.wrap_box {
+  margin-bottom: 0;
+}
+.section_chg_list.chg_list_acc .txt_bank:first-child {
+  padding-top: 0;
+}
+.section_chg_list.chg_list_acc + .wrap_notice {
+  margin-top: 4.2rem;
+}
 
 /* [SET] - 하나머니 관리 */
 .section_set_list {
@@ -374,6 +389,9 @@
   background: url('../../images/global/bg_hmn_confeffi_2.png') no-repeat 50%;
   background-size: 100%;
   transform: translateX(-50%);
+}
+.hmn_travlog_info .wrap_btn.type_full .btn_box_m {
+  width: 100%;
 }
 .wrap_moneybag_all .list_moneybag {
   position: absolute;
