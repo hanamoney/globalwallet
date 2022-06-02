@@ -668,8 +668,14 @@ var fnOpenLayerPop = function(popID) {
   $el.addClass('show').trigger('layerOpened');
   $el.append(dim);
 
-  if ($el.find('tit_layer').length) {
-    $el.find('.tit_layer').focus();
+  if ($el.find('.tit_layer').length) {
+    var tit = $el.find('.tit_layer');
+    tit.focus();
+
+    // 팝업 타이틀 영역보다 넘칠 경우 텍스트 사이즈 조정
+    if (tit[0].scrollWidth > tit.width()) {
+      tit.css('font-size', (parseInt(tit.width() / tit.text().replace(/ /g, '').length) * 1.1) + "px");
+    }
   } else {
     $el.find('.inner_layer').children(':first').focus();
   }

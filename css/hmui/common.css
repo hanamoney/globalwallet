@@ -2120,6 +2120,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   line-height: 2.4rem;
   font-weight: 700;
   text-align: center;
+  white-space: nowrap;
 }
 .wrap_layer .content_layer {
   overflow-x: hidden;
