@@ -46,10 +46,10 @@
             <!-- CASE “모은 돈과 아낀 돈” 모두 있는 경우 -->
             <div class="my_benefit_info">
               <div class="wrap_tit type_center">
-                <h2 class="tit">총 <em class="txt_amount"><span class="txt_num fnCounterUp">400,000</span>원</em> 혜택을<br>받았어요!</h2>
+                <h2 class="tit">총 <em class="txt_amount"><span class="txt_num fnCounterUp">1234</span>원</em> 혜택을<br>받았어요!</h2>
               </div>
               <div class="visual_vdb_total">
-                <div class="bubble accum"><p class="total_amount fnFitToCont"><em class="txt_num">9,999,999</em>원</p><p>모았어요!</p></div>
+                <div class="bubble accum"><p class="total_amount fnFitToCont"><em class="txt_num" id="test1">9,999,999</em>원</p><p>모았어요!</p></div>
                 <span class="img_character_dance" aria-hidden="true"></span>
                 <div class="bubble saved"><p class="total_amount fnFitToCont"><em class="txt_num">999,999</em>원</p><p>아꼈어요!</p></div>
               </div>
@@ -102,7 +102,7 @@
                   <li>
                     <p class="tit_counter"><span class="num">1</span><span>그 외 적립</span></p>
                     <div class="chart_coin" data-percent="100"></div>
-                    <p class="txt_amount fnFitToCont"><em class="txt_num">100,000</em>원</p>
+                    <p class="txt_amount fnFitToCont"><em class="txt_num" id="test2">9,999,999</em>원</p>
                   </li>
                   <li>
                     <p class="tit_counter"><span class="num">2</span><span>포인트전환 적립</span></p>
@@ -269,6 +269,8 @@
         fnCounterUp($('.fnCounterUp'), 20, 700);
 
         // 카테고리별 금액 data 변경 확인용 
+        $('#test1').text('9,000');
+        $('#test2').text('9,000');
         $('.wrap_vdb_list li').eq(1).find('.txt_num').text('3,000');
       });
     });
