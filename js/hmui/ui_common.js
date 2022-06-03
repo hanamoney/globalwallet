@@ -619,9 +619,11 @@ var _textFitToCont = function(){
     resize();
   });
 
-  observer.observe($el.find('.txt_num')[0], {
-    childList: true,
-    characterData: true
+  $el.each(function(){
+    observer.observe($(this).find('.txt_num')[0], {
+      childList: true,
+      characterData: true
+    });
   });
 
   function resize() {
