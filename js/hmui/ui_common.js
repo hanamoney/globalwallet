@@ -281,6 +281,11 @@ var _tabContents = function() {
     if ($tabSection.hasClass('type_fullpage')) {
       $(document).scrollTop(0);
     }
+
+    // 열려 있는 툴팁 삭제
+    if ($('.wrap_tooltip.show').length) {
+      $('.wrap_tooltip.show').removeClass('show');
+    }
   });
 }
 
