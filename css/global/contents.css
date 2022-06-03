@@ -64,6 +64,9 @@
 .section_chg_list.chg_list_acc li {
   margin-top: 1.0rem;
 }
+.section_chg_list.chg_list_acc li:first-child .txt_acc {
+  padding-top: 1.8rem;
+}
 .section_chg_list.chg_list_acc .wrap_link_list {
   padding-top: 0;
 }
