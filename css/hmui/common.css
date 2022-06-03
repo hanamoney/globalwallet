@@ -1373,7 +1373,9 @@ button.btn_secondery {
   color: #fff;
 }
 .btn_full_primary.disabled,
-.btn_full_primary[disabled] {
+.btn_full_primary[disabled],
+.btn_primary.disabled,
+.btn_primary[disabled] {
   background-color: #EDF4F4;
   color: #D0D7D7;
 }
@@ -1382,7 +1384,9 @@ button.btn_secondery {
   color: #848F95;
 }
 .btn_full_secondary.disabled,
-.btn_full_secondary[disabled] {
+.btn_full_secondary[disabled],
+.btn_secondary.disabled,
+.btn_secondary[disabled] {
   background-color: #F6F6F6;
   color: #D0D7D7;
 }
