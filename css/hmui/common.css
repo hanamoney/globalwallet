@@ -2112,12 +2112,6 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   padding: 0 5.5rem;
 }
 .wrap_layer .head_layer .tit_layer {
-  /* position: absolute;
-  top: 0;
-  right: 0;
-  left: 0; */
-  /* width: calc(100% - 11rem); */
-  /* margin: 0 5.5rem; */
   width: 100%;
   padding: 3.0rem 0 0;
   font-size: 2.0rem;
