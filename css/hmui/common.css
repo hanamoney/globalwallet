@@ -1990,7 +1990,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   margin-top: 4.0rem;
 }
 .wrap_layer .section_prc_complete {
-  padding-top: 2.0rem;
+  padding-top: 3.4rem;
   padding-bottom: 1.0rem;
 }
 .wrap_layer .section_prc_complete::before {
@@ -1999,7 +1999,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   margin-bottom: 1.8rem;
 }
 .wrap_layer .section_prc_complete::after {
-  top: 2.0rem;
+  top: 3.4rem;
   left: calc(50% - 2.7rem);
   width: 5.4rem;
   height: 5.4rem;
@@ -2108,16 +2108,17 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .wrap_layer .head_layer {
   position: relative;
-  height: 7.4rem;
+  min-height: 6.0rem;
   padding: 0 5.5rem;
 }
 .wrap_layer .head_layer .tit_layer {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   right: 0;
-  left: 0;
-  width: calc(100% - 11rem);
-  margin: 0 5.5rem;
+  left: 0; */
+  /* width: calc(100% - 11rem); */
+  /* margin: 0 5.5rem; */
+  width: 100%;
   padding: 3.0rem 0 0;
   font-size: 2.0rem;
   line-height: 2.4rem;
@@ -2129,7 +2130,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   overflow-x: hidden;
   overflow-y: auto;
   padding-bottom: 3.0rem;
-  max-height: calc(50rem - 7.4rem);
+  max-height: calc(50rem - 6.0rem);
 }
 .wrap_layer:not(.type_full,.type_center,.type_alert) .content_layer::after {
   content: '';
@@ -2144,10 +2145,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   bottom:6.0rem;
 }
 .wrap_layer:not(.type_full).hasFixedBtn .content_layer {
-  max-height: calc(50rem - 7.4rem - 6.0rem);
-}
-.wrap_layer:not(.type_full,.type_center,.type_alert) .content_layer .wrap_tit:first-child {
-  padding-top: 1.0rem;
+  max-height: calc(50rem - 6.0rem - 6.0rem);
 }
 .wrap_layer .btn_ico_close {
   position: absolute;
@@ -2182,8 +2180,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   z-index: -1;
 }
 .wrap_layer.type_full .head_layer .tit_layer {
-  width: calc(100% - 9.2rem);
-  margin: 0 4.6rem;
+  width: 100%;
   padding: 0;
   font-size: 1.8rem;
   font-weight: 400;
@@ -3820,7 +3817,10 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .wrap_layer .content_layer .wrap_box {
   width: calc(100vw - 4.8rem);
-  margin: 2.4rem auto 0;
+  margin: 0 auto;
+}
+.wrap_layer .content_layer .wrap_box:first-child {
+  margin-top: 1.8rem;
 }
 .wrap_layer .content_layer .wrap_banner {
   position: relative;
