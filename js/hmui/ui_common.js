@@ -688,11 +688,12 @@ var fnOpenLayerPop = function(popID) {
   // 딤 클릭 시 해당 팝업 닫기
   $(document).on('click', '.dim', function() {
     var popup = $(this).closest('.wrap_layer');
+    var popupID = $(this).closest('.wrap_layer').attr('id');
     // bottom sheet를 제외한 레이어 dim 클릭시 닫힘 기능 없음
     if (popup.hasClass('type_alert') || popup.hasClass('type_center') || popup.hasClass('type_full')) { 
       return;
     }
-    fnCloseLayerPop(popID);
+    fnCloseLayerPop(popupID);
   });
 }
 
