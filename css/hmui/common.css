@@ -2448,6 +2448,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   right: 1.0rem;
   width: 1.8rem;
   height: 1.8rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Bubble */
