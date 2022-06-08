@@ -590,6 +590,10 @@ section[data-roll] {
 }
 .btn_ico_menu {
   background-image: url('../../images/hmui/btn_menu.png');
+  user-select: none;
+}
+.btn_ico_menu:focus {
+  outline: none;
 }
 .btn_ico_close {
   width: 2.6rem;
