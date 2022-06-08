@@ -158,6 +158,7 @@ body.overflow {
   top: 1.2rem;
   width: 2.6rem;
   height: 2.6rem;
+  -webkit-tap-highlight-color: transparent;
 }
 #header .btn_ico_prev {
   left: 2.0rem;
@@ -590,7 +591,6 @@ section[data-roll] {
 }
 .btn_ico_menu {
   background-image: url('../../images/hmui/btn_menu.png');
-  user-select: none;
 }
 .btn_ico_menu:focus {
   outline: none;
@@ -2282,12 +2282,27 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   bottom: -3.6rem;
 }
 .wrap_layer.type_alert .content_layer {
-  padding: 2.0rem 2.0rem;
+  padding: 2.4rem 2.4rem 3.0rem;
 }
 .wrap_layer.type_alert .txt_alert {
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 2.2rem;
+}
+.wrap_layer.type_alert .txt_alert_m {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+}
+.wrap_layer.type_alert .wrap_btn_center {
+  margin-top: 3.0rem;
+}
+.wrap_layer.type_alert .btn_txt {
+  font-size: 1.6rem;
+}
+.wrap_layer.type_alert .txt_alert_m + .txt_alert,
+.wrap_layer.type_alert .txt_alert + .txt_alert {
+  margin-top: 1.0rem;
 }
 .section_button_alert {
   padding: 0;
