@@ -794,8 +794,8 @@ section[data-roll] {
   background-image: url('../../images/hmui/emoji_zero_travlog.png');
 }
 .emoji_card {
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 4.0rem;
+  height: 4.0rem;
   background-image: url('../../images/hmui/emoji_card.png');
 }
 .emoji_security {

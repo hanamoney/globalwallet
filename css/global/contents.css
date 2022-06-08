@@ -903,6 +903,10 @@
 .section_cont.gsp_travlog_info .list_benefit_label li {
   width: calc((100% - 1.2rem)/2);
 }
+.section_cont.gsp_travlog_info .list_benefit_label [class^="emoji_"] {
+  width: 4.0rem;
+  height: 4.0rem;
+}
 .visual_gsp_receipt .box {
   position: relative;
   padding: 2.4rem 1.8rem 6.6rem;
