@@ -1577,8 +1577,8 @@
   position: relative;
   flex: 1;
   display: inline-block;
-  max-width: 16.0rem;
-  padding: 4.8rem 0 11.6vw;
+  max-width: 14.0rem;
+  padding: 12.5vw 0 11.6vw;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: left top;
@@ -1653,6 +1653,10 @@
 }
 .my_benefit_info .bubble.saved .total_amount {
   color: #E178AD;
+}
+.my_benefit_info.no_saved .bubble,
+.my_benefit_info.no_accum .bubble {
+  padding-top: 14.5vw;
 }
 .my_benefit_info.no_saved .img_character_dance::before {
   bottom: -2.5rem;
@@ -2229,10 +2233,18 @@
   }
 }
 
+@media screen and (min-width:400px) {
+  .my_benefit_info.no_saved .bubble,
+  .my_benefit_info.no_accum .bubble {
+    padding-top: 13.0vw;
+  }
+}
 @media screen and (min-width:500px) {
   /* VDB_001 */
-  .visual_vdb_total .bubble {
-    padding-top: 6.4rem;
+  .visual_vdb_total .bubble,
+  .my_benefit_info.no_saved .bubble,
+  .my_benefit_info.no_accum .bubble {
+    padding-top: 5.6rem;
   }
 
   /* VDB_002 */
