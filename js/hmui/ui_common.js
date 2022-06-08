@@ -42,7 +42,7 @@ var registUI = function(){
   if ( $('.chart_bar_stacked').length ) { _barChartStacked(); } // stacked bar chart
 
   if ( $('.gsp_travlog_info').length ) { _gspTravlogInfo(); } // 트래블로그 혜택안내 애니메이션 실행
-  if ( $('.wrap_vdb_list').length ) { fnVdbCoinChart.animate(); } // 내가받은 혜택 동전차트 애니메이션 실행
+  // if ( $('.wrap_vdb_list').length ) { fnVdbCoinChart.animate(); } // 내가받은 혜택 동전차트 애니메이션 실행
 
 };
 
@@ -908,57 +908,65 @@ var fnAnimateBar = function(el) {
   * @url VDB_001
   */
 var fnVdbCoinChart = (function() {
-  var $el;
+  var $el, waypoint;
 
-  function animate() {
-    $el = $('.wrap_vdb_list');
+  function animate(el) {
+    $el = $(el);
     $el.each(function(idx, el){
-      $(el).waypoint({
-        handler: function() {
-          if ( $(el).hasClass('transform') ) { 
-            return;
-          }
-          $(el).find('li').each(function(listIdx, listEl){
-            if ( !$(this).hasClass('empty') ) {
-              var chart = $(this).find('.chart_coin');
-              var coinH = 6;
-              
-              // 첫번째 카테고리 기준 비율 계산 data-percent 설정
-              if ( listIdx > 0 ) {
-                var basis = parseInt( $(el).find('li:first-child').find('.txt_num').text().replace(/,/g, ''), 10 );
-                var currentVal = parseInt( $(this).find('.txt_num').text().replace(/,/g, ''), 10 );
-                var rate = Math.round( ((currentVal / basis) * 100) );
-  
-                chart.data('percent', rate);
-              }
-              
-              // data-percent 값을 가져와 coin 이미지 생성
-              var percentage = chart.data('percent');
-              var coinSize = parseInt( (chart.outerHeight(true) * percentage / 100) / coinH );
-              if (coinSize < 6) {
-                var coins = '<p class="img_coin"></p>';
-              } else {
-                var coins = new Array(coinSize).join('<p class="img_coin"></p>');
-              };
+      if ( $(el).hasClass('transform') || !$(el).is(':visible') ) { 
+        return;
+      }
+      $(el).find('li').each(function(listIdx, listEl){
+        if ( !$(this).hasClass('empty') ) {
+          var chart = $(this).find('.chart_coin');
+          var coinH = 6;
+          
+          // 첫번째 카테고리 기준 비율 계산 data-percent 설정
+          if ( listIdx > 0 ) {
+            var basis = parseInt( $(el).find('li:first-child').find('.txt_num').text().replace(/,/g, ''), 10 );
+            var currentVal = parseInt( $(this).find('.txt_num').text().replace(/,/g, ''), 10 );
+            var rate = Math.round( ((currentVal / basis) * 100) );
 
-              chart
-                .append(coins)
-                .find('.img_coin').last().addClass('last');
-              setTimeout(function(){
-                $(el).addClass('transform');
-              },100);
-            } 
-          });
-        },
-        offset: '80%',
+            chart.data('percent', rate);
+          }
+          
+          // data-percent 값을 가져와 coin 이미지 생성
+          var percentage = chart.data('percent');
+          var coinSize = parseInt( (chart.outerHeight(true) * percentage / 100) / coinH );
+          if (coinSize < 6) {
+            var coins = '<p class="img_coin"></p>';
+          } else {
+            var coins = new Array(coinSize).join('<p class="img_coin"></p>');
+          };
+
+          chart.find('.img_coin').remove();
+          chart
+            .append(coins)
+            .find('.img_coin').last().addClass('last');
+          // setTimeout(function(){
+          //   $(el).addClass('transform');
+          // },100);
+        }
       });
-  
+      
+      // 스크롤에 따른 animation 시작
+      _checkView($(el));
+      $(window).on('scroll', function(){
+        _checkView($(el));
+      });
     });
   }
 
+  function _checkView(el) {
+    if ( fnCheckInView($(el).find('.chart_coin'))) {
+      $(el).addClass('transform');
+    }
+  }
+
   function reset() {
-    $el.find('.img_coin').remove();
-    $el.removeClass('transform');
+    $('.wrap_vdb_list').find('.img_coin').remove();
+    $('.wrap_vdb_list').removeClass('transform');
+    Waypoint.refreshAll();
   }
 
   return {

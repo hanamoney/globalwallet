@@ -46,29 +46,29 @@
             <!-- CASE “모은 돈과 아낀 돈” 모두 있는 경우 -->
             <div class="my_benefit_info">
               <div class="wrap_tit type_center">
-                <h2 class="tit">총 <em class="txt_amount"><span class="txt_num fnCounterUp">1234</span>원</em> 혜택을<br>받았어요!</h2>
+                <h2 class="tit">총 <em class="txt_amount"><span class="txt_num fnCounterUp">0</span>원</em> 혜택을<br>받았어요!</h2>
               </div>
               <div class="visual_vdb_total">
-                <div class="bubble accum"><p class="total_amount fnFitToCont"><em class="txt_num" id="test1">9,999,999</em>원</p><p>모았어요!</p></div>
+                <div class="bubble accum"><p class="total_amount fnFitToCont"><em class="txt_num" id="accumTotal">0</em>원</p><p>모았어요!</p></div>
                 <span class="img_character_dance" aria-hidden="true"></span>
-                <div class="bubble saved"><p class="total_amount fnFitToCont"><em class="txt_num">999,999</em>원</p><p>아꼈어요!</p></div>
+                <div class="bubble saved"><p class="total_amount fnFitToCont"><em class="txt_num" id="savedTotal">0</em>원</p><p>아꼈어요!</p></div>
               </div>
             </div>
 
             <!-- CASE #1 “모은 돈과 아낀 돈” 모두 없는 경우 -->
-            <div class="my_benefit_info no_accum no_saved">
+            <!-- <div class="my_benefit_info no_accum no_saved">
               <div class="wrap_tit type_center">
                 <h2 class="tit"><em>나만 없어!</em><br>하나머니 혜택 ㅠㅠ</h2>
               </div>
               <div class="visual_vdb_total">
                 <div class="bubble accum"><p class="total_amount fnFitToCont"><em class="txt_num">0</em>원</p><p>모았어요!</p></div>
-                <span class="img_character_cry" aria-hidden="true"></span><!--img_character_cry 이미지 변경 -->
+                <span class="img_character_cry" aria-hidden="true"></span><!--img_character_cry 이미지 변경
                 <div class="bubble saved"><p class="total_amount fnFitToCont"><em class="txt_num">0</em>원</p><p>아꼈어요!</p></div>
               </div>
-            </div>
+            </div> -->
 
             <!-- CASE #2 ‘모은 돈”이 없는 경우 -->
-            <div class="my_benefit_info no_accum"><!-- no_accum 클래스 추가 -->
+            <!-- <div class="my_benefit_info no_accum"><!-- no_accum 클래스 추가 
               <div class="wrap_tit type_center">
                 <h2 class="tit">총 <em class="txt_amount"><span class="txt_num fnCounterUp">400,000</span>원</em>을<br>아꼈어요!</h2>
               </div>
@@ -77,10 +77,10 @@
                 <span class="img_character_dance" aria-hidden="true"></span>
                 <div class="bubble saved"><p class="total_amount fnFitToCont"><em class="txt_num">99,999,999</em>원</p><p>아꼈어요!</p></div>
               </div>
-            </div>
+            </div> -->
 
             <!-- CASE #3 ‘아낀 돈”이 없는 경우 -->
-            <div class="my_benefit_info no_saved"><!-- no_saved 클래스 추가 -->
+            <!-- <div class="my_benefit_info no_saved"><!-- no_saved 클래스 추가 
               <div class="wrap_tit type_center">
                 <h2 class="tit">총 <em class="txt_amount"><span class="txt_num fnCounterUp">400,000</span>원</em>을<br>모았어요!</h2>
               </div>
@@ -89,12 +89,12 @@
                 <span class="img_character_dance" aria-hidden="true"></span>
                 <div class="bubble saved"><p class="total_amount fnFitToCont"><em class="txt_num">0</em>원</p><p>아꼈어요!</p></div>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div class="section_cont vdb_accum">
             <!-- CASE #1 받은 돈이 있는 경우 노출 -->
-            <div>
+            <div id="existRvAm">
               <h3 class="tit_section_2"><em>‘포인트전환 적립’</em>으로<br>가장 많이 모았어요!</h3>
               <span class="img_character_bebe_dance"></span>
               <div class="box_card_type">
@@ -119,7 +119,7 @@
             </div>
 
             <!-- CASE #2 받은 돈이 없는 경우 노출 -->
-            <div>
+            <div id="notExistRvAm">
               <h3 class="tit_section_2">하나머니에서는 <em>다양한</em><br><em>무료적립</em>을 받을 수 있어요!</h3>
               <div class="wrap_hashtag">
                 <span class="txt_hashtag">#<span>포인트전환 적립</span></span>
@@ -136,7 +136,7 @@
 
           <div class="section_cont vdb_saved">
             <!-- CASE #3 아낀 돈이 있는 경우 노출 -->
-            <div>
+            <div id="existFvrAm">
               <h3 class="tit_section_2">
                 <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip">
                   <em>‘해외 ATM 출금’</em>에서<br>가장  많이 아꼈어요!
@@ -166,7 +166,7 @@
             </div>
             
             <!-- CASE #4 아낀 돈이 없는 경우 노출 -->
-            <div class="wrap_item_benefit">
+            <div class="wrap_item_benefit" id="notExistFvrAm">
               <h3 class="tit_section_2"><em>트래블로그 서비스</em>를 이용하면<br>이렇게 <em>아낄 수 있어요!</em></h3>
               <!-- 22.05.31 문구변경 -->
               <ul class="list_benefit type_ico box_white">
@@ -256,24 +256,115 @@
   
   <script>
     $(function(){
-      // 데이터 설정 후 fnCounterUp 해당 elemnet counterup 실행
-      // param ( element, delay, time )
-      fnCounterUp($('.fnCounterUp'), 20, 700);
-
+      result_findInfo('both');// 동작 퍼블 확인용
+      
         // 월 선택 시
       $('.list_dropdown').find('button').on('click', function(){
+        // 열려있는 툴팁 닫기
+        if ($('.wrap_tooltip.show').length) {
+          $('.wrap_tooltip').removeClass('show');
+        }
+        
         // 동전 차트 초기화
         fnVdbCoinChart.reset();
 
-        // 상단 총 금액 counterUp 실행
-        fnCounterUp($('.fnCounterUp'), 20, 700);
-
-        // 카테고리별 금액 data 변경 확인용 
-        $('#test1').text('9,000');
-        $('#test2').text('9,000');
-        $('.wrap_vdb_list li').eq(1).find('.txt_num').text('3,000');
+        // 동작 퍼블 확인용
+        var text = $(this).find('span').text();
+        if (text==='3월'){
+          result_findInfo('noAccum');
+        } else if (text==='2월') {
+          result_findInfo('noSaved');
+        } else {
+          result_findInfo('neither');
+        }
       });
     });
+
+    var myBenefitInfo = $('.my_benefit_info'),
+        infoTit = myBenefitInfo.find('.tit'),
+        accumTotal = $('#accumTotal'),
+        savedTotal = $('#savedTotal'),
+        $existRvAm = $('#existRvAm'), // 모은돈O
+        $notExistRvAm = $('#notExistRvAm'), // 모은돈X
+        $existFvrAm = $('#existFvrAm'), // 아낀돈O
+        $notExistFvrAm = $('#notExistFvrAm'); // 모은돈X
+    
+    function result_findInfo(strData) {
+      if (strData === 'neither') { // 모은돈X 아낀돈X
+
+        myBenefitInfo.addClass('no_accum no_saved');
+        infoTit.html('<em>나만 없어!</em><br>하나머니 혜택');
+        myBenefitInfo.find('.img_character_dance').addClass('img_character_cry').removeClass('img_character_dance');
+        $existRvAm.hide();
+        $notExistRvAm.show();
+        $existFvrAm.hide();
+        $notExistFvrAm.show();
+
+      } else if (strData === 'noAccum') { // 모은돈X 아낀돈O
+
+        myBenefitInfo.removeClass('no_saved').addClass('no_accum');
+        myBenefitInfo.find('.img_character_cry').addClass('img_character_dance').removeClass('img_character_cry');
+        $existRvAm.hide();
+        $notExistRvAm.show();
+        $existFvrAm.show();
+        $notExistFvrAm.hide();
+        
+        infoTit.html('총 <em class="txt_amount"><span class="txt_num fnCounterUp">99,999,999</span>원</em>을<br>아꼈어요!');
+        savedTotal.text('99,999,999');
+        $existFvrAm.find('li').eq(0).find('.txt_num').text('99,999,999');
+        $existFvrAm.find('li').eq(1).find('.txt_num').text('9,999');
+        
+        // 데이터 변경 후 애니메이션 실행
+        fnVdbCoinChart.animate($existFvrAm.find('.wrap_vdb_list'));
+
+      } else if (strData === 'noSaved') { // 모은돈O 아낀돈X
+
+        myBenefitInfo.removeClass('no_accum').addClass('no_saved');
+        myBenefitInfo.find('.img_character_cry').addClass('img_character_dance').removeClass('img_character_cry');
+        $existRvAm.show();
+        $notExistRvAm.hide();
+        $existFvrAm.hide();
+        $notExistFvrAm.show();
+        
+        infoTit.html('총 <em class="txt_amount"><span class="txt_num fnCounterUp">999,999</span>원</em>을<br>모았어요!');
+        accumTotal.text('999,999');
+        $existRvAm.find('li').eq(0).find('.txt_num').text('100,000');
+        $existRvAm.find('li').eq(1).find('.txt_num').text('70,000');
+
+        // 데이터 변경 후 애니메이션 실행
+        fnVdbCoinChart.animate($existRvAm.find('.wrap_vdb_list'));
+
+      } else { // 모은돈O 아낀돈O
+
+        myBenefitInfo.removeClass('no_accum no_saved');
+        myBenefitInfo.find('.img_character_cry').addClass('img_character_dance').removeClass('img_character_cry');
+        $existRvAm.show();
+        $notExistRvAm.hide();
+        $existFvrAm.show();
+        $notExistFvrAm.hide();
+
+        infoTit.html('총 <em class="txt_amount"><span class="txt_num fnCounterUp">999,999</span>원</em> 혜택을<br>받았어요!');
+        accumTotal.text('400,000');
+        savedTotal.text('50,000');
+        $existFvrAm.find('li').eq(0).find('.txt_num').text('99,999,999');
+        $existFvrAm.find('li').eq(1).find('.txt_num').text('9,999');
+        $existRvAm.find('li').eq(0).find('.txt_num').text('100,000');
+        $existRvAm.find('li').eq(1).find('.txt_num').text('70,000');
+
+        // 데이터 변경 후 애니메이션 실행
+        fnVdbCoinChart.animate($existFvrAm.find('.wrap_vdb_list'));
+        fnVdbCoinChart.animate($existRvAm.find('.wrap_vdb_list'));
+      }
+
+      if (strData !== 'neither') { // 모은돈X 아낀돈X 가 아닌 경우에만 애니메이션 실행
+        setTimeout(function(){
+          // 데이터 설정 후 fnCounterUp 해당 elemnet counterup 실행
+          // param ( element, delay, time )
+          fnCounterUp($('.fnCounterUp'), 20, 700);
+        },0);
+      }
+    }
+
   </script>
 </body>
 </html>
