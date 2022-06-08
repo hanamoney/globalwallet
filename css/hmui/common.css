@@ -648,6 +648,7 @@ section[data-roll] {
   height: 2.2rem;
   background-image: url('../../images/hmui/btn_filter.png');
   background-size: 1.8rem auto;
+  -webkit-tap-highlight-color: transparent;
 }
 .btn_ico_more {
   width: 1.8rem;
