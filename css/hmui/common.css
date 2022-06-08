@@ -142,7 +142,7 @@ body.overflow {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(255,255,255, 0.7);
+  background-color: rgba(255,255,255, 0.9);
   z-index: -1;
 }
 #header h1 {
@@ -1497,7 +1497,7 @@ button.btn_secondery {
   transition: all 0.2s;
 }
 .list_dropdown::before {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 1);
 }
 .list_dropdown li {
   opacity: 0;
@@ -3996,6 +3996,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
     backdrop-filter: blur(5px);
   }
   .list_dropdown::before {
+    background-color: rgba(255, 255, 255, 0.6);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
   }
