@@ -966,7 +966,7 @@ var fnVdbCoinChart = (function() {
   function reset() {
     $('.wrap_vdb_list').find('.img_coin').remove();
     $('.wrap_vdb_list').removeClass('transform');
-    Waypoint.refreshAll();
+    // Waypoint.refreshAll();
   }
 
   return {
