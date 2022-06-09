@@ -1443,15 +1443,13 @@
   transform: translateX(-50%);
   z-index: 3;
 }
-.section_top_visual.my_benefit.default .visual_vdb_total .bubble {
-  display: none;
-}
-.section_top_visual.my_benefit.default + .section_cont.vdb_accum > div {
-  display: none;
-}
-.section_top_visual.my_benefit.default + .section_cont.vdb_accum {
+.section_top_visual.my_benefit.default {
   height: 100vh;
 }
+.section_top_visual.my_benefit.default .visual_vdb_total {
+  display: none;
+}
+
 @media screen and (max-width: 359px) {
   .section_cont.vdb_accum .img_character_bebe_dance {
     top: 7.0rem;
@@ -2246,6 +2244,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2.0rem 0;
 }
 .section_list_point .box .justify_left {
   display: flex;
