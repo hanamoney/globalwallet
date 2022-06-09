@@ -1540,6 +1540,37 @@ button.btn_secondery {
   display: flex;
   width: 100%;
 }
+.section_tab .wrap_tab_btn:not(.type_box) {
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  border-bottom: 1px solid #E3EBEE;
+}
+.section_tab .wrap_tab_btn li {
+
+}
+.section_tab .wrap_tab_btn li .btn_tab_box {
+  position: relative;
+  display: block;
+  height: 5.3rem;
+  padding: 1.6rem 0.8rem 0;
+  color: #6E7D85;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  white-space: nowrap;
+}
+.section_tab .wrap_tab_btn li.on .btn_tab_box {
+  color: #000;
+}
+.section_tab .wrap_tab_btn li.on .btn_tab_box::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: #13C9BE;
+}
 .section_tab .wrap_tab_btn.type_box {
   flex-wrap: wrap;
   text-align: center;
@@ -1568,12 +1599,11 @@ button.btn_secondery {
   padding: 7.6rem 2.2rem 3.0rem;
 }
 .section_tab.type_fullpage .wrap_tab_btn.type_box .btn_tab_box {
+  height: auto;
   padding: 0.9rem 1.0rem;
   border-radius: 0.4rem;
   background-color: rgba(255,255,255,0.6);
-  color: #6E7D85;
   font-size: 1.5rem;
-  line-height: 2.2rem;
 }
 .section_tab.type_fullpage .wrap_tab_btn.type_box li.on .btn_tab_box {
   background-color: #13C9BE;
@@ -2524,6 +2554,29 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .section_top_visual .wrap_dropdown {
   margin-top: 3rem;
 }
+/* 상단 */
+.section_top_info {
+  padding: 3.0rem 2.4rem;
+  text-align: center;
+}
+.section_top_info .txt {
+  text-align: center;
+}
+.section_top_info .total_amount {
+  color: #000;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+  font-weight: 700;
+}
+.section_top_info .txt + .total_amount {
+  margin-top: 1.0rem;
+}
+.section_top_info .wrap_btn.type_full {
+  margin-top: 2.0rem;
+}
+.section_top_info.bg_bluegrey {
+  background-color: #F2F6F6;
+}
 
 /* 약관동의 */
 .section_terms {
@@ -3312,6 +3365,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   line-height: 2.2rem;
   font-weight: 700;
   text-align: left;
+  word-break: break-all;
 }
 .trans_info .desc {
   display: block;
