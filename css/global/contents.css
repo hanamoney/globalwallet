@@ -2237,6 +2237,10 @@
   position: relative;
   padding-top: 1.6rem;
 }
+.section_list_point .tooltip_bubble {
+  top: -1.0rem;
+  right: 2.4rem;
+}
 .section_list_point li {
   border-bottom: 1px solid #E3EBEE;
 }
@@ -2247,20 +2251,57 @@
   padding: 2.0rem 0;
 }
 .section_list_point .box .justify_left {
-  display: flex;
-  align-items: center;
+  position: relative;
+  padding: 0 1.0rem 0 4.0rem;
+}
+.section_list_point .box .justify_right {
+  text-align: right;
 }
 .section_list_point .box .ico_logo {
   overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 50%;
   width: 3.0rem;
   height: 3.0rem;
   border-radius: 50%;
+  transform: translateY(-50%);
 }
 .section_list_point .box .tit {
-  padding-left: 1.0rem;
   font-size: 1.8rem;
   line-height: 2.4rem;
+  word-break: break-all;
 }
+.section_list_point .box .txt {
+  color: #849594;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+.section_list_point .box .ico_arr_link {
+  margin-left: 0.6rem;
+  vertical-align: top;
+}
+.section_list_point .box .txt_num {
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+}
+.section_list_point .box .txt_sub {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  color: #849594;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.section_list_point .box .txt_sub:last-child {
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
+.section_list_point .box .txt_info {
+  color: #6E7D85;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+
 
 @supports ((-webkit-filter:none) or (filter:none)) {
   .vdb_swiper .swiper-slide.swiper-slide-prev {

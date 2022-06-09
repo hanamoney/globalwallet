@@ -422,8 +422,14 @@ section[data-roll] {
 .txt_point_3 {
   color: #844883 !important;
 }
-.txt_point_4 {
+.txt_point_4,
+.txt_err {
   color: #EC4361 !important;
+}
+.txt_point_5,
+.txt_primary,
+.txt_positive {
+  color: #00928F !important;
 }
 .txt_balloon {
   position: relative;
@@ -2536,6 +2542,10 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 	border-style: solid;
   line-height: 1;
   transform: translateX(-50%);
+}
+.tooltip_bubble.type_pink p {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
 }
 
 /* [common contents style] */
