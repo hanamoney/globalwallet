@@ -2650,6 +2650,15 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .section_terms .wrap_acco .txt + .chk_list {
   margin-top: 0.3rem;
 }
+.section_terms.type_bor .wrap_chk_all {
+  border-bottom: 1px solid #E3EBEE;
+}
+.section_terms.type_bor .wrap_agree_list > li {
+  border-bottom: 1px solid #E3EBEE;
+}
+.section_terms.type_bor .wrap_agree_list .box_chk {
+  padding: 2.0rem 0;
+}
 
 /* 약관상세 */
 .section_terms_detail {
