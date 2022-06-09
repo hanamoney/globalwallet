@@ -1443,6 +1443,15 @@
   transform: translateX(-50%);
   z-index: 3;
 }
+.section_top_visual.my_benefit.default .visual_vdb_total .bubble {
+  display: none;
+}
+.section_top_visual.my_benefit.default + .section_cont.vdb_accum > div {
+  display: none;
+}
+.section_top_visual.my_benefit.default + .section_cont.vdb_accum {
+  height: 100vh;
+}
 @media screen and (max-width: 359px) {
   .section_cont.vdb_accum .img_character_bebe_dance {
     top: 7.0rem;
@@ -2219,6 +2228,39 @@
 }
 .inapp .section_cont.guide_hanamoney_tit {
   padding-top: 0;
+}
+
+/* [PEX] - 포인트전환 */
+/* PEX_101 하나머니로 */
+.section_top_info.pex_hanamoney {
+  background: linear-gradient(143.05deg, #5CE4C9 -84.85%, #FFE9DD 132.52%);
+}
+.section_list_point {
+  position: relative;
+  padding-top: 1.6rem;
+}
+.section_list_point li {
+  border-bottom: 1px solid #E3EBEE;
+}
+.section_list_point .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section_list_point .box .justify_left {
+  display: flex;
+  align-items: center;
+}
+.section_list_point .box .ico_logo {
+  overflow: hidden;
+  width: 3.0rem;
+  height: 3.0rem;
+  border-radius: 50%;
+}
+.section_list_point .box .tit {
+  padding-left: 1.0rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
 }
 
 @supports ((-webkit-filter:none) or (filter:none)) {

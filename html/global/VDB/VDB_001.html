@@ -31,7 +31,7 @@
     <div id="contents" class="wrap_contents">
       <div class="contents">
         <section data-roll="VDB">
-          <div class="section_top_visual my_benefit">
+          <div class="section_top_visual my_benefit default">
             <div class="wrap_dropdown">
               <button type="button" class="btn_dropdown"><span class="current">4월</span></button>
               <div class="list_dropdown">
@@ -257,7 +257,9 @@
   
   <script>
     $(function(){
-      result_findInfo('neither');// 동작 퍼블 확인용
+      setTimeout(function(){
+        result_findInfo('neither');// 동작 퍼블 확인용
+      },600);
       
         // 월 선택 시
       $('.list_dropdown').find('button').on('click', function(){
@@ -301,6 +303,11 @@
         $notExistFvrAm = $('#notExistFvrAm'); // 모은돈X
     
     function result_findInfo(strData) {
+      // 기본화면 클래스 제거
+      if ($('.section_top_visual.default').length) {
+        $('.section_top_visual.default').removeClass('default');
+      }
+
       var totalAmount;
 
       if (strData === 'neither') { // 모은돈X 아낀돈X
