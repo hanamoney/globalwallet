@@ -217,6 +217,10 @@
       var banSwiper = new Swiper('.banner_overseas_lounge', {
         resistance: true,
         resistanceRatio: 0,
+        loop: true, // 22.06.09 자동슬라이드 추가
+        autoplay: { // 22.06.09 자동슬라이드 추가
+          delay: 4000,
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: false,
