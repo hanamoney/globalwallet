@@ -825,11 +825,9 @@ var skeletonLoading = (function(){
   }
 
   function end(el){
-    $el = $(el);
-    setTimeout(function(){
-      $el.removeClass('skeletonLoading');
-      _moneybagListLoading($el);
-    },300);
+    $el = $(el)
+    $el.removeClass('skeletonLoading');
+    _moneybagListLoading($el);
   }
 
   return {
