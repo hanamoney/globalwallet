@@ -680,9 +680,11 @@ var fnOpenLayerPop = function(popID) {
     tit.focus();
 
     // 팝업 타이틀 영역보다 넘칠 경우 텍스트 사이즈 조정
-    if (tit[0].scrollWidth > tit.width()) {
-      tit.css('font-size', (parseInt(tit.width() / tit.text().replace(/ /g, '').length) * 1.1) + "px");
-    }
+    setTimeout(function(){
+      if (tit[0].scrollWidth > tit.width()) {
+        tit.css('font-size', (parseInt(tit.width() / tit.text().replace(/ /g, '').length) * 1.1) + "px");
+      }
+    },100);
   } else {
     $el.find('.inner_layer').children(':first').focus();
   }
@@ -825,7 +827,7 @@ var skeletonLoading = (function(){
   }
 
   function end(el){
-    $el = $(el)
+    $el = $(el);
     $el.removeClass('skeletonLoading');
     _moneybagListLoading($el);
   }

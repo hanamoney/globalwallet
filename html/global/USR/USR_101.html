@@ -25,7 +25,7 @@
     <!-- // contents-->
 
     <!-- popup -->
-    <div id="popupId" class="wrap_layer">
+    <div id="popupId" class="wrap_layer" style="display: none">
       <div class="inner_layer">
         <div class="head_layer">
           <h2 class="tit_layer">트래블로그 서비스 약관 동의</h2><!-- 22.05.31 문구변경 -->
@@ -137,6 +137,7 @@
   <script>
     // 팝업오픈 퍼블확인용 스크립트
     $(function(){
+      $('#popupId').show();
       fnOpenLayerPop('popupId');
 
       // fnOpenPop 공통클래스 미사용시 약관상세풀팝업 오픈 스크립트
