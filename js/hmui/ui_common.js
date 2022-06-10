@@ -204,14 +204,16 @@ var _inpControl = function() {
       $thisInp.closest('.box_inp').addClass('show_btn');
     }
   });
-  
-  // inp.focusout(function(){
-  //   var $this = $(this);
-  //   setTimeout(function(){
-  //     $this.closest('.box_inp').removeClass('show_btn');
-  //   },100);
-  // });
-  
+
+  inp.closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(e) {
+    e.preventDefault();
+  });
+
+  inp.closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
+    e.preventDefault();
+    $(this).siblings('input').attr('checked',true);
+  });
+
   inp.bind('keyup change',function(){
     $(this).focus().click();
     $(this).closest('.box_inp').addClass('show_btn');
