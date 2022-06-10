@@ -46,7 +46,7 @@
         <div class="section_bottom_fixed">
           <div class="wrap_btn_box">
             <ul>
-              <li><button type="button">1만</button></li>
+              <li><button type="button" id="test">1만</button></li>
               <li><button type="button">5만</button></li>
               <li><button type="button">10만</button></li>
               <li><button type="button">100만</button></li>
@@ -90,6 +90,11 @@
     $(function(){
       // 컨펌호출 param 오픈할 레이어 id
       fnOpenLayerPop('confirmId');
+
+      $('#test').on('click', function(e){
+        $('.inp').val('10,000');
+      });
+
     });
   </script>
 </body>
