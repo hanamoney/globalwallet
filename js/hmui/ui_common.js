@@ -197,6 +197,11 @@ var _inpControl = function() {
       $(this).siblings('.inp').val('').focus().click();
       $(this).closest('.box_inp').removeClass('show_btn');
     });
+    $(this).closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(e) {
+      console.log(e);
+      $(this).focus();
+      $(this).closest('.box_inp').addClass('show_btn');
+    });
     $(this).focusout(function(){
       var $this = $(this);
       setTimeout(function(){
