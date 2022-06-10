@@ -1818,6 +1818,9 @@
   background: url('../../images/hmui/img_zero_charge_2.png') no-repeat 50%;
   background-size: 100%;
 }
+.section_cont.top_narrow {
+  margin-top: -5.0rem;
+}
 .list_benefit_tower {
   margin: 3.0rem 0;
   text-align: center;
