@@ -159,8 +159,9 @@ var _iOSInpFixdPos = function() {
   $(window).on('touchstart', function(e) {
     var el = e.target.classList;
     var checkParent = e.target.closest('.section_bottom_fixed') !== null;
-    if (inp.is(':focus') && !el.contains('inp') && !el.contains('btn_ico_clear') && !el.contains('.section_bottom_fixed') && !checkParent ) {
+    if (inp.is(':focus') && !el.contains('inp') && !el.contains('btn_ico_clear') && !checkParent || el.contains('section_bottom_fixed') ) {
       inp.blur();
+      $('.box_inp').removeClass('show_btn');
     }
   })
 
@@ -204,15 +205,16 @@ var _inpControl = function() {
     }
   });
   
-  inp.focusout(function(){
-    console.log('out');
-    var $this = $(this);
-    setTimeout(function(){
-      $this.closest('.box_inp').removeClass('show_btn');
-    },100);
-  });
+  // inp.focusout(function(){
+  //   console.log('out');
+  //   var $this = $(this);
+  //   setTimeout(function(){
+  //     $this.closest('.box_inp').removeClass('show_btn');
+  //   },100);
+  // });
   
   inp.bind('keyup change',function(){
+    console.log('change');
     $(this).focus().click();
     $(this).closest('.box_inp').addClass('show_btn');
     _inpChkVal($(this));
