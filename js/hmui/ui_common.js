@@ -190,35 +190,60 @@ var _inpControl = function() {
     }
   });
 
-  inp.on('focus blur', function(e){
+  // inp.on('focus blur', function(e){
+  //   console.log(e.type);
+  //   var $thisInp = $(this);
+  //   _inpChkVal($thisInp);
+
+  //   if (e.type == 'focus') {
+  //     $thisInp.closest('.box_inp').find('.btn_ico_clear').bind('click', function() {
+  //       $(this).siblings('.inp').val('').focus().click();
+  //       $(this).closest('.box_inp').removeClass('show_btn');
+  //       return;
+  //     });
+
+  //     $thisInp.closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(event) {
+  //       event.preventDefault();
+  //       $thisInp.focus().click();
+  //       $thisInp.closest('.box_inp').addClass('show_btn');
+  //       return;
+  //     });
+  //   }
+
+  //   if (e.type == 'blur') {
+  //     console.log('blur');
+  //   }
+
+  //   if( $thisInp.val() !== '' && $thisInp.is(':focus') ){
+  //     $thisInp.closest('.box_inp').addClass('show_btn');
+  //   }
+  // });
+
+  // inp.focusout(function(){
+  //   console.log('out');
+  //   var $this = $(this);
+  //   setTimeout(function(){
+  //     $this.closest('.box_inp').removeClass('show_btn');
+  //   },100);
+  // });
+
+  inp.on('focus blur', function(){
     var $thisInp = $(this);
     _inpChkVal($thisInp);
 
     $thisInp.closest('.box_inp').find('.btn_ico_clear').bind('click', function() {
       $(this).siblings('.inp').val('').focus().click();
       $(this).closest('.box_inp').removeClass('show_btn');
-    });
-
-    $thisInp.closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(event) {
-      event.preventDefault();
-      $thisInp.focus().click();
-      $thisInp.closest('.box_inp').addClass('show_btn');
+      return;
     });
     
     if( $thisInp.val() !== '' && $thisInp.is(':focus') ){
       $thisInp.closest('.box_inp').addClass('show_btn');
     }
   });
-
-  inp.focusout(function(){
-    console.log('out');
-    var $this = $(this);
-    setTimeout(function(){
-        $this.closest('.box_inp').removeClass('show_btn');
-    },100)
-  });
   
   inp.bind('keyup change',function(){
+    $(this).focus().click();
     $(this).closest('.box_inp').addClass('show_btn');
     _inpChkVal($(this));
   });
