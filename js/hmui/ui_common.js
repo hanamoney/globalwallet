@@ -206,7 +206,6 @@ var _inpControl = function() {
   });
   
   // inp.focusout(function(){
-  //   console.log('out');
   //   var $this = $(this);
   //   setTimeout(function(){
   //     $this.closest('.box_inp').removeClass('show_btn');
@@ -214,7 +213,6 @@ var _inpControl = function() {
   // });
   
   inp.bind('keyup change',function(){
-    console.log('change');
     $(this).focus().click();
     $(this).closest('.box_inp').addClass('show_btn');
     _inpChkVal($(this));

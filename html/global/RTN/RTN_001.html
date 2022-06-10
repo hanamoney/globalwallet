@@ -57,7 +57,7 @@
           <div class="wrap_chk">
             <span class="chk_round">
               <input type="checkbox" id="chk2" name="chk2" />
-              <label for="chk2">
+              <label for="chk2" id="test">
                 <span class="label">잔액 <span>USD</span> <em class="txt_num">200.20</em> 모두 바꾸기</span>
               </label>
             </span>
@@ -82,5 +82,11 @@
 
   </main>
 
+  <script>
+    // value 값 설정 후 change 트리거
+    $('#test').on('click', function(e){
+      $('.inp').val('200.20').trigger('change');
+    });
+  </script>
 </body>
 </html>
