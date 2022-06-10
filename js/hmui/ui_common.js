@@ -198,22 +198,26 @@ var _inpControl = function() {
       $(this).siblings('.inp').val('').focus().click();
       $(this).closest('.box_inp').removeClass('show_btn');
     });
-    $thisInp.closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function() {
+
+    $thisInp.closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(event) {
+      event.preventDefault();
       $thisInp.focus().click();
       $thisInp.closest('.box_inp').addClass('show_btn');
     });
-
-    $thisInp.focusout(function(){
-      var $this = $(this);
-      setTimeout(function(){
-          $this.closest('.box_inp').removeClass('show_btn');
-      },100)
-    });
+    
     if( $thisInp.val() !== '' && $thisInp.is(':focus') ){
       $thisInp.closest('.box_inp').addClass('show_btn');
     }
   });
 
+  inp.focusout(function(){
+    console.log('out');
+    var $this = $(this);
+    setTimeout(function(){
+        $this.closest('.box_inp').removeClass('show_btn');
+    },100)
+  });
+  
   inp.bind('keyup change',function(){
     $(this).closest('.box_inp').addClass('show_btn');
     _inpChkVal($(this));
