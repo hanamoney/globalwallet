@@ -191,25 +191,26 @@ var _inpControl = function() {
   });
 
   inp.on('focus blur', function(e){
-    _inpChkVal($(this));
+    var $thisInp = $(this);
+    _inpChkVal($thisInp);
 
-    $(this).closest('.box_inp').find('.btn_ico_clear').bind('click', function() {
+    $thisInp.closest('.box_inp').find('.btn_ico_clear').bind('click', function() {
       $(this).siblings('.inp').val('').focus().click();
       $(this).closest('.box_inp').removeClass('show_btn');
     });
-    $(this).closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(e) {
-      console.log(e);
-      $(this).focus();
-      $(this).closest('.box_inp').addClass('show_btn');
+    $thisInp.closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function() {
+      $thisInp.focus().click();
+      $thisInp.closest('.box_inp').addClass('show_btn');
     });
-    $(this).focusout(function(){
+
+    $thisInp.focusout(function(){
       var $this = $(this);
       setTimeout(function(){
           $this.closest('.box_inp').removeClass('show_btn');
       },100)
     });
-    if( $(this).val() !== '' && $(this).is(':focus') ){
-      $(this).closest('.box_inp').addClass('show_btn');
+    if( $thisInp.val() !== '' && $thisInp.is(':focus') ){
+      $thisInp.closest('.box_inp').addClass('show_btn');
     }
   });
 
