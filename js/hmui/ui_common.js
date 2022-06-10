@@ -42,7 +42,6 @@ var registUI = function(){
   if ( $('.chart_bar_stacked').length ) { _barChartStacked(); } // stacked bar chart
 
   if ( $('.gsp_travlog_info').length ) { _gspTravlogInfo(); } // 트래블로그 혜택안내 애니메이션 실행
-  // if ( $('.wrap_vdb_list').length ) { fnVdbCoinChart.animate(); } // 내가받은 혜택 동전차트 애니메이션 실행
 
 };
 
@@ -159,7 +158,8 @@ var _iOSInpFixdPos = function() {
   window.visualViewport.addEventListener('resize', resizeHandler);
   $(window).on('touchstart', function(e) {
     var el = e.target.classList;
-    if (inp.is(':focus') && !el.contains('inp') && !el.contains('btn_ico_clear') ) {
+    var checkParent = e.target.closest('.section_bottom_fixed') !== null;
+    if (inp.is(':focus') && !el.contains('inp') && !el.contains('btn_ico_clear') && !el.contains('.section_bottom_fixed') && !checkParent ) {
       inp.blur();
     }
   })
@@ -190,56 +190,26 @@ var _inpControl = function() {
     }
   });
 
-  // inp.on('focus blur', function(e){
-  //   console.log(e.type);
-  //   var $thisInp = $(this);
-  //   _inpChkVal($thisInp);
-
-  //   if (e.type == 'focus') {
-  //     $thisInp.closest('.box_inp').find('.btn_ico_clear').bind('click', function() {
-  //       $(this).siblings('.inp').val('').focus().click();
-  //       $(this).closest('.box_inp').removeClass('show_btn');
-  //       return;
-  //     });
-
-  //     $thisInp.closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(event) {
-  //       event.preventDefault();
-  //       $thisInp.focus().click();
-  //       $thisInp.closest('.box_inp').addClass('show_btn');
-  //       return;
-  //     });
-  //   }
-
-  //   if (e.type == 'blur') {
-  //     console.log('blur');
-  //   }
-
-  //   if( $thisInp.val() !== '' && $thisInp.is(':focus') ){
-  //     $thisInp.closest('.box_inp').addClass('show_btn');
-  //   }
-  // });
-
-  // inp.focusout(function(){
-  //   console.log('out');
-  //   var $this = $(this);
-  //   setTimeout(function(){
-  //     $this.closest('.box_inp').removeClass('show_btn');
-  //   },100);
-  // });
-
-  inp.on('focus blur', function(){
+  inp.on('focus blur', function(e){
     var $thisInp = $(this);
     _inpChkVal($thisInp);
 
     $thisInp.closest('.box_inp').find('.btn_ico_clear').bind('click', function() {
       $(this).siblings('.inp').val('').focus().click();
       $(this).closest('.box_inp').removeClass('show_btn');
-      return;
     });
-    
+
     if( $thisInp.val() !== '' && $thisInp.is(':focus') ){
       $thisInp.closest('.box_inp').addClass('show_btn');
     }
+  });
+  
+  inp.focusout(function(){
+    console.log('out');
+    var $this = $(this);
+    setTimeout(function(){
+      $this.closest('.box_inp').removeClass('show_btn');
+    },100);
   });
   
   inp.bind('keyup change',function(){
