@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>PEX_101</title>
+
+  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/change/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>포인트 전환</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="PEX">
+          <div class="section_tab fnFixedTop" data-height="54">
+            <ul class="wrap_tab_btn">
+              <li class="on"><a href="#none" class="btn_tab_box" data-tab="link">하나머니로</a></li>
+              <li><a href="#none" class="btn_tab_box" data-tab="link">다른 포인트로</a></li>
+              <li><a href="#none" class="btn_tab_box" data-tab="link">마일리지로</a></li>
+            </ul>
+          </div>
+
+          <div class="section_top_info pex_hanamoney">
+            <h2 class="txt">전환가능 포인트</h2>
+            <p class="total_amount txt_num fnCounterUp">0</p>
+            <div class="wrap_btn type_full">
+              <button type="button" class="btn_box_m btn_primary" disabled>하나머니로 모두 전환</button><!-- 1원 이상인 경우 disabled attribute 삭제 -->
+            </div>
+          </div>
+          <div class="section_top_info pex_hanamoney">
+            <h2 class="txt">전환가능 포인트</h2>
+            <p class="total_amount txt_num fnCounterUp">50,220</p>
+            <div class="wrap_btn type_full">
+              <button type="button" class="btn_box_m btn_primary">하나머니로 모두 전환</button><!-- 1원 이상인 경우 disabled attribute 삭제 -->
+            </div>
+          </div>
+
+          <div class="section_list_point">
+            <!-- 제공동의 하나도 안되어 있을 경우 노출 -->
+            <div class="wrap_bubble">
+              <div class="tooltip_bubble right type_pink">
+                <p class="txt">포인트 조회하고 무료송금 이용하세요!</p>
+                <span class="bubble_caret"></span>
+              </div>
+            </div>
+            <!-- // 제공동의 하나도 안되어 있을 경우 노출 -->
+
+            <ul>
+              <li class="new"><!-- 신규제휴업체 new 클래스 추가 -->
+                <button type="button" class="box">
+                  <div class="justify_left">
+                    <img src="../../../images/changes/logo_pex_100.png" alt="" class="ico_logo">
+                    <p class="tit">L.POINT</p>
+                  </div>
+                  <div class="justify_right">
+                    <p class="txt">포인트 조회<span class="ico_arr_link"></span></p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="box">
+                  <div class="justify_left">
+                    <img src="../../../images/changes/logo_pex_101.png" alt="" class="ico_logo">
+                    <p class="tit">핀크머니</p>
+                  </div>
+                  <div class="justify_right">
+                    <p class="txt_num">20<span class="ico_arr_link"></span></p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="box">
+                  <div class="justify_left">
+                    <img src="../../../images/changes/logo_pex_102.png" alt="" class="ico_logo">
+                    <p class="tit">쿠팡 캐시</p>
+                  </div>
+                  <div class="justify_right">
+                    <p class="txt_num">0<span class="ico_arr_link"></span></p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="box">
+                  <div class="justify_left">
+                    <img src="../../../images/changes/logo_pex_103.png" alt="" class="ico_logo">
+                    <p class="tit">스마일캐시</p>
+                  </div>
+                  <div class="justify_right">
+                    <p class="txt_num">4,000<span class="ico_arr_link"></span></p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="box">
+                  <div class="justify_left">
+                    <img src="../../../images/changes/logo_pex_104.png" alt="" class="ico_logo">
+                    <p class="tit">OK 캐쉬백</p>
+                  </div>
+                  <div class="justify_right">
+                    <p class="txt_num">4,000<span class="ico_arr_link"></span></p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="box">
+                  <div class="justify_left">
+                    <img src="../../../images/changes/logo_pex_105.png" alt="" class="ico_logo">
+                    <p class="tit">E1 오렌지 포인트</p>
+                  </div>
+                  <div class="justify_right">
+                    <p class="txt">포인트 조회<span class="ico_arr_link"></span></p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="box">
+                  <div class="justify_left">
+                    <img src="../../../images/changes/logo_pex_106.png" alt="" class="ico_logo">
+                    <p class="tit">레일포인트</p>
+                  </div>
+                  <div class="justify_right">
+                    <p class="txt">포인트 조회<span class="ico_arr_link"></span></p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="box">
+                  <div class="justify_left">
+                    <img src="../../../images/changes/logo_pex_107.png" alt="" class="ico_logo">
+                    <p class="tit">카카오페이 머니</p>
+                  </div>
+                  <div class="justify_right">
+                    <p class="txt">포인트 조회<span class="ico_arr_link"></span></p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="box">
+                  <div class="justify_left">
+                    <img src="../../../images/changes/logo_pex_108.png" alt="" class="ico_logo">
+                    <p class="tit">S-OIL 보너스 포인트</p>
+                  </div>
+                  <div class="justify_right">
+                    <p class="txt">포인트 조회<span class="ico_arr_link"></span></p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="box">
+                  <div class="justify_left">
+                    <img src="../../../images/changes/logo_pex_109.png" alt="" class="ico_logo">
+                    <p class="tit">BC TOP</p>
+                  </div>
+                  <div class="justify_right">
+                    <p class="txt">포인트 조회<span class="ico_arr_link"></span></p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="box">
+                  <div class="justify_left">
+                    <img src="../../../images/changes/logo_pex_110.png" alt="" class="ico_logo">
+                    <p class="tit">원패스</p>
+                  </div>
+                  <div class="justify_right">
+                    <p class="txt">포인트 조회<span class="ico_arr_link"></span></p>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </div>
+          
+        </section>
+        <!-- // section -->
+
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <!-- 2a: 모두 전환 터치시 컨펌창  -->
+    <div id="confirmId" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert_m">전환 가능 포인트 <strong class="txt_num">52,220</strong>을<br>하나 머니로 모두 전환할까요?</p>
+          <p class="txt_alert txt_point_2">전환완료시 취소할 수 없습니다.</p>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_secondary fnClosePop">취소</button>
+            <button type="button" class="btn_full_primary fnClosePop">전환하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // 2a: 모두 전환 터치시 컨펌창 -->
+
+    <!-- 4a: 보유포인트 0원 컨펌창  -->
+    <div id="confirmId2" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert">선택하신 제휴사에 전환가능한 포인트가 없습니다.</p>
+          <p class="txt_alert">포인트 정보 확인 후 다시 이용해주세요.</p>
+          <div class="wrap_btn_center">
+            <button type="button" class="btn_txt txt_point_1 fnClosePop fnOpenAlert">L.POINT 포인트 전환 이용동의 철회</button>
+          </div>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_primary fnClosePop">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // 4a: 보유포인트 0원 컨펌창 -->
+
+    <!-- 4b: 비회원 컨펌창  -->
+    <div id="confirmId3" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert">선택하신 제휴사에 회원정보가 없습니다.</p>
+          <p class="txt_alert">해당 제휴사에 서비스 가입 후 다시 이용해 주세요.</p>
+          <div class="wrap_btn_center">
+            <button type="button" id="test" class="btn_txt txt_point_1 fnClosePop fnOpenAlert">L.POINT 포인트 전환 이용동의 철회</button>
+          </div>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_primary fnClosePop">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // 4b: 비회원 컨펌창 -->
+
+    <!-- 4c: 이용동의 철회 컨펌창  -->
+    <div id="confirmId4" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert_m">포인트 전환 이용 동의를 철회하시겠어요?</p>
+          <p class="txt_alert">이용 동의 철회 시 포인트 조회 및 전환 서비스를 이용할 수 없습니다.</p>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_secondary fnClosePop">취소</button>
+            <button type="button" class="btn_full_primary fnClosePop">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // 4c: 이용동의 철회 컨펌창 -->
+
+    <!-- toast -->
+    <div id="toast" class="wrap_toast">
+      <p class="txt_toast">포인트 전환 이용동의가 철회되었습니다.</p>
+    </div>
+    <!-- // toast -->
+  </main>
+  
+  <script>
+    $(function(){
+      // 컨펌창 호출 param element 해당ID
+      //fnOpenLayerPop('confirmId3');
+
+      // 이용동의 철회 컨펌창 오픈 시 열려 있는 컨펌창 닫은 후 실행
+      $('.fnOpenAlert').on('click',function(){
+        setTimeout(function(){
+          fnOpenLayerPop('confirmId4');
+        },290);
+      });
+
+      // 토스트팝업 호출 param element 해당ID
+      //fnToastPop('toast'); 
+    });
+  </script>
+</body>
+</html>

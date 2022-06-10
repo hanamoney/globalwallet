@@ -2602,7 +2602,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .wrap_agree_list .box_chk {
   display: -webkit-box;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   padding: 1.0rem 0;
 }
 .wrap_agree_list .box_chk .chk {
@@ -2610,8 +2610,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .wrap_agree_list .box_chk .chk label {
   display: inline-block;
-  width: 2.2rem;
-  height: 2.2rem;
+  min-width: 2.2rem;
+  min-height: 2.2rem;
+  height: 100%;
   margin-right: 1.0rem;
   vertical-align: text-bottom;
 }
@@ -2624,9 +2625,11 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   text-align: left;
 } 
 .wrap_agree_list .box_chk [class^="flag_terms_"] {
+  align-self: center;
   margin-left: 1.0rem;
 }
 .wrap_agree_list .box_chk .btn_acco {
+  height: auto;
   margin-left: 1.0rem;
   will-change: transform;
 }
@@ -2635,7 +2638,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .section_terms .wrap_acco {
   display: none;
-  padding-left: 3.2rem;
+  padding: 0 0.8rem 0 3.2rem;
 }
 .section_terms .wrap_acco .txt {
   color: #4F5D64;
@@ -2649,14 +2652,28 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .section_terms .wrap_acco .txt + .chk_list {
   margin-top: 0.3rem;
 }
-.section_terms.type_bor .wrap_chk_all {
+.section_terms .wrap_agree_list.type_bor {
+  border-top: 1px solid #E3EBEE;
+}
+.section_terms .wrap_agree_list.type_bor > li {
   border-bottom: 1px solid #E3EBEE;
 }
-.section_terms.type_bor .wrap_agree_list > li {
-  border-bottom: 1px solid #E3EBEE;
-}
-.section_terms.type_bor .wrap_agree_list .box_chk {
+.section_terms .wrap_agree_list.type_bor .box_chk {
   padding: 2.0rem 0;
+}
+.section_terms .wrap_agree_list.type_bor .wrap_acco {
+  padding: 1.0rem 0.8rem 2.0rem 3.2rem;
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+}
+.section_terms .wrap_agree_list.type_nobtn .box_chk {
+  padding: 0;
+}
+.section_terms .wrap_agree_list.type_nobtn .box_chk .chk label {
+  padding: 2.0rem 0;
+}
+.section_terms .wrap_agree_list.type_nobtn .box_chk .btn_acco {
+  margin-left: auto;
 }
 
 /* 약관상세 */
@@ -3456,6 +3473,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .list_trans + .list_trans {
   margin-top: 4.0rem;
 }
+.list_trans:first-child .tit_divider {
+  margin-top: 2.4rem;
+}
 .list_trans .tit_divider {
   padding: 0.8rem 2.4rem;
   background-color: #F3F8FA;
@@ -3918,6 +3938,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   position: relative;
   margin-bottom: -3.0rem;
   padding: 6.8rem 2.4rem 3.0rem;
+}
+.wrap_layer .content_layer .section_terms {
+  padding-top: 3.0rem;
 }
 
 /* 캐릭터 이미지 */

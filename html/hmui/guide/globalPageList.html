@@ -154,31 +154,18 @@ var menuList = [
   {'group':'', 'code':'USR','depth1':'','name':'카드발급 브릿지','pageid':'USR_103', 'status':'완료', 'date':'22.05.09', 'remarks':'<span>-22.05.31 문구변경</span>'},
   {'group':'', 'code':'USR','depth1':'','name':'트래블로그 서비스 신청 완료','pageid':'USR_104', 'status':'완료', 'date':'22.05.09', 'remarks':'<span>-22.05.31 문구변경</span>'},
 
-
-  {'group':'하나머니', 'code':'PEX','depth1':'포인트전환','name':'포인트전환 가이드','pageid':'PEX_001', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'하나머니로 전환','pageid':'PEX_101', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'하나머니로 전환 동의','pageid':'PEX_102', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'하나머니로 전환 신청','pageid':'PEX_103', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'하나머니로 전환 완료','pageid':'PEX_104', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'다른포인트로 전환','pageid':'PEX_201', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'다른포인트로 전환 동의','pageid':'PEX_202', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'다른포인트로 전환 신청','pageid':'PEX_203', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'ID선택','pageid':'PEX_204', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'다른포인트로 전환 완료','pageid':'PEX_205', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'마일리지로 전환','pageid':'PEX_301', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'마일리지로 전환 신청','pageid':'PEX_302', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'마일리지로 전환 완료','pageid':'PEX_303', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'알림설정 팝업','pageid':'PEX_304', 'status':'', 'date':'', 'remarks':''},
-  {'group':'', 'code':'PEX','depth1':'','name':'마일리지로 전환 내역','pageid':'PEX_305', 'status':'', 'date':'', 'remarks':''},
 ];
 
 menuList.forEach(function(item, index){ 
   let tr;
   let link = `<a href="../../../html/global/${item.code}/${item.pageid}.html" target="_blank" class="pageLink">${item.pageid}</a>`;
+  if (item.code === 'PEX') {
+    
+  }
   if (item.remarks === 'Native' || item.status === 'X') {
     link = `<span class="notLink">${item.pageid}</span>`;
   }
-
+  
   if (item.group !== ''){
     tr = `<tr id="${item.code}" class="group">
             <td>${item.group}</td>
