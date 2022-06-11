@@ -96,7 +96,7 @@
   bottom: -0.4rem;
   width: 6.0rem;
   height: 3.1rem;
-  background: url('../../images/changes/img_coin.png') no-repeat center;
+  background: url('../../images/change/img_coin.png') no-repeat center;
   background-size: 100%;
 }
 .logo_hanamoney_pex {
@@ -104,7 +104,7 @@
   display: inline-block;
   width: 10.0rem;
   height: 10.0rem;
-  background: url('../../images/changes/logo_pex_hanamoney.png') no-repeat 50%;
+  background: url('../../images/change/logo_pex_hanamoney.png') no-repeat 50%;
   background-size: 100%;
 }
 
