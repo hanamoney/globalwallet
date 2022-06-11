@@ -184,10 +184,17 @@ var _inpControl = function() {
   var inp = $('.wrap_inp .inp');
   _inpChkVal(inp);
 
-  // 입력 삭제 버튼 추가
   inp.each(function(idx, el) {
+    // 입력 삭제 버튼 추가
     if ( $(el).siblings('.btn_ico_clear').length <= 0 ) {
       $(el).closest('.box_inp').append('<button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>');
+    }
+
+    // 버튼이 있는 경우 간격 조정
+    if ( $(el).closest('.box_inp').hasClass('hasBtn') ) {
+      var padding = $(el).closest('.box_inp').find('.btn_round').outerWidth() + 10;
+      $(el).css('padding-right', padding + 18);
+      $(el).closest('.box_inp').find('.btn_ico_clear').css('right', padding);
     }
   });
 

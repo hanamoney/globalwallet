@@ -43,14 +43,14 @@
             <h2 class="txt">전환가능 포인트</h2>
             <p class="total_amount txt_num fnCounterUp">0</p>
             <div class="wrap_btn type_full">
-              <button type="button" class="btn_box_m btn_primary" disabled>하나머니로 모두 전환</button><!-- 1원 이상인 경우 disabled attribute 삭제 -->
+              <button type="button" class="btn_box_m btn_primary rounded" disabled>하나머니로 모두 전환</button><!-- 1원 이상인 경우 disabled attribute 삭제 -->
             </div>
           </div>
           <div class="section_top_info pex_hanamoney">
             <h2 class="txt">전환가능 포인트</h2>
             <p class="total_amount txt_num fnCounterUp">50,220</p>
             <div class="wrap_btn type_full">
-              <button type="button" class="btn_box_m btn_primary">하나머니로 모두 전환</button><!-- 1원 이상인 경우 disabled attribute 삭제 -->
+              <button type="button" class="btn_box_m btn_primary rounded">하나머니로 모두 전환</button><!-- 1원 이상인 경우 disabled attribute 삭제 -->
             </div>
           </div>
 
@@ -64,7 +64,7 @@
             </div>
             <!-- // 제공동의 하나도 안되어 있을 경우 노출 -->
 
-            <ul>
+            <ul class="pex_list">
               <li class="new"><!-- 신규제휴업체 new 클래스 추가 -->
                 <button type="button" class="box">
                   <div class="justify_left">
@@ -260,8 +260,8 @@
         </div>
         <div class="section_button_alert">
           <div class="wrap_btn_full">
-            <button type="button" class="btn_full_secondary fnClosePop">취소</button>
-            <button type="button" class="btn_full_primary fnClosePop">확인</button>
+            <button type="button" class="btn_full_secondary fnClosePop">아니오</button>
+            <button type="button" class="btn_full_primary fnClosePop">예</button>
           </div>
         </div>
       </div>
@@ -277,8 +277,10 @@
   
   <script>
     $(function(){
-      // 컨펌창 호출 param element 해당ID
-      //fnOpenLayerPop('confirmId3');
+      $('.btn_box_m.btn_primary').on('click', function(){
+        // 컨펌창 호출 param element 해당ID
+        fnOpenLayerPop('confirmId');
+      });
 
       // 이용동의 철회 컨펌창 오픈 시 열려 있는 컨펌창 닫은 후 실행
       $('.fnOpenAlert').on('click',function(){
