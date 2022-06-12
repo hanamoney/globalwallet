@@ -2587,14 +2587,36 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   line-height: 1;
   transform: translateX(-50%);
 }
-.tooltip_bubble.type_pink {
-}
 .tooltip_bubble.type_pink p {
   padding: 0.8rem 1.6rem 0.6rem;
   border-radius: 2.0rem;
   background: linear-gradient(98.17deg, #FF5833 -50.2%, #FF6CBC 127.06%);
+  box-shadow: 0px 4px 8px rgba(255, 108, 151, 0.35);
   font-size: 1.3rem;
   line-height: 1.8rem;
+}
+.tooltip_bubble.type_pink .bubble_caret {
+  width: 1.4rem;
+  height: 0.8rem;
+  border: 0;
+  background: url('../../images/hmui/bubble_caret_pink.png') no-repeat 50%;
+  background-size: auto 100%;
+}
+.tooltip_bubble.type_pink.right .bubble_caret {
+  left: auto;
+  right: 5.2rem;
+  transform: none;
+}
+.wrap_bubble[data-animate="trans"] {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(.75,-0.5,0,1.75);
+}
+.wrap_bubble[data-animate="trans"].transform {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* [common contents style] */

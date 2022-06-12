@@ -40,6 +40,7 @@ var registUI = function(){
   if ( $('.wrap_loop_scrl').length ) { _loopScrlCont(); } // 무한스크롤링 컨텐츠
   if ( $('.fnFitToCont').length ) { _textFitToCont(); } // 택스트 사이즈 조정
   if ( $('.chart_bar_stacked').length ) { _barChartStacked(); } // stacked bar chart
+  if ( $('.wrap_bubble[data-animate="trans"]').length ) { _bubbleAnimate(); } // 말풍선 애니메이션
 
   if ( $('.gsp_travlog_info').length ) { _gspTravlogInfo(); } // 트래블로그 혜택안내 애니메이션 실행
 
@@ -664,6 +665,23 @@ var _textFitToCont = function(){
 var _barChartStacked = function(){
   $('.chart_bar_stacked').each(function(){
     fnAnimateBar($(this));
+  });
+}
+
+/**
+  * @name _bubbleAnimate()
+  * @description // animate bubble
+  */
+var _bubbleAnimate = function(){
+  $('.wrap_bubble[data-animate="trans"]').each(function(idx, el){
+    $(el).waypoint({
+      element: this,
+      handler: function() {
+        $(el).addClass('transform');
+        this.destroy();
+      },
+      offset: '100%'
+    });
   });
 }
 
