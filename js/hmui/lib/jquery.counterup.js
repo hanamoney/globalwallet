@@ -54,29 +54,42 @@
                 }
 
                 // Generate list of incremental numbers to display
-                for (var i = divisions; i >= 1; i--) {
-
-                    var newNum = parseFloat(num / divisions * i).toFixed(decimalPlaces);
-
-                    // Add incremental seconds and convert back to time
-                    if (isTime) {
-                        newNum = parseInt(s / divisions * i);
-                        var hours = parseInt(newNum / 3600) % 24;
-                        var minutes = parseInt(newNum / 60) % 60;
-                        var seconds = parseInt(newNum % 60, 10);
-                        newNum = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+                if (!isTime && !isComma && num < 100 && num.indexOf(".") == -1) {
+                    if (num == 0) {
+                        return
                     }
-
-                    // Preserve commas if input had commas
-                    if (isComma) {
-                        while (/(\d+)(\d{3})/.test(newNum.toString())) {
-                            newNum = newNum.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+                    for (var i = divisions; i >= 1; i--) {
+                        nums = [0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9];
+                        if ( num >= 10) {
+                            nums = [0,1,2,3,4,5,6,7,8,9,10,21,32,43,54,65,76,87,98,19,20,31,42,53,64,75,86,97,18,29];
                         }
+                        nums.push(num);
                     }
-                    if (settings.formatter) {
-                        newNum = settings.formatter.call(this, newNum);
+                } else {
+                    for (var i = divisions; i >= 1; i--) {
+
+                        var newNum = parseFloat(num / divisions * i).toFixed(decimalPlaces);
+    
+                        // Add incremental seconds and convert back to time
+                        if (isTime) {
+                            newNum = parseInt(s / divisions * i);
+                            var hours = parseInt(newNum / 3600) % 24;
+                            var minutes = parseInt(newNum / 60) % 60;
+                            var seconds = parseInt(newNum % 60, 10);
+                            newNum = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+                        }
+    
+                        // Preserve commas if input had commas
+                        if (isComma) {
+                            while (/(\d+)(\d{3})/.test(newNum.toString())) {
+                                newNum = newNum.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+                            }
+                        }
+                        if (settings.formatter) {
+                            newNum = settings.formatter.call(this, newNum);
+                        }
+                        nums.unshift(newNum);
                     }
-                    nums.unshift(newNum);
                 }
 
                 $this.data('counterup-nums', nums);
