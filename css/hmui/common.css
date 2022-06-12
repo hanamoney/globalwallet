@@ -2426,6 +2426,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .wrap_layer.setScreenShot {
   overflow-x: hidden;
   overflow-y: auto;
+  position: absolute;
   bottom: auto;
   min-height: 100vh;
   height: auto;
@@ -2436,27 +2437,8 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .wrap_layer.type_full.setScreenShot .inner_layer .content_layer {
   max-height: unset;
-  min-height: 100vh;
 }
 .wrap_layer.type_full.setScreenShot .section_bottom_fixed {
-  display: none;
-}
-.wrap_layer.setScreenShot2 {
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: absolute;
-  bottom: auto;
-  min-height: 100vh;
-  height: auto;
-}
-.wrap_layer.type_full.setScreenShot2 .inner_layer {
-  bottom: auto;
-  height: auto;
-}
-.wrap_layer.type_full.setScreenShot2 .inner_layer .content_layer {
-  max-height: unset;
-}
-.wrap_layer.type_full.setScreenShot2 .section_bottom_fixed {
   display: none;
 }
 

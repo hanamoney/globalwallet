@@ -1127,37 +1127,6 @@ var _gspTravlogInfo = function(){
   * @description 레이어팝업 스크린샷을 위한 높이값 설정
   * @param {Element} el 해당팝업 element 
   */
-var fnLayerScreenShot = (function() {
-  var $el;
-
-  function set(el) {
-    $el = $(el);
-    $el.addClass('setScreenShot');
-
-    var height = $el.find('.content_layer').outerHeight(true);
-    $('body')
-      .css({
-        'min-height': '100vh',
-        'height': height,
-      });
-  }
-
-  function complete() {
-    $el.removeClass('setScreenShot');
-    $('body').removeAttr('style');
-  }
-
-  return {
-    set: set,
-    complete: complete
-  }
-})();
-
-/**
-  * @name fnLayerScreenShot.set();
-  * @description 레이어팝업 스크린샷을 위한 높이값 설정
-  * @param {Element} el 해당팝업 element 
-  */
 var fnLayerScreenShot2 = (function() {
   var $el,
       scrlTop,
@@ -1168,7 +1137,7 @@ var fnLayerScreenShot2 = (function() {
     scrlTop = $(document).scrollTop(); // 현재 스크롤 위치 저장
     page = $el.siblings('.wrap_contents').find('section'); // 본 페이지
     
-    $el.addClass('setScreenShot2'); // 팝업 높이제한 해제 후 팝업 콘텐츠 높이값 계산
+    $el.addClass('setScreenShot'); // 팝업 높이제한 해제 후 팝업 콘텐츠 높이값 계산
     var height = $el.find('.content_layer').outerHeight(true);
     $el
       .css({
@@ -1187,7 +1156,7 @@ var fnLayerScreenShot2 = (function() {
   }
 
   function complete() {
-    $el.removeClass('setScreenShot2').removeAttr('style');
+    $el.removeClass('setScreenShot').removeAttr('style');
     $('body').removeAttr('style');
     page.show();
     $(document).scrollTop(scrlTop); // 팝업 열었을 때의 스크롤 위치로 다시 이동
