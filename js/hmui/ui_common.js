@@ -757,10 +757,10 @@ var fnCloseLayerPop = function(popID, focusEl){
     $focusEl = $(focusEl);
   }
 
-  $el.removeClass('show');
+  $el.removeClass('show').addClass('closing');
   setTimeout(function(){
     $el.find('.dim').remove();
-    $el.removeAttr('style');
+    $el.removeClass('closing').removeAttr('style');
     $('body').removeClass('overflow');
     $focusEl.focus();
   },300);
