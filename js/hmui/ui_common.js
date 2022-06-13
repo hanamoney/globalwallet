@@ -197,36 +197,38 @@ var _inpControl = function() {
       $(el).css('padding-right', padding + 18);
       $(el).closest('.box_inp').find('.btn_ico_clear').css('right', padding);
     }
-  });
 
-  inp.on('focus blur', function(e){
-    var $thisInp = $(this);
-    _inpChkVal($thisInp);
+    $(el).on('focus blur', function(e){
+      var $thisInp = $(this);
+      _inpChkVal($thisInp);
+  
+      if( $thisInp.val() !== '' && $thisInp.is(':focus') ){
+        $thisInp.closest('.box_inp').addClass('show_btn');
+      } else {
+        $thisInp.closest('.box_inp').removeClass('show_btn');
+      }
+    });
 
-    if( $thisInp.val() !== '' && $thisInp.is(':focus') ){
-      $thisInp.closest('.box_inp').addClass('show_btn');
-    }
-  });
-
-  inp.closest('.box_inp').find('.btn_ico_clear').bind('click', function(e) {
-    e.preventDefault();
-    $(this).siblings('.inp').val('').focus().click();
-    $(this).closest('.box_inp').removeClass('show_btn');
-  });
-
-  inp.closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(e) {
-    e.preventDefault();
-  });
-
-  inp.closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
-    e.preventDefault();
-    $(this).siblings('input').attr('checked',true);
-  });
-
-  inp.bind('keyup change',function(){
-    $(this).focus().click();
-    $(this).closest('.box_inp').addClass('show_btn');
-    _inpChkVal($(this));
+    $(el).bind('keyup change',function(){
+      $(this).focus().click();
+      $(this).closest('.box_inp').addClass('show_btn');
+      _inpChkVal($(this));
+    });
+  
+    $(el).closest('.box_inp').find('.btn_ico_clear').bind('click', function(e) {
+      e.preventDefault();
+      $(this).siblings('.inp').val('').focus().click();
+      $(this).closest('.box_inp').removeClass('show_btn');
+    });
+  
+    $(el).closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(e) {
+      e.preventDefault();
+    });
+  
+    $(el).closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
+      e.preventDefault();
+      $(this).siblings('input').attr('checked',true);
+    });
   });
 };
 
