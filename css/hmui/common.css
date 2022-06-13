@@ -1187,8 +1187,9 @@ section[data-roll] {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: -1.0rem;
   z-index: 1;
+  width: 3.8rem;
   height: 100%;
 }
 .box_inp.show_btn .btn_ico_clear {
