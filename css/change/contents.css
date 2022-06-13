@@ -13,6 +13,7 @@
   top: -3.4rem;
 }
 .pex_list li {
+  position: relative;
   border-bottom: 1px solid #E3EBEE;
 }
 .pex_list .box {
@@ -30,7 +31,6 @@
   text-align: right;
 }
 .pex_list .box .ico_logo {
-  overflow: hidden;
   position: absolute;
   left: 0;
   top: 50%;
@@ -67,6 +67,18 @@
 .pex_list .box .txt_sub:last-child {
   margin-top: 0.3rem;
   margin-bottom: 0;
+}
+.pex_list li.new .ico_logo::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -0.1rem;
+  right: -0.1rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.4rem;
+  background: #FF5833;
+  box-shadow: 0px 4px 4px rgba(147, 54, 34, 0.3);
 }
 .pex_list .box .txt_info {
   color: #6E7D85;
