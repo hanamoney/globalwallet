@@ -2,6 +2,9 @@
 
 /* [PEX] - 포인트전환 */
 /* PEX_101 하나머니로 */
+.section_tab.scrolled + .section_top_info.pex_hanamoney {
+  margin-top: 5.4rem;
+}
 .section_top_info.pex_hanamoney {
   background: linear-gradient(143.05deg, #5CE4C9 -84.85%, #FFE9DD 132.52%);
 }

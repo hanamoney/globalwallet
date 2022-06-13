@@ -289,8 +289,22 @@
         },290);
       });
 
-      // 토스트팝업 호출 param element 해당ID
-      //fnToastPop('toast'); 
+      // 컨펌창 퍼블확인용
+      $('.pex_list').find('li .box').on('click', function(){
+        if ($(this).closest('li').index() == 0) {
+          fnOpenLayerPop('confirmId3');
+        } else if ($(this).closest('li').index() == 2) {
+          fnOpenLayerPop('confirmId2');
+        } 
+      });
+
+      // 토스트팝업 호출 퍼블확인용
+      $('#confirmId4').find('.btn_full_primary').on('click', function(){
+        // 토스트팝업 호출 param element 해당ID
+        setTimeout(function(){
+          fnToastPop('toast');
+        },300);
+      });
     });
   </script>
 </body>
