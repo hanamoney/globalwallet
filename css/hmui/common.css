@@ -3649,6 +3649,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   overflow: hidden;
   width: 100%;
   height: 6.0rem;
+  margin: 4.0rem 0;
 }
 .mesh-loader .circle {
   position: absolute;
