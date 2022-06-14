@@ -226,7 +226,16 @@ var _inpControl = function() {
     $(el).on('focus', function(e){
       var $thisInp = $(this);
       _inpChkVal($thisInp);
-      if (isiOS) iOSKeyBoardHeight(216);
+      if (isiOS) iOSKeyBoardHeight(251);
+    });
+
+    $(el).on('blur', function(e){
+      setTimeout(function(){
+        if (!$(el).is(':focus')) {
+          _blurInp();
+          return;
+        }
+      },100);
     });
 
     $(el).bind('keyup change',function(){
@@ -257,18 +266,20 @@ var _inpControl = function() {
   });
 
   // 인풋 및 하단고정영역 외 클릭 시 인풋 기본으로 전환
-  $(window).on('touchstart', function(e) {
-    var el = e.target.classList;
-    var checkParent = $(e.target).closest('.section_bottom_fixed').length;
-    if (
-      inp.is(':focus') 
-      && !el.contains('inp') 
-      && !el.contains('btn_ico_clear') 
-      && !checkParent 
-      || (checkParent && !$(e.target).parents('.wrap_chk').length && !$(e.target).parents('.wrap_btn_box').length ) ) {
-        _blurInp();
-    }
-  });
+  if ( $('.section_bottom_fixed').length ){
+    $(window).on('touchstart', function(e) {
+      var el = e.target.classList;
+      var checkParent = $(e.target).closest('.section_bottom_fixed').length;
+      if (
+        inp.is(':focus') 
+        && !el.contains('inp') 
+        && !el.contains('btn_ico_clear') 
+        && !checkParent 
+        || (checkParent && !$(e.target).parents('.wrap_chk').length && !$(e.target).parents('.wrap_btn_box').length ) ) {
+          _blurInp();
+      }
+    });
+  }
 
   function _blurInp() {
     inp.each(function(){
