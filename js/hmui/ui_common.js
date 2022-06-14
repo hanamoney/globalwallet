@@ -153,7 +153,7 @@ var _tabHightlight = function() {
 
 /**
   * @name _iOSInpFixdPos()
-  * @description // iOS 키패드 오픈시 하단고정 영역 키패드 위로
+  * @description // iOS 키패드 오픈시 하단고정 영역 키패드 위로 (ios13이상)
   */
 var _iOSInpFixdPos = function() {
   var fixedEl = $('.section_bottom_fixed > div');
@@ -240,7 +240,12 @@ var _inpControl = function() {
   
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
       e.preventDefault();
-      $(this).siblings('input').attr('checked',true);
+      var check = $(this).siblings('input');
+      if ( !check.is(':checked') ) {
+        check.prop('checked',true);
+      } else {
+        check.prop('checked',false);
+      }
     });
   });
 };
