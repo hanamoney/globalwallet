@@ -29,7 +29,7 @@ var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
-  if ( isiOS && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
+  // if ( isiOS && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
   if ( $('.wrap_tab_btn').length ) { _tabContents(); } // 탭
@@ -153,7 +153,7 @@ var _tabHightlight = function() {
 
 /**
   * @name _iOSInpFixdPos()
-  * @description // iOS 키패드 오픈시 하단고정 영역 키패드 위로 (ios13이상)
+  * @description // iOS 키패드 오픈시 하단고정 영역 키패드 위로 (ios13이상) - 미사용
   */
 var _iOSInpFixdPos = function() {
   var fixedEl = $('.section_bottom_fixed > div');
@@ -189,6 +189,23 @@ var _iOSInpFixdPos = function() {
 };
 
 /**
+  * @name iOSKeyBoardHeight()
+  * @description // iOS 키패드 오픈시 하단고정 영역 키패드 위로
+  * @param {keyboardHeight} // 네이티브에서 키보드 호출 시 높이값 전달하여 함수 바로 호출
+  */
+var iOSKeyBoardHeight = function(keyboardHeight) {
+  if ($('.section_bottom_fixed').length) {
+    $('.section_bottom_fixed > div').each(function(idx, el) {
+      var $el = $(el);
+      var current = $el.css('bottom').replace(/[^0-9]/g, '');
+      var pos =  -keyboardHeight + 'px';
+      
+      $el.css('transform', 'translateY(' +  pos + ')');
+    });
+  }
+}
+
+/**
   * @name _inpControl()
   * @description // 인풋 입력창 인터렉션
   */
@@ -212,14 +229,8 @@ var _inpControl = function() {
     $(el).on('focus', function(e){
       var $thisInp = $(this);
       _inpChkVal($thisInp);
+      if (isiOS) iOSKeyBoardHeight(216);
     });
-
-    if (isAOS) {
-      $(el).on('blur', function(e){
-        var $thisInp = $(this);
-        $(this).closest('.box_inp').removeClass('show_btn');
-      });
-    }
 
     $(el).bind('keyup change',function(){
       $(this).focus().click();
@@ -229,7 +240,6 @@ var _inpControl = function() {
   
     $(el).closest('.box_inp').find('.btn_ico_clear').bind('click', function(e) {
       e.preventDefault();
-      console.log('clear');
       $(this).siblings('.inp').val('').focus().click();
       $(this).closest('.box_inp').removeClass('show_btn');
     });
