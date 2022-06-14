@@ -2687,12 +2687,36 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   margin-left: 1.0rem;
 }
 .wrap_agree_list .box_chk .btn_acco {
+  position: relative;
   height: auto;
   margin-left: 1.0rem;
-  will-change: transform;
+  /* will-change: transform; */
+  background: none;
 }
-.section_terms .box_chk .btn_acco.on {
+.wrap_agree_list .box_chk .btn_acco::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.0rem;
+  height: 100%;
+  background: url('../../images/hmui/ico_arr_down_2.png') no-repeat right center;
+  background-size: 100% auto;
+}
+.section_terms .box_chk .btn_acco.on::before {
   transform: rotate(-180deg);
+}
+.wrap_agree_list .box_chk .btn_acco:only-child {
+  display: block;
+  width: 100%;
+  padding: 2.0rem 0;
+  text-align: left;
+}
+.wrap_agree_list .box_chk .btn_acco:only-child .label {
+  color: #252E33;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
 }
 .section_terms .wrap_acco {
   display: none;
@@ -3404,9 +3428,13 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   margin-top: 0.8rem;
   font-size: 1.5rem;
 }
-.wrap_banner .tit_big + .tit_2 {
+.wrap_banner .tit_big + .tit_2,
+.wrap_banner .tit_sub {
+  margin: 1.6rem 0 2.0rem;
+  color: #323E43;
   font-size: 2.0rem;
   line-height: 2.6rem;
+  font-weight: 700;
 }
 .wrap_banner_box {
   

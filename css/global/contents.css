@@ -513,12 +513,13 @@
   content: '';
   display: inline-block;
   position: absolute;
-  right: 2.4rem;
-  bottom: 4.7rem;
-  width: 9.6rem;
-  height: 11.0rem;
-  background: url('../../images/hmui/img_zedo_charge_3.png') no-repeat 50%;
+  right: 3.2rem;
+  bottom: 5.6rem;
+  width: 5.0rem;
+  height: 8.0rem;
+  background: url('../../images/global/img_card_travlog.png') no-repeat 50%;
   background-size: 100%;
+  transform: rotate(-15deg);
 }
 
 /* [GSP] - 글로벌 */
