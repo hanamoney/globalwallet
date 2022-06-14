@@ -259,22 +259,26 @@ var _inpControl = function() {
   // 인풋 및 하단고정영역 외 클릭 시 인풋 기본으로 전환
   $(window).on('touchstart', function(e) {
     var el = e.target.classList;
-    var checkParent = e.target.closest('.section_bottom_fixed') !== null;
+    var checkParent = $(e.target).closest('.section_bottom_fixed').length;
     if (
       inp.is(':focus') 
       && !el.contains('inp') 
       && !el.contains('btn_ico_clear') 
       && !checkParent 
-      || el.contains('section_bottom_fixed')) {
-      inp.each(function(){
-        $(this).blur();
-        $(this).closest('.box_inp').removeClass('show_btn');
-      });
-      $('.section_bottom_fixed > div').each(function(idx, el) {
-        $(el).css('transform', '');
-      });
+      || (checkParent && !$(e.target).parents('.wrap_chk').length && !$(e.target).parents('.wrap_btn_box').length ) ) {
+        _blurInp();
     }
   });
+
+  function _blurInp() {
+    inp.each(function(){
+      $(this).blur();
+      $(this).closest('.box_inp').removeClass('show_btn');
+    });
+    $('.section_bottom_fixed > div').each(function(idx, el) {
+      $(el).css('transform', '');
+    });
+  }
 };
 
 /**
