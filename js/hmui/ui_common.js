@@ -196,11 +196,8 @@ var _iOSInpFixdPos = function() {
 var iOSKeyBoardHeight = function(keyboardHeight) {
   if ($('.section_bottom_fixed').length) {
     $('.section_bottom_fixed > div').each(function(idx, el) {
-      var $el = $(el);
-      var current = $el.css('bottom').replace(/[^0-9]/g, '');
       var pos =  -keyboardHeight + 'px';
-      
-      $el.css('transform', 'translateY(' +  pos + ')');
+      $(el).css('transform', 'translateY(' +  pos + ')');
     });
   }
 }
@@ -257,6 +254,18 @@ var _inpControl = function() {
         check.prop('checked',false);
       }
     });
+  });
+
+  // 인풋 및 하단고정영역 외 클릭 시 인풋 기본으로 전환
+  $(window).on('touchstart', function(e) {
+    var el = e.target.classList;
+    var checkParent = e.target.closest('.section_bottom_fixed') !== null;
+    if (inp.is(':focus') && !el.contains('inp') && !el.contains('btn_ico_clear') && !checkParent || el.contains('section_bottom_fixed') ) {
+      inp.each(function(){
+        $(this).blur();
+        $(this).closest('.box_inp').removeClass('show_btn');
+      });
+    }
   });
 };
 
