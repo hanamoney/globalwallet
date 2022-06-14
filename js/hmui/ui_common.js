@@ -260,10 +260,18 @@ var _inpControl = function() {
   $(window).on('touchstart', function(e) {
     var el = e.target.classList;
     var checkParent = e.target.closest('.section_bottom_fixed') !== null;
-    if (inp.is(':focus') && !el.contains('inp') && !el.contains('btn_ico_clear') && !checkParent || el.contains('section_bottom_fixed') ) {
+    if (
+      inp.is(':focus') 
+      && !el.contains('inp') 
+      && !el.contains('btn_ico_clear') 
+      && !checkParent 
+      || el.contains('section_bottom_fixed')) {
       inp.each(function(){
         $(this).blur();
         $(this).closest('.box_inp').removeClass('show_btn');
+      });
+      $('.section_bottom_fixed > div').each(function(idx, el) {
+        $(el).css('transform', '');
       });
     }
   });
