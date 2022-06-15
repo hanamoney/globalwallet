@@ -80,12 +80,12 @@
     </div>
     <!-- // tooltip -->
 
-  </main>
+  </main> 
 
   <script>
-    // value 값 설정 후 change 트리거 삭제
+    // value 값 설정 후 change 트리거 삭제 클래스추가로 변경
     $('#test').on('click', function(e){
-      $('.inp').val('200.20');
+      $('.inp').val('200.20').closest('.box_inp').addClass('hasVal');
     });
   </script>
 </body>
