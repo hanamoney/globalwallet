@@ -270,7 +270,7 @@ var _inpControl = function() {
         && !el.contains('inp') 
         && !el.contains('btn_ico_clear') 
         && !checkParent 
-        || (checkParent && !$(e.target).parents('.wrap_btn_box').length ) ) {
+        || (checkParent && !$(e.target).parents('.wrap_chk').length && !$(e.target).parents('.wrap_btn_box').length ) ) {
           inp.each(function(){
             $(this).blur();
             $(this).closest('.box_inp').removeClass('show_btn');
