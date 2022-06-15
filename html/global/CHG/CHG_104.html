@@ -113,9 +113,9 @@
       // 컨펌호출 param 오픈할 레이어 id
       fnOpenLayerPop('confirmId');
 
-      // value 값 설정 후 change 트리거 삭제
+      // value 값 설정 후 change 트리거
       $('#test').on('click', function(e){
-        $('.inp').val('1,600.00');
+        $('.inp').val('1,600.00').trigger('change');
       });
     });
   </script>
