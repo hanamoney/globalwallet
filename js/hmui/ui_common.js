@@ -216,7 +216,6 @@ var _inpControl = function() {
 
     $(el).on('focus', function(e){
       var $thisInp = $(this);
-      $thisInp.addClass('focus');
       _inpChkVal($thisInp);
       if (isiOS) iOSKeyBoardHeight(251);
     });
@@ -231,7 +230,6 @@ var _inpControl = function() {
       setTimeout(function(){
         var $thisInp = $(this);
         if ( !keepFocus ) {
-          $thisInp.removeClass('focus');
           $thisInp.closest('.box_inp').removeClass('show_btn');
           $thisInp.closest('.box_inp').next().focus().click();
           _resetFixedBtnPos();
@@ -283,7 +281,7 @@ var _inpControl = function() {
         && !checkParent 
         || (checkParent && !$(e.target).parents('.wrap_chk').length && !$(e.target).parents('.wrap_btn_box').length ) ) {
           inp.each(function(){
-            $(this).removeClass('focus').blur();
+            $(this).blur();
             $(this).closest('.box_inp').removeClass('show_btn');
           });
           _resetFixedBtnPos();
