@@ -224,8 +224,9 @@ var _inpControl = function() {
         var $thisInp = $(this);
         if ( !$thisInp.is(':focus') ) {
           console.log('blur');
-          $thisInp.closest('.box_inp').removeClass('show_btn');
           _resetFixedBtnPos();
+          $thisInp.closest('.box_inp').removeClass('show_btn');
+          $thisInp.closest('.box_inp').next().click();
         }
       }.bind($(el)), 100);
     });
