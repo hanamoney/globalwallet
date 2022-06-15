@@ -239,9 +239,14 @@ var _inpControl = function() {
     });
 
     $(el).bind('keyup change',function(e){
+      keepFocus= true;
       $(this).focus().click();
       $(this).closest('.box_inp').addClass('show_btn');
       _inpChkVal($(this));
+
+      if (!keepFocus) {
+        $(this).blur();
+      }
     });
   
     $(el).closest('.box_inp').find('.btn_ico_clear').bind('click', function(e) {
