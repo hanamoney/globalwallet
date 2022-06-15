@@ -239,6 +239,7 @@ var _inpControl = function() {
 
     $(el).bind('keyup change',function(e){
       console.log('change');
+      keepFocus = true;
       $(this).focus().click();
       $(this).closest('.box_inp').addClass('show_btn');
       _inpChkVal($(this));
