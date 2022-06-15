@@ -248,16 +248,16 @@ var _inpControl = function() {
       keepFocus = true;
     });
   
-    $(el).closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
-      // e.preventDefault();
-      keepFocus = true;
-      var check = $(this).siblings('input');
-      if ( !check.is(':checked') ) {
-        check.prop('checked',true);
-      } else {
-        check.prop('checked',false);
-      }
-    });
+    // $(el).closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
+    //   // e.preventDefault();
+    //   keepFocus = true;
+    //   var check = $(this).siblings('input');
+    //   if ( !check.is(':checked') ) {
+    //     check.prop('checked',true);
+    //   } else {
+    //     check.prop('checked',false);
+    //   }
+    // });
   });
 
   // 인풋 및 하단고정영역 외 클릭 시 인풋 기본으로 전환
