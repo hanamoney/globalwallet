@@ -22,6 +22,7 @@ $(function(){
     $('html').addClass('iOS');
   }
 
+  disableUserScalable(); // user scaling 막기
   registUI();
 });
 
@@ -1230,3 +1231,12 @@ var fnLayerScreenShot2 = (function() {
     complete: complete
   }
 })();
+
+/**
+  * @name disableUserScalable();
+  * @description user scaling 막기
+  */
+var disableUserScalable = function() {
+  var $viewport = $('head meta[name="viewport"]');
+  $viewport.attr('content', 'width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no');
+}
