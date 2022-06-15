@@ -1626,6 +1626,7 @@ button.btn_secondery {
   padding: 7.6rem 2.2rem 3.0rem;
 }
 .section_tab.type_fullpage .wrap_tab_btn.type_box .btn_tab_box {
+  overflow: hidden;
   height: auto;
   padding: 0.9rem 1.0rem;
   border-radius: 0.4rem;
