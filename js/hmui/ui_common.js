@@ -214,7 +214,7 @@ var _inpControl = function() {
       $(el).closest('.box_inp').find('.btn_ico_clear').css('right', padding);
     }
 
-    $(el).on('focus', function(e){
+    $(el).on('focus click', function(e){
       var $thisInp = $(this);
       $thisInp.addClass('focus');
       _inpChkVal($thisInp);
