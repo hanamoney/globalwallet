@@ -115,7 +115,7 @@
 
       // value 값 설정 후 change 트리거
       $('#test').on('click', function(e){
-        $('.inp').val('1,600.00').trigger('change');
+        $('.inp').val('1,600.00').closest('.box_inp').addClass('hasVal');
       });
     });
   </script>
