@@ -219,11 +219,22 @@ var _inpControl = function() {
       if (isiOS) iOSKeyBoardHeight(251);
     });
 
-    $(el).on('blur', function(e){
+    // $(el).on('blur', function(e){
+    //   setTimeout(function(){
+    //     var $thisInp = $(this);
+    //     if ( !$thisInp.is(':focus') ) {
+    //       console.log('blur');
+    //       _resetFixedBtnPos();
+    //       $thisInp.closest('.box_inp').removeClass('show_btn');
+    //     }
+    //   }.bind($(el)), 100);
+    // });
+
+    $(el).on('focusout', function(e){
       setTimeout(function(){
         var $thisInp = $(this);
         if ( !$thisInp.is(':focus') ) {
-          console.log('blur');
+          console.log('focusout');
           _resetFixedBtnPos();
           $thisInp.closest('.box_inp').removeClass('show_btn');
         }
