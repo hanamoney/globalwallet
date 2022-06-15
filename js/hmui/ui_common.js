@@ -230,19 +230,10 @@ var _inpControl = function() {
       }.bind($(el)), 100);
     });
 
-    $(el).bind('change',function(e){
+    $(el).bind('keyup change',function(e){
       $(this).focus().click();
       $(this).closest('.box_inp').addClass('show_btn');
       _inpChkVal($(this));
-    });
-
-    $(el).bind('keyup',function(e){
-      if (e.keyCord !== 13 ) {
-        console.log('keyup');
-        $(this).focus().click();
-        $(this).closest('.box_inp').addClass('show_btn');
-        _inpChkVal($(this));
-      }
     });
   
     $(el).closest('.box_inp').find('.btn_ico_clear').bind('click', function(e) {
