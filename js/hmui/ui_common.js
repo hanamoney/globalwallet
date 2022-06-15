@@ -201,6 +201,7 @@ var _inpControl = function() {
   _inpChkVal(inp);
 
   inp.each(function(idx, el) {
+    var keepFocus = false;
     // 입력 삭제 버튼 추가
     if ( $(el).siblings('.btn_ico_clear').length <= 0 ) {
       $(el).closest('.box_inp').append('<button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>');
@@ -219,22 +220,12 @@ var _inpControl = function() {
       if (isiOS) iOSKeyBoardHeight(251);
     });
 
-    // $(el).on('blur', function(e){
-    //   setTimeout(function(){
-    //     var $thisInp = $(this);
-    //     if ( !$thisInp.is(':focus') ) {
-    //       console.log('blur');
-    //       _resetFixedBtnPos();
-    //       $thisInp.closest('.box_inp').removeClass('show_btn');
-    //     }
-    //   }.bind($(el)), 100);
-    // });
-
-    $(el).on('focusout', function(e){
+    $(el).on('blur', function(e){
+      console.log('blur');
+      keepFocus = false;
       setTimeout(function(){
         var $thisInp = $(this);
-        if ( !$thisInp.is(':focus') ) {
-          console.log('focusout');
+        if ( !keepFocus ) {
           _resetFixedBtnPos();
           $thisInp.closest('.box_inp').removeClass('show_btn');
         }
@@ -249,16 +240,20 @@ var _inpControl = function() {
   
     $(el).closest('.box_inp').find('.btn_ico_clear').bind('click', function(e) {
       e.preventDefault();
+      keepFocus = true;
+      console.log('click');
       $(this).siblings('.inp').val('').focus().click();
       $(this).closest('.box_inp').removeClass('show_btn');
     });
   
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(e) {
       e.preventDefault();
+      keepFocus = true;
     });
   
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
       e.preventDefault();
+      keepFocus = true;
       var check = $(this).siblings('input');
       if ( !check.is(':checked') ) {
         check.prop('checked',true);
