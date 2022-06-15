@@ -249,7 +249,7 @@ var _inpControl = function() {
     });
   
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
-      e.preventDefault();
+      // e.preventDefault();
       keepFocus = true;
       var check = $(this).siblings('input');
       if ( !check.is(':checked') ) {
@@ -270,7 +270,7 @@ var _inpControl = function() {
         && !el.contains('inp') 
         && !el.contains('btn_ico_clear') 
         && !checkParent 
-        || (checkParent && !$(e.target).parents('.wrap_chk').length && !$(e.target).parents('.wrap_btn_box').length ) ) {
+        || (checkParent && !$(e.target).parents('.wrap_btn_box').length ) ) {
           inp.each(function(){
             $(this).blur();
             $(this).closest('.box_inp').removeClass('show_btn');
