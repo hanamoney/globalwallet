@@ -1133,7 +1133,7 @@ section[data-roll] {
   font-size: 2.6rem;
   color: #252E33;
 }
-.inp.focus {
+.inp:focus {
   padding-bottom: 0;
   border-bottom: 2px solid #4F5D64;
 }
