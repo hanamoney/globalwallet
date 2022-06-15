@@ -249,7 +249,7 @@ var _inpControl = function() {
     });
   
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
-      // e.preventDefault();
+      e.preventDefault();
       keepFocus = true;
       var check = $(this).siblings('input');
       if ( !check.is(':checked') ) {
