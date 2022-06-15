@@ -1489,20 +1489,20 @@
 .vdb_swiper .swiper-slide {
   width: 15.0rem;
   padding-top: 9.8rem;
-  transition-duration: 300ms;
 }
 .vdb_swiper .swiper-wrapper .img_avatar {
   transition-duration: 300ms;
-  transform: scale(0.6) translate(0, 0);
+  transform: scale(0.6) translate(-6.8rem, 0);
 }
 .vdb_swiper .swiper-slide.swiper-slide-prev .img_avatar {
   transform: scale(0.6) translate(10.5rem, 0.8rem);
 }
 .vdb_swiper .swiper-slide.swiper-slide-active .img_avatar,
-.vdb_swiper .swiper-slide-duplicate.swiper-slide-active .img_avatar {
+.vdb_swiper .swiper-slide.swiper-slide-duplicate-active .img_avatar {
   transform: scale(1) translate(0,0);
 }
-.vdb_swiper .swiper-slide.swiper-slide-next .img_avatar {
+.vdb_swiper .swiper-slide.swiper-slide-next .img_avatar,
+.vdb_swiper .sswiper-slide-duplicate.swiper-slide-next .img_avatar  {
   transform: scale(0.74) translate(-6.8rem, 0);
 }
 .vdb_swiper .swiper-pagination {
@@ -2249,13 +2249,14 @@
 }
 
 @supports ((-webkit-filter:none) or (filter:none)) {
-  .vdb_swiper .swiper-slide.swiper-slide-prev {
-    -webkit-filter: blur(3px);
-    filter: blur(3px);
-  }
-  .vdb_swiper .swiper-slide.swiper-slide-next {
+  .vdb_swiper .swiper-slide.swiper-slide-prev,
+  .vdb_swiper .swiper-slide:not(.swiper-slide-active) {
     -webkit-filter: blur(4px);
     filter: blur(4px);
+  }
+  .vdb_swiper .swiper-slide.swiper-slide-next {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
   }
   .section_cont.guide_hanamoney_3 .utl_charge_swiper .swiper-slide-prev,
   .section_cont.guide_hanamoney_3 .utl_charge_swiper .swiper-slide-next {
