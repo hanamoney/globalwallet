@@ -1479,27 +1479,31 @@
 .vdb_swiper {
   margin-top: 1.0rem;
   height: 40.2rem;
+  margin: 1.0rem -2.4rem 0;
   padding-top: 1.0rem;
-  -webkit-perspective: 1200px;
-  perspective: 1200px;
 }
 .vdb_swiper .swiper-wrapper {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .vdb_swiper .swiper-slide {
-  width: 41.6vw;
+  width: 15.0rem;
   padding-top: 9.8rem;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
   transition-duration: 300ms;
-  transform: translate3d(3.2rem, 0, -40.0rem);
 }
-.vdb_swiper .swiper-slide.swiper-slide-active {
-  transform: translate3d(0, 0, 0);
+.vdb_swiper .swiper-wrapper .img_avatar {
+  transition-duration: 300ms;
+  transform: scale(0.6) translate(0, 0);
 }
-.vdb_swiper .swiper-slide.swiper-slide-next {
-  transform: translate3d(-1.6rem, 0, -80.0rem);
+.vdb_swiper .swiper-slide.swiper-slide-prev .img_avatar {
+  transform: scale(0.6) translate(10.5rem, 0.8rem);
+}
+.vdb_swiper .swiper-slide.swiper-slide-active .img_avatar,
+.vdb_swiper .swiper-slide-duplicate.swiper-slide-active .img_avatar {
+  transform: scale(1) translate(0,0);
+}
+.vdb_swiper .swiper-slide.swiper-slide-next .img_avatar {
+  transform: scale(0.74) translate(-6.8rem, 0);
 }
 .vdb_swiper .swiper-pagination {
   left: 50%;
