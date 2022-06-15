@@ -277,6 +277,16 @@ var _inpControl = function() {
           });
           _resetFixedBtnPos();
       }
+
+      if ( checkParent && $(e.target).parents('.wrap_chk').length ) {
+        setTimeout(function(){
+          inp.each(function(){
+            $(this).blur();
+            $(this).closest('.box_inp').removeClass('show_btn');
+          });
+          _resetFixedBtnPos();
+        },0);
+      }
     });
   }
 
