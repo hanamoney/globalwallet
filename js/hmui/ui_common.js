@@ -211,7 +211,7 @@ var _inpControl = function() {
     $(el).on('focus', function(e){
       var $thisInp = $(this);
       _inpChkVal($thisInp);
-      if (isiOS) iOSKeyBoardHeight(251);
+      // if (isiOS) iOSKeyBoardHeight(251);
     });
 
     $(el).on('blur', function(e){
