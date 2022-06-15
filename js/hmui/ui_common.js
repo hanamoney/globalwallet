@@ -227,13 +227,13 @@ var _inpControl = function() {
       setTimeout(function(){
         var $thisInp = $(this);
         if ( !keepFocus ) {
-          _resetFixedBtnPos();
           $thisInp.removeClass('focus');
           $thisInp.closest('.box_inp').removeClass('show_btn');
           $thisInp.closest('.box_inp').next().focus().click();
+          _resetFixedBtnPos();
           keepFocus = false;
         }
-      }.bind($(el)), 100);
+      }.bind($(el)), 0);
     });
 
     $(el).bind('keyup change',function(e){
