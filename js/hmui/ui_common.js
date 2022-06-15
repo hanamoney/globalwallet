@@ -169,6 +169,13 @@ var _iOSInpFixdPos = function() {
       
       $el.css('transform', 'translateY(' +  pos + ')');
     });
+
+    // keyboard 닫힘 시 input focus out
+    if ( height - viewport.height == 0 ) {
+      $('.inp').each(function(){
+        $(this).blur();
+      });
+    }
   }
 };
 
@@ -243,20 +250,24 @@ var _inpControl = function() {
       $(this).closest('.box_inp').removeClass('show_btn');
     });
   
+    // 하단고정영역 벼튼클릭시
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(e) {
       e.preventDefault();
       keepFocus = true;
     });
   
+    // 하단고정영역 체크박스 클릭시 - focus out
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
       e.preventDefault();
-      console.log('check');
+      // console.log('check');
       keepFocus = false;
       var check = $(this).siblings('input');
       if ( !check.is(':checked') ) {
         check.prop('checked',true);
+        $('.inp').blur();
       } else {
         check.prop('checked',false);
+        $('.inp').blur();
       }
     });
   });
