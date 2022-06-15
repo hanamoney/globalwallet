@@ -226,15 +226,23 @@ var _inpControl = function() {
           console.log('blur');
           _resetFixedBtnPos();
           $thisInp.closest('.box_inp').removeClass('show_btn');
-          $thisInp.closest('.box_inp').next().click();
         }
       }.bind($(el)), 100);
     });
 
-    $(el).bind('keyup change',function(){
+    $(el).bind('change',function(e){
       $(this).focus().click();
       $(this).closest('.box_inp').addClass('show_btn');
       _inpChkVal($(this));
+    });
+
+    $(el).bind('keyup',function(e){
+      if (e.keyCord !== 13 ) {
+        console.log('keyup');
+        $(this).focus().click();
+        $(this).closest('.box_inp').addClass('show_btn');
+        _inpChkVal($(this));
+      }
     });
   
     $(el).closest('.box_inp').find('.btn_ico_clear').bind('click', function(e) {
