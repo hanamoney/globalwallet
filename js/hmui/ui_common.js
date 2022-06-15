@@ -229,7 +229,8 @@ var _inpControl = function() {
         if ( !keepFocus ) {
           _resetFixedBtnPos();
           $thisInp.removeClass('focus');
-          $thisInp.closest('.box_inp').removeClass('show_btn').click();
+          $thisInp.closest('.box_inp').removeClass('show_btn');
+          $thisInp.closest('.box_inp').next().focus().click();
           keepFocus = false;
         }
       }.bind($(el)), 100);
