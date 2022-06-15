@@ -24,6 +24,17 @@
 .ico_chg_03 {background-image: url('../../images/hmui/ico_chg_03.png');}
 .ico_chg_04 {background-image: url('../../images/hmui/ico_chg_04.png');}
 .ico_chg_05 {background-image: url('../../images/hmui/ico_chg_05.png');}
+.wrap_box .chg_info li {
+  padding: 0.4rem 0;
+}
+.wrap_box .chg_info .tit {
+  color: #6E7D85;
+}
+.wrap_box .chg_info .tit,
+.wrap_box .chg_info .txt {
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
 
 /* [CHG] - 외화충전 */
 .section_top_visual.chg_limit {
