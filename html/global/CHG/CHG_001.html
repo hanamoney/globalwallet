@@ -104,7 +104,38 @@
       </div>
     </div>
     <!-- // contents-->
+
+    <!-- 22.06.15 팝업추가 -->
+    <div id="popupId" class="wrap_layer type_center" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="tit type_full"><em>하나머니는 최소<br>1,000원부터 채울 수 있어요.</em></p>
+          <div class="wrap_box bg_bluegrey">
+            <ul class="list_info chg_info">
+              <li>
+                <span class="tit">보유 하나머니</span>
+                <strong class="txt txt_amount"><em class="txt_num">1,600</em></strong>
+              </li>
+              <li>
+                <span class="tit">충전가능 하나머니</span>
+                <strong class="txt txt_amount"><em class="txt_num">2,000,000</em></strong>
+              </li>
+            </ul>
+          </div>
+          <div class="wrap_btn type_full">
+            <a href="#none" class="btn_box_big btn_primary">확인</a>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
   </main>
   
+  <script>
+    $(function(){
+      // 팝업 오픈 param 오픈할 팝업 ID
+      fnOpenLayerPop('popupId');
+    });
+  </script>
 </body>
 </html>
