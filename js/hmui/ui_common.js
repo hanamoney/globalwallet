@@ -250,7 +250,7 @@ var _inpControl = function() {
   
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
       e.preventDefault();
-      keepFocus = true;
+      keepFocus = false;
       var check = $(this).siblings('input');
       if ( !check.is(':checked') ) {
         check.prop('checked',true);
