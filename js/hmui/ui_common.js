@@ -30,10 +30,10 @@ var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
-  if ( (iosV() >= 13) && $('.inp').length && $('.section_bottom_fixed').length  ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
+  // if ( (iosV() >= 13) && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
-  if ( $('.wrap_tab_btn').length ) { _tabContents(); } // 탭
+  if ( $('.wrap_tab_btn').length ) { _tabContents(); } // 탭 
   if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
   if ( $('.section_faq').length ) { _faqAcco(); } // faq 아코디언
   if ( $('.section_terms .btn_acco').length ) { _agreeAccoBtn(); } // 약관동의 아코디언 기능
@@ -160,15 +160,11 @@ var _iOSInpFixdPos = function() {
   var fixedEl = $('.section_bottom_fixed > div');
   var height = window.visualViewport.height;
   var viewport = window.visualViewport;
-
-  // console.log(iosV());
-
   window.visualViewport.addEventListener('resize', resizeHandler);
 
   function resizeHandler() {
     fixedEl.each(function(idx, el) {
       var $el = $(el);
-      var current = $el.css('bottom').replace(/[^0-9]/g, '');
       var pos = -(height - viewport.height) + 'px';
       
       $el.css('transform', 'translateY(' +  pos + ')');
@@ -178,10 +174,16 @@ var _iOSInpFixdPos = function() {
 
 /**
   * @name iOSKeyBoardHeight()
-  * @description // iOS 키패드 오픈시 하단고정 영역 키패드 위로
+  * @description // iOS 키패드 오픈시 하단고정 영역 키패드 위로 (iOS12이하)
   * @param {keyboardHeight} // 네이티브에서 키보드 호출 시 높이값 전달하여 함수 바로 호출
   */
 var iOSKeyBoardHeight = function(keyboardHeight) {
+  // if ($('.section_bottom_fixed').length && iosV() < 13 ) {
+  //   $('.section_bottom_fixed > div').each(function(idx, el) {
+  //     var pos =  -keyboardHeight + 'px';
+  //     $(el).css('transform', 'translateY(' +  pos + ')');
+  //   });
+  // }
   if ($('.section_bottom_fixed').length) {
     $('.section_bottom_fixed > div').each(function(idx, el) {
       var pos =  -keyboardHeight + 'px';
@@ -214,7 +216,7 @@ var _inpControl = function() {
     $(el).on('focus', function(e){
       var $thisInp = $(this);
       _inpChkVal($thisInp);
-      if (iosV() < 13) iOSKeyBoardHeight(251);
+      if (isiOS) iOSKeyBoardHeight(251);
     });
 
     $(el).on('blur', function(e){
