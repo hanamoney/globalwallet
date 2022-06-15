@@ -221,6 +221,10 @@ var _inpControl = function() {
       if (isiOS) iOSKeyBoardHeight(251);
     });
 
+    $(el).on('click', function() {
+      $(this).trigger('focus');
+    });
+
     $(el).on('blur', function(e){
       console.log('blur');
       keepFocus = false;
@@ -243,7 +247,7 @@ var _inpControl = function() {
     });
   
     $(el).closest('.box_inp').find('.btn_ico_clear').bind('click', function(e) {
-      e.preventDefault();
+      // e.preventDefault();
       keepFocus = true;
       console.log('click');
       $(this).siblings('.inp').val('').focus().click();
@@ -279,8 +283,7 @@ var _inpControl = function() {
         && !checkParent 
         || (checkParent && !$(e.target).parents('.wrap_chk').length && !$(e.target).parents('.wrap_btn_box').length ) ) {
           inp.each(function(){
-            $(this).blur();
-            $(this).removeClass('focus');
+            $(this).removeClass('focus').blur();
             $(this).closest('.box_inp').removeClass('show_btn');
           });
           _resetFixedBtnPos();
