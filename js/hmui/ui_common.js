@@ -30,7 +30,7 @@ var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
-  // if ( (iosV() >= 13) && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
+  if ( (iosV() >= 13) && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
   if ( $('.wrap_tab_btn').length ) { _tabContents(); } // 탭 
@@ -178,13 +178,7 @@ var _iOSInpFixdPos = function() {
   * @param {keyboardHeight} // 네이티브에서 키보드 호출 시 높이값 전달하여 함수 바로 호출
   */
 var iOSKeyBoardHeight = function(keyboardHeight) {
-  // if ($('.section_bottom_fixed').length && iosV() < 13 ) {
-  //   $('.section_bottom_fixed > div').each(function(idx, el) {
-  //     var pos =  -keyboardHeight + 'px';
-  //     $(el).css('transform', 'translateY(' +  pos + ')');
-  //   });
-  // }
-  if ($('.section_bottom_fixed').length) {
+  if ($('.section_bottom_fixed').length && iosV() < 13 ) {
     $('.section_bottom_fixed > div').each(function(idx, el) {
       var pos =  -keyboardHeight + 'px';
       $(el).css('transform', 'translateY(' +  pos + ')');
@@ -220,12 +214,8 @@ var _inpControl = function() {
       if (isiOS) iOSKeyBoardHeight(251);
     });
 
-    $(el).on('click', function() {
-      $(this).trigger('focus');
-    });
-
     $(el).on('blur', function(e){
-      console.log('blur');
+      // console.log('blur');
       keepFocus = false;
       setTimeout(function(){
         var $thisInp = $(this);
@@ -238,7 +228,7 @@ var _inpControl = function() {
     });
 
     $(el).bind('keyup change',function(e){
-      console.log('change');
+      // console.log('change');
       keepFocus = true;
       $(this).focus().click();
       $(this).closest('.box_inp').addClass('show_btn');
@@ -248,7 +238,7 @@ var _inpControl = function() {
     $(el).closest('.box_inp').find('.btn_ico_clear').bind('click', function(e) {
       e.preventDefault();
       keepFocus = true;
-      console.log('click');
+      // console.log('click');
       $(this).siblings('.inp').val('').focus().click();
       $(this).closest('.box_inp').removeClass('show_btn');
     });
