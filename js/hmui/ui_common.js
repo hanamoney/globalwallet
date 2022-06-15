@@ -214,7 +214,7 @@ var _inpControl = function() {
       $(el).closest('.box_inp').find('.btn_ico_clear').css('right', padding);
     }
 
-    $(el).on('focus click', function(e){
+    $(el).on('focus', function(e){
       var $thisInp = $(this);
       $thisInp.addClass('focus');
       _inpChkVal($thisInp);
@@ -230,6 +230,7 @@ var _inpControl = function() {
           _resetFixedBtnPos();
           $thisInp.removeClass('focus');
           $thisInp.closest('.box_inp').removeClass('show_btn');
+          $thisInp.closest('.box_inp').next().click();
           keepFocus = false;
         }
       }.bind($(el)), 100);
