@@ -227,7 +227,7 @@ var _inpControl = function() {
           $thisInp.closest('.box_inp').removeClass('show_btn');
           _resetFixedBtnPos();
         }
-      }.bind($(el)), 0);
+      }.bind($(el)), 100);
     });
 
     $(el).bind('keyup change',function(){
