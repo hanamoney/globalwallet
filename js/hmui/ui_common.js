@@ -285,7 +285,7 @@ var _inpControl = function() {
             $(this).closest('.box_inp').removeClass('show_btn');
           });
           _resetFixedBtnPos();
-        },0);
+        },100);
       }
     });
   }
