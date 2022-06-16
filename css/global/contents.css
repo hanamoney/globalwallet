@@ -151,7 +151,7 @@
   background-size: 100%;
 }
 .section_top_visual.join_card + .wrap_item_benefit {
-  padding-top: 1.8rem;
+  padding-top: 8.0rem;
 }
 .visual_usr_card {
   width: 24.4rem;
@@ -233,6 +233,9 @@
   top: 4.9rem;
   right: 0;
   animation: cloudPop 0.4s forwards, cloud2 7s 0.8s ease-in-out infinite;
+}
+.section_top_visual.join_complete + .wrap_item_benefit {
+  padding-top: 6.2rem;
 }
 
 /* [TDL] - 하나머니 조회 */

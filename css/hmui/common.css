@@ -3065,6 +3065,13 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   line-height: 3.0rem;
   font-weight: 700;
 }
+.wrap_item_benefit > .txt {
+  padding-bottom: 2.0rem;
+  color: #323E43;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
 .list_benefit {
   padding-bottom: 4.0rem;
 }
