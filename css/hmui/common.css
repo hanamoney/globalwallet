@@ -3181,6 +3181,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .list_benefit.type_ico li .item_desc .tit {
   color: #252E33;
+}
+[data-roll="TDL"] .list_benefit.type_ico li .item_desc .tit,
+[data-roll="VDB"] .list_benefit.type_ico li .item_desc .tit {
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
@@ -3419,7 +3422,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   font-weight: 700;
 }
 .wrap_banner .tit_2 {
-  margin-top: 0.4rem;
+  margin-top: 1.6rem;
   margin-bottom: 2.4rem;
   color: #323E43;
   font-size: 2.4rem;
