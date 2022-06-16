@@ -157,7 +157,7 @@ var _tabHightlight = function() {
   * @description // iOS 키패드 오픈시 하단고정 영역 키패드 위로 (ios13이상)
   */
 var _iOSInpFixdPos = function() {
-  var fixedEl = $('.section_bottom_fixed > div');
+  var fixedEl = $('.contents').find('.section_bottom_fixed > div');
   var height = window.visualViewport.height;
   var viewport = window.visualViewport;
   window.visualViewport.addEventListener('resize', resizeHandler);
