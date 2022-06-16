@@ -532,6 +532,13 @@
   background-size: 100%;
   transform: rotate(-15deg);
 }
+.wrap_banner.hmn_201 .btn_txt {
+  margin-top: 0.4rem;
+  font-size: 1.6rem;
+}
+.wrap_banner.hmn_201 .btn_txt {
+  font-size: 1.6rem;
+}
 
 /* [GSP] - 글로벌 */
 /* GSP_001 해외직구 매뉴얼 */
