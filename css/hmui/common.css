@@ -2925,7 +2925,6 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   width: 100%;
   padding: 2.0rem 4.3rem 2.0rem 2.0rem;
   border-radius: 1.4rem;
-  -webkit-tap-highlight-color: transparent;
 }
 .wrap_link_list li a:not(.wrap_box) {
   display: -webkit-box;
@@ -2933,6 +2932,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   -webkit-box-align: center;
   align-items: center;
   padding: 1.6rem 4.3rem 1.6rem 2.5rem;
+  -webkit-tap-highlight-color: transparent;
 }
 .wrap_link_list a .ico_arr_link {
   position: absolute;

@@ -59,7 +59,7 @@
   top: -0.8rem;
   width: 3.6rem;
   height: 3.6rem;
-  margin: 0 0.6rem 0 -0.2rem;
+  margin: 0 0.4rem 0 0;
 }
 .wrap_item_benefit li .item_desc .emoji_atm {
   margin: 0 0.7rem;
@@ -71,6 +71,16 @@
 .wrap_item_benefit li .item_desc .emoji_cash {
   top: -0.3rem;
   margin: 0 0.5rem 0 0.2rem;
+}
+.wrap_item_benefit li .item_desc .emoji_cashback {
+  width: 3.4rem;
+  height: 3.4rem;
+  margin: -0.3rem 0.5rem 0;
+}
+.wrap_item_benefit li .item_desc .emoji_zero_travlog {
+  width: 2.6rem;
+  height: 3.0rem;
+  margin: 0 0.8rem;
 }
 .section_chg_list.chg_list_acc li {
   margin-top: 1.0rem;
@@ -89,6 +99,16 @@
 }
 .section_chg_list.chg_list_acc + .wrap_notice {
   margin-top: 4.2rem;
+}
+.section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey .txt_bank {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+.section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey .txt_acc {
+  padding-top: 0.6rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
 }
 
 /* [SET] - 하나머니 관리 */
