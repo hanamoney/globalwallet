@@ -58,7 +58,7 @@
           <div class="wrap_chk">
             <span class="chk_round">
               <input type="checkbox" id="chk2" name="chk2" />
-              <label for="chk2" id="test">
+              <label for="chk2" id="test" onclick="test()">
                 <span class="label">최대 <span>USD</span> <em class="txt_num">1,600.00</em> 채우기</span>
               </label>
             </span>
@@ -74,7 +74,7 @@
           <!-- // 정상적인 금액 입력 시 노출 -->
 
           <div class="wrap_btn_full">
-            <button type="button" class="btn_full_primary" disabled>충전하기</button>
+            <button type="button" class="btn_full_primary">충전하기</button>
           </div>
         </div>
         <!-- // 하단고정 영역 -->
@@ -118,6 +118,9 @@
         $('.inp').val('1,600.00').closest('.box_inp').addClass('hasVal');
       });
     });
+    function test() {
+      console.log('label');
+    }
   </script>
 </body>
 </html>
