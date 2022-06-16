@@ -93,12 +93,28 @@
 }
 .section_chg_list.chg_list_acc .wrap_link_list a.wrap_box {
   margin-bottom: 0;
+  border-radius: 1.4rem;
 }
 .section_chg_list.chg_list_acc .txt_bank:first-child {
   padding-top: 0;
 }
 .section_chg_list.chg_list_acc + .wrap_notice {
   margin-top: 4.2rem;
+}
+.section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey {
+  padding-left: 5.8rem;
+}
+.section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 1.8rem;
+  left: 2.0rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 0.8rem;
+  background: #fff url('../../images/hmui/logo_hana.png') no-repeat 50%;
+  background-size: 100%;
 }
 .section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey .txt_bank {
   font-size: 1.8rem;
@@ -545,7 +561,7 @@
   display: inline-block;
   position: absolute;
   right: 3.2rem;
-  bottom: 5.6rem;
+  top: 9.9rem;
   width: 5.0rem;
   height: 8.0rem;
   background: url('../../images/global/img_card_travlog.png') no-repeat 50%;

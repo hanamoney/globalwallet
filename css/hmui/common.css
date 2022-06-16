@@ -575,23 +575,6 @@ section[data-roll] {
   background-size: 100%;
   background-position: 50%;
 }
-.logo_hanamoney {
-  display: inline-block;
-  position: absolute;
-  top: 1.6rem;
-  right: 2.4rem;
-  width: 8.6rem;
-  height: 1.8rem;
-  background: url('../../images/hmui/logo_hanamoney.png') no-repeat 50%;
-  background-size: 100%;
-}
-.logo_hanamoney_box {
-  display: inline-block;
-  width: 5.6rem;
-  height: 5.6rem;
-  background: url('../../images/hmui/logo_hanamoney_box.png') no-repeat 50%;
-  background-size: 100%;
-}
 .btn_ico_prev {
   background-image: url('../../images/hmui/btn_back.png');
 }
@@ -4184,6 +4167,30 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   background-image: url('../../images/hmui/character/visual_atm.png');
 }
 /* 로고 이미지 */
+.logo_hana {
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  background: url('../../images/hmui/logo_hana.png') no-repeat 50%;
+  background-size: 100%;
+}
+.logo_hanamoney {
+  display: inline-block;
+  position: absolute;
+  top: 1.6rem;
+  right: 2.4rem;
+  width: 8.6rem;
+  height: 1.8rem;
+  background: url('../../images/hmui/logo_hanamoney.png') no-repeat 50%;
+  background-size: 100%;
+}
+.logo_hanamoney_box {
+  display: inline-block;
+  width: 5.6rem;
+  height: 5.6rem;
+  background: url('../../images/hmui/logo_hanamoney_box.png') no-repeat 50%;
+  background-size: 100%;
+}
 .img_logo_amazone {
   display: inline-block;
   width: 6.0rem;
