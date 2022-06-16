@@ -2581,6 +2581,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   box-shadow: 0px 4px 8px rgba(255, 108, 151, 0.35);
   font-size: 1.3rem;
   line-height: 1.8rem;
+  white-space: nowrap;
 }
 .tooltip_bubble.type_pink .bubble_caret {
   width: 1.4rem;
