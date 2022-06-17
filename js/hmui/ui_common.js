@@ -167,10 +167,7 @@ var _iOSInpFixdPos = function() {
       var $el = $(el);
       var pos = -(height - viewport.height) + 'px';
       
-      $el.css('transform', 'translateY(' +  pos + ')').addClass('transition');
-      setTimeout(function(){
-        $(el).removeClass('transition');
-      },300);
+      $el.css('transform', 'translateY(' +  pos + ')');
     });
 
     // keyboard 닫힘 시 input focus out
@@ -194,6 +191,26 @@ var iOSKeyBoardHeight = function(keyboardHeight) {
       $(el).css('transform', 'translateY(' +  pos + ')');
     });
   }
+}
+
+/**
+  * @name iOSKeyBoardHide()
+  * @description // iOS 키패드 오픈시 하단고정 영역 키패드 닫힘 시 (iOS12이하)
+  */
+var iOSKeyBoardHide = function() {
+  if ($('.section_bottom_fixed').length && iosV() < 13 ) {
+    _resetInpWithFixedBtn();
+  }
+}
+
+var _resetInpWithFixedBtn = function () {
+  $('.section_bottom_fixed > div').each(function(idx, el) {
+    $(el).css('transform', '');
+  });
+  $('.inp').each(function(){
+    $(this).blur();
+    $(this).closest('.box_inp').removeClass('show_btn');
+  });
 }
 
 /**
@@ -221,21 +238,24 @@ var _inpControl = function() {
     $(el).on('focus', function(e){
       var $thisInp = $(this);
       _inpChkVal($thisInp);
-      // if (isiOS) iOSKeyBoardHeight(251);
     });
 
     $(el).on('blur', function(e){
-      keepFocus = false;
-      setTimeout(function(){
-        var $thisInp = $(this);
-        if ( !keepFocus && $('.section_bottom_fixed').find('.transition').length ) {
-          console.log('blur');
-          $thisInp.closest('.box_inp').removeClass('show_btn');
-          _resetFixedBtnPos();
-          keepFocus = false;
-        }
-      }.bind($(el)), 0);
+      console.log('blur');
     });
+
+    // $(el).on('blur', function(e){
+    //   keepFocus = false;
+    //   setTimeout(function(){
+    //     var $thisInp = $(this);
+    //     if ( !keepFocus ) {
+    //       console.log('blur');
+    //       $thisInp.closest('.box_inp').removeClass('show_btn');
+    //       _resetFixedBtnPos();
+    //       keepFocus = false;
+    //     }
+    //   }.bind($(el)), 0);
+    // });
 
     $(el).bind('keyup change',function(e){
       // console.log('change');
@@ -245,18 +265,18 @@ var _inpControl = function() {
       _inpChkVal($(this));
     });
   
+    // 인풋 claer 버튼 클릭시 - keep focus
     $(el).closest('.box_inp').find('.btn_ico_clear').bind('click', function(e) {
       e.preventDefault();
       keepFocus = true;
-      // console.log('clear');
+      console.log('clear');
       $(this).siblings('.inp').val('').focus().click();
       $(this).closest('.box_inp').removeClass('show_btn');
     });
   
-    // 하단고정영역 벼튼클릭시
+    // 하단고정영역 벼튼클릭시(CTA 제외) - keep focus
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(e) {
       e.preventDefault();
-      if ($('.section_bottom_fixed').find('.transition').length) return;
       console.log('button');
       keepFocus = true;
     });
@@ -264,7 +284,7 @@ var _inpControl = function() {
     // 하단고정영역 체크박스 클릭시 - focus out
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
       e.preventDefault();
-      // console.log('check');
+      console.log('check');
       keepFocus = false;
       var check = $(this).siblings('input');
       if ( !check.is(':checked') ) {
@@ -278,33 +298,24 @@ var _inpControl = function() {
   });
 
   // 인풋 및 하단고정영역 외 클릭 시 인풋 기본으로 전환
-  if ( $('.section_bottom_fixed').length ){
-    $(window).on('touchstart', function(e) {
-      var el = e.target.classList;
-      var checkParent = $(e.target).closest('.section_bottom_fixed').length;
-      if (
-        inp.is(':focus') 
-        && !el.contains('inp') 
-        && !el.contains('btn_ico_clear') 
-        && !checkParent 
-        || (checkParent && !$(e.target).parents('.wrap_btn_box').length && !$(e.target).parents('.wrap_chk').length ) ) {
-          inp.each(function(){
-            $(this).blur();
-            $(this).closest('.box_inp').removeClass('show_btn');
-          });
-          _resetFixedBtnPos();
-      }
-    });
-  }
-
-  function _resetFixedBtnPos() {
-    $('.section_bottom_fixed > div').each(function(idx, el) {
-      $(el).css('transform', '').addClass('transition');
-      setTimeout(function(){
-        $(el).removeClass('transition');
-      },300);
-    });
-  }
+  // if ( $('.section_bottom_fixed').length ){
+  //   $(window).on('touchstart', function(e) {
+  //     var el = e.target.classList;
+  //     var checkParent = $(e.target).closest('.section_bottom_fixed').length;
+  //     if (
+  //       inp.is(':focus') 
+  //       && !el.contains('inp') 
+  //       && !el.contains('btn_ico_clear') 
+  //       && !checkParent 
+  //       || (checkParent && !$(e.target).parents('.wrap_btn_box').length && !$(e.target).parents('.wrap_chk').length ) ) {
+  //         inp.each(function(){
+  //           $(this).blur();
+  //           $(this).closest('.box_inp').removeClass('show_btn');
+  //         });
+  //         _resetFixedBtnPos();
+  //     }
+  //   });
+  // }
 };
 
 /**
