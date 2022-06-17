@@ -245,7 +245,7 @@ var _inpControl = function() {
     $(el).closest('.box_inp').find('.btn_ico_clear').bind('click', function(e) {
       e.preventDefault();
       keepFocus = true;
-      // console.log('click');
+      // console.log('clear');
       $(this).siblings('.inp').val('').focus().click();
       $(this).closest('.box_inp').removeClass('show_btn');
     });
@@ -253,6 +253,7 @@ var _inpControl = function() {
     // 하단고정영역 벼튼클릭시
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(e) {
       e.preventDefault();
+      console.log('button');
       keepFocus = true;
     });
   
