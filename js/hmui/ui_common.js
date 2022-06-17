@@ -167,7 +167,10 @@ var _iOSInpFixdPos = function() {
       var $el = $(el);
       var pos = -(height - viewport.height) + 'px';
       
-      $el.css('transform', 'translateY(' +  pos + ')');
+      $el.css('transform', 'translateY(' +  pos + ')').addClass('transition');
+      setTimeout(function(){
+        $(el).removeClass('transition');
+      },300);
     });
 
     // keyboard 닫힘 시 input focus out
@@ -222,13 +225,16 @@ var _inpControl = function() {
     });
 
     $(el).on('blur', function(e){
-      // console.log('blur');
+      console.log('blur');
       keepFocus = false;
       setTimeout(function(){
         var $thisInp = $(this);
         if ( !keepFocus ) {
           $thisInp.closest('.box_inp').removeClass('show_btn');
-          _resetFixedBtnPos();
+          if (isiOS) {
+            _resetFixedBtnPos();
+            
+          }
           keepFocus = false;
         }
       }.bind($(el)), 0);
@@ -260,6 +266,10 @@ var _inpControl = function() {
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
       e.preventDefault();
       // console.log('check');
+      if ($(this).closest('.wrap_chk').hasClass('transition')) {
+        keepFocus = true;
+        return;
+      }
       keepFocus = false;
       var check = $(this).siblings('input');
       if ( !check.is(':checked') ) {
@@ -294,7 +304,10 @@ var _inpControl = function() {
 
   function _resetFixedBtnPos() {
     $('.section_bottom_fixed > div').each(function(idx, el) {
-      $(el).css('transform', '');
+      $(el).css('transform', '').addClass('transition');
+      setTimeout(function(){
+        $(el).removeClass('transition');
+      },300);
     });
   }
 };
