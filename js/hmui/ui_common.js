@@ -1259,5 +1259,5 @@ var fnLayerScreenShot2 = (function() {
   */
 var disableUserScalable = function() {
   var $viewport = $('head meta[name="viewport"]');
-  $viewport.attr('content', 'width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no');
+  $viewport.attr('content', 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no');
 }
