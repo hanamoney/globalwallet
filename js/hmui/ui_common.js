@@ -298,6 +298,7 @@ var _inpControl = function() {
 
   // 인풋 및 하단고정영역 외 클릭 시 - focus out
   $(window).on('touchstart', function(e) {
+    e.stopPropagation();
     console.log(e.target);
     var el = e.target.classList;
     if (
