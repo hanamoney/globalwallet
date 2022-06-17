@@ -167,7 +167,10 @@ var _iOSInpFixdPos = function() {
       var $el = $(el);
       var pos = -(height - viewport.height) + 'px';
       
-      $el.css('transform', 'translateY(' +  pos + ')');
+      $el.css('transform', 'translateY(' +  pos + ')').addClass('transition');
+      setTimeout(function(){
+        $(el).removeClass('transition');
+      },300);
     });
 
     // keyboard 닫힘 시 input focus out
@@ -225,7 +228,7 @@ var _inpControl = function() {
       keepFocus = false;
       setTimeout(function(){
         var $thisInp = $(this);
-        if ( !keepFocus ) {
+        if ( !keepFocus && $('.section_bottom_fixed').find('.transition').length ) {
           console.log('blur');
           $thisInp.closest('.box_inp').removeClass('show_btn');
           _resetFixedBtnPos();
@@ -253,6 +256,7 @@ var _inpControl = function() {
     // 하단고정영역 벼튼클릭시
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(e) {
       e.preventDefault();
+      if ($('.section_bottom_fixed').find('.transition').length) return;
       console.log('button');
       keepFocus = true;
     });
@@ -295,7 +299,10 @@ var _inpControl = function() {
 
   function _resetFixedBtnPos() {
     $('.section_bottom_fixed > div').each(function(idx, el) {
-      $(el).css('transform', '');
+      $(el).css('transform', '').addClass('transition');
+      setTimeout(function(){
+        $(el).removeClass('transition');
+      },300);
     });
   }
 };
