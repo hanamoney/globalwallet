@@ -297,18 +297,18 @@ var _inpControl = function() {
   });
 
   // 인풋 및 하단고정영역 외 클릭 시 - focus out
-  $(window).on('touchstart', function(e) {
-    e.stopPropagation();
-    console.log(e.target);
-    var el = e.target.classList;
-    if (
-      inp.is(':focus') 
-      && !el.contains('inp') 
-      && !el.contains('btn_ico_clear') 
-      && ($(e.target).closest('.section_bottom_fixed').length && !$(e.target).parents('.wrap_btn_box').length && !$(e.target).parents('.wrap_chk').length) ) {
-        _resetInpWithFixedBtn();
-    }
-  });
+  // $(window).on('touchstart', function(e) {
+  //   e.stopPropagation();
+  //   console.log(e.target);
+  //   var el = e.target.classList;
+  //   if (
+  //     inp.is(':focus') 
+  //     && !el.contains('inp') 
+  //     && !el.contains('btn_ico_clear') 
+  //     && ($(e.target).closest('.section_bottom_fixed').length && !$(e.target).parents('.wrap_btn_box').length && !$(e.target).parents('.wrap_chk').length) ) {
+  //       _resetInpWithFixedBtn();
+  //   }
+  // });
 };
 
 /**
