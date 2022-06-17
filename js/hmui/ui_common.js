@@ -174,6 +174,7 @@ var _iOSInpFixdPos = function() {
     if ( height - viewport.height == 0 ) {
       $('.inp').each(function(){
         $(this).blur();
+        $(this).closest('.box_inp').removeClass('show_btn');
       });
     }
   }
