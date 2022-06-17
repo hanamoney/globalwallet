@@ -306,7 +306,7 @@ var _inpControl = function() {
       inp.is(':focus') 
       && !el.contains('inp') 
       && !el.contains('btn_ico_clear') 
-      || ($(e.target).closest('.section_bottom_fixed').length && !$(e.target).parents('.wrap_btn_box').length && !$(e.target).parents('.wrap_chk').length) ) {
+      && (!$(e.target).parents('.section_bottom_fixed').length) ){
         _resetInpWithFixedBtn();
     }
   });
