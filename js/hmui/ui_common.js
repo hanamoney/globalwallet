@@ -259,7 +259,7 @@ var _inpControl = function() {
     // });
 
     $(el).bind('keyup change',function(e){
-      // console.log('change');
+      console.log('change');
       keepFocus = true;
       $(this).focus().click();
       $(this).closest('.box_inp').addClass('show_btn');
@@ -298,25 +298,17 @@ var _inpControl = function() {
     });
   });
 
-  // 인풋 및 하단고정영역 외 클릭 시 인풋 기본으로 전환
-  // if ( $('.section_bottom_fixed').length ){
-  //   $(window).on('touchstart', function(e) {
-  //     var el = e.target.classList;
-  //     var checkParent = $(e.target).closest('.section_bottom_fixed').length;
-  //     if (
-  //       inp.is(':focus') 
-  //       && !el.contains('inp') 
-  //       && !el.contains('btn_ico_clear') 
-  //       && !checkParent 
-  //       || (checkParent && !$(e.target).parents('.wrap_btn_box').length && !$(e.target).parents('.wrap_chk').length ) ) {
-  //         inp.each(function(){
-  //           $(this).blur();
-  //           $(this).closest('.box_inp').removeClass('show_btn');
-  //         });
-  //         _resetFixedBtnPos();
-  //     }
-  //   });
-  // }
+  // 인풋 및 하단고정영역 외 클릭 시 - focus out
+  $(window).on('touchstart', function(e) {
+    var el = e.target.classList;
+    if (
+      inp.is(':focus') 
+      && !el.contains('inp') 
+      && !el.contains('btn_ico_clear') 
+      && ($(e.target).closest('.section_bottom_fixed').length && !$(e.target).parents('.wrap_btn_box').length && !$(e.target).parents('.wrap_chk').length) ) {
+        _resetInpWithFixedBtn();
+    }
+  });
 };
 
 /**
