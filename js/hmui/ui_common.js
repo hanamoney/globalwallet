@@ -566,8 +566,8 @@ var _tooltip = function() {
   });
 
   $('.fnCloseTooltip').on('click', function(){
-    var $tooltip = $(this).closest('.wrap_tooltip');
-    $tooltip.removeClass('show');
+    var $closeTooltip = $(this).closest('.wrap_tooltip');
+    $closeTooltip.removeClass('show');
     $focusEl.focus();
   });
 
