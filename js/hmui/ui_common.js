@@ -572,7 +572,7 @@ var _tooltip = function() {
   });
 
   // 툴팁 외 영역 클릭 시 툴팁 닫기
-  $(window).on('touchend', function(e) {
+  $(window).on('touchstart', function(e) {
     if ($('.wrap_tooltip.show').length && !$(e.target).hasClass('.wrap_tooltip') && !$(e.target).parents('.wrap_tooltip').length ) {
       $('.wrap_tooltip').removeClass('show');
       $focusEl.focus();
