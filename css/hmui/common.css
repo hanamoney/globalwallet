@@ -1445,10 +1445,9 @@ button.btn_secondery {
   right: 0;
   left: 0;
   z-index: 100;
+  pointer-events: none;
 }
-.section_bottom_fixed > .wrap_bubble .tooltip_bubble .bubble_caret {
 
-}
 /* dropdown */
 .wrap_dropdown {
   position: relative;
