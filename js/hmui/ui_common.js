@@ -307,7 +307,10 @@ var _inpControl = function() {
       && !el.contains('inp') 
       && !el.contains('btn_ico_clear') 
       && (!$(e.target).parents('.section_bottom_fixed').length) ){
-        _resetInpWithFixedBtn();
+        inp.each(function(){
+          $(this).blur();
+          $(this).closest('.box_inp').removeClass('show_btn');
+        });
     }
   });
 };
