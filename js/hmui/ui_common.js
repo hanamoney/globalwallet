@@ -559,9 +559,17 @@ var _tooltip = function() {
 
   $('.fnCloseTooltip').on('click', function(){
     var $tooltip = $(this).closest('.wrap_tooltip');
-
     $tooltip.removeClass('show');
     $focusEl.focus();
+  });
+
+  // 툴팁 외 영역 클릭 시 툴팁 닫기
+  $(window).on('touchstart', function(e) {
+    if ($('.wrap_tooltip.show').length && !$(e.target).hasClass('.wrap_tooltip')) {
+      $('.wrap_tooltip').removeClass('show');
+      $focusEl.focus();
+      console.log($focusEl);
+    }
   });
 };
 
