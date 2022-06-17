@@ -225,11 +225,11 @@ var _inpControl = function() {
     });
 
     $(el).on('blur', function(e){
-      console.log('blur');
       keepFocus = false;
       setTimeout(function(){
         var $thisInp = $(this);
         if ( !keepFocus ) {
+          console.log('blur');
           $thisInp.closest('.box_inp').removeClass('show_btn');
           if (isiOS) {
             _resetFixedBtnPos();
@@ -267,6 +267,7 @@ var _inpControl = function() {
       e.preventDefault();
       // console.log('check');
       if ($(this).closest('.wrap_chk').hasClass('transition')) {
+        console.log('transition');
         keepFocus = true;
         return;
       }
