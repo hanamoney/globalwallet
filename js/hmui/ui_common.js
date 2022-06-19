@@ -30,7 +30,7 @@ var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
-  if ( (iosV() >= 13) && $('.inp').length && $('.section_bottom_fixed').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
+  if ( (iosV() >= 13) && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
   if ( $('.wrap_tab_btn').length ) { _tabContents(); } // 탭 
@@ -184,7 +184,7 @@ var _iOSInpFixdPos = function() {
   */
 var iOSKeyBoardHeight = function(keyboardHeight) {
   if ($('.section_bottom_fixed').length && iosV() < 13 ) {
-    $('.section_bottom_fixed > div').each(function(idx, el) {
+    $('.contents').find('.section_bottom_fixed > div').each(function(idx, el) {
       var pos =  -keyboardHeight + 'px';
       $(el).css('transform', 'translateY(' +  pos + ')');
     });
@@ -196,7 +196,7 @@ var iOSKeyBoardHeight = function(keyboardHeight) {
   * @description // iOS 키패드 오픈시 하단고정 영역 키패드 닫힘 시 (iOS12이하)
   */
 var iOSKeyBoardHide = function() {
-  if ($('.section_bottom_fixed').length && iosV() < 13 ) {
+  if ( iosV() < 13 ) {
     _resetInpWithFixedBtn();
   }
 }
@@ -240,21 +240,15 @@ var _inpControl = function() {
     });
 
     $(el).on('blur', function(e){
-      console.log('blur');
+      keepFocus = false;
+      setTimeout(function(){
+        var $thisInp = $(this);
+        if ( !keepFocus ) {
+          $thisInp.closest('.box_inp').removeClass('show_btn');
+          keepFocus = false;
+        }
+      }.bind($(el)), 0);
     });
-
-    // $(el).on('blur', function(e){
-    //   keepFocus = false;
-    //   setTimeout(function(){
-    //     var $thisInp = $(this);
-    //     if ( !keepFocus ) {
-    //       console.log('blur');
-    //       $thisInp.closest('.box_inp').removeClass('show_btn');
-    //       _resetFixedBtnPos();
-    //       keepFocus = false;
-    //     }
-    //   }.bind($(el)), 0);
-    // });
 
     $(el).bind('keyup change',function(e){
       // console.log('change');
@@ -297,20 +291,16 @@ var _inpControl = function() {
   });
 
   // 인풋 및 하단고정영역 외 클릭 시 - focus out
-  $(window).on('touchstart', function(e) {
+  $('body').on('click', function(e) {
     e.stopPropagation();
-    // console.log(e.target);
     var el = e.target.classList;
-    // var checkParent = $(e.target).closest('.section_bottom_fixed').length;
     if (
       inp.is(':focus') 
       && !el.contains('inp') 
       && !el.contains('btn_ico_clear') 
-      && (!$(e.target).parents('.section_bottom_fixed').length) ){
-        inp.each(function(){
-          $(this).blur();
-          $(this).closest('.box_inp').removeClass('show_btn');
-        });
+      && !$(e.target).parents('.wrap_btn_box').parent('.section_bottom_fixed').length
+      && !$(e.target).parents('.wrap_chk').parent('.section_bottom_fixed').length )  {
+        _resetInpWithFixedBtn();
     }
   });
 };
