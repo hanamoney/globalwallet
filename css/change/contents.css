@@ -8,6 +8,18 @@
 .section_top_info.pex_hanamoney {
   background: linear-gradient(143.05deg, #5CE4C9 -84.85%, #FFE9DD 132.52%);
 }
+.section_top_info.pex_hanamoney.type_nopoint {
+  background: #F2F6F6;
+}
+.section_top_info.pex_hanamoney.type_nopoint .total_amount::after {
+  content: '';
+  display: block;
+  width: 7.2rem;
+  height: 7.2rem;
+  margin: 1.0rem auto 0;
+  background: url('../../images/hmui/bg_empty.png') no-repeat 50%;
+  background-size: 100%;
+}
 .section_list_point {
   position: relative;
   padding-top: 1.6rem;
@@ -112,6 +124,11 @@
   height: 3.1rem;
   background: url('../../images/change/img_coin.png') no-repeat center;
   background-size: 100%;
+}
+.wrap_pex_logo .logo_hanamoney_pex:first-child::after {
+  right: auto;
+  left: -2.8rem;
+  transform: scaleX(-1);
 }
 .logo_hanamoney_pex {
   position: relative;

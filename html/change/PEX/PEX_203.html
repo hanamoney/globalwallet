@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>PEX_103</title>
+
+  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/change/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+
+    <!-- // header -->
+
+    <!-- // contents-->
+
+    <!-- 신청팝업 -->
+    <div id="popupId" class="wrap_layer type_full">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">포인트 전환 신청</h2>
+        </div>
+
+        <div class="content_layer type_flex">
+          <div class="wrap_tit">
+            <h2 class="tit">
+              <strong><em>10,200</em> 하나머니를</strong><br>
+              <span>네이버페이 포인트</span>로<br>
+              전환할 수 있어요.
+            </h2>
+          </div>
+
+          <div class="section_form">
+            <div class="wrap_inp">
+              <div class="box_inp hasBtn"><!-- 5a: 인라인 알럿 시 err 클래스추가 -->
+                <input type="tel" inputmode="numeric" class="inp" title="전환 신청 포인트" placeholder="전환 신청 포인트" value="" autocomplete="off" />
+                <button type="button" class="btn_round btn_primary">전액</button>
+              </div>
+              <!-- <p class="txt_inp_guide type_noico">전환가능 포인트가 부족합니다.</p> -->
+            </div>
+
+            <div class="wrap_inp">
+              <div class="box_inp hasBtn err"><!-- 5a: 인라인 알럿 시 err 클래스추가 -->
+                <input type="tel" inputmode="numeric" class="inp" title="전환 신청 포인트" placeholder="전환 신청 포인트" value="" autocomplete="off" />
+                <button type="button" class="btn_round btn_primary">전액</button>
+              </div>
+              <p class="txt_inp_guide type_noico">전환가능 포인트가 부족합니다.</p>
+            </div>
+
+            <!-- 네이버 복수ID -->
+            <div class="wrap_inp">
+              <div class="head_form">
+                <p class="tit_form">조회기간</p>
+              </div>
+              <div class="box_inp">
+                <select class="sel">
+                  <option value="">cr******(16,345P)</option>
+                  <option value="">cr******(500P)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="wrap_btn type_full">
+              <button type="button" id="" class="btn_box_m btn_primary rounded">전환하기</button>
+            </div>
+          </div>
+    
+          <div class="wrap_notice">
+            <h4 class="tit_notice"><span class="ico_caution"></span>유의사항</h4>
+            <!-- L포인트 -->
+            <ul class="list_txt">
+              <li>포인트는 1:1 비율로 전환됩니다.<br>(L.POINT 100P = 100 하나머니)</li>
+              <li>L.POINT는 100P 단위로 전환되며, 월 최대 20만P까지 전환 가능합니다.</li>
+              <li class="txt_point_2">선물/충전/롯데상품권/일부 제휴사 전환을 통해 적립된 L.POINT는 하나머니로 전환이 불가합니다.</li>
+              <li><p class="txt_point_2">전환 신청 후 취소할 수 없으며, 전환된 하나머니의 운영방침은 하나머니 이용약관에 따릅니다.</p>
+                <p>(전환된 하나머니는 [송금], [ATM출금], [하나톡 보내요] 서비스 이용 불가)</p></li>
+              <li>전환된 하나머니의 유효기간은 전환일로부터 60개월입니다.</li>
+              <li>L.POINT 대한 자세한 사항은 <a href="http://www.lpoint.com" target="_blank" class="btn_txt txt_black">L.POINT</a>에서 확인해주세요.</li>
+            </ul>
+            <!-- // L포인트 -->
+
+            <!-- OK캐쉬백 -->
+            <ul class="list_txt">
+              <li>포인트는 1:1 비율로 전환됩니다.<br>(OK캐쉬백 100P = 100 하나머니)</li>
+              <li>OK캐쉬백 포인트는 1P 단위로 전환되며, 일 최대 5만P/월 최대 10만P/연 최대 100만P까지 전환 가능합니다.(최소 100P부터 전환 가능)</li>
+              <li><p class="txt_point_2">전환 신청 후 취소할 수 없으며, 전환된 하나머니의 운영방침은 하나머니 이용약관에 따릅니다.</p></li>
+              <li>전환된 하나머니의 유효기간은 전환일로부터 60개월입니다.</li>
+              <li>OK캐쉬백 포인트에 대한 자세한 사항은 <a href="http://www.okcashbag.com" target="_blank" class="btn_txt txt_black">OK캐쉬백</a>에서 확인해주세요.</li>
+            </ul>
+            <!-- // OK캐쉬백 -->
+
+            <!-- 카카오페이 머니 -->
+            <ul class="list_txt">
+              <li>포인트는 1:1 비율로 전환됩니다.<br>(카카오페이 머니 100원 = 100 하나머니)</li>
+              <li>카카오페이 머니는 10원 단위로 전환되며, 월 최대 10만원까지 전환 가능합니다.</li>
+              <li><p class="txt_point_2">전환 신청 후 취소할 수 없으며, 전환된 하나머니의 운영방침은 하나머니 이용약관에 따릅니다.</p></li>
+              <li>전환된 하나머니의 유효기간은 전환일로부터 60개월입니다.</li>
+              <li>카카오페이 머니에 대한 자세한 사항은 <a href="http://www.kakaopay.com" target="_blank" class="btn_txt txt_black">카카오페이</a>에서 확인해주세요.</li>
+            </ul>
+            <!-- // 카카오페이 머니 -->
+
+            <!-- 쿠팡 -->
+            <ul class="list_txt">
+              <li>포인트는 1:1 비율로 전환됩니다.<br>(쿠팡캐시 100원 = 100 하나머니)</li>
+              <li>쿠팡캐시는 1원 단위로 전환되며, 월 최대 10만원까지 전환 가능합니다.</li>
+              <li class="txt_point_2">쿠팡 기프트카드 구매 및 선물하기로 전환한 쿠팡캐시는 하나머니로 전환이 불가합니다.</li>
+              <li><p class="txt_point_2">전환 신청 후 취소할 수 없으며, 전환된 하나머니의 운영방침은 하나머니 이용약관에 따릅니다.</p>
+                <p>(전환된 하나머니는 [송금], [ATM출금], [하나톡 보내요] 서비스 이용불가)</p></li>
+              <li>전환된 하나머니의 유효기간은 전환일로부터 60개월입니다.</li>
+              <li>쿠팡캐시에 대한 자세한 사항은 <a href="http://www.coupang.com" target="_blank" class="btn_txt txt_black">쿠팡</a>에서 확인해주세요.</li>
+            </ul>
+            <!-- // 쿠팡 -->
+
+            <!-- 핀크머니 -->
+            <ul class="list_txt">
+              <li>포인트는 1:1 비율로 전환됩니다.<br>(핀크머니 100머니 = 100 하나머니)</li>
+              <li>핀크머니는 1머니 단위로 전환되며, 월 최대 10만머니까지 전환 가능합니다.</li>
+              <li><p class="txt_point_2">전환 신청 후 취소할 수 없으며, 전환된 하나머니의 운영방침은 하나머니 이용약관에 따릅니다.</p></li>
+              <li>전환된 하나머니의 유효기간은 전환일로부터 60개월입니다.</li>
+              <li>핀크머니에 대한 자세한 사항은 <a href="http://www.finnq.com" target="_blank" class="btn_txt txt_black">핀크</a>에서 확인해주세요.</li>
+            </ul>
+            <!-- // 핀크머니 -->
+
+            <!-- S-OIL 포인트 -->
+            <ul class="list_txt">
+              <li>포인트는 1:1 비율로 전환됩니다.<br>(S-OIL 보너스포인트 100P = 100 하나머니)</li>
+              <li>S-OIL 보너스포인트는 10P 단위로 전환되며, 월 최대 10만P까지 전환 가능합니다.</li>
+              <li><p class="txt_point_2">전환 신청 후 취소할 수 없으며, 전환된 하나머니의 운영방침은 하나머니 이용약관에 따릅니다.</p></li>
+              <li>전환된 하나머니의 유효기간은 전환일로부터 60개월입니다.</li>
+              <li>S-OIL 보너스포인트에 대한 자세한 사항은 <a href="http://www.s-oilbonus.com" target="_blank" class="btn_txt txt_black">S-OIL 보너스포인트</a>에서 확인해주세요.</li>
+            </ul>
+            <!-- // S-OIL 포인트 -->
+
+            <!-- 스마일캐시 -->
+            <ul class="list_txt">
+              <li>포인트는 1:1 비율로 전환됩니다.<br>(스마일캐시 100캐시 = 100 하나머니)</li>
+              <li>스마일캐시는 10캐시 단위로 전환되며, 일 최대 5회/월 최대 30만캐시까지 전환 가능합니다.</li>
+              <li class="txt_point_2">이벤트성 스마일캐시는 하나머니로 전환이 불가합니다.</li>
+              <li><p class="txt_point_2">전환 신청 후 취소할 수 없으며, 전환된 하나머니의 운영방침은 하나머니 이용약관에 따릅니다.</p></li>
+              <li>전환된 하나머니의 유효기간은 전환일로부터 60개월입니다.</li>
+              <li>스마일캐시에 대한 자세한 사항은 <a href="http://www.mysmilepay.com" target="_blank" class="btn_txt txt_black">스마일페이</a>에서 확인해주세요.</li>
+            </ul>
+            <!-- // 스마일캐시 -->
+
+            <!-- BC TOP 포인트 -->
+            <ul class="list_txt">
+              <li>포인트는 1:1 비율로 전환됩니다.<br>(BC TOP포인트 100P = 100 하나머니)</li>
+              <li>BC TOP포인트는 1P 단위로 전환되며, 월 최대 10만P까지 전환 가능합니다.</li>
+              <li>BC TOP포인트는 하나카드에서 발급한 하나BC카드로 적립된 포인트에 한하여 전환 가능합니다.(타 카드로 적립된 BC TOP포인트는 제외)</li>
+              <li><p class="txt_point_2">전환 신청 후 취소할 수 없으며, 전환된 하나머니의 운영방침은 하나머니 이용약관에 따릅니다.</p></li>
+              <li>전환된 하나머니의 유효기간은 전환일로부터 60개월입니다.</li>
+              <li>BC TOP포인트에 대한 자세한 사항은 <a href="http://www.bccard.com" target="_blank" class="btn_txt txt_black">BC카드</a>에서 확인해주세요.</li>
+            </ul>
+            <!-- // BC TOP 포인트 -->
+  
+            <!-- 레일포인트 -->
+            <ul class="list_txt">
+              <li>포인트는 1:1 비율로 전환됩니다.<br>(레일포인트 100P = 100 하나머니)</li>
+              <li>레일포인트는 100P 단위로 전환되며, 월 최대 10만P까지 전환 가능합니다.</li>
+              <li><p class="txt_point_2">특정 카드사(국민, BC, 신한, 롯데)의 레일포인트 카드에 가입한 손님에 한해 포인트 교환이 가능합니다.</p></li>
+              <li><p class="txt_point_2">전환 신청 후 취소할 수 없으며, 전환된 하나머니의 운영방침은 하나머니 이용약관에 따릅니다.</p></li>
+              <li>전환된 하나머니의 유효기간은 전환일로부터 60개월입니다.</li>
+              <li>레일포인트에 대한 자세한 사항은 <a href="http://www.letskorail.com" target="_blank" class="btn_txt txt_black">레츠코레일</a>에서 확인해주세요.</li>
+            </ul>
+            <!-- // 레일포인트 -->
+
+            <!-- E1 오렌지 포인트 -->
+            <ul class="list_txt">
+              <li>포인트는 1:1 비율로 전환됩니다.<br>(E1 오렌지 포인트 100P = 100 하나머니)</li>
+              <li>E1 오렌지 포인트는 1P 단위로 전환되며, 비택시 회원은 월 최대 3만P, 택시회원은 월 최대 10만P까지 전환 가능합니다.</li>
+              <li><p class="txt_point_2">전환 신청 후 취소할 수 없으며, 전환된 하나머니의 운영방침은 하나머니 이용약관에 따릅니다.</p></li>
+              <li>전환된 하나머니의 유효기간은 전환일로부터 60개월입니다.</li>
+              <li>E1 오렌지 포인트에 대한 자세한 사항은 <a href="http://www.e1orangecard.com/default.aspx" target="_blank" class="btn_txt txt_black">E1 오렌지카드</a>에서 확인해주세요.</li>
+            </ul>
+            <!-- // E1 오렌지 포인트 -->
+
+            <!-- 원패스 -->
+            <ul class="list_txt">
+              <li>포인트는 1:1 비율로 전환됩니다.<br>(원코인 100원 = 100 하나머니)</li>
+              <li>원코인은 10원 단위로 전환되며, 일 10회/월 10만원까지 전환 가능합니다.</li>
+              <li>원코인을 하나머니로 전환하려면 원패스 앱이 설치되어 있어야 합니다.</li>
+              <li><p class="txt_point_2">전환 신청 후 취소할 수 없으며, 전환된 하나머니의 운영방침은 하나머니 이용약관에 따릅니다.</p></li>
+              <li>전환된 하나머니의 유효기간은 전환일로부터 60개월입니다.</li>
+              <li>원코인에 대한 자세한 사항은 <a href="https://www.dgbupay.com/dgtcs/hps/pages/main/main.do" target="_blank" class="btn_txt txt_black">원패스</a>에서 확인해주세요.</li>
+            </ul>
+            <!-- // BC TOP 포인트 -->
+
+            <div class="wrap_btn">
+              <button type="button" id="" class="btn_txt txt_point_1">개인정보 제3자 제공 동의 철회하기</button>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // 신청팝업 -->
+
+    <!-- 5b: 전환하기 컨펌창  -->
+    <div id="confirmId" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert_m"><strong class="txt_num">1,000</strong>하나머니를<br><span>네이버페이 포인트</span>로 모두 전환할까요?</p>
+          <p class="txt_alert txt_point_2">전환완료시 취소할 수 없습니다.</p>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_secondary fnClosePop">취소</button>
+            <button type="button" class="btn_full_primary fnClosePop">전환하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // 5b: 전환하기 컨펌창 -->
+
+    <!-- 6: 개인정보 제3자 제공동의 철회하기 컨펌창  -->
+    <div id="confirmId2" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert_m">포인트 전환 이용 동의를 철회하시겠어요?</p>
+          <p class="txt_alert">이용 동의 철회 시 포인트 조회 및 전환 서비스를 이용할 수 없습니다.</p>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_secondary fnClosePop">아니오</button>
+            <button type="button" class="btn_full_primary fnClosePop">예</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // 6: 개인정보 제3자 제공동의 철회하기 컨펌창 -->
+
+  </main>
+  
+  <script>
+    $(function(){
+      // 팝업호출 param 오픈할 팝업 id
+      fnOpenLayerPop('popupId');
+      // 팝업닫기 param 닫을 팝업 id
+      // fnCloseLayerPop('popupId')
+
+      $('.btn_box_m.btn_primary').on('click', function(){
+        // 전환하기 컨펌창 호출 param 오픈할 팝업 id
+        fnOpenLayerPop('confirmId');
+      });
+
+      $('.wrap_notice .wrap_btn .btn_txt').on('click', function(){
+        // 컨펌창 호출 param 오픈할 팝업 id
+        fnOpenLayerPop('confirmId2');
+      });
+    });
+  </script>
+</body>
+</html>
