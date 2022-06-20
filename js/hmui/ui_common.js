@@ -198,7 +198,7 @@ var iOSKeyBoardHeight = function(keyboardHeight) {
   * @description // iOS 키패드 오픈시 하단고정 영역 키패드 닫힘 시 (iOS12이하)
   */
 var iOSKeyBoardHide = function() {
-  if ( iosV() < 13 ) {
+  if ( $('.inp').length && iosV() < 13 ) {
     _resetInpWithFixedBtn();
   }
 }
