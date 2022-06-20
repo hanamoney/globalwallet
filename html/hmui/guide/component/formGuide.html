@@ -136,11 +136,11 @@
               <div class="head_form">
                 <p class="tit_form">label</p>
               </div>
-              <div class="box_inp">
-                <select class="sel">
-                  <option value="">option1</option>
-                  <option value="">option2</option>
-                </select>
+              <div class="box_sel">
+                <button type="button" class="sel">
+                  <span class="placeholder">선택해주세요</span>
+                  <span class="value">option1</span>
+                </button>
               </div>
             </div>
 
@@ -277,6 +277,32 @@
           </div>
         </section>
       </div>
+
+      <!-- popup -->
+    <div id="selectId" class="wrap_layer" data-dim="true">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer blind">선택</h2>
+        </div>
+        <div class="content_layer">
+          <div class="section_bottom_select">
+            <ul class="wrap_link_list">
+              <li>
+                <button type="button" class="fnOpt" data-option="">조회</button>
+              </li>
+              <li>
+                <button type="button" class="fnOpt" data-option="">조회</button>
+              </li>
+              <li>
+                <button type="button" class="fnOpt" data-option="">조회</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // popup -->
     </div>
   </main>
 
