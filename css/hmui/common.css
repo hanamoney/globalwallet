@@ -2026,7 +2026,26 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   -webkit-transform: scale(0);
   transform: scale(0);
   will-change: transform;
+  -webkit-animation: complete-animate 0.2s 0.2s ease-in-out forwards;
   animation: complete-animate 0.2s 0.2s ease-in-out forwards;
+}
+@-webkit-keyframes complete-animate {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  90% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  95% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 @keyframes complete-animate {
   0% {
@@ -3333,19 +3352,39 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   transform: rotate(0);
 }
 .list_benefit_label:not(.type_full) li.transform .flag_free {
+  -webkit-animation: freeLabel 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
   animation: freeLabel 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 .list_benefit_label:not(.type_full) li.transform:nth-child(2) .flag_free {
+  -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
 }
 .list_benefit_label:not(.type_full) li.transform:nth-child(3) .flag_free {
+  -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
 .list_benefit_label.type_full li.transform .flag_free {
+  -webkit-animation: freeLabelFull 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
   animation: freeLabelFull 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 [class^="tit_section"] + .list_benefit_label {
   margin-top: 3.0rem;
+}
+@-webkit-keyframes freeLabel {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) rotate(-38.87deg);
+    transform: scale(0) rotate(-38.87deg);
+  }
+  85% {
+    -webkit-transform: scale(1.1) rotate(-38.87deg);
+    transform: scale(1.1) rotate(-38.87deg);
+  }
+  100% { 
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(-38.87deg);
+    transform: scale(1) rotate(-38.87deg);
+  }  
 }
 @keyframes freeLabel {
   0% {
@@ -3361,6 +3400,22 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
     opacity: 1;
     -webkit-transform: scale(1) rotate(-38.87deg);
     transform: scale(1) rotate(-38.87deg);
+  }  
+}
+@-webkit-keyframes freeLabelFull {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  85% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% { 
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }  
 }
 @keyframes freeLabelFull {
@@ -3690,6 +3745,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   background-color: #f6f6f6;
   background: linear-gradient(110deg, #f6f6f6 8%, #fbfbfb 18%, #f6f6f6 33%);
   background-size: 200% 100%;
+  -webkit-animation: 1.5s skeleton linear infinite;
   animation: 1.5s skeleton linear infinite;
 }
 .skeletonLoading .filter_list span,
@@ -3700,6 +3756,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   background: linear-gradient(110deg, #f6f6f6 8%, #fbfbfb 18%, #f6f6f6 33%);
   background-size: 200% 100%;
   color: transparent;
+  -webkit-animation: 1.5s skeleton linear infinite;
   animation: 1.5s skeleton linear infinite;
   user-select: none;
 }

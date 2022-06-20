@@ -161,6 +161,7 @@
   transform: translateY(3rem);
 }
 .visual_usr_card.transform {
+  -webkit-animation: itemUp30 0.4s forwards;
   animation: itemUp30 0.4s forwards;
 }
 .img_card_travlog {
@@ -186,7 +187,20 @@
   transform: scaleX(-1);
 }
 .visual_usr_card.transform .img_shoppingbag {
+  -webkit-animation: shoppingbag-animate 6s ease-in-out infinite;
   animation: shoppingbag-animate 6s ease-in-out infinite;
+}
+@-webkit-keyframes shoppingbag-animate {
+  0% {
+    -webkit-transform: translateY(0) scaleX(-1);
+    transform: translateY(0) scaleX(-1); }
+  40% {
+    -webkit-transform: translateY(1.2rem) scaleX(-1);
+    transform: translateY(1.2rem) scaleX(-1); }
+  100% {
+    -webkit-transform: translateY(0) scaleX(-1); 
+    transform: translateY(0) scaleX(-1); 
+  }
 }
 @keyframes shoppingbag-animate {
   0% {
@@ -229,16 +243,19 @@
 }
 .visual_usr_character .img_character_aero {
   margin-left: -1.6vw;
+  -webkit-animation: itemUp10 0.6s forwards;
   animation: itemUp10 0.6s forwards;
 }
 .visual_usr_character .img_cloud1 {
   bottom: 5.8rem;
   left: 0;
+  -webkit-animation: cloudPop 0.3s forwards, cloud1 7s 0.3s ease-in-out infinite;
   animation: cloudPop 0.3s forwards, cloud1 7s 0.3s ease-in-out infinite;
 }
 .visual_usr_character .img_cloud2 {
   top: 4.9rem;
   right: 0;
+  -webkit-animation: cloudPop 0.4s forwards, cloud2 7s 0.8s ease-in-out infinite;
   animation: cloudPop 0.4s forwards, cloud2 7s 0.8s ease-in-out infinite;
 }
 .section_top_visual.join_complete + .wrap_item_benefit {
@@ -484,6 +501,7 @@
   will-change: transform;
   -webkit-transform-origin: bottom right;
   transform-origin: bottom right;
+  -webkit-animation: floating5 6s 0.8s ease-in-out infinite;
   animation: floating5 6s 0.8s ease-in-out infinite;
 }
 .wrap_moneybag_all ul {
@@ -627,6 +645,7 @@
   margin-left: 7.2rem;
 }
 .visual_gsp_overseas.transform .img_shoppingbag {
+  -webkit-animation: floating10 4s ease-in-out infinite;
   animation: floating10 4s ease-in-out infinite;
 }
 .visual_gsp_drone {
@@ -743,6 +762,7 @@
   background: url('../../images/global/bg_gsp2_cloud.png') no-repeat 50%;
   background-size: 19.4rem auto;
   background-position: 26.1vw 4.6rem;
+  -webkit-animation: itemUp30 0.4s forwards;
   animation: itemUp30 0.4s forwards;
 }
 .visual_gsp_card .img_drone_box {
@@ -751,7 +771,14 @@
   left: 50%;
   -webkit-transform: translateX(40%);
   transform: translateX(40%);
+  -webkit-animation: drone-float 6s 0.6s ease-in-out infinite;
   animation: drone-float 6s 0.6s ease-in-out infinite;
+}
+@-webkit-keyframes drone-float {
+  60% {
+    -webkit-transform: translateX(40%) translateY(1.5rem);
+    transform: translateX(40%) translateY(1.5rem);
+  }
 }
 @keyframes drone-float {
   60% {
@@ -776,6 +803,7 @@
   height: 2.9rem;
   background: url('../../images/hmui/character/visual_cloud2.png') no-repeat center;
   background-size: 100%;
+  -webkit-animation: floating10 6s ease-in-out infinite;
   animation: floating10 6s ease-in-out infinite;
 }
 .section_cont.about_travlog {
@@ -872,9 +900,11 @@
   margin-bottom: 0.6rem;
 }
 .section_cont.about_travlog .visual_gsp_travlog.transform {
+  -webkit-animation: itemUp30 0.4s forwards;
   animation: itemUp30 0.4s forwards;
 }
 .section_cont.about_travlog .visual_gsp_travlog.transform::before {
+  -webkit-animation: floatwithScale 6s 0.5s ease-in-out infinite;
   animation: floatwithScale 6s 0.5s ease-in-out infinite;
 }
 .section_cont.about_travlog > .txt_sub {
@@ -1133,6 +1163,7 @@
   transform: translateY(3.0rem);
 }
 .visual_gsp_atm.transform {
+  -webkit-animation: itemUp30 0.4s forwards;
   animation: itemUp30 0.4s forwards;
 }
 .gsp_travlog_info .atm_info {
@@ -1467,6 +1498,7 @@
   opacity: 1;
 }
 .wrap_vdb_list.transform li.empty::before {
+  -webkit-animation: scalePop11 0.2s cubic-bezier(0.24, 0, 0.5, 1) forwards;
   animation: scalePop11 0.2s cubic-bezier(0.24, 0, 0.5, 1) forwards;
 }
 .wrap_vdb_list li.empty .txt_amount {
@@ -2157,9 +2189,11 @@
 }
 .section_cont.guide_hanamoney_2 .utl_gift_store ul {
   margin-top: 1.2rem;
+  -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
 .section_cont.guide_hanamoney_2.transform .utl_gift_store ul {
+  -webkit-animation-play-state: running;
   animation-play-state: running;
 }
 .section_cont.guide_hanamoney_2 .utl_gift_store ul:first-child {
@@ -2375,6 +2409,7 @@
   background-size: 100%;
 }
 .section_cont.guide_hanamoney_6.transform::before {
+  -webkit-animation: scalePop 0.3s cubic-bezier(0.24, 0, 0.5, 1) forwards, floatwithScale 6s 0.5s ease-in-out infinite;
   animation: scalePop 0.3s cubic-bezier(0.24, 0, 0.5, 1) forwards, floatwithScale 6s 0.5s ease-in-out infinite;
 }
 .inapp .section_cont.guide_hanamoney_tit {
