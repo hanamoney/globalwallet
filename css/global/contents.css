@@ -157,6 +157,7 @@
   width: 24.4rem;
   height: 27.3rem;
   margin: 3.5rem auto 0;
+  -webkit-transform: translateY(3rem);
   transform: translateY(3rem);
 }
 .visual_usr_card.transform {
@@ -170,6 +171,7 @@
   border-radius: 0.8rem;
   background: url('../../images/global/img_card_travlog.png') no-repeat 50%;
   background-size: 100%;
+  -webkit-transform: rotate(-11.58deg);
   transform: rotate(-11.58deg);
   box-shadow: 6px 11px 14px rgba(0, 0, 0, 0.1);
 }
@@ -180,6 +182,7 @@
   position: absolute;
   top: 1.0rem;
   right: 0;
+  -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 .visual_usr_card.transform .img_shoppingbag {
@@ -187,10 +190,13 @@
 }
 @keyframes shoppingbag-animate {
   0% {
+    -webkit-transform: translateY(0) scaleX(-1);
     transform: translateY(0) scaleX(-1); }
   40% {
+    -webkit-transform: translateY(1.2rem) scaleX(-1);
     transform: translateY(1.2rem) scaleX(-1); }
   100% {
+    -webkit-transform: translateY(0) scaleX(-1); 
     transform: translateY(0) scaleX(-1); 
   }
 }
@@ -214,6 +220,7 @@
   height: 19.6rem;
   margin-left: 3%;
   text-align: center;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .visual_usr_character .img_character_aero,
@@ -385,6 +392,7 @@
   left: 0;
   width: 4.0rem;
   height: 4.0rem;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .wrap_moneybag_none .txt_ccy span:not(.total_amount) {
@@ -403,6 +411,7 @@
   position: absolute;
   top: 50%;
   right: 2.0rem;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .section_moneybag_all.type_day {
@@ -442,6 +451,7 @@
   height: 44.167vw;
   background: url('../../images/global/bg_hmn_confeffi_2.png') no-repeat 50%;
   background-size: 100%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .hmn_travlog_info .wrap_btn.type_full .btn_box_m {
@@ -453,6 +463,7 @@
   left: 0;
   width: 100vw;
   text-align: center;
+  -webkit-transform: translateY(-70%);
   transform: translateY(-70%);
 }
 .wrap_moneybag_all .list_moneybag::after {
@@ -471,6 +482,7 @@
   user-select: none;
   pointer-events: none;
   will-change: transform;
+  -webkit-transform-origin: bottom right;
   transform-origin: bottom right;
   animation: floating5 6s 0.8s ease-in-out infinite;
 }
@@ -534,6 +546,7 @@
   height: 85.42vh;
   background: url('../../images/global/visual_hmn_102.png') no-repeat 50%;
   background-size: auto 100%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   user-select: none;
   pointer-events: none;
@@ -569,6 +582,7 @@
   height: 8.0rem;
   background: url('../../images/global/img_card_travlog.png') no-repeat 50%;
   background-size: 100%;
+  -webkit-transform: rotate(-15deg);
   transform: rotate(-15deg);
 }
 .wrap_banner.hmn_201 .btn_txt {
@@ -595,6 +609,7 @@
   bottom: -2.7rem;
   left: 50%;
   margin-left: 2.3rem;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .visual_gsp_overseas .img_mobile_shop {
@@ -734,11 +749,13 @@
   position: absolute;
   top: 7.0rem;
   left: 50%;
+  -webkit-transform: translateX(40%);
   transform: translateX(40%);
   animation: drone-float 6s 0.6s ease-in-out infinite;
 }
 @keyframes drone-float {
   60% {
+    -webkit-transform: translateX(40%) translateY(1.5rem);
     transform: translateX(40%) translateY(1.5rem);
   }
 }
@@ -746,6 +763,7 @@
   position: absolute;
   bottom: -2.4rem;
   left: 50%;
+  -webkit-transform: translateX(-121%);
   transform: translateX(-121%);
 }
 .visual_gsp_card .img_character_walk::after {
@@ -774,6 +792,7 @@
 .section_cont.about_travlog .visual_gsp_travlog {
   position: relative;
   padding-top: 46.6vw;
+  -webkit-transform: translateY(3.0rem);
   transform: translateY(3.0rem);
 }
 .section_cont.about_travlog .visual_gsp_travlog::before {
@@ -798,6 +817,7 @@
   z-index: 1;
   width: 9.2rem;
   height: 14.6rem;
+  -webkit-transform: translateX(-50%) rotate(-11.58deg);
   transform: translateX(-50%) rotate(-11.58deg);
 }
 .section_cont.about_travlog .visual_gsp_travlog .img_card_travlog::before {
@@ -821,6 +841,7 @@
   height: 4.0rem;
   background: url('../../images/global/visual_gsp_travlog.png') no-repeat 50%;
   background-size: 100%;
+  -webkit-transform: rotate(11.58deg);
   transform: rotate(11.58deg);
 }
 .section_cont.about_travlog .visual_gsp_travlog .box_card_type {
@@ -894,6 +915,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .section_cont.gsp_travlog_info .visual_gsp_exchange .img_globe::before {
@@ -1019,6 +1041,7 @@
   background-color: #fff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
   text-align: center;
+  -webkit-transform: translateY(-2.7rem);
   transform: translateY(-2.7rem);
 }
 .visual_gsp_receipt .box_receipt::after {
@@ -1106,6 +1129,7 @@
 .visual_gsp_atm {
   margin: 2.0rem 0;
   text-align: center;
+  -webkit-transform: translateY(3.0rem);
   transform: translateY(3.0rem);
 }
 .visual_gsp_atm.transform {
@@ -1158,8 +1182,11 @@
   width: 10.9rem;
   height: 10.5rem;
   background-image: url('../../images/global/visual_gsp_coin.png');
+  -webkit-transform: translateX(-56%) scale(0.5);
   transform: translateX(-56%) scale(0.5);
+  -webkit-transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
 }
 .gsp_travlog_info .visual_gsp_cashback .img_confetti_1 {
@@ -1169,8 +1196,11 @@
   width: 111.1vw;
   height: 40.8vw;
   background-image: url('../../images/global/bg_gsp_confetti.png');
+  -webkit-transform: scale(0);
   transform: scale(0);
+  -webkit-transition: all 0.3s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.3s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
 }
 .gsp_travlog_info .visual_gsp_cashback .img_confetti_2 {
@@ -1180,17 +1210,23 @@
   width: 82.2vw;
   height: 54.7vw;
   background-image: url('../../images/global/bg_gsp_confetti_2.png');
+  -webkit-transform: scale(0);
   transform: scale(0);
+  -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
 }
 .gsp_travlog_info .visual_gsp_cashback.transform .img_coinpop {
+  -webkit-transform: translateX(-56%) scale(1);
   transform: translateX(-56%) scale(1);
 }
 .gsp_travlog_info .visual_gsp_cashback.transform .img_confetti_1 {
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 .gsp_travlog_info .visual_gsp_cashback.transform .img_confetti_2 {
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 .gsp_travlog_info .wrap_loop_scrl.gsp_kr_store {
@@ -1241,7 +1277,9 @@
   height: 10.8rem;
   margin-left: 2.4rem;
   border-radius: 0.8rem;
+  -webkit-transform: rotate(-11.58deg);
   transform: rotate(-11.58deg);
+  -webkit-transform-origin: right bottom;
   transform-origin: right bottom;
 }
 .banner_recomm_card .swiper-slide .card_img::before {
@@ -1253,6 +1291,7 @@
   width: 5.1rem;
   height: 8.0rem;
   box-shadow: 0px 4px 20px #121C4E;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .banner_recomm_card .swiper-slide .card_name {
@@ -1359,6 +1398,7 @@
   height: 1.1rem;
   border-radius: 50%;
   background: #E1E7EA;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .chart_coin .img_coin {
@@ -1366,24 +1406,26 @@
   left: 0;
   width: 100%;
   background-size: 3.3rem auto;
+  -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
 }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(1) { transform: translateY(8.4rem); transition-delay: 0.2s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(2) { transform: translateY(7.8rem); transition-delay: 0.3s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(3) { transform: translateY(7.2rem); transition-delay: 0.4s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(4) { transform: translateY(6.6rem); transition-delay: 0.5s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(5) { transform: translateY(6.0rem); transition-delay: 0.6s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(6) { transform: translateY(5.4rem); transition-delay: 0.7s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(7) { transform: translateY(4.8rem); transition-delay: 0.8s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(8) { transform: translateY(4.2rem); transition-delay: 0.9s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(9) { transform: translateY(3.6rem); transition-delay: 1.0s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(10) { transform: translateY(3.6rem); transition-delay: 1.1s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(11) { transform: translateY(3.0rem); transition-delay: 1.2s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(12) { transform: translateY(2.4rem); transition-delay: 1.3s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(13) { transform: translateY(1.8rem); transition-delay: 1.4s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(14) { transform: translateY(1.2rem); transition-delay: 1.5s; }
-.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(15) { transform: translateY(0.6rem); transition-delay: 1.6s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(1) { -webkit-transform: translateY(8.4rem); transform: translateY(8.4rem); -webkit-transition-delay: 0.2s; transition-delay: 0.2s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(2) { -webkit-transform: translateY(7.8rem); transform: translateY(7.8rem); -webkit-transition-delay: 0.3s; transition-delay: 0.3s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(3) { -webkit-transform: translateY(7.2rem); transform: translateY(7.2rem); -webkit-transition-delay: 0.4s; transition-delay: 0.4s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(4) { -webkit-transform: translateY(6.6rem); transform: translateY(6.6rem); -webkit-transition-delay: 0.5s; transition-delay: 0.5s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(5) { -webkit-transform: translateY(6.0rem); transform: translateY(6.0rem); -webkit-transition-delay: 0.6s; transition-delay: 0.6s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(6) { -webkit-transform: translateY(5.4rem); transform: translateY(5.4rem); -webkit-transition-delay: 0.7s; transition-delay: 0.7s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(7) { -webkit-transform: translateY(4.8rem); transform: translateY(4.8rem); -webkit-transition-delay: 0.8s; transition-delay: 0.8s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(8) { -webkit-transform: translateY(4.2rem); transform: translateY(4.2rem); -webkit-transition-delay: 0.9s; transition-delay: 0.9s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(9) { -webkit-transform: translateY(3.6rem); transform: translateY(3.6rem); -webkit-transition-delay: 1.0s; transition-delay: 1.0s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(10) { -webkit-transform: translateY(3.6rem); transform: translateY(3.6rem); -webkit-transition-delay: 1.1s; transition-delay: 1.1s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(11) { -webkit-transform: translateY(3.0rem); transform: translateY(3.0rem); -webkit-transition-delay: 1.2s; transition-delay: 1.2s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(12) { -webkit-transform: translateY(2.4rem); transform: translateY(2.4rem); -webkit-transition-delay: 1.3s; transition-delay: 1.3s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(13) { -webkit-transform: translateY(1.8rem); transform: translateY(1.8rem); -webkit-transition-delay: 1.4s; transition-delay: 1.4s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(14) { -webkit-transform: translateY(1.2rem); transform: translateY(1.2rem); -webkit-transition-delay: 1.5s; transition-delay: 1.5s; }
+.wrap_vdb_list.transform .chart_coin .img_coin:nth-child(15) { -webkit-transform: translateY(0.6rem); transform: translateY(0.6rem); -webkit-transition-delay: 1.6s; transition-delay: 1.6s; }
 
 .wrap_vdb_list li.empty .chart_coin {
   margin-bottom: 3.2rem;
@@ -1404,8 +1446,11 @@
   width: 100%;
   background: url('../../images/global/bg_vdb_empty.png') no-repeat 50%;
   background-size: 4.8rem;
+  -webkit-transform: scale(0);
   transform: scale(0);
+  -webkit-transform-origin: center;
   transform-origin: center;
+  -webkit-transition: -webkit-transform 0.3s 0.2s cubic-bezier(0.24, 0, 0.5, 1); 
   transition: transform 0.3s 0.2s cubic-bezier(0.24, 0, 0.5, 1); 
 }
 .wrap_vdb_list li.empty::after {
@@ -1414,6 +1459,7 @@
   font-size: 1.5rem;
   line-height: 4.8rem;
   font-weight: 700;
+  -webkit-transition: opacity 0.2s 0.1s cubic-bezier(0.24, 0, 0.5, 1); 
   transition: opacity 0.2s 0.1s cubic-bezier(0.24, 0, 0.5, 1); 
 }
 .wrap_vdb_list.transform li.empty::before,
@@ -1487,6 +1533,7 @@
   width: 67px;
   height: 69px;
   box-shadow: 0px 10px 16px rgba(179, 211, 200, 0.6);
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .visual_vdb_recomm .img_character_feed {
@@ -1499,6 +1546,7 @@
   top: 2.0rem;
   left: 50%;
   margin-left: 6rem;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   z-index: 3;
 }
@@ -1537,18 +1585,23 @@
   padding-top: 9.8rem;
 }
 .vdb_swiper .swiper-wrapper .img_avatar {
+  -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
+  -webkit-transform: scale(0.6) translate(-6.8rem, 0);
   transform: scale(0.6) translate(-6.8rem, 0);
 }
 .vdb_swiper .swiper-slide.swiper-slide-prev .img_avatar {
+  -webkit-transform: scale(0.6) translate(10.5rem, 0.8rem);
   transform: scale(0.6) translate(10.5rem, 0.8rem);
 }
 .vdb_swiper .swiper-slide.swiper-slide-active .img_avatar,
 .vdb_swiper .swiper-slide.swiper-slide-duplicate-active .img_avatar {
+  -webkit-transform: scale(1) translate(0,0);
   transform: scale(1) translate(0,0);
 }
 .vdb_swiper .swiper-slide.swiper-slide-next .img_avatar,
 .vdb_swiper .sswiper-slide-duplicate.swiper-slide-next .img_avatar  {
+  -webkit-transform: scale(0.74) translate(-6.8rem, 0);
   transform: scale(0.74) translate(-6.8rem, 0);
 }
 .vdb_swiper .swiper-pagination {
@@ -1624,6 +1677,7 @@
   max-width: 11.9rem;
   height: 2.9rem;
   border-radius: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .img_avatar.rank1::before {
@@ -1669,10 +1723,12 @@
 }
 .visual_vdb_total .bubble.accum {
   background-image: url('../../images/global/bg_bubble.png');
+  -webkit-transform: translateX(1.6rem);
   transform: translateX(1.6rem);
 }
 .visual_vdb_total .bubble.saved {
   background-image: url('../../images/global/bg_bubble_2.png');
+  -webkit-transform: translateX(-1.6rem);
   transform: translateX(-1.6rem);
 }
 .visual_vdb_total .bubble.accum::before,
@@ -1711,6 +1767,7 @@
   height: 8.0rem;
   margin-left: -7.0rem;
   background-image: url('../../images/hmui/character/visual_moneybag.png');
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .visual_vdb_total .img_character_dance::after {
@@ -1720,6 +1777,7 @@
   height: 8.0rem;
   margin-left: 6.2rem;
   background-image: url('../../images/hmui/character/visual_bag.png');
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .my_benefit_info .bubble.accum .total_amount {
@@ -1742,6 +1800,7 @@
   padding-right: 9.4vw;
 }
 .my_benefit_info.no_accum .bubble.saved {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 .my_benefit_info.no_accum .img_character_dance {
@@ -1757,6 +1816,7 @@
   padding-left: 9.4vw;
 }
 .my_benefit_info.no_saved .bubble.accum {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 .my_benefit_info.no_saved .img_character_dance {
@@ -1824,6 +1884,7 @@
   left: 50%;
   width: 25vw;
   height: 25vw;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .category_card {
@@ -1892,26 +1953,33 @@
   font-size: 2.0rem;
   line-height: 3.2rem;
   font-weight: 700;
+  -webkit-transform: translateY(100%);
   transform: translateY(100%);
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
   transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 .list_benefit_tower li.transform {
   visibility: visible;
   opacity: 1;
+  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 .list_benefit_tower li:first-child {
+  -webkit-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
 .list_benefit_tower li:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
 .list_benefit_tower li:nth-child(3) {
+  -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
 .list_benefit_tower li:nth-child(4) {
+  -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
 
@@ -2016,6 +2084,7 @@
   left: 50%;
   border: 0.8rem solid rgba(255,255,255,0.8);
   box-sizing: border-box;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .section_cont.guide_hanamoney_1 .utl_accum_swiper .swiper-slide .link_accum_click::before {
@@ -2113,19 +2182,24 @@
 }
 .section_cont.guide_hanamoney_3 .utl_charge_swiper .swiper-slide {
   width: 20.0rem;
+  -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
+  -webkit-transform: translate(0, 4.0rem);
   transform: translate(0, 4.0rem);
 }
 .section_cont.guide_hanamoney_3 .utl_charge_swiper .swiper-slide-prev { 
+  -webkit-transform: translate(8.0rem, 4.0rem);
   transform: translate(8.0rem, 4.0rem);
   opacity: 0.5;
 } 
 .section_cont.guide_hanamoney_3 .utl_charge_swiper .swiper-slide-next { 
+  -webkit-transform: translate(-8.0rem, 4.0rem);
   transform: translate(-8.0rem, 4.0rem);
   opacity: 0.5;
 } 
 .section_cont.guide_hanamoney_3 .utl_charge_swiper .swiper-slide-active { 
   z-index: 1;
+  -webkit-transform: translate(0, 0rem);
   transform: translate(0, 0rem);
 } 
 .section_cont.guide_hanamoney_3 .wrap_btn.wrap_btn.type_full {
@@ -2146,6 +2220,7 @@
   z-index: -1;
   width: 45vw;
   height: 86.6vw;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   perspective: 1200px;
 }
@@ -2154,18 +2229,22 @@
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide {
   width: 26.6vw;
   height: 26.6vw;
   opacity: 0.2;
+  -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
 }
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide img {
   display: block;
   border-radius: 2.0rem;
+  -webkit-transform: translateX(34vw);
   transform: translateX(34vw);
+  -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
   visibility: hidden;
 }
@@ -2175,6 +2254,7 @@
   opacity: 0;
 }
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide.prevAll img {
+  -webkit-transform: translateX(64vw);
   transform: translateX(64vw);
 }
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-active {
@@ -2184,6 +2264,7 @@
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-active img,
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-duplicate-active img {
   border-radius: 3.0rem;
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-prev,
@@ -2196,11 +2277,13 @@
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-duplicate-prev img,
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-duplicate-next img {
   border-radius: 2.2rem;
+  -webkit-transform: translateX(10vw);
   transform: translateX(10vw);
 }
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-first img,
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-last img {
   visibility: visible;
+  -webkit-transform: translateX(34vw);
   transform: translateX(34vw);
 }
 .section_cont.guide_hanamoney_4 .utl_point_swiper .swiper-slide-active img,
@@ -2225,6 +2308,7 @@
   width: 8.0rem;
   height: 8.0rem;
   margin: -0.6rem auto 0;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .section_cont.guide_hanamoney_5.transform .visual_utl_remitt .flip_remitt {
@@ -2245,11 +2329,12 @@
   background-size: 100%;
 }
 .section_cont.guide_hanamoney_5 .visual_utl_remitt .flip_remitt::before {
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
   background-image: url('../../images/global/img_utl_remitt_1.png');
 }
 .section_cont.guide_hanamoney_5 .visual_utl_remitt .flip_remitt::after {
-  transform: translateZ(-0.1rem) rotateY(180deg);
+  -webkit-transform: translateZ(-0.1rem) rotateY(180deg);
   background-image: url('../../images/global/img_utl_remitt_2.png');
 }
 .section_cont.guide_hanamoney_5 .wrap_btn.type_full {
@@ -2274,6 +2359,7 @@
   height: 126.9vw;
   background: url('../../images/global/bg_utl_app.png') no-repeat 50%;
   background-size: 100%;
+  -webkit-transform: scale(0.5);
   transform: scale(0.5);
 }
 .section_cont.guide_hanamoney_6 .wrap_tit .tit_section_center {
@@ -2345,6 +2431,7 @@
     left: unset;
     width: 14vw;
     height: 14vw;
+    -webkit-transform: none;
     transform: none;
   }
   .list_masters_benefit .category_free span {
