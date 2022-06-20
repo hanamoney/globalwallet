@@ -2335,6 +2335,7 @@
 }
 .section_cont.guide_hanamoney_5 .visual_utl_remitt .flip_remitt::after {
   -webkit-transform: translateZ(-0.1rem) rotateY(180deg);
+  transform: translateZ(-0.1rem) rotateY(180deg);
   background-image: url('../../images/global/img_utl_remitt_2.png');
 }
 .section_cont.guide_hanamoney_5 .wrap_btn.type_full {
