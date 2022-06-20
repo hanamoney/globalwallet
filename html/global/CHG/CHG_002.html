@@ -61,7 +61,7 @@
             
           </div>
           <div class="wrap_btn_full">
-            <button type="button" class="btn_full_primary" disabled>충전하기</button>
+            <button type="button" class="btn_full_primary">충전하기</button>
           </div>
         </div>
         <!-- // 하단고정 영역 -->
@@ -93,7 +93,7 @@
 
       // value 값 설정 후 change 트리거
       $('#test').on('click', function(e){
-        $('.inp').val('10,000').trigger('change');
+        $('.inp').val('10,000').focus().click();
       });
 
     });
