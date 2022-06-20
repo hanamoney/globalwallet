@@ -49,6 +49,7 @@ var registUI = function(){
   if ( $('.wrap_bubble[data-animate="trans"]').length ) { _bubbleAnimate(); } // 말풍선 애니메이션
 
   if ( $('.gsp_travlog_info').length ) { _gspTravlogInfo(); } // 트래블로그 혜택안내 애니메이션 실행
+  if ( $('.visual_usr_card').length ) { _usrCardAnimate(); } // 카드신청 브릿지 애니메이션 실행
 
 };
 
@@ -895,12 +896,12 @@ var exeTransitionInLayer = function() {
       }, 300);
     }
     
-    // USR_103
-    if ($this.find('.visual_usr_card')) {
-      setTimeout(function(){
-        $this.find('.visual_usr_card').addClass('transform');
-      }, 200);
-    }
+    // USR_103 - 페이지전환으로 삭제
+    // if ($this.find('.visual_usr_card')) {
+    //   setTimeout(function(){
+    //     $this.find('.visual_usr_card').addClass('transform');
+    //   }, 200);
+    // }
 
     // GSP_001
     if ($this.find('.visual_gsp_overseas')) {
@@ -1203,6 +1204,15 @@ var _gspTravlogInfo = function(){
       offset: '80%'
     });
   });
+}
+
+/**
+  * @name _usrCardAnimate()
+  * @description 카드신청 브릿지화면 애니메이션
+  * @url USR_103
+ */
+var _usrCardAnimate = function(){
+  $('.visual_usr_card').addClass('transform');
 }
 
 /**
