@@ -2247,6 +2247,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .wrap_layer.type_full .head_layer .btn_ico_menu {
   right: 2.2rem;
 }
+.wrap_layer.type_full .head_layer .btn_ico_prev {
+ left: 2.0rem; 
+}
 .wrap_layer.type_full .content_layer {
   height: 100%;
   max-height: 100vh;
