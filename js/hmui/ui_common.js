@@ -245,6 +245,7 @@ var _inpControl = function() {
       setTimeout(function(){
         var $thisInp = $(this);
         if ( !keepFocus ) {
+          // console.log('blur');
           $thisInp.closest('.box_inp').removeClass('show_btn');
           keepFocus = false;
         }
@@ -263,7 +264,7 @@ var _inpControl = function() {
     $(el).closest('.box_inp').find('.btn_ico_clear').bind('click', function(e) {
       e.preventDefault();
       keepFocus = true;
-      console.log('clear');
+      // console.log('clear');
       $(this).siblings('.inp').val('').focus().click();
       $(this).closest('.box_inp').removeClass('show_btn');
     });
@@ -271,14 +272,14 @@ var _inpControl = function() {
     // 하단고정영역 벼튼클릭시(CTA 제외) - keep focus
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_btn_box button').bind('click', function(e) {
       e.preventDefault();
-      console.log('button');
+      // console.log('button');
       keepFocus = true;
     });
   
     // 하단고정영역 체크박스 클릭시 - focus out
     $(el).closest('.contents').find('.section_bottom_fixed .wrap_chk label').on('click', function(e) { 
       e.preventDefault();
-      console.log('check');
+      // console.log('check');
       keepFocus = false;
       var check = $(this).siblings('input');
       if ( !check.is(':checked') ) {
