@@ -305,7 +305,7 @@ var _inpControl = function() {
         && !$(e.target).parents('.wrap_btn_box').parent('.section_bottom_fixed').length
         && !$(e.target).parents('.wrap_chk').parent('.section_bottom_fixed').length )  {
           _resetInpWithFixedBtn();
-          $('.inp').css('background-color','pink');
+          $('.inp').css('background-color','yellow');
       }
     });
   } else {
@@ -319,7 +319,7 @@ var _inpControl = function() {
         && !$(e.target).parents('.wrap_btn_box').parent('.section_bottom_fixed').length
         && !$(e.target).parents('.wrap_chk').parent('.section_bottom_fixed').length )  {
           _resetInpWithFixedBtn();
-          $('.inp').css('background-color','pink');
+          $('.inp').css('background-color','yellow');
       }
     });
   }
