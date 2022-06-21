@@ -35,7 +35,7 @@ var registUI = function(){
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
   if ( (iosV() >= 13) && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
-  if ( $('.sel').length ) { _selControl(); } // 셀렉트 인터렉션
+  // if ( $('.sel').length ) { _selControl(); } // 셀렉트 인터렉션
   if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
   if ( $('.wrap_tab_btn').length ) { _tabContents(); } // 탭 
   if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
@@ -346,7 +346,15 @@ var _selControl = function() {
 
   // select list 닫을 시 
   $('.fnCloseSel').on('click', function(){
-    var popId = $(this).closest('.wrap_layer').attr('id');
+    _closeSelList($(this));
+  });
+  $('.dim').off().on('click', function(){
+    console.log('dim');
+    _closeSelList($(this));
+  });
+
+  function _closeSelList(el) {
+    var popId = $(el).closest('.wrap_layer').attr('id');
     var $sel = $('[data-name="' + popId + '"]');
     var selected = $('#'+popId).find('.wrap_sel_list .selected');
 
@@ -362,7 +370,7 @@ var _selControl = function() {
 
     $sel.removeClass('focus');
     fnCloseLayerPop(popId, $sel);
-  });
+  }
 }
 
 /**
@@ -647,6 +655,7 @@ var _layerPop = function() {
   * @description // 혜택리스트
   */
 var _showBenefitList = function() {
+  if ( parseInt(androidV(ua)) < 5 ) { return false; }
   var $el = $('.wrap_item_benefit');
   var tit = $el.find('.tit_wrap');
   var list = $el.find('.list_benefit li');
@@ -854,7 +863,7 @@ var fnOpenLayerPop = function(popID) {
 
   // 딤 클릭 시 해당 팝업 닫기
   $(document).on('click', '.dim', function() {
-    console.log('.dim click');
+    console.log('dim');
     var popup = $(this).closest('.wrap_layer');
     var popupID = $(this).closest('.wrap_layer').attr('id');
     // bottom sheet를 제외한 레이어 dim 클릭시 닫힘 기능 없음
@@ -1228,6 +1237,7 @@ var fnHanamoneyGuideControl = function() {
   * @url GSP_002
  */
 var _gspTravlogInfo = function(){
+  if ( parseInt(androidV(ua)) < 5 ) { return false; }
   var $el = $('.gsp_travlog_info').closest('[data-roll="GSP"]').find('[data-animate="trans"]');
 
   $el.each(function(){

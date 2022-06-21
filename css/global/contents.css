@@ -2514,3 +2514,19 @@
     height: 73.9rem;
   }
 }
+
+/* AOS 구버전 애니메이션 */
+.AOS_old .visual_gsp_card,
+.AOS_old .visual_gsp_card .img_drone_box,
+.AOS_old .section_cont.about_travlog .visual_gsp_travlog.transform,
+.AOS_old .section_cont.about_travlog .visual_gsp_travlog.transform::before,
+.AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_globe::before,
+.AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_krw,
+.AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_krw::before,
+.AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_usd,
+.AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_usd::before,
+.AOS_old .visual_gsp_atm.transform { -webkit-animation: none; animation: none;}
+.AOS_old .visual_gsp_atm.transform { transform: none; }
+.AOS_old .gsp_travlog_info .visual_gsp_cashback.transform .img_confetti_1,
+.AOS_old .gsp_travlog_info .visual_gsp_cashback.transform .img_confetti_2,
+.AOS_old .gsp_travlog_info .visual_gsp_cashback.transform .img_coinpop { -webkit-transition: none; transition: none;}

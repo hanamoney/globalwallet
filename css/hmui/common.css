@@ -4443,3 +4443,8 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
     max-height: calc(500px - 5.4rem - 6.0rem);
   }
 }
+
+/* AOS 구버전 애니메이션 */
+.AOS_old .wrap_item_benefit li,
+.AOS_old .wrap_item_benefit .tit_wrap { -webkit-transform: none; transform: none; -webkit-transition: none; transition: none; opacity: 1;}
+.AOS_old .list_benefit_label:not(.type_full) li.transform .flag_free { -webkit-animation: none; animation: none; opacity: 1;}
