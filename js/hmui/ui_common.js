@@ -35,7 +35,7 @@ var registUI = function(){
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
   if ( (iosV() >= 13) && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
-  // if ( $('.sel').length ) { _selControl(); } // 셀렉트 인터렉션
+  if ( $('.sel').length ) { _selControl(); } // 셀렉트
   if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
   if ( $('.wrap_tab_btn').length ) { _tabContents(); } // 탭 
   if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
@@ -339,38 +339,37 @@ var _selControl = function() {
     });
   });
 
-  // custom option click 시
+  // custom option click
   $('.fnOpt').on('click', function(){
     $(this).closest('li').addClass('selected').siblings().removeClass('selected');
   });
 
-  // select list 닫을 시 
   $('.fnCloseSel').on('click', function(){
     _closeSelList($(this));
   });
-  $('.dim').off().on('click', function(){
-    console.log('dim');
-    _closeSelList($(this));
-  });
+}
+/**
+  * @name _closeSelList()
+  * @description // selecbox layer 닫을 시 선택값 체크
+  * @param {el} // 클릭한 element
+  */
+var _closeSelList = function(el) {
+  var popId = $(el).closest('.wrap_layer').attr('id');
+  var $sel = $('[data-name="' + popId + '"]');
+  var selected = $('#'+popId).find('.wrap_sel_list .selected');
 
-  function _closeSelList(el) {
-    var popId = $(el).closest('.wrap_layer').attr('id');
-    var $sel = $('[data-name="' + popId + '"]');
-    var selected = $('#'+popId).find('.wrap_sel_list .selected');
-
-    if ( selected.length ) {
-      $sel.removeClass('default');
-      $sel.find('.value').text(selected.find('.txt').text());
-      $sel.next('.hiddenInp').val(selected.find('.fnOpt').attr('data-option'));
-    } else {
-      $sel.addClass('default');
-      $sel.find('.value').text('');
-      $sel.next('.hiddenInp').val('');
-    }
-
-    $sel.removeClass('focus');
-    fnCloseLayerPop(popId, $sel);
+  if ( selected.length ) {
+    $sel.removeClass('default');
+    $sel.find('.value').text(selected.find('.txt').text());
+    $sel.next('.hiddenInp').val(selected.find('.fnOpt').attr('data-option'));
+  } else {
+    $sel.addClass('default');
+    $sel.find('.value').text('');
+    $sel.next('.hiddenInp').val('');
   }
+
+  $sel.removeClass('focus');
+  fnCloseLayerPop(popId, $sel);
 }
 
 /**
@@ -862,13 +861,16 @@ var fnOpenLayerPop = function(popID) {
   }
 
   // 딤 클릭 시 해당 팝업 닫기
-  $(document).on('click', '.dim', function() {
-    console.log('dim');
+  $('.dim').on('click', function() {
     var popup = $(this).closest('.wrap_layer');
     var popupID = $(this).closest('.wrap_layer').attr('id');
     // bottom sheet를 제외한 레이어 dim 클릭시 닫힘 기능 없음
     if (popup.hasClass('type_alert') || popup.hasClass('type_center') || popup.hasClass('type_full')) { 
       return;
+    }
+    // select option list 레이어 인 경우 닫을 시 선택값 체크
+    if (popup.find('.fnOpt').length) {
+      _closeSelList($(this));
     }
     fnCloseLayerPop(popupID);
   });

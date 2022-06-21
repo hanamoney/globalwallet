@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="format-detection" content="telephone=no">
-  <title>PEX_103</title>
+  <title>PEX_203</title>
 
   <link rel="stylesheet" href="../../../css/hmui/swiper.css">
   <link rel="stylesheet" href="../../../css/hmui/animate.css">
@@ -60,13 +60,14 @@
             <!-- 네이버 복수ID -->
             <div class="wrap_inp">
               <div class="head_form">
-                <p class="tit_form">조회기간</p>
+                <p class="tit_form_s">전환신청 ID</p>
               </div>
               <div class="box_inp">
-                <select class="sel">
-                  <option value="">cr******(16,345P)</option>
-                  <option value="">cr******(500P)</option>
-                </select>
+                <button type="button" class="sel fnOpenPop" data-name="selectId"><!-- fnOpenPop클래스 클릭 시 data-name값과 같은ID의 팝업 오픈 -->
+                  <span class="placeholder">선택해주세요</span>
+                  <span class="value">cr******(16,345P)</span><!-- 선택된 값 노출 -->
+                </button>
+                <input type="text" id="" class="hiddenInp" readonly><!-- 선택 된 data-option 값을 input의 value로 전달 -->
               </div>
             </div>
 
@@ -205,6 +206,39 @@
       </div>
     </div>
     <!-- // 신청팝업 -->
+
+    <!-- PEX_204 ID선택 -->
+    <!-- 
+      셀렉트레이어 닫을 시 selected클래스 체크하여 해당 .sel버튼 다음에 있는 .hiddenInp의 value로 data-option 값을 전달 (ui_common.js 에서)
+      (data-option은 option value="" 대체로 값은 변경하여 사용)
+    -->
+    <div id="selectId" class="wrap_layer" data-dim="true">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer blind">선택</h2>
+        </div>
+        <div class="content_layer">
+          <div class="section_bottom_select">
+            <ul class="wrap_sel_list">
+              <li class="selected">
+                <button type="button" class="fnOpt" data-option="val1"><span class="txt">cr******(16,345P)</span></button>
+              </li>
+              <li>
+                <button type="button" class="fnOpt" data-option="val2"><span class="txt">cr******(500P)</span></button>
+              </li>
+              <li>
+                <button type="button" class="fnOpt" data-option="val3"><span class="txt">cr******(3P)</span></button>
+              </li>
+              <li>
+                <button type="button" class="fnOpt" data-option="val4"><span class="txt">cr******(0P)</span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="btn_ico_close fnCloseSel"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // PEX_204 ID선택 -->
 
     <!-- 5b: 전환하기 컨펌창  -->
     <div id="confirmId" class="wrap_layer type_alert" data-dim="true">
