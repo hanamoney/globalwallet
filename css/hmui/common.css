@@ -2886,6 +2886,12 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   line-height: 2.4rem;
   font-weight: 700;
 }
+.section_form .tit_form_s {
+  margin-bottom: -0.2rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+}
 .section_form > [class^="wrap_"] {
   margin-top: 2.4rem;
 }
