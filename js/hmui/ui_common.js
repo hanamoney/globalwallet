@@ -305,11 +305,11 @@ var _inpControl = function() {
         && !$(e.target).parents('.wrap_btn_box').parent('.section_bottom_fixed').length
         && !$(e.target).parents('.wrap_chk').parent('.section_bottom_fixed').length )  {
           _resetInpWithFixedBtn();
-          $('.inp').css('background-color','yellow');
+          $('.inp').css('background-color','pink');
       }
     });
   } else {
-    $('body').on('touchstart', function(e) {
+    $('body').on('touchend', function(e) {
       e.stopPropagation();
       var el = e.target.classList;
       if (
@@ -319,7 +319,7 @@ var _inpControl = function() {
         && !$(e.target).parents('.wrap_btn_box').parent('.section_bottom_fixed').length
         && !$(e.target).parents('.wrap_chk').parent('.section_bottom_fixed').length )  {
           _resetInpWithFixedBtn();
-          $('.inp').css('background-color','yellow');
+          $('.inp').css('background-color','pink');
       }
     });
   }
