@@ -294,19 +294,35 @@ var _inpControl = function() {
   });
 
   // 인풋 및 하단고정영역 외 클릭 시 - focus out
-  $('body').on('touchstart', function(e) {
-    e.stopPropagation();
-    var el = e.target.classList;
-    if (
-      inp.is(':focus') 
-      && !el.contains('inp') 
-      && !el.contains('btn_ico_clear') 
-      && !$(e.target).parents('.wrap_btn_box').parent('.section_bottom_fixed').length
-      && !$(e.target).parents('.wrap_chk').parent('.section_bottom_fixed').length )  {
-        _resetInpWithFixedBtn();
-        $('.inp').css('background-color','pink');
-    }
-  });
+  if (isAOS) {
+    $('body').on('click', function(e) {
+      e.stopPropagation();
+      var el = e.target.classList;
+      if (
+        inp.is(':focus') 
+        && !el.contains('inp') 
+        && !el.contains('btn_ico_clear') 
+        && !$(e.target).parents('.wrap_btn_box').parent('.section_bottom_fixed').length
+        && !$(e.target).parents('.wrap_chk').parent('.section_bottom_fixed').length )  {
+          _resetInpWithFixedBtn();
+          $('.inp').css('background-color','pink');
+      }
+    });
+  } else {
+    $('body').on('touchstart', function(e) {
+      e.stopPropagation();
+      var el = e.target.classList;
+      if (
+        inp.is(':focus') 
+        && !el.contains('inp') 
+        && !el.contains('btn_ico_clear') 
+        && !$(e.target).parents('.wrap_btn_box').parent('.section_bottom_fixed').length
+        && !$(e.target).parents('.wrap_chk').parent('.section_bottom_fixed').length )  {
+          _resetInpWithFixedBtn();
+          $('.inp').css('background-color','pink');
+      }
+    });
+  }
 };
 
 /**
