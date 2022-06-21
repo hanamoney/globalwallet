@@ -1294,6 +1294,11 @@ section[data-roll] {
   width: 1px;
   height: 1px;
 }
+.txt_sel_single {
+  color: #252E33;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+}
 .section_bottom_select .wrap_sel_list li.selected {
   background: url('../../images/hmui/ico_chk_checked.png') no-repeat right 2.4rem top 50%;
   background-size: 2.0rem;
