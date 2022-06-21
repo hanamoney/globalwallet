@@ -294,7 +294,7 @@ var _inpControl = function() {
   });
 
   // 인풋 및 하단고정영역 외 클릭 시 - focus out
-  $('body').on('click', function(e) {
+  $('body').on('touchstart', function(e) {
     e.stopPropagation();
     var el = e.target.classList;
     if (
