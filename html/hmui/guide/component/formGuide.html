@@ -123,25 +123,12 @@
               <div class="head_form">
                 <p class="tit_form">label</p>
               </div>
-              <div class="box_sel">
-                <button type="button" class="sel fnOpenPop default" data-name="selectId">
+              <div class="box_inp">
+                <button type="button" class="sel default" data-name="selectId"><!-- 선택전 default 클래스 / 선택후: default 클래스 삭제 ui_common.js 처리  -->
                   <span class="placeholder">선택해주세요</span>
                   <span class="value">option1</span>
                 </button>
-                <input type="text" id="" class="hiddenInp" readonly>
-              </div>
-            </div>
-            <!-- select 선택 전 선택 후 -->
-            <div class="wrap_inp">
-              <div class="head_form">
-                <p class="tit_form_s">label</p>
-              </div>
-              <div class="box_sel">
-                <button type="button" class="sel fnOpenPop" data-name="selectId">
-                  <span class="placeholder">선택해주세요</span>
-                  <span class="value">option1</span>
-                </button>
-                <input type="text" id="" class="hiddenInp" readonly>
+                <input type="text" id="" class="hiddenInp" readonly><!-- 선택 된 data-option 값을 input의 value로 전달 -->
               </div>
             </div>
 
@@ -287,20 +274,20 @@
         </div>
         <div class="content_layer">
           <div class="section_bottom_select">
-            <ul class="wrap_link_list">
+            <ul class="wrap_sel_list">
               <li>
-                <button type="button" class="fnOpt" data-option="">조회</button>
+                <button type="button" class="fnOpt" data-option="val1"><span class="txt">옵션1</span></button>
               </li>
               <li>
-                <button type="button" class="fnOpt" data-option="">조회</button>
+                <button type="button" class="fnOpt" data-option="val2"><span class="txt">옵션2</span></button>
               </li>
               <li>
-                <button type="button" class="fnOpt" data-option="">조회</button>
+                <button type="button" class="fnOpt" data-option="val3"><span class="txt">옵션3</span></button>
               </li>
             </ul>
           </div>
         </div>
-        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+        <button class="btn_ico_close fnCloseSel"><span class="blind">닫기</span></button>
       </div>
     </div>
     <!-- // popup -->

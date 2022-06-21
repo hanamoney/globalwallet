@@ -1262,17 +1262,53 @@ section[data-roll] {
   border-bottom: 1px solid #D0D4D7;
   background: url('../../images/hmui/ico_arr_down_2.png') no-repeat right 0 top 13px;
   background-size: 2.0rem;
+  color: #252E33;
   font-size: 2.0rem;
   line-height: 2.6rem;
-  color: #252E33;
+  text-align: left;
 }
-.sel:focus {
+.sel.focus {
   padding-bottom: 0;
   border-bottom: 2px solid #4F5D64;
+}
+.sel .placeholder {
+  display: none;
+}
+.sel .value {
+  display: block;
 }
 .sel.default {
   color: #AEBABB;
   font-size: 2.6rem;
+}
+.sel.default .placeholder {
+  display: block;
+}
+.sel.default .value {
+  display: none;
+}
+.hiddenInp {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 1px;
+}
+.section_bottom_select .wrap_sel_list li.selected {
+  background: url('../../images/hmui/ico_chk_checked.png') no-repeat right 2.4rem top 50%;
+  background-size: 2.0rem;
+}
+.section_bottom_select .wrap_sel_list .txt {
+  display: inline-block;
+  color: #323E43;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.section_bottom_select .wrap_sel_list .fnOpt {
+  display: block;
+  width: 100%;
+  padding: 1.3rem 2.4rem;
+  text-align: left;
 }
 
 /* Button */

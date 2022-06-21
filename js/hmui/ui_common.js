@@ -330,10 +330,35 @@ var _inpChkVal = function(el) {
   * @description // selecbox status
   */
 var _selControl = function() {
-  $('.sel').each(function(){
-    $(this).on('change', function(e){
-      console.log($(this).val());
+  $('.sel').each(function(idx, el){
+    $(el).on('click', function(e){
+      var popId = $(this).attr('data-name');
+      $(this).addClass('focus');
+      fnOpenLayerPop(popId);
     });
+  });
+
+  // custom option click 시
+  $('.fnOpt').on('click', function(){
+    $(this).closest('li').addClass('selected').siblings().removeClass('selected');
+  });
+
+  // select list 닫을 시 
+  $('.fnCloseSel').on('click', function(){
+    var popId = $(this).closest('.wrap_layer').attr('id');
+    var $sel = $('[data-name="' + popId + '"]');
+    var selected = $('#'+popId).find('.wrap_sel_list .selected');
+
+    if ( selected.length ) {
+      $sel.find('.value').text(selected.find('.txt').text());
+      $sel.next('.hiddenInp').val(selected.find('.fnOpt').attr('data-option'));
+    } else {
+      $sel.find('.value').text('');
+      $sel.next('.hiddenInp').val('');
+    }
+
+    $sel.removeClass('focus');
+    fnCloseLayerPop(popId, $sel);
   });
 }
 
