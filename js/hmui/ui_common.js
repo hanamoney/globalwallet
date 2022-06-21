@@ -18,6 +18,9 @@ function iosV(ua) {
 $(function(){
   if (isAOS) {
     $('html').addClass('AOS');
+    if ( parseInt(androidV(ua)) < 5) {
+      $('html').addClass('AOS_old');
+    }
   } else {
     $('html').addClass('iOS');
   }
@@ -350,9 +353,11 @@ var _selControl = function() {
     var selected = $('#'+popId).find('.wrap_sel_list .selected');
 
     if ( selected.length ) {
+      $sel.removeClass('default');
       $sel.find('.value').text(selected.find('.txt').text());
       $sel.next('.hiddenInp').val(selected.find('.fnOpt').attr('data-option'));
     } else {
+      $sel.addClass('default');
       $sel.find('.value').text('');
       $sel.next('.hiddenInp').val('');
     }
