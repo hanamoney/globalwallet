@@ -33,6 +33,7 @@ var registUI = function(){
   // 스크롤 막기
   $('body.overflow').on('touchmove', function(e){
     e.preventDefault();
+    e.stopPropagation();
     console.log('block scroll');
   });
 
