@@ -30,6 +30,11 @@ $(function(){
 });
 
 var registUI = function(){
+  // body scroll 막기
+  $('body.fixed').on('touchmove', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+  });
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
