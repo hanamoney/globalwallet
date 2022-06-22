@@ -165,6 +165,11 @@
         },3000);
         // setTimeout은 상태변화 확인 위한 임의 function
       })
+
+      // 스크린샷 미완료 시 원래 상태로
+      $('.btn_ico_close').on('click', function(){
+        fnLayerScreenShot2.reset($('#popupId'));
+      });
     });
   </script>
 </body>
