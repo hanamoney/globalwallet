@@ -295,6 +295,12 @@
     </div>
     <!-- // 3: 개인정보 제3자 제공동의 철회하기 컨펌창 -->
 
+    <!-- toast -->
+    <div id="toast" class="wrap_toast">
+      <p class="txt_toast">포인트 전환 이용동의가 철회되었습니다.</p>
+    </div>
+    <!-- // toast -->
+
   </main>
   
   <script>
@@ -313,6 +319,15 @@
         // 컨펌창 호출 param (오픈할 팝업 id , 버튼element)
         fnOpenLayerPop('confirmId2', $(this));
       });
+
+      // 토스트팝업 호출 퍼블확인용
+      $('#confirmId2').find('.btn_full_primary').on('click', function(){
+        // 토스트팝업 호출 param element 해당ID
+        setTimeout(function(){
+          fnToastPop('toast');
+        },300);
+      });
+
     });
   </script>
 </body>
