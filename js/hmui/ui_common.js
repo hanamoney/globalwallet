@@ -31,7 +31,7 @@ $(function(){
 
 var registUI = function(){
   // body scroll 막기
-  $('body.fixed').on('touchmove', function(e){
+  $(window).on('touchmove', function(e){
     e.preventDefault();
     e.stopPropagation();
   });
