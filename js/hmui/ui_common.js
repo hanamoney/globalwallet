@@ -855,7 +855,12 @@ var fnOpenLayerPop = function(popID) {
     // 팝업 타이틀 영역보다 넘칠 경우 텍스트 사이즈 조정
     setTimeout(function(){
       if (tit[0].scrollWidth > tit.width()) {
-        tit.css('font-size', (parseInt(tit.width() / tit.text().replace(/ /g, '').length) * 1.1) + "px");
+        var fontSize = (parseInt(tit.width() / tit.text().replace(/ /g, '').length) * 1.1);
+        if (fontSize < 1) { 
+          return;
+        } else {
+          tit.css('font-size', fontSize + "px");
+        }
       }
     },100);
   } else {
@@ -1285,9 +1290,11 @@ var _usrCardAnimate = function(){
 var fnLayerScreenShot2 = (function() {
   var $el,
       scrlTop,
-      page;
+      page,
+      status;
 
   function set(el) {
+    status = 'set';
     $el = $(el);
     scrlTop = $(document).scrollTop(); // 현재 스크롤 위치 저장
     page = $el.siblings('.wrap_contents').find('section'); // 본 페이지
@@ -1295,19 +1302,18 @@ var fnLayerScreenShot2 = (function() {
     $el.addClass('setScreenShot'); // 팝업 높이제한 해제 후 팝업 콘텐츠 높이값 계산
     var height = $el.find('.content_layer').outerHeight(true);
     $el
-      .css({
-        'height': height,
-      });
+    .css({
+      'height': height,
+    });
     // 팝업 높이 만큼 콘텐츠 영역 높이 설정 후 본 페이지 hidden, 스크롤 최상단으로 올려 팝업만 보이도록 설정
     $('body')
-      .css({
-        'overflow-y': 'auto',
+    .css({
+      'overflow-y': 'auto',
         'min-height': '100vh',
         'height': height,
       });
     page.hide();
     $(document).scrollTop(0);
-    
   }
 
   function complete() {
@@ -1315,11 +1321,24 @@ var fnLayerScreenShot2 = (function() {
     $('body').removeAttr('style');
     page.show();
     $(document).scrollTop(scrlTop); // 팝업 열었을 때의 스크롤 위치로 다시 이동
+    status = 'complete';
+  }
+
+  function reset(el) {
+    if ( status == 'set' ) {
+      console.log('reset');
+      $(el).removeClass('setScreenShot').removeAttr('style');
+      $('body').removeAttr('style');
+      $(el).siblings('.wrap_contents').find('section').show();
+      $(document).scrollTop(scrlTop);
+      status = '';
+    }
   }
 
   return {
     set: set,
-    complete: complete
+    complete: complete,
+    reset: reset,
   }
 })();
 
