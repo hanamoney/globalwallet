@@ -115,6 +115,7 @@ mark {
 }
 
 /* [Layout] */
+html.overflow,
 body.overflow {
   overflow: hidden;
 }
