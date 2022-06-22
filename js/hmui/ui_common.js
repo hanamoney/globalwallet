@@ -173,6 +173,7 @@ var _iOSInpFixdPos = function() {
       var pos = -(height - viewport.height) + 'px';
       
       $el.css('transform', 'translateY(' +  pos + ')');
+      $('body').addClass('overflow');
     });
 
     // keyboard 닫힘 시 - focus out
@@ -193,6 +194,7 @@ var iOSKeyBoardHeight = function(keyboardHeight) {
       var pos =  -keyboardHeight + 'px';
       $(el).css('transform', 'translateY(' +  pos + ')');
     });
+    $('body').addClass('overflow');
   }
 }
 
@@ -207,7 +209,8 @@ var iOSKeyBoardHide = function() {
 }
 
 var _resetInpWithFixedBtn = function () {
-  console.log('reset input');
+  // console.log('reset input');
+  $('body').removeClass('overflow');
   $('.section_bottom_fixed > div').each(function(idx, el) {
     $(el).css('transform', '');
   });
