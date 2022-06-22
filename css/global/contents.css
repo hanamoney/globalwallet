@@ -2387,6 +2387,13 @@
 }
 
 /* AOS 구버전 애니메이션 */
+.AOS_old .wrap_moneybag_all .list_moneybag::after,
+.AOS_old .visual_usr_card,
+.AOS_old .visual_usr_card.transform .img_shoppingbag,
+.AOS_old .visual_usr_character .img_character_aero,
+.AOS_old .visual_usr_character .img_cloud1,
+.AOS_old .visual_usr_character .img_cloud2,
+.AOS_old .visual_gsp_overseas.transform .img_shoppingbag,
 .AOS_old .visual_gsp_card,
 .AOS_old .visual_gsp_card .img_drone_box,
 .AOS_old .section_cont.about_travlog .visual_gsp_travlog.transform,
@@ -2396,8 +2403,15 @@
 .AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_krw::before,
 .AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_usd,
 .AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_usd::before,
-.AOS_old .visual_gsp_atm.transform { animation: none;}
+.AOS_old .wrap_vdb_list.transform li.empty::before,
+.AOS_old .section_cont.guide_hanamoney_6::before,
+.AOS_old .visual_gsp_atm.transform { animation: none; }
 .AOS_old .visual_gsp_atm.transform { transform: none; }
 .AOS_old .gsp_travlog_info .visual_gsp_cashback.transform .img_confetti_1,
 .AOS_old .gsp_travlog_info .visual_gsp_cashback.transform .img_confetti_2,
-.AOS_old .gsp_travlog_info .visual_gsp_cashback.transform .img_coinpop { transition: none;}
+.AOS_old .gsp_travlog_info .visual_gsp_cashback.transform .img_coinpop,
+.AOS_old .wrap_vdb_list.transform .chart_coin .img_coin,
+.AOS_old .list_benefit_tower li { transition: none; }
+.AOS_old .visual_usr_card { transform: translateY(0); }
+.AOS_old .wrap_vdb_list li.empty::before, 
+.AOS_old .section_cont.guide_hanamoney_6::before { transform: scale(1); }

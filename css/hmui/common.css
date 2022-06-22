@@ -4317,6 +4317,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 
 /* AOS 구버전 애니메이션 */
+.AOS_old .section_detail_trans .fnFixedTop { transition: none;}
+.AOS_old .section_prc_complete::after { animation: none; transform: scale(1);}
 .AOS_old .wrap_item_benefit li,
 .AOS_old .wrap_item_benefit .tit_wrap { transform: none; transition: none; opacity: 1;}
-.AOS_old .list_benefit_label:not(.type_full) li.transform .flag_free { animation: none; opacity: 1;}
+.AOS_old .list_benefit_label:not(.type_full) li.transform .flag_free,
+.AOS_old .list_benefit_label.type_full li.transform .flag_free { animation: none; opacity: 1;}
