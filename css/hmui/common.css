@@ -431,6 +431,9 @@ section[data-roll] {
 .txt_positive {
   color: #00928F !important;
 }
+.txt_black {
+  color: #000;
+}
 .txt_balloon {
   position: relative;
   display: inline-block;
@@ -2518,6 +2521,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .txt_toast {
   text-align: center;
+  word-break: keep-all;
 }
 .txt_toast_left {
   text-align: left;
