@@ -31,10 +31,12 @@ $(function(){
 
 var registUI = function(){
   // 스크롤 막기
-  $('body.overflow').on('touchmove', function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    console.log('block scroll');
+  $(document).on('touchmove', function(e){
+    if ($('body').hasClass('overflow')){
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('block scroll');
+    }
   });
 
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
