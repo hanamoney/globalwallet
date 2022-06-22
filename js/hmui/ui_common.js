@@ -32,8 +32,7 @@ $(function(){
 var registUI = function(){
   // body scroll 막기
   $(window).on('touchmove', function(e){
-    e.preventDefault();
-    e.stopPropagation();
+    console.log(e.target);
   });
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
