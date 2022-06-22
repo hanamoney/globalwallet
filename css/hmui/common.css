@@ -2136,6 +2136,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   line-height: 3.2rem;
   font-weight: 300;
   text-align: center;
+  word-break: keep-all;
 }
 .section_prc_complete .txt_complete em {
   font-weight: 700;
