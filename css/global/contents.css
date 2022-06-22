@@ -2396,6 +2396,7 @@
 .AOS_old .visual_gsp_overseas.transform .img_shoppingbag,
 .AOS_old .visual_gsp_card,
 .AOS_old .visual_gsp_card .img_drone_box,
+.AOS_old .visual_gsp_card .img_character_walk::after,
 .AOS_old .section_cont.about_travlog .visual_gsp_travlog.transform,
 .AOS_old .section_cont.about_travlog .visual_gsp_travlog.transform::before,
 .AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_globe::before,
@@ -2406,12 +2407,16 @@
 .AOS_old .wrap_vdb_list.transform li.empty::before,
 .AOS_old .section_cont.guide_hanamoney_6::before,
 .AOS_old .visual_gsp_atm.transform { animation: none; }
+.AOS_old .section_cont.about_travlog .visual_gsp_travlog,
 .AOS_old .visual_gsp_atm.transform { transform: none; }
-.AOS_old .gsp_travlog_info .visual_gsp_cashback.transform .img_confetti_1,
-.AOS_old .gsp_travlog_info .visual_gsp_cashback.transform .img_confetti_2,
-.AOS_old .gsp_travlog_info .visual_gsp_cashback.transform .img_coinpop,
+.AOS_old .gsp_travlog_info .visual_gsp_cashback .img_confetti_1,
+.AOS_old .gsp_travlog_info .visual_gsp_cashback .img_confetti_2,
+.AOS_old .gsp_travlog_info .visual_gsp_cashback .img_coinpop,
 .AOS_old .wrap_vdb_list.transform .chart_coin .img_coin,
 .AOS_old .list_benefit_tower li { transition: none; }
 .AOS_old .visual_usr_card { transform: translateY(0); }
-.AOS_old .wrap_vdb_list li.empty::before, 
-.AOS_old .section_cont.guide_hanamoney_6::before { transform: scale(1); }
+.AOS_old .wrap_vdb_list li.empty::before,
+.AOS_old .section_cont.guide_hanamoney_6::before,
+.AOS_old .gsp_travlog_info .visual_gsp_cashback .img_confetti_1,
+.AOS_old .gsp_travlog_info .visual_gsp_cashback .img_confetti_2 { transform: scale(1); }
+.AOS_old .gsp_travlog_info .visual_gsp_cashback .img_coinpop { transform: translateX(-50%); }
