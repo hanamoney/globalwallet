@@ -18,7 +18,7 @@ function iosV(ua) {
 $(function(){
   if (isAOS) {
     $('html').addClass('AOS');
-    if ( parseInt(androidV(ua)) < 5) {
+    if ( parseInt(androidV(ua)) < 6) {
       $('html').addClass('AOS_old');
     }
   } else {
@@ -342,6 +342,13 @@ var _selControl = function() {
   // custom option click
   $('.fnOpt').on('click', function(){
     $(this).closest('li').addClass('selected').siblings().removeClass('selected');
+
+    // 하단고정버튼이 없는 경우 리스트 클릭시 닫기
+    if ( !$(this).closest('.wrap_layer').hasClass('hasFixedBtn')) {
+      setTimeout(function(){
+        _closeSelList($(this));
+      }.bind($(this)), 0);
+    }
   });
 
   $('.fnCloseSel').on('click', function(){
@@ -654,7 +661,7 @@ var _layerPop = function() {
   * @description // 혜택리스트
   */
 var _showBenefitList = function() {
-  if ( parseInt(androidV(ua)) < 5 ) { return false; }
+  if ( parseInt(androidV(ua)) < 6 ) { return false; }
   var $el = $('.wrap_item_benefit');
   var tit = $el.find('.tit_wrap');
   var list = $el.find('.list_benefit li');
@@ -1239,7 +1246,7 @@ var fnHanamoneyGuideControl = function() {
   * @url GSP_002
  */
 var _gspTravlogInfo = function(){
-  if ( parseInt(androidV(ua)) < 5 ) { return false; }
+  if ( parseInt(androidV(ua)) < 6 ) { return false; }
   var $el = $('.gsp_travlog_info').closest('[data-roll="GSP"]').find('[data-animate="trans"]');
 
   $el.each(function(){
