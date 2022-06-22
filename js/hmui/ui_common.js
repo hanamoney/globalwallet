@@ -30,11 +30,6 @@ $(function(){
 });
 
 var registUI = function(){
-  // body scroll 막기
-  $('html.overflow').on('touchmove', function(e){
-    console.log(e.target);
-    e.preventDefault();
-  });
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
@@ -180,10 +175,6 @@ var _iOSInpFixdPos = function() {
       $el.css('transform', 'translateY(' +  pos + ')');
     });
 
-    if ( $('.contents').find('.section_bottom_fixed').length ) {
-      $('html').addClass('overflow');
-    }
-
     // keyboard 닫힘 시 - focus out
     if ( height - viewport.height == 0 ) {
       _resetInpWithFixedBtn();
@@ -202,7 +193,6 @@ var iOSKeyBoardHeight = function(keyboardHeight) {
       var pos =  -keyboardHeight + 'px';
       $(el).css('transform', 'translateY(' +  pos + ')');
     });
-    $('html').addClass('overflow');
   }
 }
 
@@ -218,7 +208,6 @@ var iOSKeyBoardHide = function() {
 
 var _resetInpWithFixedBtn = function () {
   // console.log('reset input');
-  $('html').removeClass('overflow');
   $('.section_bottom_fixed > div').each(function(idx, el) {
     $(el).css('transform', '');
   });
@@ -320,6 +309,19 @@ var _inpControl = function() {
         _resetInpWithFixedBtn();
     }
   });
+  // iOS focus 시 scroll 하면 input 초기화
+  if (isiOS) {
+    $('body').on('touchmove', function(e) {
+      var el = e.target.classList;
+      if (
+        inp.is(':focus') 
+        && !el.contains('inp') 
+        && !el.contains('btn_ico_clear') 
+        && (!$(e.target).parents('.section_bottom_fixed').length || !el.contains('.section_bottom_fixed')) ) {
+          _resetInpWithFixedBtn();
+        }
+    });
+  }
 };
 
 /**
