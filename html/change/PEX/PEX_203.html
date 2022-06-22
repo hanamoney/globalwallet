@@ -310,8 +310,8 @@
       });
 
       $('.wrap_notice .wrap_btn .btn_txt').on('click', function(){
-        // 컨펌창 호출 param 오픈할 팝업 id
-        fnOpenLayerPop('confirmId2');
+        // 컨펌창 호출 param (오픈할 팝업 id , 버튼element)
+        fnOpenLayerPop('confirmId2', $(this));
       });
     });
   </script>
