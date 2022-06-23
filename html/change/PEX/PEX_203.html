@@ -218,7 +218,8 @@
             <!-- // TV포인트 -->
 
             <div class="wrap_btn">
-              <button type="button" id="" class="btn_txt txt_point_1">개인정보 제3자 제공 동의 철회하기</button>
+              <!-- 컨펌창 닫기 후 해당 버튼으로 포커스 보내기 위해서 data-name="열컨펌창ID" 속성 추가 -->
+              <button type="button" id="" class="btn_txt txt_point_1" data-name="confirmId2">개인정보 제3자 제공 동의 철회하기</button>
             </div>
           </div>
         </div>
@@ -317,7 +318,7 @@
 
       $('.wrap_notice .wrap_btn .btn_txt').on('click', function(){
         // 컨펌창 호출 param (오픈할 팝업 id , 버튼element)
-        fnOpenLayerPop('confirmId2', $(this));
+        fnOpenLayerPop('confirmId2');
       });
 
       // 토스트팝업 호출 퍼블확인용
