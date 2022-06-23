@@ -646,8 +646,8 @@ section[data-roll] {
   -webkit-tap-highlight-color: transparent;
 }
 .btn_ico_more {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2.4rem;
+  height: 2.4rem;
   background-image: url('../../images/hmui/btn_more.png');
 }
 .btn_info .ico_info {
@@ -3947,7 +3947,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .section_moneybag .box_moneybag .btn_ico_more {
   position: absolute;
   top: 1.6rem;
-  right: 1.2rem;
+  right: 0.6rem;
 }
 .section_moneybag .swiper-slide {
   padding-bottom: 5.2rem;
