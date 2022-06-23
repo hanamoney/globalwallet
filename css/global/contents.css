@@ -351,9 +351,6 @@
 
 /* [HMN] - 하나머니 메인 */
 .section_moneybag_all {
-  padding-top: 1.6rem;
-  padding-top: calc(constant(safe-area-inset-top) + 1.6rem);
-  padding-top: calc(env(safe-area-inset-top) + 1.6rem);
   height: 100%;
 }
 .wrap_moneybag_none {
@@ -364,7 +361,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding-bottom: 8.0rem;
+  padding-bottom: 2.0rem;
 }
 .wrap_moneybag_none::before {
   content: '';
@@ -441,12 +438,10 @@
   content: '';
   display: block;
   width: 15.4rem;
-  /* height: 13.6rem; */
   height: 18.8vh;
   max-height: 13.6rem;
   margin: 2.0rem auto 1.6rem;
   background: url('../../images/hmui/img_zero_charge.png') no-repeat 50%;
-  /* background-size: 100%; */
   background-size: contain;
 }
 .hmn_travlog_info::after {
@@ -2400,6 +2395,18 @@
   }
   .section_cont.guide_hanamoney_6 {
     height: 73.9rem;
+  }
+}
+@media screen and (max-height:600px) {
+  .wrap_moneybag_none {
+    padding-bottom: 4.0rem;
+  }
+  .hmn_travlog_info::before {
+    margin-top: 1.0rem;
+    height: 14vh;
+  }
+  .wrap_layer.type_full .btn_ico_close.type_bottom {
+    bottom: 2.0rem;
   }
 }
 
