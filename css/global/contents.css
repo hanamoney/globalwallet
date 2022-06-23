@@ -441,10 +441,13 @@
   content: '';
   display: block;
   width: 15.4rem;
-  height: 13.6rem;
+  /* height: 13.6rem; */
+  height: 18.8vh;
+  max-height: 13.6rem;
   margin: 2.0rem auto 1.6rem;
   background: url('../../images/hmui/img_zero_charge.png') no-repeat 50%;
-  background-size: 100%;
+  /* background-size: 100%; */
+  background-size: contain;
 }
 .hmn_travlog_info::after {
   content: '';
