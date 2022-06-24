@@ -351,6 +351,9 @@
 
 /* [HMN] - 하나머니 메인 */
 .section_moneybag_all {
+  padding-top: 1.6rem;
+  padding-top: calc(constant(safe-area-inset-top) + 1.6rem);
+  padding-top: calc(env(safe-area-inset-top) + 1.6rem);
   height: 100%;
 }
 .wrap_moneybag_none {
