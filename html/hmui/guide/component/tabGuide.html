@@ -42,7 +42,7 @@
           <li><a href="textGuide.html">텍스트</a></li>
           <li><a href="btnGuide.html">버튼</a>
           <li><a href="formGuide.html">폼</a></li>
-          <li><a href="tabGuide.html">탭</a></li>
+          <li class="on"><a href="tabGuide.html">탭</a></li>
           <li><a href="tableGuide.html">테이블</a></li>
           <li><a href="listGuide.html">리스트</a></li>
           <li><a href="accordionGuide.html">아코디언</a></li>
@@ -51,57 +51,10 @@
 
       <div class="contents">
         <section data-roll="guide">
-          <h2 class="guide_tit_page">레이아웃</h2>
-
-          <div class="guide_layout_view">
-            <div class="layout_root">
-              <span>root</span>
-              <div class="layout_head"><span>header</span></div>
-              <div class="layout_wrap_contents">
-                <span>wrap_contents</span>
-                <div class="layout_contents">
-                  <span>contents</span>
-                  <div class="layout_section"><span>section[data-roll="category"]</span></div>
-                  <div class="layout_fixed"><span>section_bottom_fixed</span></div>
-                </div>
-              </div>
-              <div class="layout_layer"><span>layer popup</span></div>
-            </div>
-          </div>
+          <h2 class="guide_tit_page">탭</h2>
 
 <xmp class="prettyprint lang-html">
-  <main id="root">
-    <header id="header">
-      <div class="inner_fixed">
-        <button class="btn_ico_prev"><span class="blind">이전</span></button>
-        <h1>페이지타이틀</h1>
-        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
-      </div>
-    </header>
-    <!-- // header -->
-
-    <div id="contents" class="wrap_contents">
-      <div class="contents">
-        <section data-roll="category">
-
-        </section>
-        <!-- // section -->
-
-        <!-- 하단고정 영역 -->
-        <div class="section_bottom_fixed">
-          <div class="wrap_btn_full">
-            <a href="#none" class="btn_full_secondary">button</a>
-            <button type="button" class="btn_full_primary">button</button>
-          </div>
-        </div>
-        <!-- // 하단고정 영역 -->
-      </div>
-    </div>
-    <!-- // contents-->
-
-    <!-- popup -->
-    <!-- // popup -->
-  </main>
+  
 </xmp>
           
         </section>
