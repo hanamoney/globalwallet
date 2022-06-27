@@ -7,6 +7,7 @@
   <meta name="format-detection" content="telephone=no">
   <title>text guide</title>
 
+  <link rel="stylesheet" href="../guide.css">
   <link rel="stylesheet" href="../../../../css/hmui/swiper.css">
   <link rel="stylesheet" href="../../../../css/hmui/animate.css">
   <link rel="stylesheet" href="../../../../css/hmui/common.css">
@@ -16,37 +17,54 @@
   <script src="../../../../js/hmui/lib/waypoints.min.js"></script>
   <script src="../../../../js/hmui/lib/jquery.counterup.js"></script>
   <script src="../../../../js/hmui/ui_common.js"></script>
-</head>
-<body>
-  <main id="root">
-    <header id="header">
-      <div class="inner_fixed">
-        <button class="btn_ico_prev"><span class="blind">이전</span></button>
-        <h1>페이지타이틀</h1>
-        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
-      </div>
-    </header>
 
-    <div id="contents" class="wrap_contents">
+  <link rel="stylesheet" href="../prettify.css">
+  <script src="../run_prettify.js"></script>
+</head>
+<body onload="PR.prettyPrint()">
+  <main id="root" class="guideRoot">
+    <header id="guide_header">
+      <h1>하나머니 UI 가이드</h1>
+      <nav class="guide_nav">
+        <ul>
+          <li><a href="./convention/rule0101.html">퍼블리싱규칙</a></li>
+          <li class="on"><a href="layoutGuide.html">HMUI</a></li>
+          <li><a href="./pagelist/rule0301.html">화면목록</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="contents" class="wrap_contents guide">
+      <div class="lnb">
+        <ul>
+          <li><a href="layoutGuide.html">레이아웃</a></li>
+          <li><a href="layerGuide.html">레이어팝업</a></li>
+          <li class="on"><a href="textGuide.html">텍스트</a></li>
+          <li><a href="btnGuide.html">버튼</a>
+          <li><a href="formGuide.html">폼</a></li>
+          <li><a href="tabGuide.html">탭</a></li>
+          <li><a href="tableGuide.html">테이블</a></li>
+          <li><a href="listGuide.html">리스트</a></li>
+          <li><a href="accordionGuide.html">아코디언</a></li>
+        </ul>
+      </div>
+
       <div class="contents">
         <section data-roll="guide">
-          <div class="wrap_tit">
-            <h2 class="tit_page">title</h2>
-            <p class="txt">desc</p>
-          </div>
+          <h2 class="guide_tit_page">텍스트</h2>
 
-          <div class="wrap_tit">
-            <h2 class="tit_page_bold">title</h2>
-            <p class="txt">desc</p>
-          </div>
+          <h3 class="guide_tit">타이틀 텍스트</h3>
+<xmp class="prettyprint lang-html">
+<div class="wrap_tit">
 
-          <div class="wrap_tit">
-            <h3 class="tit_sub">sub title</h3>
-            <p class="txt">desc</p>
-          </div>
-
-          <span class="txt_balloon">balloon text</span>
+</div>
+</xmp>
+          
         </section>
+      </div>
+
+
+      <div class="guide_view">
+        <iframe src="sample_text.html"></iframe>
       </div>
     </div>
   </main>
