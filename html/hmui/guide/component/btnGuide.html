@@ -7,6 +7,7 @@
   <meta name="format-detection" content="telephone=no">
   <title>button guide</title>
 
+  <link rel="stylesheet" href="../guide.css">
   <link rel="stylesheet" href="../../../../css/hmui/swiper.css">
   <link rel="stylesheet" href="../../../../css/hmui/animate.css">
   <link rel="stylesheet" href="../../../../css/hmui/common.css">
@@ -16,90 +17,267 @@
   <script src="../../../../js/hmui/lib/waypoints.min.js"></script>
   <script src="../../../../js/hmui/lib/jquery.counterup.js"></script>
   <script src="../../../../js/hmui/ui_common.js"></script>
-</head>
-<body>
-  <main id="root">
-    <header id="header">
-      <div class="inner_fixed">
-        <button class="btn_ico_prev"><span class="blind">이전</span></button>
-        <h1>페이지타이틀</h1>
-        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
-      </div>
-    </header>
 
-    <div id="contents" class="wrap_contents">
+  <link rel="stylesheet" href="../prettify.css">
+  <script src="../run_prettify.js"></script>
+
+</head>
+<body onload="PR.prettyPrint()">
+  <main id="root" class="guideRoot">
+    <header id="guide_header">
+      <h1>하나머니 UI 가이드</h1>
+      <nav class="guide_nav">
+        <ul>
+          <li><a href="./convention/rule0101.html">퍼블리싱규칙</a></li>
+          <li class="on"><a href="layoutGuide.html">HMUI</a></li>
+          <li><a href="./pagelist/rule0301.html">화면목록</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="contents" class="wrap_contents guide">
+      <div class="lnb">
+        <ul>
+          <li><a href="layoutGuide.html">레이아웃</a></li>
+          <li><a href="layerGuide.html">레이어팝업</a></li>
+          <li><a href="textGuide.html">텍스트</a></li>
+          <li class="on"><a href="btnGuide.html">버튼</a>
+          <li><a href="formGuide.html">폼</a></li>
+          <li><a href="tabGuide.html">탭</a></li>
+          <li><a href="tableGuide.html">테이블</a></li>
+          <li><a href="listGuide.html">리스트</a></li>
+          <li><a href="accordionGuide.html">아코디언</a></li>
+        </ul>
+      </div>
+
       <div class="contents">
         <section data-roll="guide">
+          <h2 class="guide_tit_page">버튼</h2>
+
+          <h3 class="guide_tit">btn_box (height: 44px)</h3>
+          <p class="guide_txt">- full button일 때 type_full 클래스 추가</p>
+          <div class="wrap_btn type_full">
+            <button type="button" class="btn_box">point</button>
+          </div>
+          <div class="wrap_btn type_full">
+            <button type="button" class="btn_box btn_primary_2">Primary green</button>
+          </div>
+          <div class="wrap_btn type_full">
+            <button type="button" class="btn_box type_line">line</button>
+          </div>
+          <div class="wrap_btn type_full">
+            <button type="button" class="btn_box btn_primary">Primary</button>
+          </div>
+          <div class="wrap_btn type_full">
+            <button type="button" class="btn_box btn_secondary">Secondary</button>
+            <button type="button" class="btn_box btn_primary">Primary</button>
+          </div>
+          <div class="wrap_btn type_full">
+            <button type="button" class="btn_box btn_secondary" disabled>Secondary disabled</button>
+            <button type="button" class="btn_box btn_primary" disabled>Primary disabled</button>
+          </div>
+          <div class="wrap_btn type_full">
+            <a href="#none" class="btn_box btn_secondary disabled" disabled>Secondary disabled</a>
+            <a href="#none" class="btn_box btn_primary disabled" disabled>Primary disabled</a>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_btn type_full">
+  <button type="button" class="btn_box">point</button>
+</div>
+
+<div class="wrap_btn type_full">
+  <button type="button" class="btn_box btn_primary_2">point</button>
+</div>
+
+<div class="wrap_btn type_full">
+  <button type="button" class="btn_box type_line">line</button>
+</div>
+
+<div class="wrap_btn type_full">
+  <button type="button" class="btn_box btn_primary">Primary</button>
+</div>
+
+<div class="wrap_btn type_full">
+  <button type="button" class="btn_box btn_secondery">Secondary </button>
+  <button type="button" class="btn_box btn_primary">Primary</button>
+</div>
+
+<div class="wrap_btn type_full">
+  <button type="button" class="btn_box btn_secondary" disabled>Secondary disabled</button>
+  <button type="button" class="btn_box btn_primary" disabled>Primary disabled</button>
+</div>
+
+<div class="wrap_btn type_full">
+  <a href="#none" class="btn_box btn_secondary disabled" disabled>Secondary disabled</a>
+  <a href="#none" class="btn_box btn_primary disabled" disabled>Primary disabled</a>
+</div>
+</xmp>
+          
+
+          <h3 class="guide_tit">btn_box_m (height: 50px)</h3>
+          <p class="guide_txt">- style 클래스는 btn_box와 동일</p>
+          <div class="wrap_btn type_full">
+            <button type="button" class="btn_box_m btn_primary">Primary</button>
+          </div>
+          <p class="guide_txt">- rounded 14px</p>
+          <div class="wrap_btn type_full">
+            <button type="button" class="btn_box_m btn_primary rounded">Primary</button>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_btn">
+  <button type="button" class="btn_box_m btn_primary">button</button>
+</div>
+
+<div class="wrap_btn type_full">
+  <button type="button" class="btn_box_m btn_primary rounded">Primary</button>
+</div>
+</xmp>
+
+
+          <h3 class="guide_tit">btn_box_big (height: 54px)</h3>
+          <div class="wrap_btn type_full">
+            <button type="button" class="btn_box_big btn_secondary">Secondary</button>
+            <button type="button" class="btn_box_big btn_primary">Primary</button>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_btn type_full">
+  <button type="button" class="btn_box_big btn_secondary">Secondary</button>
+  <button type="button" class="btn_box_big btn_primary">Primary</button>
+</div>
+</xmp>
+
+
+          <h3 class="guide_tit">btn_box_sm (height: 34px)</h3>
+          <div class="wrap_btn">
+            <button type="button" class="btn_box_sm">button</button>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_btn">
+  <button type="button" class="btn_box_sm">button</button>
+</div>
+</xmp>
+
+
+          <h3 class="guide_tit">btn_round</h3>
+          <div class="wrap_btn">
+            <button type="button" class="btn_round btn_primary">button</button>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_btn">
+  <button type="button" class="btn_round btn_primary">button</button>
+</div>
+</xmp>
+
+
+          <h3 class="guide_tit">text btn</h3>
+          <p class="guide_txt">- wrap_btn_center : 센터정렬 공통</p>
+          <p class="guide_txt">- wrap_btn_right : 오른쪽정렬 공통</p>
+          <br>
+          <div class="wrap_btn">
+            <a href="#none" class="btn_txt">default14</a>
+            <br>
+            <a href="#none" class="btn_txt txt_point_1">point</a>
+            <br>
+            <a href="#none" class="btn_txt_s">size16</a>
+            <br>
+            <a href="#none" class="btn_txt_m">size18</a>
+          </div>
           <div class="wrap_btn_right">
-            <a href="#none" class="btn_txt">오른쪽 정렬 버튼</a>
-            <a href="#none" class="btn_txt txt_point_1">오른쪽 정렬 버튼</a>
+            <a href="#none" class="btn_txt">오른쪽정렬</a>
           </div>
           <div class="wrap_btn_center">
-            <a href="#none" class="btn_link">센터 정렬 링크 버튼<span class="ico_arr_link_s"></span></a>
+            <a href="#none" class="btn_txt">센터정렬</a>
           </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_btn">
+  <a href="#none" class="btn_txt">default14</a>
+  <br>
+  <a href="#none" class="btn_txt txt_point_1">default14_point</a>
+  <br>
+  <a href="#none" class="btn_txt_s">size16</a>
+  <br>
+  <a href="#none" class="btn_txt_m">size18</a>
+</div>
+<div class="wrap_btn_right">
+  <a href="#none" class="btn_txt">오른쪽정렬</a>
+</div>
+<div class="wrap_btn_center">
+  <a href="#none" class="btn_txt">센터정렬</a>
+</div>
+</xmp>
 
+
+          <h3 class="guide_tit">btn with link arrow</h3>
           <div class="wrap_btn">
-            <button type="button" class="btn_round btn_primary">전환</button>
+            <a href="#none" class="btn_link">링크 버튼<span class="ico_arr_link_s"></span></a>
           </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_btn">
+  <a href="#none" class="btn_link">링크 버튼<span class="ico_arr_link_s"></span></a>
+</div>
+</xmp>
+
+          <h3 class="guide_tit">하단고정버튼</h3>
+<xmp class="prettyprint lang-html">
+<div class="section_bottom_fixed">
+  <div class="wrap_btn_full">
+    <button type="button" class="btn_full_primary">button</button>
+  </div>
+</div>
+
+<!-- 분할 -->
+<div class="section_bottom_fixed">
+  <div class="wrap_btn_full">
+    <button type="button" class="btn_full_secondary">button</button>
+    <button type="button" class="btn_full_primary">button</button>
+  </div>
+</div>
+
+<!-- icon type -->
+<div class="section_bottom_fixed">
+  <div class="wrap_btn_full type_ico">
+    <button type="button" class="btn_full_secondary btn_ico_download"><span class="blind">저장하기</span></button>
+    <button type="button" class="btn_full_primary fnClosePop">확인</button>
+  </div>
+</div>
+</xmp>
 
 
+          <h3 class="guide_tit">wrap_btn_box</h3>
+          <p class="guide_txt">- 버튼 width 1/5</p>
+          <p class="guide_txt">- 버튼 노출 개수가 다른 경우 type 추가하여 사용</p>
           <div class="wrap_btn_box">
             <ul>
               <li><button type="button">1만</button></li>
               <li><button type="button">5만</button></li>
               <li><button type="button">10만</button></li>
               <li><button type="button">100만</button></li>
-              <li>
-                <!-- <div class="tooltip_bubble right">
-                  <p><em class="txt_num">1,251,230</em>까지 채울 수 있어요</p>
-                  <span class="bubble_caret"></span>
-                </div> -->
-                <button type="button">최대</button>
-              </li>
+              <li><button type="button">최대</button></li>
             </ul>
           </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_btn_box">
+  <ul>
+    <li><button type="button">1만</button></li>
+    <li><button type="button">5만</button></li>
+    <li><button type="button">10만</button></li>
+    <li><button type="button">100만</button></li>
+    <li><button type="button">최대</button></li>
+  </ul>
+</div>
+</xmp>
 
-          <div class="wrap_btn">
-            <a href="#none" class="btn_box_sm">무료적립받기</a>
-          </div>
 
-          <div class="wrap_btn type_full">
-            <a href="#none" class="btn_box">트래블로그 카드로 해외 직구 해보실래요?</a>
-          </div>
+          <h3 class="guide_tit">아이콘 버튼</h3>
+<xmp class="prettyprint lang-html">
 
-          <div class="wrap_btn type_full">
-            <a href="#none" class="btn_box_m btn_primary">무료적립받기</a>
-          </div>
-          <div class="wrap_btn type_full">
-            <button type="button" class="btn_box_m btn_primary rounded">전환하기</button>
-          </div>
-          <div class="wrap_btn type_full">
-            <a href="#none" class="btn_box_m type_line">무료적립받기</a>
-          </div>
-
-          <div class="wrap_btn type_full">
-            <a href="#none" class="btn_box_big btn_secondery">버튼</a>
-            <a href="#none" class="btn_box_big btn_primary">버튼</a>
-          </div>
-
-          <div class="wrap_btn_full">
-            <button type="button" class="btn_full_primary fnClosePop">확인</button>
-          </div>
-
-          <div class="wrap_btn_full type_ico">
-            <button type="button" class="btn_full_secondary btn_ico_download"><span class="blind">저장하기</span></button>
-            <button type="button" class="btn_full_primary fnClosePop">확인</button>
-          </div>
+</xmp>
 
         </section>
-        <!-- 하단고정 영역 -->
-        <div class="section_bottom_fixed">
-          <div class="wrap_btn_full">
-            <a href="#none" class="btn_full_secondary">button</a>
-            <button type="button" class="btn_full_primary">button</button>
-          </div>
-        </div>
-        <!-- //하단고정 영역 -->
+      </div>
+
+
+      <div class="guide_view">
+        <iframe src="sample_btn.html"></iframe>
       </div>
     </div>
   </main>

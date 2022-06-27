@@ -29,7 +29,7 @@
 }
 .wrap_contents.guide {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: calc(100% - 6.0rem);
 }
 .wrap_contents.guide .lnb {
