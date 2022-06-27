@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>layer guide</title>
+
+  <link rel="stylesheet" href="../../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../../css/global/contents.css">
+  <script src="../../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>페이지타이틀</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="guide">
+          <div class="section_">
+            <button type="button" class="btn fnOpenPop" data-name="popupId">open Bototm-layer</button>
+            <br>
+            <br>
+            <button type="button" class="btn fnOpenPop" data-name="popupfullId">open Full-layer</button>
+            <br>
+            <br>
+            <button type="button" class="btn fnOpenPop" data-name="confirmId">open Confirm</button>
+            <br>
+            <br>
+            <button type="button" class="btn testToast">토스트</button>
+            <br>
+            <br>
+            <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip">툴팁텍스트<span class="ico_tooltip"><span class="blind">툴팁</span></span></button>
+            <div style="text-align:center">
+              <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip">툴팁텍스트<span class="ico_tooltip"><span class="blind">툴팁</span></span></button>
+            </div>
+            <div style="text-align:right">
+              <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip">툴팁텍스트<span class="ico_tooltip"><span class="blind">툴팁</span></span></button>
+            </div>
+          </div>
+        </section>
+        <!-- // section -->
+
+        <!-- 하단고정 영역 -->
+        <div class="section_bottom_fixed">
+          <div class="wrap_btn_full">
+            <a href="#none" class="btn_full_secondary">button</a>
+            <button type="button" class="btn_full_primary">button</button>
+          </div>
+        </div>
+        <!-- // 하단고정 영역 -->
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="popupId" class="wrap_layer" data-dim="true">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">타이틀</h2>
+        </div>
+        <div class="content_layer">
+
+        </div>
+        <div class="section_bottom_fixed">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_primary fnClosePop">button</button>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // popup -->
+
+    <!-- popup -->
+    <div id="popupfullId" class="wrap_layer type_full">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">타이틀</h2>
+        </div>
+        <div class="content_layer">
+          <button type="button" class="btn fnOpenPop" data-name="popupId">open Bototm-layer</button>
+          <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip"><span class="ico_tooltip"></span><span class="blind">툴팁</span></button>
+        </div>
+        <div class="section_bottom_fixed">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_primary">button</button>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // popup -->
+
+    <!-- popup -->
+    <div id="confirmId" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert">confirm msg here</p>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_secondary fnClosePop">button</button>
+            <button type="button" class="btn_full_primary fnClosePop">button</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // popup -->
+
+    <!-- tooltip -->
+    <div id="tooltip" class="wrap_tooltip">
+      <div class="inner_tooltip">
+        <p class="tit_tooltip">툴팁타이틀</p>
+        <p class="txt_tooltip">툴팁 내용</p>
+        <button class="btn_ico_close fnCloseTooltip"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // tooltip -->
+
+    <!-- toast -->
+    <div id="toast" class="wrap_toast">
+      <p class="txt_toast">토스트팝업 메시지</p>
+    </div>
+    <!-- // toast -->
+
+  </main>
+  
+  <script>
+    $(function(){
+      $('.testToast').on('click', function(){
+        // 토스트팝업 호출
+        fnToastPop('toast');
+      })
+    });
+  </script>
+</body>
+</html>
