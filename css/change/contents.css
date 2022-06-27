@@ -217,6 +217,7 @@
 }
 .wrap_pex_spinner .wrap_box .pex_info {
   margin-top: 1.0rem;
+  padding: 1.8rem 0 1.3rem;
   border-radius: 1.2rem;
   background-color: #fff;
   text-align: center;
@@ -226,14 +227,21 @@
   font-size: 1.4rem;
   line-height: 2.0rem;
   font-weight: 300;
+  vertical-align: middle;
 }
 .wrap_pex_spinner .wrap_box .pex_info .logo_hanamoney_s {
   width: 2.0rem;
   height: 2.0rem;
+  margin: 0 0.4rem 0 1.0rem;
+  vertical-align: middle;
 }
 .wrap_pex_spinner .wrap_box .pex_info .txt_num {
-  font-weight: 1.8rem;
-  
+  display: inline-block;
+  color: #6E7D85;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  vertical-align: middle;
 }
 
 @supports ((-webkit-filter:none) or (filter:none)) {

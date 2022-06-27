@@ -558,6 +558,9 @@ section[data-roll] {
   display: inline-block;
   vertical-align: top;
 }
+.txt_underline {
+  text-decoration: underline;
+}
 
 /* Align */
 .wrap_dis_tbl > ul {
@@ -672,7 +675,7 @@ section[data-roll] {
   background-image: url('../../images/hmui/btn_minus_disabled.png');
 }
 .btn_plus:disabled {
-  background-image: url('../../images/hmui/btn_minus_disabled.png');
+  background-image: url('../../images/hmui/btn_plus_disabled.png');
 }
 [class^="ico_arr_"] {
   display: inline-block;
@@ -2234,6 +2237,31 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .wrap_msg_info .tit + .txt {
   margin-top: 0.8rem;
+}
+.wrap_msg_alarm {
+  text-align: center;
+}
+.wrap_msg_alarm .tit_sub {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+.msg_alarm {
+  position: relative;
+  padding-top: 3.0rem;
+}
+.msg_alarm::before {
+  content: '';
+  display: block;
+  width: 8.0rem;
+  height: 6.8rem;
+  margin: 0 auto 2.9rem;
+  background: url('../../images/hmui/img_alarm.png') no-repeat 50%;
+  background-size: 100%;
+}
+.msg_alarm .txt {
+  color: #849594;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
 }
 
 /* Layer pop */
