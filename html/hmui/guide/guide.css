@@ -33,7 +33,7 @@
   height: calc(100% - 6.0rem);
 }
 .wrap_contents.guide .lnb {
-  width: 20.0rem;
+  width: 200px;
   padding: 2.0rem 2.0rem;
   border-right: 1px solid #E3EBEE;
 }
@@ -56,11 +56,23 @@
   line-height: 2.0rem;
 }
 .wrap_contents.guide .contents {
-  width: calc(100% - 20rem);
+  width: calc(100% - 200px - 400px);
 }
 .wrap_contents.guide section[data-roll="guide"] {
   width: 100%;
   padding: 5.0rem 3.0rem;
+}
+.wrap_contents.guide .guide_view {
+  width: 400px;
+  height: 100%;
+  text-align: center;
+  background-color: #222;
+}
+.wrap_contents.guide .guide_view iframe {
+  width: 360px;
+  height: 720px;
+  border: none;
+  background-color: #fff;
 }
 .guide_tit_page {
   margin-bottom: 2.0rem;
