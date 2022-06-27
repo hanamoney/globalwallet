@@ -1988,6 +1988,17 @@ a.wrap_box > .txt:first-child {
   margin-top: -0.2rem;
   padding: 0.5rem 0;
 }
+.wrap_box .txt_info_center {
+  text-align: center;
+}
+.wrap_box .txt_info_center .txt {
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.wrap_box .txt_info_center .txt .sub {
+  display: block;
+  color: #849594;
+}
 .wrap_box.bg_bluegrey .list_info .tit {
   color: #4F5D64;
 }
@@ -2164,6 +2175,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .section_prc_complete .wrap_btn_center {
   margin-top: 3.4rem;
+}
+.wrap_layer.type_full .section_prc_complete .wrap_box {
+  margin: 1.0rem 0;
 }
 .wrap_layer:not(.type_full) .section_prc_complete {
   padding-top: 3.4rem;

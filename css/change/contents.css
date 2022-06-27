@@ -8,7 +8,8 @@
 .section_top_info.pex_hanamoney {
   background: linear-gradient(143.05deg, #5CE4C9 -84.85%, #FFE9DD 132.52%);
 }
-.section_top_info.pex_hanamoney.type_nopoint {
+.section_top_info.pex_hanamoney.type_nopoint,
+.section_top_info.pex_hanamoney.bg_bluegrey {
   background: #F2F6F6;
 }
 .section_top_info.pex_hanamoney.type_nopoint .total_amount::after {
@@ -20,12 +21,21 @@
   background: url('../../images/hmui/bg_empty.png') no-repeat 50%;
   background-size: 100%;
 }
+.section_top_info.pex_hanamoney .wrap_tit {
+  padding: 0;
+}
+.section_top_info.pex_hanamoney .wrap_tit .tit_sub {
+  font-weight: 300;
+}
 .section_list_point {
   position: relative;
   padding-top: 1.6rem;
 }
 .section_list_point .tooltip_bubble {
   top: -3.4rem;
+}
+.section_list_point .msg_noresult::before {
+  margin-top: 4.6rem;
 }
 .pex_list li {
   position: relative;
@@ -111,6 +121,22 @@
 }
 .pex_list .box .txt_info .ico_arr_r_2 {
   margin: 0 0.5rem;
+}
+.pex_list div.box .txt_info {
+  display: block;
+  padding: 0.3rem 0 0;
+  color: #849594;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+.pex_list .box.type_err .txt_num {
+  color: #849594;
+}
+.pex_list .box.type_err .txt_info {
+  color: #ec4361;
+}
+.pex_list .box.type_positive .txt_info {
+  color: #00928f;
 }
 .wrap_pex_logo {
   margin-top: 6.0rem;
