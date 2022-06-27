@@ -1369,7 +1369,9 @@ button.btn_primary_2 {
   background-color: #00928F;
 }
 a.btn_secondery,
-button.btn_secondery {
+button.btn_secondery,
+a.btn_secondary,
+button.btn_secondary {
   background-color: #E5EAED;
   color: #848F95;
 }
