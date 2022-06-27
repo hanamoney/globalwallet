@@ -58,6 +58,9 @@
 .wrap_contents.guide .contents {
   width: calc(100% - 200px - 400px);
 }
+.wrap_contents.guide .contents.convention {
+  width: calc(100% - 200px);
+}
 .wrap_contents.guide section[data-roll="guide"] {
   width: 100%;
   padding: 5.0rem 3.0rem;
@@ -86,9 +89,43 @@
   line-height: 2.6rem;
   font-weight: 700;
 }
+.tit {
+  margin-top: 1.0rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+}
 .guide_txt {
   font-size: 1.4rem;
   line-height: 2.0rem;
+}
+.guide_txt xmp {
+  display: inline-block;
+  width: auto;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+  white-space: pre-wrap;
+}
+.guide_tbl {
+  margin: 1.0rem 0;
+  border-top: 1px solid #6E7D85;
+}
+.guide_tbl table {
+  width: 100%;
+}
+.guide_tbl table td,
+.guide_tbl table th {
+  padding: 1.0rem;
+  border: 1px solid #E3EBEE;
+  border-top: 0;
+}
+.guide_tbl table th:first-child,
+.guide_tbl table td:first-child {
+  border-left: 0;
+}
+.guide_tbl table th:last-child,
+.guide_tbl table td:last-child {
+  border-right: 0;
 }
 
 /* layout guide */
