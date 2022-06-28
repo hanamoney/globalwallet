@@ -81,7 +81,7 @@
   width: calc(100% - 200px);
 }
 .wrap_contents.guide .contents.pagelist section[data-roll="guide"] {
-  padding-top: 0;
+  padding: 0 0.3rem;
 }
 .wrap_contents.guide .contents.pagelist .guide_view {
   width: 100%;
@@ -89,6 +89,7 @@
 }
 .wrap_contents.guide .contents.pagelist .guide_view iframe {
   width: 100%;
+  height: 100%;
 }
 .guide_tit_page {
   margin-bottom: 3.0rem;
@@ -155,8 +156,25 @@ h4.tit {
   display: flex;
   justify-content: space-between;
 }
-.box_guide_index {
-
+.box_guide_index > a {
+  display: inline-block;
+  margin-bottom: 1.0rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.box_guide_index a:hover {
+  text-decoration: underline;
+}
+.box_guide_index > ul > li > a {
+  display: inline-block;
+  padding: 1.0rem 0;
+  font-size: 1.6rem;
+}
+.box_guide_index > ul > li > ul a {
+  display: inline-block;
+  padding: 0.5rem 0;
+  color: #6E7D85;
+  font-size: 1.4rem;
 }
 
 /* layout guide */
