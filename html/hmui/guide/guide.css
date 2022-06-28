@@ -171,3 +171,11 @@ h4.tit {
   padding: 2.0rem;
   border: 1px solid #d8dfdf;
 }
+
+/* accordion */
+.guide .fnSimpleAcco .btn_acco .ico_arr_down_2 {
+  vertical-align: middle;
+}
+.guide .fnSimpleAcco .wrap_acco {
+  display: none;
+}
