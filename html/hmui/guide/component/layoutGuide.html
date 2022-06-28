@@ -55,6 +55,7 @@
       <div class="contents">
         <section data-roll="guide">
           <h2 class="guide_tit_page">레이아웃</h2>
+          <h3 class="guide_tit">레이아웃 구조</h3>
           <p class="guide_txt">- section[data-roll="<span class="txt_point_2">CODE</span>"] 에 콘텐츠 내용 (CODE 변경하여 사용)</p>  
 
           <div class="guide_layout_view">
@@ -107,7 +108,48 @@
     <!-- // popup -->
   </main>
 </xmp>
-          
+
+          <h3 class="guide_tit">contents 영역</h3>
+          <p class="guide_txt">secion_cont 연관이 있는 콘텐츠 간 그룹핑을 위한 클래스 간격50px</p> 
+<xmp class="prettyprint lang-html">
+<div class="section_cont">
+  // contents here
+</div>
+
+<div class="section_cont bg_bluegrey">
+  // contents here
+</div>
+
+<div class="section_cont bg_grey">
+  // contents here
+</div>
+
+<div class="section_cont type_sub">
+  // contents here
+</div>
+</xmp>
+
+          <h3 class="guide_tit">hero 영역</h3>
+          <p class="guide_txt">공통 외의 스타일은 페이지별로 클래스를 추가하여 사용</p>
+          <h4 class="tit">visual type</h4>
+<xmp class="prettyprint lang-html">
+<div class="section_top_visual">
+  <div class="wrap_tit">
+    <h2 class="tit">tit</h2>
+  </div>
+</div>
+</xmp>
+
+          <h4 class="tit">info type</h4>
+<xmp class="prettyprint lang-html">
+<div class="section_top_info">
+  <div class="wrap_tit">
+    <h2 class="tit">tit</h2>
+  </div>
+</div>
+</xmp>
+
+
         </section>
       </div>
 
