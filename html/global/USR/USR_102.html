@@ -39,8 +39,17 @@
             <ul class="wrap_box_list">
               <li>
                 <div class="chk type_box">
-                  <input type="checkbox" id="chk1_1" name="chk1">
+                  <input type="radio" id="chk1_1" name="chk1">
                   <label for="chk1_1">
+                    <p class="txt_bank">하나은행</p>
+                    <p class="txt_acc">379*****26507</p>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="chk type_box">
+                  <input type="radio" id="chk1_2" name="chk1">
+                  <label for="chk1_2">
                     <p class="txt_bank">하나은행</p>
                     <p class="txt_acc">379*****26507</p>
                   </label>
@@ -93,7 +102,7 @@
         <!-- 하단고정 영역 -->
         <div class="section_bottom_fixed">
           <div class="wrap_btn_full">
-            <button type="button" class="btn_full_primary">선택한 계좌로 연결할게요</button>
+            <button type="button" class="btn_full_primary" disabled>선택한 계좌로 연결할게요</button>
           </div>
         </div>
         <!-- // 하단고정 영역 -->
@@ -103,5 +112,16 @@
 
   </main>
   
+  <script>
+
+    $('.wrap_box_list input').on('change', function(){
+      if ( $(this).closest('.wrap_box_list').find('.chk input:checked').length ) {
+        $('.btn_full_primary').prop('disabled',false);
+      } else {
+        console.log('false');
+        $('.btn_full_primary').prop('disabled',true);
+      }
+    });
+  </script>
 </body>
 </html>
