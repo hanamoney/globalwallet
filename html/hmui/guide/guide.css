@@ -77,6 +77,19 @@
   border: none;
   background-color: #fff;
 }
+.wrap_contents.guide .contents.pagelist {
+  width: calc(100% - 200px);
+}
+.wrap_contents.guide .contents.pagelist section[data-roll="guide"] {
+  padding-top: 0;
+}
+.wrap_contents.guide .contents.pagelist .guide_view {
+  width: 100%;
+  background-color: #fff;
+}
+.wrap_contents.guide .contents.pagelist .guide_view iframe {
+  width: 100%;
+}
 .guide_tit_page {
   margin-bottom: 3.0rem;
   padding-bottom: 1.0rem;

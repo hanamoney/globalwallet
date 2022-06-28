@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>Page list</title>
+
+  <link rel="stylesheet" href="../../../../css/hmui/common.css">
+  <style>
+#header {width:100vw; display: flex; flex-wrap: wrap; flex-direction: column; height: 5.0rem; background-color:#fff;}
+h1 {text-align: center; font-size:1.8rem; font-weight:400; line-height: 5.0rem;}
+nav {width:100vw; height: 3.0rem;}
+nav ul {overflow-x: auto; width:100%; white-space: nowrap;}
+nav ul li {display: inline-block;}
+nav ul li a {display:block; height:3.0rem; padding: 0 2.0rem; border-radius: 1.5rem; color:#000; font-size: 1.2rem; line-height:3.0rem;}
+::-webkit-scrollbar {display: none;}
+.contents > section[data-roll="guide"] {padding: 5.0rem 2.4rem 6.0rem;}
+.tbl_wrap {border-top: 1px solid #6E7D85;}
+.tbl_wrap table {width:100%;}
+.tbl_wrap tr th,
+.tbl_wrap tr td {
+  padding: 0.8rem 0.6rem;
+  border-bottom: 1px solid #eee;
+}
+.tbl_wrap tr td:last-child span { display: block; }
+tr td:nth-child(4),
+tr td:nth-child(5) {
+  text-align: center;
+}
+.tbl_wrap tr td a {color:#666; text-decoration: underline;}
+.notLink {color: #999;}
+@media screen and (max-width: 767px) {
+  .contents > section[data-roll="guide"] {padding: 5.0rem 0 6.0rem;}
+  .tbl_wrap tr th,
+  .tbl_wrap tr td  {
+    font-size: 1.2rem;
+  }
+  tr th:first-child,
+  tr td:first-child,
+  tr th:last-child,
+  tr td:last-child,
+  tr th:nth-child(6),
+  tr td:nth-child(6) {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <h1>[포인트전환] 화면리스트</h1>
+    </header>
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="guide">
+          <div class="tbl_wrap">
+            <table>
+              <caption>화면리스트</caption>
+              <thead>
+                <tr>
+                  <th>Group</th>
+                  <th>1depth</th>
+                  <th>화면명</th>
+                  <th>화면ID</th>
+                  <th>작업상태</th>
+                  <th>날짜</th>
+                  <th>비고</th>
+                </tr>
+              </thead>
+              <tbody id="guideList">
+
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+<script>
+var tBody = document.getElementById('guideList');
+var menuList = [
+  {'group':'하나머니', 'code':'PEX','depth1':'포인트전환','name':'포인트전환 가이드','pageid':'PEX_001', 'status':'', 'date':'', 'remarks':''},
+  {'group':'', 'code':'PEX','depth1':'','name':'하나머니로 전환','pageid':'PEX_101', 'status':'완료', 'date':'22.06.17', 'remarks':''},
+  {'group':'', 'code':'PEX','depth1':'','name':'하나머니로 전환 동의','pageid':'PEX_102', 'status':'완료', 'date':'22.06.17', 'remarks':''},
+  {'group':'', 'code':'PEX','depth1':'','name':'하나머니로 전환 신청','pageid':'PEX_103', 'status':'완료', 'date':'22.06.17', 'remarks':'<span>-22.06.22 data-name속성 추가</span>'},
+  {'group':'', 'code':'PEX','depth1':'','name':'하나머니로 전환 완료','pageid':'PEX_104', 'status':'완료', 'date':'22.06.17', 'remarks':''},
+  {'group':'', 'code':'PEX','depth1':'','name':'다른포인트로 전환','pageid':'PEX_201', 'status':'완료', 'date':'22.06.22', 'remarks':''},
+  {'group':'', 'code':'PEX','depth1':'','name':'다른포인트로 전환 동의','pageid':'PEX_202', 'status':'완료', 'date':'22.06.22', 'remarks':''},
+  {'group':'', 'code':'PEX','depth1':'','name':'다른포인트로 전환 신청','pageid':'PEX_203', 'status':'완료', 'date':'22.06.22', 'remarks':''},
+  {'group':'', 'code':'PEX','depth1':'','name':'ID선택','pageid':'PEX_204', 'status':'X', 'date':'', 'remarks':'PEX_203'},
+  {'group':'', 'code':'PEX','depth1':'','name':'다른포인트로 전환 완료','pageid':'PEX_205', 'status':'완료', 'date':'22.06.22', 'remarks':''},
+  {'group':'', 'code':'PEX','depth1':'','name':'마일리지로 전환','pageid':'PEX_301', 'status':'확인중', 'date':'', 'remarks':''},
+  {'group':'', 'code':'PEX','depth1':'','name':'마일리지로 전환 신청','pageid':'PEX_302', 'status':'확인중', 'date':'', 'remarks':''},
+  {'group':'', 'code':'PEX','depth1':'','name':'마일리지로 전환 완료','pageid':'PEX_303', 'status':'확인중', 'date':'', 'remarks':''},
+  {'group':'', 'code':'PEX','depth1':'','name':'알림설정 팝업','pageid':'PEX_304', 'status':'확인중', 'date':'', 'remarks':''},
+  {'group':'', 'code':'PEX','depth1':'','name':'마일리지로 전환 내역','pageid':'PEX_305', 'status':'확인중', 'date':'', 'remarks':''},
+];
+
+menuList.forEach(function(item, index){ 
+  let tr;
+  let link = `<a href="../../../../html/change/${item.code}/${item.pageid}.html" target="_blank" class="pageLink">${item.pageid}</a>`;
+  if (item.code === 'PEX') {
+    
+  }
+  if (item.remarks === 'Native' || item.status === 'X') {
+    link = `<span class="notLink">${item.pageid}</span>`;
+  }
+  
+  if (item.group !== ''){
+    tr = `<tr id="${item.code}" class="group">
+            <td>${item.group}</td>
+            <td>${item.depth1}</td>
+            <td>${item.name}</td>
+            <td>${link}</td>
+            <td>${item.status}</td>
+            <td>${item.date}</td>
+            <td>${item.remarks}</td>
+          </tr>`;
+  }else {
+    tr = `<tr">
+            <td>${item.group}</td>
+            <td>${item.depth1}</td>
+            <td>${item.name}</td>
+            <td>${link}</td>
+            <td>${item.status}</td>
+            <td>${item.date}</td>
+            <td>${item.remarks}</td>
+          </tr>`;
+  }
+  tBody.innerHTML += tr;
+  PageCount = index;
+});
+
+const linkBtns = document.querySelectorAll('.pageLink');
+for (linkBtn of linkBtns) {
+  linkBtn.addEventListener('click', (e) => {
+    let status = e.target.parentNode.nextElementSibling.textContent;
+    if (status === '' || status === 'X' || status === '작업중') {
+      e.preventDefault();
+    }
+  });
+}
+</script>
+</body>
+</html>
