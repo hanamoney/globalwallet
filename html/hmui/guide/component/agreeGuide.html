@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>Agree guide</title>
+
+  <link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../../css/global/contents.css">
+  <script src="../../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../../js/hmui/ui_common.js"></script>
+
+  <link rel="stylesheet" href="../prettify.css">
+  <script src="../run_prettify.js"></script>
+
+</head>
+<body onload="PR.prettyPrint()">
+  <main id="root" class="guideRoot">
+    <header id="guide_header">
+      <h1>하나머니 UI 가이드</h1>
+      <nav class="guide_nav">
+        <ul>
+          <li><a href="../convention/rule_common.html">퍼블리싱규칙</a></li>
+          <li class="on"><a href="layoutGuide.html">HMUI</a></li>
+          <li><a href="../pagelist/pageLists.html">화면목록</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="contents" class="wrap_contents guide">
+      <div class="lnb">
+        <ul>
+          <li><a href="layoutGuide.html">레이아웃</a></li>
+          <li><a href="layerGuide.html">레이어팝업</a></li>
+          <li><a href="textGuide.html">텍스트</a></li>
+          <li><a href="iconGuide.html">아이콘</a>
+          <li><a href="btnGuide.html">버튼</a>
+          <li><a href="formGuide.html">폼</a></li>
+          <li><a href="tabGuide.html">탭</a></li>
+          <li><a href="tableGuide.html">테이블</a></li>
+          <li><a href="boxGuide.html">박스</a></li>
+          <li><a href="listGuide.html">리스트</a></li>
+          <li><a href="accordionGuide.html">아코디언</a></li>
+          <li class="on"><a href="agreeGuide.html">약관동의</a></li>
+        </ul>
+      </div>
+
+      <div class="contents">
+        <section data-roll="guide">
+          <h2 class="guide_tit_page">약관동의</h2>
+
+          <h3 class="guide_tit">약관동의 1개 - 상세 아코디언</h3>
+          <div class="section_terms">
+            <ul class="wrap_agree_list type_bor type_nobtn">
+              <li>
+                <p class="box_chk">
+                  <button type="button" class="ico_arr_down_2 btn_acco"><span class="label">약관명</span><span class="blind">자세히 보기</span></button>
+                </p>
+                <div class="wrap_acco">
+                  약관내용
+                </div>
+              </li>
+            </ul>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="section_terms">
+  <ul class="wrap_agree_list type_bor type_nobtn">
+    <li>
+      <p class="box_chk">
+        <button type="button" class="ico_arr_down_2 btn_acco"><span class="label">약관명</span><span class="blind">자세히 보기</span></button>
+      </p>
+      <div class="wrap_acco">
+        약관내용
+      </div>
+    </li>
+  </ul>
+</div>
+</xmp>
+
+          <h3 class="guide_tit">약관동의 여러개 - 상세 아코디언</h3>
+          <div class="section_terms">
+            <div class="wrap_chk_all">
+              <span class="chk">
+                <input type="checkbox" id="chk1_all" name="chk1"/>
+                <label for="chk1_all">
+                  <span class="label">전체동의</span>
+                </label>
+              </span>
+            </div>
+            <ul class="wrap_agree_list type_bor type_nobtn">
+              <li>
+                <p class="box_chk">
+                  <span class="chk">
+                    <input type="checkbox" id="chk1_1" name="chk1" required/>
+                    <label for="chk1_1">
+                      <span class="label">약관명</span>
+                    </label>
+                  </span>
+                  <button type="button" class="ico_arr_down_2 btn_acco"><span class="blind">자세히 보기</span></button>
+                </p>
+                <div class="wrap_acco">
+                  약관내용
+                </div>
+              </li>
+              <li>
+                <p class="box_chk">
+                  <span class="chk">
+                    <input type="checkbox" id="chk1_2" name="chk1" required/>
+                    <label for="chk1_2">
+                      <span class="label">약관명</span>
+                    </label>
+                  </span>
+                  <button type="button" class="ico_arr_down_2 btn_acco"><span class="blind">자세히 보기</span></button>
+                </p>
+                <div class="wrap_acco">
+                  약관내용
+                </div>
+              </li>
+            </ul>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="section_terms">
+  <div class="wrap_chk_all">
+    <span class="chk">
+      <input type="checkbox" id="chk1_all" name="chk1"/>
+      <label for="chk1_all">
+        <span class="label">전체동의</span>
+      </label>
+    </span>
+  </div>
+  <ul class="wrap_agree_list type_bor type_nobtn">
+    <li>
+      <p class="box_chk">
+        <span class="chk">
+          <input type="checkbox" id="chk1_1" name="chk1" required/>
+          <label for="chk1_1">
+            <span class="label">약관명</span>
+          </label>
+        </span>
+        <button type="button" class="ico_arr_down_2 btn_acco"><span class="blind">자세히 보기</span></button>
+      </p>
+      <div class="wrap_acco">
+        약관내용
+      </div>
+    </li>
+    <li>
+      <p class="box_chk">
+        <span class="chk">
+          <input type="checkbox" id="chk1_2" name="chk1" required/>
+          <label for="chk1_2">
+            <span class="label">약관명</span>
+          </label>
+        </span>
+        <button type="button" class="ico_arr_down_2 btn_acco"><span class="blind">자세히 보기</span></button>
+      </p>
+      <div class="wrap_acco">
+        약관내용
+      </div>
+    </li>
+  </ul>
+</div>
+</xmp>
+
+
+          <h3 class="guide_tit">약관동의 여러개 - 상세 팝업버튼</h3>
+          <p class="guide_txt">fnOpenPop 클래스를 가지고 있는 버튼에 <span class="txt_point_2">data-name 값 (오픈할 팝업 id값과 매칭)</span> 체크하여 해당 팝업 오픈</p>
+          <p class="guide_txt">fnOpenPop 공통클래스 미사용시(fnOpenPop클래스는 삭제하고 클릭이벤트 필요 시) 해당버튼 클릭시 팝업 오픈 함수호출 fnOpenLayerPop('<span class="txt_point_2">오픈할 상세팝업 ID</span>');</p>
+          <div class="section_terms">
+            <div class="wrap_chk_all">
+              <span class="chk">
+                <input type="checkbox" id="chk2_all" name="chk2"/>
+                <label for="chk2_all">
+                  <span class="label">약관전체동의</span>
+                </label>
+              </span>
+            </div>
+            <ul class="wrap_agree_list">
+              <li>
+                <p class="box_chk">
+                  <span class="chk">
+                    <input type="checkbox" id="chk2_1" name="chk2" required/>
+                    <label for="chk2_1"></label>
+                  </span>
+                  <button type="button" class="btn_txt label fnOpenPop" data-name="popupfullId">[필수] 약관명</button>
+                </p>
+              </li>
+              <li>
+                <p class="box_chk">
+                  <span class="chk">
+                    <input type="checkbox" id="chk2_2" name="chk2"/>
+                    <label for="chk2_2"></label>
+                  </span>
+                  <button type="button" class="btn_txt label fnOpenPop" data-name="popupfullId">[선택] 약관명</button>
+                  <span class="flag_terms_lv2">다소안심</span>
+                  <button type="button" class="ico_arr_down_2 btn_acco"><span class="blind">자세히 보기</span></button>
+                </p>
+                <div class="wrap_acco">
+                  <p class="txt">하나머니 혜택 정보를 문자, 이메일, 전화,<br>PUSH 알림으로 알려드려요.</p>
+                  <ul class="chk_list type_col">
+                    <li>
+                      <span class="chk type_sub">
+                        <input type="checkbox" id="chk2_2_1" name="chk2_2"/>
+                        <label for="chk2_2_1">
+                          <span class="label">문자</span>
+                        </label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="chk type_sub">
+                        <input type="checkbox" id="chk2_2_2" name="chk2_2"/>
+                        <label for="chk2_2_2">
+                          <span class="label">이메일</span>
+                        </label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="chk type_sub">
+                        <input type="checkbox" id="chk2_2_3" name="chk2_2"/>
+                        <label for="chk2_2_3">
+                          <span class="label">전화</span>
+                        </label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="chk type_sub">
+                        <input type="checkbox" id="chk2_2_4" name="chk2_2"/>
+                        <label for="chk2_2_4">
+                          <span class="label">PUSH 알림</span>
+                        </label>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="section_terms">
+  <div class="wrap_chk_all">
+    <span class="chk">
+      <input type="checkbox" id="chk2_all" name="chk2"/>
+      <label for="chk2_all">
+        <span class="label">약관전체동의</span>
+      </label>
+    </span>
+  </div>
+  <ul class="wrap_agree_list">
+    <li>
+      <p class="box_chk">
+        <span class="chk">
+          <input type="checkbox" id="chk2_1" name="chk2" required/>
+          <label for="chk2_1"></label>
+        </span>
+        <button type="button" class="btn_txt label fnOpenPop" data-name="popupfullId">[필수] 약관명</button>
+      </p>
+    </li>
+    <li>
+      <p class="box_chk">
+        <span class="chk">
+          <input type="checkbox" id="chk2_2" name="chk2"/>
+          <label for="chk2_2"></label>
+        </span>
+        <button type="button" class="btn_txt label fnOpenPop" data-name="popupfullId">[선택] 약관명</button>
+        <span class="flag_terms_lv2">다소안심</span>
+        <button type="button" class="ico_arr_down_2 btn_acco"><span class="blind">자세히 보기</span></button>
+      </p>
+    <div class="wrap_acco">
+      <p class="txt">하나머니 혜택 정보를 문자, 이메일, 전화,<br>PUSH 알림으로 알려드려요.</p>
+      <ul class="chk_list type_col">
+        <li>
+          <span class="chk type_sub">
+            <input type="checkbox" id="chk2_2_1" name="chk2_2"/>
+            <label for="chk2_2_1">
+              <span class="label">문자</span>
+            </label>
+          </span>
+        </li>
+        <li>
+          <span class="chk type_sub">
+            <input type="checkbox" id="chk2_2_2" name="chk2_2"/>
+            <label for="chk2_2_2">
+              <span class="label">이메일</span>
+            </label>
+          </span>
+        </li>
+        <li>
+          <span class="chk type_sub">
+            <input type="checkbox" id="chk2_2_3" name="chk2_2"/>
+            <label for="chk2_2_3">
+              <span class="label">전화</span>
+            </label>
+          </span>
+        </li>
+        <li>
+          <span class="chk type_sub">
+            <input type="checkbox" id="chk2_2_4" name="chk2_2"/>
+            <label for="chk2_2_4">
+              <span class="label">PUSH 알림</span>
+            </label>
+          </span>
+        </li>
+      </ul>
+    </div>
+    </li>
+  </ul>
+</div>
+</xmp>
+        </section>
+      </div>
+
+      <div class="guide_view">
+        <iframe src="sample_agree.html"></iframe>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
