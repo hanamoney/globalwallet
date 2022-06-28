@@ -7,6 +7,7 @@
   <meta name="format-detection" content="telephone=no">
   <title>form guide</title>
 
+  <link rel="stylesheet" href="../guide.css">
   <link rel="stylesheet" href="../../../../css/hmui/swiper.css">
   <link rel="stylesheet" href="../../../../css/hmui/animate.css">
   <link rel="stylesheet" href="../../../../css/hmui/common.css">
@@ -16,65 +17,277 @@
   <script src="../../../../js/hmui/lib/waypoints.min.js"></script>
   <script src="../../../../js/hmui/lib/jquery.counterup.js"></script>
   <script src="../../../../js/hmui/ui_common.js"></script>
+
+  <link rel="stylesheet" href="../prettify.css">
+  <script src="../run_prettify.js"></script>
+  
 </head>
-<body>
-  <main id="root">
-    <header id="header">
-      <div class="inner_fixed">
-        <button class="btn_ico_prev"><span class="blind">이전</span></button>
-        <h1>페이지타이틀</h1>
-        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
-      </div>
+<body onload="PR.prettyPrint()">
+  <main id="root" class="guideRoot">
+    <header id="guide_header">
+      <h1>하나머니 UI 가이드</h1>
+      <nav class="guide_nav">
+        <ul>
+          <li><a href="../convention/rule_common.html">퍼블리싱규칙</a></li>
+          <li><a href="layoutGuide.html">HMUI</a></li>
+          <li><a href="../pagelist/pageLists.html">화면목록</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <div id="contents" class="wrap_contents">
+    <div id="contents" class="wrap_contents guide">
+      <div class="lnb">
+        <ul>
+          <li><a href="layoutGuide.html">레이아웃</a></li>
+          <li><a href="layerGuide.html">레이어팝업</a></li>
+          <li><a href="textGuide.html">텍스트</a></li>
+          <li><a href="btnGuide.html">버튼</a>
+          <li class="on"><a href="formGuide.html">폼</a></li>
+          <li><a href="tabGuide.html">탭</a></li>
+          <li><a href="tableGuide.html">테이블</a></li>
+          <li><a href="listGuide.html">리스트</a></li>
+          <li><a href="accordionGuide.html">아코디언</a></li>
+        </ul>
+      </div>
+
       <div class="contents">
         <section data-roll="guide">
+          <h2 class="guide_tit_page">폼</h2>
+          <p class="guide_txt">form 영역은 section_form 으로 감싼다.</p>
+          <p class="guide_txt">영역간 간격 조정 section_form > <span class="txt_point_2">wrap_</span> 클래스로 한다. (간격 30px)</p>
+          <br/>
+          <div class="section_form">
+            <div class="wrap_inp">
+              <div class="head_form">
+                <p class="tit_form_s">작은 label</p>
+              </div>
+              <div class="head_form">
+                <label for="" class="tit_form">default label</label>
+              </div>
+            </div>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="section_form">
+  <!-- input -->
+  <div class="wrap_inp">
+    <div class="head_form">
+      <label for="inp1" class="tit_form_s">조회기간</label>
+    </div>
+    <div class="box_inp">
+      <input type="text" id="inp1" class="inp" placeholder="placeholder" value="" />
+      <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
+    </div>
+  </div>
+  
+  <!-- check/radio -->
+  <div class="wrap_chk">
+    <div class="head_form">
+      <p class="tit_form">조회기간</p>
+    </div>
+    <ul class="rdo_list">
+      <li>
+        <span class="box_rdo">
+          <input type="radio" id="rdo2_1" name="rdo2" checked>
+          <label for="rdo2_1">label</label>
+        </span>
+      </li>
+      <li>
+        <span class="box_rdo">
+          <input type="radio" id="rdo2_2" name="rdo2" >
+          <label for="rdo2_2">label</label>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+</xmp>
 
+          <h3 class="guide_tit">Input</h3>
+          <p class="guide_txt">claer button 터치 시 input focus 유지</p>
+
+          <h4 class="tit">Input - default</h4>
+          <p class="guide_txt">- height: 45px / font-size: 26px</p>
+          <p class="guide_txt">- label 미연결 시 title 속성 필수</p>
           <div class="wrap_inp">
             <div class="box_inp">
-              <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="레이블 미노출" value="" />
+              <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="레이블 미노출형" value="" />
               <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
             </div>
             <p class="txt_inp_guide">가이드텍스트</p>
           </div>
-
           <div class="wrap_inp">
-            <div class="box_inp err"><!-- valid err 클래스추가 -->
-              <input type="text" inputmode="numeric" class="inp" title="레이블미노출 시 타이틀입력" placeholder="valid error" value="" />
+            <div class="box_inp">
+              <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="레이블 미노출형" value="" />
               <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
             </div>
-            <p class="txt_inp_guide">1,000하나머니부터 채울 수 있어요.</p>
+            <p class="txt_inp_guide type_right">가이드텍스트 오른쪽정렬</p>
           </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_inp">
+  <div class="box_inp">
+    <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="레이블 미노출형" value="" />
+    <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
+  </div>
+  <p class="txt_inp_guide">가이드텍스트</p>
+</div>
 
-          <!-- 통화입력 -->
+<div class="wrap_inp">
+  <div class="box_inp">
+    <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="레이블 미노출형" value="" />
+    <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
+  </div>
+  <p class="txt_inp_guide type_right">가이드텍스트 오른쪽정렬</p>
+</div>
+</xmp>
+
+          <h4 class="tit">Input - error</h4>
+          <div class="wrap_inp">
+            <div class="box_inp err">
+              <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="error" value="" />
+              <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
+            </div>
+            <p class="txt_inp_guide">가이드텍스트</p>
+          </div>
+          <div class="wrap_inp">
+            <div class="box_inp err">
+              <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="error" value="" />
+              <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
+            </div>
+            <p class="txt_inp_guide type_noico">가이드텍스트 아이콘 미노출형</p>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_inp">
+  <div class="box_inp err"><!-- err 클래스 추가 -->
+    <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="레이블 미노출형" value="" />
+    <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
+  </div>
+  <p class="txt_inp_guide">가이드텍스트</p>
+</div>
+
+<div class="wrap_inp">
+  <div class="box_inp err">
+    <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="레이블 미노출형" value="" />
+    <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
+  </div>
+  <p class="txt_inp_guide type_noico">가이드텍스트 아이콘 미노출형</p>
+</div>
+</xmp>
+
+
+          <h4 class="tit">Input - 금액입력</h4>
+          <p class="guide_txt">- 숫자 키패드 type=&quot;tel&quot; inputmode=&quot;numeric&quot;</p>
           <div class="wrap_inp type_cur">
             <div class="box_inp">
               <span class="unit">USD</span>
-              <input type="text" inputmode="numeric" class="inp" title="" placeholder="얼마를 채울까요?" value="" />
+              <input type="tel" inputmode="numeric" class="inp" title="금액 입력" placeholder="얼마를 채울까요?" value="">
               <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
             </div>
             <p class="txt_inp_guide type_right">최대 <em>USD</em> <em class="txt_num">1,600</em></p>
           </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_inp type_cur">
+  <div class="box_inp">
+    <span class="unit">USD</span>
+    <input type="tel" inputmode="numeric" class="inp" title="금액 입력" placeholder="얼마를 채울까요?" value="">
+    <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
+  </div>
+  <p class="txt_inp_guide type_right">최대 <em>USD</em> <em class="txt_num">1,600</em></p>
+</div>
+</xmp>
 
+          <h4 class="tit">Input - 버튼있는 경우</h4>
+          <p class="guide_txt">- hasBtn 클래스가 있는 경우 버튼의 width 계산하여 padding, clear버튼 style 조정</p>
           <div class="wrap_inp">
             <div class="box_inp hasBtn">
-              <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="레이블 미노출" value="" />
+              <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="placeholder" value="">
               <button type="button" class="btn_round btn_primary">전액</button>
+            <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button></div>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_inp">
+  <div class="box_inp hasBtn">
+    <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="placeholder" value="">
+    <button type="button" class="btn_round btn_primary">전액</button>
+  <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button></div>
+</div>
+</xmp>
+
+          <h4 class="tit">inp_m</h4>
+          <p class="guide_txt">- height: 48px / font-size: 20px</p>
+          <div class="wrap_inp">
+            <div class="box_inp">
+              <input type="text" class="inp inp_m" title="레이블미노출 시 타이틀입력" placeholder="placeholder" value="" />
+              <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
+            </div>
+            <p class="txt_inp_guide">가이드텍스트</p>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_inp">
+  <div class="box_inp">
+    <input type="text" class="inp inp_m" title="레이블미노출 시 타이틀입력" placeholder="placeholder" value="" />
+    <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
+  </div>
+  <p class="txt_inp_guide">가이드텍스트</p>
+</div>
+</xmp>
+
+          <h3 class="guide_tit">select</h3>
+          <p class="guide_txt">- fnOpenPop 클래스가 있는 경우 data-name="<span class="txt_point_2">select B-Pop ID</span>" 체크하여 리스트 오픈</p>
+          <p class="guide_txt">- 리스트 아이템 선택 시 레이어팝업 닫음이 default, data-option 체크하여 input의 value로 전달, txt는 value에 전달</p>
+          <div class="wrap_inp">
+            <div class="box_inp">
+              <button type="button" class="sel fnOpenPop default" data-name="selectId"><!-- 선택전 default 클래스 / 선택후: default 클래스 삭제 ui_common.js 처리  -->
+                <span class="placeholder">선택해주세요</span>
+                <span class="value"></span>
+              </button>
+              <input type="text" id="" class="hiddenInp" readonly><!-- 선택 된 data-option 값을 input의 value로 전달 -->
             </div>
           </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_inp">
+  <div class="head_form">
+    <p class="tit_form_s">select label</p>
+  </div>
+  <div class="box_inp">
+    <button type="button" class="sel fnOpenPop default" data-name="selectId"><!-- 선택전 default 클래스 / 선택후: default 클래스 삭제 ui_common.js 처리  -->
+      <span class="placeholder">선택해주세요</span>
+      <span class="value"></span>
+    </button>
+    <input type="text" id="" class="hiddenInp" readonly><!-- 선택 된 data-option 값을 input의 value로 전달 -->
+  </div>
+</div>
 
-          <!-- <div class="wrap_inp type_col">
-            <label for="" class="">label</label>
-            <div class="box_inp">
-              <input type="text" class="inp" title="" placeholder="placeholder" value="" />
-            </div>
-            <div class="box_inp">
-              <input type="text" class="inp" title="" placeholder="placeholder" value="" />
-            </div>
-            <p class="txt_inp_guide">guide text</p>
-          </div> -->
+<!-- select popup -->
+<div id="selectId" class="wrap_layer" data-dim="true">
+  <div class="inner_layer">
+    <div class="head_layer">
+      <h2 class="tit_layer blind">선택</h2>
+    </div>
+    <div class="content_layer">
+      <div class="section_bottom_select">
+        <ul class="wrap_sel_list">
+          <li>
+            <button type="button" class="fnOpt" data-option="val1"><span class="txt">옵션1</span></button>
+          </li>
+          <li>
+            <button type="button" class="fnOpt" data-option="val2"><span class="txt">옵션2</span></button>
+          </li>
+          <li>
+            <button type="button" class="fnOpt" data-option="val3"><span class="txt">옵션3</span></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button class="btn_ico_close fnCloseSel"><span class="blind">닫기</span></button>
+  </div>
+</div>
+<!-- // select popup -->
+</xmp>
 
+
+          <h3 class="guide_tit">Checkbox</h3>
+          <p class="guide_txt">input id와 lable 1:1 매칭 필수</p>
+          <h4 class="tit">Checkbox - default</h4>
           <span class="chk">
             <input type="checkbox" id="chk1_1" name="chk1" />
             <label for="chk1_1">
@@ -87,211 +300,262 @@
               <span class="label">checked</span>
             </label>
           </span>
+<xmp class="prettyprint lang-html">
+<span class="chk">
+  <input type="checkbox" id="chk1_1" name="chk1" />
+  <label for="chk1_1">
+    <span class="label">default</span>
+  </label>
+</span>
+</xmp>
 
+
+          <h4 class="tit">Checkbox - type_sub</h4>
           <span class="chk type_sub">
             <input type="checkbox" id="chk1_2_1" name="chk1_2"/>
             <label for="chk1_2_1">
+              <span class="label">default</span>
+            </label>
+          </span>
+          <span class="chk type_sub">
+            <input type="checkbox" id="chk1_2_2" name="chk1_2" checked/>
+            <label for="chk1_2_2">
               <span class="label">checked</span>
             </label>
           </span>
+<xmp class="prettyprint lang-html">
+<span class="chk type_sub">
+  <input type="checkbox" id="chk1_2_1" name="chk1_2"/>
+  <label for="chk1_2_1">
+    <span class="label">default</span>
+  </label>
+</span>
+</xmp>
 
+
+          <h4 class="tit">Checkbox - round</h4>
           <span class="chk_round">
             <input type="checkbox" id="chk2" name="chk2" />
             <label for="chk2">
               <span class="label">label</span>
             </label>
           </span>
+<xmp class="prettyprint lang-html">
+<span class="chk_round">
+  <input type="checkbox" id="chk2" name="chk2" />
+  <label for="chk2">
+    <span class="label">label</span>
+  </label>
+</span>
+</xmp>
 
-          <div class="chk type_box">
-            <input type="checkbox" id="chk3" name="">
-            <label for="chk3">
-              <p class="txt_bank">하나은행</p>
-              <p class="txt_acc">379*****26507</p>
-            </label>
-          </div>
 
-          <br/>
+          <h4 class="tit">Checkbox/radio - type_box</h4>
+          <p class="guide_txt">checkbox, radio 필요에 따라 type 변경하여 사용</p>
+          <ul class="wrap_box_list">
+            <li>
+              <div class="chk type_box">
+                <input type="checkbox" id="chk3_1" name="chk3_1">
+                <label for="chk3_1">
+                  <p class="txt_bank">하나은행</p>
+                  <p class="txt_acc">379*****26507</p>
+                </label>
+              </div>
+            </li>
+          </ul>
+<xmp class="prettyprint lang-html">
+<div class="chk type_box">
+  <input type="checkbox" id="chk3_1" name="chk3_1">
+  <label for="chk3_1">
+    <p class="txt_bank">하나은행</p>
+    <p class="txt_acc">379*****26507</p>
+  </label>
+</div>
+</xmp>
 
+
+          <h4 class="tit">Switch</h4>
           <div class="wrap_switch">
-            <input type="checkbox" id="switch1">
-            <label for="switch1" class="slider"></label>
+            <span class="label">label</span>
+            <div class="switch">
+              <input type="checkbox" id="switch1">
+              <label for="switch1" class="slider"></label>
+            </div>
           </div>
+<xmp class="prettyprint lang-html">
+<div class="wrap_switch">
+  <span class="label">label</span>
+  <div class="switch">
+    <input type="checkbox" id="switch1">
+    <label for="switch1" class="slider"></label>
+  </div>
+</div>
+</xmp>
 
-          <div class="section_form">
-            <!-- select 선택 전 -->
-            <div class="wrap_inp">
-              <div class="head_form">
-                <p class="tit_form_s">label</p>
-              </div>
-              <div class="box_inp">
-                <button type="button" class="sel fnOpenPop default" data-name="selectId"><!-- 선택전 default 클래스 / 선택후: default 클래스 삭제 ui_common.js 처리  -->
-                  <span class="placeholder">선택해주세요</span>
-                  <span class="value"></span>
-                </button>
-                <input type="text" id="" class="hiddenInp" readonly><!-- 선택 된 data-option 값을 input의 value로 전달 -->
-              </div>
-            </div>
+          <h3 class="guide_tit">Radio</h3>
+          <h4 class="tit">Radio - box</h4>
+          <p class="guide_txt">default width 1/n</p>
+          <ul class="rdo_list">
+            <li>
+              <span class="box_rdo">
+                <input type="radio" id="rdo1_1" name="rdo1" checked >
+                <label for="rdo1_1">rdo1</label>
+              </span>
+            </li>
+            <li>
+              <span class="box_rdo">
+                <input type="radio" id="rdo1_2" name="rdo1" >
+                <label for="rdo1_2">rdo2</label>
+              </span>
+            </li>
+            <li>
+              <span class="box_rdo">
+                <input type="radio" id="rdo1_3" name="rdo1" >
+                <label for="rdo1_3">rdo3</label>
+              </span>
+            </li>
+            <li>
+              <span class="box_rdo">
+                <input type="radio" id="rdo1_4" name="rdo1" >
+                <label for="rdo1_4">rdo4</label>
+              </span>
+            </li>
+          </ul>
+<xmp class="prettyprint lang-html">
+<ul class="rdo_list">
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo1_1" name="rdo1" checked >
+      <label for="rdo1_1">rdo1</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo1_2" name="rdo1" >
+      <label for="rdo1_2">rdo2</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo1_3" name="rdo1" >
+      <label for="rdo1_3">rdo3</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo1_4" name="rdo1" >
+      <label for="rdo1_4">rdo4</label>
+    </span>
+  </li>
+</ul>
+</xmp>
 
-            <div class="wrap_inp">
-              <div class="head_form">
-                <p class="tit_form">조회기간</p>
-              </div>
-              <div class="box_inp">
-                <input type="text" class="inp" title="레이블미노출 시 타이틀입력" placeholder="레이블 미노출" value="" />
-                <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
-              </div>
-              <p class="txt_inp_guide">가이드텍스트</p>
-            </div>
 
-            <div class="wrap_chk">
-              <div class="head_form">
-                <p class="tit_form">조회기간</p>
-              </div>
-              <ul class="rdo_list">
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo1_1" name="rdo1" checked >
-                    <label for="rdo1_1">이번달</label>
-                  </span>
-                </li>
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo1_2" name="rdo1" >
-                    <label for="rdo1_2">1개월</label>
-                  </span>
-                </li>
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo1_3" name="rdo1" >
-                    <label for="rdo1_3">3개월</label>
-                  </span>
-                </li>
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo1_4" name="rdo1" >
-                    <label for="rdo1_4">직접입력</label>
-                  </span>
-                </li>
-              </ul>
-              <!-- 직접입력 선택 시 노출 -->
-              <div class="box_date">
-                <button type="button" class="btn_sel_date">
-                  <span class="txt_num">2022.02.01</span>
-                </button>
-                <span class="tilde">~</span>
-                <button type="button" class="btn_sel_date">
-                  <span class="txt_num">2022.02.10</span>
-                </button>
-              </div>
-              <!-- // 직접입력 선택 시 노출 -->
-            </div>
-
-            <div class="wrap_chk">
-              <div class="head_form">
-                <p class="tit_form">조회기간</p>
-              </div>
-              <ul class="rdo_list">
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo2_1" name="rdo2" checked>
-                    <label for="rdo2_1">label</label>
-                  </span>
-                </li>
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo2_2" name="rdo2" >
-                    <label for="rdo2_2">label</label>
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="wrap_chk">
-              <div class="head_form">
-                <p class="tit_form">4 column</p>
-              </div>
-              <ul class="rdo_list type_col_4">
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo3_1" name="rdo3" checked>
-                    <label for="rdo3_1">1</label>
-                  </span>
-                </li>
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo3_2" name="rdo3" >
-                    <label for="rdo3_2">2</label>
-                  </span>
-                </li>
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo3_3" name="rdo3" >
-                    <label for="rdo3_3">3</label>
-                  </span>
-                </li>
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo3_4" name="rdo3" >
-                    <label for="rdo3_4">4</label>
-                  </span>
-                </li>
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo3_5" name="rdo3" checked>
-                    <label for="rdo3_5">5</label>
-                  </span>
-                </li>
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo3_6" name="rdo3" >
-                    <label for="rdo3_6">6</label>
-                  </span>
-                </li>
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo3_7" name="rdo3" >
-                    <label for="rdo3_7">7</label>
-                  </span>
-                </li>
-                <li>
-                  <span class="box_rdo">
-                    <input type="radio" id="rdo3_8" name="rdo3" >
-                    <label for="rdo3_8">8</label>
-                  </span>
-                </li>
-              </ul>
-            </div> 
-
-          </div>
+<h4 class="tit">Radio - type_col</h4>
+<p class="guide_txt">- width 케이스별로 클래스 정의하여 사용</p>
+<ul class="rdo_list type_col_4">
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo3_1" name="rdo3" checked>
+      <label for="rdo3_1">1</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo3_2" name="rdo3" >
+      <label for="rdo3_2">2</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo3_3" name="rdo3" >
+      <label for="rdo3_3">3</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo3_4" name="rdo3" >
+      <label for="rdo3_4">4</label>
+    </span>
+  </li>
+</ul>
+<xmp class="prettyprint lang-html">
+<ul class="rdo_list type_col_4">
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo3_1" name="rdo3" checked>
+      <label for="rdo3_1">1</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo3_2" name="rdo3" >
+      <label for="rdo3_2">2</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo3_3" name="rdo3" >
+      <label for="rdo3_3">3</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo3_4" name="rdo3" >
+      <label for="rdo3_4">4</label>
+    </span>
+  </li>
+</ul>
+</xmp>
+<br/>
+<ul class="rdo_list type_col_3">
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo4_1" name="rdo4" checked>
+      <label for="rdo4_1">1</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo4_2" name="rdo4" >
+      <label for="rdo4_2">2</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo4_3" name="rdo4" >
+      <label for="rdo4_3">3</label>
+    </span>
+  </li>
+</ul>
+<xmp class="prettyprint lang-html">
+<ul class="rdo_list type_col_3">
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo4_1" name="rdo4" checked>
+      <label for="rdo4_1">1</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo4_2" name="rdo4" >
+      <label for="rdo4_2">2</label>
+    </span>
+  </li>
+  <li>
+    <span class="box_rdo">
+      <input type="radio" id="rdo4_3" name="rdo4" >
+      <label for="rdo4_3">3</label>
+    </span>
+  </li>
+</ul>
+</xmp>
         </section>
       </div>
 
-      <!-- popup -->
-      <div id="selectId" class="wrap_layer" data-dim="true">
-        <div class="inner_layer">
-          <div class="head_layer">
-            <h2 class="tit_layer blind">선택</h2>
-          </div>
-          <div class="content_layer">
-            <div class="section_bottom_select">
-              <ul class="wrap_sel_list">
-                <li>
-                  <button type="button" class="fnOpt" data-option="val1"><span class="txt">옵션1</span></button>
-                </li>
-                <li>
-                  <button type="button" class="fnOpt" data-option="val2"><span class="txt">옵션2</span></button>
-                </li>
-                <li>
-                  <button type="button" class="fnOpt" data-option="val3"><span class="txt">옵션3</span></button>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <button class="btn_ico_close fnCloseSel"><span class="blind">닫기</span></button>
-        </div>
+      <div class="guide_view">
+        <iframe src="sample_form.html"></iframe>
       </div>
-      <!-- // popup -->
-
     </div>
   </main>
 
