@@ -84,14 +84,43 @@
           <p class="guide_txt">- meta, title, link, script 순서로 요소를 선언한다.</p>
 
           <h3 id="rule03" class="guide_tit">표준문법</h3>
-          <p class="guide_txt">각 태그의 어트리뷰트 속성들에 값들은 항상 &quot;(따옴표)를 사용한다.</p>
-          <p class="guide_txt">특수기호는 Entity name을 사용하여 entity 코드로 변환한다.</p>
-          <p class="guide_txt">&lt; (&lt;), &gt; (&gt;), &amp; (&amp;) 는 반드시 변환</p>
+          <p class="guide_txt">- DTD를 제외한 모든 엘리먼트와 애트리뷰트는 소문자로 작성한다.</p>
+          <p class="guide_txt">- 각 태그의 어트리뷰트 속성들에 값들은 항상 <span class="txt_point_2">&quot;(따옴표)</span>를 사용한다.</p>
+          <p class="guide_txt">- 특수기호는 Entity name을 사용하여 entity 코드로 변환한다. ( &lt;  , &gt;  ,  &amp; 는 반드시 변환 )</p>
 
 
           <h3 id="rule04" class="guide_tit">주석</h3>
-          <h3 id="rule05" class="guide_tit">속성 선언 순서</h3>
+          <p class="guide_txt">- 수정주석은 수정된 단락의 처음부분과 끝나는 부분에 주석을 적어 놓는다. 끝나는 부분의 주석은 // 처리를 한다.</p>
+          <p class="guide_txt">- 한줄만 수정되는 간략한 경우는 해당태그 맨끝에 주석을 넣는다.</p>
+          <p class="guide_txt">- 그룹을 감싸고 있는 객체를 구분하기 위하여 코드 그룹 간 1줄씩 빈 줄을 만드는 것은 허용한다.</p>
+<xmp class="prettyprint lang-html">
+<!-- YY.MM.DD 수정 -->
+<div>
+</div>
+<!-- // YY.MM.DD 수정 -->
 
+<p></p><!-- YY.MM.DD 수정 -->
+</xmp>
+
+          <h3 id="rule05" class="guide_tit">속성 선언 순서</h3>
+          <p class="guide_txt">id, class를 제일 앞에 둔다.</p>
+          <p class="guide_txt">data-* attribute는 마지막에 선언한다.</p>
+          <p class="guide_txt">inline style 선언은 지양한다. 예외로 style 선언 시 가장 마지막에 선언한다.</p>
+          <h4 class="tit">input태그</h4>
+<xmp class="prettyprint lang-html">
+<input type="text" id="" class="" title="" placeholder="" value="">
+</xmp>
+
+          <h4 class="tit">A태그</h4>
+          <p class="guide_txt">- href 속성의 값은 #none으로 한다. 앵커 기능이 있다면 해당 요소의 id값을 작성한다.</p>
+<xmp class="prettyprint lang-html">
+<a href="#none" class="" target="_blank"></a>
+</xmp>
+          <h4 class="tit">이미지태그</h4>
+          <p class="guide_txt">- 의미없는 이미지가 아닌 경우 alt 값 필수 (의미없는 경우 공백)</p>
+<xmp class="prettyprint lang-html">
+<img src="" class="" alt="">
+</xmp>
         </section>
       </div>
     </div>
