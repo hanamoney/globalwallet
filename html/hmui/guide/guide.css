@@ -179,3 +179,9 @@ h4.tit {
 .guide .fnSimpleAcco .wrap_acco {
   display: none;
 }
+
+@media screen and (max-height: 780px) {
+  .wrap_contents.guide .guide_view iframe {
+    height: calc(100vh - 60px - 20px);
+  }
+}
