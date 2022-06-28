@@ -74,11 +74,106 @@
           <h2 class="guide_tit_page">CSS 작업규칙</h2>
           
           <h3 id="rule01" class="guide_tit">표준</h3>
+          <p class="guide_txt">- 속성 값 뒤에 세미콜른(;) 반드시 추가한다.</p>
+          <p class="guide_txt">- 폰트의 선언, 배경 url, filter, content에 작은 따옴표('')를 사용한다. 그 외의 경우는 사용하지 않는다.</p>
+          <p class="guide_txt">- .margin_top10 .pd20 등의 여백 클래스는 사용하지 않는다.</p>
+          <p class="guide_txt">- CSS 주석 처리는 시작 주석을 작성하며 종료 주석은 작성하지 않는다.</p>
+
           <h3 id="rule02" class="guide_tit">속성 선언 순서</h3>
+          <p class="guide_txt">- 각각의 속성값에서 벤더픽스 추가 시 벤더 픽스 속성값을 먼저 선언한다.</p>
+          <p class="guide_txt">- 형태, 흐름, 위치, 크기, 간격, 테두리, 배경, 폰트, 기타 순</p>
+          <p class="guide_txt">- 속성은 top, right, bottom, left 시계방향으로 명시한다.</p>
+          <div class="guide_tbl">
+            <table>
+              <colgroup>
+                <col width="10%">
+                <col width="20%">
+                <col width="*">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>순서</th>
+                  <th>의미</th>
+                  <th>속성</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>형태</td>
+                  <td>content, display, visibility</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>흐름</td>
+                  <td>float, overfow</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>위치</td>
+                  <td>position, z-index</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>크기</td>
+                  <td>width, height</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>간격</td>
+                  <td>margin, padding</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>테두리</td>
+                  <td>border</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>배경</td>
+                  <td>background</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>폰트</td>
+                  <td>color, font-size, line-height, font-weight</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>기타</td>
+                  <td>이 외의 속성은 순서 무관</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <h3 id="rule03" class="guide_tit">약식 속성</h3>
+          <h4 class="tit">색상코드</h4>
+          <p class="guide_txt">#fff, #000 줄여서 표기</p>
+
+          <h4 class="tit">margin, padding</h4>
+          <p class="guide_txt">약식 표기를 권장하며, 속성이 3개 이상 나열된다면 약식 표기로 기입한다.</p>
+
+          <h4 class="tit">background</h4>
+          <p class="guide_txt">background 약식 표기를 사용하며, 이후 속성이 변경될 경우 background 관련 속성을 사용하여 재선언 한다.</p>
+          <p class="guide_txt">background-color, background-image, background-repeat, background-position, background-attachment 순</p>
+
+          <h4 class="tit">border</h4>
+          <p class="guide_txt">border 약식 표기를 사용하며, 이후 속성이 변경될 경우 border 관련 속성을 사용하여 재선언 한다.</p>
+          <p class="guide_txt">width style color 순</p>
+          
+          <h4 class="tit">font</h4>
+          <p class="guide_txt">font는 정식 표기를 권장한다.</p>
+
           <h3 id="rule04" class="guide_tit">단위</h3>
+          <p class="guide_txt">- '<span class="txt_point_2">rem</span>' 을 기본으로 사용한다.</p>
+          <p class="guide_txt">- border는 'px'로 사용한다.</p>
+
           <h3 id="rule03" class="guide_tit">z-index</h3>
+          <p class="guide_txt">- 각 모듈별 안의 z-index의 설정값 사이 간격을 1로 한다.</p>
+
           <h3 id="rule03" class="guide_tit">미디어쿼리</h3>
+          <p class="guide_txt">CSS 파일의 가장 아랫 부분에 선언한다.</p>
 
         </section>
       </div>
