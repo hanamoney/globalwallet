@@ -28,9 +28,9 @@
       <h1>하나머니 UI 가이드</h1>
       <nav class="guide_nav">
         <ul>
-          <li><a href="./convention/rule0101.html">퍼블리싱규칙</a></li>
+          <li><a href="../convention/rule0101.html">퍼블리싱규칙</a></li>
           <li class="on"><a href="layoutGuide.html">HMUI</a></li>
-          <li><a href="./pagelist/rule0301.html">화면목록</a></li>
+          <li><a href="../pagelist/rule0301.html">화면목록</a></li>
         </ul>
       </nav>
     </header>
@@ -38,7 +38,7 @@
       <div class="lnb">
         <ul>
           <li class="on"><a href="layoutGuide.html">레이아웃</a></li>
-          <li><a href="layerGuide.html">레이어</a></li>
+          <li><a href="layerGuide.html">레이어팝업</a></li>
           <li><a href="textGuide.html">텍스트</a></li>
           <li><a href="btnGuide.html">버튼</a>
           <li><a href="formGuide.html">폼</a></li>
@@ -53,11 +53,58 @@
         <section data-roll="guide">
           <h2 class="guide_tit_page">탭</h2>
 
+          <h3 class="guide_tit">상단고정 탭 - 링크형</h3>
+          <p class="guide_txt">스크롤시 상단고정으로 헤더 blur 효과 끊김없는 연결을 위해 fnFixedTop 클래스가 있는 tab영역은 <span class="txt_point_2">data-height</span> 값을 지정하여 해당 값 만큼 헤더높이 조정</p>
+          <div class="section_tab fnFixedTop" data-height="54">
+            <ul class="wrap_tab_btn">
+              <li class="on"><a href="#none" class="btn_tab_box" data-tab="link">tab1</a></li>
+              <li><a href="#none" class="btn_tab_box" data-tab="link">tab2</a></li>
+              <li><a href="#none" class="btn_tab_box" data-tab="link">tab3</a></li>
+            </ul>
+          </div>
 <xmp class="prettyprint lang-html">
-  
+<div class="section_tab fnFixedTop" data-height="54">
+  <ul class="wrap_tab_btn">
+    <li><a href="#none" class="btn_tab_box" data-tab="link">tab1</a></li>
+    <li><a href="#none" class="btn_tab_box" data-tab="link">tab2</a></li>
+    <li class="on"><a href="#none" class="btn_tab_box" data-tab="link">tab3</a></li>
+  </ul>
+</div>
 </xmp>
-          
+
+
+          <h3 class="guide_tit">탭 - 풀페이지형</h3>
+<xmp class="prettyprint lang-html">
+<div class="section_tab type_fullpage">
+  <ul class="wrap_tab_btn type_box bg_grandient_3">
+    <li class="on"><button type="button" class="btn_tab_box">tab1</button></li>
+    <li><button type="button" class="btn_tab_box">tab2</button></li>
+    <li><button type="button" class="btn_tab_box">tab3</button></li>
+    <li><button type="button" class="btn_tab_box">tab4</button></li>
+  </ul>
+  <div class="wrap_tab_container">
+    <div class="tab_cont on">
+      tab1 contents
+    </div>
+    <div class="tab_cont">
+      tab2 contents
+    </div>
+    <div class="tab_cont">
+      tab3 contents
+    </div>
+    <div class="tab_cont">
+      tab4 contents
+    </div>
+  </div>
+</div>
+</xmp>
+
+
         </section>
+      </div>
+
+      <div class="guide_view">
+        <iframe src="sample_tab.html"></iframe>
       </div>
     </div>
   </main>
