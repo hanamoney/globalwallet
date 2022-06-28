@@ -36,15 +36,18 @@
     <div id="contents" class="wrap_contents guide">
       <div class="lnb">
         <ul>
-          <li class="on"><a href="layoutGuide.html">레이아웃</a></li>
+          <li><a href="layoutGuide.html">레이아웃</a></li>
           <li><a href="layerGuide.html">레이어팝업</a></li>
           <li><a href="textGuide.html">텍스트</a></li>
+          <li><a href="iconGuide.html">아이콘</a>
           <li><a href="btnGuide.html">버튼</a>
-          <li><a href="formGuide.html">폼</a></li>
+          <li ><a href="formGuide.html">폼</a></li>
           <li><a href="tabGuide.html">탭</a></li>
           <li><a href="tableGuide.html">테이블</a></li>
+          <li><a href="boxGuide.html">박스</a></li>
           <li class="on"><a href="listGuide.html">리스트</a></li>
           <li><a href="accordionGuide.html">아코디언</a></li>
+          <li><a href="agreeGuide.html">약관동의</a></li>
         </ul>
       </div>
 
@@ -163,7 +166,9 @@
 </ul>
 </xmp>
 
+
           <h3 class="guide_tit">혜택 리스트</h3>
+          <p class="guide_txt">- 스크롤시 트랜지션으로 slide up</p>
 <xmp class="prettyprint lang-html">
 <div class="wrap_item_benefit">
   <h3 class="tit_wrap">number type 혜택리스트</h3>
@@ -210,7 +215,165 @@
 </xmp>
 
 
-<h3 class="guide_tit">조회 리스트</h3>
+          <h3 class="guide_tit">조회 리스트</h3>
+          <h4 class="tit">조회 내역 리스트 기본구조</h4>
+<xmp class="prettyprint lang-html">
+<div class="section_list_trans">
+  <!-- 조회필터 -->
+  <!-- 내역없음 -->
+
+  <div class="wrap_list_trans">
+    <!-- loop: yy -->
+    <div class="list_trans">
+      <h3 class="tit_divider">2021</h3>
+      <!-- loop: dd -->
+      <div class="trans_info">
+        <h4>3월 24일 (토)</h4>
+        <ul>
+          <!-- loop: item -->
+          <li></li>
+          <!-- // loop: item -->
+          <li></li>
+        </ul>
+      </div>
+      <!-- // loop: dd -->
+    </div>
+    <!-- // loop: yy -->
+  </div>
+</div>
+</xmp>
+
+
+          <h4 class="tit">조회 아이템 케이스 - 상세내역O, minus</h4>
+<div class="trans_info">
+  <ul>
+    <li>
+      <button type="button" class="row">
+        <strong class="tit">거래구분명</strong>
+        <span class="txt_amount"><em class="txt_num">-999,999,999</em></span>
+        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+      </button>
+      <div class="row">
+        <ul class="desc"><li>HH:MM</li><li>거래사유명</li></ul>
+        <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
+      </div>
+      <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
+    </li>
+  </ul>
+</div>
+<xmp class="prettyprint lang-html">
+<li>
+  <button type="button" class="row">
+    <strong class="tit">거래구분명</strong>
+    <span class="txt_amount"><em class="txt_num">-999,999,999</em></span>
+    <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+  </button>
+  <div class="row">
+    <ul class="desc"><li>HH:MM</li><li>거래사유명</li></ul>
+    <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
+  </div>
+  <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
+</li>
+</xmp>
+
+
+          <h4 class="tit">조회 아이템 케이스 - 상세내역X, plus</h4>
+          <p class="guide_txt">원화인 경우 거래구분명 말줄임 없이 모두 노출</p>
+          <div class="trans_info">
+            <ul>
+              <li>
+                <div class="row">
+                  <strong class="tit">스타벅스 선유도역 1번출구점 스타벅스</strong>
+                  <span class="txt_amount add"><em class="txt_num">999,999,999</em></span>
+                </div>
+                <div class="row">
+                  <ul class="desc"><li>HH:MM</li><li>거래사유명</li></ul>
+                  <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
+                </div>
+                <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
+              </li>
+            </ul>
+          </div>
+<xmp class="prettyprint lang-html">
+<li>
+  <div class="row">
+    <strong class="tit">스타벅스 선유도역 1번출구점 스타벅스</strong>
+    <span class="txt_amount"><em class="txt_num">-999,999,999</em></span>
+  </div>
+  <div class="row">
+    <ul class="desc"><li>HH:MM</li><li>거래사유명</li></ul>
+    <span class="desc"><span class="blind">잔액</span><em class="txt_num">200,000,000</em></span>
+  </div>
+  <span class="txt_noti">수수료면제 <em class="txt_num">2,000,000</em>원</span>
+</li>
+</xmp>
+
+
+          <h4 class="tit">조회 아이템 케이스 - 외화</h4>
+          <p class="guide_txt">외화인 경우 거래구분명 두줄 말줄임</p>
+          <div class="trans_info foriegn">
+            <ul>
+              <li>
+                <button type="button" class="row">
+                  <strong class="tit">CATHAY UNITED BANK 130061971 CATHAY UNITED BANK 130061971</strong>
+                  <span class="txt_amount">-USD <em class="txt_num">999,999,999</em></span>
+                  <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                </button>
+                <div class="row">
+                  <ul class="desc"><li>HH:MM</li><li>거래사유명</li></ul>
+                  <span class="desc"><span class="blind">잔액</span><em class="txt_num">1042.00</em></span>
+                </div>
+                <span class="txt_noti">수수료면제 USD <em class="txt_num">3.78</em></span>
+              </li>
+            </ul>
+          </div>
+<xmp class="prettyprint lang-html">
+<div class="trans_info foriegn"><!-- 외화일 경우 foriegn 클래스 추가 -->
+  <ul>
+    <li>
+      <button type="button" class="row">
+        <strong class="tit">CATHAY UNITED BANK 130061971 CATHAY UNITED BANK 130061971</strong>
+        <span class="txt_amount">-USD <em class="txt_num">999,999,999</em></span>
+        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+      </button>
+      <div class="row">
+        <ul class="desc"><li>HH:MM</li><li>거래사유명</li></ul>
+        <span class="desc"><span class="blind">잔액</span><em class="txt_num">1042.00</em></span>
+      </div>
+      <span class="txt_noti">수수료면제 USD <em class="txt_num">3.78</em></span>
+    </li>
+  </ul>
+</div>
+</xmp>
+
+
+          <h4 class="tit">필터</h4>
+<xmp class="prettyprint lang-html">
+<!-- 조회필터 -->
+<div class="wrap_filter">
+  <p class="filter_list"><span>이번달</span><span>최신순</span><span>전체</span></p>
+  <button type="button" class="btn_ico_filter"><span class="blind">상세조회 설정</span></button>
+</div>
+<!-- // 조회필터 -->
+</xmp>
+
+          <h4 class="tit">조회내역 없음</h4>
+          <div class="msg_noresult">
+            <p class="tit">이번달에 거래하신 내역이 없어요</p>
+            <div class="wrap_btn">
+              <a href="#none" class="btn_box_sm">button</a>
+            </div>
+          </div>
+<xmp class="prettyprint lang-html">
+<!-- 내역없음 -->
+<div class="msg_noresult">
+  <p class="tit">이번달에 거래하신 내역이 없어요</p>
+  <div class="wrap_btn">
+    <a href="#none" class="btn_box_sm">button</a>
+  </div>
+</div>
+<!-- // 내역없음 -->
+</xmp>
 
 
           <h3 class="guide_tit">유의사항 리스트</h3>
