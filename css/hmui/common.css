@@ -1260,9 +1260,6 @@ section[data-roll] {
 .iOS .box_inp.err + .txt_inp_guide::before {
   top: 2px;
 }
-.wrap_inp.type_cur {
-  
-}
 .wrap_inp.type_cur .unit {
   position: absolute;
   top: 0.6rem;
@@ -1696,9 +1693,6 @@ button.btn_secondary {
   justify-content: space-between;
   padding: 0 2.4rem;
   border-bottom: 1px solid #E3EBEE;
-}
-.section_tab .wrap_tab_btn li {
-
 }
 .section_tab .wrap_tab_btn li .btn_tab_box {
   position: relative;
@@ -3650,9 +3644,6 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   font-size: 2.0rem;
   line-height: 2.6rem;
   font-weight: 700;
-}
-.wrap_banner_box {
-  
 }
 .link_box {
   position: relative;
