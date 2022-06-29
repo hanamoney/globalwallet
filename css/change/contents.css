@@ -270,6 +270,71 @@
   vertical-align: middle;
 }
 
+/* PEX_001 포인트전환 가이드 */
+.head_guide_pex {
+  padding: 3.2rem 1.2rem 1.6rem;
+  border-radius: 1.4rem 1.4rem 0 0;
+  background-color: #252E33;
+  text-align: center;
+}
+.head_guide_pex .tit {
+  color: #fff;
+  font-size: 2.4rem;
+  line-height: 3.0rem;
+}
+.guide_pex_indicator {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2.0rem;
+}
+.guide_pex_indicator button {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1.9rem;
+  color: #AEBABB;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+  text-align: center;
+}
+.guide_pex_indicator button.on {
+  background-color: #13c9be;
+  color: #fff;
+  font-weight: 700;
+}
+.guide_pex_swiper {
+  height: calc(80vh - 16.4rem);
+  max-height: 29.7rem;
+}
+.guide_pex_banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 3.0rem 0;
+  background: url('../../images/change/visual_pex_1.png') no-repeat 50% 8.2rem;
+  background-size: 100% auto;
+  text-align: center;
+}
+.guide_pex_banner .tit {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: #6E7D85;
+}
+.guide_pex_banner .txt {
+  font-size: 1.6rem;
+  list-style: 2.2rem;
+  font-weight: 700;
+}
+.guide_pex_banner.hanamoney {
+  
+}
+.guide_pex_banner.point {
+  
+}
+.guide_pex_banner.mileage {
+  
+}
+
 @supports ((-webkit-filter:none) or (filter:none)) {
   
 }

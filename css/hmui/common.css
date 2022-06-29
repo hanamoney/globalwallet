@@ -597,6 +597,20 @@ section[data-roll] {
   height: 2.6rem;
   background-image: url('../../images/hmui/btn_close.png');
 }
+.btn_ico_close_ws {
+  width: 2.0rem;
+  height: 2.0rem;
+  background-image: url('../../images/hmui/btn_close_ws.png');
+}
+.btn_close_txt [class^="btn_ico_close"] {
+  margin-right: 0.4rem;
+}
+.btn_close_txt span {
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  vertical-align: middle;
+}
 .btn_ico_card_header {
   background-image: url('../../images/hmui/btn_card_header.png');
 }
@@ -2414,7 +2428,8 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   padding-top: 5.0rem;
   padding-bottom: 6.0rem;
 }
-.wrap_layer.type_full .content_layer.type_full {
+.wrap_layer.type_full .content_layer.type_full,
+.wrap_layer.type_center .content_layer.type_full {
   padding: 0;
 }
 .wrap_layer.type_full .content_layer.type_flex {
@@ -2457,6 +2472,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   overflow: visible;
 }
 .wrap_layer.type_center .content_layer {
+  max-height: 80vh;
   padding-top: 3.2rem;
 }
 .wrap_layer.type_center .content_layer > [class^="tit"] {
@@ -2505,6 +2521,27 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   z-index: 100;
   right: 0;
   bottom: -3.6rem;
+}
+.wrap_layer.type_center .wrap_fixed_outside .chk .label {
+  color: #fff;
+}
+.wrap_layer .wrap_fixed_outside.with_carousel {
+  bottom: -4.8rem;
+}
+.wrap_layer .wrap_fixed_outside.with_carousel .swiper-pagination {
+  top: -2.1rem;
+}
+.wrap_layer .wrap_fixed_outside.with_carousel .swiper-pagination-bullet,
+.wrap_layer .wrap_fixed_outside.with_carousel .swiper-pagination-bullet-active {
+  background: #fff;
+}
+.wrap_fixed_outside.type_justify {
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+}
+.wrap_fixed_outside .btn_close_txt {
+  color: #fff;
 }
 .wrap_layer.type_alert .content_layer {
   padding: 2.4rem 2.4rem 3.0rem;
@@ -2564,6 +2601,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 102;
   width: 100%;
   height: 100%;
   background: linear-gradient(105.7deg, #45B155 -4.4%, #076157 104.12%);

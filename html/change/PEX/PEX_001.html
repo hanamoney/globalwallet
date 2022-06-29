@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>PEX_001</title>
+
+  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/change/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    
+    <!-- // header -->
+
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="popupId" class="wrap_layer type_center dim_gradient" data-dim="true"><!-- native dim 미사용 시 data-dim="true" 추가 -->
+      <div class="inner_layer">
+        <div class="content_layer type_full">
+          <div class="head_guide_pex">
+            <p class="tit">포인트를 전환하고<br><strong>혜택 받는 3가지 방법</strong></p>
+            <div class="guide_pex_indicator">
+              <button type="button" class="on">하나머니로</button>
+              <button type="button">다른 포인트로</button>
+              <button type="button">마일리지로</button>
+            </div>
+          </div>
+          <div class="swiper-container guide_pex_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="guide_pex_banner hanamoney">
+                  <p class="tit">잠자고 있는 포인트를<br><strong class="txt_point_5">하나머니로 전환</strong>하면</p>
+                  <p class="txt">송금 시 수수료 무료!<br>선물하기 구매 시 5% 적립</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="guide_pex_banner point">
+                  <p class="tit">내 하나머니를<br><strong class="txt_point_5">다른 포인트로 전환</strong>하면</p>
+                  <p class="txt">최대 4% 하나머니 재적립 가능!</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="guide_pex_banner mileage">
+                  <p class="tit">내 하나머니를<br><strong class="txt_point_5">마일리지로 전환</strong>하면</p>
+                  <p class="txt">여행갈 때 알차게 사용 가능!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap_fixed_outside type_justify with_carousel">
+          <div class="swiper-pagination"></div>
+          <span class="chk type_sub">
+            <input type="checkbox" id="chk1" name="chk1"/>
+            <label for="chk1">
+              <span class="label">다시 보지 않기</span>
+            </label>
+          </span>
+          <button type="button" class="btn_close_txt fnClosePop"><span class="btn_ico_close_ws"></span><span>닫기</span></button>
+        </div>
+      </div>
+    </div>
+    <!-- // popup -->
+
+  </main>
+  
+  <script>
+    $(function(){
+      // 팝업호출 param 오픈할 팝업 id
+      fnOpenLayerPop('popupId');
+
+      // swipe option 설정
+      var swiper = new Swiper('.guide_pex_swiper', {
+        observer: true,
+        observeParents: true,
+        resistance: true,
+        resistanceRatio: 0,
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+        }
+      });
+
+      // swipe 시 버튼 active 클래스 변경
+      swiper.on('slideChange', function() {
+        var idx = this.realIndex;
+        activeSlide(idx);
+      });
+
+      // 버튼 클릭시 swiper slide
+      $('.guide_pex_indicator').find('button').on('click', function(){
+        if (!$(this).hasClass('on')) {
+          var idx = $(this).index();
+          activeSlide(idx);
+          swiper.slideTo(idx+1);
+        }
+      });
+
+      var activeSlide = function(slideIdx){
+        var activeBtn = $('.guide_pex_indicator').find('button').eq(slideIdx);
+        activeBtn.addClass('on').siblings().removeClass('on');
+      }
+
+    });
+  </script>
+</body>
+</html>
