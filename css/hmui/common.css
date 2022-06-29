@@ -519,6 +519,7 @@ section[data-roll] {
   color: #fff;
   font-size: 1.2rem;
   line-height: 1.6rem;
+  text-align: center;
 }
 .flag_terms_lv1 {background-color: #53BC8A;}
 .flag_terms_lv2 {background-color: #81BC53;}
