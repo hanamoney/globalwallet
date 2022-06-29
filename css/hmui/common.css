@@ -2182,6 +2182,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .section_prc_complete .txt_complete em {
   font-weight: 700;
 }
+.section_prc_complete .txt_complete + .wrap_box {
+  margin-top: 1.0rem;
+}
 .section_prc_complete .msg_benefit {
   margin-top: 2.4rem;
 }
@@ -2193,9 +2196,6 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .section_prc_complete .wrap_btn_center {
   margin-top: 3.4rem;
-}
-.wrap_layer.type_full .section_prc_complete .wrap_box {
-  margin: 1.0rem 0;
 }
 .wrap_layer:not(.type_full) .section_prc_complete {
   padding-top: 3.4rem;
@@ -2215,6 +2215,9 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .wrap_layer:not(.type_full) .section_prc_complete .txt_complete {
   font-size: 2.2rem;
   line-height: 3.0rem;
+}
+.wrap_layer.type_full .section_prc_complete .wrap_box {
+  margin: 1.0rem 0;
 }
 .msg_benefit {
   position: relative;
