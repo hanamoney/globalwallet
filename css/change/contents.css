@@ -326,13 +326,13 @@
   font-weight: 700;
 }
 .guide_pex_banner.hanamoney {
-  
+  background-image: url('../../images/change/visual_pex_1.png');
 }
 .guide_pex_banner.point {
-  
+  background-image: url('../../images/change/visual_pex_2.png');
 }
 .guide_pex_banner.mileage {
-  
+  background-image: url('../../images/change/visual_pex_3.png');
 }
 
 @supports ((-webkit-filter:none) or (filter:none)) {
