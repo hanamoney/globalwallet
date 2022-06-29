@@ -20,18 +20,18 @@
 <body>
   <main id="root">
 
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>포인트 전환</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
     <!-- // header -->
 
-    <!-- // contents-->
-
-    <!-- 신청팝업 -->
-    <div id="popupId" class="wrap_layer type_full">
-      <div class="inner_layer">
-        <div class="head_layer">
-          <h2 class="tit_layer">포인트 전환 신청</h2>
-        </div>
-
-        <div class="content_layer type_flex">
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="PEX">
           <div class="wrap_tit">
             <h2 class="tit">
               <span>핀크머니</span><br>
@@ -187,12 +187,10 @@
               <button type="button" id="" class="btn_txt txt_point_1" data-name="confirmId2">개인정보 제3자 제공 동의 철회하기</button>
             </div>
           </div>
-        </div>
-
-        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+        </section>
       </div>
     </div>
-    <!-- // 신청팝업 -->
+    <!-- // contents-->
 
     <!-- 5b: 전환하기 컨펌창  -->
     <div id="confirmId" class="wrap_layer type_alert" data-dim="true">
@@ -232,8 +230,6 @@
   
   <script>
     $(function(){
-      // 팝업호출 param 오픈할 팝업 id
-      fnOpenLayerPop('popupId');
       // 팝업닫기 param 닫을 팝업 id
       // fnCloseLayerPop('popupId')
 

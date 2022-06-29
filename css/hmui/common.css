@@ -181,9 +181,6 @@ body.overflow {
 .wrap_contents {
   background-color: #fff;
 }
-.contents {
-
-}
 section[data-roll] {
   overflow-x: hidden;
   width: 100vw;
@@ -230,6 +227,15 @@ section[data-roll] {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
+}
+.page_full_flex {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 5.0rem);
+  margin-bottom: -6.0rem;
+}
+.page_full_flex.hasFixedBtn {
+  height: calc(100vh - 5.0rem - 6.0rem);
 }
 
 /* [common] */
