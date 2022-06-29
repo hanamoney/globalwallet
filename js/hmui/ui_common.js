@@ -62,20 +62,26 @@ var registUI = function(){
   * @description 스크롤에 따른 Header
   */
 var _headerControl = function(){
-  //  페이지 스크롤
-  var defaultHeight = 50; 
 
-  $(window).on('scroll', function() {
-    if ($(window).scrollTop() > 0) {
-      $('#header').addClass('scrolled');
-    }else {
-      $('#header').removeClass('scrolled');
-    }
-  });
+  if ($('.page_full_flex').length) {
+    _headerChange('section[data-roll]');
+  } else {
+    _headerChange($(window));
+  }
+
+  function _headerChange(el) {
+    $(el).on('scroll', function(){
+      if ($(this).scrollTop() > 0) {
+        $('#header').addClass('scrolled');
+      }else {
+        $('#header').removeClass('scrolled');
+      }
+    });
+  }
 };
 
 /**
-  * @name _headerControl()
+  * @name _headerPopControl()
   * @description F-POP 콘텐츠 스크롤에 따른 Header
   * @param {Element} el 팝업 element
   */
