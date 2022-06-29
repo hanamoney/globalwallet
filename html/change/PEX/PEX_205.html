@@ -20,24 +20,22 @@
 <body>
   <main id="root">
 
+    <header id="header">
+      <div class="inner_fixed">
+        <h1>포인트 전환</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
     <!-- // header -->
 
-    <!-- // contents-->
-
-    <!-- 완료팝업 -->
-    <div id="popupId" class="wrap_layer type_full">
-      <div class="inner_layer">
-        <div class="head_layer">
-          <h2 class="tit_layer">포인트 전환 완료</h2>
-          <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
-        </div>
-
-        <div class="content_layer type_flex">
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="PEX">
           <div class="section_prc_complete">
             <p class="txt_complete"><em class="txt_point_1 txt_num">1,000,000</em><br><span>아모레퍼시픽 뷰티포인트</span>로 전환됐어요.</p>
           </div>
-        </div>
-        
+        </section>
+
         <!-- 하단고정영역 -->
         <div class="section_bottom_fixed">
           <div class="wrap_btn_full">
@@ -48,20 +46,11 @@
           </div>
         </div>
         <!-- // 하단고정영역 -->
-
       </div>
     </div>
-    <!-- // 완료팝업 -->
+    <!-- // contents-->
 
   </main>
   
-  <script>
-    $(function(){
-      // 팝업호출 param 오픈할 팝업 id
-      fnOpenLayerPop('popupId');
-      // 팝업닫기 param 닫을 팝업 id
-      // fnCloseLayerPop('popupId');
-    });
-  </script>
 </body>
 </html>

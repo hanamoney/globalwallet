@@ -20,18 +20,18 @@
 <body>
   <main id="root">
 
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>포인트 전환</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
     <!-- // header -->
 
-    <!-- // contents-->
-
-    <!-- 동의팝업 -->
-    <div id="popupId" class="wrap_layer type_full">
-      <div class="inner_layer">
-        <div class="head_layer">
-          <h2 class="tit_layer">포인트 전환 동의</h2>
-        </div>
-
-        <div class="content_layer">
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="PEX">
           <div class="wrap_tit">
             <h2 class="tit">
               <span>아모레퍼시픽 뷰티포인트</span><br>
@@ -115,7 +115,7 @@
             <img src="../../../images/change/logo_pex_b211.png" alt="TV포인트" class="ico_logo">
             -->
           </div>
-        </div>
+        </section>
 
         <!-- 하단고정영역 -->
         <div class="section_bottom_fixed">
@@ -125,20 +125,11 @@
         </div>
         <!-- // 하단고정영역 -->
 
-        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
       </div>
     </div>
-    <!-- // 동의팝업 -->
+    <!-- // contents-->
 
   </main>
-  
-  <script>
-    $(function(){
-      // 팝업호출 param 오픈할 팝업 id
-      fnOpenLayerPop('popupId');
-      // 팝업닫기 param 닫을 팝업 id
-      // fnCloseLayerPop('popupId');
-    });
-  </script>
+
 </body>
 </html>
