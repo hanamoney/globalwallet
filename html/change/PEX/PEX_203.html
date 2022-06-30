@@ -227,22 +227,6 @@
     </div>
     <!-- // contents-->
 
-    <!-- 신청팝업 -->
-    <div id="popupId" class="wrap_layer type_full">
-      <div class="inner_layer">
-        <div class="head_layer">
-          <h2 class="tit_layer">포인트 전환 신청</h2>
-        </div>
-
-        <div class="content_layer type_flex">
-
-        </div>
-
-        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
-      </div>
-    </div>
-    <!-- // 신청팝업 -->
-
     <!-- PEX_204 ID선택 -->
     <!-- 
       셀렉트레이어 닫을 시 selected클래스 체크하여 해당 .sel버튼 다음에 있는 .hiddenInp의 value로 data-option 값을 전달 (ui_common.js 에서)
@@ -321,7 +305,7 @@
   <script>
     $(function(){
       // 팝업닫기 param 닫을 팝업 id
-      // fnCloseLayerPop('popupId')
+      // fnCloseLayerPop('popupId');
 
       $('.btn_box_m.btn_primary').on('click', function(){
         // 전환하기 컨펌창 호출 param 오픈할 팝업 id
