@@ -2472,7 +2472,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   overflow: visible;
 }
 .wrap_layer.type_center .content_layer {
-  max-height: 80vh;
+  max-height: 50rem;
   padding-top: 3.2rem;
 }
 .wrap_layer.type_center .content_layer > [class^="tit"] {
