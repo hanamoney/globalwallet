@@ -58,10 +58,11 @@
           <h2 class="guide_tit_page">레이어팝업</h2>
 
           <h3 class="guide_tit">레이어팝업 공통(B-Pop/F-Pop/Confirm)</h3>
-          <p class="guide_txt">fnOpenPop 클래스로 팝업 오픈할 시 <span class="txt_point_2">data-name="오픈할 팝업 ID"</span> 필수</p>
+          <p class="guide_txt">fnOpenPop 클래스로 팝업 오픈할 시 <strong>data-name="오픈할 팝업 ID"</strong> 필수</p>
           <p class="guide_txt">- 팝업오픈 함수 호출 시 : fnOpenLayerPop('<span class="txt_point_2">오픈할 팝업 ID</span>')</p>
           <p class="guide_txt">- 팝업 오픈 후 인터렉션 실행 필요 시 <span class="txt_point_5">exeTransitionInLayer</span>에서 정의</p>
-          <p class="guide_txt">fnClosePop 클래스가 있는 경우 해당 팝업을 닫고 data-name="닫은 팝업ID"로 포커스 이동</p>
+          <p class="guide_txt">- 팝업에 하단고정버튼이 있는 경우 스크립트로 체크하여 hasFixedBtn 클래스 추가</p>
+          <p class="guide_txt">fnClosePop 클래스가 있는 경우 해당 팝업을 닫고 <strong>data-name="닫은 팝업ID"</strong>로 포커스 이동</p>
           <p class="guide_txt">- 팝업닫기 함수 호출 시 : fnCloseLayerPop('<span class="txt_point_2">닫을 팝업 ID</span>', '<span class="txt_point_2">포커스 보낼 element</span>')</p>
 
           <h3 class="guide_tit">B-POP</h3>
@@ -93,6 +94,7 @@
 
           <h3 class="guide_tit">F-POP</h3>
           <p class="guide_txt">- 타이틀이 영역보다 클경우 font-size resize (fnOpenLayerPop 시 체크)</p>
+          <p class="guide_txt">- flex layout이 필요한 경우 content_layer에 <strong>type_flex</strong> 클래스 추가</p>
 <xmp class="prettyprint lang-html">
 <!-- 콘텐츠 내 팝업 호출 버튼 -->
 <button type="button" class="btn fnOpenPop" data-name="popupfullId">버튼</button>
