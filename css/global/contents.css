@@ -1130,6 +1130,13 @@
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
+.gsp_travlog_info .atm_info .txt_basis {
+  padding: 0 1.0rem;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+  word-break: keep-all;
+}
 .gsp_travlog_info .atm_info .emoji_atm {
   width: 1.9rem;
   height: 3.2rem;
