@@ -690,8 +690,18 @@ var _showBenefitList = function() {
     // F-Pop 일 경우
     return;
   } else {
-    _titShow();
-    _listshow();
+    if ( $('.section_top_visual.my_benefit').length || $el.attr('data-waypoint') == 'reset') {
+      // dom change 감지 후 실행, VDB001
+      var config = { attributes: true, subtree: true };
+      var callback = function(){
+        _titShow();
+        _listshow();
+      }
+      observeDomChanges(document.body, config, callback);
+    } else {
+      _titShow();
+      _listshow();
+    }
   }
 
   function _titShow() {
@@ -1373,3 +1383,15 @@ var disableUserScalable = function() {
     $viewport.attr('content', 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no');
   }
 }
+
+/**
+  * @name observeDomChanges();
+  * @description DOM 변경 감지 후 함수 실행
+  * @param {Node} targetNode // 대상 Node
+  * @param {object} config // 감지 속성 설정
+  * @param {function} callback // 실행 함수
+  */ 
+  function observeDomChanges(targetNode, config, callback) {
+    var observer = new MutationObserver(callback);
+    observer.observe(targetNode, config);
+  }
