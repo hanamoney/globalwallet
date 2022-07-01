@@ -690,14 +690,15 @@ var _showBenefitList = function() {
     // F-Pop 일 경우
     return;
   } else {
-    if ( $('.section_top_visual.my_benefit').length || $el.attr('data-waypoint') == 'reset') {
-      // dom change 감지 후 실행, VDB001
-      var config = { attributes: true, subtree: true };
+    if ( $('.section_top_visual.my_benefit').length ) {
+      // VDB001
+      var target = $('.section_top_visual.my_benefit')[0];
+      var config = { attributes: true };
       var callback = function(){
         _titShow();
         _listshow();
       }
-      observeDomChanges(document.body, config, callback);
+      observeDomChanges(target, config, callback);
     } else {
       _titShow();
       _listshow();
