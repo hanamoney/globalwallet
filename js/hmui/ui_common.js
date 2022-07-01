@@ -691,7 +691,7 @@ var _showBenefitList = function() {
     return;
   } else {
     if ( $('.section_top_visual.my_benefit').length ) {
-      // VDB001
+      // VDB001 dom class change 감지 후 실행
       var target = $('.section_top_visual.my_benefit')[0];
       var config = { attributes: true };
       var callback = function(){
