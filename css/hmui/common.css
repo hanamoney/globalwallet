@@ -3571,7 +3571,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   line-height: 1.6rem;
 }
 .wrap_notice .list_txt .txt_black {
-  color: #252E33;
+  color: #000;
 }
 .wrap_notice .list_txt .btn_txt {
   font-size: 1.3rem;
