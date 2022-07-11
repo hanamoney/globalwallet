@@ -2724,6 +2724,14 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .wrap_tooltip .txt_tooltip em {
   color: #252E33;
 }
+.wrap_tooltip .txt_sub {
+  display: block;
+  margin-top: 0;
+  color: #4F5D64;
+  font-size: 1.2rem;
+  line-height: 2.0rem;
+  font-weight: 400;
+}
 .wrap_tooltip .btn_ico_close {
   position: absolute;
   top: 1.6rem;

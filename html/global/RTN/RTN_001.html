@@ -35,7 +35,7 @@
             <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip">
               <span class="txt_info"><span class="ico_cur_usd"></span> <span>USD</span> 1 = <span class="txt_num">1,249.12</span>원</span>
               <span class="ico_tooltip"><span class="blind">툴팁</span></button>
-            <button class="txt_balloon fnOpenTooltip" data-name="tooltip">수수료 있음</button>
+            <button class="txt_balloon fnOpenTooltip" data-name="tooltip"><em>5</em>% 수수료 있음</button><!-- 22.07.11 환율정보 노출추가 -->
           </div>
           <div class="section_form">
             <div class="wrap_inp type_cur">
@@ -45,6 +45,7 @@
                 <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
               </div>
               <p class="txt_inp_guide type_right">내가 보유한 <em>USD</em> <em class="txt_num">200.20</em></p>
+              <p class="txt_inp_guide type_right txt_point_1">환급수수료 <em class="txt_num">1,000</em>원</p><!-- 22.07.11 정상금액입력시 수수료정보 노출추가 -->
             </div>
             <div class="txt_inp_result">
               <strong>하나머니 <span class="txt_num">249,800</span></strong>원이 입금돼요.
@@ -74,15 +75,27 @@
     <!-- tooltip -->
     <div id="tooltip" class="wrap_tooltip">
       <div class="inner_tooltip">
-        <p class="txt_tooltip">하나은행 <em class="txt_bold">송금받을 때</em> 환율 기준이에요.</p>
+        <p class="txt_tooltip">환급 시에는 <em class="txt_bold">송금받을 때(전신환매입률) 환율</em>이 적용되고, <em class="txt_bold">환급수수료(<span>5</span>%)</em>가 차감된 후 입금돼요.<span class="txt_sub">환급신청금액(입력금액X적용환율)-환급수수료(환급신청금액X<span>0.05</span>)=최종환급금액</span></p><!-- 22.07.11 툴팁내용변경 -->
         <button class="btn_ico_close fnCloseTooltip"><span class="blind">닫기</span></button>
       </div>
     </div>
     <!-- // tooltip -->
 
+    <!-- 22.07.11 snackbar 추가 -->
+    <div id="snackbar" class="wrap_toast type_snackbar">
+      <p class="txt_toast">환급 시 환급수수료(<span>5</span>%)가 부과되니 신중히 거래해 주세요.</p>
+      <button class="btn_ico_close_w"><span class="blind">닫기</span></button>
+    </div>
+    <!-- // 22.07.11 snackbar 추가 -->
+
   </main> 
 
   <script>
+    // 22.07.11 snackbar 노출 추가
+    setTimeout(function(){
+      fnToastPop('snackbar');
+    },200);
+
     // value 값 설정 후 change 트리거 삭제 클래스추가로 변경
     $('#test').on('click', function(e){
       $('.inp').val('200.20').closest('.box_inp').addClass('hasVal');
