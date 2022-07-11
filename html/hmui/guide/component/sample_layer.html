@@ -44,6 +44,9 @@
             <button type="button" class="btn testToast">토스트</button>
             <br>
             <br>
+            <button type="button" class="btn testSnackbar">스낵바</button>
+            <br>
+            <br>
             <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip">툴팁텍스트<span class="ico_tooltip"><span class="blind">툴팁</span></span></button>
             <div style="text-align:center">
               <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip">툴팁텍스트<span class="ico_tooltip"><span class="blind">툴팁</span></span></button>
@@ -138,6 +141,13 @@
     </div>
     <!-- // toast -->
 
+    <!-- snackbar -->
+    <div id="snackbar" class="wrap_toast type_snackbar">
+      <p class="txt_toast">스낵바팝업 메시지 스낵바팝업 메시지스낵바팝업</p>
+      <button class="btn_ico_close_w"><span class="blind">닫기</span></button>
+    </div>
+    <!-- // snackbar -->
+
   </main>
   
   <script>
@@ -146,6 +156,11 @@
         // 토스트팝업 호출
         fnToastPop('toast');
       })
+
+      $('.testSnackbar').on('click', function(){
+        // 토스트팝업 호출
+        fnToastPop('snackbar');
+      });
     });
   </script>
 </body>

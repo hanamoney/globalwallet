@@ -956,9 +956,23 @@ var fnToastPop = function(popID) {
   if ( $('.wrap_btn_full').length && $('.wrap_btn_full').is(':visible') ) {
     $el.addClass('withFixedBtn');
   }
-  setTimeout(function(){
-    $el.removeClass('show withFixedBtn');
-  }, 3000);
+
+  if ($el.hasClass('type_snackbar')) {
+    // 스낵바 닫기
+    $el.find('.btn_ico_close_w').on('click', function(){
+      $el.removeClass('show withFixedBtn');
+    });
+    // 스낵바 외 영역 클릭 시 툴팁 닫기
+    $(window).on('touchstart', function(e) {
+      if ($('.wrap_toast.type_snackbar.show').length && !$(e.target).hasClass('wrap_toast') && !$(e.target).parents('.wrap_toast').length ) {
+        $('.wrap_toast.type_snackbar').removeClass('show withFixedBtn');
+      }
+    });
+  } else {
+    setTimeout(function(){
+      $el.removeClass('show withFixedBtn');
+    }, 3000);
+  }
 };
 
 /**

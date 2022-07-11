@@ -603,6 +603,12 @@ section[data-roll] {
   height: 2.6rem;
   background-image: url('../../images/hmui/btn_close.png');
 }
+.btn_ico_close_w {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url('../../images/hmui/btn_close_w.png');
+  background-size: 1.4rem;
+}
 .btn_ico_close_ws {
   width: 2.0rem;
   height: 2.0rem;
@@ -2652,7 +2658,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .wrap_toast {
   color: #fff;
   font-size: 1.8rem;
-  line-height: 2.0rem;
+  line-height: 2.4rem;
 }
 .txt_toast {
   text-align: center;
@@ -2660,6 +2666,18 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .txt_toast_left {
   text-align: left;
+}
+/* snackbar */
+.wrap_toast.type_snackbar {
+  padding-right: 4.8rem;
+}
+.wrap_toast.type_snackbar .txt_toast {
+  text-align: left;
+}
+.wrap_toast.type_snackbar .btn_ico_close_w {
+  position: absolute;
+  top: 1.6rem;
+  right: 2.0rem;
 }
 
 /* Tooltip */
