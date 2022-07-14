@@ -820,9 +820,10 @@ var _textFitToCont = function(){
   function resize() {
     $el.each(function(idx, el){
       $(this).removeAttr('style');
-      var txt = $(this).find('.txt_num');
-      if ( txt.width() + 34 > $(this).width()) {
-        $(this).css('font-size', (parseInt($(this).css('font-size')) - 3) + "px");
+      var txt = $(this).find('.txt_num').text().replace(/,/g, '').length;
+      if ( txt > 6) {
+        var size = (parseInt($(this).css('font-size')) - 2) + 'px';
+        $(this).css('font-size', size);
       }
     });
   }
@@ -1175,8 +1176,10 @@ var fnVdbCoinChart = (function() {
         }
       });
       
+      if ( fnCheckInView($(el).find('.chart_coin')) && fnCheckInView($(el).find('.txt_amount')) ) {
+        _checkView($(el));
+      }
       // 스크롤에 따른 animation 시작
-      _checkView($(el));
       $(window).on('scroll', function(){
         _checkView($(el));
       });
