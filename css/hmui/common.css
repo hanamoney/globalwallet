@@ -2676,8 +2676,10 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .wrap_toast.type_snackbar .btn_ico_close_w {
   position: absolute;
-  top: 1.6rem;
-  right: 2.0rem;
+  top: 0;
+  right: 0;
+  width: 4.4rem;
+  height: 5.0rem;
 }
 
 /* Tooltip */
