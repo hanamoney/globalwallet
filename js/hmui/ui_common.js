@@ -821,9 +821,14 @@ var _textFitToCont = function(){
     $el.each(function(idx, el){
       $(this).removeAttr('style');
       var txt = $(this).find('.txt_num').text().replace(/,/g, '').length;
-      if ( txt > 6) {
-        var size = (parseInt($(this).css('font-size')) - 2) + 'px';
+      var size = (parseInt($(this).css('font-size')) - 2) + 'px';
+      if ( txt > 6 ) {
         $(this).css('font-size', size);
+      } else {
+        // VDB_001 동전차트영역 텍스트사이즈 줄어든 항목이 있을 경우 해당박스영역 텍스트 일괄변경
+        if ($(this).closest('.wrap_vdb_list').find('.fnFitToCont').attr('style') ) {
+          $(this).closest('.wrap_vdb_list').find('.fnFitToCont').css('font-size', size);
+        }
       }
     });
   }
