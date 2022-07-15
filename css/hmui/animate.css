@@ -36,7 +36,7 @@
 
 @keyframes floating5 {
   60% {
-    transform: translateY(0.6rem) rotate(-0.8deg);
+    transform: translateY(0.7rem) rotate(-0.8deg);
   }
 }
 @keyframes floating10 {
