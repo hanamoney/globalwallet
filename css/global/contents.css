@@ -453,6 +453,7 @@
   position: absolute;
   top: 2.8rem;
   left: 50%;
+  z-index: -1;
   width: 91.1vw;
   height: 44.167vw;
   background: url('../../images/global/bg_hmn_confeffi_2.png') no-repeat 50%;
