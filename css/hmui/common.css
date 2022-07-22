@@ -3169,6 +3169,14 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .wrap_link_list .txt {
   font-size: 1.8rem;
 }
+.wrap_link_list li .txt_sub {
+  display: inline-block;
+  margin-top: 0;
+  padding-left: 1.0rem;
+  color: #849594;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
 .wrap_link_list [class^="ico_"] + .txt {
   padding-left: 1.0rem;
 }
