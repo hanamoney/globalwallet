@@ -890,7 +890,7 @@
   content: '';
   display: block;
   position: absolute;
-  left: 57%;
+  left: calc(50% + 2.4rem);
   top: 1.3rem;
   z-index: 1;
   width: 7.5rem;
