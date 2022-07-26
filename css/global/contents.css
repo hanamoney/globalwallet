@@ -209,6 +209,12 @@
   width: 12.1rem;
   height: 19.2rem;
 }
+.visual_usr_card .img_card_travlog::before,
+.visual_usr_card .img_card_travlog_2::before {
+  width: 9.0rem;
+  height: 14.2rem;
+  box-shadow: 0px 4px 40px #17201D;
+}
 .visual_usr_card .img_card_travlog {
   top: 0;
   left: calc(50% - 11.6rem);
