@@ -840,7 +840,7 @@
   height: 2.9rem;
   background: url('../../images/hmui/character/visual_cloud2.png') no-repeat center;
   background-size: 100%;
-  /* animation: floating10 6s ease-in-out infinite; */
+  animation: floating10 6s ease-in-out infinite;
 }
 .section_cont.about_travlog {
   background: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);
