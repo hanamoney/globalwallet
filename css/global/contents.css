@@ -2496,7 +2496,7 @@
 .AOS_old .visual_gsp_overseas.transform .img_shoppingbag,
 .AOS_old .visual_gsp_card,
 .AOS_old .visual_gsp_card .img_drone_box,
-.AOS_old .visual_gsp_card .img_character_walk::after,
+.AOS_old .visual_gsp_card::after,
 .AOS_old .section_cont.about_travlog .visual_gsp_travlog.transform,
 .AOS_old .section_cont.about_travlog .visual_gsp_travlog.transform::before,
 .AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_globe::before,
