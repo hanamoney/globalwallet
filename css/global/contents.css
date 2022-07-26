@@ -154,10 +154,10 @@
   padding-top: 5.0rem;
 }
 .visual_usr_card {
-  width: 24.4rem;
-  height: 27.3rem;
-  margin: 3.5rem auto 0;
-  transform: translateY(3rem);
+  width: 30.9rem;
+  height: 24.3rem;
+  margin: 5.5rem auto 0;
+  transform: translateY(0);
 }
 .visual_usr_card.transform {
   animation: itemUp30 0.4s forwards;
@@ -203,13 +203,28 @@
 .img_card_travlog_2::after {
   background-image: url('../../images/global/img_card_travlog_2.png');
 }
+.visual_usr_card .img_card_travlog,
+.visual_usr_card .img_card_travlog_2 {
+  position: absolute;
+  width: 12.1rem;
+  height: 19.2rem;
+}
 .visual_usr_card .img_card_travlog {
-  margin-top: 1.0rem;
+  top: 0;
+  left: calc(50% - 11.6rem);
+}
+.visual_usr_card .img_card_travlog_2 {
+  top: -0.5rem;
+  left: calc(50% - 0.5rem);
+  transform: rotate(6.08deg);
 }
 .visual_usr_card .img_shoppingbag {
   position: absolute;
-  top: 1.0rem;
-  right: 0;
+  top: -6.5rem;
+  right: -0.5rem;
+  z-index: 2;
+  width: 6.0rem;
+  height: 12.2rem;
   transform: scaleX(-1);
 }
 .visual_usr_card.transform .img_shoppingbag {
@@ -226,8 +241,9 @@
 }
 .visual_usr_card .img_character_luggage {
   position: absolute;
-  left: 0;
+  left: 1.1rem;
   bottom: 0;
+  z-index: 2;
 }
 .section_top_visual.join_complete {
   padding-bottom: 20.3rem;
