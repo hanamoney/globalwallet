@@ -952,6 +952,9 @@
 .section_cont.gsp_travlog_info .wrap_tit:last-child {
   margin-bottom: 0;
 }
+.section_cont.gsp_travlog_info .wrap_tit .txt_2 {
+  margin-top: 0.6rem;
+}
 .section_cont.gsp_travlog_info .wrap_box {
   margin: 2.0rem 0;
   padding-bottom: 1.4rem;
