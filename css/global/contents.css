@@ -213,7 +213,7 @@
 .visual_usr_card .img_card_travlog_2::before {
   width: 9.0rem;
   height: 14.2rem;
-  /* box-shadow: 0px 4px 40px #17201D; */
+  box-shadow: 0px 4px 40px rgba(41, 58, 143, 0.62);
 }
 .visual_usr_card .img_card_travlog {
   top: 0;
