@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>HMN_204</title>
+
+  <link rel="stylesheet" href="../../..../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    
+    <!-- // header -->
+
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="popupId" class="wrap_layer">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <!-- 22.08.09 변경 -->
+          <div class="wrap_banner type_bg_coin">
+            <p class="txt_sub_2">아직도 70%우대 받고 환전하나요?</p>
+            <p class="tit_xl txt_point_1">환율 100% 우대<small class="tit_sub">(USD, JPY, EUR, GBP)</small></p>
+            <p class="tit_2">최대 8달러 적립까지!</p>
+          </div>
+          <!-- // 22.08.09 변경 -->
+        </div>
+        <div class="section_bottom_fixed">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_primary fnClosePop">지금 혜택 받기</button>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // popup -->
+
+  </main>
+  
+  
+  <script>
+    // 팝업오픈 퍼블확인용 스크립트
+    $(function(){
+      fnOpenLayerPop('popupId');
+
+      /*
+      $(document).on('click','.dim',function(){
+        // 22.05.25 네이티브 딤 사용시 WEB_EXIT 브릿지 호출
+        
+      });
+      */
+    });
+  </script>
+</body>
+</html>

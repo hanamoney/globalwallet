@@ -646,6 +646,9 @@
 .wrap_banner.hmn_201 .btn_txt {
   font-size: 1.6rem;
 }
+.wrap_banner.type_bg_coin {
+  background-image: url('../../images/global/bg_ban_coin.png');
+}
 
 /* [GSP] - 글로벌 */
 /* GSP_001 해외직구 매뉴얼 */
