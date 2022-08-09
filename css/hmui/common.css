@@ -3677,7 +3677,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   line-height: 4.4rem;
   font-weight: 700;
 }
-.wrap_banner .tit_xl small {
+.wrap_banner [class^="tit"] small {
   display: block;
   margin: 0.2rem 0 0;
   font-weight: 400;
@@ -4308,6 +4308,12 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   padding: 6.0rem 2.4rem 4.0rem;
   background-repeat: no-repeat;
   background-size: 100%;
+}
+.wrap_layer .content_layer .wrap_banner[class*="type_bg"] [class^="wrap_btn"] {
+  margin-top: 2.0rem;
+}
+.wrap_layer .content_layer .wrap_banner[class*="type_bg"] .btn_txt {
+  margin-top: 0;
 }
 .wrap_layer .content_layer .section_terms {
   padding-top: 3.0rem;
