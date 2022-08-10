@@ -1596,6 +1596,15 @@ button.btn_secondary {
   z-index: 100;
   pointer-events: none;
 }
+.section_bottom_fixed > .wrap_bubble .tooltip_bubble.right {
+  right : calc(60vw / 2);
+  transform: translateX(50%);
+}
+.section_bottom_fixed > .wrap_bubble .tooltip_bubble.right .bubble_caret {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+}
 
 /* dropdown */
 .wrap_dropdown {
@@ -2765,6 +2774,10 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   left: auto;
   transform: none;
 }
+.tooltip_bubble.left {
+  left: 2.4rem;
+  transform: none;
+}
 .tooltip_bubble p {
   padding: 0.5rem 1.2rem 0.6rem;
   border-radius: 1.2rem;
@@ -2807,6 +2820,10 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .tooltip_bubble.type_pink.right .bubble_caret {
   left: auto;
   right: 5.2rem;
+  transform: none;
+}
+.tooltip_bubble.type_pink.left .bubble_caret {
+  left: 5.2rem;
   transform: none;
 }
 .wrap_bubble[data-animate="trans"] {
