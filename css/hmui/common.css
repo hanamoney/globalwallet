@@ -3244,6 +3244,7 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
   right: 2.1rem;
   bottom: 1.7rem;
   font-size: 1.6rem;
+  font-weight: 700;
 }
 .wrap_box_list .item_desc {
   padding-top: 2.0rem;
