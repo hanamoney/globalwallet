@@ -1086,6 +1086,19 @@ var fnCheckInView = function(el) {
 }
 
 /**
+  * @name fnScrollToEl()
+  * @description 해당 element로 스크롤이동 애니메이션
+  * @param {Element | string} el 스크롤 이동할 element 
+  */
+var fnScrollToEl = function(el) {
+  var posTop = $(el).offset().top - $('#header').height() + 1;
+
+  $('html, body').animate({
+    scrollTop: posTop
+  }, 400);
+}
+
+/**
   * @name fnCounterUp()
   * @description number counter up
   * @param {Element | string} el element 
