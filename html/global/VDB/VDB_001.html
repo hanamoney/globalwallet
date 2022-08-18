@@ -101,14 +101,14 @@
               <div class="box_card_type">
                 <ul class="wrap_vdb_list">
                   <li>
-                    <button type="button"><!-- 22.08.19 버튼추가 -->
+                    <button type="button"><!-- 22.08.18 버튼추가 -->
                       <p class="tit_counter"><span class="num">1</span><span>그 외 적립</span></p>
                       <div class="chart_coin" data-percent="100"></div>
                       <p class="txt_amount fnFitToCont"><em class="txt_num" id="test2">0</em>원</p>
                     </button>
                   </li>
                   <li>
-                    <button type="button"><!-- 22.08.19 버튼추가 -->
+                    <button type="button"><!-- 22.08.18 버튼추가 -->
                       <p class="tit_counter"><span class="num">2</span><span>포인트전환 적립</span></p>
                       <div class="chart_coin" data-percent="0"></div>
                       <p class="txt_amount fnFitToCont"><em class="txt_num">0</em>원</p>
@@ -116,7 +116,7 @@
                   </li>
                   <!-- 항목이 없는 경우 empty 클래스 추가-->
                   <li class="empty">
-                    <button type="button" disabled><!-- 22.08.19 버튼추가, 항목이 없는 경우 disabled 속성 추가 -->
+                    <button type="button" disabled><!-- 22.08.18 버튼추가, 항목이 없는 경우 disabled 속성 추가 -->
                       <p class="tit_counter"><span class="num">3</span><span></span></p>
                       <div class="chart_coin"></div>
                     </button>
@@ -154,14 +154,14 @@
                 <span class="img_character_hahamom_dance"></span>
                 <ul class="wrap_vdb_list">
                   <li>
-                    <button type="button"><!-- 22.08.19 버튼추가 -->
+                    <button type="button"><!-- 22.08.18 버튼추가 -->
                       <p class="tit_counter"><span class="num">1</span><span>해외 ATM 인출 수수료</span></p><!-- 22.05.31 문구변경 -->
                       <div class="chart_coin" data-percent="100"></div>
                       <p class="txt_amount fnFitToCont"><em class="txt_num">0</em>원</p>
                     </button>
                   </li>
                   <li>
-                    <button type="button"><!-- 22.08.19 버튼추가 -->
+                    <button type="button"><!-- 22.08.18 버튼추가 -->
                       <p class="tit_counter"><span class="num">2</span><span>해외 가맹점 이용수수료</span></p><!-- 22.05.31 문구변경 -->
                       <div class="chart_coin" data-percent="0"></div>
                       <p class="txt_amount fnFitToCont"><em class="txt_num">0</em>원</p>
@@ -169,7 +169,7 @@
                   </li>
                   <!-- 항목이 없는 경우 empty 클래스 추가-->
                   <li class="empty">
-                    <button type="button" disabled><!-- 22.08.19 버튼추가, 항목이 없는 경우 disabled 속성 추가 -->
+                    <button type="button" disabled><!-- 22.08.18 버튼추가, 항목이 없는 경우 disabled 속성 추가 -->
                       <p class="tit_counter"><span class="num">3</span><span></span></p>
                       <div class="chart_coin"></div>
                     </button>
@@ -343,7 +343,7 @@
         $notExistFvrAm.hide();
         
         totalAmount = 999999;
-        infoTit.html('<button type="button">총 <em class="txt_amount"><span class="txt_num fnCounterUp">' + totalAmount.comma() + '</span>원</em>을<br>아꼈어요!</button>'); // 22.08.19 버튼추가
+        infoTit.html('<button type="button">총 <em class="txt_amount"><span class="txt_num fnCounterUp">' + totalAmount.comma() + '</span>원</em>을<br>아꼈어요!</button>'); // 22.08.18 버튼추가
         savedTotal.text('99,999,999');
         $existFvrAm.find('li').eq(0).find('.txt_num').text('99,999,999');
         $existFvrAm.find('li').eq(1).find('.txt_num').text('9,999');
@@ -361,7 +361,7 @@
         $notExistFvrAm.show();
         
         totalAmount = 999999;
-        infoTit.html('<button type="button">총 <em class="txt_amount"><span class="txt_num fnCounterUp">' + totalAmount.comma() + '</span>원</em>을<br>모았어요!</button>'); // 22.08.19 버튼추가
+        infoTit.html('<button type="button">총 <em class="txt_amount"><span class="txt_num fnCounterUp">' + totalAmount.comma() + '</span>원</em>을<br>모았어요!</button>'); // 22.08.18 버튼추가
         accumTotal.text('999,999');
         $existRvAm.find('li').eq(0).find('.txt_num').text('100,000');
         $existRvAm.find('li').eq(1).find('.txt_num').text('70,000');
@@ -379,7 +379,7 @@
         $notExistFvrAm.hide();
 
         totalAmount = 450000;
-        infoTit.html('<button type="button">총 <em class="txt_amount"><span class="txt_num fnCounterUp">' + totalAmount.comma() + '</span>원</em> 혜택을<br>받았어요!</button>'); // 22.08.19 버튼추가
+        infoTit.html('<button type="button">총 <em class="txt_amount"><span class="txt_num fnCounterUp">' + totalAmount.comma() + '</span>원</em> 혜택을<br>받았어요!</button>'); // 22.08.18 버튼추가
         accumTotal.text('400,000');
         savedTotal.text('50,000');
         $existFvrAm.find('li').eq(0).find('.txt_num').text('99,999,999');
@@ -397,7 +397,7 @@
       fnCounterUp($('.fnCounterUp'), 20, 700);
     }
 
-    // 22.08.19 스크롤추가
+    // 22.08.18 스크롤추가
     $('.bubble.accum').find('button').on('click', function(e){fnScrollToEl($('#divAccum'));});
     $('.bubble.saved').find('button').on('click', function(e){fnScrollToEl($('#divSaved'));});
 
