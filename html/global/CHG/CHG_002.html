@@ -117,7 +117,9 @@
       // 팝업 오픈 param 오픈할 팝업 ID
       fnOpenLayerPop('popupId');
       // 팝업 닫기 param 닫을 팝업 ID
-      // fnCloseLayerPop('popupId');
+      $('.btn_box_big.btn_primary').on('click', function(){
+        fnCloseLayerPop('popupId');
+      });
 
       // value 값 설정 후 change 트리거
       $('#test').on('click', function(e){
