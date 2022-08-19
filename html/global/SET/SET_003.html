@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>SET_003</title>
+
+  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>관리</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="SET">
+          <!-- 퍼블 동작확인용 버튼 -->
+          <button class="btn_txt fnOpenPop" data-name="popupId3">외화 자동충전 안내</button>
+        </section>
+        <!-- // section -->
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <!-- 외화자동충전안내 팝업 -->
+    <div id="popupId3" class="wrap_layer" data-dim="true">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">외화 자동충전 안내</h2>
+        </div>
+        <div class="content_layer">
+          <ul class="list_txt type_nobul">
+            <li>자동충전은 설정한 기준 조건에 따라 <strong class="txt_point_1">연결된 계좌</strong>에서 하나머니를 자동으로 충전하는 서비스예요.</li>
+            <li>외화 자동충전 시, <strong class="txt_point_1">충전 시점의 하나은행 매매기준율</strong>로 해당 통화가 충전돼요.</li>
+          </ul>
+        </div>
+        <div class="section_bottom_fixed">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_primary fnClosePop">안내사항을 확인했어요</button>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // 팝업호출 param 오픈할 팝업 id
+    fnOpenLayerPop('popupId3');
+    // 팝업닫기 param 닫을 팝업 id
+    // fnCloseLayerPop('popupId3');
+  
+  </script>
+  
+</body>
+</html>

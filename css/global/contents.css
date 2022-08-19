@@ -137,6 +137,36 @@
 .section_set_list .wrap_btn.type_full {
   margin-top: 3.0rem;
 }
+.section_set_list > .tit {
+  margin-bottom: 1.0rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+}
+.section_set_list > .tit > .btn_tooltip {
+  font: inherit;
+}
+.section_set_list > .tit > .btn_tooltip .ico_tooltip {
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+}
+.section_set_list .wrap_box_list .txt_ccy {
+  line-height: 2.4rem;
+}
+.section_set_list .wrap_box_list .txt_ccy [class^="ico_cur"] {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 0.7rem;
+}
+.section_set_list .wrap_box_list + .txt_guide {
+  margin-top: 2.0rem;
+}
+.section_set_list + .wrap_banner_box {
+  margin-top: 3.0rem;
+}
+.wrap_banner_box .link_box.set_travlog_link::after {
+  background-image: url('../../images/global/img_card_travlog_3.png');
+}
 
 /* [USR] - 회원가입 */
 .section_acc_list {
@@ -368,6 +398,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1.3rem 0 1.1rem;
+}
+.wrap_banner_box.benefit_link .link_box .tit {
+  color: #844883;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.wrap_banner_box.benefit_link .link_box .tit em {
+  font-weight: 700;
 }
 .wrap_banner_box.benefit_link .benefit_montly {
   padding: 1.6rem 2.0rem 1.6rem 1.6rem;

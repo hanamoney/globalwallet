@@ -956,10 +956,11 @@ var fnCloseLayerPop = function(popID, focusEl){
   */
 var fnToastPop = function(popID) {
   var $el = $('#' + popID);
-
+  var page = $('.wrap_contents');
+  var fullPop = $('.wrap_layer.type_full.show');
   $el.addClass('show');
 
-  if ( $('.wrap_btn_full').length && $('.wrap_btn_full').is(':visible') ) {
+  if ( page.find('.wrap_btn_full').length && page.find('.wrap_btn_full').is(':visible') || fullPop.find('.wrap_btn_full').length ) {
     $el.addClass('withFixedBtn');
   }
 

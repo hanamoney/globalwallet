@@ -18,10 +18,11 @@
 </head>
 <body>
   <main id="root">
+    <!-- 22.08.23 마크업변경 -->
     <header id="header">
       <div class="inner_fixed">
         <button class="btn_ico_prev"><span class="blind">이전</span></button>
-        <h1>하나머니 관리</h1>
+        <h1>관리</h1>
         <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
       </div>
     </header>
@@ -30,14 +31,21 @@
     <div id="contents" class="wrap_contents">
       <div class="contents">
         <section data-roll="SET">
+          <div class="section_tab fnFixedTop" data-height="54">
+            <ul class="wrap_tab_btn type_col">
+              <li class="on"><a href="#none" class="btn_tab_box" data-tab="link">하나머니 관리</a></li>
+              <li><a href="#none" class="btn_tab_box" data-tab="link">카드 관리</a></li>
+            </ul>
+          </div>
+
           <div class="section_set_list">
             <ul class="wrap_box_list">
               <li>
-                <div class="wrap_box hasBtn">
-                  <span class="flag_fill_gradient">연결계좌</span>
+                <div class="wrap_box type_gradient hasBtn">
+                  <span class="flag_fill_white">연결계좌</span>
                   <p class="txt_bank">하나은행</p>
                   <p class="txt_acc">379*****26507</p>
-                  <a href="#none" class="btn_txt txt_point_1">변경</a>
+                  <a href="#none" class="btn_txt">변경</a>
                 </div>
               </li>
               <!-- 계좌 미연결 케이스 -->
@@ -48,10 +56,18 @@
                 </a>
               </li>
               <!-- // 계좌 미연결 케이스 -->
+            </ul>
+          </div>
+
+          <div class="section_set_list">
+            <h2 class="tit">
+              <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip1">차액충전<span class="ico_tooltip"><span class="blind">툴팁</span></span></button>
+            </h2>
+            <ul class="wrap_box_list">
               <li>
                 <div class="wrap_box hasBtn">
                   <div class="wrap_switch">
-                    <span class="label">차액충전</span>
+                    <span class="label"><span class="txt_ccy"><span class="ico_cur_hanamoney"></span>하나머니</span></span>
                     <div class="switch">
                       <input type="checkbox" id="switch1">
                       <label for="switch1" class="slider"></label>
@@ -59,10 +75,18 @@
                   </div>
                 </div>
               </li>
+            </ul>
+          </div>
+
+          <div class="section_set_list">
+            <h2 class="tit">
+              <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip2">자동충전<span class="ico_tooltip"><span class="blind">툴팁</span></span></button>
+            </h2>
+            <ul class="wrap_box_list">
               <li>
                 <div class="wrap_box hasBtn">
                   <div class="wrap_switch">
-                    <span class="label">자동충전</span>
+                    <span class="label"><span class="txt_ccy"><span class="ico_cur_hanamoney"></span>하나머니</span></span>
                     <div class="switch">
                       <input type="checkbox" id="switch2">
                       <label for="switch2" class="slider"></label>
@@ -76,7 +100,83 @@
                   <!-- // 체크시 노출 -->
                 </div>
               </li>
+              <li>
+                <div class="wrap_box hasBtn">
+                  <div class="wrap_switch">
+                    <span class="label"><span class="txt_ccy"><span class="ico_cur_usd"></span>미국 USD</span></span>
+                    <div class="switch">
+                      <input type="checkbox" id="switch3">
+                      <label for="switch3" class="slider"></label>
+                    </div>
+                  </div>
+                  <!-- 체크시 노출 -->
+                  <div class="item_desc">
+                    <p class="txt_desc"><em>USD 100 미만</em>이 될 경우<br/><em>USD 1,000</em> 채우기</p>
+                    <a href="#none" class="btn_txt txt_point_1">변경</a>
+                  </div>
+                  <!-- // 체크시 노출 -->
+                </div>
+              </li>
+              <li>
+                <div class="wrap_box hasBtn">
+                  <div class="wrap_switch">
+                    <span class="label"><span class="txt_ccy"><span class="ico_cur_jpy"></span>일본 JPY</span></span>
+                    <div class="switch">
+                      <input type="checkbox" id="switch4">
+                      <label for="switch4" class="slider"></label>
+                    </div>
+                  </div>
+                  <!-- 체크시 노출 -->
+                  <div class="item_desc">
+                    <p class="txt_desc"><em>JPY 1,000 미만</em>이 될 경우<br/><em>JPY 100,000</em> 채우기</p>
+                    <a href="#none" class="btn_txt txt_point_1">변경</a>
+                  </div>
+                  <!-- // 체크시 노출 -->
+                </div>
+              </li>
+              <li>
+                <div class="wrap_box hasBtn">
+                  <div class="wrap_switch">
+                    <span class="label"><span class="txt_ccy"><span class="ico_cur_eur"></span>유럽 EUR</span></span>
+                    <div class="switch">
+                      <input type="checkbox" id="switch5">
+                      <label for="switch5" class="slider"></label>
+                    </div>
+                  </div>
+                  <!-- 체크시 노출 -->
+                  <div class="item_desc">
+                    <p class="txt_desc"><em>EUR 100 미만</em>이 될 경우<br/><em>EUR 100</em> 채우기</p>
+                    <a href="#none" class="btn_txt txt_point_1">변경</a>
+                  </div>
+                  <!-- // 체크시 노출 -->
+                </div>
+              </li>
+              <li>
+                <div class="wrap_box hasBtn">
+                  <div class="wrap_switch">
+                    <span class="label"><span class="txt_ccy"><span class="ico_cur_gbp"></span>영국 GBP</span></span>
+                    <div class="switch">
+                      <input type="checkbox" id="switch6">
+                      <label for="switch6" class="slider"></label>
+                    </div>
+                  </div>
+                  <!-- 체크시 노출 -->
+                  <div class="item_desc">
+                    <p class="txt_desc"><em>GBP 100 미만</em>이 될 경우<br/><em>GBP 100</em> 채우기</p>
+                    <a href="#none" class="btn_txt txt_point_1">변경</a>
+                  </div>
+                  <!-- // 체크시 노출 -->
+                </div>
+              </li>
             </ul>
+          </div>
+
+          <!-- 트래블로그약관X,계좌연결X 일 때 노출 -->
+          <div class="wrap_banner_box">
+            <a href="#none" title="트래블로그 혜택안내" class="link_box type_line type_img set_travlog_link">
+              <p class="tit txt_point_1">환율 100% 우대</p>
+              <p class="txt_sub">(USD, JPY, EUR, GBP)</p>
+            </a>
           </div>
         </section>
         <!-- // section -->
@@ -84,11 +184,43 @@
     </div>
     <!-- // contents-->
 
+    <!-- tooltip -->
+    <div id="tooltip1" class="wrap_tooltip">
+      <div class="inner_tooltip">
+        <p class="txt_tooltip">
+          차액충전은 송금, 선물하기 등의 서비스 이용 시 하나머니가 부족할 때 부족한 금액을 연결 계좌에서 바로 충전해 사용하는 서비스예요.<br><br>
+          충전 수단이 하나카드인 경우 1,000원 단위로 충전돼요.<br><br>
+          차액충전 불가 서비스 : 하나머니 결제, GLN 결제, 포인트 전환, 소액펀드(자동매수)</p>
+        <button class="btn_ico_close fnCloseTooltip"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+
+    <div id="tooltip2" class="wrap_tooltip">
+      <div class="inner_tooltip">
+        <p class="txt_tooltip">
+          자동충전은 대표 계좌에서 원하는 조건에 따라 하나머니를 알아서 충전해 주는 서비스예요.<br>
+          외화 하나머니 자동충전 설정 시 충전 시점의 하나은행 매매기준율이 적용되어 충전돼요.
+        <button class="btn_ico_close fnCloseTooltip"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // tooltip -->
+
+    <!-- toast -->
+    <div id="toast" class="wrap_toast">
+      <!-- <p class="txt_toast_left">차액충전을 신청했어요.</p> -->
+      <!-- <p class="txt_toast_left">차액충전을 해지했어요.</p> -->
+      <p class="txt_toast_left">자동충전을 신청했어요.</p>
+      <!-- <p class="txt_toast_left">자동충전을 해지했어요.</p> -->
+    </div>
+    <!-- // toast -->
+
+    <!-- // 22.08.23 마크업변경 -->
+
     <!-- popup -->
     <div id="confirmId1" class="wrap_layer type_alert" data-dim="true">
       <div class="inner_layer">
         <div class="content_layer">
-          <p class="txt_alert">앗! 계좌 연결이 안 되어 있어요!<br>차액 충전을 이용하시려면 계좌를<br>연결해 주세요.</p>
+          <p class="txt_alert">앗! 계좌 연결이 안되어 있어요!<br>차액 충전을 이용하시려면 계좌를<br>연결해 주세요.</p><!-- 22.08.23 문구변경 -->
         </div>
         <div class="section_button_alert">
           <div class="wrap_btn_full">
@@ -102,7 +234,7 @@
     <div id="confirmId2" class="wrap_layer type_alert" data-dim="true">
       <div class="inner_layer">
         <div class="content_layer">
-          <p class="txt_alert">앗! 계좌 연결이 안 되어 있어요!<br>자동 충전을 이용하시려면 계좌를<br>연결해 주세요.</p>
+          <p class="txt_alert">앗! 계좌 연결이 안되어 있어요!<br>자동 충전을 이용하시려면 계좌를<br>연결해 주세요.</p><!-- 22.08.23 문구변경 -->
         </div>
         <div class="section_button_alert">
           <div class="wrap_btn_full">
@@ -113,6 +245,7 @@
       </div>
     </div>
     <!-- // popup -->
+
   </main>
 
   <script>
@@ -124,10 +257,11 @@
     };
   });
 
+  // 토스트팝업 노출 예시
   $('#switch2').on('change', function(){
     if ($(this).is(':checked')) {
-      // 팝업호출 param 오픈할 팝업 id
-      fnOpenLayerPop('confirmId2');
+      // 토스트팝업열기 param 토스트팝업 id
+      fnToastPop('toast');
     };
   });
   </script>

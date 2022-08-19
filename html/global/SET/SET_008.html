@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>SET_008</title>
+
+  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>관리</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="SET">
+          <!-- 퍼블 동작확인용 버튼 -->
+          <button class="btn_txt fnOpenPop" data-name="selectId2">자동 충전 금액</button>
+        </section>
+        <!-- // section -->
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <div id="selectId2" class="wrap_layer" data-dim="true">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">자동 충전 금액</h2>
+        </div>
+        <div class="content_layer">
+          <div class="section_bottom_select hasTit">
+            <ul class="wrap_sel_list">
+              <li class="selected">
+                <button type="button" class="fnOpt" data-option="val1"><span class="txt">5만</span></button>
+              </li>
+              <li>
+                <button type="button" class="fnOpt" data-option="val2"><span class="txt">10만</span></button>
+              </li>
+              <li>
+                <button type="button" class="fnOpt" data-option="val3"><span class="txt">20만</span></button>
+              </li>
+              <li>
+                <button type="button" class="fnOpt" data-option="val4"><span class="txt">30만</span></button>
+              </li>
+              <li>
+                <button type="button" class="fnOpt" data-option="val4"><span class="txt">50만</span></button>
+              </li>
+              <li>
+                <button type="button" class="fnOpt" data-option="val4"><span class="txt">70만</span></button>
+              </li>
+              <li>
+                <button type="button" class="fnOpt" data-option="val4"><span class="txt">100만</span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // PEX_204 ID선택 -->
+
+  </main>
+
+  <script>
+    // 팝업호출 param 오픈할 팝업 id
+    fnOpenLayerPop('selectId2');
+    // 팝업닫기 param 닫을 팝업 id
+    // fnCloseLayerPop('selectId2');
+  
+  </script>
+  
+</body>
+</html>
