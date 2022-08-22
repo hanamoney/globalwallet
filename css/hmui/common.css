@@ -493,11 +493,13 @@ section[data-roll] {
 }
 .txt_guide {
   position: relative;
-  padding-left: 2.0rem;
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
-.txt_guide [class^="ico_info"] {
+.txt_guide.type_ico {
+  padding-left: 2.0rem;
+}
+.txt_guide.type_ico [class^="ico_info"] {
   position: absolute;
   left: 0;
   top: 0.5rem;
