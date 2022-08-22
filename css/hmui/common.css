@@ -248,7 +248,8 @@ section[data-roll] {
 .section_cont {
   padding: 5.0rem 2.4rem;
 }
-.section_cont.bg_bluegrey {
+.section_cont.bg_bluegrey,
+.bg_bluegrey {
   background-color: #F3F8FA;
 }
 .section_cont.bg_grey {
@@ -1987,7 +1988,8 @@ button.btn_secondary {
 a.wrap_box {
   padding-right: 4.3rem;
 }
-a.wrap_box [class^="ico_arr_link"] {
+a.wrap_box [class^="ico_arr_link"],
+button.wrap_box [class^="ico_arr_link"] {
   position: absolute;
   top: 50%;
   right: 1.5rem;
@@ -2119,7 +2121,7 @@ a.wrap_box > .txt:first-child {
   border-radius: 1.4rem;
   background-color: rgba(255,255,255,0.6);
 }
-div[class^="wrap_box_"] .wrap_btn.type_full {
+div[class^="wrap_box"] .wrap_btn.type_full {
   margin: 2.9rem -2.0rem -2.0rem;
   padding: 0 0.8rem 0.8rem;
 }
@@ -3278,6 +3280,10 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 .wrap_box_list .wrap_box.hasBtn .wrap_switch {
   margin-right: -3.5rem;
 }
+.wrap_box_list .label {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
 .wrap_box_list .btn_txt {
   position: absolute;
   right: 2.1rem;
@@ -4369,6 +4375,31 @@ div[class^="wrap_box_"] .wrap_btn.type_full {
 }
 .wrap_txt_info .list_txt li + li {
   margin-top: 0.8rem;
+}
+
+/* 상품정보 - 카드 */
+.prd_box_card {
+  display: flex;
+}
+.prd_box_card .card_img {
+  width: 3.2rem;
+  height: 5.1rem;
+}
+.prd_box_card .card_info {
+  padding-left: 1.6rem;
+  flex: 1;
+}
+.prd_box_card .card_info .card_name {
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+}
+.prd_box_card .card_info .card_num {
+  padding-top: 0.6rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: #6E7D85;
+  letter-spacing: 0;
 }
 
 /* Space */

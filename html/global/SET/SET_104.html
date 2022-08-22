@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>SET_104</title>
+
+  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>관리</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="SET">
+          <!-- 퍼블 동작확인용 버튼 -->
+          <button class="btn_txt fnOpenPop" data-name="popupId2">하이브리드 서비스 안내</button>
+        </section>
+        <!-- // section -->
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <!-- popup -->
+    <!-- 하이브리드서비스안내 팝업 -->
+    <div id="popupId2" class="wrap_layer" data-dim="true">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">하이브리드 서비스 안내</h2>
+        </div>
+        <div class="content_layer">
+          <ul class="list_txt type_nobul">
+            <li>하이브리드 서비스는 체크카드 이용 중 통장 잔액이 부족할 경우 <strong class="txt_point_1">월 최대 30만 원</strong> 한도 내에서 신용거래로 결제가 가능한 서비스예요.</li>
+            <li>트래블로그 체크카드의 경우 <strong class="txt_point_1">원화 결제</strong>만 하이브리드 서비스를 이용할 수 있어요.</li>
+          </ul>
+        </div>
+        <div class="section_bottom_fixed">
+          <div class="wrap_btn_full">
+            <button type="button" id="testid" class="btn_full_primary fnClosePop">하이브리드 서비스 신청하기</button>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+
+    <!-- 2a. 하이브리드서비스 -->
+    <div id="confirmId2" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert">하이브리드 서비스 이용을 위해 원큐페이 앱으로 이동합니다.</p>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_secondary fnClosePop">취소</button>
+            <button type="button" class="btn_full_primary fnClosePop">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- // popup -->
+  </main>
+
+  <script>
+    // 팝업호출 param 오픈할 팝업 id
+    fnOpenLayerPop('popupId2');
+    // 팝업닫기 param 닫을 팝업 id
+    // fnCloseLayerPop('popupId2');
+
+    // 컨펌창 노출 예시
+    $('#testid').on('click', function(){
+      // 팝업호출 param 오픈할 팝업 id
+      setTimeout(function(){
+        fnOpenLayerPop('confirmId2');
+      },280);
+    });
+  
+  </script>
+  
+</body>
+</html>

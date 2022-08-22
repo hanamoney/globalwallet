@@ -164,8 +164,16 @@
 .section_set_list + .wrap_banner_box {
   margin-top: 3.0rem;
 }
+.section_set_list .prd_box_card {
+  margin-bottom: 3.0rem;
+}
 .wrap_banner_box .link_box.set_travlog_link::after {
   background-image: url('../../images/global/img_card_travlog_3.png');
+}
+[data-roll="SET"] > .hmn_travlog_info {
+  width: calc(100% - 4.8rem);
+  margin: 3.0rem 2.4rem 0;
+  z-index: 2;
 }
 
 /* [USR] - 회원가입 */

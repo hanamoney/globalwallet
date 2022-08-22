@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>SET_102</title>
+
+  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>관리</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="SET">
+          <!-- 퍼블 동작확인용 버튼 -->
+          <button class="btn_txt fnOpenPop" data-name="popupId1">카드 이용 일시정지 안내</button>
+        </section>
+        <!-- // section -->
+      </div>
+    </div>
+    <!-- // contents-->
+
+    <!-- popup -->
+    <!-- 카드이용일시정지안내 팝업 -->
+    <div id="popupId1" class="wrap_layer" data-dim="true">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">카드 이용 일시정지 안내</h2>
+        </div>
+        <div class="content_layer">
+          <ul class="list_txt type_nobul">
+            <li>카드를 일시정지하면 국내, 해외 결제 및 해외 ATM 인출을 이용할 수 없어요.</li>
+            <li>일시정지 후에도 <strong class="txt_point_1">국내 교통카드 기능</strong>과 <strong class="txt_point_1">하나머니 앱을 통한 국내 ATM 인출</strong>은 이용할 수 있어요.</li>
+            <li>카드를 잃어버렸다면 꼭 <strong class="txt_point_1">분실신고</strong>를 해주세요.</li>
+          </ul>
+        </div>
+        <div class="section_bottom_fixed">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_primary fnClosePop">안내사항을 확인했어요</button>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+
+    <!-- toast -->
+    <div id="toast" class="wrap_toast">
+      <p class="txt_toast_left">카드 이용을 일시정지 했어요.</p>
+      <!-- <p class="txt_toast_left">지금부터 카드 이용이 가능해요.</p> -->
+    </div>
+    <!-- // toast -->
+    
+    <!-- // popup -->
+
+  </main>
+
+  <script>
+    // 팝업호출 param 오픈할 팝업 id
+    fnOpenLayerPop('popupId1');
+    // 팝업닫기 param 닫을 팝업 id
+    // fnCloseLayerPop('popupId1');
+
+    $('.btn_full_primary').on('click', function(){
+      // 토스트팝업열기 param 토스트팝업 id
+      setTimeout(function(){
+        fnToastPop('toast');
+      },400);
+    });
+  
+  </script>
+  
+</body>
+</html>
