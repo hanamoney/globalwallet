@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>CHG_105</title>
+
+  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    
+    <!-- // header -->
+
+    <!-- 퍼블 동작확인용 버튼 -->
+    <button class="btn_txt fnOpenPop" data-name="popupId">외화 자동충전 설정팝업</button>
+
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="popupId" class="wrap_layer" data-dim="true"><!-- 22.05.25 네이티브 웹뷰 딤 미사용인 경우 data-dim="true" 속성 추가 -->
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">외화 자동충전이 가능해요!</h2>
+        </div>
+        <div class="content_layer">
+          <div class="wrap_chg_autocharge">
+            <div class="visual_chg_ccy">
+              <span class="ico_cur_usd"></span>
+              <span class="ico_cur_jpy"></span>
+              <span class="ico_cur_eur"></span>
+              <span class="ico_cur_gbp"></span>
+              <span class="ico_hanamoney"></span>
+            </div>
+            <div class="wrap_tit type_center">
+              <p class="txt txt_point_1"><em>매번 충전하기 귀찮을 때<br>해외 네트워크 상태가 걱정일 때</em></p>
+              <p class="txt">자동충전을 설정하고 편리하게 이용하세요!</p>
+            </div>
+          </div>
+        </div>
+        <div class="section_bottom_fixed">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_secondary fnClosePop">다음에</button>
+            <button type="button" class="btn_full_primary fnClosePop">자동충전 설정하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // popup -->
+  </main>
+  
+  
+  <script>
+    $(function(){
+      // 팝업호출 param 오픈할 팝업 id
+      fnOpenLayerPop('popupId');
+      // 팝업닫기 param 닫을 팝업 id
+      // fnCloseLayerPop('popupId1');
+    });
+  </script>
+</body>
+</html>

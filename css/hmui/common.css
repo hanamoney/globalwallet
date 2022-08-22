@@ -3268,6 +3268,12 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .wrap_line_list [class^="ico_"] + .txt {
   padding-left: 1.0rem;
 }
+.wrap_link_list + .wrap_btn_right {
+  padding-top: 1.7rem;
+}
+.wrap_link_list + .wrap_btn_right .btn_txt {
+  font-size: 1.5rem;
+}
 
 /* 박스형 리스트 */
 .wrap_box_list li {
