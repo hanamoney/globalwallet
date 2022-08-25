@@ -1473,6 +1473,8 @@
   width: 100%;
   height: 100%;
   text-align: center;
+}
+.wrap_vdb_list li:not(.empty) button {
   cursor: pointer;
 }
 .wrap_vdb_list .tit_counter {
