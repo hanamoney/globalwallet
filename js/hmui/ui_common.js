@@ -35,7 +35,7 @@ var registUI = function(){
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
   if ( (iosV() >= 13) && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
-  if ( $('.sel').length ) { _selControl(); } // 셀렉트
+  if ( $('.sel').length || $('.wrap_sel_list').length ) { _selControl(); } // 셀렉트
   if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
   if ( $('.wrap_tab_btn').length ) { _tabContents(); } // 탭 
   if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
@@ -354,7 +354,9 @@ var _inpChkVal = function(el) {
 var _selControl = function() {
   $('.sel').each(function(idx, el){
     $(el).on('click', function(e){
-      $(this).addClass('focus');
+      if (!$(this).hasClass('btn_sel_date')) {
+        $(this).addClass('focus');
+      }
     });
   });
 

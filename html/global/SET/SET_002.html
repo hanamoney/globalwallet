@@ -33,42 +33,65 @@
           <div class="section_set_list">
             <ul class="wrap_box_list">
               <li>
-                <button type="button" class="wrap_box hasBtn">
+                <button type="button" class="wrap_box hasBtn type_narrow">
                   <p class="txt_sub">하나머니 잔액</p>
-                  <p class="tit"><em class="txt_point_1">1만원 미만</em>이 될 경우</p>
+                  <p class="tit"><em class="txt_point_1">1만원 미만</em> 시</p><!-- 22.09.06 문구변경 -->
+                  <p class="tit"><em class="txt_point_1">USD 50 미만</em> 시</p>
                   <span class="ico_arr_down"></span>
                 </button>
               </li>
               <li>
-                <button type="button" class="wrap_box hasBtn">
+                <button type="button" class="wrap_box hasBtn type_narrow">
                   <p class="txt_sub">자동으로</p>
-                  <p class="tit"><em class="txt_point_1">5만원</em>이 채워져요</p>
+                  <p class="tit"><em class="txt_point_1">5만원</em> 충전</p><!-- 22.09.06 문구변경 -->
+                  <p class="tit"><em class="txt_point_1">USD 1,000</em> 충전</p>
                   <span class="ico_arr_down"></span>
                 </button>
               </li>
-              <!-- 22.07.15 노출변경
+              <!-- 22.09.06 변경 -->
+              <!-- 외화인 경우 노출 -->
               <li>
-                <div class="wrap_box hasBtn">
-                  <p class="txt_sub">하나은행</p>
-                  <p class="txt_sub"><span class="txt_acc">379*****26507</span> 에서</p>
-                  <p class="tit"><em class="txt_point_1">충전</em>됩니다.</p>
-                  <a href="#none" class="btn_txt txt_point_1">변경</a>
-                </div>
-              </li> -->
-              <li>
-                <div class="wrap_box hasBtn">
-                  <span class="flag_fill_gradient">연결계좌</span>
-                  <p class="txt_bank">하나은행</p>
-                  <p class="txt_acc">379*****26507</p>
-                  <a href="#none" class="btn_txt txt_point_1">변경</a>
+                <div class="wrap_box seperate_btn">
+                  <button type="button" class="wrap_box hasBtn type_narrow" id="test">
+                    <p class="txt_sub">기간선택</p>
+                    <p class="tit">1주일 동안</p>
+                    <span class="ico_arr_down"></span>
+                  </button>
+                  <!-- 직접입력 선택시 노출 -->
+                  <div class="wrap_inp">
+                    <div class="box_inp">
+                      <button type="button" class="sel sel_m no_arr btn_sel_date default"><!-- 선택전 default 클래스 / 선택후: default 클래스 삭제 -->
+                        <span class="placeholder">종료일을 입력해주세요.</span>
+                        <span class="value"></span><!-- 선택된 값 노출 -->
+                      </button>
+                    </div>
+                  </div>
+                  <div class="wrap_inp">
+                    <div class="box_inp">
+                      <button type="button" class="sel sel_m no_arr btn_sel_date"><!-- 선택전 default 클래스 / 선택후: default 클래스 삭제 -->
+                        <span class="placeholder">종료일을 입력해주세요.</span>
+                        <span class="value">22.09.06</span><!-- 선택된 값 노출 -->
+                      </button>
+                    </div>
+                  </div>
+                  <!-- // 직접입력 선택시 노출 -->
                 </div>
               </li>
+              <!-- // 외화인 경우 노출 -->
+              <li>
+                <button type="button" class="wrap_box hasBtn type_narrow">
+                  <p class="txt_sub">충전방식</p>
+                  <p class="tit">연결계좌에서 가져오기</p>
+                  <span class="ico_arr_down"></span>
+                </button>
+              </li>
+              <!-- // 22.09.06 변경 -->
             </ul>
             <p class="txt_guide type_ico"><span class="ico_info_3"></span><span class="txt">설정 저장 시 하나머니가 설정 잔액보다 낮은 경우 <em class="txt_point_1">즉시 충전</em> 됩니다.</span></p><!-- 22.08.23 문구추가 -->
             
             <div class="wrap_btn type_full">
               <button type="button" class="btn_box_big btn_full_secondary">취소</button>
-              <button type="button" class="btn_box_big btn_primary">저장하기</button>
+              <button type="button" class="btn_box_big btn_primary" disabled>저장하기</button><!-- 2022.09.06 기간선택 직접입력 선택 시 disabled 처리 -->
             </div>
           </div>
         </section>
@@ -76,10 +99,29 @@
       </div>
     </div>
     <!-- // contents-->
+
+    <!-- popup -->
+    <div id="confirmId1" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert">오늘 날짜부터 선택이 가능해요.</p>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_primary fnClosePop">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // popup -->
   </main>
   
   <script>
-    // 자동충전 체크 퍼블확인용
+    // 팝업호출 param 오픈할 팝업 id
+    //fnOpenLayerPop('confirmId1');
+    // 팝업닫기 param 닫을 팝업 id
+    // fnCloseLayerPop('confirmId1');
   </script>
+
 </body>
 </html>

@@ -1371,6 +1371,13 @@ section[data-roll] {
 .sel.default .value {
   display: none;
 }
+.sel_m.default {
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+}
+.sel.no_arr {
+  background-image: none;
+}
 .hiddenInp {
   visibility: hidden;
   position: absolute;
@@ -1987,6 +1994,10 @@ button.btn_secondary {
 .wrap_box.no_arr {
   padding-right: 2.0rem;
 }
+.wrap_box.type_narrow {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
 a.wrap_box {
   padding-right: 4.3rem;
 }
@@ -2083,6 +2094,18 @@ a.wrap_box > .txt:first-child {
 .wrap_box.bg_darkgrey .txt_sub {
   color: #fff;
   line-height: 2.0rem;
+}
+.wrap_box.seperate_btn {
+  padding: 0;
+}
+.wrap_box.seperate_btn > button.hasBtn {
+  padding-bottom: 0;
+}
+.wrap_box.seperate_btn > button.hasBtn .ico_arr_down {
+  bottom: 0.4rem;
+}
+.wrap_box.seperate_btn .wrap_inp {
+  padding: 0 2.0rem 1.5rem;
 }
 .wrap_box_blur {
   overflow: hidden;
@@ -3305,7 +3328,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .wrap_box_list .item_desc .txt_desc {
   color: #6E7D85;
   font-size: 1.6rem;
-  line-height: 2.4rem;
+  line-height: 2.2rem;
 }
 .wrap_box_list .item_desc .txt_desc em {
   color: #252E33;
