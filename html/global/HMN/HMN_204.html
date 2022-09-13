@@ -17,7 +17,7 @@
   <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
   <script src="../../../js/hmui/ui_common.js"></script>
 </head>
-<body>
+<body style="background-color:#000">
   <main id="root">
     
     <!-- // header -->
@@ -27,24 +27,65 @@
     <!-- popup -->
     <div id="popupId" class="wrap_layer">
       <div class="inner_layer">
-        <div class="content_layer">
-          <!-- 22.08.09 변경 -->
-          <div class="wrap_banner type_bg_coin">
+        <!-- 22.09.13 변경 -->
+        <div class="content_layer type_bg type_bg_coin">
+          <div class="wrap_banner">
             <p class="txt_sub_2">아직도 70% 우대받고 환전하나요?</p>
             <p class="tit_xl txt_point_1">환율 100% 우대<small class="tit_sub">(USD, JPY, EUR, GBP)</small></p>
             <p class="tit_2">최대 8달러 적립까지!</p>
           </div>
-          <!-- // 22.08.09 변경 -->
+          <div class="section_terms">
+            <ul class="wrap_agree_list">
+              <li>
+                <p class="box_chk">
+                  <span class="chk type_sub">
+                    <input type="checkbox" id="chk1_1" name="chk1"/>
+                    <label for="chk1_1"></label>
+                  </span>
+                  <button type="button" class="btn_txt label fnOpenPop" data-name="popupfullId">외화 하나머니 서비스 이용약관 동의</button>
+                  <!-- fnOpenPop 클래스를 가지고 있는 버튼에 data-name 값 (오픈할 팝업 id값과 매칭) 체크하여 해당 팝업 오픈 
+                      또는 fnOpenPop 공통클래스 미사용시(fnOpenPop클래스는 삭제하고 클릭이벤트 필요 시) 해당버튼 클릭시 팝업 오픈 함수호출 fnOpenLayerPop('popupfullId'); -->
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
+        <!-- // 22.09.13 변경 -->  
         <div class="section_bottom_fixed">
           <div class="wrap_btn_full">
             <button type="button" class="btn_full_primary fnClosePop">지금 혜택받기</button>
           </div>
         </div>
-        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+        <!-- 22.09.13 추가 -->
+        <div class="wrap_fixed_outside pos_top type_justify">
+          <span class="chk type_sub">
+            <input type="checkbox" id="chk1" name="chk1"/>
+            <label for="chk1">
+              <span class="label">3일동안 보지 않기</span>
+            </label>
+          </span>
+          <button type="button" class="btn_ico_close_circle fnClosePop"><span class="blind">닫기</span></button>
+        </div>
+        <!-- // 22.09.13 추가 -->
       </div>
     </div>
     <!-- // popup -->
+
+    <!-- 약관상세 팝업 -->
+    <div id="popupfullId" class="wrap_layer type_full">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">외화 하나머니 서비스 이용약관</h2>
+        </div>
+        <div class="content_layer">
+          <div class="section_terms_detail">
+            약관내용
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // 약관상세 팝업 -->
 
   </main>
   

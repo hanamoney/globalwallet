@@ -713,8 +713,83 @@
 .wrap_banner.hmn_201 .btn_txt {
   font-size: 1.6rem;
 }
-.wrap_banner.type_bg_coin {
+.wrap_layer .content_layer.type_bg_coin .wrap_banner {
+  padding-bottom: 1.0rem;
+}
+.wrap_layer .content_layer.type_bg_coin::before {
+  bottom: 3.0rem;
   background-image: url('../../images/global/bg_ban_coin.png');
+}
+.wrap_layer .content_layer.bg_hmn_avatar {
+  padding-bottom: 0;
+  background: linear-gradient(180deg, #F7FAFA 0%, #D6EFE9 100%);
+}
+.wrap_layer .content_layer.bg_hmn_avatar::before {
+  top: -1.7rem;
+  left: 50%;
+  z-index: 0;
+  width: 80.83vw;
+  max-width: 29.1rem;
+  background: url('../../images/global/bg_hmn_avatar.png') no-repeat center top;
+  background-size: 100% auto;
+  transform: translateX(-50%);
+}
+.wrap_layer .content_layer.bg_hmn_avatar {
+  height: 49rem;
+  padding-top: 17.9rem;
+  padding-top: 18.9rem;
+}
+.wrap_layer .content_layer.bg_hmn_avatar .flex_top {
+  text-align: center;
+  position: relative;
+  padding: 4.2rem 0;
+  background: url('../../images/global/bg_hmn_avatar_bg.png') no-repeat left 75% top 20%;
+  background-size: auto 100%;
+}
+.wrap_layer .content_layer.bg_hmn_avatar .flex_top .tit_sub {
+  padding-bottom: 0.5rem;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  color: #000;
+}
+.wrap_layer .content_layer.bg_hmn_avatar .flex_top .tit {
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+  font-weight: 700;
+  color: #000;
+}
+.wrap_layer .content_layer.bg_hmn_avatar .bubble {
+  position: absolute;
+  top: -6.3rem;
+  right: -0.3rem;
+  width: 16.8rem;
+  height: 12.0rem;
+  background: url('../../images/global/bg_hmn_avatar_bubble.png') no-repeat center;
+  background-size: 100% auto;
+}
+.wrap_layer .content_layer.bg_hmn_avatar .bubble p {
+  padding: 3.2rem 0 0 3.2rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+  transform: rotate(13.78deg);
+}
+.wrap_layer .content_layer.bg_hmn_avatar .flex_bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5.7rem 0 3.0rem;
+  background: linear-gradient(180deg, rgba(215, 240, 234, 0) 0%, #DCF7F0 56%);
+}
+.wrap_layer .content_layer.bg_hmn_avatar .flex_bottom .section_terms {
+  margin-bottom: 0.8rem;
+  padding-top: 0;
+}
+.wrap_layer .content_layer.bg_hmn_avatar .flex_bottom .wrap_btn {
+  padding: 0 2.4rem 0;
 }
 
 /* [GSP] - 글로벌 */
