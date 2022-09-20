@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>USR_106</title>
+
+  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <h1>하나머니 가입 완료</h1>
+        <button class="btn_ico_close"><span class="blind">이전</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="USR">
+          <div class="section_tab type_fullpage  bg_grandient_6">
+            <div class="wrap_tit welcome kakao">
+              <h2 class="tit_page"><em>하나머니에<br>오신 걸 환영해요!</em></h2>
+              <p class="txt_2">쓸수록 쌓이는 행복한 생활머니!<br>하나머니의 다양한 혜택을 누려보세요. </p>
+            </div>
+            <div class="visual_welcome" aria-hidden="true">
+              <span class="img_elm_1"></span>
+              <span class="img_elm_2"></span>
+              <span class="img_character_dance" alt="apng"></span>
+            </div> 
+          </div> 
+        </section>
+        <!-- // section -->
+
+        <!-- 하단고정영역 -->
+        <div class="section_bottom_fixed">
+            <div class="wrap_btn_full">
+              <a href="#none" class="btn_full_secondary" title="홈으로">홈으로</a>
+              <button type="button" class="btn_full_primary">카톡 친구 추가하기</button>
+            </div>
+          </div>
+        <!-- // 하단고정영역 -->
+      </div>
+    </div>
+    <!-- // contents--> 
+  </main>
+  
+  <script>
+    $(function(){
+      $('.btn_full_secondary').on('click', function(){
+        //개발코드
+      });
+      $('.btn_full_primary').on('click', function(){
+        //개발코드
+      });
+    });
+  </script>
+  <style>
+    section[data-roll="USR"]{padding-bottom:0!important}
+    .wrap_tit.welcome.kakao {position:relative;padding-top:17.778vw;}
+    .wrap_tit.welcome .txt_2{margin-top:2.778vw}
+    .section_tab.type_fullpage.bg_grandient_6 {min-height:calc(100vh - 5.0rem);padding-bottom:0;background: linear-gradient(164.5deg, #D2FFF4 -4%, #F5E0D4 110%);}
+    .visual_welcome {position:absolute;width:100vw;height:81.667vw;bottom:27.778vw;left:0;padding:0 15.278vw;} /* 2022.09.15 수정 */
+    .visual_welcome > span {display:inline-block;position:absolute;}
+    .visual_welcome .img_elm_1 {width:30.278vw;height:66.111vw;top:0;right:11.944vw;background-image:url('../../../images/global/bg_kakao_elm_1.png')}
+    .visual_welcome .img_elm_2 {width:38.889vw;height:59.444vw;bottom:3.333vw;left:8.556vw;background-image:url('../../../images/global/bg_kakao_elm_2.png')}
+    .visual_welcome .img_character_dance {width:62.500vw;height:66.944vw;left:20.556vw;bottom:0;background-image:url('../../../images/hmui/apng/haha_apng_002.png')}
+    /* 2022.09.15 추가 */
+    @media only screen and (max-width: 320px) and (max-height: 480px) {
+      .visual_welcome {position: relative;margin-top: 12.222vw;bottom:0}   
+    }
+
+  </style>
+</body>
+</html>
