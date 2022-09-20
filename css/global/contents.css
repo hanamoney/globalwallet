@@ -716,6 +716,10 @@
 .wrap_layer .content_layer.type_bg_coin .wrap_banner {
   padding-bottom: 1.0rem;
 }
+.wrap_layer .content_layer.type_bg_coin .wrap_banner:only-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 .wrap_layer .content_layer.type_bg_coin::before {
   bottom: 3.0rem;
   background-image: url('../../images/global/bg_ban_coin.png');
