@@ -35,10 +35,12 @@
               <h2 class="tit_page"><em>하나머니에<br>오신 걸 환영해요!</em></h2>
               <p class="txt_2">쓸수록 쌓이는 행복한 생활머니!<br>하나머니의 다양한 혜택을 누려보세요.</p><!-- 2022.09.19 수정 --> 
             </div>
-            <div class="visual_welcome" aria-hidden="true">
-              <span class="img_money"></span>
-              <span class="img_character_dance" alt="apng"></span>
-              <span class="img_gift"></span>
+            <div class="visual_welcome" aria-hidden="true"> 
+              <!-- 2022.09.23 수정 --> 
+              <img class="img_money" src="../../../images/global/bg_money.png" alt="">
+              <img class="img_character_dance" src="../../../images/hmui/apng/haha_apng_001_st.png" alt="apng">
+              <img class="img_gift" src="../../../images/global/bg_gift.png" alt="">
+              <!-- // 2022.09.23 수정 --> 
             </div> 
           </div> 
         </section>
@@ -65,17 +67,24 @@
   </script>
   <style>
     section[data-roll="USR"]{padding-bottom:0!important}
-    .wrap_tit.welcome {position:relative;padding-top:80px;z-index:10000}
+    .wrap_tit.welcome {position:relative;padding-top:8rem;z-index:10000}
     .wrap_tit.welcome .txt_2{margin-top:2.778vw}
-    .section_tab.type_fullpage.bg_grandient_6 {min-height:calc(100vh - 5.0rem);padding-bottom:0;background: linear-gradient(164.5deg, #D2FFF4 -4%, #F5E0D4 110%);}
-    .visual_welcome {position:absolute;width:100vw;height:101.574vw;bottom:13.89vh;left:0;padding:0 15.278vw;}
-    .visual_welcome > span {display:inline-block;position:absolute;}
-    .visual_welcome .img_money {width:50.556vw;height:51.481vw;top:0;left:28.611vw;background-image:url('../../../images/global/bg_money.png')}
-    .visual_welcome .img_character_dance {width:62.500vw;height:66.944vw;bottom:15.278vw;left:20vw;background-image:url('../../../images/hmui/apng/haha_apng_002.png')}
-    .visual_welcome .img_gift {width:68.056vw;height:33.148vw;bottom:0;left:16.667vw;background-image:url('../../../images/global/bg_gift.png')}
-    @media only screen and (max-width: 320px) and (max-height: 480px) {
-      .visual_welcome {position: relative;margin-top: 12.222vw;bottom:0}   
+    .section_tab.type_fullpage.bg_grandient_6 {min-height:calc(100vh - 6rem);padding-bottom:0;background: linear-gradient(164.5deg, #D2FFF4 -4%, #F5E0D4 110%);}
+    .visual_welcome {position:absolute;width:100%;height:101.574vw;bottom:calc(6rem + 5.55vh);left:50%;padding:0 15.278vw;margin-left:-50%;}
+    .visual_welcome > img {display:inline-block;position:absolute;height:auto}
+    .visual_welcome .img_money {width:50.556%;top:0;left:28.611vw;}
+    .visual_welcome .img_character_dance {width:62.500%;bottom:15.278vw;left:20vw;background-image:none;} 
+    .visual_welcome .img_gift {width:68.056%;bottom:0;left:16.667vw;}
+    @media only screen and (max-height: 736px) {
+      .visual_welcome {height:52vh}   
     }
+    @media only screen and (max-height: 667px) {
+      .visual_welcome {position:relative;height:49vh;margin-top:9.444vw;bottom:1rem}   
+    }
+    /* fold */
+    @media only screen and (min-width: 480px) {
+      .visual_welcome {width:80%;margin-left:-45%;height:52vh}   
+    } 
   </style>
 </body>
 </html>
