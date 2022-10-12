@@ -192,6 +192,9 @@
   margin: 3.0rem 2.4rem 0;
   z-index: 2;
 }
+.section_tab.scrolled + .section_set_list {
+  margin-top: 5.4rem;
+}
 
 /* [USR] - 회원가입 */
 .section_acc_list {
