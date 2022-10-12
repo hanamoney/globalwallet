@@ -444,6 +444,15 @@ section[data-roll] {
 .txt_black {
   color: #000;
 }
+.up {
+  color: #FF5166;
+}
+.down {
+  color: #308FFF;
+}
+.equal {
+  color: #4F5D64;
+}
 .txt_balloon {
   position: relative;
   display: inline-block;
@@ -703,6 +712,16 @@ section[data-roll] {
   width: 2.4rem;
   height: 2.4rem;
   background-image: url('../../images/hmui/btn_more.png');
+}
+.btn_ico_refresh {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: pink;
+}
+.btn_ico_delete {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: pink;
 }
 .btn_info .ico_info {
   margin-left: 0.4rem;
@@ -1327,6 +1346,19 @@ section[data-roll] {
   top: 1.0rem;
   right: 0;
 }
+.wrap_inp.type_col {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap_inp.type_col .box_inp {
+  flex: 1;
+}
+.wrap_inp.type_col .box_inp:first-child {
+  margin-right: 1.6rem;
+}
+.wrap_inp.type_col .txt_inp_guide {
+  width: 100%;
+}
 
 /* number spinner */
 .num_spinner {
@@ -1421,6 +1453,16 @@ section[data-roll] {
   padding: 1.2rem 2.4rem;
   text-align: left;
 }
+.wrap_quick_sel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 6.0rem;
+  padding: 2.4rem;
+  border-radius: 2.4rem 2.4rem 0 0;
+  background-color: #323E43;
+
+}
 
 /* Button */
 [class^="btn"] {
@@ -1446,9 +1488,41 @@ button.btn_secondary {
 }
 .btn_round {
   padding: 0.7rem 1.2rem 0.6rem;
+  border-radius: 1.3rem;
   font-size: 1.2rem;
   line-height: 1;
-  border-radius: 1.3rem;
+}
+.btn_round_m {
+  padding: 1.0rem 2.0rem;
+  border-radius: 2.3rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+.btn_round_ico {
+  padding: 0.8rem 2.0rem;
+  border-radius: 2.0rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  text-align: center;
+}
+.btn_round_ico .txt {
+  vertical-align: middle;
+}
+.btn_round_ico [class^="ico"] {
+  width: 2.4rem;
+  height: 2.4rem;
+  vertical-align: middle;
+}
+.btn_round_ico [class^="ico"]:first-child {
+  margin-right: 0.8rem;
+}
+[class^="btn_round"].type_line {
+  border: 1px solid #D0D7D7;
+  color: #6E7D85;
+}
+[class^="btn_round"].bg_grey {
+  background-color: #6E7D85;
+  color: #fff;
 }
 [class^="btn_box"] {
   display: inline-block;
@@ -1542,6 +1616,16 @@ button.btn_secondary {
 .wrap_btn.type_full [class^="btn"]:only-child {
   width: 100%;
   margin: 0;
+}
+.wrap_btn.type_col {
+  display: flex;
+}
+.wrap_btn.type_col [class^="btn"] {
+  flex: 1;
+  margin-left: 0.8rem;
+}
+.wrap_btn.type_col [class^="btn"]:first-child  {
+  margin-left: 0;
 }
 .wrap_btn_right {
   text-align: right;
@@ -1655,6 +1739,16 @@ button.btn_secondary {
   left: 50%;
   right: auto;
   transform: translateX(-50%);
+}
+.section_bottom_fixed .btn_round_ico {
+  position: fixed;
+  bottom: 2.4rem;
+  left: 50%;
+  box-shadow: 0px 0.6rem 1.6rem rgba(110, 125, 133, 0.32);
+  transform: translateX(-50%);
+}
+.section_bottom_fixed .btn_round_ico.withFixedBtn {
+  bottom: calc(6.0rem + 2.4rem);
 }
 
 /* dropdown */
@@ -1828,6 +1922,42 @@ button.btn_secondary {
   background-color: #13C9BE;
   color: #fff;
   font-weight: 700;
+}
+.section_tab.type_sub_line .wrap_tab_btn {
+  padding: 0;
+  border-bottom: 0;
+}
+.section_tab.type_sub_line .wrap_tab_btn li {
+  flex: 1;
+  padding-left: 0.2rem;
+}
+.section_tab.type_sub_line .wrap_tab_btn li:first-child {
+  padding-left: 0;
+}
+.section_tab.type_sub_line .wrap_tab_btn li.on .btn_tab_box {
+  color: #13C9BE;
+  font-weight: 700;
+}
+.section_tab.type_sub_line .wrap_tab_btn li.on .btn_tab_box::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 1.6rem;
+  height: 0.4rem;
+  border-radius: 0.2rem;
+  background-color: #13C9BE;
+  transform: translateX(-50%);
+}
+.section_tab.type_sub_line .btn_tab_box {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 1.6rem 1.6rem 0.4rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  text-align: center;
 }
 
 /* list */
@@ -2116,12 +2246,21 @@ a.wrap_box > .txt:first-child {
 .wrap_box.bg_black .list_info .txt {
   color: #fff;
 }
+.wrap_box.bg_darkgrey .list_info .tit {
+  color: #D0D7D7;
+}
+.wrap_box.bg_darkgrey .list_info .txt {
+  color: #fff;
+}
 .wrap_box.bg_darkgrey .txt_sub {
   color: #fff;
   line-height: 2.0rem;
 }
+.wrap_box.bg_darkgrey .label {
+  color: #fff;
+}
 .wrap_box.seperate_btn {
-  padding: 0;
+  padding: 0 !important;
 }
 .wrap_box.seperate_btn > button.hasBtn {
   padding-bottom: 0;
@@ -3385,7 +3524,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   font-weight: 700;
 }
 .wrap_box_list .item_desc {
-  padding-top: 2.0rem;
+  padding-top: 1.2rem;
 }
 .wrap_box_list .item_desc .txt_desc {
   color: #6E7D85;
@@ -4290,6 +4429,14 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   height: 2.0rem;
   margin-right: 0.5rem;
   vertical-align: top;
+}
+.txt_ccy.dir_col {
+  display: inline-block;
+  text-align: center;
+}
+.txt_ccy.dir_col [class^="ico_"] {
+  margin-right: 0;
+  margin-bottom: 0.4rem;
 }
 .section_moneybag .box_moneybag {
   position: relative;

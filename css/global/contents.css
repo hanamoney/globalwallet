@@ -149,12 +149,16 @@
 
 /* [SET] - 하나머니 관리 */
 .section_set_list {
-  padding-top: 3.0rem;
+  padding-top: 2.4rem;
+}
+.section_set_list:first-of-type {
+  padding-top: 2.4rem;
 }
 .section_set_list .wrap_btn.type_full {
   margin-top: 3.0rem;
 }
 .section_set_list > .tit {
+  margin-top: 0.8rem;
   margin-bottom: 1.0rem;
   font-size: 1.8rem;
   line-height: 2.4rem;
@@ -167,16 +171,72 @@
   margin-left: 0.5rem;
   margin-top: 0.2rem;
 }
+.section_set_list a.wrap_box.bg_darkgrey {
+  padding: 2.4rem;
+} 
+.section_set_list .wrap_box {
+  padding: 2.0rem 2.4rem;
+}
+.section_set_list .wrap_box.off .txt_ccy,
+.section_set_list .wrap_box.off .item_desc .txt_desc,
+.section_set_list .wrap_box.off .item_desc .txt_desc em {
+  color: #AEBABB;
+}
 .section_set_list .wrap_box_list .txt_ccy {
-  line-height: 2.4rem;
+  display: inline-block;
+  color: #252E33;
+  font-size: 1.8rem;
+  line-height: 3.0rem;
 }
 .section_set_list .wrap_box_list .txt_ccy [class^="ico_cur"] {
-  width: 2.4rem;
-  height: 2.4rem;
-  margin-right: 0.7rem;
+  width: 3.0rem;
+  height: 3.0rem;
+  margin-right: 0.8rem;
+}
+.section_set_list .wrap_box_list .item_desc .txt_desc {
+  font-size: 2.0rem;
+  line-height: 1;
 }
 .section_set_list .wrap_box_list + .txt_guide {
-  margin-top: 2.0rem;
+  margin-top: 2.4rem;
+}
+.section_set_list .wrap_box_list .btn_ico_delete {
+  position: absolute;
+  top: 2.3rem;
+  right: 1.9rem;
+}
+.section_set_list .wrap_box_list + .txt_guide.type_center {
+  color: #323E43;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 300;
+  text-align: center;
+}
+.section_set_list .tit_emoji {
+  position: relative;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+.section_set_list .tit_emoji [class^="emoji_"] {
+  width: 3.0rem;
+  height: 3.0rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  background-color: pink;
+}
+.section_set_list .tit_emoji strong {
+  vertical-align: middle;
+}
+.section_set_list .tit_emoji + .item_desc {
+  margin-top: 0.8rem;
+  padding: 0.4rem 0.2rem;
+  color: #D0D7D7;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.section_set_list a.wrap_box .tit_emoji .ico_arr_link_w {
+  right: 0;
 }
 .section_set_list + .wrap_banner_box {
   margin-top: 3.0rem;
@@ -191,6 +251,10 @@
   width: calc(100% - 4.8rem);
   margin: 3.0rem 2.4rem 0;
   z-index: 2;
+}
+.section_tab + .section_set_list,
+.section_set_list:first-child {
+  padding-top: 3.0rem;
 }
 .section_tab.scrolled + .section_set_list {
   margin-top: 5.4rem;
@@ -2582,6 +2646,322 @@
 .inapp .section_cont.guide_hanamoney_tit {
   padding-top: 0;
 }
+
+
+/* [EXR] - 목표환율 */
+/* EXR_001 환율 */
+.wrap_list_exr {
+  padding: 3.0rem 2.4rem 0;
+}
+.box_ext_time {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.0rem;
+  border-radius: 0.5rem;
+  background-color: #F5F8F8;
+}
+.box_ext_time .time {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+.wrap_list_exr ul {
+  padding-top: 2.4rem;
+}
+.wrap_list_exr ul li {
+  border-bottom: 1px solid #E5EAED;
+}
+.wrap_list_exr ul li a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2.0rem 0;
+}
+.wrap_list_exr ul li .exch_rate_item {
+  flex: 1;
+  padding-right: 2.4rem;
+}
+.wrap_list_exr ul li .exch_rate_item .tit {
+  color: #6E7D85;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.wrap_list_exr ul li .exch_rate_item .txt_ccy [class^="ico"] {
+  margin-right: 0.6rem
+}
+.wrap_list_exr ul li .exch_rate_item .txt_amount {
+  margin-top: 0.8rem;
+  padding: 0.2rem 0.2rem 0;
+  font-size: 2.8rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.wrap_list_exr ul li .exch_rate_item .txt_amount_gap {
+  margin-top: 0.4rem;
+  padding: 0 0.2rem;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.wrap_list_exr ul li .exch_rate_item .txt_amount_gap span {
+  display: inline-block;
+  color: #323E43;
+  font-weight: 300;
+}
+.wrap_list_exr ul li .exch_rate_item .txt_amount_gap .txt_num {
+  padding-left: 0.2rem;
+  font-weight: 400;
+}
+.wrap_list_exr ul li .exch_rate_item.up .txt_amount_gap .txt_num {
+  color: #FF5166;
+}
+.wrap_list_exr ul li .exch_rate_item.down .txt_amount_gap .txt_num {
+  color: #308FFF;
+}
+.wrap_list_exr ul li .exch_rate_item.up .txt_amount_gap .txt_num {}
+.wrap_list_exr ul li .wrap_chart {
+  width: 10.4rem;
+  height: 8.0rem;
+  margin-top: 0.2rem;
+  border-radius: 0.8rem;
+  background-color: #4B5555;
+}
+
+/* EXR_002 환율정보 */
+.wrap_top_info.exr_info {
+  padding: 3.0rem 2.4rem 2.4rem;
+  text-align: center;
+}
+.wrap_top_info.exr_info .wrap_dropdown {
+  margin-bottom: 2.0rem;
+}
+.wrap_top_info.exr_info .wrap_dropdown .btn_dropdown {
+  padding-right: calc(2.8rem + 0.8rem);
+  border: none;
+}
+.wrap_dropdown .btn_dropdown .txt_ccy {
+  display: inline-block;
+  font-size: 2.6rem;
+  line-height: 4.0rem;
+  font-weight: 400;
+}
+.wrap_dropdown .txt_ccy [class^="ico_"] {
+  display: inline-block;
+  width: 4.0rem;
+  height: 4.0rem;
+  margin-right: 0.8rem;
+  vertical-align: middle;
+}
+.wrap_top_info.exr_info .list_dropdown {
+  top: -2.4rem;
+  padding: 8.0rem 2.0rem 2.4rem;
+}
+.wrap_top_info.exr_info .list_dropdown::after {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.24);
+}
+.wrap_top_info.exr_info .list_dropdown ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.wrap_top_info.exr_info .list_dropdown li {
+  width: calc(4.0rem + 1.6rem);
+  margin-top: 0.8rem;
+}
+.wrap_top_info.exr_info .list_dropdown li button {
+  height: auto;
+  padding: 0.8rem;
+}
+.wrap_top_info.exr_info .list_dropdown li .txt_ccy [class^="ico_"] {
+  margin-right: 0;
+}
+.wrap_top_info.exr_info .exch_rate_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.wrap_top_info.exr_info .exch_rate_info .left {
+  padding-left: 0.2rem;
+  text-align: left;
+}
+.wrap_top_info.exr_info .exch_rate_info .left > span {
+  margin-top: 0.2rem;
+}
+.wrap_top_info.exr_info .exch_rate_info .right {
+  padding-right: 0.2rem;
+  text-align: right;
+}
+.wrap_top_info.exr_info .exch_rate_info .txt_type {
+  padding-bottom: 0.4rem;
+  color: #4F5D64;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+.wrap_top_info.exr_info .exch_rate_info .txt_amount {
+  font-size: 3.2rem;
+  line-height: 4.0rem;
+}
+.txt_amount_gap {
+  color: #4F5D64;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+.txt_amount_gap.up .txt_num {
+  color: #FF5166;
+}
+.txt_amount_gap.down .txt_num {
+  color: #369BF9;
+}
+.wrap_top_info.exr_info .fnSimpleAcco {
+  text-align: right;
+}
+.wrap_top_info.exr_info .wrap_acco {
+  display: none;
+  margin: 2.0rem 0 0;
+  padding: 1.6rem 0 1.8rem;
+  border-top: 1px solid #E5EAED;
+  border-bottom: 1px solid #E5EAED;
+  text-align: left;
+}
+.wrap_top_info.exr_info .wrap_acco .btn_refresh {
+  color: #AEBABB;
+  font-size: 1.3rem;
+  line-height: 2.0rem;
+}
+.wrap_top_info.exr_info .wrap_acco .list_info {
+  margin-top: 1.2rem;
+}
+.wrap_top_info.exr_info .wrap_acco .list_info li {
+  padding: 0;
+}
+.wrap_top_info.exr_info .wrap_acco .list_info .tit {
+  color: #6E7D85;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.wrap_top_info.exr_info .wrap_acco .list_info .txt {
+  color: #323E43;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.wrap_top_info.exr_info .btn_acco {
+  padding: 1.2rem 0;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+.wrap_top_info.exr_info .btn_acco .ico_arr_down_2 {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 0.6rem;
+}
+.wrap_top_info.exr_info .wrap_btn {
+  padding: 1.0rem 0;
+}
+.wrap_detail_exr {
+  margin-bottom: -6.0rem;
+  padding: 1.8rem 2.4rem 3.0rem;
+  background-color: #323E43;
+  color: #fff;
+}
+.wrap_detail_exr .wrap_chart {
+  width: 100%;
+  height: 19.2rem;
+  margin: 1.6rem 0;
+}
+.wrap_detail_exr .wrap_box {
+  overflow: hidden;
+  padding: 2.4rem 2.4rem 1.2rem;
+  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.25);
+}
+.wrap_detail_exr .wrap_box .box_tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #323E43;
+}
+.wrap_detail_exr .wrap_box .box_tit .tit {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+.wrap_detail_exr .wrap_box .box_tit .txt {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+.wrap_detail_exr .wrap_box .list_info {
+  margin-top: 0.8rem;
+  padding: 0.4rem 0;
+}
+.wrap_detail_exr .wrap_box .list_info li {
+  align-items: center;
+  margin-top: 0.6rem;
+  padding: 0.2rem 0;
+}
+.wrap_detail_exr .wrap_box .list_info li:first-child {
+  margin-top: 0;
+}
+.wrap_detail_exr .wrap_box .list_info li .tit,
+.wrap_detail_exr .wrap_box .list_info li .txt {
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.wrap_detail_exr .wrap_box .list_info [class^="emoji_"] {
+  display: inline-block;
+  width: 3.0rem;
+  height: 3.0rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+.wrap_detail_exr .wrap_box .txt_total {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.2rem -2.4rem -1.2rem;
+  padding: 1.6rem;
+  background-color: #323E43;
+}
+.wrap_detail_exr .wrap_box .txt_total .tit {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+}
+.wrap_detail_exr .wrap_box .txt_total .txt {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+.wrap_detail_exr .wrap_box .no_result {
+  margin-top: 1.0rem;
+  padding-bottom: 2.0rem;
+  text-align: center;
+}
+.wrap_detail_exr .wrap_box .no_result p {
+  margin: 1.4rem 0 1.6rem;
+  color: #D0D7D7;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+.wrap_exch_monthly {
+  padding-top: 4.4rem;
+}
+.wrap_exch_monthly .tit {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 300;
+}
+.wrap_exch_monthly .wrap_info_exchange {
+  height: auto;
+  padding: 0.8rem 0 0;
+}
+.wrap_exch_monthly .wrap_info_exchange .txt_info {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+.wrap_exch_monthly .txt_basis {
+  margin-top: 0.8rem;
+  color: #849594;
+}
+
+/* EXR_004 환율정보 */
+
 
 @supports ((-webkit-filter:none) or (filter:none)) {
   .vdb_swiper .swiper-slide.swiper-slide-prev,

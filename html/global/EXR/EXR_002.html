@@ -30,20 +30,20 @@
     <div id="contents" class="wrap_contents">
       <div class="contents">
         <section data-roll="EXR">
-          <div class="wrap_top_info">
+          <div class="wrap_top_info exr_info">
             <div class="wrap_dropdown">
               <button type="button" class="btn_dropdown"><span class="current"><em class="txt_ccy"><span class="ico_cur_usd"></span>미국 USD 100</em></span></button>
               <div class="list_dropdown">
                 <ul>
                   <!-- <li><button type="button"><span class="txt_ccy"><span class="ico_cur_usd"></span>USD</span></button></li> -->
-                  <li><button type="button"><span class="txt_ccy"><span class="ico_cur_jpy"></span>JPY</span></button></li>
-                  <li><button type="button"><span class="txt_ccy"><span class="ico_cur_eur"></span>EUR</span></button></li>
-                  <li><button type="button"><span class="txt_ccy"><span class="ico_cur_gbp"></span>GBP</span></button></li>
-                  <li><button type="button"><span class="txt_ccy"><span class="ico_cur_cny"></span>CNY</span></button></li>
-                  <li><button type="button"><span class="txt_ccy"><span class="ico_cur_sgd"></span>SGD</span></button></li>
-                  <li><button type="button"><span class="txt_ccy"><span class="ico_cur_vnd"></span>VND</span></button></li>
-                  <li><button type="button"><span class="txt_ccy"><span class="ico_cur_cad"></span>CAD</span></button></li>
-                  <li><button type="button"><span class="txt_ccy"><span class="ico_cur_aud"></span>AUD</span></button></li>
+                  <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_jpy"></span>JPY</span></button></li>
+                  <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_eur"></span>EUR</span></button></li>
+                  <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_gbp"></span>GBP</span></button></li>
+                  <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_cny"></span>CNY</span></button></li>
+                  <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_sgd"></span>SGD</span></button></li>
+                  <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_vnd"></span>VND</span></button></li>
+                  <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_cad"></span>CAD</span></button></li>
+                  <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_aud"></span>AUD</span></button></li>
                 </ul>
               </div>
             </div>
@@ -51,13 +51,13 @@
               <div class="left">
                 <p class="txt_amount_gap up">전날 대비 <em class="txt_num">-3.50</em></p>
                 <p class="txt_amount_gap down">전주 대비 <em class="txt_num">+12.60</em></p>
-                <p class="txt_amount_gap">전주 대비 <em class="txt_num">0.00</em></p>
+                <p class="txt_amount_gap equal">전주 대비 <em class="txt_num">0.00</em></p>
               </div>
               <div class="right">
                 <p class="txt_type">매매기준율</p>
                 <p class="txt_amount up"><em class="txt_num">1,355.60</em>원</p>
                 <p class="txt_amount down"><em class="txt_num">1,355.60</em>원</p>
-                <p class="txt_amount"><em class="txt_num">1,355.60</em>원</p>
+                <p class="txt_amount equal"><em class="txt_num">1,355.60</em>원</p>
               </div>
             </div>
             <div class="fnSimpleAcco">
@@ -88,28 +88,36 @@
               </div>
               <button type="button" class="btn_acco">상세환율 보기<span class="ico_arr_down_2"></span></button>
             </div>
-            <div class="wrap_btn">
-              <a href="#none" class="btn_round_ico type_line"><span class="ico_"></span><span>환율알림</span></a>
-              <a href="#none" class="btn_round_ico type_line"><span class="ico_"></span><span>자동충전</span></a>
+            <div class="wrap_btn type_col">
+              <a href="#none" class="btn_round_ico type_line"><span class="ico_"></span><span class="txt">환율알림</span></a>
+              <a href="#none" class="btn_round_ico type_line"><span class="ico_"></span><span class="txt">자동충전</span></a>
             </div>
           </div>
 
-          <div class="wrap_defail_exr">
+          <div class="wrap_detail_exr">
             <div class="section_tab type_sub_line">
               <ul class="wrap_tab_btn">
-                <li class="on"><a href="#none" class="btn_tab">1w</a></li>
-                <li><a href="#none" class="btn_tab">1m</a></li>
-                <li><a href="#none" class="btn_tab">3m</a></li>
-                <li><a href="#none" class="btn_tab">6m</a></li>
-                <li><a href="#none" class="btn_tab">1y</a></li>
+                <li class="on"><button type="button" class="btn_tab_box">1w</button></li>
+                <li><button type="button" class="btn_tab_box">1m</button></li>
+                <li><button type="button" class="btn_tab_box">3m</button></li>
+                <li><button type="button" class="btn_tab_box">6m</button></li>
+                <li><button type="button" class="btn_tab_box">1y</button></li>
               </ul>
             </div>
             <div id="" class="wrap_chart"></div>
             <div class="wrap_box bg_darkgrey">
               <div class="box_tit">
-                <p class=""><span>김하나</span>님의 <span>달러머니</span></p>
-                <span class="">최근 1년 기준</span>
+                <p class="tit"><span>김하나</span>님의 <span>달러머니</span></p>
+                <span class="txt">최근 1년 기준</span>
               </div>
+              <!-- 거래내역 없을 시 -->
+              <div class="no_result">
+                <p>최근 1년간 거래하신 내역이 없어요.</p>
+                <div class="wrap_btn">
+                  <a href="#none" class="btn_round_m btn_primary">환율 100% 우대받고 충전하기</a>
+                </div>
+              </div>
+              <!-- // 거래내역 없을 시 -->
               <!-- 거래내역 있을 시 -->
               <div>
                 <ul class="list_info">
@@ -127,30 +135,18 @@
                   </li>
                 </ul>
                 <div class="txt_total">
-                  <ul class="list_info">
-                    <li>
-                      <strong class="tit">아낀 환전수수료</strong>
-                      <span class="txt txt_point_1"><em class="txt_num">3,400,000</em>원</span>
-                    </li>
-                  </ul>
+                  <strong class="tit">아낀 환전수수료</strong>
+                  <span class="txt txt_point_1"><em class="txt_num">3,400,000</em>원</span>
                 </div>
               </div>
               <!-- // 거래내역 있을 시 -->
-              <!-- 거래내역 없을 시 -->
-              <div>
-                <p>최근 1년간 거래하신 내역이 없어요.</p>
-                <div class="wrap_btn">
-                  <a href="btn_round btn_primary">환율 100% 우대받고 충전하기</a>
-                </div>
-              </div>
-              <!-- // 거래내역 없을 시 -->
             </div>
 
             <div class="wrap_exch_monthly">
               <p class="tit">최근 1개월동안<br>
-                다른 사람들은 얼마에 환전했을까요?</p>
+                <strong>다른 사람들은 얼마에 환전</strong>했을까요?</p>
               <p class="wrap_info_exchange">
-                <span class="txt_info"><span>USD</span> 1 = <span class="txt_num">1,340.10</span>원</span>
+                <span class="txt_info txt_point_1"><span>USD</span> 1 = <span class="txt_num">1,340.10</span>원</span>
               </p>
               <p class="txt_basis">22.08.08 ~ 22.09.08 평균 매입가</p>
             </div>
