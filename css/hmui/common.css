@@ -845,8 +845,8 @@ section[data-roll] {
   background-image: url('../../images/hmui/emoji_globe.png');
 }
 .emoji_atm {
-  width: 1.7rem;
-  height: 2.9rem;
+  width: 3.0rem;
+  height: 3.0rem;
   background-image: url('../../images/hmui/emoji_atm.png');
 }
 .emoji_drone {
@@ -1403,13 +1403,22 @@ section[data-roll] {
 .section_bottom_select .wrap_sel_list .txt {
   display: inline-block;
   color: #323E43;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+.section_bottom_select .wrap_sel_list .txt_sub_light {
+  padding-left: 0.8rem;
+  color: #4F5D64;
   font-size: 1.5rem;
-  line-height: 2.0rem;
+  line-height: 1.5;
+  font-weight: 300;
+  vertical-align: middle;
 }
 .section_bottom_select .wrap_sel_list .fnOpt {
   display: block;
   width: 100%;
-  padding: 1.3rem 2.4rem;
+  padding: 1.2rem 2.4rem;
   text-align: left;
 }
 
@@ -3663,25 +3672,27 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   opacity: 0;
   transform: rotate(-38.87deg);
 }
-.list_benefit_label.type_full {
+.list_benefit_label[class*="type_full"] {
   display: block;
 }
-.list_benefit_label.type_full li {
+.list_benefit_label[class*="type_full"] li {
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
   min-height: auto;
+  margin-top: 0.8rem;
+  font-weight: 400;
+  text-align: left;
+}
+.list_benefit_label[class*="type_full"] li:first-child {
+  margin-top: 0;
+}
+.list_benefit_label.type_full li {
   height: 5.1rem;
-  margin-top: 1.0rem;
   padding: 0 2.4rem;
   border-radius: 2.6rem;
   font-size: 1.8rem;
   line-height: 2.4rem;
-  font-weight: 400;
-  text-align: left;
-}
-.list_benefit_label.type_full li:first-child {
-  margin-top: 0;
 }
 .list_benefit_label.type_full li [class^="emoji_"] {
   width: 3.6rem;
@@ -3689,12 +3700,36 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   margin: 0 0.8rem;
   vertical-align: top;
 }
-.list_benefit_label.type_full .flag_free {
+.list_benefit_label[class*="type_full"] .flag_free {
   top: 0.7rem;
   right: -2.1rem;
   width: 5.4rem;
   height: 3.5rem;
   transform: rotate(0);
+}
+.list_benefit_label.type_full_box li {
+  align-items: flex-start;
+  padding: 1.6rem 2.4rem;
+}
+.list_benefit_label.type_full_box .item_desc {
+  flex: 1;
+  padding-left: 0.8rem;
+}
+.list_benefit_label.type_full_box .item_desc .tit {
+  display: block;
+  padding-left: 0.4rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.list_benefit_label.type_full_box .item_desc .txt {
+  display: block;
+  padding-left: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+.list_benefit_label.type_full_box .flag_free {
+  top: -0.6rem;
 }
 .list_benefit_label:not(.type_full) li.transform .flag_free {
   animation: freeLabel 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;

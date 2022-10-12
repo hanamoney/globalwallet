@@ -79,7 +79,7 @@
   margin: 0 0.4rem 0 0;
 }
 .wrap_item_benefit li .item_desc .emoji_atm {
-  margin: 0 0.7rem;
+  /* margin: 0 0.7rem; */
 }
 .wrap_item_benefit li .item_desc .emoji_drone {
   top: -0.5rem;
@@ -1194,6 +1194,18 @@
   width: 4.0rem;
   height: 4.0rem;
 }
+.section_cont.gsp_travlog_info .list_benefit_label.type_full_box li {
+  width: 100%;
+}
+.section_cont.gsp_travlog_info .list_benefit_label.type_full_box li.bg_highlight {
+  background-color: #FFEAC0;
+}
+.section_cont.gsp_travlog_info .list_benefit_label.type_full_box li.bg_highlight {
+  color: #4F5D64;
+}
+.section_cont.gsp_travlog_info .list_benefit_label.type_full_box li.bg_highlight .txt {
+  color: #50451D;
+}
 .visual_gsp_receipt .box {
   position: relative;
   padding: 2.4rem 1.8rem 6.6rem;
@@ -1340,8 +1352,19 @@
   animation: itemUp30 0.4s forwards;
 }
 .gsp_travlog_info .atm_info {
-  margin: 3.6rem 0 1.0rem;
+  margin: 3.2rem 0 0;
   text-align: center;
+}
+.gsp_travlog_info .atm_info .tit_2 {
+  font-size: 2.0rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.gsp_travlog_info .atm_info .txt_sub {
+  margin-top: 1.6rem;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.5;
 }
 .gsp_travlog_info .atm_info .txt {
   color: #fff;
@@ -1349,26 +1372,25 @@
   line-height: 2.2rem;
 }
 .gsp_travlog_info .atm_info .txt_basis {
-  padding: 0 1.0rem;
-  color: #FFE379;
+  padding: 0.4rem 1.0rem 0;
+  /* color: #FFE379; */
   font-size: 1.4rem;
   line-height: 2.0rem;
   word-break: keep-all;
 }
 .gsp_travlog_info .atm_info .emoji_atm {
-  width: 1.9rem;
-  height: 3.2rem;
-  margin: 0 0.3rem 0 0.6rem;
+  width: 3.0rem;
+  height: 3.0rem;
   vertical-align: middle;
 }
-.gsp_travlog_info .atm_info strong {
+.gsp_travlog_info .atm_info strong:not(.tit_sub_2) {
   margin-top: 1.0rem;
   display: block;
   font-size: 2.0rem;
   line-height: 2.6rem;
 }
 .gsp_travlog_info .atm_info ul {
-  margin: 3.0rem 0 2.0rem;
+  margin: 1.6rem 0;
 }
 .gsp_travlog_info .atm_info ul li {
   display: inline-block;
@@ -1380,6 +1402,10 @@
 }
 .gsp_travlog_info .atm_info [class^="img_logo"] {
   display: block;
+}
+.gsp_travlog_info .atm_info .btn_txt {
+  padding: 0.8rem 0;
+  color: #fff;
 }
 .gsp_travlog_info .visual_gsp_cashback {
   position: relative;
