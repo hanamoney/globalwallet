@@ -31,7 +31,7 @@
       <div class="contents">
         <section data-roll="EXR">
           <div class="section_form">
-            <div class="wrap_inp">
+            <div class="wrap_inp type_col">
               <div class="box_inp">
                 <div class="wrap_dropdown">
                   <button type="button" class="btn_dropdown"><span class="current"><em class="txt_ccy"><span class="ico_cur_usd"></span>USD 1</em></span></button>
@@ -50,8 +50,9 @@
                   </div>
                 </div>
               </div>
-              <div class="box_inp"><!-- 에러케이스 시 box_inp에 err 클래스추가 -->
+              <div class="box_inp type_decimal"><!-- 에러케이스 시 box_inp에 err 클래스추가 -->
                 <input type="tel" inputmode="numeric" class="inp" title="금액 정수 입력" placeholder="1,330" value="" />
+                <span class="">.</span>
                 <input type="tel" inputmode="numeric" class="inp" title="소수점 아래두자리 입력" placeholder="65" value="" />
                 <span class="unit">원</span>
                 <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
