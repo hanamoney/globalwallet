@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>EXR_001</title>
+
+  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>환율</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="EXR">
+          <div class="wrap_list_exr">
+            <div class="wrap_">
+              <p class="txt_info_exr">8월 26일 15:32 (155회차) 매매기준율</p>
+              <button class="btn_ico_refresh"><span class="blind">새로고침</span></button>
+            </div>
+            <ul>
+              <!-- loop -->
+              <li>
+                <a href="#none">
+                  <div class="exch_rate_item">
+                    <!-- 
+                      높을 시 : up
+                      낮을 시 : down
+                      동일 : 추가클래스 없음 
+                    -->
+                    <p class="tit txt_ccy"><span class="ico_cur_usd"></span>미국 USD</p>
+                    <p class="txt_amount"><strong class="txt_num">1,355.60</strong></p>
+                    <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">0.00</span></p>
+                  </div>
+                  <div id="" class="wrap_chart"></div>
+                </a>
+              </li>
+              <!-- // loop -->
+              <li>
+                <a href="#none">
+                  <div class="exch_rate_item up">
+                    <p class="tit txt_ccy"><span class="ico_cur_jpy"></span>일본 JPY</p>
+                    <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
+                    <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
+                  </div>
+                  <div id="" class="wrap_chart"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <div class="exch_rate_item down">
+                    <p class="tit txt_ccy"><span class="ico_cur_eur"></span>유럽 EUR</p>
+                    <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_down"><span class="blind">하락</span></span></p>
+                    <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">-3.50</span></p>
+                  </div>
+                  <div id="" class="wrap_chart"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <div class="exch_rate_item up">
+                    <p class="tit txt_ccy"><span class="ico_cur_gbp"></span>영국 GBP</p>
+                    <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
+                    <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
+                  </div>
+                  <div id="" class="wrap_chart"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <div class="exch_rate_item up">
+                    <p class="tit txt_ccy"><span class="ico_cur_cny"></span>중국 CNY</p>
+                    <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
+                    <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
+                  </div>
+                  <div id="" class="wrap_chart"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <div class="exch_rate_item up">
+                    <p class="tit txt_ccy"><span class="ico_cur_sgd"></span>싱가포르 SGD</p>
+                    <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
+                    <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
+                  </div>
+                  <div id="" class="wrap_chart"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <div class="exch_rate_item up">
+                    <p class="tit txt_ccy"><span class="ico_cur_vnd"></span>베트남 VND</p>
+                    <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
+                    <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
+                  </div>
+                  <div id="" class="wrap_chart"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <div class="exch_rate_item up">
+                    <p class="tit txt_ccy"><span class="ico_cur_cad"></span>캐나다 CAD</p>
+                    <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
+                    <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
+                  </div>
+                  <div id="" class="wrap_chart"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <div class="exch_rate_item up">
+                    <p class="tit txt_ccy"><span class="ico_cur_aud"></span>호주 AUD</p>
+                    <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
+                    <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
+                  </div>
+                  <div id="" class="wrap_chart"></div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- 하단고정영역 -->
+        <div class="section_bottom_fixed">
+          <a href="none" class="btn_round_icon fill_grey"><span class="ico_alarm"></span><span class="txt">환율 알림 설정</span></a>
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_secondary">바로 충전</button>
+            <button type="button" class="btn_full_primary">목표환율 자동충전 예약</button>
+          </div>
+        </div>
+        <!-- // 하단고정영역 -->
+      </div>
+    </div> 
+    <!-- // contents-->
+
+    <!-- 5a: 약관동의X, 계좌연결X  -->
+    <div id="confirmId1" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert">외화 충전은 트래블로그 서비스 가입 시 이용할 수 있어요.</p>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_secondary fnClosePop">취소</button>
+            <button type="button" class="btn_full_primary fnClosePop">서비스 가입하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // 5a: 약관동의X, 계좌연결X -->
+
+    <!-- 5b: 외국인 -->
+    <div id="confirmId1" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert">외화 충전은 내국인 전용 서비스예요.</p>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_primary fnClosePop">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // 5b: 외국인 -->
+
+    <!-- 5c: 미로그인 -->
+    <div id="confirmId1" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <p class="txt_alert">하나머니 앱 로그인이 필요한 서비스입니다.</p>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_primary fnClosePop">로그인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // 5c: 미로그인 -->
+  </main>
+
+  <script>
+    // 팝업호출 param 오픈할 팝업 id
+    // fnOpenLayerPop('confirmId1');
+    // 팝업닫기 param 닫을 팝업 id
+    // fnCloseLayerPop('confirmId1');
+  
+  </script>
+  
+</body>
+</html>

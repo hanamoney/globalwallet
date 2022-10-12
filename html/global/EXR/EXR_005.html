@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>EXR_005</title>
+
+  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    <header id="header">
+      <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
+        <h1>환율 알림</h1>
+        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <div id="contents" class="wrap_contents">
+      <div class="contents">
+        <section data-roll="EXR">
+          <div class="section_form">
+            <div class="wrap_inp">
+              <div class="box_inp">
+                <div class="wrap_dropdown">
+                  <button type="button" class="btn_dropdown"><span class="current"><em class="txt_ccy"><span class="ico_cur_usd"></span>USD 1</em></span></button>
+                  <div class="list_dropdown">
+                    <ul>
+                      <!-- <li><button type="button"><span class="txt_ccy"><span class="ico_cur_usd"></span>USD</span></button></li> -->
+                      <li><button type="button"><span class="txt_ccy"><span class="ico_cur_jpy"></span>JPY 100</span></button></li>
+                      <li><button type="button"><span class="txt_ccy"><span class="ico_cur_eur"></span>EUR 1</span></button></li>
+                      <li><button type="button"><span class="txt_ccy"><span class="ico_cur_gbp"></span>GBP 1</span></button></li>
+                      <li><button type="button"><span class="txt_ccy"><span class="ico_cur_cny"></span>CNY 1</span></button></li>
+                      <li><button type="button"><span class="txt_ccy"><span class="ico_cur_sgd"></span>SGD 1</span></button></li>
+                      <li><button type="button"><span class="txt_ccy"><span class="ico_cur_vnd"></span>VND 100</span></button></li>
+                      <li><button type="button"><span class="txt_ccy"><span class="ico_cur_cad"></span>CAD 1</span></button></li>
+                      <li><button type="button"><span class="txt_ccy"><span class="ico_cur_aud"></span>AUD 1</span></button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="box_inp"><!-- 에러케이스 시 box_inp에 err 클래스추가 -->
+                <input type="tel" inputmode="numeric" class="inp" title="금액 정수 입력" placeholder="1,330" value="" />
+                <input type="tel" inputmode="numeric" class="inp" title="소수점 아래두자리 입력" placeholder="65" value="" />
+                <span class="unit">원</span>
+                <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
+              </div>
+              <p class="txt_inp_guide type_right txt_amount_gap down">현재가보다 <em class="txt_num">-12.34</em></p>
+            </div>
+            <div class="txt_inp_result">이하일 때 알림을 받을래요.</div>
+          </div>
+          
+        </section>
+
+        <!-- 하단고정영역 -->
+        <div class="section_bottom_fixed">
+          <div class="wrap_quick_sel">
+            <button class="btn_acco"><span>빠른 환율 선택</span></button>
+            <ul>
+              <!-- loop -->
+              <li>
+                <button type="button" class="fnOpt" data-option="val1">
+                  <span class="right">
+                    <span class="txt_amount"><em class="txt txt_num">1,330.65</em>원</span>
+                  </span>
+                </button>
+              </li>
+              <!-- // loop -->
+              <li>
+                <button type="button" class="fnOpt" data-option="val2">
+                  <span class="right">
+                    <span class="txt_amount"><em class="txt txt_num">1,330.85</em>원</span>
+                  </span>
+                </button>
+              </li>
+              <!-- 최저가 -->
+              <li class="selected">
+                <button type="button" class="fnOpt" data-option="val3">
+                  <span class="left">최근 3개월 기준<em>최저가</em></span>
+                  <span class="right">
+                    <span class="txt_amount"><em class="txt txt_num">1,330.75</em>원</ㄴ>
+                    <span class="txt_amount_gap down">현재가보다 <strong class="txt_num">-12.34</strong>
+                  </span>
+                </button>
+              </li>
+              <!-- // 최저가 -->
+              <li>
+                <button type="button" class="fnOpt" data-option="val4">
+                  <span class="right">
+                    <span class="txt_amount"><em class="txt txt_num">1,330.55</em>원</span>
+                  </span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="fnOpt" data-option="val5">
+                  <span class="right">
+                    <span class="txt_amount"><em class="txt txt_num">1,330.45</em>원</span>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="wrap_btn_full">
+            <button type="button" id="testid" class="btn_full_primary fnClosePop">설정하기</button>
+          </div>
+        </div>
+        <!-- // 하단고정영역 -->
+      </div>
+    </div> 
+    <!-- // contents-->
+
+    <!-- toast -->
+    <div id="toast" class="wrap_toast">
+      <p class="txt_toast"><span>달러머니</span> 알림을 설정했어요.</p>
+    </div>
+    <!-- // toast -->
+
+  </main>
+
+  <script>
+  </script>
+  
+</body>
+</html>
