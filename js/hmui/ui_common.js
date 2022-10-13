@@ -234,7 +234,7 @@ var _inpControl = function() {
   inp.each(function(idx, el) { 
     var keepFocus = false;
     // 입력 삭제 버튼 추가
-    if ( $(el).siblings('.btn_ico_clear').length <= 0 ) {
+    if ( $(el).siblings('.btn_ico_clear').length <= 0 && !$(el).hasClass('clearFocus') ) {
       $(el).closest('.box_inp').append('<button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>');
     }
 

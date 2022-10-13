@@ -200,7 +200,7 @@
 .section_set_list .wrap_box_list + .txt_guide {
   margin-top: 2.4rem;
 }
-.section_set_list .wrap_box_list .btn_ico_delete {
+.section_set_list .wrap_box_list .btn_ico_trash {
   position: absolute;
   top: 2.3rem;
   right: 1.9rem;
@@ -223,7 +223,6 @@
   height: 3.0rem;
   margin-right: 0.5rem;
   vertical-align: middle;
-  background-color: pink;
 }
 .section_set_list .tit_emoji strong {
   vertical-align: middle;
@@ -2900,15 +2899,19 @@
 }
 .wrap_detail_exr .wrap_box .list_info li .tit,
 .wrap_detail_exr .wrap_box .list_info li .txt {
+  flex: none;
+  position: relative;
   font-size: 1.5rem;
-  line-height: 2.0rem;
+  line-height: 2.4rem;
 }
 .wrap_detail_exr .wrap_box .list_info [class^="emoji_"] {
   display: inline-block;
-  width: 3.0rem;
-  height: 3.0rem;
-  margin-right: 0.4rem;
-  vertical-align: middle;
+  position: absolute;
+  top: -0.2rem;
+  left: -3.6rem;
+  width: 3.4rem;
+  height: 3.4rem;
+  vertical-align: top;
 }
 .wrap_detail_exr .wrap_box .txt_total {
   display: flex;
@@ -2961,6 +2964,21 @@
 }
 
 /* EXR_004 환율정보 */
+.wrap_banner_box .link_box.set_exrcharge_link {
+  background: linear-gradient(135deg, #DBE0FC 14.64%, #F4DBDE 85.36%);
+  color: #844883;
+}
+.wrap_banner_box .link_box.set_exrcharge_link .tit {
+  font-size: 2.0rem;
+  line-height: 1;
+}
+.wrap_banner_box .link_box.set_exrcharge_link .txt_sub {
+  color: #844883;
+}
+.wrap_banner_box .link_box.set_exrcharge_link::after {
+
+}
+
 
 
 @supports ((-webkit-filter:none) or (filter:none)) {
