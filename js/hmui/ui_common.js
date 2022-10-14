@@ -35,7 +35,9 @@ var registUI = function(){
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
   if ( (iosV() >= 13) && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
+  if ( $('.wrap_inp.type_decimal').length ) { _inpDecimal(); } // 인풋 인터렉션
   if ( $('.sel').length || $('.wrap_sel_list').length ) { _selControl(); } // 셀렉트
+  if ( $('.wrap_quick_sel').length ) { _quickSelControl($('.wrap_quick_sel')); } // 셀렉트
   if ( $('.wrap_dropdown').length ) { _dropDown(); } // dropdown 선택
   if ( $('.wrap_tab_btn').length ) { _tabContents(); } // 탭 
   if ( $('.fnSimpleAcco').length ) { _simpleAcco(); } // 단일 아코디언
@@ -234,7 +236,7 @@ var _inpControl = function() {
   inp.each(function(idx, el) { 
     var keepFocus = false;
     // 입력 삭제 버튼 추가
-    if ( $(el).siblings('.btn_ico_clear').length <= 0 && !$(el).hasClass('clearFocus') ) {
+    if ( $(el).siblings('.btn_ico_clear').length <= 0 && !$(el).hasClass('fnClearFocus') ) {
       $(el).closest('.box_inp').append('<button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>');
     }
 
@@ -263,6 +265,7 @@ var _inpControl = function() {
     });
 
     $(el).bind('keyup change',function(e){
+      if ($(this).hasClass('fnClearFocus')) {return;}
       // console.log('change');
       keepFocus = true;
       $(this).focus().click();
@@ -347,6 +350,26 @@ var _inpChkVal = function(el) {
   });
 };
 
+var _inpDecimal = function() {
+  $('.wrap_inp.type_decimal').each(function(){
+    var $thisWrap = $(this);
+    $thisWrap.find('.inp').on('click',function(){
+      $(this).val('');
+      
+    });
+    $thisWrap.find('.inp').on('focus',function(){
+      $('.wrap_dropdown').removeClass('on');
+      $('.wrap_quick_sel').removeClass('on').find('ul').hide();
+    });
+    $thisWrap.find('.inp').on('blur',function(){
+      // $('.wrap_quick_sel').find('ul').show();
+    }); 
+    $thisWrap.find('.fnOpt').on('click',function(){
+    
+    });
+  });
+}
+
 /**
   * @name _selControl()
   * @description // selecbox status
@@ -400,9 +423,27 @@ var _closeSelList = function(el) {
   fnCloseLayerPop(popId, $sel);
 }
 
+var _quickSelControl = function(el) {
+  $(el).each(function(){
+    var $wrapSel = $(this);
+    $wrapSel.find('.btn_acco').on('click', function(){
+      if ($wrapSel.hasClass('on')) {
+        $wrapSel.removeClass('on').find('ul').slideUp(300);
+      } else {
+        setTimeout(function(){
+          $wrapSel.addClass('on').find('ul').slideDown(300);
+        },100);
+      }
+    });
+    $wrapSel.find('.fnOptQuick').on('click', function(){
+      $(this).closest('li').addClass('selected').siblings().removeClass('selected');
+    });
+  });
+}
+
 /**
   * @name _dropDown()
-  * @description // dropdown 산텍
+  * @description // dropdown 선택. 리스트텍스트와 선택값 텍스트가 동일한 경우에만 선택값 노출기능
  */
 var _dropDown = function() {
   $('.wrap_dropdown').each(function() {
@@ -410,7 +451,7 @@ var _dropDown = function() {
     var $btnDropDown = $(this).find('.btn_dropdown');
     var $list = $(this).find('.list_dropdown');
     var $selBtn = $list.find('button');
-
+    
     $btnDropDown.on('click', function() {
       if ($el.hasClass('on')) {
         $el.removeClass('on');
@@ -420,8 +461,10 @@ var _dropDown = function() {
     });
   
     $selBtn.on('click', function() {
-      var selected = $(this).find('span').text();
-      $el.find('.current').text(selected);
+      if ($($el).data('type') != 'exr') {
+        var selected = $(this).find('span').text();
+        $el.find('.current').text(selected);
+      }
       if ($el.hasClass('on')) {
         $el.removeClass('on');
       } else {
