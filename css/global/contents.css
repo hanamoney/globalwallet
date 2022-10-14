@@ -255,7 +255,7 @@
 .section_set_list:first-child {
   padding-top: 3.0rem;
 }
-.section_tab.scrolled + .section_set_list {
+.section_tab.scrolled + div .section_set_list:first-child {
   margin-top: 5.4rem;
 }
 
