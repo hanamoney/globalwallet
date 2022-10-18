@@ -266,10 +266,19 @@
       </div>
     </div>
     <!-- // tooltip -->
+
+    <!-- 22.10.18 스토어리뷰토스트 -->
+    <div id="toast" class="wrap_toast">
+      <p class="txt_toast">더 만족하실 수 있게 노력할게요!</p>
+    </div>
+    <!-- // 22.10.18 스토어리뷰토스트 -->
   </main>
   
   <script>
     $(function(){
+      // 토스트팝업 호출 param element 해당ID
+      fnToastPop('toast');
+
       setTimeout(function(){
         result_findInfo('neither');// 동작 퍼블 확인용
       },600);
