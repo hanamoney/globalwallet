@@ -353,12 +353,14 @@ var _inpChkVal = function(el) {
 var _inpDecimal = function() {
   $('.wrap_inp.type_decimal').each(function(){
     var $thisWrap = $(this);
+    
     $thisWrap.find('.inp').on('click',function(){
       $(this).val('').trigger('change');
     });
     $thisWrap.find('.inp').on('focus',function(){
       $(this).closest('.type_decimal').addClass('focus');
       $('.wrap_dropdown').removeClass('on');
+      _quickSelCenter($('.wrap_quick_sel ul'), $('.wrap_quick_sel ul').outerHeight(true), 0);
       $('.wrap_quick_sel').removeClass('on').find('ul').hide();
     });
     $thisWrap.find('.inp').on('blur',function(){
@@ -438,9 +440,9 @@ var _quickSelControl = function(el) {
     var $wrapSel = $(this);
     var $wrapList = $wrapSel.find('ul');
     var listH = $wrapList.height();
-    _selCenter($wrapList, listH, 0);
+    _quickSelCenter($wrapList, listH, 0);
     $wrapSel.find('.btn_acco').on('click', function(){
-      _selCenter($wrapList,listH, 0);
+      _quickSelCenter($wrapList,listH, 0);
       if ($wrapSel.hasClass('on')) {
         $wrapSel.removeClass('on').find('ul').slideUp(200);
       } else {
@@ -452,25 +454,24 @@ var _quickSelControl = function(el) {
     });
     $wrapSel.find('.fnOptQuick').on('click', function(){
       $(this).closest('li').addClass('selected').siblings().removeClass('selected');
-      _selCenter($wrapList, listH, 200);
+      _quickSelCenter($wrapList, listH, 200);
     });
-
-    function _selCenter(list, height, duration) {
-      var $list =$(list); 
-      var selected = $list.find('.selected');
-      var listH = height;
-      var liH = selected.outerHeight(true);
-      var idx = selected.index();
-      var q = 0;
-      var $item = $list.find('li');
-      for(var i = 0; i < idx; i++){
-        q+= $($item[i]).outerHeight(true);
-      }
-      $list.animate({
-        scrollTop: (Math.max(0, q - (listH - liH)/2))
-      }, duration);
-    }
   });
+}
+function _quickSelCenter(list, height, duration) {
+  var $list =$(list); 
+  var selected = $list.find('.selected');
+  var listH = height;
+  var liH = selected.outerHeight(true);
+  var idx = selected.index();
+  var q = 0;
+  var $item = $list.find('li');
+  for(var i = 0; i < idx; i++){
+    q+= $($item[i]).outerHeight(true);
+  }
+  $list.animate({
+    scrollTop: (Math.max(0, q - (listH - liH)/2))
+  }, duration);
 }
 
 /**
