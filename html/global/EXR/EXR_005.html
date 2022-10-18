@@ -148,6 +148,17 @@
     // placeholder 샘플
     $('#testid1').attr('placeholder','1,355');
     $('#testid2').attr('placeholder','65');
+
+    $(function(){
+      // 버튼 disabled 설정 샘플
+      $('#testid1').on('keyup change', function(){
+        if ($(this).val() == '') {
+          $('#testid').prop('disabled',true);
+        } else {
+          $('#testid').prop('disabled',false);
+        }
+      })
+    });
   </script>
   
 </body>

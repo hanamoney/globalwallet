@@ -1483,6 +1483,21 @@ section[data-roll] {
 .wrap_inp.type_decimal .txt_inp_guide {
   width: 100%;
 }
+.wrap_inp.type_decimal.focus::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 2.8rem;
+  width: 100%;
+  height: 2px;
+  background-color: #4F5D64;
+}
+.wrap_inp.type_decimal.focus .unit,
+.wrap_inp.type_decimal.focus .point,
+.wrap_inp.type_decimal.hasVal .unit,
+.wrap_inp.type_decimal.hasVal .point {
+  color: #252E33;
+}
 
 /* number spinner */
 .num_spinner {
@@ -1582,6 +1597,7 @@ section[data-roll] {
   left: 0;
   right: 0;
   bottom: 6.0rem;
+  z-index: 9;
   border-radius: 2.4rem 2.4rem 0 0;
   background-color: #323E43;
   color: #fff;
@@ -3520,6 +3536,9 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .exr_inp .wrap_inp:last-child {
   flex: 1;
+}
+.exr_inp .wrap_dropdown:not(.on) {
+  z-index: 8 !important;
 }
 .exr_inp .wrap_dropdown .btn_dropdown {
   width: 36.39vw;
