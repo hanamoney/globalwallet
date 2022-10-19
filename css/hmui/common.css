@@ -299,6 +299,9 @@ section[data-roll] {
 .bg_grandient_5 {
   background: linear-gradient(135deg, #F3DDD4 0%, #DBE0FC 100%);
 }
+.bg_grandient_6 {
+  background: linear-gradient(135deg, #DBE0FC 14.64%, #F4DBDE 85.36%);
+}
 
 /* Title */
 .wrap_tit {
@@ -4391,7 +4394,8 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .link_box {
   position: relative;
   display: block;
-  padding: 2.0rem;
+  min-height: 8.0rem;
+  padding: 1.6rem 2.4rem;
   border-radius: 1.4rem;
   background-color: #f6f6f6;
 }
@@ -4410,6 +4414,13 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .link_box.type_line {
   background-color: #fff;
   border: 1px solid #E3EBEE;
+}
+.link_box.bg_grandient_6 .tit,
+.link_box.bg_grandient_6 .txt_sub {
+  color: #844883;
+}
+.link_box .tit {
+  font-size: 2.0rem; 
 }
 
 /* 조회 리스트 */

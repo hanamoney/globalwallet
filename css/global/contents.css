@@ -2964,17 +2964,6 @@
 }
 
 /* EXR_004 환율정보 */
-.wrap_banner_box .link_box.set_exrcharge_link {
-  background: linear-gradient(135deg, #DBE0FC 14.64%, #F4DBDE 85.36%);
-  color: #844883;
-}
-.wrap_banner_box .link_box.set_exrcharge_link .tit {
-  font-size: 2.0rem;
-  line-height: 1;
-}
-.wrap_banner_box .link_box.set_exrcharge_link .txt_sub {
-  color: #844883;
-}
 .wrap_banner_box .link_box.set_exrcharge_link::after {
 
 }
