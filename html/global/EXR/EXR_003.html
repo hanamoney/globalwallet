@@ -30,57 +30,51 @@
     <div id="EXR003" class="wrap_layer" data-dim="true" data-pageid="EXR003">
       <div class="inner_layer">
         <div class="head_layer">
-          <h2 class="tit_layer">알려드립니다</h2>
+          <h2 class="tit_layer">외화 하나머니를 충전하면?</h2>
         </div>
         <div class="content_layer">
-          <div class="wrap_msg_emoji type_center">
-            <p class="txt">
-              <span class="row">하나머니 <strong>트래블로그 서비스</strong>에서</span>
-              <span class="row">충전한 외화는 <strong class="txt_point_1">결제 시 <span class="emoji_card"></span> 사용</strong>하거나</span>
-              <span class="row"><strong class="txt_point_1">해외 <span class="emoji_atm"></span>ATM에서 인출</strong>할 수 있어요.</span></p>
-            <p class="txt_sub">(국내 은행 및 국내 ATM 인출 불가)</p>
+          <div class="wrap_item_benefit">
+            <ul class="list_benefit type_ico_s">
+              <li>
+                <span class="box"><span class="emoji_card"></span></span>
+                <div class="item_desc">
+                  <p class="tit"><strong>결제 시 사용</strong>하거나</p>
+                </div>
+              </li>
+              <li>
+                <span class="box"><span class="emoji_atm"></span></span>
+                <div class="item_desc">
+                  <p class="tit"><strong>해외 ATM에서 인출</strong>할 수 있어요!</p>
+                </div>
+              </li>
+              <li>
+                <span class="box"><span class="emoji_forbidden"></span></span>
+                <div class="item_desc">
+                  <p class="tit">국내 은행 및 국내 ATM에서는<br><strong>인출이 불가</strong>해요.</p>
+                </div>
+              </li>
+              <li>
+                <span class="box"><span class="emoji_tag_3"></span></span>
+                <div class="item_desc">
+                  <p class="tit">외화 하나머니를 원화로 환급 시,<br><strong>환급수수료가 발생</strong>해요.</p>
+                </div>
+              </li>
+            </ul>
           </div>
+          <ul class="list_txt type_asterisk">
+            <li>국내에서 외화를 인출하고 싶다면 하나은행 환전지갑 서비스를 이용해 주세요.</li>
+          </ul>
         </div>
         <div class="section_bottom_fixed">
           <div class="wrap_btn_full">
             <button type="button" id="testid" class="btn_full_primary fnClosePop">확인했어요</button>
           </div>
         </div>
-        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
       </div>
     </div>
     <!-- //popup -->
   </main>
-
-  <style>
-    .wrap_msg_emoji {
-  padding: 3.0rem 2.4rem 0;
-}
-.wrap_msg_emoji.type_center {
-  text-align: center;
-} 
-.wrap_msg_emoji .txt {
-  color: #252E33;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-}
-.wrap_msg_emoji .txt .row {
-  display: block;
-  padding-bottom: 0.4rem;
-}
-.wrap_msg_emoji .txt [class^="emoji"] {
-  vertical-align: top;
-  width: 3.0rem;
-  height: 3.0rem;
-}
-.wrap_msg_emoji .txt_sub {
-  color: #252E33;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  font-weight: 300;
-}
-  </style>
-
+  
   <script>
     // 팝업호출 param 오픈할 팝업 id
     fnOpenLayerPop('EXR003');

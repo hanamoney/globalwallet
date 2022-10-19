@@ -63,7 +63,14 @@
                     <input type="tel" inputmode="numeric" id="testid2" class="inp fnClearFocus" title="소수점 아래두자리 입력" value="" maxlength="2" />
                     <span class="unit">원</span>
                   </div>
-                  <p class="txt_inp_guide type_right txt_amount_gap down">현재가보다 <em class="txt_num">-12.34</em></p>
+                  <p class="txt_inp_guide type_right txt_amount_gap down">
+                    <!-- 
+                      높을 시 : up
+                      낮을 시 : down
+                      동일 : equal
+                    -->
+                    현재가보다 <em class="txt_num">-12.34</em>
+                  </p>
                 </div>
               </div>
               <div class="txt_inp_result">이하일 때 알림을 받을래요.</div>
@@ -81,8 +88,8 @@
               <li>
                 <button type="button" class="fnOptQuick" data-option="val1">
                   <span class="right">
-                    <span class="txt_amount"><em class="txt txt_num">1,330.65</em>원</span>
-                    <span class="txt_amount_gap down">현재가보다 <strong class="txt_num">-12.34</strong></span>
+                    <span class="txt_amount"><em class="txt txt_num">1,330.85</em>원</span>
+                    <span class="txt_amount_gap up">현재가보다 <strong class="txt_num">+12.34</strong></span>
                   </span>
                 </button>
               </li>
@@ -90,22 +97,22 @@
               <li>
                 <button type="button" class="fnOptQuick" data-option="val2">
                   <span class="right">
-                    <span class="txt_amount"><em class="txt txt_num">1,330.85</em>원</span>
-                    <span class="txt_amount_gap down">현재가보다 <strong class="txt_num">-12.34</strong></span>
+                    <span class="txt_amount"><em class="txt txt_num">1,330.75</em>원</span>
+                    <span class="txt_amount_gap up">현재가보다 <strong class="txt_num">+12.34</strong></span>
                   </span>
                 </button>
               </li>
-              <!-- 최저가 -->
+              <!-- 3개월기준 최저가 -->
               <li class="selected">
                 <button type="button" class="fnOptQuick" data-option="val3">
                   <span class="left">최근 3개월 기준<em>최저가</em></span>
                   <span class="right">
-                    <span class="txt_amount"><em class="txt txt_num">1,330.75</em>원</span>
-                    <span class="txt_amount_gap down">현재가보다 <strong class="txt_num">-12.34</strong></span>
+                    <span class="txt_amount"><em class="txt txt_num">1,330.65</em>원</span>
+                    <span class="txt_amount_gap equal">현재가보다 <strong class="txt_num">00.00</strong></span>
                   </span>
                 </button>
               </li>
-              <!-- // 최저가 -->
+              <!-- // 3개월기준 최저가 -->
               <li>
                 <button type="button" class="fnOptQuick" data-option="val4">
                   <span class="right">

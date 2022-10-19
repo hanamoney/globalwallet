@@ -353,6 +353,7 @@ var _inpChkVal = function(el) {
 var _inpDecimal = function() {
   $('.wrap_inp.type_decimal').each(function(){
     var $thisWrap = $(this);
+    _inpDecimalChkVal($thisWrap.find('.inp'));
     
     $thisWrap.find('.inp').on('click',function(){
       $(this).val('').trigger('change');
@@ -502,6 +503,13 @@ var _dropDown = function() {
         $el.removeClass('on');
       } else {
         $el.addClass('on');
+      }
+    });
+    
+    // dropdown 외 영역 클릭 시 툴팁 닫기
+    $(window).on('touchstart', function(e) {
+      if ($('.wrap_dropdown.on').length && !$(e.target).hasClass('wrap_dropdown')) {
+        $('.wrap_dropdown').removeClass('on');
       }
     });
   });

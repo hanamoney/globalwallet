@@ -2856,7 +2856,7 @@
 }
 .wrap_detail_exr {
   margin-bottom: -6.0rem;
-  padding: 1.8rem 2.4rem 3.0rem;
+  padding: 1.8rem 2.4rem 6.0rem;
   background-color: #323E43;
   color: #fff;
 }
@@ -2941,7 +2941,7 @@
   line-height: 2.0rem;
 }
 .wrap_exch_monthly {
-  padding-top: 4.4rem;
+  padding: 4.4rem 0 1.6rem;
 }
 .wrap_exch_monthly .tit {
   font-size: 1.8rem;
