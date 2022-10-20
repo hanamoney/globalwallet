@@ -487,6 +487,7 @@
 }
 .wrap_banner_box.benefit_link .link_box {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 1.3rem 0 1.1rem;
@@ -2715,7 +2716,6 @@
 .wrap_list_exr ul li .exch_rate_item.down .txt_amount_gap .txt_num {
   color: #308FFF;
 }
-.wrap_list_exr ul li .exch_rate_item.up .txt_amount_gap .txt_num {}
 .wrap_list_exr ul li .wrap_chart {
   width: 10.4rem;
   height: 8.0rem;
@@ -2964,11 +2964,13 @@
 }
 
 /* EXR_004 환율정보 */
-.wrap_banner_box .link_box.set_exrcharge_link::after {
-
+.link_box.ban_EXR_autosave::after {
+  background-image: url('../../images/hmui/banner/ban_EXR_autosave.png');
 }
 
-
+.content_layer .ban_EXR_autosave {
+  margin-top: 0.8rem;
+}
 
 @supports ((-webkit-filter:none) or (filter:none)) {
   .vdb_swiper .swiper-slide.swiper-slide-prev,
