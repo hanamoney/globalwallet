@@ -1004,6 +1004,11 @@ section[data-roll] {
   height: 3.4rem;
   background-image: url('../../images/hmui/emoji_tag_2.png');
 }
+.emoji_tag_3 {
+  width: 3.0rem;
+  height: 3.0rem;
+  background-image: url('../../images/hmui/emoji_tag_3.png');
+}
 .emoji_present {
   width: 3.2rem;
   height: 3.6rem;
@@ -1034,6 +1039,12 @@ section[data-roll] {
   height: 2.4rem;
   background-image: url('../../images/hmui/emoji_avg.png');
 }
+.emoji_forbidden {
+  width: 3.0rem;
+  height: 3.0rem;
+  background-image: url('../../images/hmui/emoji_forbidden.png');
+}
+
 
 /* Checkbox */
 .chk,
@@ -2243,6 +2254,25 @@ button.btn_secondary {
 }
 .list_txt.type_nobul li::before {
   display: none;
+}
+.list_txt.type_asterisk {
+  padding: 0 0.2rem;
+}
+.list_txt.type_asterisk li {
+  padding-left: 1.2rem;
+  color: #252E33;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.list_txt.type_asterisk li::before {
+  content: '*';
+  top: 0;
+  width: 0.6rem;
+  height: auto;
+  padding-top: 0.4rem;
+  background: none;
+  color: #252E33;
 }
 .list_info li {
   display: -webkit-box;
@@ -3992,6 +4022,9 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   border-radius: 1.4rem;
   background-color: #EDF4F4;
 }
+.list_benefit li .box.type_nobg {
+  background: none;
+}
 .list_benefit:not(.type_ico) li .box > span {
   color: #000;
   font-size: 2.4rem;
@@ -4057,9 +4090,13 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .list_benefit.type_ico li .item_desc .tit {
   color: #252E33;
 }
+.list_benefit.type_ico_s {
+  padding-bottom: 0;
+}
 .list_benefit.type_ico_s li {
   margin-top: 0.6rem;
   padding-top: 0.4rem;
+  align-items: center;
 }
 .list_benefit.type_ico_s li:first-child {
   margin-top: 0;
@@ -4067,10 +4104,20 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .list_benefit.type_ico_s li .box {
   margin-right: 0.8rem;
 }
+.list_benefit.type_ico_s li .box [class^="emoji_"] {
+  width: 3.0rem;
+  height: 3.0rem;
+}
+.list_benefit.type_ico_s li .item_desc {
+  padding-top: 0;
+}
 .list_benefit.type_ico_s li .item_desc .tit {
   font-size: 1.8rem;
   line-height: 1.5;
   font-weight: 400;
+}
+.list_benefit.type_ico_s + .list_txt {
+  margin-top: 1.6rem;
 }
 [data-roll="TDL"] .list_benefit.type_ico li .item_desc .tit,
 [data-roll="VDB"] .list_benefit.type_ico li .item_desc .tit {
@@ -4094,7 +4141,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   background-size: 1.6rem;
   background-position: right 0 top 0.5rem;
 }
-.wrap_item_benefit li,
+.wrap_item_benefit .list_benefit li,
 .wrap_item_benefit .tit_wrap {
   will-change: transform, opacity;
   opacity: 0;
@@ -5093,6 +5140,10 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .wrap_layer .content_layer .list_benefit:first-child {
   padding-top: 0;
+}
+.wrap_layer .content_layer > .wrap_item_benefit:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* 캐릭터 이미지 */
