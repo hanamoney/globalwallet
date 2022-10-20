@@ -416,13 +416,13 @@ section[data-roll] {
 
 /* Text */
 .txt_light {
-  font-weight: 300;
+  font-weight: 300 !important;
 }
 .txt_default {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 .txt_bold {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 .txt_num {
   letter-spacing: 0;
@@ -2221,6 +2221,9 @@ button.btn_secondary {
   line-height: 2.4rem;
   text-align: center;
 }
+.section_tab_cont {
+  padding: 0;
+}
 
 /* list */
 .list_txt li {
@@ -2431,8 +2434,8 @@ button.btn_secondary {
   padding-right: 2.0rem;
 }
 .wrap_box.type_narrow {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
 }
 a.wrap_box {
   padding-right: 4.3rem;
@@ -2490,7 +2493,7 @@ a.wrap_box > .txt:first-child {
   font-weight: 400;
 }
 .wrap_box .txt_sub:first-child {
-  margin-top: -0.5rem;
+  margin-top: 0;
 }
 .wrap_box .txt_sub .txt_acc {
   font-size: 1.4rem;
@@ -2500,7 +2503,7 @@ a.wrap_box > .txt:first-child {
   margin-top: 0.8rem;
 }
 .wrap_box .txt_sub + .tit {
-  padding-top: 0.6rem;
+  padding-top: 1.2rem;
 }
 .wrap_box > .tit_2 + .list_info {
   margin-top: 1.0rem;
@@ -3875,9 +3878,11 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .wrap_box_list .btn_txt {
   position: absolute;
-  right: 2.1rem;
-  bottom: 1.7rem;
+  right: 1.8rem;
+  bottom: 1.8rem;
+  padding: 0.8rem;
   font-size: 1.6rem;
+  line-height: 2.0rem;
   font-weight: 700;
 }
 .wrap_box_list .item_desc {
@@ -3890,7 +3895,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .wrap_box_list .item_desc .txt_desc em {
   color: #252E33;
-  font-weight: bold;
+  font-weight: 700;
 }
 .wrap_box_list .chk.type_box label {
   flex-wrap: wrap;

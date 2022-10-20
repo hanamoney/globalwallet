@@ -171,11 +171,15 @@
   margin-left: 0.5rem;
   margin-top: 0.2rem;
 }
-.section_set_list a.wrap_box.bg_darkgrey {
-  padding: 2.4rem;
-} 
 .section_set_list .wrap_box {
   padding: 2.0rem 2.4rem;
+}
+.section_set_list .wrap_box.type_narrow {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+.section_set_list a.wrap_box.bg_darkgrey {
+  padding: 2.4rem;
 }
 .section_set_list .wrap_box.off .txt_ccy,
 .section_set_list .wrap_box.off .item_desc .txt_desc,
@@ -193,9 +197,25 @@
   height: 3.0rem;
   margin-right: 0.8rem;
 }
+.section_set_list .wrap_box_list .txt_sub + .txt_ccy {
+  padding: 1.2rem 0 0.4rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+.section_set_list .wrap_box_list .txt_sub + .txt_ccy [class^="ico_cur"] {
+  width: 2.4rem;
+  height: 2.4rem;
+}
 .section_set_list .wrap_box_list .item_desc .txt_desc {
   font-size: 2.0rem;
   line-height: 1;
+}
+.section_set_list .wrap_box_list .item_desc .txt_desc.txt_default {
+  color: #252E33;
+}
+.section_set_list .wrap_box.hasBtn .item_desc .txt_desc {
+  line-height: 1.5;
+  font-weight: 300;
 }
 .section_set_list .wrap_box_list + .txt_guide {
   margin-top: 2.4rem;
@@ -204,6 +224,12 @@
   position: absolute;
   top: 2.3rem;
   right: 1.9rem;
+}
+.section_set_list .wrap_box_list .ico_add {
+  position: absolute;
+  top: 50%;
+  right: 2.4rem;
+  transform: translateY(-50%);
 }
 .section_set_list .wrap_box_list + .txt_guide.type_center {
   color: #323E43;
@@ -236,6 +262,13 @@
 }
 .section_set_list a.wrap_box .tit_emoji .ico_arr_link_w {
   right: 0;
+}
+.section_set_list .wrap_btn_center {
+  margin-top: 1.0rem;
+  padding-top: 2.4rem;
+}
+.section_set_list .wrap_btn_center .btn_txt_m {
+  padding: 1.6rem;
 }
 .section_set_list + .wrap_banner_box {
   margin-top: 3.0rem;
