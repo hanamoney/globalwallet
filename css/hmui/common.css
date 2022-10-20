@@ -723,12 +723,6 @@ section[data-roll] {
 .btn_ico_refresh {
   width: 2.4rem;
   height: 2.4rem;
-  background-color: pink;
-}
-.ico_refresh_s {
-  width: 2.0rem;
-  height: 2.0rem;
-  background-color: pink;
 }
 .btn_ico_trash {
   width: 2.4rem;
@@ -820,6 +814,33 @@ section[data-roll] {
   width: 1.2rem;
   height: 1.2rem;
   background-image: url('../../images/hmui/ico_info_3.png');
+}
+.ico_alarm {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url('../../images/hmui/ico_alarm.png');
+}
+.ico_refresh {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url('../../images/hmui/ico_refresh.png');
+}
+.ico_refresh_s {
+  width: 2.0rem;
+  height: 2.0rem;
+  background-image: url('../../images/hmui/ico_refresh.png');
+  background-size: 1.6rem;
+}
+.ico_up,
+.ico_down {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.ico_up {
+  background-image: url('../../images/hmui/ico_up.png');
+}
+.ico_down {
+  background-image: url('../../images/hmui/ico_down.png');
 }
 [class^="ico_cur_"] {
   width: 3.0rem;
