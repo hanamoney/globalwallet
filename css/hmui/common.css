@@ -4384,13 +4384,13 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   line-height: 2.4rem;
   font-weight: 700;
 }
+.wrap_banner_box .tit + .txt_sub {
+  margin-top: 0.2rem;
+}
 .wrap_banner_box .txt_sub {
   font-size: 1.4rem;
   line-height: 2.0rem;
   color: #849594;
-}
-.wrap_banner_box .tit + .txt_sub {
-  margin-top: 0.2rem;
 }
 .link_box {
   display: flex;
@@ -4409,23 +4409,32 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   position: absolute;
   top: 50%;
   right: 0;
-  width: 10.6rem;
-  height: 9.4rem;
-  background-size: 100% auto;
-  background-position: 50%;
+  width: 100%;
+  height: 116.37%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: 100% 50%;
   transform: translateY(-50%);
 }
 .link_box.type_line {
   background-color: #fff;
   border: 1px solid #E3EBEE;
 }
-.link_box.bg_gradient_6 .tit,
-.link_box.bg_gradient_6 .txt_sub {
-  color: #844883;
-}
 .link_box .tit {
   font-size: 2.0rem; 
 }
+.link_box .tit_2 {
+  font-size: 1.8rem;
+  line-height: 1.5; 
+  font-weight: 700;
+}
+.link_box .tit_2 + .txt_sub {
+  margin-top: 0.4rem;
+}
+.link_box.bg_gradient_6 p {
+  color: #844883;
+}
+
 
 /* 조회 리스트 */
 .section_list_trans {
