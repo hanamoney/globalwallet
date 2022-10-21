@@ -764,6 +764,11 @@ section[data-roll] {
 .ico_arr_link_w {
   background-image: url('../../images/hmui/ico_arr_link_w.png');
 }
+.ico_arr_link_wb {
+  width: 3.0rem;
+  height: 3.0rem;
+  background-image: url('../../images/hmui/ico_arr_link_wb.png');
+}
 .ico_arr_link_s {
   width: 1.6rem;
   height: 1.6rem;
