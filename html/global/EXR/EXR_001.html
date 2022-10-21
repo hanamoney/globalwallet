@@ -216,7 +216,6 @@
 
   <script src="../../../js/hmui/lib/chart.js"></script>
   <script>
-    
     // chart data sample
     var labels = ['date','date','date','date','date','date',];
     var data = [0, 100, 5, 2, 20, 30, 45];
@@ -274,10 +273,9 @@
     };
 
     $(function(){
-      // 캔버스 id 배열에 담기
+      // 차트id 배열에 담기
       var chartArr = [];
-
-      //차트생성
+      // 차트생성
       $('.line_chart').each(function(idx, el){
         var chartId = new Chart(
           $(this),
@@ -303,12 +301,12 @@
         // 로딩 시 param element class
         skeletonLoading.start('.wrap_list_exr');
 
-        // 신규데이터 업데이트 확인용 샘플
+        // 데이터 업데이트 확인용 샘플
         var newData = [100, 0, 5, 2, 20, 30, 45];
 
         setTimeout(function(){
           // 로딩 완료 시 param element class
-          // skeletonLoading.end('.wrap_list_exr');
+          skeletonLoading.end('.wrap_list_exr');
 
           // 차트 업데이트
           $('.line_chart').each(function(idx, el){
