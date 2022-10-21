@@ -508,8 +508,10 @@ var _dropDown = function() {
     
     // dropdown 외 영역 클릭 시 툴팁 닫기
     $(window).on('touchstart', function(e) {
-      if ($('.wrap_dropdown.on').length && !$(e.target).hasClass('wrap_dropdown')) {
-        $('.wrap_dropdown').removeClass('on');
+      if ($('.wrap_dropdown.fnCloseOut.on').length && (!$(e.target).hasClass('wrap_dropdown') || !$(e.target).parents('.wrap_dropdown').length)) {
+        setTimeout(function(){
+          $('.wrap_dropdown.on').removeClass('on');
+        },200);
       }
     });
   });

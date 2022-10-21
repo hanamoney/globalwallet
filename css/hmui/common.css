@@ -1772,10 +1772,10 @@ button.btn_secondary {
   line-height: 1;
 }
 .btn_round_m {
-  padding: 1.0rem 2.0rem;
+  padding: 1.2rem 1.6rem;
   border-radius: 2.3rem;
   font-size: 1.6rem;
-  line-height: 2.2rem;
+  line-height: 1;
 }
 .btn_round_ico {
   padding: 0.8rem 2.0rem;
@@ -1796,8 +1796,11 @@ button.btn_secondary {
   margin-right: 0.8rem;
 }
 [class^="btn_round"].type_line {
-  border: 1px solid #D0D7D7;
-  color: #6E7D85;
+  border: 1px solid #B7C5C8;
+  color: #69777E;
+}
+.btn_round_m.type_line {
+  padding: 1.1rem 1.5rem;
 }
 [class^="btn_round"].bg_grey {
   background-color: #6E7D85;
@@ -1906,6 +1909,9 @@ button.btn_secondary {
 .wrap_btn.type_col [class^="btn"] {
   flex: 1;
   margin-left: 0.8rem;
+}
+.wrap_btn.type_col [class^="btn_round"] {
+  margin-left: 0.4rem;
 }
 .wrap_btn.type_col [class^="btn"]:first-child  {
   margin-left: 0;
@@ -2030,6 +2036,9 @@ button.btn_secondary {
   box-shadow: 0px 0.6rem 1.6rem rgba(110, 125, 133, 0.32);
   transform: translateX(-50%);
 }
+.section_bottom_fixed .btn_round_ico.bg_black {
+  box-shadow: 0px 0.6rem 1.6rem rgba(49, 87, 99, 0.4);
+}
 .section_bottom_fixed .btn_round_ico.withFixedBtn {
   bottom: calc(6.0rem + 3.2rem);
 }
@@ -2062,6 +2071,13 @@ button.btn_secondary {
   height: 2.0rem;
   background: url('../../images/hmui/ico_arr_down.png') no-repeat 50%;
   background-size: 100%;
+}
+.btn_dropdown.type_big::after {
+  top: 50%;
+  width: 2.8rem;
+  height: 2.8rem;
+  background-image: url('../../images/hmui/ico_arr_down_b.png');
+  transform: translateY(-50%);
 }
 .list_dropdown {
   position: absolute;
@@ -2123,6 +2139,9 @@ button.btn_secondary {
   visibility: visible;
   opacity: 1;
   box-shadow: 0px 10px 12px rgba(215, 186, 188, 0.4);
+}
+.wrap_dropdown.on .btn_dropdown::after {
+  transform: translateY(-50%) rotate(-180deg);
 }
 
 /* Table */
@@ -2476,7 +2495,7 @@ button.wrap_box [class^="ico_arr_down"] {
 .wrap_box .txt_bank {
   padding-top: 1.2rem;
   font-size: 2.0rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 .wrap_box .txt_acc {
   padding-top: 0.6rem;
@@ -3637,8 +3656,12 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   text-align: left;
 }
 .exr_inp .wrap_dropdown .btn_dropdown::after {
-  top: auto;
-  bottom: 1.5rem;
+  top: 50%;
+  background-image: url('../../images/hmui/ico_arr_down_2.png');
+  transform: translateY(-50%);
+}
+.exr_inp .wrap_dropdown.on .btn_dropdown::after {
+  transform: translateY(-50%) rotate(-180deg);
 }
 .exr_inp .wrap_dropdown .btn_dropdown .txt_ccy {
   color: #4F5D64;

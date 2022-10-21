@@ -2689,6 +2689,7 @@
 .box_ext_time {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1.0rem;
   border-radius: 0.5rem;
   background-color: #F5F8F8;
@@ -2785,7 +2786,7 @@
   width: 4.0rem;
   height: 4.0rem;
   margin-right: 0.8rem;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .wrap_top_info.exr_info .list_dropdown {
   top: -2.4rem;
