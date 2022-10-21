@@ -2487,20 +2487,18 @@ button.wrap_box [class^="ico_arr_link"] {
   right: 1.5rem;
   transform: translateY(-50%);
 }
-button.wrap_box [class^="ico_arr_down"] {
-  position: absolute;
-  right: 1.9rem;
-  bottom: 1.9rem;
-}
 .wrap_box .txt_bank {
   padding-top: 1.2rem;
   font-size: 2.0rem;
+  line-height: 1.5;
   font-weight: 400;
 }
 .wrap_box .txt_acc {
-  padding-top: 0.6rem;
+  padding-top: 0.4rem;
   color: #6E7D85;
   font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 300;
   letter-spacing: 0;
 }
 .wrap_box > .tit {
