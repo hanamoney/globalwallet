@@ -2492,6 +2492,11 @@ button.wrap_box [class^="ico_arr_link"] {
   right: 2.4rem;
   transform: translateY(-50%);
 }
+button.wrap_box [class^="ico_arr_down"] {
+  position: absolute;
+  right: 2.4rem;
+  bottom: 2.6rem;
+}
 .wrap_box .txt_bank {
   padding-top: 1.2rem;
   font-size: 2.0rem;
