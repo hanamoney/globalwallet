@@ -49,7 +49,9 @@
                     <p class="txt_amount"><strong class="txt_num">1,355.60</strong></p>
                     <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">0.00</span></p>
                   </div>
-                  <div id="" class="wrap_chart"></div>
+                  <div class="wrap_chart">
+                    <canvas id="exr001_usd" class="line_chart"></canvas>
+                  </div>
                 </a>
               </li>
               <!-- // loop -->
@@ -60,7 +62,9 @@
                     <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
                     <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
                   </div>
-                  <div id="" class="wrap_chart"></div>
+                  <div class="wrap_chart">
+                    <canvas id="exr001_jpy" class="line_chart"></canvas>
+                  </div>
                 </a>
               </li>
               <li>
@@ -70,7 +74,9 @@
                     <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_down"><span class="blind">하락</span></span></p>
                     <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">-3.50</span></p>
                   </div>
-                  <div id="" class="wrap_chart"></div>
+                  <div class="wrap_chart">
+                    <canvas id="exr001_eur" class="line_chart"></canvas>
+                  </div>
                 </a>
               </li>
               <li>
@@ -80,7 +86,9 @@
                     <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
                     <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
                   </div>
-                  <div id="" class="wrap_chart"></div>
+                  <div class="wrap_chart">
+                    <canvas id="exr001_gbp" class="line_chart"></canvas>
+                  </div>
                 </a>
               </li>
               <li>
@@ -90,7 +98,9 @@
                     <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
                     <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
                   </div>
-                  <div id="" class="wrap_chart"></div>
+                  <div class="wrap_chart">
+                    <canvas id="exr001_cny" class="line_chart"></canvas>
+                  </div>
                 </a>
               </li>
               <li>
@@ -100,7 +110,9 @@
                     <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
                     <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
                   </div>
-                  <div id="" class="wrap_chart"></div>
+                  <div class="wrap_chart">
+                    <canvas id="" class="line_chart"></canvas>
+                  </div>
                 </a>
               </li>
               <li>
@@ -110,7 +122,9 @@
                     <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
                     <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
                   </div>
-                  <div id="" class="wrap_chart"></div>
+                  <div class="wrap_chart">
+                    <canvas id="" class="line_chart"></canvas>
+                  </div>
                 </a>
               </li>
               <li>
@@ -120,7 +134,9 @@
                     <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
                     <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
                   </div>
-                  <div id="" class="wrap_chart"></div>
+                  <div class="wrap_chart">
+                    <canvas id="" class="line_chart"></canvas>
+                  </div>
                 </a>
               </li>
               <li>
@@ -130,7 +146,9 @@
                     <p class="txt_amount"><strong class="txt_num">1,355.60</strong><span class="ico_up"><span class="blind">상승</span></span></p>
                     <p class="txt_amount_gap"><span>전날 대비</span><span class="txt_num">+3.50</span></p>
                   </div>
-                  <div id="" class="wrap_chart"></div>
+                  <div class="wrap_chart">
+                    <canvas id="" class="line_chart"></canvas>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -196,11 +214,114 @@
     <!-- // 5c: 미로그인 -->
   </main>
 
+  <script src="../../../js/hmui/lib/chart.js"></script>
   <script>
-    // 팝업호출 param 오픈할 팝업 id
-    // fnOpenLayerPop('confirmId1');
-    // 팝업닫기 param 닫을 팝업 id
-    // fnCloseLayerPop('confirmId1');
+    
+    // chart data sample
+    var labels = ['date','date','date','date','date','date',];
+    var data = [0, 100, 5, 2, 20, 30, 45];
+
+    // chart 옵션
+    const config = {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: '일주일 환율 트랜드',
+          backgroundColor: 'transparent',
+          borderColor: 'rgb(255, 240, 189)',
+          pointRadius: 1,
+          data: [0, 100, 5, 2, 20, 30, 45],
+        }]
+      },
+      options: {
+        // responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            grid: {
+              display: false,
+              drawBorder: false
+            },
+            ticks: {
+              display: false,
+              drawTicks: false
+            }
+          },
+          y: {
+            grid: {
+              display: false,
+              drawBorder: false
+            },
+            ticks: {
+              display: false,
+              drawTicks: false
+            }
+          }
+        },
+        plugins: {
+          title: {
+            display: false
+          },
+          subtitle: {
+            display: false
+          },
+          legend: {
+            display: false,
+          },
+        }
+      }
+    };
+
+    $(function(){
+      // 캔버스 id 배열에 담기
+      var chartArr = [];
+
+      //차트생성
+      $('.line_chart').each(function(idx, el){
+        var chartId = new Chart(
+          $(this),
+          config
+        );
+        chartArr[idx] = chartId;
+      });
+      
+      /**
+        * @name updateChart()
+        * @description chart 업데이트
+        * @param {Object} chart 
+        * @param {Array} data 
+        */
+      function updateChart(el, newData) {
+        el.data.datasets.forEach(function(dataset) {
+          dataset.data = newData;
+        });
+        el.update();
+      }
+      
+      $('.btn_ico_refresh').on('click', function() {
+        // 로딩 시 param element class
+        skeletonLoading.start('.wrap_list_exr');
+
+        // 신규데이터 업데이트 확인용 샘플
+        var newData = [100, 0, 5, 2, 20, 30, 45];
+
+        setTimeout(function(){
+          // 로딩 완료 시 param element class
+          // skeletonLoading.end('.wrap_list_exr');
+
+          // 차트 업데이트
+          $('.line_chart').each(function(idx, el){
+            updateChart(chartArr[idx], newData);
+          });
+        },200);
+      });
+
+      // 팝업호출 param 오픈할 팝업 id
+      // fnOpenLayerPop('confirmId1');
+      // 팝업닫기 param 닫을 팝업 id
+      // fnCloseLayerPop('confirmId1');
+    });
   </script>
   
 </body>

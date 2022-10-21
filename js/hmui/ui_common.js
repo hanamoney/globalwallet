@@ -1120,7 +1120,7 @@ var exeTransitionInLayer = function() {
 /**
   * @name skeletonLoading.start();
   * @description skeleton loading
-  * @param {Element | string} el loading element 
+  * @param {Element | string} el loading element
   */
 var skeletonLoading = (function(){
   var $el;
@@ -1144,13 +1144,21 @@ var skeletonLoading = (function(){
   function start(el){
     $el = $(el);
     $el.addClass('skeletonLoading');
-    _moneybagListLoading($el);
+
+    // 조회리스트인 경우 (TDL_001)
+    if (el == '.section_list_trans') {
+      _moneybagListLoading($el);
+    }
   }
 
   function end(el){
     $el = $(el);
     $el.removeClass('skeletonLoading');
-    _moneybagListLoading($el);
+    
+    // 조회리스트인 경우 (TDL_001)
+    if (el == '.section_list_trans') {
+      _moneybagListLoading($el);
+    }
   }
 
   return {
