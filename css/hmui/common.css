@@ -2484,7 +2484,7 @@ a.wrap_box [class^="ico_arr_link"],
 button.wrap_box [class^="ico_arr_link"] {
   position: absolute;
   top: 50%;
-  right: 1.5rem;
+  right: 2.4rem;
   transform: translateY(-50%);
 }
 .wrap_box .txt_bank {
@@ -3851,7 +3851,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .wrap_link_list a .ico_arr_link {
   position: absolute;
-  right: 1.5rem;
+  right: 2.4rem;
 }
 .wrap_link_list li a.active {
   background-color: rgba(243,248,250,1);
