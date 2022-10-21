@@ -164,7 +164,86 @@
     <!-- // contents-->
   </main>
 
+  <script src="../../../js/hmui/lib/chart.js"></script>
   <script>
+    // chart data sample
+    var labels = ['date','date','date','date','date','date',];
+    var data = [0, 100, 5, 2, 20, 30, 45];
+
+    // chart 옵션
+    const config = {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: '일주일 환율 트랜드',
+          backgroundColor: 'transparent',
+          borderColor: 'rgb(255, 240, 189)',
+          pointRadius: 1,
+          data: data,
+        }]
+      },
+      options: {
+        // responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            grid: {
+              display: false,
+              drawBorder: false
+            },
+            ticks: {
+              display: false,
+              drawTicks: false
+            }
+          },
+          y: {
+            grid: {
+              display: false,
+              drawBorder: false
+            },
+            ticks: {
+              display: false,
+              drawTicks: false
+            }
+          }
+        },
+        plugins: {
+          title: {
+            display: false
+          },
+          subtitle: {
+            display: false
+          },
+          legend: {
+            display: false,
+          },
+        }
+      }
+    };
+
+    /**
+      * @name updateChart()
+      * @description chart 업데이트
+      * @param {Object} chart 
+      * @param {Array} labels
+      * @param {Array} data 
+      */
+      function updateChart(el, newLabels, newData) {
+        el.data.datasets.forEach(function(dataset) {
+          dataset.data = newData;
+        });
+        el.update();
+      }
+
+    $(function(){
+      // 차트생성
+      console.log('df');
+      var chartEXR = new Chart(
+        $('#lineChart_exr002'),
+        config
+      );
+    });
   </script>
   
 </body>

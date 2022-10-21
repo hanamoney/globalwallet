@@ -230,7 +230,7 @@
           backgroundColor: 'transparent',
           borderColor: 'rgb(255, 240, 189)',
           pointRadius: 1,
-          data: [0, 100, 5, 2, 20, 30, 45],
+          data: data,
         }]
       },
       options: {
@@ -272,6 +272,20 @@
       }
     };
 
+    /**
+      * @name updateChart()
+      * @description chart 업데이트
+      * @param {Object} chart 
+      * @param {Array} labels 
+      * @param {Array} data 
+      */
+    function updateChart(el, labels, newData) {
+      el.data.datasets.forEach(function(dataset) {
+        dataset.data = newData;
+      });
+      el.update();
+    }
+
     $(function(){
       // 차트id 배열에 담기
       var chartArr = [];
@@ -284,25 +298,13 @@
         chartArr[idx] = chartId;
       });
       
-      /**
-        * @name updateChart()
-        * @description chart 업데이트
-        * @param {Object} chart 
-        * @param {Array} data 
-        */
-      function updateChart(el, newData) {
-        el.data.datasets.forEach(function(dataset) {
-          dataset.data = newData;
-        });
-        el.update();
-      }
-      
       $('.btn_ico_refresh').on('click', function() {
         // 로딩 시 param element class
         skeletonLoading.start('.wrap_list_exr');
 
         // 데이터 업데이트 확인용 샘플
-        var newData = [100, 0, 5, 2, 20, 30, 45];
+        labels = ['date1','date1','date1','date1','date1','date1',];
+        data = [100, 0, 5, 2, 20, 30, 45];
 
         setTimeout(function(){
           // 로딩 완료 시 param element class
@@ -310,7 +312,7 @@
 
           // 차트 업데이트
           $('.line_chart').each(function(idx, el){
-            updateChart(chartArr[idx], newData);
+            updateChart(chartArr[idx], labels, data);
           });
         },200);
       });
