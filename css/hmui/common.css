@@ -2048,6 +2048,7 @@ button.btn_secondary {
   bottom: calc(6.0rem + 3.2rem);
 }
 .section_bottom_fixed.type_noFullBtn .fnScrollEnd.scrollEnd {
+  position: absolute;
   bottom: calc(3.0rem * 2);
 }
 
