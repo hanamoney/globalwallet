@@ -5135,8 +5135,16 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   display: flex;
 }
 .prd_box_card .card_img {
-  width: 3.2rem;
-  height: 5.1rem;
+  position: relative;
+  width: 5.1rem;
+  height: 3.2rem;
+  margin-right: -1.9rem;
+}
+.prd_box_card .card_img img {
+  display: block;
+  margin: 0.85rem -0.85rem 0;
+  transform: rotate(90deg);
+  transform-origin: center;
 }
 .prd_box_card .card_info {
   padding-left: 1.6rem;
