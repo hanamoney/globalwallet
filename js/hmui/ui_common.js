@@ -32,6 +32,7 @@ $(function(){
 var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
+  if ( $('.section_bottom_fixed.type_noFullBtn .fnScrollEnd').length ) { _fixedBottomBtnGap(); } // 스크롤에 따른 페이지 하단고정 위치
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
   if ( (iosV() >= 13) && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
@@ -148,6 +149,22 @@ function _setFixedTop(fixedEl, header, setHeight) {
 function _clearFixedTop(fixedEl, header) {
   $(fixedEl).removeClass('scrolled');
   $(header).attr('style','');
+}
+
+/**
+  * @name _fixedBottomBtnGap()
+  * @description 페이지 스크롤에 따른 하단고정버튼 위치조정
+  */
+var _fixedBottomBtnGap = function() {
+  var $fixedEl = $('.section_bottom_fixed.type_noFullBtn').find('.fnScrollEnd');
+
+  $(window).on('scroll', function() {
+    if ( $(window).innerHeight() + $(window).scrollTop() >= ($('body').outerHeight(true) - $fixedEl.outerHeight(true)) )  {
+      $fixedEl.addClass('scrollEnd');
+    } else {
+      $fixedEl.removeClass('scrollEnd');
+    }
+  });
 }
 
 /**

@@ -104,7 +104,11 @@
                 <li><button type="button" class="btn_tab_box">1y</button></li>
               </ul>
             </div>
-            
+
+            <div class="wrap_chart">
+              <canvas id="lineChart_exr002" class="line_chart"></canvas>
+            </div>
+
             <div class="wrap_exch_monthly">
               <p class="tit">최근 1개월동안<br>
                 <strong>다른 사람들은 얼마에 환전</strong>했을까요?</p>
@@ -114,9 +118,6 @@
               <p class="txt_basis">22.08.08 ~ 22.09.08 평균 매입가</p>
             </div>
 
-            <div class="wrap_chart">
-              <canvas id="lineChart_exr002" class="line_chart"></canvas>
-            </div>
             <div class="wrap_box bg_darkgrey">
               <div class="box_tit">
                 <p class="tit"><span>김하나</span>님의 <span>달러머니</span></p>
@@ -158,7 +159,7 @@
         </section>
         <!-- 하단고정영역 -->
         <div class="section_bottom_fixed type_noFullBtn">
-          <a href="#none" class="btn_round_ico bg_black"><span class="ico_alarm"></span><span class="txt">환율 알림 설정</span></a>
+          <a href="#none" class="btn_round_ico bg_black fnScrollEnd"><span class="ico_alarm"></span><span class="txt">환율 알림 설정</span></a>
         </div>
         <!-- // 하단고정영역 -->
       </div>
@@ -240,7 +241,7 @@
 
     $(function(){
       // 차트생성
-      console.log('df');
+      // console.log('df');
       var chartEXR = new Chart(
         $('#lineChart_exr002'),
         config

@@ -2047,6 +2047,9 @@ button.btn_secondary {
 .section_bottom_fixed .btn_round_ico.withFixedBtn {
   bottom: calc(6.0rem + 3.2rem);
 }
+.section_bottom_fixed.type_noFullBtn .fnScrollEnd.scrollEnd {
+  bottom: calc(3.0rem * 2);
+}
 
 /* dropdown */
 .wrap_dropdown {

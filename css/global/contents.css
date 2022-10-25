@@ -2699,6 +2699,7 @@
   line-height: 2.2rem;
 }
 .wrap_list_exr ul {
+  margin-bottom: 5.2rem;
   padding-top: 2.4rem;
 }
 .wrap_list_exr ul li {
@@ -2906,7 +2907,7 @@
 }
 .wrap_detail_exr {
   margin-bottom: -6.0rem;
-  padding: 1.8rem 2.4rem 6.0rem;
+  padding: 1.8rem 2.4rem calc((6.0rem * 2) + 1.6rem);
   background-color: #323E43;
   color: #fff;
 }
@@ -2995,6 +2996,7 @@
   line-height: 2.0rem;
 }
 .wrap_exch_monthly {
+  margin-bottom: 1.6rem;
   padding: 1.6rem 0 1.6rem;
 }
 .wrap_exch_monthly .tit {
@@ -3023,6 +3025,9 @@
 }
 .content_layer .ban_EXR_autosave {
   margin-top: 0.8rem;
+}
+.section_set_list + .wrap_banner_box .ban_EXR_autosave {
+  margin-bottom: 8.0rem;
 }
 
 @supports ((-webkit-filter:none) or (filter:none)) {
