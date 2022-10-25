@@ -2765,6 +2765,7 @@
   padding: 2.4rem 1.0rem;
   border-radius: 0.8rem;
   background-color: #4B5555;
+  pointer-events: none;
 }
 .wrap_list_exr ul li .wrap_chart canvas {
   width: 100%;
@@ -2915,7 +2916,7 @@
   width: 100%;
   height: 22.6rem;
   margin: 1.6rem 0;
-  padding: 2.0rem 0;
+  /* padding: 2.0rem 0; */
 }
 .wrap_detail_exr .wrap_chart .line_chart {
   width: 100%;

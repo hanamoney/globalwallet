@@ -220,6 +220,26 @@
     var labels = ['date','date','date','date','date','date',];
     var data = [0, 100, 5, 2, 20, 30, 45];
 
+    function average(ctx) {
+      const values = ctx.chart.data.datasets[0].data;
+      return values.reduce((a, b) => a + b, 0) / values.length;
+    }
+
+    const annotation = {
+      type: 'line',
+      borderColor: 'black',
+      borderDash: [6, 6],
+      borderDashOffset: 0,
+      borderWidth: 3,
+      label: {
+        enabled: true,
+        content: (ctx) => 'Average: ' + average(ctx).toFixed(2),
+        position: 'end'
+      },
+      scaleID: 'y',
+      value: (ctx) => average(ctx)
+    };
+
     // chart 옵션
     const config = {
       type: 'line',
@@ -268,6 +288,14 @@
           legend: {
             display: false,
           },
+          tooltip: {
+            enabled: false
+          },
+          annotation: {
+            annotations: {
+              annotation
+            }
+          }
         }
       }
     };

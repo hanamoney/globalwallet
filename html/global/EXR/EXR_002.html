@@ -170,8 +170,65 @@
   <script src="../../../js/hmui/lib/chart.js"></script>
   <script>
     // chart data sample
-    var labels = ['date','date','date','date','date','date',];
-    var data = [0, 100, 5, 2, 20, 30, 45];
+    var labels = ['22.10.01','22.10.02','22.10.03','22.10.04','22.10.05','22.10.06','22.10.07',];
+    var data = [1500.12, 1500.15, 1500.52, 1411.32, 1481.32, 1433.76, 1451.90,];
+    var copydata = [...data];
+    var pointColor = [];
+      // 'rgba(255,81,102,1)' // highest
+      // 'rgba(48,143,255,1)' // lowest
+    var max = Math.max(...data);
+    // console.log(max);
+    var highestColor = data.map(function(dataitem, index){
+      var color = dataitem === max ? 'rgb(255,81,102)' : 'rgb(255, 240, 189)';
+      pointColor.push(color);
+
+      if (max === dataitem) {
+        copydata.splice(index,1,0);
+      }
+    });
+    // console.log(copydata);
+
+    function average(ctx) {
+      console.log(ctx);
+      var values = ctx.chart.data.datasets[0].data;
+      console.log(values);
+      return values.reduce((a, b) => a + b, 0) / values.length;
+    }
+
+    // average line
+    var annotation = {
+      type: 'line',
+      borderColor: 'black',
+      borderDash: [2, 2],
+      borderDashOffset: 0,
+      borderWidth: 1,
+      label: {
+        enabled: true,
+        content: (ctx) => 'Average: ' + average(ctx).toFixed(2),
+        position: 'end'
+      },
+      scaleID: 'y',
+      value: (ctx) => average(ctx),
+    };
+
+    // tooltip drag line 
+    var tooltipLine = {
+      id: 'tooltipLine',
+      beforeDraw: function(chart){
+        if (chart.tooltip._active && chart.tooltip._active.length) {
+          var ctx = chart.ctx;
+          ctx.save();
+          var activePoint = chart.tooltip._active[0];
+          ctx.beginPath();
+          ctx.moveTo(activePoint.element.x, chart.chartArea.top - 57);
+          ctx.lineTo(activePoint.element.x, chart.chartArea.bottom + 32);
+          ctx.lineWidth = 1;
+          ctx.strokeStyle = 'rgba(255,255,255,0.4)';
+          ctx.stroke();
+          ctx.restore();
+        }
+      }
+    }
 
     // chart 옵션
     const config = {
@@ -179,16 +236,24 @@
       data: {
         labels: labels,
         datasets: [{
-          label: '일주일 환율 트랜드',
+          label: '환율',
           backgroundColor: 'transparent',
           borderColor: 'rgb(255, 240, 189)',
-          pointRadius: 1,
+          pointRadius: 0,
           data: data,
         }]
       },
       options: {
         // responsive: true,
         maintainAspectRatio: false,
+        borderWidth:1,
+        pointHoverRadius: 0,
+        layout: {
+          padding: {
+            top: 57,
+            bottom: 58,
+          }
+        },
         scales: {
           x: {
             grid: {
@@ -211,7 +276,18 @@
             }
           }
         },
+        interaction: {
+          mode: 'x'
+        },
+        events: [
+          'touchstart','touchmove'
+        ],
         plugins: {
+          annotation: {
+            annotations: {
+              annotation
+            }
+          },
           title: {
             display: false
           },
@@ -221,8 +297,15 @@
           legend: {
             display: false,
           },
+          tooltip: {
+            mode: 'nearest',
+            intersect: false,
+            yAlign: 'bottom',
+            events: ['touchstart','touchmove']
+          },
         }
-      }
+      },
+      plugins: [tooltipLine]
     };
 
     /**
@@ -246,6 +329,20 @@
         $('#lineChart_exr002'),
         config
       );
+
+      $('.btn_refresh').on('click', function(){
+
+        // 데이터 업데이트 확인용 샘플
+        data = [100, 0, 5, 2, 20, 30, 45];
+
+        setTimeout(function(){
+          // 로딩 완료 시 param element class
+          skeletonLoading.end('.wrap_list_exr');
+
+          // 차트 업데이트 
+          updateChart(chartEXR, labels, data);
+        },200);
+      });
     });
   </script>
   
