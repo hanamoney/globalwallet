@@ -3044,6 +3044,26 @@
 .wrap_detail_exr .wrap_chart .line_chart {
   width: 100%;
 }
+.wrap_detail_exr .wrap_chart .tooltip_EXR {
+  position: absolute;
+  top: 0;
+  padding: 0 0.8rem;
+  color: #fff;
+  opacity: 1;
+  pointer-events: none;
+  transition: all 0.1s ease 0s;
+}
+.wrap_detail_exr .wrap_chart .tooltip_EXR .label {
+  color: #9DAAB0;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.wrap_detail_exr .wrap_chart .tooltip_EXR .value {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
 .wrap_detail_exr .wrap_box {
   overflow: hidden;
   padding: 2.4rem 2.4rem 1.2rem;
