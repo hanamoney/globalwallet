@@ -2254,18 +2254,22 @@ button.btn_secondary {
   display: inline-block;
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 0.8rem;
   width: 1.6rem;
   height: 0.4rem;
   border-radius: 0.2rem;
   background-color: #13C9BE;
   transform: translateX(-50%);
 }
-.section_tab.type_sub_line .btn_tab_box {
-  display: block;
+.section_tab.type_sub_line .wrap_tab_btn li .btn_tab_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
   width: 100%;
-  padding: 1.6rem 1.6rem 0.4rem;
+  height: 5.6rem;
+  padding: 1.6rem 1.6rem 0.8rem;
   font-size: 1.8rem;
   line-height: 2.4rem;
   text-align: center;
@@ -4071,11 +4075,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .list_benefit li .box {
   position: relative;
   overflow: hidden;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
   margin-right: 1.6rem;
   width: 4.2rem;
@@ -4155,15 +4155,17 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   padding-bottom: 0;
 }
 .list_benefit.type_ico_s li {
-  margin-top: 0.6rem;
-  padding-top: 0.4rem;
+  margin-top: 1.6rem;
   align-items: center;
 }
 .list_benefit.type_ico_s li:first-child {
   margin-top: 0;
 }
 .list_benefit.type_ico_s li .box {
+  align-self: flex-start;
   margin-right: 0.8rem;
+  width: 3.0rem;
+  height: 3.0rem;
 }
 .list_benefit.type_ico_s li .box [class^="emoji_"] {
   width: 3.0rem;
@@ -4777,6 +4779,9 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .skeletonLoading .trans_info > ul > li.skeleton-item {
   height: 6.4rem;
   margin-top: 1.1rem;
+}
+.skeletonLoading [class^="ico_refresh"] {
+  animation: 1.0s rotate360 cubic-bezier(0.24, 0, 0.5, 1) infinite;
 }
 
 /* list loader */

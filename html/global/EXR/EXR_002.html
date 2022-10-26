@@ -8,6 +8,7 @@
   <title>EXR_002</title>
 
   <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
   <link rel="stylesheet" href="../../../css/hmui/common.css">
   <link rel="stylesheet" href="../../../css/global/contents.css">
   <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
@@ -123,15 +124,7 @@
                 <p class="tit"><span>김하나</span>님의 <span>달러머니</span></p>
                 <span class="txt">최근 1년 기준</span>
               </div>
-              <!-- 거래내역 없을 시 -->
-              <div class="no_result">
-                <p>최근 1년간 거래하신 내역이 없어요.</p>
-                <div class="wrap_btn">
-                  <a href="#none" class="btn_round_m btn_primary">환율 100% 우대받고 충전하기</a>
-                </div>
-              </div>
-              <!-- // 거래내역 없을 시 -->
-              <!-- 거래내역 있을 시 -->
+              <!-- 거래내역 있을 시 / 데이터 로드 전 default로 노출  -->
               <div>
                 <ul class="list_info">
                   <li>
@@ -153,6 +146,14 @@
                 </div>
               </div>
               <!-- // 거래내역 있을 시 -->
+              <!-- 거래내역 없을 시 -->
+              <div class="no_result" style="display: none;">
+                <p>최근 1년간 거래하신 내역이 없어요.</p>
+                <div class="wrap_btn">
+                  <a href="#none" class="btn_round_m btn_primary">환율 100% 우대받고 충전하기</a>
+                </div>
+              </div>
+              <!-- // 거래내역 없을 시 -->
             </div>
 
           </div>
@@ -168,17 +169,24 @@
   </main>
 
   <script src="../../../js/hmui/lib/chart.js"></script>
+  <script src="../../../js/hmui/lib/chartjs-plugin-annotation.js"></script>
+  
   <script>
-    // chart data sample
-    var labels = ['22.10.01','22.10.02','22.10.03','22.10.04','22.10.05','22.10.06','22.10.07',];
-    var data = [1500.12, 1500.15, 1500.52, 1411.32, 1481.32, 1433.76, 1451.90,];
-    var copydata = [...data];
+    // 차트 data 선언 
+    var labels = [],
+        lineChart_exr002 = [];
+
+    // 데이터 확인용 샘플
+    labels = ['22.10.01','22.10.02','22.10.03','22.10.04','22.10.05','22.10.06','22.10.07',];
+    lineChart_exr002 = [1500.12, 1500.15, 1500.52, 1411.32, 1481.32, 1433.76, 1451.90,];
+
+    var copydata = [...lineChart_exr002];
     var pointColor = [];
       // 'rgba(255,81,102,1)' // highest
       // 'rgba(48,143,255,1)' // lowest
-    var max = Math.max(...data);
+    var max = Math.max(...lineChart_exr002);
     // console.log(max);
-    var highestColor = data.map(function(dataitem, index){
+    var highestColor = lineChart_exr002.map(function(dataitem, index){
       var color = dataitem === max ? 'rgb(255,81,102)' : 'rgb(255, 240, 189)';
       pointColor.push(color);
 
@@ -188,24 +196,27 @@
     });
     // console.log(copydata);
 
-    function average(ctx) {
-      console.log(ctx);
-      var values = ctx.chart.data.datasets[0].data;
-      console.log(values);
-      return values.reduce((a, b) => a + b, 0) / values.length;
-    }
 
     // average line
+    function average(ctx) {
+      var values = ctx.chart.data.datasets[0].data;
+      return values.reduce((a, b) => a + b, 0) / values.length;
+    }
     var annotation = {
       type: 'line',
-      borderColor: 'black',
+      borderColor: 'rgba(255,255,255,0.4)',
+      borderRadius: 4,
       borderDash: [2, 2],
       borderDashOffset: 0,
       borderWidth: 1,
       label: {
         enabled: true,
-        content: (ctx) => 'Average: ' + average(ctx).toFixed(2),
-        position: 'end'
+        padding: 4,
+        backgroundColor: 'rgba(37,46,51,0.9)',
+        color: 'rgba(183,197,200,1)',
+        font: {},
+        content: (ctx) => '평균 ' + average(ctx).toFixed(2) + '원',
+        position: 'start'
       },
       scaleID: 'y',
       value: (ctx) => average(ctx),
@@ -240,13 +251,12 @@
           backgroundColor: 'transparent',
           borderColor: 'rgb(255, 240, 189)',
           pointRadius: 0,
-          data: data,
+          data: lineChart_exr002,
         }]
       },
       options: {
-        // responsive: true,
         maintainAspectRatio: false,
-        borderWidth:1,
+        borderWidth: 1,
         pointHoverRadius: 0,
         layout: {
           padding: {
@@ -324,25 +334,39 @@
 
     $(function(){
       // 차트생성
-      // console.log('df');
       var chartEXR = new Chart(
         $('#lineChart_exr002'),
         config
       );
 
       $('.btn_refresh').on('click', function(){
+        // 로딩 시 param element class
+        skeletonLoading.start('.exr_info, .wrap_detail_exr'); // 텍스트로딩
+        skeletonLoading.start('.wrap_chart'); // 차트로딩
+
 
         // 데이터 업데이트 확인용 샘플
-        data = [100, 0, 5, 2, 20, 30, 45];
+        lineChart_exr002 = [100, 0, 5, 2, 20, 30, 45];
 
         setTimeout(function(){
           // 로딩 완료 시 param element class
-          skeletonLoading.end('.wrap_list_exr');
+          // skeletonLoading.end('.exr_info, .wrap_detail_exr');
+          // skeletonLoading.end('.wrap_chart');
 
           // 차트 업데이트 
-          updateChart(chartEXR, labels, data);
-        },200);
+          updateChart(chartEXR, labels, lineChart_exr002);
+        },2000);
       });
+
+      // 환율상세보기 버튼 클릭 시 텍스트 변경
+      $('.btn_acco').on('click', function(){
+        var text = $(this).text();
+        if ($(this).hasClass('on')) {
+          $(this).html('상세환율 닫기<span class="ico_arr_down_2"></span>');
+        } else {
+          $(this).html('상세환율 보기<span class="ico_arr_down_2"></span>');
+        }
+      }); 
     });
   </script>
   
