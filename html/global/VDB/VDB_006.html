@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>VDB_006</title>
+
+  <link rel="stylesheet" href="../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    
+    <!-- // header -->
+
+    <!-- 퍼블 동작확인용 버튼 -->
+    <button class="btn_txt fnOpenPop" data-name="VDB006">화폐선택</button>
+
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="VDB006" class="wrap_layer" data-dim="true" data-pageid="VDB006">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">화폐선택</h2>
+        </div>
+        <div class="content_layer">
+          <div class="">
+            <ul class="">
+              <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_all"></span>전체</span></button></li>
+              <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_usd"></span>USD</span></button></li>
+              <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_jpy"></span>JPY</span></button></li>
+              <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_eur"></span>EUR</span></button></li>
+              <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_gbp"></span>GBP</span></button></li>
+              <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_cny"></span>CNY</span></button></li>
+              <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_sgd"></span>SGD</span></button></li>
+              <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_cad"></span>CAD</span></button></li>
+              <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_aud"></span>AUD</span></button></li>
+            </ul>
+          </div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // popup -->
+  </main>
+  
+  
+  <script>
+    $(function(){
+      // 팝업호출 param 오픈할 팝업 id
+      fnOpenLayerPop('VDB006');
+      // 팝업닫기 param 닫을 팝업 id
+      // fnCloseLayerPop('VDB006');
+    });
+  </script>
+</body>
+</html>

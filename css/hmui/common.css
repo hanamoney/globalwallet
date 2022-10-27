@@ -2277,6 +2277,9 @@ button.btn_secondary {
 .section_tab_cont {
   padding: 0;
 }
+.section_tab.scrolled + .section_tab_cont {
+  margin-top: 5.4rem;
+}
 
 /* list */
 .list_txt li {
@@ -4077,6 +4080,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-right: 1.6rem;
   width: 4.2rem;
   height: 4.2rem;
@@ -4600,6 +4604,9 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   line-height: 2.0rem;
   text-align: left;
 }
+.trans_info .desc:last-child {
+  text-align: right;
+}
 .trans_info .desc em {
   display: inline-block;
 }
@@ -4665,6 +4672,13 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   height: 1.0rem;
   background-color: #D0D7D7;
   transform: translateY(-50%);
+}
+.trans_info .txt_noti .exch_rate:only-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+.trans_info .txt_noti .exch_rate:only-child::after {
+  display: none;
 }
 .trans_info .txt_sm {
   padding-top: 0.2rem;
