@@ -34,7 +34,7 @@
         </div>
 
         <div class="content_layer">
-          <div class="section_tab type_scroll fnFixedTop" data-height="54">
+          <div class="section_tab type_scroll fnFixedTop" data-height="60">
             <ul class="wrap_tab_btn">
               <li class="on"><a href="#none" class="btn_tab_box">전체</a></li>
               <li><a href="#none" class="btn_tab_box">환전수수료</a></li>
@@ -42,162 +42,182 @@
               <li><a href="#none" class="btn_tab_box">해외ATM인출 수수료</a></li>
             </ul>
             <button type="button" class="btn_fold"><span class="blind">메뉴펼침</span></button>
+            <div class="wrap_tab_all">
+              <ul>
+                <li class="on"><a href="#none" class="btn_tab_list">전체</a></li>
+                <li><a href="#none" class="btn_tab_list">환전수수료</a></li>
+                <li><a href="#none" class="btn_tab_list">해외가맹점 이용수수료</a></li>
+                <li><a href="#none" class="btn_tab_list">해외ATM인출 수수료</a></li>
+              </ul>
+            </div>
           </div>
 
           <div id="" class="section_tab_cont"><!-- section_tab next 유지 -->
-            <div class="section_top_info vdb_accum">
+            <div class="section_top_info vdb_accum"><!-- 아낀돈 vdb_accum -->
+              <div class="wrap_dropdown">
+                <button type="button" class="btn_dropdown"><span class="current">12월</span></button>
+                <div class="list_dropdown">
+                  <ul>
+                    <li><button type="button"><span>3월</span></button></li>
+                    <li><button type="button"><span>2월</span></button></li>
+                    <li><button type="button"><span>1월</span></button></li>
+                  </ul>
+                </div>
+              </div>
               <h2 class="txt">
-                <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltipVDB"><span>전체</span><span class="ico_tooltip"><span class="blind">툴팁</span></span></button>
+                <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltipVDB"><span class="ico_tooltip"><span class="blind">툴팁</span></span><span>전체</span></button>
               </h2>
               <p class="total_amount"><em class="txt_num fnCounterUp">25,301</em>원</p>
             </div>
 
             <!-- 조회 리스트 -->
-          <div class="section_list_trans">
-            <!-- 조회필터 -->
-            <div class="wrap_filter">
-              <p class="filter_list"><span>전체 통화</span></p>
-              <button type="button" class="btn_ico_filter"><span class="blind">통화 선택</span></button>
-            </div>
-            <!-- // 조회필터 -->
+            <div class="section_list_trans vdb_accum"><!-- 아낀돈 vdb_accum -->
+              <!-- 조회필터 -->
+              <div class="wrap_filter">
+                <p class="filter_list"><span>전체 통화</span></p>
+                <button type="button" class="btn_ico_filter"><span class="blind">통화 선택</span></button>
+              </div>
+              <!-- // 조회필터 -->
           
-            <div class="wrap_list_trans">
-              <div class="list_trans">
-                <!-- loop:date -->
-                <div class="trans_info foriegn"><!-- 외화일 경우 foriegn 클래스 -->
-                  <h4 class="fnStickyTop">3월 24일 (토)</h4>
-                  <ul>
-                    <!-- loop:event-->
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">하나머니 → USD</strong>
-                        <span class="txt_amount add"><em class="txt_num">999,999,999</em>원</span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>USD 충전</li></ul>
-                        <span class="desc"><span>환전금액 </span><span class="">USD </span><em class="txt_num">20,000,000</em></span>
-                      </div>
-                      <span class="txt_noti"><span class="exch_rate">적용환율 <em class="txt_num">1,231.23</em></span>
-                    </li>
-                    <!-- loop:event-->
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">ATM 출금</strong>
-                        <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
-                        <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <!-- loop:date -->
-                <div class="trans_info foriegn">
-                  <h4 class="fnStickyTop">3월 23일 (금)</h4>
-                  <ul>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">001000000224500100000022450010000002245001000000224500100000022450</strong>
-                        <span class="txt_amount add"><em class="txt_num">999,999</em>원</span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>결제</li></ul>
-                        <span class="desc"><span>사용금액 </span><span class="">USD </span><em class="txt_num">200,000.00</em></span>
-                      </div>
-                    </li>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">ATM 출금</strong>
-                        <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
-                        <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
-                      </div>
-                    </li>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">ATM 출금</strong>
-                        <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
-                        <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
-                      </div>
-                    </li>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">ATM 출금</strong>
-                        <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
-                        <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
-                      </div>
-                    </li>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">ATM 출금</strong>
-                        <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
-                        <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
-                      </div>
-                    </li>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">ATM 출금</strong>
-                        <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
-                        <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
-                      </div>
-                    </li>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">ATM 출금</strong>
-                        <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
-                        <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
-                      </div>
-                    </li>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">ATM 출금</strong>
-                        <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
-                        <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
-                      </div>
-                    </li>
-                  </ul>
+              <div class="wrap_list_trans">
+                <div class="list_trans">
+                  <!-- loop:date -->
+                  <div class="trans_info foriegn"><!-- 외화일 경우 foriegn 클래스 -->
+                    <h4 class="fnStickyTop">3월 24일 (토)</h4>
+                    <ul>
+                      <!-- loop:event-->
+                      <li>
+                        <button type="button" class="row">
+                          <strong class="tit">하나머니 → USD</strong>
+                          <span class="txt_amount add"><em class="txt_num">999,999,999</em>원</span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>USD 충전</li></ul>
+                          <span class="desc"><span>환전금액 </span><span class="">USD </span><em class="txt_num">20,000,000</em></span>
+                        </div>
+                        <span class="txt_noti"><span class="exch_rate">적용환율 <em class="txt_num">1,231.23</em></span></span>
+                      </li>
+                      <!-- loop:event-->
+                      <li>
+                        <button type="button" class="row">
+                          <strong class="tit">ATM 출금</strong>
+                          <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
+                          <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- loop:date -->
+                  <div class="trans_info foriegn">
+                    <h4 class="fnStickyTop">3월 23일 (금)</h4>
+                    <ul>
+                      <li>
+                        <button type="button" class="row">
+                          <strong class="tit">001000000224500100000022450010000002245001000000224500100000022450</strong>
+                          <span class="txt_amount add"><em class="txt_num">999,999</em>원</span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>결제</li></ul>
+                          <span class="desc"><span>사용금액 </span><span class="">USD </span><em class="txt_num">200,000.00</em></span>
+                        </div>
+                      </li>
+                      <li>
+                        <button type="button" class="row">
+                          <strong class="tit">하나머니 → USD</strong>
+                          <span class="txt_amount add"><em class="txt_num">999,999,999</em>원</span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>일이삼사오육칠팔구십</li></ul>
+                          <span class="desc"><span>환전금액 </span><span class="">USD </span><em class="txt_num">20,000,000</em></span>
+                        </div>
+                        <span class="txt_noti"><span class="exch_rate">적용환율 <em class="txt_num">1,231.23</em></span></span>
+                      </li>
+                      <li>
+                        <button type="button" class="row">
+                          <strong class="tit">ATM 출금</strong>
+                          <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
+                          <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
+                        </div>
+                      </li>
+                      <li>
+                        <button type="button" class="row">
+                          <strong class="tit">ATM 출금</strong>
+                          <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
+                          <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
+                        </div>
+                      </li>
+                      <li>
+                        <button type="button" class="row">
+                          <strong class="tit">ATM 출금</strong>
+                          <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
+                          <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
+                        </div>
+                      </li>
+                      <li>
+                        <button type="button" class="row">
+                          <strong class="tit">ATM 출금</strong>
+                          <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
+                          <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
+                        </div>
+                      </li>
+                      <li>
+                        <button type="button" class="row">
+                          <strong class="tit">ATM 출금</strong>
+                          <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
+                          <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
+                        </div>
+                      </li>
+                      <li>
+                        <button type="button" class="row">
+                          <strong class="tit">ATM 출금</strong>
+                          <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>ATM 출금</li></ul>
+                          <span class="desc"><span>출금금액 </span><span class="">USD </span><em class="txt_num">10,000</em></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
+
             </div>
-
           </div>
-        </div>
 
+        </div>
         <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
       </div>
 
-        <!-- tooltip -->
+      <!-- tooltip -->
       <div id="tooltipVDB" class="wrap_tooltip">
         <div class="inner_tooltip">
           <ul>
@@ -221,6 +241,11 @@
       fnOpenLayerPop('VDB004');
       // 팝업닫기 param 닫을 팝업 id
       // fnCloseLayerPop('VDB004');
+
+      setTimeout(function(){
+
+        fnStickyTop();
+      },600)
     });
   </script>
 </body>

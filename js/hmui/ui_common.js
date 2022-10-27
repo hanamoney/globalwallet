@@ -31,7 +31,7 @@ $(function(){
 
 var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
-  if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
+  if ( $('.wrap_contents .fnFixedTop').length || $('.wrap_contents .fnStickyTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
   if ( $('.section_bottom_fixed.type_noFullBtn .fnScrollEnd').length ) { _fixedBottomBtnGap(); } // 스크롤에 따른 페이지 하단고정 위치
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
   if ( (iosV() >= 13) && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
@@ -96,12 +96,16 @@ var _headerPopControl = function(el){
 
     var $header = $this.closest('.inner_layer').find('.head_layer');
     var $fixedEl = $this.find('.fnFixedTop');
+    var $stickyEl = $this.find('.fnStickyTop');
     var setHeight = parseInt($fixedEl.attr('data-height')) + defaultHeight;
 
     if ($this.scrollTop() > 0) {
       $header.addClass('scrolled');
       if ( $fixedEl.length ) {
         _setFixedTop($fixedEl, $header, setHeight);
+      }
+      if ( $stickyEl.length ) {
+        fnStickyTop($this.scrollTop(), defaultHeight, setHeight)
       }
     }else {
       $header.removeClass('scrolled');
@@ -117,15 +121,20 @@ var _headerPopControl = function(el){
   * @description 페이지 스크롤에 따른 콘텐츠 상단고정
   */
 var _fixedTopInPage = function() {
+  var defaultHeight = 50; 
   var $fixedEl = $('.wrap_contents').find('.fnFixedTop');
+  var $stickyEl = $('.wrap_contents').find('.fnStickyTop');
   var $header = $fixedEl.closest('.wrap_contents').siblings('#header').find('.inner_fixed');
-  var headerHeight = $('#header').outerHeight(true);
+  var headerHeight = $(window).width() > 320 ? $('#header').outerHeight(true) : $('#header').outerHeight(true) * 10 / 9;
 
   var setHeight = headerHeight + parseInt($fixedEl.attr('data-height'));
 
   $(window).on('scroll', function() {
     if ($(window).scrollTop() > 0) {
       _setFixedTop($fixedEl, $header, setHeight);
+      if ( $stickyEl.length ) {
+        fnStickyTop($(window).scrollTop(), defaultHeight, setHeight)
+      }
     } else {
       _clearFixedTop($fixedEl, $header);
     }
@@ -143,12 +152,35 @@ var _fixedTopInPage = function() {
 function _setFixedTop(fixedEl, header, setHeight) {
   $(fixedEl).addClass('scrolled');
   $(header).css({
-    'height': setHeight,
+    'height': setHeight * 0.1 + 'rem',
   });
 }
 function _clearFixedTop(fixedEl, header) {
   $(fixedEl).removeClass('scrolled');
   $(header).attr('style','');
+}
+
+/**
+  * @name fnStickyTop()
+  * @description 스크롤에 따른 콘텐츠 상단고정
+  * @param {element | string} fixedEl 고정할 element
+  * @param {number} fixPos 고정할 element position top
+  * @param {element | string} header 고정헤더 element
+  * @param {setHeight} header 고정헤더 element 변경 height 
+  */
+var fnStickyTop = function(scrollTop, header, posY) {
+  var $el = $('.fnStickyTop');
+  var offsets = [];
+  var posY = true ? posY : 0;
+  var top = posY - header;
+
+  console.log(posY);
+  if (parseInt($('.contents > section').children('div').eq(0).css('margin-top')) < 0) {
+    top = posY;
+  }
+  $el.each(function(idx, el){
+    $(this).css('top', top);
+  });
 }
 
 /**

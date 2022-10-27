@@ -2301,7 +2301,50 @@
   transition-delay: 0.1s;
 }
 /* VDB_004 내가 아낀 돈 */
-
+.section_top_info[class*="vdb_"] {
+  position: relative;
+  background: linear-gradient(161.78deg, #F6F2EB -7.73%, #D7D8F3 63.83%, rgba(254, 197, 238, 0.81) 122.63%);
+  text-align: right;
+}
+.section_top_info[class*="vdb_"] .txt {
+  color: #374248;
+  text-align: right;
+}
+.section_top_info[class*="vdb_"] .txt .btn_tooltip .ico_tooltip {
+  top: 0.3rem;
+}
+.section_top_info[class*="vdb_"] .txt + .total_amount {
+  margin-top: 0.4rem;
+}
+.section_top_info[class*="vdb_"] .total_amount {
+  font-size: 2.8rem;
+  line-height: 1.28;
+}
+.section_top_info[class*="vdb_"] .wrap_dropdown {
+  position: absolute;
+  top: 3.2rem;
+  left: 2.4rem;
+}
+.section_top_info[class*="vdb_"] .wrap_dropdown .btn_dropdown {
+  width: 6.8rem;
+  padding-right: 2.5rem;
+  padding-left: 0.2rem;
+  line-height: 3.6rem;
+  text-align: left;
+}
+.section_top_info[class*="vdb_"] .wrap_dropdown  .list_dropdown {
+  width: calc(100% + 3.2rem);
+}
+.section_top_info[class*="vdb_"] .wrap_dropdown  .list_dropdown button {
+  height: 3.6rem;
+}
+/* VDB_004 내가 모은 돈 */
+.section_top_info.vdb_saved {
+  background: linear-gradient(157.38deg, #BBDDF2 -12.44%, #C3E1E2 48.65%, #EEF6EB 103.7%);
+}
+.section_list_trans.vdb_saved .txt_amount.add {
+  color: #844883;
+}
 
 /* [UTL] - Utill */
 /* UTL_001 하나머니 이용안내 */

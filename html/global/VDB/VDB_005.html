@@ -32,7 +32,7 @@
         </div>
 
         <div class="content_layer">
-          <div class="section_tab type_scroll fnFixedTop" data-height="54">
+          <div class="section_tab type_scroll fnFixedTop" data-height="60">
             <ul class="wrap_tab_btn">
               <li class="on"><a href="#none" class="btn_tab_box">전체</a></li>
               <li><a href="#none" class="btn_tab_box">이벤트</a></li>
@@ -45,85 +45,95 @@
             <button type="button" class="btn_fold"><span class="blind">메뉴펼침</span></button>
           </div>
 
-          <div class="section_tab_cont">
-            <div class="section_top_info vdb_accum">
+          <div class="section_tab_cont"><!-- section_tab next 유지 -->
+            <div class="section_top_info vdb_saved"><!-- 모은 돈 vdb_saved -->
+              <div class="wrap_dropdown">
+                <button type="button" class="btn_dropdown"><span class="current">12월</span></button>
+                <div class="list_dropdown">
+                  <ul>
+                    <li><button type="button"><span>3월</span></button></li>
+                    <li><button type="button"><span>2월</span></button></li>
+                    <li><button type="button"><span>1월</span></button></li>
+                  </ul>
+                </div>
+              </div>
               <h2 class="txt">전체</h2>
               <p class="total_amount"><em class="txt_num fnCounterUp">25,301</em>원</p>
             </div>
 
             <!-- 조회 리스트 -->
-          <div class="section_list_trans">
-            <!-- 조회필터 -->
-            <div class="wrap_filter">
-              <p class="filter_list"><span>전체 통화</span></p>
-              <button type="button" class="btn_ico_filter"><span class="blind">통화 선택</span></button>
-            </div>
-            <!-- // 조회필터 -->
+            <div class="section_list_trans vdb_saved"><!-- 모은 돈 vdb_saved -->
+              <!-- 조회필터 -->
+              <div class="wrap_filter">
+                <p class="filter_list"><span>전체 통화</span></p>
+                <button type="button" class="btn_ico_filter"><span class="blind">통화 선택</span></button>
+              </div>
+              <!-- // 조회필터 -->
           
-            <div class="wrap_list_trans">
-              <div class="list_trans">
-                <!-- loop:date -->
-                <div class="trans_info">
-                  <h4 class="fnStickyTop">3월 24일 (토)</h4>
-                  <ul>
-                    <!-- loop:event-->
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">하나_TOSS</strong>
-                        <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>카드사용적립</li></ul>
-                        <span class="desc"><span>사용금액 </span><em class="txt_num">10,000</em>원</span>
-                      </div>
-                    </li>
-                    <!-- loop:event-->
-                    <li>
-                      <div class="row">
-                        <strong class="tit">행운상자 1 하나머니</strong>
-                        <span class="txt_amount add"><em class="txt_num">1</em>원</span>
-                      </div>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>이벤트 적립</li></ul>
-                      </div>
-                    </li>
-                    
-                  </ul>
-                </div>
-                <!-- loop:date -->
-                <div class="trans_info">
-                  <h4 class="fnStickyTop">3월 23일 (금)</h4>
-                  <ul>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">네이버페이</strong>
-                        <span class="txt_amount add"><em class="txt_num">999</em>원</span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>네이버페이 1.5% 적립 네이버네이버</li></ul>
-                        <span class="desc"><span>사용금액 </span><em class="txt_num">200,000</em>원</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="row">
-                        <strong class="tit">대박 머니쌓기</strong>
-                        <span class="txt_amount add"><em class="txt_num">999,999</em>원</span>
-                      </div>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>대박 머니쌓기 대박 머니쌓기</li></ul>
-                        <span class="desc"><span>사용금액 </span><em class="txt_num">200,000</em>원</span>
-                      </div>
-                    </li>
-                  </ul>
+              <div class="wrap_list_trans">
+                <div class="list_trans">
+                  <!-- loop:date -->
+                  <div class="trans_info">
+                    <h4 class="fnStickyTop">3월 24일 (토)</h4>
+                    <ul>
+                      <!-- loop:event-->
+                      <li>
+                        <button type="button" class="row">
+                          <strong class="tit">하나_TOSS</strong>
+                          <span class="txt_amount add"><em class="txt_num">5,432</em>원</span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>카드사용적립</li></ul>
+                          <span class="desc"><span>사용금액 </span><em class="txt_num">10,000</em>원</span>
+                        </div>
+                      </li>
+                      <!-- loop:event-->
+                      <li>
+                        <div class="row">
+                          <strong class="tit">행운상자 1 하나머니</strong>
+                          <span class="txt_amount add"><em class="txt_num">1</em>원</span>
+                        </div>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>이벤트 적립</li></ul>
+                        </div>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  <!-- loop:date -->
+                  <div class="trans_info">
+                    <h4 class="fnStickyTop">3월 23일 (금)</h4>
+                    <ul>
+                      <li>
+                        <button type="button" class="row">
+                          <strong class="tit">네이버페이</strong>
+                          <span class="txt_amount add"><em class="txt_num">999</em>원</span>
+                          <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                        </button>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>네이버페이 1.5% 적립 네이버네이버</li></ul>
+                          <span class="desc"><span>사용금액 </span><em class="txt_num">200,000</em>원</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <strong class="tit">대박 머니쌓기</strong>
+                          <span class="txt_amount add"><em class="txt_num">999,999</em>원</span>
+                        </div>
+                        <div class="row">
+                          <ul class="desc"><li>11:31</li><li>대박 머니쌓기 대박 머니쌓기</li></ul>
+                          <span class="desc"><span>사용금액 </span><em class="txt_num">200,000</em>원</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
         </div>
-
         <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
       </div>
     </div>
