@@ -170,6 +170,7 @@
 
   <script src="../../../js/hmui/lib/chart.js"></script>
   <script src="../../../js/hmui/lib/chartjs-plugin-annotation.js"></script>
+  <script src="../../../js/hmui/chart/chart_EXR002.js"></script>
   
   <script>
     // 차트 data 선언 
@@ -178,23 +179,101 @@
 
     // 데이터 확인용 샘플
     labels = ['22.10.01','22.10.02','22.10.03','22.10.04','22.10.05','22.10.06','22.10.07',];
-    lineChart_exr002 = [1500.12, 1500.15, 1500.52, 1411.32, 1481.32, 1433.76, 1451.90,];
+    lineChart_exr002 = [1500.12, 1500.15, 1411.32, 1481.32, 1433.76, 1451.90, 1500.52];
 
-    var copydata = [...lineChart_exr002];
-    var pointColor = [];
-      // 'rgba(255,81,102,1)' // highest
-      // 'rgba(48,143,255,1)' // lowest
-    var max = Math.max(...lineChart_exr002);
-    // console.log(max);
-    var highestColor = lineChart_exr002.map(function(dataitem, index){
-      var color = dataitem === max ? 'rgb(255,81,102)' : 'rgb(255, 240, 189)';
-      pointColor.push(color);
+    // Max Point
+    function maxValue(ctx) {
+      let max = 0;
+      const dataset = ctx.chart.data.datasets[0];
+      dataset.data.forEach(function(el) {
+        max = Math.max(max, el);
+      });
+      return max;
+    }
+    function maxIndex(ctx) {
+      const max = maxValue(ctx);
+      const dataset = ctx.chart.data.datasets[0];
+      return dataset.data.indexOf(max);
+    }
+    function maxLabel(ctx) {
+      return ctx.chart.data.labels[maxIndex(ctx)];
+    }
+    var maxPoint = {
+      type: 'point',
+      radius: 5,
+      borderWidth: '3',
+      borderColor: '#FF5166',
+      backgroundColor: '#323E43',
+      backgroundShadowColor: 'rgba(245, 46, 70, 0.8)',
+      shadowBlur: 16,
+      shadowOffsetX: 0,
+      shadowOffsetY: 5,
+      scaleID: 'y',
+      xValue: (ctx) => maxLabel(ctx),
+      yValue: (ctx) => maxValue(ctx)
+    }
+    var maxText = {
+      type: 'label',
+      color: '#FF5166',
+      content: (ctx) => '최고 ' + maxValue(ctx).toFixed(2) + '원',
+      font: {
+        size: 16
+      },
+      position: {
+        x: (ctx) => maxIndex(ctx) <= 3 ? 'start' : maxIndex(ctx) >= 10 ? 'end' : 'center',
+        y: 'end'
+      },
+      xValue: (ctx) => maxLabel(ctx),
+      yAdjust: -6,
+      yValue: (ctx) => maxValue(ctx)
+    }
 
-      if (max === dataitem) {
-        copydata.splice(index,1,0);
-      }
-    });
-    // console.log(highestColor);
+    // Min Point
+    function minValue(ctx) {
+      const dataset = ctx.chart.data.datasets[0];
+      let min = dataset.data[0];
+      dataset.data.forEach(function(el) {
+        min = Math.min(min, el);
+      });
+      return min;
+    }
+    function minIndex(ctx) {
+      const min = minValue(ctx);
+      const dataset = ctx.chart.data.datasets[0];
+      return dataset.data.indexOf(min);
+    }
+    function minLabel(ctx) {
+      return ctx.chart.data.labels[minIndex(ctx)];
+    }
+    var minPoint = {
+      type: 'point',
+      radius: 5,
+      borderWidth: '3',
+      borderColor: '#308FFF',
+      backgroundColor: '#323E43',
+      backgroundShadowColor: 'rgba(48, 143, 255, 0.8)',
+      shadowBlur: 16,
+      shadowOffsetX: 0,
+      shadowOffsetY: 5,
+      scaleID: 'y',
+      xValue: (ctx) => minLabel(ctx),
+      yValue: (ctx) => minValue(ctx)
+    }
+    var minText = {
+      type: 'label',
+      color: '#308FFF',
+      content: (ctx) => '최저 ' + minValue(ctx).toFixed(2) + '원',
+      font: {
+        size: 16
+      },
+      position: {
+        x: (ctx) => minIndex(ctx) <= 3 ? 'start' : minIndex(ctx) >= 10 ? 'end' : 'center',
+        y: 'start'
+      },
+      xValue: (ctx) => minLabel(ctx),
+      yAdjust: 4,
+      yValue: (ctx) => minValue(ctx)
+    }
 
 
     // average line
@@ -202,7 +281,7 @@
       var values = ctx.chart.data.datasets[0].data;
       return values.reduce((a, b) => a + b, 0) / values.length;
     }
-    var annotation = {
+    var averageline = {
       id: 'averageline',
       type: 'line',
       borderColor: 'rgba(255,255,255,0.4)',
@@ -210,7 +289,6 @@
       borderDash: [2, 2],
       borderDashOffset: 0,
       borderWidth: 1,
-      drawTime: 'beforeDatasetsDraw',
       label: {
         display: true,
         padding: 4,
@@ -223,10 +301,17 @@
         content: (ctx) => '평균 ' + average(ctx).toFixed(2) + '원',
         position: 'start',
         xAdjust: -4,
-        drawTime: 'afterDatasetsDraw',
       },
       scaleID: 'y',
       value: (ctx) => average(ctx),
+      // enter({element}, event) {
+      //   element.label.options.display = false;
+      //   return true;
+      // },
+      // leave({element}, event) {
+      //   element.label.options.display = true;
+      //   return true;
+      // }
     };
 
     // tooltip drag line 
@@ -247,77 +332,14 @@
         }
       }
     }
-    /*
-    const getOrCreateTooltip = (chart) => {
-      let tooltipEl = chart.canvas.parentNode.querySelector('div');
 
-      if (!tooltipEl) {
-        tooltipEl = document.createElement('div');
-        tooltipEl.classList.add('tooltip_EXR');
-        const inner = document.createElement('div');
-
-        tooltipEl.appendChild(inner);
-        chart.canvas.parentNode.appendChild(tooltipEl);
-      }
-      return tooltipEl;
-    };
-    const externalTooltipHandler = (context) => {
-      // Tooltip Element
-      const {chart, tooltip} = context;
-      const tooltipEl = getOrCreateTooltip(chart);
-
-      // Hide if no tooltip
-      if (tooltip.opacity === 0) {
-        tooltipEl.style.opacity = 0;
-        return;
-      }
-
-      // Set Text
-      if (tooltip.body) {
-        const titleLines = tooltip.title || [];
-        const bodyLines = tooltip.body.map(b => b.lines);
-
-        const labelText = document.createElement('p');
-        labelText.classList.add('label');
-        titleLines.forEach(title => {
-          const text = document.createTextNode(title);
-          labelText.appendChild(text);
-        });
-
-        const dataText = document.createElement('p');
-        dataText.classList.add('value');
-        bodyLines.forEach((body, i) => {
-          const text = document.createTextNode(body);
-          dataText.appendChild(text);
-        });
-
-        const tableRoot = tooltipEl.querySelector('div');
-
-        // Remove old children
-        while (tableRoot.firstChild) {
-          tableRoot.firstChild.remove();
-        }
-
-        // Add new children
-        tableRoot.appendChild(labelText);
-        tableRoot.appendChild(dataText);
-      }
-
-      // Display, position
-      tooltipEl.style.opacity = 1;
-      var left = tooltip.caretX <= 312/2 ? tooltip.caretX : tooltip.caretX - tooltipEl.clientWidth;
-      tooltipEl.style.left = left + 'px';
-    };
-    */
     // tooltip position custom
     Chart.Tooltip.positioners.custom = function(elements, position) {
       var tooltip = this;
       if (!elements.length) {
         return false;
       }
-
-      //adjust the offset left or right depending on the event position
-      console.log(position);
+      // console.log(position);
       var offset = position.x <= tooltip.chart.width/2 ? position.x : position.x;
       return {
         x: offset,
@@ -346,8 +368,8 @@
           padding: {
             top: 57,
             bottom: 58,
-            right: 0,
-            left: 0,
+            right: 24,
+            left: 24,
           }
         },
         scales: {
@@ -378,13 +400,23 @@
           mode: 'x',
           intersect: false,
         },
-        events: [
-          'touchstart','touchmove'
-        ],
         plugins: {
           annotation: {
+            clip: false,
+            enter(ctx) {
+              element = ctx.element;
+              // console.log(element);
+            },
+            leave() {
+              element = undefined;
+              lastEvent = undefined;
+            },
             annotations: {
-              annotation
+              averageline,
+              maxPoint,
+              maxText,
+              minPoint,
+              minText,
             }
           },
           title: {
@@ -421,7 +453,6 @@
                 return tooltipItems.formattedValue + '원';
               }
             },
-            events: ['touchstart','touchmove']
           },
         }
       },

@@ -3042,7 +3042,8 @@
   margin: 0.8rem 0 1.6rem;
 }
 .wrap_detail_exr .wrap_chart .line_chart {
-  width: 100%;
+  width: 100vw;
+  margin: 0 -2.4rem;
 }
 .wrap_detail_exr .wrap_chart .tooltip_EXR {
   position: absolute;
