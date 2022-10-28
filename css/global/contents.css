@@ -2338,12 +2338,52 @@
 .section_top_info[class*="vdb_"] .wrap_dropdown  .list_dropdown button {
   height: 3.6rem;
 }
-/* VDB_004 내가 모은 돈 */
+/* VDB_005 내가 모은 돈 */
 .section_top_info.vdb_saved {
   background: linear-gradient(157.38deg, #BBDDF2 -12.44%, #C3E1E2 48.65%, #EEF6EB 103.7%);
 }
 .section_list_trans.vdb_saved .txt_amount.add {
   color: #844883;
+}
+/* VDB_006 화폐선택 */
+.wrap_cur_list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 1.6rem;
+}
+.wrap_cur_list li {
+  width: 20%;
+  margin-top: 2.4rem;
+  padding: 0 0.8rem;
+}
+.wrap_cur_list li:first-child,
+.wrap_cur_list li:nth-child(5n + 1) {
+  margin-left: 0;
+}
+.wrap_cur_list li button {
+  display: block;
+  width: 100%;
+  padding: 0 0.4rem;
+  text-align: center;
+}
+.wrap_cur_list .txt_ccy.dir_col {
+  display: block;
+  color: #4F5D64;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.wrap_cur_list .txt_ccy.dir_col [class^="ico_"] {
+  display: inline-block;
+  margin: 0 0 0.4rem;
+  width: 4.0rem;
+  height: 4.0rem;
+}
+.wrap_cur_list li.selected .txt_ccy.dir_col {
+  color: #13C9BE;
+  font-weight: 700;
 }
 
 /* [UTL] - Utill */

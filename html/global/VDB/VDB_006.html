@@ -34,9 +34,9 @@
           <h2 class="tit_layer">화폐선택</h2>
         </div>
         <div class="content_layer">
-          <div class="">
-            <ul class="">
-              <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_all"></span>전체</span></button></li>
+          <div class="section_bottom_select">
+            <ul class="wrap_cur_list">
+              <li class="selected"><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_all"></span>전체</span></button></li>
               <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_usd"></span>USD</span></button></li>
               <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_jpy"></span>JPY</span></button></li>
               <li><button type="button"><span class="txt_ccy dir_col"><span class="ico_cur_eur"></span>EUR</span></button></li>
@@ -61,6 +61,10 @@
       fnOpenLayerPop('VDB006');
       // 팝업닫기 param 닫을 팝업 id
       // fnCloseLayerPop('VDB006');
+
+      $('.wrap_cur_list').find('button').on('click',function(){
+        $(this).closest('li').addClass('selected').siblings().removeClass('selected');
+      }); 
     });
   </script>
 </body>

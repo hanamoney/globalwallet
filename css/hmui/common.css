@@ -185,7 +185,7 @@ body.overflow {
   background-color: #fff;
 }
 section[data-roll] {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   width: 100vw;
   height:100%;
   padding-top: 5.0rem;
@@ -235,10 +235,16 @@ section[data-roll] {
   transform: translateY(0);
 }
 .fnStickyTop {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  background-color: #fff;
   z-index: 99;
+}
+.fnStickyTop.fixed {
+  position: fixed;
+  top: 5.0rem;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  box-shadow: 0 0.2rem 0.4rem rgba(204, 204, 204, 0.25);
 }
 .page_full_flex {
   display: flex;
@@ -889,6 +895,9 @@ section[data-roll] {
 }
 .ico_cur_aud {
   background-image: url('../../images/hmui/ico_cur_aud.png');
+}
+.ico_cur_all {
+  background-image: url('../../images/hmui/ico_cur_all.png');
 }
 .off .ico_cur_hanamoney,
 .ico_cur_hanamoney_off {
@@ -2290,7 +2299,7 @@ button.btn_secondary {
   right: 0;
   width: 7.0rem;
   height: 5.9rem;
-  background: linear-gradient(307.86deg, rgba(255,255,255,0.6) 43.09%, rgba(255, 252, 252, 0) 59.92%);
+  background: linear-gradient(307.86deg, rgba(255,255,255,1) 43.09%, rgba(255, 252, 252, 0) 59.92%);
 }
 .section_tab.type_scroll .btn_fold::after {
   content: '';
@@ -2300,26 +2309,60 @@ button.btn_secondary {
   right: 1.0rem;
   width: 2.0rem;
   height: 2.0rem;
-  background-color: pink;
+  background: url('../../images/hmui/ico_arr_down_2.png') no-repeat 50%;
+  background-size: 100%;
 }
 .section_tab.type_scroll .wrap_tab_btn {
   width: 100vw;
-  padding-right: 3.5rem;
   overflow-x: auto;
   overflow-y: hidden;
+  border-bottom: 0;
+}
+.section_tab.type_scroll .wrap_tab_btn::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 5.9rem;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 1px;
+  background-color: #E3EBEE;
 }
 .section_tab.type_scroll .wrap_tab_btn::-webkit-scrollbar {
   display: none;
 }
 .section_tab.type_scroll .wrap_tab_btn li {
-  padding-left: 1.7rem;
+  position: relative;
+  margin-left: 1.7rem;
 }
 .section_tab.type_scroll .wrap_tab_btn li:first-child {
-  padding-left: 0;
+  margin-left: 0;
+}
+.section_tab.type_scroll .wrap_tab_btn li:last-child .btn_tab_box {
+  margin-right: 3.5rem;
 }
 .section_tab.type_scroll .wrap_tab_btn li .btn_tab_box {
-  height: 5.9rem;
+  height: 6.0rem;
 }
+.section_tab.type_scroll .wrap_tab_btn li.on .btn_tab_box::after {
+  bottom: 0;
+  z-index: 100;
+}
+/* .section_tab.type_scroll .wrap_tab_btn li .btn_tab_box::after {
+  display: none;
+}
+.section_tab.type_scroll .wrap_tab_btn li.on::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #13C9BE;
+} */
 .section_tab.type_scroll .wrap_tab_all {
   position: relative;
   display: none;
@@ -4647,10 +4690,13 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   position: relative;
 }
 .trans_info h4 {
-  margin-bottom: 2.4rem;
+  /* margin-bottom: 2.4rem; */
   color: #849594;
   font-size: 1.4rem;
   line-height: 2.0rem;
+}
+.trans_info h4 + ul {
+  padding-top: 2.4rem;
 }
 .trans_info .row {
   position: relative;
@@ -4678,7 +4724,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   text-align: right;
 }
 .trans_info > ul > li:first-child {
-  margin-top: 2.4rem;
+  margin-top: 0;
 }
 .trans_info .tit {
   display: block;
@@ -4830,7 +4876,12 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.list_trans .trans_info .fnStickyTop { background-color: pink;}
+.list_trans .trans_info .fnStickyTop.fixed { 
+  padding: 0.8rem 2.4rem;
+}
+.list_trans .trans_info .fnStickyTop.fixed + ul {
+  margin-top: 2.0rem;
+}
 
 /* 조회 필터 */
 .wrap_filter {

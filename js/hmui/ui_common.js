@@ -31,7 +31,7 @@ $(function(){
 
 var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
-  if ( $('.wrap_contents .fnFixedTop').length || $('.wrap_contents .fnStickyTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
+  if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
   if ( $('.section_bottom_fixed.type_noFullBtn .fnScrollEnd').length ) { _fixedBottomBtnGap(); } // 스크롤에 따른 페이지 하단고정 위치
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
   if ( (iosV() >= 13) && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
@@ -89,23 +89,18 @@ var _headerControl = function(){
   * @param {Element} el 팝업 element
   */
 var _headerPopControl = function(el){
-  var defaultHeight = 50; 
+  var defaultHeight = 50;
 
   $(el).find('.content_layer').on('scroll', function(){
     var $this = $(this);
-
     var $header = $this.closest('.inner_layer').find('.head_layer');
     var $fixedEl = $this.find('.fnFixedTop');
-    var $stickyEl = $this.find('.fnStickyTop');
     var setHeight = parseInt($fixedEl.attr('data-height')) + defaultHeight;
 
     if ($this.scrollTop() > 0) {
       $header.addClass('scrolled');
       if ( $fixedEl.length ) {
         _setFixedTop($fixedEl, $header, setHeight);
-      }
-      if ( $stickyEl.length ) {
-        fnStickyTop($this.scrollTop(), defaultHeight, setHeight)
       }
     }else {
       $header.removeClass('scrolled');
@@ -133,7 +128,7 @@ var _fixedTopInPage = function() {
     if ($(window).scrollTop() > 0) {
       _setFixedTop($fixedEl, $header, setHeight);
       if ( $stickyEl.length ) {
-        fnStickyTop($(window).scrollTop(), defaultHeight, setHeight)
+        fnStickyTop($stickyEl, $(window).scrollTop(), defaultHeight, setHeight);
       }
     } else {
       _clearFixedTop($fixedEl, $header);
@@ -168,20 +163,20 @@ function _clearFixedTop(fixedEl, header) {
   * @param {element | string} header 고정헤더 element
   * @param {setHeight} header 고정헤더 element 변경 height 
   */
-var fnStickyTop = function(scrollTop, header, posY) {
-  var $el = $('.fnStickyTop');
-  var offsets = [];
-  var posY = true ? posY : 0;
-  var top = posY - header;
-
-  console.log(posY);
-  if (parseInt($('.contents > section').children('div').eq(0).css('margin-top')) < 0) {
-    top = posY;
-  }
-  $el.each(function(idx, el){
-    $(this).css('top', top);
+var fnStickyTop = function(fixedEl, offsets, scrollTop, posY) {
+  $(fixedEl).each(function(idx, el){
+    if ($(this).is(':visible')){
+      if (scrollTop >= offsets[idx] - posY - 14 && !$(this).hasClass('fixed')) { 
+        $(this).addClass('fixed').css('top', posY);
+      }
+      if (scrollTop < offsets[idx] - posY - 14 ) {
+        if ($(this).hasClass('fixed')) {
+          $(this).removeClass('fixed').css('top','');
+        }
+      }
+    }
   });
-}
+};
 
 /**
   * @name _fixedBottomBtnGap()
@@ -573,11 +568,14 @@ var _dropDown = function() {
 var _tabContents = function() {
   var $tabSection;
   var $tabBtn = $('.wrap_tab_btn').find('.btn_tab_box');
+  var $tabFoldBtn = $('.section_tab').find('.btn_fold');
+  var $tabFoldList = $('.section_tab').find('.wrap_tab_all .btn_tab_list');
+
 
   $tabBtn.on('click', function() {
     $tabSection = $(this).closest('.section_tab');
     var idx = $(this).closest('li').index(),
-      $tabCont = $tabSection.find('.tab_cont');
+        $tabCont = $tabSection.find('.tab_cont');
 
     $(this).closest('li').addClass('on').siblings().removeClass('on');
     $tabCont.eq(idx).addClass('on').siblings().removeClass('on');
@@ -586,11 +584,39 @@ var _tabContents = function() {
       $(document).scrollTop(0);
     }
 
+    if ($tabSection.hasClass('type_scroll')) {
+      $(document).scrollTop(0);
+      $('.content_layer').scrollTop(0);
+
+      $(this).closest('.section_tab').find('.wrap_tab_all ul li').eq(idx).addClass('on').siblings().removeClass('on');
+    }
+
     // 열려 있는 툴팁 삭제
     if ($('.wrap_tooltip.show').length) {
       $('.wrap_tooltip.show').removeClass('show');
     }
   });
+
+  $tabFoldList.on('click', function(){
+    var idx = $(this).closest('li').index();
+    $(this).closest('li').addClass('on').siblings().removeClass('on');
+    $(this).closest('.section_tab').find('.wrap_tab_btn li').eq(idx).addClass('on').siblings().removeClass('on');
+    $(this).closest('.wrap_tab_all').slideUp(200).siblings('.btn_fold').removeClass('on');
+
+    $(document).scrollTop(0);
+    $('.content_layer').scrollTop(0);
+  });
+  
+  //
+  $tabFoldBtn.on('click', function(){
+    if ($(this).hasClass('on')) {
+      $(this).removeClass('on')
+        .next('.wrap_tab_all').slideUp(200);
+    } else {
+      $(this).addClass('on')
+        .next('.wrap_tab_all').slideDown(200);
+    }
+  });  
 }
 
 /**
@@ -1162,6 +1188,24 @@ var exeTransitionInLayer = function() {
       setTimeout(function(){
         $this.find('.visual_gsp_overseas').addClass('transform');
       }, 300);
+    }
+
+    // Sticky element
+    // VDB004/005
+    if ($this.find('.fnStickyTop')) {
+      var el = $this.find('.fnStickyTop');
+      var offsets = [];
+      setTimeout(function(){
+        el.each(function(idx, el){
+          offsets[idx] = $(this).offset().top;
+        });
+      }, 300);
+      
+      $this.find('.content_layer').on('scroll', function(){
+        var posY = $(window).width() > 320 ? $(this).siblings('.head_layer').outerHeight(true) : $(this).siblings('.head_layer').outerHeight(true) * 10 / 9;
+        var scrollTop = $(this).scrollTop();
+        fnStickyTop(el, offsets, scrollTop, posY);
+      })
     }
   });
 }
