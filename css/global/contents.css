@@ -36,8 +36,8 @@
   line-height: 2.0rem;
 }
 .wrap_chg_autocharge {
-  padding: 3.0rem 0 1.0rem;
-  text-align: center;
+  padding: 0 0 2.4rem;
+  text-align: left; 
 }
 .wrap_chg_autocharge .visual_chg_ccy {
   font-size: 0;
@@ -51,6 +51,24 @@
 }
 .wrap_chg_autocharge .visual_chg_ccy [class^="ico_cur_"]:first-child {
   margin-left: 0;
+}
+/* CHG_108 */
+.wrap_chg_autocharge .wrap_tit .txt {
+  margin-top: 0.8rem;
+  color: #536067;
+} 
+.wrap_chg_autocharge .visual_autosave {
+  position: absolute;
+  right: 4.2rem;
+  bottom: 6rem;
+  display: block; 
+  width: 33.24vw;
+  height: 26.76vw;  
+  background-image: url('../../images/hmui/banner/ban_EXR_autosave.png');
+  background-size: 100%;
+} 
+.wrap_layer:not(.type_full,.type_center,.type_alert) .content_layer.autocharge::after{
+  visibility: hidden;
 }
 
 /* [CHG] - 외화충전 */
@@ -73,10 +91,10 @@
   position: relative;
 }
 .wrap_item_benefit li .item_desc .emoji_globe {
-  top: -0.8rem;
-  width: 3.6rem;
-  height: 3.6rem;
-  margin: 0 0.4rem 0 0;
+  top: -0.2rem;
+  width: 3rem;  
+  height: 3rem; 
+  margin: 0 0.2rem 0 0;
 }
 .wrap_item_benefit li .item_desc .emoji_atm {
   /* margin: 0 0.7rem; */
@@ -99,19 +117,26 @@
   height: 3.0rem;
   margin: 0 0.8rem;
 }
+/* CHG_103  */
+.wrap_item_benefit .list_benefit li .item_desc .tit + .txt {
+  margin-top:0.2rem;
+  line-height:2.4rem;
+}
 .section_chg_list.chg_list_ccy {
-  padding-top: 1.0rem;
+  padding-top: 0.8rem; 
 }
 .section_chg_list.chg_list_acc li {
   margin-top: 1.0rem;
 }
 .section_chg_list.chg_list_acc li:first-child .txt_acc {
-  padding-top: 1.8rem;
+  padding-top: 1.2rem;
+  line-height: 2.4rem;
 }
 .section_chg_list.chg_list_acc .wrap_link_list {
   padding-top: 0;
 }
 .section_chg_list.chg_list_acc .wrap_link_list a.wrap_box {
+  padding: 2rem 2.4rem;
   margin-bottom: 0;
   border-radius: 1.4rem;
 }
@@ -121,7 +146,7 @@
 .section_chg_list.chg_list_acc + .wrap_notice {
   margin-top: 4.2rem;
 }
-.section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey {
+/* .section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey {
   padding-left: 5.8rem;
 }
 .section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey::before {
@@ -135,16 +160,96 @@
   border-radius: 0.8rem;
   background: #fff url('../../images/hmui/logo_hana.png') no-repeat 50%;
   background-size: 100%;
-}
+} */
 .section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey .txt_bank {
-  font-size: 1.8rem;
-  line-height: 2.4rem;
+  font-size: 2rem;
+  line-height: 3rem;
   font-weight: 400;
 }
 .section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey .txt_acc {
-  padding-top: 0.6rem;
+  padding-top: 0.4rem;
+  line-height: 2.4rem;
+}
+/* CHG_107 */
+.section_chg_list.chg_list_acc .wrap_link_list li a.wrap_box [class^="ico_arr_link"] {
+  right: 2.4rem;
+  top: 62.015% !important;
+}
+.section_chg_list.chg_list_acc li:first-child a.wrap_box [class^="ico_arr_link"]{
+  top: 66.15% !important;
+}
+.section_chg_list.chg_list_acc li:first-child .txt_balance {
+  position: absolute;
+  right: 2.4rem;
+  top: 2.45rem;
+  text-align: right;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  font-weight: 400;
+  color: #fff
+}
+
+/* CHG_101 */
+.wrap_filter.chg_ccy {
+  margin-top: 3.2rem 
+} 
+.wrap_filter.chg_ccy .btn_refresh {
+  display: inline-flex;
+  align-items: center;
+  -webkit-box-align: center;
+} 
+.wrap_filter.chg_ccy .btn_refresh span {
+  padding: 0 0.2rem 0 0; 
+  font-size: 1.6rem;
+  color: #4F5D64;
+}
+.wrap_filter.chg_ccy .btn_refresh.loading .ico_refresh {
+  animation: 1.0s rotate360 cubic-bezier(0.24, 0, 0.5, 1) infinite;
+}
+.section_chg_list.chg_list_ccy .wrap_line_list li button {    
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.section_chg_list.chg_list_ccy .wrap_line_list li:first-child button {      
+  justify-content: flex-start;
+  -webkit-box-pack: start;
+}
+.section_chg_list.chg_list_ccy .wrap_line_list li button > div:first-of-type {    
+  display: -webkit-box;
+  display: flex;
+  position: relative;
+  align-items: center;
+  -webkit-box-align: center;
+}
+.section_chg_list.chg_list_ccy .wrap_line_list li button > div:first-of-type.evt{
+  height:5rem
+}
+.section_chg_list.chg_list_ccy .wrap_line_list li button > div:last-of-type {    
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 4.4rem;
+  padding-right: 0.2rem;
+}
+.section_chg_list.chg_list_ccy .wrap_line_list li button > div:last-of-type > .txt_point_1 { 
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+}
+.section_chg_list.chg_list_ccy .wrap_line_list li button > div:last-of-type > .txt_ccy {    
   font-size: 1.3rem;
-  line-height: 1.8rem;
+  font-weight: 300;
+  line-height: 1.95rem;
+  color: #252E33; 
+}
+.section_chg_list.chg_list_ccy .wrap_line_list li button .tooltip_bubble {
+  top: 0;
+  left: 4rem;
+  transform: translateX(0%)
+}
+.section_chg_list.chg_list_ccy .wrap_line_list li button .evt .txt{
+  padding-top: 2.6rem
 }
 
 /* [SET] - 하나머니 관리 */
@@ -3050,7 +3155,7 @@
   margin: 1.0rem 0;
 }
 .wrap_top_info.exr_info.skeletonLoading {
-  /* pointer-events: none; */
+  pointer-events: none;
 }
 .wrap_top_info.exr_info.skeletonLoading .txt_ccy [class^="ico_cur"],
 .wrap_top_info.exr_info.skeletonLoading .txt_ccy::after,

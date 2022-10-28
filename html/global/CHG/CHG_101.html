@@ -22,7 +22,7 @@
     <header id="header">
       <div class="inner_fixed">
         <button class="btn_ico_prev"><span class="blind">이전</span></button>
-        <h1>충전 화폐 선택</h1>
+        <h1>충전 통화 선택</h1><!-- 22.10.26 문구수정 -->
         <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
       </div>
     </header>
@@ -31,51 +31,160 @@
     <div id="contents" class="wrap_contents">
       <div class="contents">
         <section data-roll="CHG">
-          <!-- 22.08.16 문구추가 -->
+          <!-- 22.10.26 문구수정 -->
           <div class="wrap_tit">
-            <h2 class="tit_sub_bold">충전할 화폐를 선택해 주세요.</h2>
-            <p class="txt_sub">외화 충전 시 환율 100% 우대!</p>
+            <h2 class="tit"><em style="font-weight:400">충전할 통화</em>를 선택해 주세요.</h2>
+            <p class="txt">이 외 지역에서는 달러머니만 이용 가능해요.</p>
           </div>
-          <!-- // 22.08.16 문구추가 -->
+          <!-- // 22.10.26 문구수정 -->
+          <!-- 22.10.26 환율재조회추가 -->
+          <div class="wrap_filter chg_ccy">
+            <button type="button" class="btn_refresh"><span>환율 재조회</span><i class="ico_refresh"><span class="blind">환율재조회 버튼</span></i></button>
+          </div>
+          <!-- // 22.10.26 환율재조회 -->
           <div class="section_chg_list chg_list_ccy"><!-- 22.08.16 chg_list_ccy 클래스추가 -->
             <!-- 22.08.18 문구추가 -->
             <ul class="wrap_line_list">
+              <!-- 22.10.26 Markup 수정 -->
               <li>
                 <button type="button">
                   <span class="ico_cur_hanamoney"></span>
-                  <span class="txt">하나머니 (￦)</span>
+                  <span class="txt">하나머니</span>
                 </button>
               </li>
               <li>
                 <button type="button">
-                  <span class="ico_cur_usd"></span>
-                  <span class="txt">미국 USD ($)</span>
-                  <span class="txt_desc txt_point_1">환율 100% 우대</span>
+                    <div>
+                        <span class="ico_cur_usd"></span>
+                        <span class="txt">미국 USD</span>
+                    </div>                     
+                    <div>
+                        <span class="txt_desc txt_point_1">환율 100% 우대</span>
+                        <p class="txt_ccy">적용환율 : 1,404.50</p> 
+                    </div>                     
+                 </button>
+              </li>
+              <li>
+                <button type="button">
+                  <div>
+                    <span class="ico_cur_jpy"></span>
+                    <span class="txt">일본 JPY</span>
+                  </div>                     
+                  <div>
+                      <span class="txt_desc txt_point_1">환율 100% 우대</span>
+                      <p class="txt_ccy">적용환율 : 971.03</p> 
+                  </div>  
                 </button>
               </li>
               <li>
                 <button type="button">
-                  <span class="ico_cur_jpy"></span>
-                  <span class="txt">일본 JPY (¥)</span>
-                  <span class="txt_desc txt_point_1">환율 100% 우대</span>
+                  <div>
+                    <span class="ico_cur_eur"></span>
+                    <span class="txt">유럽 EUR</span>
+                  </div>                     
+                  <div>
+                      <span class="txt_desc txt_point_1">환율 100% 우대</span>
+                      <p class="txt_ccy">적용환율 : 1,391.72</p> 
+                  </div>  
                 </button>
               </li>
               <li>
                 <button type="button">
-                  <span class="ico_cur_eur"></span>
-                  <span class="txt">유럽 EUR (€)</span>
-                  <span class="txt_desc txt_point_1">환율 100% 우대</span>
+                  <div>
+                    <span class="ico_cur_gbp"></span>
+                    <span class="txt">영국 GBP</span>
+                  </div>                     
+                  <div>
+                      <span class="txt_desc txt_point_1">환율 100% 우대</span>
+                      <p class="txt_ccy">적용환율 : 1,594.46</p> 
+                  </div>   
+                </button>
+              </li>
+              <!--// 22.10.26 Markup 수정 -->
+              <!-- 22.10.26 환추가 -->
+              <li>
+                <button type="button">
+                  <div class="evt">
+                    <span class="ico_cur_cny"></span>
+                    <span class="txt">중국 CNY</span>
+                    <div class="tooltip_bubble type_pupple">
+                      <p class="txt_bold ico_heart">EVENT</p>
+                      <span class="bubble_caret"></span>
+                    </div> 
+                  </div>                     
+                  <div>
+                      <span class="txt_desc txt_point_1">환율 90% 우대</span>
+                      <p class="txt_ccy">적용환율 : 199.44</p> 
+                  </div> 
                 </button>
               </li>
               <li>
                 <button type="button">
-                  <span class="ico_cur_gbp"></span>
-                  <span class="txt">영국 GBP (£)</span>
-                  <span class="txt_desc txt_point_1">환율 100% 우대</span>
+                  <div class="evt">
+                    <span class="ico_cur_sgd"></span>
+                    <span class="txt">싱가포르 SDG</span> 
+                    <div class="tooltip_bubble type_pupple">
+                      <p class="txt_bold ico_heart">EVENT</p>
+                      <span class="bubble_caret"></span>
+                    </div> 
+                  </div>                     
+                  <div>
+                      <span class="txt_desc txt_point_1">환율 100% 우대</span>
+                      <p class="txt_ccy">적용환율 : 1006.32</p> 
+                  </div> 
                 </button>
               </li>
+              <li>
+                <button type="button">
+                  <div class="evt">
+                    <span class="ico_cur_vnd"></span>
+                    <span class="txt">베트남 VND</span>
+                    <div class="tooltip_bubble type_pupple">
+                      <p class="txt_bold ico_heart">EVENT</p>
+                      <span class="bubble_caret"></span>
+                    </div> 
+                  </div>                     
+                  <div>
+                      <span class="txt_desc txt_point_1">환율 96.7% 우대</span>
+                      <p class="txt_ccy">적용환율 : 5.88</p> 
+                  </div> 
+                </button>
+              </li>
+              <li>
+                <button type="button">
+                  <div class="evt">
+                    <span class="ico_cur_cad"></span>
+                    <span class="txt">캐나다 CAD</span>
+                    <div class="tooltip_bubble type_pupple">
+                      <p class="txt_bold ico_heart">EVENT</p>
+                      <span class="bubble_caret"></span>
+                    </div> 
+                  </div>                     
+                  <div>
+                      <span class="txt_desc txt_point_1">환율 75% 우대</span>
+                      <p class="txt_ccy">적용환율 : 5.88</p> 
+                  </div> 
+                </button>
+              </li>
+              <li>
+                <button type="button">
+                  <div class="evt">
+                    <span class="ico_cur_aud"></span>
+                    <span class="txt">호주 AUD</span>
+                    <div class="tooltip_bubble type_pupple">
+                      <p class="txt_bold ico_heart">EVENT</p>
+                      <span class="bubble_caret"></span>
+                    </div> 
+                  </div>                     
+                  <div>
+                      <span class="txt_desc txt_point_1">환율 74.6% 우대</span>
+                      <p class="txt_ccy">적용환율 : 915.10</p> 
+                  </div> 
+                </button>
+              </li> 
+            <!-- // 22.10.26 환추가 -->
             </ul>
-            <!-- // 22.08.18 문구추가 -->
+            <!-- // 22.08.18 문구추가 --> 
           </div>
         </section>
       </div>
@@ -130,7 +239,17 @@
   </main>
 
   <script>
-    
+    $(function(){
+      // 재조회클릭시
+      $('.btn_refresh').on('click', function(){
+        $(this).addClass('loading');
+
+        // 재조회 종료시
+        setTimeout(function(){
+          $('.btn_refresh').removeClass('loading');
+        },2000);
+      });
+    });
   </script>
 </body>
 </html>
