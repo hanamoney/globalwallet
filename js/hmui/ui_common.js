@@ -127,11 +127,16 @@ var _fixedTopInPage = function() {
   $(window).on('scroll', function() {
     if ($(window).scrollTop() > 0) {
       _setFixedTop($fixedEl, $header, setHeight);
-      if ( $stickyEl.length ) {
-        fnStickyTop($stickyEl, $(window).scrollTop(), defaultHeight, setHeight);
-      }
     } else {
       _clearFixedTop($fixedEl, $header);
+    }
+
+    if ( $stickyEl.length ) {
+      var offsets = [];
+      $stickyEl.each(function(idx, el){
+        offsets[idx] = $(this).offset().top;
+      });
+      fnStickyTop($stickyEl, offsets, $(this).scrollTop(), setHeight);
     }
   });
 }
@@ -164,12 +169,15 @@ function _clearFixedTop(fixedEl, header) {
   * @param {setHeight} header 고정헤더 element 변경 height 
   */
 var fnStickyTop = function(fixedEl, offsets, scrollTop, posY) {
+  var offset;
   $(fixedEl).each(function(idx, el){
+    offset = $(fixedEl).parents('.content_layer') ? offsets[idx] - posY - 14 : offsets[idx] - posY + 50;
+
     if ($(this).is(':visible')){
-      if (scrollTop >= offsets[idx] - posY - 14 && !$(this).hasClass('fixed')) { 
+      if (scrollTop >= offset && !$(this).hasClass('fixed')) { 
         $(this).addClass('fixed').css('top', posY);
       }
-      if (scrollTop < offsets[idx] - posY - 14 ) {
+      if (scrollTop < offset) {
         if ($(this).hasClass('fixed')) {
           $(this).removeClass('fixed').css('top','');
         }

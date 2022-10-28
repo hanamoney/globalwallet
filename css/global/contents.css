@@ -2474,14 +2474,15 @@
   text-align: center;
 }
 .wrap_cur_list .txt_ccy.dir_col {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #4F5D64;
   font-size: 1.6rem;
   line-height: 1.5;
   text-align: center;
 }
 .wrap_cur_list .txt_ccy.dir_col [class^="ico_"] {
-  display: inline-block;
   margin: 0 0 0.4rem;
   width: 4.0rem;
   height: 4.0rem;
