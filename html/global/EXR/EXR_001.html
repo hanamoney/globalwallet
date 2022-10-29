@@ -217,9 +217,10 @@
 
   <script src="../../../js/hmui/lib/chart.js"></script>
   <script src="../../../js/hmui/lib/chartjs-plugin-annotation.js"></script>
+  <script src="../../../js/hmui/chart/chart_EXR001.js"></script>
 
   <script>
-    // 차트id 배열에 담기
+    // 차트 배열
     var chartArr = [];
     // 차트 data 선언 
     var labels = [];
@@ -233,127 +234,23 @@
         exr001_cad = [];
         exr001_aud = [];
 
-    // average line
-    function average(ctx) {
-      const values = ctx.chart.data.datasets[0].data;
-      return values.reduce((a, b) => a + b, 0) / values.length;
-    }
-    const annotation = {
-      type: 'line',
-      borderColor: 'rgba(255,255,255,0.4)',
-      borderDash: [2, 2],
-      borderDashOffset: 0,
-      borderWidth: 1,
-      label: {
-        enabled: false,
-      },
-      scaleID: 'y',
-      value: (ctx) => average(ctx)
-    };
-
-    /**
-      * @name createChart()
-      * @description chart 생성
-      * @param {element} chart canvas element
-      * @param {idx} chart element index
-      * @param {Array} 날짜 labels
-      * @param {Array} 환율 데이터
-      */
-    function createChart(el, idx, labels, datas) {
-      var chartId = new Chart($(el), {
-        type: 'line',
-        data: {
-          labels: labels,
-          datasets: [{
-            label: '일주일 환율 트랜드',
-            backgroundColor: 'transparent',
-            borderColor: 'rgb(255, 240, 189)',
-            pointRadius: 0,
-            data: datas,
-          }]
-        },
-        options: {
-          // responsive: true,
-          maintainAspectRatio: false,
-          borderWidth: 2,
-          scales: {
-            x: {
-              grid: {
-                display: false,
-                drawBorder: false
-              },
-              ticks: {
-                display: false,
-                drawTicks: false
-              }
-            },
-            y: {
-              grid: {
-                display: false,
-                drawBorder: false
-              },
-              ticks: {
-                display: false,
-                drawTicks: false
-              }
-            }
-          },
-          plugins: {
-            title: {
-              display: false
-            },
-            subtitle: {
-              display: false
-            },
-            legend: {
-              display: false,
-            },
-            tooltip: {
-              enabled: false
-            },
-            annotation: {
-              annotations: {
-                annotation
-              }
-            }
-          }
-        }
-      });
-      chartArr[idx] = chartId; 
-    }
-
-    /**
-      * @name updateChart()
-      * @description chart 업데이트
-      * @param {Object} chart 
-      * @param {Array} 업데이트 날짜 labels
-      * @param {Array} 업데이트 환율 데이터
-      */
-    function updateChart(el, labels, newData) {
-      el.data.datasets.forEach(function(dataset) {
-        dataset.data = newData;
-      });
-      el.update();
-    }
-
-
-    // 데이터 확인용 샘플
-    labels = ['date','date','date','date','date','date',];
-    exr001_usd = [1500.12, 1500.15, 1500.52, 1411.32, 1481.32, 1433.76, 1451.90,];
-    exr001_jpy = [24, 0, 5, 2, 20, 30, 45];
-    exr001_eur = [1, 0, 5, 2, 45, 20, 30];
-    exr001_gbp = [94, 0, 5, 2, 20, 30, 45];
-    exr001_cny = [34, 0, 5, 2, 20, 30, 45];
-    exr001_sgd = [87, 0, 5, 2, 20, 30, 45];
-    exr001_vnd = [77, 0, 5, 2, 20, 30, 45];
-    exr001_cad = [0, 5, 2, 20, 100, 30, 45];
-    exr001_aud = [15, 0, 5, 2, 20, 30, 45];
-
+      // 데이터 확인용 샘플
+      labels = ['date','date','date','date','date','date',];
+      exr001_usd = [1500.12, 1500.15, 1500.52, 1411.32, 1481.32, 1433.76, 1451.90,];
+      exr001_jpy = [24, 0, 5, 2, 20, 30, 45];
+      exr001_eur = [1, 0, 5, 2, 45, 20, 30];
+      exr001_gbp = [94, 0, 5, 2, 20, 30, 45];
+      exr001_cny = [34, 0, 5, 2, 20, 30, 45];
+      exr001_sgd = [87, 0, 5, 2, 20, 30, 45];
+      exr001_vnd = [77, 0, 5, 2, 20, 30, 45];
+      exr001_cad = [0, 5, 2, 20, 100, 30, 45];
+      exr001_aud = [15, 0, 5, 2, 20, 30, 45];
 
     $(function(){
       // 차트 생성 호출
       $('.line_chart').each(function(idx, el){
         var chartData = window[el.id]; // 각 차트 id == data variables
+        // 차트생성 param canvasID, Index, label, data
         createChart(el, idx, labels, chartData);
       });
 
@@ -381,6 +278,7 @@
           // 차트 업데이트
           $('.line_chart').each(function(idx, el){
             var chartData = window[el.id]; // 각 차트 id == data variables
+            // param chart label data
             updateChart(chartArr[idx], labels, chartData);
           });
         },2000);
