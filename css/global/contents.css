@@ -3243,8 +3243,12 @@
 .wrap_top_info.exr_info.skeletonLoading .txt_ccy [class^="ico_cur"] {
   border-radius: 50%;
 }
-.wrap_top_info.exr_info.skeletonLoading .txt_amount_gap {
+.wrap_top_info.exr_info.skeletonLoading .txt_amount_gap,
+.wrap_top_info.exr_info.skeletonLoading .txt_type {
   width: 11.2rem;
+}
+.wrap_top_info.exr_info.skeletonLoading .txt_type {
+  margin-left: auto;
 }
 .wrap_top_info.exr_info.skeletonLoading .txt_amount {
   width: 17.5rem;
@@ -3400,19 +3404,22 @@
 }
 .wrap_detail_exr.skeletonLoading .type_sub_line::after,
 .wrap_detail_exr.skeletonLoading .wrap_exch_monthly p,
-.wrap_detail_exr.skeletonLoading .box_tit .tit::before {
-  border-radius: 0.8rem;
+.wrap_detail_exr.skeletonLoading .box_tit .tit::before,
+.wrap_detail_exr.skeletonLoading .list_info li,
+.wrap_detail_exr.skeletonLoading .wrap_box .txt_total .tit,
+.wrap_detail_exr.skeletonLoading .wrap_box .txt_total .txt {
+  border-radius: 0.4rem;
   background-color: #69777E;
   background: linear-gradient(110deg, #69777E 8%, #6f7e85 18%, #69777E 33%);
   background-size: 200% 100%;
   animation: 1.5s skeleton linear infinite;
   color: transparent !important;
 }
-.wrap_detail_exr.skeletonLoading .wrap_exch_monthly .txt_basis,
-.wrap_detail_exr.skeletonLoading .box_tit .tit::before {
-  border-radius: 0.4rem;
+.wrap_detail_exr.skeletonLoading .type_sub_line::after {
+  border-radius: 0.8rem;
 }
-.wrap_detail_exr.skeletonLoading .wrap_exch_monthly span {
+.wrap_detail_exr.skeletonLoading .wrap_exch_monthly span,
+.wrap_detail_exr.skeletonLoading .list_info li span {
   color: transparent !important;
 }
 .wrap_detail_exr.skeletonLoading .type_sub_line::after,
@@ -3430,20 +3437,11 @@
   right: auto;
   height: 2.4rem;
 }
-.wrap_detail_exr.skeletonLoading .wrap_box {
-  height: 24.4rem;
+.wrap_detail_exr.skeletonLoading .list_info li {
+  height: 2.4rem;
 }
-.wrap_detail_exr.skeletonLoading .box_tit::after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: calc(100% + 1.6rem);
-  width: 100%;
-  height: 8.8rem;
-  border-radius: 0.4rem;
-}
-.wrap_detail_exr .wrap_chart.skeletonLoading .line_chart {
+.wrap_detail_exr .wrap_chart.skeletonLoading .line_chart,
+.wrap_detail_exr.skeletonLoading .list_info li [class^="emoji"]  {
   visibility: hidden;
 }
 .wrap_detail_exr .wrap_chart.skeletonLoading::before {
