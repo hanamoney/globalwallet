@@ -28,20 +28,37 @@
       </div>
     </header>
     <!-- // header -->
-
+    
     <div id="contents" class="wrap_contents">
       <div class="contents">
         <section data-roll="TDL">
+          <!-- 22.10.28 환종추가 -->
           <div class="section_moneybag">
             <!-- 외화 돈통 오픈 시 노출 -->
-            <div class="wrap_moneybag_tab fnFixedTop" data-visible-type="hidden" data-height="56">
+            <div class="wrap_moneybag_tab fnFixedTop" data-height="56"><!-- 22.10.28 data-visible-type="hidden" attribute 삭제 -->
               <ul>
                 <li class="on"><button type="button" class="txt_ccy"><span class="ico_hanamoney"></span><span>하나머니</span></button></li>
                 <li><button type="button" class="txt_ccy"><span class="ico_cur_usd"></span><span>미국 USD</span></button></li>
                 <li><button type="button" class="txt_ccy"><span class="ico_cur_eur"></span><span>유럽 EUR</span></button></li>
                 <li><button type="button" class="txt_ccy"><span class="ico_cur_gbp"></span><span>영국 GBP</span></button></li>
                 <li><button type="button" class="txt_ccy"><span class="ico_cur_jpy"></span><span>일본 JPY</span></button></li>
-                <li><button type="button" class="txt_ccy"><span class="wrap_ico_ccy"><span class="ico_cur_usd"></span><span class="ico_cur_eur"></span><span class="ico_cur_gbp"></span><span class="ico_cur_jpy"></span></span><span>추가하기</span></button></li>
+                <li><button type="button" class="txt_ccy"><span class="ico_cur_cny"></span><span>중국 CNY</span></button></li>
+                <li><button type="button" class="txt_ccy"><span class="ico_cur_sgd"></span><span>싱가포르 SGD</span></button></li>
+                <li><button type="button" class="txt_ccy"><span class="ico_cur_vnd"></span><span>베트남 VND</span></button></li>
+                <li><button type="button" class="txt_ccy"><span class="ico_cur_cad"></span><span>캐나다 CAD</span></button></li>
+                <li><button type="button" class="txt_ccy"><span class="ico_cur_aud"></span><span>호주 AUD</span></button></li>
+                <li>
+                  <button type="button" class="txt_ccy">
+                    <span class="wrap_ico_ccy">
+                      <span class="ico_cur_usd"></span>
+                      <span class="ico_cur_eur"></span>
+                      <span class="ico_cur_gbp"></span>
+                      <span class="ico_cur_jpy"></span>
+                      <span class="ico_cur_num">+4</span>
+                    </span>
+                    <span>외화 무료환전</span>
+                  </button>
+                </li>
               </ul>
             </div>
             <!-- // 외화 돈통 오픈 시 노출 -->
@@ -89,11 +106,23 @@
                 <!-- 외화 USD -->
                 <div class="swiper-slide">
                   <div class="box_moneybag" data-ccy="usd">
-                    <h2 class="txt_ccy"><span class="ico_cur_usd"></span>미국 USD</h2>
-                    <p class="total_amount">$<strong class="txt_num">1,600.00</strong></p>
+                    <h2 class="txt_ccy"><span class="ico_cur_usd"></span>미국 USD
+                      <a href="#none" class="exch_txt_info">1 = <em class="txt_num">1440.00</em>원</a>
+                      <button type="button" class="btn_ico_refresh"><span class="ico_refresh"></span><span class="blind">환율정보 재조회</span></button>
+                    </h2>
+                    <p class="total_amount"><strong class="txt_num">1,600.00</strong></p>
                     <ul class="box_btn_list">
-                      <li><button type="button">환전</button></li>
-                      <li><button type="button" class="btn_primary">충전</button></li>
+                      <li><button type="button">환급</button></li>
+                      <li><button type="button">직구</button></li>
+                      <li>
+                        <div class="wrap_bubble">
+                          <div class="tooltip_bubble type_pink">
+                            <p class="txt_bold"><em class="txt_num">100%</em> 환율 우대</p>
+                            <span class="bubble_caret"></span>
+                          </div>
+                        </div>
+                        <button type="button" class="btn_primary">무료환전</button>
+                      </li>
                     </ul>
                     <button type="button" class="btn_ico_more"><span class="blind">돈통더보기</span></button>
                   </div>
@@ -102,11 +131,23 @@
                 <!-- 외화 EUR -->
                 <div class="swiper-slide">
                   <div class="box_moneybag" data-ccy="eur">
-                    <h2 class="txt_ccy"><span class="ico_cur_eur"></span>유럽 EUR</h2>
-                    <p class="total_amount">€<strong class="txt_num">1,600.00</strong></p>
+                    <h2 class="txt_ccy"><span class="ico_cur_eur"></span>유럽 EUR
+                      <a href="#none" class="exch_txt_info">1 = <em class="txt_num">1440.00</em>원</a>
+                      <button type="button" class="btn_ico_refresh"><span class="ico_refresh"></span><span class="blind">환율정보 재조회</span></button>
+                    </h2>
+                    <p class="total_amount"><strong class="txt_num">1,600.00</strong></p>
                     <ul class="box_btn_list">
-                      <li><button type="button">환전</button></li>
-                      <li><button type="button" class="btn_primary">충전</button></li>
+                      <li><button type="button">환급</button></li>
+                      <li><button type="button">직구</button></li>
+                      <li>
+                        <div class="wrap_bubble">
+                          <div class="tooltip_bubble type_pink">
+                            <p class="txt_bold"><em class="txt_num">100%</em> 환율 우대</p>
+                            <span class="bubble_caret"></span>
+                          </div>
+                        </div>
+                        <button type="button" class="btn_primary">무료환전</button>
+                      </li>
                     </ul>
                     <button type="button" class="btn_ico_more"><span class="blind">돈통더보기</span></button>
                   </div>
@@ -115,36 +156,189 @@
                 <!-- 외화 GBP -->
                 <div class="swiper-slide">
                   <div class="box_moneybag" data-ccy="gbp">
-                    <h2 class="txt_ccy"><span class="ico_cur_gbp"></span>영국 GBP</h2>
-                    <p class="total_amount">£<strong class="txt_num">1,600.00</strong></p>
+                    <h2 class="txt_ccy"><span class="ico_cur_gbp"></span>영국 GBP
+                      <a href="#none" class="exch_txt_info">1 = <em class="txt_num">1440.00</em>원</a>
+                      <button type="button" class="btn_ico_refresh"><span class="ico_refresh"></span><span class="blind">환율정보 재조회</span></button>
+                    </h2>
+                    <p class="total_amount"><strong class="txt_num">1,600.00</strong></p>
                     <ul class="box_btn_list">
-                      <li><button type="button">환전</button></li>
-                      <li><button type="button" class="btn_primary">충전</button></li>
+                      <li><button type="button">환급</button></li>
+                      <li><button type="button">직구</button></li>
+                      <li>
+                        <div class="wrap_bubble">
+                          <div class="tooltip_bubble type_pink">
+                            <p class="txt_bold"><em class="txt_num">100%</em> 환율 우대</p>
+                            <span class="bubble_caret"></span>
+                          </div>
+                        </div>
+                        <button type="button" class="btn_primary">무료환전</button>
+                      </li>
                     </ul>
                     <button type="button" class="btn_ico_more"><span class="blind">돈통더보기</span></button>
                   </div>
                 </div>
-                <!-- // 외화 GBP -->
                 <!-- 외화 JPY -->
                 <div class="swiper-slide">
                   <div class="box_moneybag" data-ccy="jpy">
-                    <h2 class="txt_ccy"><span class="ico_cur_jpy"></span>일본 JPY</h2>
-                    <p class="total_amount">¥<strong class="txt_num">0</strong></p>
+                    <h2 class="txt_ccy"><span class="ico_cur_jpy"></span>일본 JPY
+                      <a href="#none" class="exch_txt_info">100 = <em class="txt_num">1440.00</em>원</a>
+                      <button type="button" class="btn_ico_refresh"><span class="ico_refresh"></span><span class="blind">환율정보 재조회</span></button>
+                    </h2>
+                    <p class="total_amount"><strong class="txt_num">0</strong></p>
                     <ul class="box_btn_list">
-                      <!-- <li><button type="button">환전</button></li> -->
-                      <li><button type="button" class="btn_primary">충전</button></li>
+                      <li style="display: none;"><button type="button">환급</button></li>
+                      <li style="display: none;"><button type="button">직구</button></li>
+                      <li>
+                        <div class="wrap_bubble">
+                          <div class="tooltip_bubble type_pink">
+                            <p class="txt_bold"><em class="txt_num">100%</em> 환율 우대</p>
+                            <span class="bubble_caret"></span>
+                          </div>
+                        </div>
+                        <button type="button" class="btn_primary">무료환전</button>
+                      </li>
                     </ul>
                     <button type="button" class="btn_ico_more"><span class="blind">돈통더보기</span></button>
                   </div>
                 </div>
-                <!-- // 외화 JPY -->
+                <!-- 외화 CNY -->
+                <div class="swiper-slide">
+                  <div class="box_moneybag" data-ccy="cny">
+                    <h2 class="txt_ccy"><span class="ico_cur_cny"></span>중국 CNY
+                      <a href="#none" class="exch_txt_info">1 = <em class="txt_num">1440.00</em>원</a>
+                      <button type="button" class="btn_ico_refresh"><span class="ico_refresh"></span><span class="blind">환율정보 재조회</span></button>
+                    </h2>
+                    <p class="total_amount"><strong class="txt_num">0</strong></p>
+                    <ul class="box_btn_list">
+                      <li><button type="button">환급</button></li>
+                      <li><button type="button">직구</button></li>
+                      <li>
+                        <div class="wrap_bubble">
+                          <div class="tooltip_bubble type_pink">
+                            <p class="txt_bold"><em class="txt_num">70%</em> 환율 우대</p>
+                            <span class="bubble_caret"></span>
+                          </div>
+                        </div>
+                        <button type="button" class="btn_primary">무료환전</button>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn_ico_more"><span class="blind">돈통더보기</span></button>
+                  </div>
+                </div>
+                <!-- 외화 SGD -->
+                <div class="swiper-slide">
+                  <div class="box_moneybag" data-ccy="sgd">
+                    <h2 class="txt_ccy"><span class="ico_cur_sgd"></span>싱가포르 SGD
+                      <a href="#none" class="exch_txt_info">1 = <em class="txt_num">1440.00</em>원</a>
+                      <button type="button" class="btn_ico_refresh"><span class="ico_refresh"></span><span class="blind">환율정보 재조회</span></button>
+                    </h2>
+                    <p class="total_amount"><strong class="txt_num">0</strong></p>
+                    <ul class="box_btn_list">
+                      <li><button type="button">환급</button></li>
+                      <li><button type="button">직구</button></li>
+                      <li>
+                        <div class="wrap_bubble">
+                          <div class="tooltip_bubble type_pink">
+                            <p class="txt_bold"><em class="txt_num">70%</em> 환율 우대</p>
+                            <span class="bubble_caret"></span>
+                          </div>
+                        </div>
+                        <button type="button" class="btn_primary">무료환전</button>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn_ico_more"><span class="blind">돈통더보기</span></button>
+                  </div>
+                </div>
+                <!-- 외화 VND -->
+                <div class="swiper-slide">
+                  <div class="box_moneybag" data-ccy="vnd">
+                    <h2 class="txt_ccy"><span class="ico_cur_vnd"></span>베트남 VND
+                      <a href="#none" class="exch_txt_info">100 = <em class="txt_num">1440.00</em>원</a>
+                      <button type="button" class="btn_ico_refresh"><span class="ico_refresh"></span><span class="blind">환율정보 재조회</span></button>
+                    </h2>
+                    <p class="total_amount"><strong class="txt_num">0</strong></p>
+                    <ul class="box_btn_list">
+                      <li><button type="button">환급</button></li>
+                      <li><button type="button">직구</button></li>
+                      <li>
+                        <div class="wrap_bubble">
+                          <div class="tooltip_bubble type_pink">
+                            <p class="txt_bold"><em class="txt_num">70%</em> 환율 우대</p>
+                            <span class="bubble_caret"></span>
+                          </div>
+                        </div>
+                        <button type="button" class="btn_primary">무료환전</button>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn_ico_more"><span class="blind">돈통더보기</span></button>
+                  </div>
+                </div>
+                <!-- 외화 CAD -->
+                <div class="swiper-slide">
+                  <div class="box_moneybag" data-ccy="cad">
+                    <h2 class="txt_ccy"><span class="ico_cur_cad"></span>캐나다 CAD
+                      <a href="#none" class="exch_txt_info">1 = <em class="txt_num">1440.00</em>원</a>
+                      <button type="button" class="btn_ico_refresh"><span class="ico_refresh"></span><span class="blind">환율정보 재조회</span></button>
+                    </h2>
+                    <p class="total_amount"><strong class="txt_num">0</strong></p>
+                    <ul class="box_btn_list">
+                      <li><button type="button">환급</button></li>
+                      <li><button type="button">직구</button></li>
+                      <li>
+                        <div class="wrap_bubble">
+                          <div class="tooltip_bubble type_pink">
+                            <p class="txt_bold"><em class="txt_num">70%</em> 환율 우대</p>
+                            <span class="bubble_caret"></span>
+                          </div>
+                        </div>
+                        <button type="button" class="btn_primary">무료환전</button>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn_ico_more"><span class="blind">돈통더보기</span></button>
+                  </div>
+                </div>
+                <!-- 외화 AUD -->
+                <div class="swiper-slide">
+                  <div class="box_moneybag" data-ccy="aud">
+                    <h2 class="txt_ccy"><span class="ico_cur_aud"></span>호주 AUD
+                      <a href="#none" class="exch_txt_info">1 = <em class="txt_num">1440.00</em>원</a>
+                      <button type="button" class="btn_ico_refresh"><span class="ico_refresh"></span><span class="blind">환율정보 재조회</span></button>
+                    </h2>
+                    <p class="total_amount"><strong class="txt_num">0</strong></p>
+                    <ul class="box_btn_list">
+                      <li><button type="button">환급</button></li>
+                      <li><button type="button">직구</button></li>
+                      <li>
+                        <div class="wrap_bubble">
+                          <div class="tooltip_bubble type_pink">
+                            <p class="txt_bold"><em class="txt_num">70%</em> 환율 우대</p>
+                            <span class="bubble_caret"></span>
+                          </div>
+                        </div>
+                        <button type="button" class="btn_primary">무료환전</button>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn_ico_more"><span class="blind">돈통더보기</span></button>
+                  </div>
+                </div>
+                
                 <!-- 외화돈통 미오픈 -->
                 <div class="swiper-slide">
                   <div class="box_moneybag">
                     <div class="msg_no_moneybag">
-                      <p class="wrap_ico_ccy"><span class="ico_cur_usd"></span><span class="ico_cur_eur"></span><span class="ico_cur_gbp"></span><span class="ico_cur_jpy"></span></p>
-                      <p class="tit">수수료 걱정없는 세상으로!</p><!-- 22.07.13 / 22.05.31 문구변경 -->
-                      <p class="txt">환율 100% 우대로 환전하고<br>결제&middot;출금 시 수수료 면제받으세요.</p><!-- 22.08.10 / 22.07.13 문구변경 / 22.05.31 문구변경 -->
+                      <p class="wrap_ico_ccy">
+                        <span class="ico_cur_usd"></span>
+                        <span class="ico_cur_eur"></span>
+                        <span class="ico_cur_gbp"></span>
+                        <span class="ico_cur_jpy"></span>
+                        <span class="ico_cur_cny"></span>
+                        <span class="ico_cur_sgd"></span>
+                        <span class="ico_cur_vnd"></span>
+                        <span class="ico_cur_cad"></span>
+                        <span class="ico_cur_aud"></span>
+                      </p>
+                      <p class="tit">수수료 걱정없는 세상으로!</p>
+                      <p class="txt">환율 최대 100% 우대로 환전하고<br>결제&middot;출금 시 수수료 면제받으세요.</p>
                     </div>
                     <ul class="box_btn_list">
                       <li><button type="button" class="btn_primary">바로 혜택받기</button></li>
@@ -156,6 +350,7 @@
             </div>
             <div class="swiper-pagination"></div>
           </div>
+          <!-- // 22.10.28 환종추가 -->
 
           <div class="wrap_banner_box benefit_link">
             <!-- 이번달 받은 혜택이 있는 경우 -->
@@ -350,9 +545,9 @@
       direction: 'horizontal',
       loop: false,
       autoHeight : true,
-      pagination: {
-        el: '.swiper-pagination',
-      },
+      // pagination: {
+      //   el: '.swiper-pagination',
+      // }, <!-- 22.10.28 pagination 속성 삭제 
       on : {
         init: function(){
           $(this.slides[0]).find('.total_amount .txt_num').counterUp({

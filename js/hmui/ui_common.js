@@ -123,20 +123,24 @@ var _fixedTopInPage = function() {
   var headerHeight = $(window).width() > 320 ? $('#header').outerHeight(true) : $('#header').outerHeight(true) * 10 / 9;
 
   var setHeight = headerHeight + parseInt($fixedEl.attr('data-height'));
+  
+  var offsets = [];
+  if ( $stickyEl.length ) {
+    $stickyEl.each(function(idx, el){
+      offsets[idx] = $(this).offset().top;
+    });
+  }
 
   $(window).on('scroll', function() {
-    if ($(window).scrollTop() > 0) {
+    var scrollTop = $(this).scrollTop()
+    if (scrollTop > 0) {
       _setFixedTop($fixedEl, $header, setHeight);
     } else {
       _clearFixedTop($fixedEl, $header);
     }
 
     if ( $stickyEl.length ) {
-      var offsets = [];
-      $stickyEl.each(function(idx, el){
-        offsets[idx] = $(this).offset().top;
-      });
-      fnStickyTop($stickyEl, offsets, $(this).scrollTop(), setHeight);
+      fnStickyTop($stickyEl, offsets, scrollTop, setHeight);
     }
   });
 }
@@ -169,13 +173,14 @@ function _clearFixedTop(fixedEl, header) {
   * @param {setHeight} header 고정헤더 element 변경 height 
   */
 var fnStickyTop = function(fixedEl, offsets, scrollTop, posY) {
-  var offset;
+  var offset, top;
+  top = $(fixedEl).parents('.content_layer').length ? posY * 0.1 + 'rem' : (posY - 1) * 0.1 + 'rem';
   $(fixedEl).each(function(idx, el){
-    offset = $(fixedEl).parents('.content_layer') ? offsets[idx] - posY - 14 : offsets[idx] - posY + 50;
+    offset = $(fixedEl).parents('.content_layer') ? offsets[idx] - posY - 28 : offsets[idx] - posY + $('.head_layer').height();
 
     if ($(this).is(':visible')){
       if (scrollTop >= offset && !$(this).hasClass('fixed')) { 
-        $(this).addClass('fixed').css('top', posY);
+        $(this).addClass('fixed').css('top', top);
       }
       if (scrollTop < offset) {
         if ($(this).hasClass('fixed')) {

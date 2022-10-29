@@ -565,10 +565,31 @@
 .section_moneybag[data-ccy="jpy"]::before {
   background-image: linear-gradient(135deg, #F6E3F8 0%, #F8DFE5 100%);
 }
+.section_moneybag[data-ccy="cny"]::before {
+  background-image: linear-gradient(135deg, #FFE3F7 0%, #DFF0F5 100%);
+} 
+.section_moneybag[data-ccy="sgb"]::before {
+  background-image: linear-gradient(135deg, #EEDCF9 0%, #DFEDF8 100%);
+}
+.section_moneybag[data-ccy="vnd"]::before {
+  background-image: linear-gradient(135deg, #F9E1DC 0%, #DFF8F5 100%);
+}
+.section_moneybag[data-ccy="cad"]::before {
+  background-image: linear-gradient(135deg, #ECF9DC 0%, #E3E4FF 100%);
+}
+.section_moneybag[data-ccy="aud"]::before {
+  background-image: linear-gradient(135deg, #DFF8F5 0%, #F9DCDF 100%);
+}
+.section_moneybag .wrap_moneybag_tab {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 5.0rem;
+}
 .section_moneybag .wrap_moneybag_tab ul {
   overflow-x: scroll;
   width: 100%;
-  padding: 1.2rem 2.4rem;
+  padding: 0.8rem 2.4rem 1.6rem;
   white-space: nowrap;
 }
 .section_moneybag .wrap_moneybag_tab ul::-webkit-scrollbar {
@@ -577,6 +598,9 @@
 .section_moneybag .wrap_moneybag_tab ul li {
   display: inline-block;
   margin-left: 0.8rem;
+}
+.section_moneybag .wrap_moneybag_tab ul li:first-child {
+  margin-left: 0;
 }
 .section_moneybag .wrap_moneybag_tab ul li.on .txt_ccy {
   background-color: #6E7D85;
@@ -589,6 +613,9 @@
   border-radius: 1.6rem;
   white-space: nowrap;
 }
+.section_moneybag .wrap_moneybag_tab .wrap_ico_ccy {
+  font-size: 0;
+}
 .section_moneybag .wrap_moneybag_tab .wrap_ico_ccy [class^="ico_"] {
   margin: 0 0 0 -0.5rem;
 }
@@ -598,15 +625,27 @@
 .section_moneybag .wrap_moneybag_tab .wrap_ico_ccy [class^="ico_"]:last-child {
   margin-right: 0.5rem;
 }
+.section_moneybag .wrap_moneybag_tab .wrap_ico_ccy .ico_cur_num {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000 !important;
+  font-size: 1.0rem;
+}
 .msg_no_moneybag {
   padding: 0.3rem 0 2.1rem;
   text-align: center;
 }
 .msg_no_moneybag .wrap_ico_ccy {
   margin-bottom: 1.2rem;
+  font-size: 0;
+}
+.msg_no_moneybag .wrap_ico_ccy [class^="ico_cur"] {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 .msg_no_moneybag .wrap_ico_ccy span {
-  margin-left: -0.8rem;
+  margin-left: -0.6rem;
 }
 .msg_no_moneybag .tit {
   color: #252E33;
