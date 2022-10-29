@@ -621,6 +621,16 @@
     setTimeout(function(){
       skeletonLoading.end('.section_list_trans'); // 로딩 완료
     },2000);
+
+    // 22.10.28 환율정보 리프레스 버튼
+    $('.btn_ico_refresh').on('click', function(){
+      $(this).addClass('loading');
+
+      // 재조회 종료시
+      setTimeout(function(){
+        $('.btn_ico_refresh').removeClass('loading');
+      },2000);
+    });
   });
   </script>
 </body>

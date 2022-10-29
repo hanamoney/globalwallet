@@ -5189,6 +5189,9 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   height: 1.6rem;
   margin: 0;
 }
+.section_moneybag .box_moneybag .btn_ico_refresh.loading .ico_refresh {
+  animation: 1.0s rotate360 cubic-bezier(0.24, 0, 0.5, 1) infinite;
+}
 .section_moneybag .box_moneybag .total_amount {
   margin-bottom: 3.0rem;
   font-size: 2.6rem;
