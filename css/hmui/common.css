@@ -2770,8 +2770,8 @@ a.wrap_box > .txt:first-child {
   /* bottom: 0.4rem; */
 }
 .wrap_box.seperate_btn .wrap_inp {
-  margin-top: -2.0rem;
-  padding: 0 2.0rem 1.5rem;
+  margin-top: -1.6rem;
+  padding: 0 2.4rem 2.0rem;
 }
 .wrap_box_blur {
   overflow: hidden;
