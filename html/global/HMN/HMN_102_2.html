@@ -63,7 +63,7 @@
             
           </div>
         </div>
-        <button class="btn_ico_close type_bottom fnClosePop"><span class="blind">닫기</span></button>
+        <button class="btn_close_txt type_bottom fnClosePop"><span>닫기</span><span class="btn_ico_close_wxs"></span></button><!-- 22.11.00 버튼 마크업 변경 -->
       </div>
     </div>
     <!-- // popup -->
@@ -72,35 +72,13 @@
   
   
   <script>
-    // 서버 시간 체크
-    var getServerTime = function() {
-      var date;
-      var xmlHttpRequest = new XMLHttpRequest();
-
-      xmlHttpRequest.open('HEAD', window.location.href.toString(), false);
-      xmlHttpRequest.setRequestHeader('ContentType', 'text/html');
-      try {
-        xmlHttpRequest.send('');
-        date = xmlHttpRequest.getResponseHeader('Date');
-      }
-      catch (err) {
-        // 로컬 시간 확인용
-        date = new Date();
-      }
-
-      return date;
-    };
-    
-    var currentDate = new Date(getServerTime());
-    var currentTime = currentDate.getHours();
-
     $(function(){
       //  서버시간에 따른 클래스 설정
-      if ( currentTime > 5 && currentTime < 18 ) {
-        $('.section_moneybag_all').removeClass('type_night').addClass('type_day');
-      } else {
-        $('.section_moneybag_all').removeClass('type_day').addClass('type_night');
-      }
+      // if ( currentTime > 5 && currentTime < 18 ) {
+      //   $('.section_moneybag_all').removeClass('type_night').addClass('type_day');
+      // } else {
+      //   $('.section_moneybag_all').removeClass('type_day').addClass('type_night');
+      // }
 
       // 팝업 열기 param 오픈할 팝업 id
       fnOpenLayerPop('popupId');

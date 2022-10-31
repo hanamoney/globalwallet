@@ -27,132 +27,195 @@
 
     <!-- // contents-->
 
+    <!-- 퍼블 동작확인용 버튼 -->
+    <button class="btn_txt fnOpenPop" data-name="popupId">환율 알림 설정 완료</button>
+
     <!-- popup -->
     <div id="popupId" class="wrap_layer type_full">
       <div class="inner_layer">
         <div class="content_layer type_full">
           
           <div class="section_moneybag_all">
-            <!-- CASE #1,2 -->
-            <div class="wrap_moneybag_none" style="display: none;">
-              <div class="wrap_box_blur">
-                <a href="#none" class="inner_box" title="하나머니 조회">
-                  <p class="txt_ccy">
-                    <span class="ico_hanamoney"></span>
-                    <span>하나머니</span>
-                    <span class="total_amount"><em class="txt_num">1,000,000</em>원</span>
-                  </p>
-                  <span class="ico_arr_link_s"></span>
-                </a>
-              </div>
-              <div class="wrap_box_opacity">
-                <div class="wrap_msg_info hmn_travlog_info">
-                  <p class="tit">외화 환전 시 환전수수료<br>해외결제 수수료<br>해외 ATM 출금 수수료</p>
-                  <p class="txt">수수료 없는 세상을 경험하세요.</p>
-                  <div class="wrap_btn type_full">
-                    <!-- CASE #1 시 노출
-                    <a href="#none" class="btn_box_m btn_primary">트래블로그 혜택 확인하기</a>
-                    -->
-                    <!-- CASE #2 시 노출 -->
-                    <button type="button" class="btn_box_m btn_primary">계좌연결하고 수수료 0원 시작하기</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- // CASE #1,2 -->
-
             <!-- CASE #3 약관동의O 계좌연결O -->
+            <!-- 22.11.00 환종추가 -->
             <div class="wrap_moneybag_all">
               <h2 class="blind">하나머니 전체보기</h2>
-              <div class="visual_hmn_moneybag" aria-hidden="true">
-                <span class="img_rocket"></span>
+              <div class="wrap_btn type_justify">
+                <button type="button" class="btn_howto left"><span>사용법</span><span class="ico_tap"></span></button>
+                <button type="button" class="btn_reordering right"><span>잔액기준 재정렬</span><span class="ico_refresh_2"></span></button>
               </div>
               <div class="list_moneybag">
-                <ul>
+                <h3><span class="txt">홈 화면에서 보여져요</span><span class="bor"></span></h3>
+                <ul id="showList">
                   <li>
-                    <a href="#none" class="txt_ccy">
+                    <span class="chk_star">
+                      <input type="checkbox" id="chk1_1" name="chk1" />
+                      <label for="chk1_1"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="HMN_102_2.html" class="txt_ccy">
                       <span class="ico_hanamoney"></span>
                       <span>하나머니</span>
-                      <span class="total_amount">₩ <em class="txt_num">1,000,000</em></span>
+                      <span class="total_amount"><em class="txt_num">1,000,000</em></span>
                     </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
                   </li>
                   <li>
-                    <a href="#none" class="txt_ccy">
+                    <span class="chk_star">
+                      <input type="checkbox" id="chk1_2" name="chk1" />
+                      <label for="chk1_2"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="HMN_102_2.html" class="txt_ccy">
                       <span class="ico_cur_usd"></span>
                       <span>미국 USD</span>
-                      <span class="total_amount">$ <em class="txt_num">9,000.00</em></span>
+                      <span class="total_amount"><em class="txt_num">9,000.00</em></span>
                     </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
                   </li>
+                </ul>
+              </div>
+              <div class="list_moneybag">
+                <h3><span class="txt">홈 화면에서 숨겼어요</span><span class="bor"></span></h3>
+                <ul id="hideList">
                   <li>
-                    <a href="#none" class="txt_ccy empty"><!-- 보유금액이 없는 경우 empty class추가 -->
+                    <span class="chk_star">
+                      <input type="checkbox" id="chk1_3" name="chk1" />
+                      <label for="chk1_4"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="HMN_102_2.html" class="txt_ccy empty"><!-- 보유금액이 없는 경우 empty class추가 -->
                       <span class="ico_cur_jpy"></span>
                       <span>일본 JPY</span>
-                      <span class="total_amount">¥ <em class="txt_num">0</em></span>
+                      <span class="total_amount"><em class="txt_num">0</em></span>
                     </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
                   </li>
                   <li>
-                    <a href="#none" class="txt_ccy empty"><!-- 보유금액이 없는 경우 empty class추가 -->
+                    <span class="chk_star">
+                      <input type="checkbox" id="chk1_4" name="chk1" />
+                      <label for="chk1_4"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="HMN_102_2.html" class="txt_ccy empty"><!-- 보유금액이 없는 경우 empty class추가 -->
                       <span class="ico_cur_eur"></span>
                       <span>유럽 EUR</span>
-                      <span class="total_amount">€ <em class="txt_num">0</em></span>
+                      <span class="total_amount"><em class="txt_num">0</em></span>
                     </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
                   </li>
                   <li>
-                    <a href="#none" class="txt_ccy">
+                    <span class="chk_star">
+                      <input type="checkbox" id="chk1_5" name="chk1" />
+                      <label for="chk1_5"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="HMN_102_2.html" class="txt_ccy">
                       <span class="ico_cur_gbp"></span>
                       <span>영국 GBP</span>
-                      <span class="total_amount">£ <em class="txt_num">9,999.00</em></span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
                     </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="chk1_5" name="chk1" />
+                      <label for="chk1_5"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="HMN_102_2.html" class="txt_ccy">
+                      <span class="ico_cur_cny"></span>
+                      <span>중국 CNY</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="chk1_5" name="chk1" />
+                      <label for="chk1_5"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="HMN_102_2.html" class="txt_ccy">
+                      <span class="ico_cur_sgd"></span>
+                      <span>싱가포르 SGD</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="chk1_5" name="chk1" />
+                      <label for="chk1_5"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="HMN_102_2.html" class="txt_ccy">
+                      <span class="ico_cur_vnd"></span>
+                      <span>베트남 VND</span>
+                      <span class="total_amount"><em class="txt_num">99,999,999</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="chk1_5" name="chk1" />
+                      <label for="chk1_5"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="HMN_102_2.html" class="txt_ccy">
+                      <span class="ico_cur_cad"></span>
+                      <span>캐나다 CAD</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="chk1_5" name="chk1" />
+                      <label for="chk1_5"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="HMN_102_2.html" class="txt_ccy">
+                      <span class="ico_cur_aud"></span>
+                      <span>호주 AUD</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
                   </li>
                 </ul>
               </div>
               <p class="txt_center">이 외 지역에서는 달러머니를 이용하세요!</p>
             </div>
+            <!-- // 22.11.00 환종추가 -->
             <!-- // CASE #3 약관동의O 계좌연결O -->
 
           </div>
         </div>
-        <button class="btn_ico_close type_bottom fnClosePop"><span class="blind">닫기</span></button>
+        <button class="btn_close_txt type_bottom fnClosePop"><span>닫기</span><span class="btn_ico_close_wxs"></span></button><!-- 22.11.00 버튼 마크업 변경 -->
       </div>
     </div>
     <!-- // popup -->
 
   </main>
   
-  
+  <script src="../../../js/hmui/lib/Sortable.js"></script>
   <script>
-    // 서버 시간 체크
-    var getServerTime = function() {
-      var date;
-      var xmlHttpRequest = new XMLHttpRequest();
-
-      xmlHttpRequest.open('HEAD', window.location.href.toString(), false);
-      xmlHttpRequest.setRequestHeader('ContentType', 'text/html');
-      try {
-        xmlHttpRequest.send('');
-        date = xmlHttpRequest.getResponseHeader('Date');
-      }
-      catch (err) {
-        // 로컬 시간 확인용
-        date = new Date();
-      }
-
-      return date;
-    };
-    
-    var currentDate = new Date(getServerTime());
-    var currentTime = currentDate.getHours();
-
     $(function(){
       //  서버시간에 따른 클래스 설정
-      if ( currentTime > 5 && currentTime < 18 ) {
-        $('.section_moneybag_all').removeClass('type_night').addClass('type_day');
-      } else {
-        $('.section_moneybag_all').removeClass('type_day').addClass('type_night');
-      }
+      // if ( currentTime > 5 && currentTime < 18 ) {
+      //   $('.section_moneybag_all').removeClass('type_night').addClass('type_day');
+      // } else {
+      //   $('.section_moneybag_all').removeClass('type_day').addClass('type_night');
+      // }
 
       // 팝업 열기 param 오픈할 팝업 id
       fnOpenLayerPop('popupId');
+
+      // 순서변경
+      // new Sortable(showList, {
+      //   group: {
+      //     name: 'shared', // set both lists to same group
+      //   },
+      //   animation: 150,
+      //   sort: false
+      // });
+      // new Sortable(hideList, {
+      //   group: {
+      //     name: 'shared', // set both lists to same group
+      //   },
+      //   animation: 150,
+      //   sort: false
+      // })
     });
   </script>
 </body>
