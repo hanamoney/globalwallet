@@ -647,6 +647,20 @@ section[data-roll] {
   background-size: 100%;
   background-position: 50%;
 }
+[class^="btn_ico"] {
+  font-size: 0;
+}
+[class^="btn_ico"] span {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}
+[class^="btn_ico"] [class^="ico_"]:first-child {
+  margin-right: 0.4rem;
+}
+[class^="btn_ico"] [class^="ico_"]:last-child {
+  margin-left: 0.4rem;
+}
 .btn_ico_prev {
   background-image: url('../../images/hmui/btn_back.png');
 }
@@ -701,14 +715,6 @@ section[data-roll] {
 }
 .btn_ico_notice {
   background-image: url('../../images/hmui/btn_notice.png');
-}
-[class^="ico_tooltip"] {
-  width: 2.0rem;
-  height: 2.0rem;
-  background-image: url('../../images/hmui/btn_tooltip.png');
-}
-.ico_tooltip_question {
-  background-image: url('../../images/hmui/btn_tooltip_question.png');
 }
 .btn_tooltip [class^="ico_tooltip"] {
   vertical-align: top;
@@ -789,6 +795,14 @@ section[data-roll] {
 }
 .btn_plus:disabled {
   background-image: url('../../images/hmui/btn_plus_disabled.png');
+}
+[class^="ico_tooltip"] {
+  width: 2.0rem;
+  height: 2.0rem;
+  background-image: url('../../images/hmui/btn_tooltip.png');
+}
+.ico_tooltip_question {
+  background-image: url('../../images/hmui/btn_tooltip_question.png');
 }
 [class^="ico_arr_"] {
   display: inline-block;
@@ -1285,8 +1299,16 @@ section[data-roll] {
 }
 .chk_star label {
   display: inline-block;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: url('../../images/hmui/btn_star_off.png') no-repeat center;
+  background-size: 2.4rem auto;
+}
+.chk_star input:checked + label {
+  background-image: url('../../images/hmui/btn_star_on.png');
+}
+.chk_star input:checked:disabled + label {
+  background-image: url('../../images/hmui/btn_star_disabled.png');
 }
 
 /* Radio */
@@ -3300,7 +3322,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   border-radius: 2.0rem;
   background-color: rgba(37, 46, 51, 0.9);
   text-align: left;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateZ(0);
 }
 .wrap_layer.type_full .btn_close_txt.type_bottom span {
   color: #fff;
@@ -5153,6 +5175,9 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   display: inline-block;
   font-size: 2.0rem;
   line-height: 2.6rem;
+}
+.section_detail_trans .wrap_top_info .trans_info .desc {
+  text-align: left;
 }
 .wrap_top_info {
   text-align: left;

@@ -590,6 +590,7 @@
   overflow-x: scroll;
   width: 100%;
   padding: 0.8rem 2.4rem 1.6rem;
+  font-size: 0;
   white-space: nowrap;
 }
 .section_moneybag .wrap_moneybag_tab ul::-webkit-scrollbar {
@@ -597,10 +598,13 @@
 }
 .section_moneybag .wrap_moneybag_tab ul li {
   display: inline-block;
-  margin-left: 0.8rem;
+  margin-right: 0.8rem;
 }
 .section_moneybag .wrap_moneybag_tab ul li:first-child {
   margin-left: 0;
+}
+.section_moneybag .wrap_moneybag_tab ul li:last-child {
+  margin-right: 0;
 }
 .section_moneybag .wrap_moneybag_tab ul li.on .txt_ccy {
   background-color: #6E7D85;
@@ -861,9 +865,29 @@
 .wrap_moneybag_all .wrap_btn.type_justify {
   padding-bottom: 2.4rem;
 }
-.wrap_moneybag_all .wrap_btn.type_justify span {
+.wrap_moneybag_all .wrap_btn.type_justify [class^="btn_ico"] span {
   color: #fff;
   font-size: 1.4rem;
+  vertical-align: top;
+}
+.wrap_moneybag_all .btn_ico_howto {
+  padding: 0.4rem 0;
+}
+.wrap_moneybag_all .btn_ico_howto span:not([class^="ico_"]) {
+  padding-top: 0.3rem;
+}
+.wrap_moneybag_all .btn_ico_reordering {
+  padding: 0.5rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.4rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.wrap_moneybag_all .btn_ico_reordering span:not([class^="ico_"]) {
+  padding-top: 0.1rem;
+}
+.wrap_moneybag_all .btn_ico_reordering.loading [class^="ico"] {
+  animation: 1.0s rotate360 cubic-bezier(0.24, 0, 0.5, 1) infinite reverse;
+  transform-origin: 0.75rem 0.75rem;
 }
 .wrap_moneybag_all .list_moneybag h3 {
   display: flex;
@@ -909,6 +933,7 @@
 .wrap_moneybag_all a.txt_ccy {
   position: relative;
   flex: 1;
+  margin-left: 0.8rem;
   padding: 1.6rem 0 1.6rem 4.2rem;
   text-align: left;
 }
@@ -943,6 +968,35 @@
   font-size: 1.6rem;
   line-height: 1.5;
 }
+.wrap_moneybag_all li.sortable-ghost {
+  height: 7.3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+}
+.wrap_moneybag_all li.sortable-ghost * {
+  display: none;
+}
+.wrap_moneybag_all li.sortable-drag {
+  padding: 0 1.4rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 1 !important;
+}
+.wrap_moneybag_all li.forbidden {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+.wrap_moneybag_all li.forbidden::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: url('../../images/hmui/ico_forbidden.png') no-repeat 50%;
+  background-size: 100%;
+  transform: translate(-50%, -50%);
+}
+
 /* .wrap_moneybag_all .txt_center {
   position: absolute;
   bottom: 9.4rem;
@@ -3553,6 +3607,11 @@
   .wrap_box_blur .inner_box::before {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(139, 235, 229, 0.268) 100%), rgba(255, 255, 255, 0.5);
     opacity: 0.7;
+  }
+  .wrap_moneybag_all li.sortable-drag {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
   }
 }
 
