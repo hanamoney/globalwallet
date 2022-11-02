@@ -936,9 +936,18 @@
   align-items: center;
   border-radius: 1.4rem;
   text-align: center;
+  visibility: visible;
+  opacity: 1;
+}
+.wrap_moneybag_all li:not(.sortable-drag, .sortable-choosen) {
+  transition: all 0.2s ease-in-out;
 }
 .wrap_moneybag_all li:first-child {
   margin-top: 0;
+}
+.wrap_moneybag_all li.hide {
+  visibility: hidden;
+  opacity: 0;
 }
 .wrap_moneybag_all a.txt_ccy {
   position: relative;

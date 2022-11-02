@@ -204,7 +204,6 @@
       // 재정렬
       $('.btn_ico_reordering').on('click', function(){
         $(this).addClass('loading');
-
         // 재정렬 완료시 loading 클래스 삭제
         setTimeout(function(){
           $(this).removeClass('loading');
@@ -212,8 +211,8 @@
       }); 
 
       // 순서변경
+      // 별 체크 클릭 시
       $('.chk_star label').on('click', function(){
-        // alert('click');
         var from = $(this).closest('ul').attr('id');
         var $itemEl = $(this).closest('li');
 
@@ -223,18 +222,22 @@
           return false;
         }
 
+        $itemEl.addClass('hide');
         if (from == 'showList') {
           setTimeout(function(){
-            $('#hideList').prepend($itemEl);
+            $('#hideList').prepend($itemEl).addClass('hide');
           },100);
         } else {
           setTimeout(function(){
-            $('#showList').append($itemEl);
+            $('#showList').append($itemEl).addClass('.hide');
             $('.content_layer').animate({
               scrollTop: 0
-            },200);
+            },100);
           },100);
         }
+        setTimeout(function(){
+          $itemEl.removeClass('hide');
+        },200);
       });
 
       $('.list_moneybag').find('li').on('click', function(e){
