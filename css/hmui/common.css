@@ -3530,6 +3530,14 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .wrap_toast.withFixedBtn.show {
   transform: translate3d(0px,-8.4rem,0px);
 }
+.wrap_toast.top {
+  top: 0;
+  bottom: auto;
+  transform: translate3d(0,-100%,0);
+}
+.wrap_toast.top.show {
+  transform: translate3d(0px,7.2rem,0px);
+}
 .wrap_toast {
   color: #fff;
   font-size: 1.8rem;
