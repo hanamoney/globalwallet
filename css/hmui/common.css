@@ -3316,8 +3316,9 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 } */
 .wrap_layer.type_full .btn_close_txt.type_bottom {
   position: fixed;
-  bottom: 6.4rem;
+  bottom: calc(env(safe-area-inset-bottom) + 3.2rem);
   left: 50%;
+  z-index: 101;
   padding: 0.8rem 1.4rem 0.8rem 2.0rem;
   border-radius: 2.0rem;
   background-color: rgba(37, 46, 51, 0.9);

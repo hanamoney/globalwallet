@@ -22,7 +22,7 @@
 </head>
 <body>
   <main id="root">
-    
+
     <!-- // header -->
 
     <!-- // contents-->
@@ -31,7 +31,8 @@
     <button class="btn_txt fnOpenPop" data-name="popupId">환율 알림 설정 완료</button>
 
     <!-- popup -->
-    <div id="popupId" class="wrap_layer type_full">
+    <!-- 22.10.28 환종추가 마크업변경 -->
+    <div id="popupId" class="wrap_layer type_full" data-pageid="HMN102">
       <div class="inner_layer">
         <div class="content_layer type_full">
           
@@ -44,7 +45,7 @@
                 <button type="button" class="btn_ico_howto left"><span>사용법</span><span class="ico_tap"></span></button>
                 <button type="button" class="btn_ico_reordering right"><span>잔액기준 재정렬</span><span class="ico_refresh_2"></span></button>
               </div>
-              <div class="list_moneybag">
+              <div class="list_moneybag wrap_show">
                 <h3><span class="txt">홈 화면에서 보여져요</span><span class="bor"></span></h3>
                 <ul id="showList">
                   <li id="hanamoney">
@@ -73,7 +74,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="list_moneybag">
+              <div class="list_moneybag wrap_hide">
                 <h3><span class="txt">홈 화면에서 숨겼어요</span><span class="bor"></span></h3>
                 <ul id="hideList">
                   <li>
@@ -153,7 +154,7 @@
                       <input type="checkbox" id="ccy09" name="ccy" />
                       <label for="ccy09"><span class="blind">홈 화면에 보이기</span></label>
                     </span>
-                    <a href="HMN_102_9.html" class="txt_ccy">
+                    <a href="HMN_102_2.html" class="txt_ccy">
                       <span class="ico_cur_cad"></span>
                       <span>캐나다 CAD</span>
                       <span class="total_amount"><em class="txt_num">9,999.00</em></span>
@@ -185,11 +186,12 @@
       </div>
     </div>
     <!-- // popup -->
-
+    
     <div id="snackbar" class="wrap_toast type_snackbar top">
       <p class="txt_toast">원화 하나머니는<br>홈 화면에서 숨길 수 없어요.</p>
       <button class="btn_ico_close_w"><span class="blind">닫기</span></button>
     </div>
+    <!-- // 22.10.28 환종추가 마크업변경 -->
 
   </main>
   
@@ -211,6 +213,7 @@
 
       // 순서변경
       $('.chk_star label').on('click', function(){
+        // alert('click');
         var from = $(this).closest('ul').attr('id');
         var $itemEl = $(this).closest('li');
 
@@ -227,8 +230,15 @@
         } else {
           setTimeout(function(){
             $('#showList').append($itemEl);
+            $('.content_layer').animate({
+              scrollTop: 0
+            },200);
           },100);
         }
+      });
+
+      $('.list_moneybag').find('li').on('click', function(e){
+        e.stopPropagation();
       });
 
       // 홈화면 노출 리스트
@@ -236,15 +246,25 @@
         group: {
           name: 'shared',
         },
-        direction: 'vertical',
+        handle: '.txt_ccy',
+        delay: 80,
+        delayOnTouchOnly: true,
         animation: 150,
+        direction: 'vertical',
         onEnd: function (evt) {
           var $itemEl = $(evt.item);
 
           // 하나머니 6a-1 미노출불가
-          if ($itemEl.attr('id') == 'hanamoney' && evt.to != evt.from ) {
-            $(evt.from).find('li').eq(evt.oldIndex).before($itemEl);
+          if ( $itemEl.attr('id') == 'hanamoney' && evt.to != evt.from ) {
+            if ( $(evt.from).find('li').length <= 0 || $(evt.from).find('li').length == evt.oldIndex ) { 
+              $(evt.from).append($itemEl);
+            } else {
+              $(evt.from).find('li').eq(evt.oldIndex).before($itemEl);
+            }
             $itemEl.removeClass('forbidden');
+            $('.content_layer').animate({
+              scrollTop: 0
+            },200);
             setTimeout(function(){
               fnToastPop('snackbar');
             },300);
@@ -274,10 +294,14 @@
         group: {
           name: 'shared',
         },
+        handle: ".txt_ccy",
+        delay: 80,
+        delayOnTouchOnly: true,
         animation: 150,
+        direction: 'vertical',
         onEnd: function (evt) {
           var $itemEl = $(evt.item);
-
+          
           // 노출 시 체크
           if ( evt.to !== evt.from ) {
             setTimeout(function(){
