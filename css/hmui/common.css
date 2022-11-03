@@ -2409,6 +2409,9 @@ button.btn_secondary {
   background: url('../../images/hmui/ico_arr_down_2.png') no-repeat 50%;
   background-size: 100%;
 }
+.section_tab.type_scroll .btn_fold.on::after {
+  transform: rotate(-180deg);
+}
 .section_tab.type_scroll .wrap_tab_btn {
   width: 100vw;
   overflow-x: auto;
