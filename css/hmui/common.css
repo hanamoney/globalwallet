@@ -1072,8 +1072,8 @@ section[data-roll] {
   background-image: url('../../images/hmui/emoji_cash.png');
 }
 .emoji_zero_travlog {
-  width: 2.8rem;
-  height: 3.2rem;
+  width: 4.0rem;
+  height: 4.0rem;
   background-image: url('../../images/hmui/emoji_zero_travlog.png');
 }
 .emoji_card {
@@ -4399,11 +4399,11 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   z-index: 1;
 }
 .list_benefit li .box .flag_evt + span {
-  transform: translateY(-0.5rem);
+  /* transform: translateY(-0.5rem); */
 }
 .list_benefit li .item_desc {
   width: calc(100% - 5.8rem);
-  padding-top: 0.5rem;
+  padding-top: 0.6rem;
 }
 .list_benefit li .item_desc .tit {
   color: #000;
@@ -4424,6 +4424,9 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   font-weight: 700;
 }
 .list_benefit li .item_desc [class^="emoji_"] {
+  width: 3.0rem;
+  height: 3.0rem;
+  margin: -0.2rem 0.2rem 0;
   vertical-align: top;
 }
 .list_benefit.type_ico .box {
@@ -4433,13 +4436,9 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .list_benefit.type_ico li .item_desc {
   width: calc(100% - 7.0rem);
 }
-.list_benefit.type_ico .box .emoji_drone {
-  width: 3.3rem;
-  height: 3.0rem;
-  transform: translate(0.3rem,0);
-}
-.list_benefit.type_ico .box .flag_evt + .emoji_drone {
-  transform: translate(0.3rem, -0.5rem);
+.list_benefit.type_ico .box [class^="emoji_"] {
+  width: 4.0rem;
+  height: 4.0rem;
 }
 .list_benefit.type_ico li .item_desc .txt {
   color: #4F5D64;
@@ -4503,7 +4502,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   padding-right: 1.7rem;
   background: url('../../images/hmui/ico_arr_link_s.png') no-repeat;
   background-size: 1.6rem;
-  background-position: right 0 top 0.5rem;
+  background-position: right 0 top 0.6rem;
 }
 .wrap_item_benefit .list_benefit li,
 .wrap_item_benefit .tit_wrap {
@@ -5768,14 +5767,19 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   background-size: 100%;
 }
 .img_logo_master {
-  width: 9.7rem;
-  height: 8.0rem;
+  width: 4.8rem;
+  height: 3.6rem;
   background-image: url('../../images/hmui/company/logo_comp_master.png');
 }
 .img_logo_cirrus {
-  width: 9.7rem;
-  height: 8.0rem;
+  width: 4.8rem;
+  height: 3.6rem;
   background-image: url('../../images/hmui/company/logo_comp_cirrus.png');
+}
+.img_logo_unionpay {
+  width: 4.8rem;
+  height: 3.6rem;
+  background-image: url('../../images/hmui/company/logo_comp_unionpay.png');
 }
 
 @supports ((-webkit-backdrop-filter:none) or (backdrop-filter:none)) {

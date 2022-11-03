@@ -91,36 +91,37 @@
   position: relative;
 }
 .wrap_item_benefit li .item_desc .emoji_globe {
-  top: -0.2rem;
-  width: 3rem;  
+  /* width: 3rem;  
   height: 3rem; 
-  margin: 0 0.2rem 0 0;
+  margin: 0 0.2rem 0 0; */
 }
 .wrap_item_benefit li .item_desc .emoji_atm {
+  margin-top: -0.4rem;
   /* margin: 0 0.7rem; */
 }
 .wrap_item_benefit li .item_desc .emoji_drone {
-  top: -0.5rem;
-  margin: 0 0.5rem 0 0.2rem;
+  /* top: -0.5rem;
+  margin: 0 0.5rem 0 0.2rem; */
 }
 .wrap_item_benefit li .item_desc .emoji_cash {
-  top: -0.3rem;
-  margin: 0 0.5rem 0 0.2rem;
+  /* top: -0.3rem;
+  margin: 0 0.5rem 0 0.2rem; */
 }
 .wrap_item_benefit li .item_desc .emoji_cashback {
-  width: 3.4rem;
-  height: 3.4rem;
-  margin: -0.3rem 0.5rem 0;
+  /* width: 3.0rem;
+  height: 3.0rem;
+  margin: -0.3rem 0.5rem 0; */
 }
 .wrap_item_benefit li .item_desc .emoji_zero_travlog {
-  width: 2.6rem;
+  margin-top: -0.4rem;
+  /* width: 3.0rem;
   height: 3.0rem;
-  margin: 0 0.8rem;
+  margin: 0 0.8rem; */
 }
 /* CHG_103  */
 .wrap_item_benefit .list_benefit li .item_desc .tit + .txt {
-  margin-top:0.2rem;
-  line-height:2.4rem;
+  /* margin-top: 0.3rem;
+  line-height: 2.4rem; */
 }
 .section_chg_list.chg_list_ccy {
   padding-top: 0.8rem; 
@@ -1358,6 +1359,24 @@
   background-size: 100%;
   animation: floating10 6s ease-in-out infinite;
 }
+.section_top_visual.travlog_benefit + .wrap_item_benefit {
+  padding-bottom: 5.0rem;
+}
+.section_top_visual.travlog_benefit + .wrap_item_benefit > .txt {
+  margin-top: -0.8rem;
+  padding-bottom: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 300;
+  text-align: center;
+}
+.section_top_visual.travlog_benefit + .wrap_item_benefit > .txt_sub {
+  margin-top: 1.0rem;
+  color: #536067;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  text-align: center;
+}
 .section_cont.about_travlog {
   background: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);
   text-align: center;
@@ -1421,7 +1440,7 @@
   background-size: 100%;
 }
 .section_cont.about_travlog .visual_gsp_travlog .box_card_type {
-  padding: 5.0rem 0 2.0rem;
+  padding: 5.0rem 2.4rem 3.2rem;
   text-align: center;
 }
 .section_cont.about_travlog .visual_gsp_travlog .box_card_type em {
@@ -1431,21 +1450,32 @@
   font-weight: 700;
 }
 .section_cont.about_travlog .visual_gsp_travlog .list_ccy {
-  margin-top: 1.2rem;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  padding: 0 1.3rem;
 }
 .section_cont.about_travlog .visual_gsp_travlog .list_ccy li {
-  padding: 0 1.0rem;
+  width: 3.0rem;
   font-size: 1.4rem;
   line-height: 2.0rem;
   font-weight: 300;
+  white-space: nowrap;
 }
 .section_cont.about_travlog .visual_gsp_travlog .list_ccy li [class^="ico_cur"] {
   display: block;
-  width: 2.4rem;
-  height: 2.4rem;
-  margin-bottom: 0.6rem;
+  width: 3.0rem;
+  height: 3.0rem;
+  margin: 0 auto 0.6rem;
+}
+.section_cont.about_travlog .visual_gsp_travlog .list_ccy:last-child {
+  justify-content: space-evenly;
+  margin-top: 1.6rem;
+}
+.section_cont.about_travlog .visual_gsp_travlog .list_ccy:last-child li {
+  width: auto;
+  padding: 0 0.8rem;
 }
 .section_cont.about_travlog .visual_gsp_travlog.transform {
   animation: itemUp30 0.4s forwards;
@@ -1633,7 +1663,7 @@
   display: block;
   position: absolute;
   left: 0;
-  bottom: -2.2rem;
+  bottom: -2.1rem;
   width: 100%;
   height: 2.2rem;
   background: url('../../images/global/bg_receipt.png') repeat-x 0%;
@@ -1719,7 +1749,7 @@
   animation: itemUp30 0.4s forwards;
 }
 .gsp_travlog_info .atm_info {
-  margin: 3.2rem 0 0;
+  margin: 3.2rem 0 -0.6rem;
   text-align: center;
 }
 .gsp_travlog_info .atm_info .tit_2 {
@@ -1757,22 +1787,31 @@
   line-height: 2.6rem;
 }
 .gsp_travlog_info .atm_info ul {
-  margin: 1.6rem 0 0;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2.4rem 0 0;
+  padding: 0 1.2rem;
 }
 .gsp_travlog_info .atm_info ul li {
-  display: inline-block;
   width: auto;
-  padding: 0 1.5rem;
   font-size: 2.0rem;
   line-height: 2.6rem;
-  font-weight: 700;
 }
-.gsp_travlog_info .atm_info [class^="img_logo"] {
-  display: block;
+.gsp_travlog_info .atm_info ul li + li {
+  margin-left: 4.4vw;
+}
+.gsp_travlog_info .atm_info ul li > p {
+  font-size: 0;
+  line-height: 1;
+  text-align: center;
+}
+.gsp_travlog_info .atm_info ul li > p span + span {
+  margin-left: 0.2rem;
 }
 .gsp_travlog_info .atm_info .btn_txt {
-  padding: 0.8rem 0;
+  padding: 0.8rem 0 1.6rem;
   color: #fff;
+  line-height: 1;
 }
 .gsp_travlog_info .visual_gsp_cashback {
   position: relative;
@@ -3679,6 +3718,15 @@
     width: 35.4rem;
     height: 18.6rem;
     margin-left: -17.7rem;
+  }
+  .section_cont.about_travlog .visual_gsp_travlog .list_ccy {
+    justify-content: space-evenly;
+  }
+  .section_cont.about_travlog .visual_gsp_travlog .list_ccy:last-child {
+    justify-content: center;
+  }
+  .section_cont.about_travlog .visual_gsp_travlog .list_ccy:last-child li {
+    padding: 0 3.2vw;
   }
   .gsp_travlog_info .visual_gsp_cashback {
     height: 14.0rem;
