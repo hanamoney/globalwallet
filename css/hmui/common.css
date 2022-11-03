@@ -142,6 +142,7 @@ body.overflow {
   width: 100%;
   height: 1px;
   background-color: #EBEBEB;
+  opacity: 0.6;
 }
 #header.scrolled .inner_fixed::after {
   content: '';
@@ -2413,6 +2414,7 @@ button.btn_secondary {
   overflow-x: auto;
   overflow-y: hidden;
   border-bottom: 0;
+  padding-right: 0;
 }
 .section_tab.type_scroll .wrap_tab_btn::after {
   content: '';
@@ -2430,13 +2432,14 @@ button.btn_secondary {
 }
 .section_tab.type_scroll .wrap_tab_btn li {
   position: relative;
-  margin-left: 1.7rem;
+  display: block;
+  padding-right: 1.7rem;
 }
-.section_tab.type_scroll .wrap_tab_btn li:first-child {
-  margin-left: 0;
+.section_tab.type_scroll .wrap_tab_btn li:last-child {
+  padding-right: 0;
 }
 .section_tab.type_scroll .wrap_tab_btn li:last-child .btn_tab_box {
-  margin-right: 3.5rem;
+  margin-right: 6.2rem;
 }
 .section_tab.type_scroll .wrap_tab_btn li .btn_tab_box {
   height: 6.0rem;
@@ -2445,20 +2448,6 @@ button.btn_secondary {
   bottom: 0;
   z-index: 100;
 }
-/* .section_tab.type_scroll .wrap_tab_btn li .btn_tab_box::after {
-  display: none;
-}
-.section_tab.type_scroll .wrap_tab_btn li.on::after {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #13C9BE;
-} */
 .section_tab.type_scroll .wrap_tab_all {
   position: relative;
   display: none;

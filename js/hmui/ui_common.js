@@ -580,28 +580,41 @@ var _dropDown = function() {
   */
 var _tabContents = function() {
   var $tabSection;
-  var $tabBtn = $('.wrap_tab_btn').find('.btn_tab_box');
-  var $tabFoldBtn = $('.section_tab').find('.btn_fold');
-  var $tabFoldList = $('.section_tab').find('.wrap_tab_all .btn_tab_list');
+  var $tabBtn = $('.wrap_tab_btn').find('.btn_tab_box'); // 탭버튼
+  var $tabFoldBtn = $('.section_tab').find('.btn_fold'); // 탭 전체메뉴 열기 버튼
+  var $tabFoldList = $('.section_tab').find('.wrap_tab_all .btn_tab_list'); // 탭 전체메뉴 리스트버튼
+  var tabPosX = [0];
+  var tabLi = 0;
 
+  // 스크롤탭 위치 저장
+  if ($('.section_tab.type_scroll').length) {
+    $('.section_tab.type_scroll').find('.wrap_tab_btn li').each(function(idx){
+      tabLi += $(this).outerWidth(true);
+      tabPosX[idx + 1] = tabLi;
+    });
+  }
 
+  // 탭 클릭 시
   $tabBtn.on('click', function() {
     $tabSection = $(this).closest('.section_tab');
     var idx = $(this).closest('li').index(),
-        $tabCont = $tabSection.find('.tab_cont');
+        $tabCont = $tabSection.find('.tab_cont'),
+        $tabList = $(this).closest('.wrap_tab_btn');
 
-    $(this).closest('li').addClass('on').siblings().removeClass('on');
+    _activeScrollBtn($tabList, idx);
     $tabCont.eq(idx).addClass('on').siblings().removeClass('on');
 
+    // TDL_006
     if ($tabSection.hasClass('type_fullpage')) {
       $(document).scrollTop(0);
     }
 
+    // 스크롤 탭
     if ($tabSection.hasClass('type_scroll')) {
-      $(document).scrollTop(0);
-      $('.content_layer').scrollTop(0);
+      var $foldList = $tabSection.find('.wrap_tab_all ul');
 
-      $(this).closest('.section_tab').find('.wrap_tab_all ul li').eq(idx).addClass('on').siblings().removeClass('on');
+      _activeScrollBtn($foldList, idx);
+      _scrollTab($tabList, idx);
     }
 
     // 열려 있는 툴팁 삭제
@@ -610,17 +623,18 @@ var _tabContents = function() {
     }
   });
 
+  // 탭 전체메뉴 클릭 시
   $tabFoldList.on('click', function(){
     var idx = $(this).closest('li').index();
-    $(this).closest('li').addClass('on').siblings().removeClass('on');
-    $(this).closest('.section_tab').find('.wrap_tab_btn li').eq(idx).addClass('on').siblings().removeClass('on');
-    $(this).closest('.wrap_tab_all').slideUp(200).siblings('.btn_fold').removeClass('on');
+    var $foldList = $(this).closest('.wrap_tab_all');
 
-    $(document).scrollTop(0);
-    $('.content_layer').scrollTop(0);
+    $foldList.slideUp(200).siblings('.btn_fold').removeClass('on');
+    _activeScrollBtn($foldList.find('ul'), idx);
+    _activeScrollBtn($('.wrap_tab_btn'), idx);
+    _scrollTab($('.wrap_tab_btn'), idx);
   });
-  
-  //
+
+  // 탭 전체메뉴 펼침
   $tabFoldBtn.on('click', function(){
     if ($(this).hasClass('on')) {
       $(this).removeClass('on')
@@ -629,7 +643,19 @@ var _tabContents = function() {
       $(this).addClass('on')
         .next('.wrap_tab_all').slideDown(200);
     }
-  });  
+  });
+
+  function _scrollTab(el, idx) {
+    el.animate({
+      scrollLeft: tabPosX[idx],
+    },200);
+    $(document).scrollTop(0);
+    $('.content_layer').scrollTop(0);
+  }
+
+  function _activeScrollBtn(el, idx) {
+    el.find('li').eq(idx).addClass('on').siblings().removeClass('on');
+  }
 }
 
 /**
