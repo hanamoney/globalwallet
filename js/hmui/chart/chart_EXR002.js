@@ -5,6 +5,7 @@
  */
 
 'use strict';
+var annotationOpts;
 
 // Max Point
 function maxValue(ctx) {
@@ -40,6 +41,7 @@ var maxPoint = {
 var maxText = {
   type: 'label',
   color: '#FF5166',
+  display: true,
   content: (ctx) => '최고 ' + maxValue(ctx).toFixed(2) + '원',
   font: {
     size: 16
@@ -87,6 +89,7 @@ var minPoint = {
 var minText = {
   type: 'label',
   color: '#308FFF',
+  display: true,
   content: (ctx) => '최저 ' + minValue(ctx).toFixed(2) + '원',
   font: {
     size: 16
@@ -129,19 +132,12 @@ var averageline = {
   },
   scaleID: 'y',
   value: (ctx) => average(ctx),
-  // enter({element}, event) {
-  //   element.label.options.display = false;
-  //   return true;
-  // },
-  // leave({element}, event) {
-  //   element.label.options.display = true;
-  //   return true;
-  // }
 };
 
 // tooltip drag line 
 var tooltipLine = {
   id: 'tooltipLine',
+  type: 'line',
   beforeDraw: function(chart){
     if (chart.tooltip._active && chart.tooltip._active.length) {
       var ctx = chart.ctx;
@@ -236,14 +232,6 @@ function createChart(el, idx, labels, datas) {
       plugins: {
         annotation: {
           clip: false,
-          enter(ctx) {
-            // element = ctx.element;
-            // console.log(element);
-          },
-          leave() {
-            // element = undefined;
-            // lastEvent = undefined;
-          },
           annotations: {
             averageline,
             maxPoint,
@@ -262,10 +250,8 @@ function createChart(el, idx, labels, datas) {
           display: false,
         },
         tooltip: {
-          // enabled: false,
-          // position: 'nearest',
-          // external: externalTooltipHandler
-          mode: 'nearest',
+          enabled: false,
+          mode: 'index',
           intersect: false,
           position: 'custom',
           yAlign: 'bottom',
@@ -292,6 +278,7 @@ function createChart(el, idx, labels, datas) {
     plugins: [tooltipLine]
   });
   chartEXR = chartId;
+  annotationOpts = chartEXR.config.options.plugins.annotation.annotations;
 }
 
 /**
@@ -307,3 +294,40 @@ function createChart(el, idx, labels, datas) {
     });
     el.update();
   }
+
+  var startX,startY,endX,endY;
+  var moving = false;
+  document.querySelector('.line_chart').addEventListener('touchstart', function(e){
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  });
+
+  document.querySelector('.line_chart').addEventListener('touchmove', function(e){
+    
+    endX = e.touches[0].clientX;
+    endY = e.touches[0].clientY;
+    
+    if ( Math.abs(endX - startX) > Math.abs(endY - startY) ) {
+      moving = true;
+      if (e.cancelable) e.preventDefault();
+      chartEXR.config.options.plugins.tooltip.enabled = true;
+      annotationOpts.maxText.display = false;
+      annotationOpts.minText.display = false;
+      annotationOpts.averageline.label.display = false;
+      
+      chartEXR.update();
+    }
+  });
+  
+  document.querySelector('.line_chart').addEventListener('touchend', function(){
+    console.log(chartEXR.config.plugins[0]);
+    chartEXR.config.options.plugins.tooltip.enabled = false;
+    annotationOpts.maxText.display = true;
+    annotationOpts.minText.display = true;
+    annotationOpts.averageline.label.display = true;
+
+    chartEXR.update();
+    moving = false;
+  });
+
+  
