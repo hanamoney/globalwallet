@@ -773,6 +773,16 @@ section[data-roll] {
   height: 2.4rem;
   background-image: url('../../images/hmui/btn_trash.png');
 }
+.btn_ico_search {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url('../../images/hmui/btn_search.png');
+}
+.btn_ico_memo {
+  width: 3.0rem;
+  height: 3.0rem;
+  background-image: url('../../images/hmui/btn_memo.png');
+}
 .btn_info .ico_info {
   margin-left: 0.4rem;
 }
@@ -1274,18 +1284,6 @@ section[data-roll] {
 .chk_round input:checked + label .label {
   color: #13C9BE;
 }
-.chk_list li {
-  margin-top: 1.0rem;
-}
-.chk_list.type_col {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-lines: multiple;
-  flex-wrap: wrap;
-}
-.chk_list.type_col li {
-  width: 50%;
-}
 .chk_star {
   display: inline-block;
   font-size: 0;
@@ -1310,6 +1308,18 @@ section[data-roll] {
 }
 .chk_star input:checked:disabled + label {
   background-image: url('../../images/hmui/btn_star_disabled.png');
+}
+.chk_list li {
+  margin-top: 1.0rem;
+}
+.chk_list.type_col {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  flex-wrap: wrap;
+}
+.chk_list.type_col li {
+  width: 50%;
 }
 
 /* Radio */
@@ -1339,6 +1349,23 @@ section[data-roll] {
   border-color: #4F5D64;
   background-color: #fff;
   color: #000;
+}
+.box_rdo input[type="checkbox"] + label {
+  padding: 1.1rem 1.2rem 1.1rem;
+  text-align: left;
+}
+.box_rdo input[type="checkbox"] + label::before {
+  content: '';
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.6rem;
+  background: url('../../images/hmui/ico_chk_default.png') no-repeat 50%;
+  background-size: 1.6rem;
+  vertical-align: top;
+}
+.box_rdo input[type="checkbox"]:checked + label::before {
+  background-image: url('../../images/hmui/ico_chk_checked.png');
 }
 .rdo_list {
   display: -webkit-box;
@@ -1534,6 +1561,19 @@ section[data-roll] {
 .box_inp.hasVal .inp {
   padding-right: 2.8rem;
 }
+.box_inp.type_box {
+  height: 4.8rem;
+  border-radius: 1.4rem;
+  background-color: #F3F8FA;
+}
+.box_inp.type_box .inp {
+  padding: 1.4rem 1.6rem 1.2rem;
+  font-size: 1.6rem;
+  border-bottom: 0;
+}
+.box_inp.type_box .inp:focus {
+  border-bottom: 0;
+}
 .box_inp.err + .txt_inp_guide {
   padding-left: 17px;
   color: #EC4361;
@@ -1648,6 +1688,30 @@ section[data-roll] {
 .wrap_inp.type_decimal.hasVal .unit,
 .wrap_inp.type_decimal.hasVal .point {
   color: #252E33;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+  display:none;
+}
+.wrap_inp.type_search .btn_ico_search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+.wrap_inp.type_search .box_inp.type_box {
+  padding-right: 4.8rem;
+}
+.wrap_inp.type_search .box_inp.type_box .btn_ico_search {
+  width: 4.8rem;
+  background-size: 2.4rem;
+  background-position: right 1.6rem center;
+}
+.wrap_inp.type_search .box_inp.type_box.show_btn .btn_ico_clear {
+  right: 4.8rem;
 }
 
 /* number spinner */
@@ -2710,7 +2774,10 @@ button.btn_secondary {
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;
 }
-a.wrap_box {
+.wrap_box.type_s {
+  padding: 1.6rem;
+}
+a.wrap_box { 
   padding-right: 4.3rem;
 }
 a.wrap_box [class^="ico_arr_link"],
@@ -3916,6 +3983,16 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   line-height: 2.4rem;
   font-weight: 700;
 }
+.section_form .txt_sub {
+  display: inline-block;
+  margin-top: 0;
+  padding: 0.1rem 0 0 0.6rem;
+  color: #4F5D64;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 400;
+  vertical-align: top;
+}
 .section_form .tit_form_s {
   margin-bottom: -0.2rem;
   font-size: 1.6rem;
@@ -5046,15 +5123,15 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .wrap_filter .filter_list {
   display: inline-block;
-  margin-right: 0.2rem;
+  /* margin-right: 0.2rem; */
   vertical-align: top;
 }
 .wrap_filter .filter_list span {
   position: relative;
   display: inline-block;
   padding: 0 0.8rem 0 1.1rem;
-  font-size: 1.5rem;
-  line-height: 2.2rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
 }
 .wrap_filter .filter_list span::before {
   content: '';
@@ -5066,6 +5143,12 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   height: 0.3rem;
   border-radius: 50%;
   background-color: #6E7D85;
+}
+.wrap_filter .filter_list span:first-child {
+  padding-left: 0;
+}
+.wrap_filter .filter_list span:last-child {
+  padding-right: 0.5rem;
 }
 .wrap_filter .filter_list span:first-child::before {
   display: none;

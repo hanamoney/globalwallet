@@ -716,6 +716,158 @@
 .section_tab.about_hanamoney .wrap_box {
   margin-top: -3.2rem;
 }
+/* TDL_009 카드사용내역 */
+.section_top_info.card_history {
+  margin-top: -5.0rem;
+  padding-top: calc(5.0rem + 3.2rem);
+  background-image: linear-gradient(151.95deg, #E1FAEA 2.61%, #EFCBCB 89.47%);
+  text-align: left;
+}
+.section_top_info.card_history .prd_box_card {
+  padding-bottom: 2.4rem;
+}
+.section_top_info.card_history .prd_box_card .card_img {
+  margin-right: -1.4rem;
+}
+.section_top_info.card_history .prd_box_card .card_img img {
+  margin: 1.2rem -0.45rem 0;
+}
+.section_top_info.card_history .prd_box_card .card_info {
+  padding: 0.1rem 0 0.1rem 1.6rem;
+}
+.section_top_info.card_history .prd_box_card .card_info .card_name {
+  line-height: 1.5;
+}
+.section_top_info.card_history .prd_box_card .card_info .card_num {
+  padding-top: 0;
+  line-height: 1.5;
+}
+.section_top_info.card_history .wrap_box {
+  padding: 1.6rem 1.6rem 1.6rem 2.4rem;
+}
+.section_top_info.card_history .wrap_box li {
+  padding: 0;
+}
+.section_top_info.card_history .wrap_box > .list_info {
+  align-items: center;
+  padding-right: calc(2.4rem + 0.4rem);
+}
+.section_top_info.card_history .wrap_box > .list_info .txt {
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+}
+.section_top_info.card_history .wrap_box > .list_info .btn_tooltip {
+  color: #252E33;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.section_top_info.card_history .wrap_box > .list_info .ico_tooltip {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-size: 2.0rem;
+}
+.section_top_info.card_history .wrap_box .list_info .txt {
+  text-align: right;
+}
+.section_top_info.card_history .btn_acco {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4.0rem;
+  height: 5.4rem;
+  background: url('../../images/hmui/ico_arr_down.png') no-repeat right 1.6rem top 1.6rem;
+  background-size: 2.0rem;
+}
+.section_top_info.card_history .wrap_acco {
+  display: none;
+  padding-top: 2.4rem;
+}
+.section_top_info.card_history .wrap_acco li {
+  margin-top: 1.6rem;
+}
+.section_top_info.card_history .wrap_acco li:first-child {
+  margin-top: 0;
+}
+.section_top_info.card_history .wrap_acco .tit,
+.section_top_info.card_history .wrap_acco .txt {
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+}
+.section_top_info.card_history .wrap_acco .tit {
+  color: #536067;
+}
+.section_list_trans.card_history {
+  padding-top: 1.6rem;
+}
+.section_list_trans.card_history .wrap_inp.type_search {
+  margin: 0 2.4rem;
+  padding-top: 1.6rem;
+}
+.section_list_trans.card_history .list_trans .trans_info > ul > li {
+  padding: 0;
+}
+.section_list_trans.card_history .list_trans .trans_info .hasBtn {
+  padding-right: calc(3.0rem + 1.6rem);
+}
+.section_list_trans.card_history .list_trans .trans_info .btn_ico_memo {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.section_list_trans.card_history .list_trans .trans_info .row {
+  padding-top: 0;
+  padding-left: 2.8rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.section_list_trans.card_history .list_trans .trans_info .row:first-child {
+  padding-left: 0;
+  padding-bottom: 0.4rem;
+}
+.section_list_trans.card_history .list_trans .trans_info .wrap_memo_box {
+  display: block;
+  width: calc(100% - 2.8rem);
+  margin-top: 0.8rem;
+  margin-left: 2.8rem;
+  padding: 1.2rem 2.0rem 1.2rem 1.2rem;
+  border-radius: 1.4rem;
+  background-color: #F3F8FA;
+}
+.section_list_trans.card_history .list_trans .trans_info .wrap_memo_box span {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.section_list_trans.card_history .list_trans li .trans_item {
+  display: block;
+}
+.section_list_trans.card_history .list_trans li .trans_item [class^="ico_cur"] {
+  margin-right: 0.8rem;
+}
+.section_list_trans.card_history .list_trans li .trans_item .txt_amount {
+  font-size: 2.2rem;
+  line-height: 1.5;
+}
+.section_list_trans.card_history .list_trans li .trans_item .txt_amount + .desc {
+  padding-left: 0.4rem;
+}
+.section_list_trans.card_history .list_trans li .trans_item .desc {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.section_list_trans.card_history .list_trans li .trans_item .txt_benefit {
+  color: #13C9BE;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.section_list_trans.card_history .list_trans li.foriegn .trans_item .txt_benefit {
+  color: #844883;
+}
 
 /* [HMN] - 하나머니 메인 */
 .section_moneybag_all {
