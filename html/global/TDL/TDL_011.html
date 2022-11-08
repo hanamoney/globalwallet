@@ -35,19 +35,38 @@
             <div class="wrap_list_trans">
               <div class="list_trans">
                 <div class="trans_info">
-
+                  <ul>
+                    <li>
+                      <div class="trans_item">
+                        <div class="row">
+                          <!-- <span class="txt_ccy"><span class="ico_cur_hanamoney"></span></span>
+                          <span class="txt_amount"><em class="txt_num">99,999,999</em>원</span> -->
+                          <span class="txt_ccy"><span class="ico_cur_usd"></span></span>
+                          <span class="txt_amount">USD <em class="txt_num">999,999,999</em></span>
+                        </div>
+                        <div class="row">
+                          <ul class="desc"><li>미국 치즈케이크</li><li>결제</li></ul>
+                        </div>
+                        <div class="row">
+                          <p class="desc">2022.10.17 11:59</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
             <div class="wrap_inp">
-              <textarea class="inp_textarea" placeholder="거래 내역에 내 추억을 작성해 보세요."></textarea>
-              <p class=""><span>0</span>/30자</p>
+              <div class="box_inp type_box">
+                <textarea id="testID" class="inp textarea" maxlength="30" placeholder="거래 내역에 내 추억을 작성해 보세요."></textarea>
+              </div>
+              <p class="txt_limit"><span>0</span>/30자</p>
             </div>
           </div>
         </div>
         <div class="section_bottom_fixed">
           <div class="wrap_btn_full">
-            <button type="button" class="btn_full_primary fnClosePop">저장하기</button>
+            <button type="button" class="btn_full_primary fnClosePop" disabled>저장하기</button>
           </div>
         </div>
         <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
@@ -59,9 +78,20 @@
   
   
   <script>
+    // textarea value test
+    // $('#testID').val('value test');
+
     // 팝업오픈 퍼블확인용 스크립트
     $(function(){
       fnOpenLayerPop('popupId');
+
+      // textarea block enter
+      $('#testID').on('keypress', function(e){
+        if (e.keyCode == 13) {
+          e.preventDefault();
+        }
+      });
+
     });
   </script>
 </body>

@@ -797,11 +797,14 @@
   color: #536067;
 }
 .section_list_trans.card_history {
-  padding-top: 1.6rem;
+  padding: 1.6rem 0 3.2rem;
 }
 .section_list_trans.card_history .wrap_inp.type_search {
   margin: 0 2.4rem;
   padding-top: 1.6rem;
+}
+.section_list_trans.card_history .wrap_list_trans {
+  padding-bottom: 2.4rem;
 }
 .section_list_trans.card_history .list_trans .trans_info > ul > li {
   padding: 0;
@@ -867,6 +870,21 @@
 }
 .section_list_trans.card_history .list_trans li.foriegn .trans_item .txt_benefit {
   color: #844883;
+}
+.content_layer .section_list_trans.card_history {
+  padding: 0;
+}
+.content_layer .section_list_trans.card_history .list_trans .trans_info {
+  margin-top: 3.0rem;
+}
+.content_layer .section_list_trans.card_history .list_trans li .trans_item .txt_amount {
+  font-size: 1.8rem;
+}
+.content_layer .section_list_trans.card_history .list_trans .trans_info .row:first-child {
+  padding: 0.4rem 0 0.6rem;
+}
+.content_layer .section_list_trans.card_history .wrap_inp {
+  margin: 0 2.4rem;
 }
 
 /* [HMN] - 하나머니 메인 */

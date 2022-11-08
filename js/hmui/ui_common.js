@@ -399,7 +399,9 @@ var _inpChkVal = function(el) {
   $(el).each(function(){
     if ($(this).val() !== '') {
       $(this).closest('.box_inp').addClass('hasVal');
-      $(this).closest('.box_inp').addClass('show_btn');
+      if ($(this).is(':focus')) {
+        $(this).closest('.box_inp').addClass('show_btn');
+      }
     } else {
       $(this).closest('.box_inp').removeClass('hasVal');
       $(this).closest('.box_inp').removeClass('show_btn');
