@@ -175,10 +175,10 @@ function _clearFixedTop(fixedEl, header) {
   */
 var fnStickyTop = function(fixedEl, offsets, scrollTop, posY) {
   var offset, top;
-  top = $(fixedEl).parents('.content_layer').length ? posY * 0.1 : (posY - 1) * 0.1;
+  top = $(fixedEl).parents('.content_layer').length ? posY * 0.1 : posY * 0.1 - 0.1 ;
 
   $(fixedEl).each(function(idx, el){
-    offset = $(fixedEl).parents('.content_layer') ? offsets[idx] - posY : offsets[idx] - posY - 1;
+    offset = $(fixedEl).parents('.content_layer') ? offsets[idx] - posY : offsets[idx] - posY;
 
     if ($('.wrap_filter.fixed').length) { 
       offset = offset - $('.wrap_filter.fixed').outerHeight(true);
