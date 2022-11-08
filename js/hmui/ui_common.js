@@ -31,7 +31,7 @@ $(function(){
 
 var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
-  if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
+  if ( $('.wrap_contents .fnFixedTop').length || $('.wrap_contents .fnStickyTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단고정
   if ( $('.section_bottom_fixed.type_noFullBtn .fnScrollEnd').length ) { _fixedBottomBtnGap(); } // 스크롤에 따른 페이지 하단고정 위치
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
   if ( (iosV() >= 13) && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
@@ -123,7 +123,7 @@ var _fixedTopInPage = function() {
   var $header = $fixedEl.closest('.wrap_contents').siblings('#header').find('.inner_fixed');
   var headerHeight = $(window).width() > 320 ? $('#header').outerHeight(true) : $('#header').outerHeight(true) * 10 / 9;
 
-  var setHeight = headerHeight + parseInt($fixedEl.attr('data-height'));
+  var setHeight = $fixedEl.length ? headerHeight + parseInt($fixedEl.attr('data-height')) : headerHeight;
   
   var offsets = [];
   if ( $stickyEl.length ) {
@@ -133,7 +133,7 @@ var _fixedTopInPage = function() {
   }
 
   $(window).on('scroll', function() {
-    var scrollTop = $(this).scrollTop()
+    var scrollTop = $(this).scrollTop();
     if (scrollTop > 0) {
       _setFixedTop($fixedEl, $header, setHeight);
     } else {
@@ -169,23 +169,36 @@ function _clearFixedTop(fixedEl, header) {
   * @name fnStickyTop()
   * @description 스크롤에 따른 콘텐츠 상단고정
   * @param {element | string} fixedEl 고정할 element
-  * @param {number} fixPos 고정할 element position top
-  * @param {element | string} header 고정헤더 element
-  * @param {setHeight} header 고정헤더 element 변경 height 
+  * @param {Array} offsets 고정할 element position top
+  * @param {number} scrollTop scroll 위치
+  * @param {number} posY 고정할 위치 header 높이
   */
 var fnStickyTop = function(fixedEl, offsets, scrollTop, posY) {
   var offset, top;
-  top = $(fixedEl).parents('.content_layer').length ? posY * 0.1 + 'rem' : (posY - 1) * 0.1 + 'rem';
+  top = $(fixedEl).parents('.content_layer').length ? posY * 0.1 : (posY - 1) * 0.1;
+
   $(fixedEl).each(function(idx, el){
-    offset = $(fixedEl).parents('.content_layer') ? offsets[idx] - posY - 28 : offsets[idx] - posY + $('.head_layer').height();
+    offset = $(fixedEl).parents('.content_layer') ? offsets[idx] - posY : offsets[idx] - posY - 1;
+
+    if ($('.wrap_filter.fixed').length) { 
+      offset = offset - $('.wrap_filter.fixed').outerHeight(true);
+    }
 
     if ($(this).is(':visible')){
-      if (scrollTop >= offset && !$(this).hasClass('fixed')) { 
-        $(this).addClass('fixed').css('top', top);
+      if (scrollTop >= offset - 1 && !$(this).hasClass('fixed')) { 
+        if ($('.wrap_filter.fixed').length) {
+          top = top + ($('.wrap_filter.fixed').outerHeight(true) * 0.1);
+        }
+        $(this).addClass('fixed').css('top', top + 'rem');
+        
+        if ($(this).hasClass('wrap_filter')) {
+          $(this).closest('.section_list_trans').addClass('filterFixed');
+        }
       }
-      if (scrollTop < offset) {
-        if ($(this).hasClass('fixed')) {
-          $(this).removeClass('fixed').css('top','');
+      if (scrollTop < offset  && $(this).hasClass('fixed')) {
+        $(this).removeClass('fixed').css('top','');
+        if ($(this).hasClass('wrap_filter')) {
+          $(this).closest('.section_list_trans').removeClass('filterFixed');
         }
       }
     }

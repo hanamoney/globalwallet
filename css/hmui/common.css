@@ -247,6 +247,7 @@ section[data-roll] {
 .fnStickyTop {
   background-color: #fff;
   z-index: 99;
+  transform: translate3d(0,0,0);
 }
 .fnStickyTop.fixed {
   position: fixed;
@@ -4947,19 +4948,34 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 
 /* 조회 리스트 */
 .section_list_trans {
-  padding: 3.2rem 0 0;
+  padding: 2.4rem 0 0;
+}
+.section_list_trans .wrap_list_trans {
+  /* margin-top: -0.8rem; */
+}
+.section_list_trans.filterFixed {
+  margin-top: 3.6rem;
 }
 .trans_info {
   position: relative;
 }
 .trans_info h4 {
-  /* margin-bottom: 2.4rem; */
+  margin: 0 -2.4rem;
+  padding: 0.8rem 2.4rem;
   color: #849594;
   font-size: 1.4rem;
   line-height: 2.0rem;
 }
+.trans_info h4.fnStickyTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  z-index: 100;
+}
 .trans_info h4 + ul {
-  padding-top: 2.4rem;
+  padding-top: 1.6rem;
 }
 .trans_info .row {
   position: relative;
@@ -5122,11 +5138,11 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   font-weight: 700;
 }
 .list_trans .trans_info {
-  margin-top: 2.4rem;
-  padding: 0 2.4rem;
+  margin-top: 1.6rem;
+  padding: 3.6rem 2.4rem 0;
 }
 .list_trans .trans_info + .trans_info {
-  margin-top: 3.0rem;
+  margin-top: 2.2rem;
 }
 .list_trans .trans_info .tit {
   flex: 1;
@@ -5140,15 +5156,28 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   text-overflow: ellipsis;
 }
 .list_trans .trans_info .fnStickyTop.fixed { 
+  position: fixed;
+  margin: 0;
   padding: 0.8rem 2.4rem;
 }
+/* .list_trans .trans_info .fnStickyTop.fixed::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(235,235,235,0.6);
+} */
 .list_trans .trans_info .fnStickyTop.fixed + ul {
-  margin-top: 2.0rem;
+  /* padding-top: calc(1.6rem + 3.6rem); */
 }
 
 /* 조회 필터 */
 .wrap_filter {
-  padding: 0 2.4rem;
+  padding: 0.8rem 2.4rem;
   text-align: right;
 }
 .wrap_filter .filter_list {
@@ -5186,6 +5215,17 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .wrap_filter .btn_ico_filter {
   margin-right: -0.2rem;
 }
+.wrap_filter.fnStickyTop.fixed::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(235,235,235,0.6);
+}
 .skeletonLoading .skeleton-item {
   border-radius: 0.8rem;
   background-color: #f6f6f6;
@@ -5214,7 +5254,10 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .skeletonLoading .trans_info h4 {
   height: 2.4rem;
-  margin-bottom: 1.7rem;
+  margin-bottom: 1.6rem;
+}
+.skeletonLoading .trans_info > ul {
+  padding-top: 0;
 }
 .skeletonLoading .trans_info > ul > li.skeleton-item {
   height: 6.4rem;
@@ -5357,10 +5400,13 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   margin-right: 0;
   margin-bottom: 0.4rem;
 }
+.section_moneybag .swiper-container {
+  padding-top: 0.8rem;
+}
 .section_moneybag .box_moneybag {
   position: relative;
   /* overflow: hidden; */
-  margin: 0.8rem 2.4rem 0;
+  margin: 0 2.4rem 0;
   padding: 1.6rem 2.0rem 0;
   border-radius: 1.4rem;
   background-color: rgba(255,255,255,0.7);
