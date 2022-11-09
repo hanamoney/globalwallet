@@ -1164,6 +1164,38 @@
   background: url('../../images/global/img_ordermoneybag_bg1.png') no-repeat left top;
   background-size: 37.5rem auto;
 }
+.wrap_coachmark.orderMoneybag .bg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../images/global/img_ordermoneybag_bg2.png') no-repeat right top;
+  background-size: 37.5rem auto;
+}
+.wrap_coachmark.orderMoneybag .bg .refresh {
+  display: block;
+  position: absolute;
+  top: 1.6rem;
+  right: 2.4rem;
+  width: 13.3rem;
+  height: 2.8rem;
+  background: url('../../images/global/img_ordermoneybag_step3.png') no-repeat center;
+  background-size: auto 2.8rem;
+}
+.wrap_coachmark.orderMoneybag .bg .refresh::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.6rem;
+  right: 1.2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url('../../images/hmui/ico_refresh_2.png') no-repeat center;
+  background-size: 1.6rem;
+}
 .wrap_coachmark.orderMoneybag .txt {
   font-size: 1.8rem;
   line-height: 1.5;
@@ -1180,12 +1212,14 @@
   opacity: 1;
 }
 .wrap_coachmark.orderMoneybag .stepbox.on .img_gesture_press {
-  transform: rotate(0deg) translate3d(0, 0.3rem, 0.1rem);
+  animation: orderMoneybagPress linear 0.3s 0.1s forwards;
+  opacity: 1;
 }
 .wrap_coachmark.orderMoneybag .img_gesture_press {
   position: absolute;
-  transform: rotate(5deg) translate3d(0, 0, 0);
-  transition: transform 0.2s 0.15s;
+  opacity: 0;
+  transform: translateY(0.6rem);
+  transition: opacity 0.2s 0.15s;
 }
 .wrap_coachmark.orderMoneybag .step1 {
   top: 29.2rem;
@@ -1196,7 +1230,7 @@
 }
 .wrap_coachmark.orderMoneybag .step1 .guide_image {
   position: relative;
-  padding-right: 3.8rem;
+  padding-right: 3.0rem;
 }
 .wrap_coachmark.orderMoneybag .step1 .circle {
   display: inline-block;
@@ -1218,14 +1252,14 @@
   background-size: 2.4rem;
 }
 .wrap_coachmark.orderMoneybag .step1 .img_gesture_press {
-  top: 2.0rem;
-  right: 0.8rem;
+  bottom: -3.0rem;
+  right: 0.9rem;
 }
 .wrap_coachmark.orderMoneybag .step1 .txt {
-  padding-top: 3.0rem;
+  padding-top: 0.5rem;
 }
 .wrap_coachmark.orderMoneybag .step1.on .circle::after {
-  animation: orderMoneybagStep1 0.4s 0.2s forwards;
+  animation: orderMoneybagStep1 0.2s 0.45s forwards;
 }
 .wrap_coachmark.orderMoneybag .step2 {
   top: 47.8rem;
@@ -1243,7 +1277,7 @@
   width: 1.6rem;
   height: 2.5rem;
   background: url('../../images/global/img_ordermoneybag_arrow.png') no-repeat 50%;
-  transition: opacity 0.2s 0.2s, transform;
+  transition: opacity 0.3s 0.4s, transform;
   background-size: auto 2.5rem;
 }
 .wrap_coachmark.orderMoneybag .step2 .box {
@@ -1275,36 +1309,76 @@
   bottom: calc(-1.8rem + 4.6rem);
   left: calc(50% + 8.0rem);
 }
+.wrap_coachmark.orderMoneybag .step2 .img_gesture_press::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4.8rem;
+  height: 4.8rem;
+  background: url('../../images/global/img_ordermoneybag_press.png') no-repeat left top;
+  background-size: 4.8rem;
+  opacity: 0;
+  transition: opacity 0.3s 0.3s;
+}
+.wrap_coachmark.orderMoneybag .step2.on .img_gesture_press::before {
+  opacity: 1;
+}
 .wrap_coachmark.orderMoneybag .step2.on .arrow {
   visibility: visible;
   opacity: 1;
-  animation: orderMoneybagArrTop linear 0.5s 0.15s 2 forwards;
+  animation: orderMoneybagArrTop linear 0.4s 0.4s 2 forwards;
 }
 .wrap_coachmark.orderMoneybag .step2.on .box + .arrow {
-  animation: orderMoneybagArrBottom linear 0.5s 0.15s 2 forwards;
+  animation: orderMoneybagArrBottom linear 0.4s 0.4s 2 forwards;
 }
 .wrap_coachmark.orderMoneybag .step3 {
-  top: 1.6rem;
-  right: 1.2rem;
+  top: 1.2rem;
+  right: 2.0rem;
   text-align: right;
 }
 .wrap_coachmark.orderMoneybag .step3 .circle {
   display: inline-block;
-  width: 15.7rem;
-  height: 5.2rem;
-  padding: 1.2rem;
+  width: 14.1rem;
+  height: 3.6rem;
+  padding: 0.4rem;
   border: 1px dashed #13C9BE;
-  border-radius: 2.6rem;
+  border-radius: 1.8rem;
   background: #403B71 url('../../images/global/img_ordermoneybag_step3.png') no-repeat center;
   background-size: auto 2.8rem;
 }
+.wrap_coachmark.orderMoneybag .step3 .circle::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 1.0rem;
+  right: 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url('../../images/hmui/ico_refresh_2.png') no-repeat center;
+  background-size: 1.6rem;
+}
 .wrap_coachmark.orderMoneybag .step3 .img_gesture_press {
-  top: 4.0rem;
+  top: 2.4rem;
   right: -0.8rem;
 }
 .wrap_coachmark.orderMoneybag .step3 .txt {
   padding-top: 1.5rem;
   padding-right: 5.0rem;
+}
+.wrap_coachmark.orderMoneybag .step3.on .circle::after {
+  animation: rotate360 cubic-bezier(0.24, 0, 0.5, 1) 1s 0.4s 2 reverse;
+  transform-origin: 0.75rem 0.75rem;
+}
+@keyframes orderMoneybagPress {
+  0% {
+    transform: rotate(0deg) translateY(1.2rem);
+  } 68% {
+    transform: rotate(4deg) translateY(-0.4rem);
+  } 100% {
+    transform: rotate(0deg) translateY(0);
+  }
 }
 @keyframes orderMoneybagStep1 {
   from {
