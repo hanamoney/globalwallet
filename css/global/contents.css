@@ -932,8 +932,6 @@
   width: 100%;
 }
 .wrap_moneybag_none .wrap_box_opacity {
-  /* position: absolute; */
-  /* width: calc(100% - 4.8rem); */
   width: 100%;
   margin-top: 1.6rem;
   z-index: 10;
@@ -970,15 +968,6 @@
   right: 2.0rem;
   transform: translateY(-50%);
 }
-/* .section_moneybag_all.type_day {
-  background: linear-gradient(135deg, #5CE4C9 0%, #DD87E3 100%);
-}
-.section_moneybag_all.type_day .wrap_msg_info .btn_primary {
-  background-color: #4F5D64;
-}
-.section_moneybag_all.type_night {
-  background: linear-gradient(165.96deg, #237373 0%, #5D3979 100%);
-} */
 .section_moneybag_all .wrap_box_opacity {
   background-color: rgba(0,0,0,0.15);
 }
@@ -1014,33 +1003,6 @@
 .hmn_travlog_info .wrap_btn.type_full .btn_box_m {
   width: 100%;
 }
-/* .wrap_moneybag_all .list_moneybag {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100vw;
-  text-align: center;
-  transform: translateY(-70%);
-} */
-/* .wrap_moneybag_all .list_moneybag::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 74%;
-  z-index: 10;
-  width: 24.72vh;
-  max-width: 17.8rem;
-  height: 70%;
-  max-height: 19.8rem;
-  background: url('../../images/global/visual_hmn_rocket.png') no-repeat 50%;
-  background-size: 100%;
-  user-select: none;
-  pointer-events: none;
-  will-change: transform;
-  transform-origin: bottom right;
-  animation: itemUp30 0.6s ease-in-out, floating5 6s 0.8s ease-in-out infinite;
-} */
 .wrap_moneybag_all {
   padding-bottom: calc(env(safe-area-inset-bottom) + 6.4rem);
 }
@@ -1128,9 +1090,6 @@
   padding: 1.6rem 0 1.6rem 4.2rem;
   text-align: left;
 }
-/* .wrap_moneybag_all a.txt_ccy.empty {
-  background-color: rgba(37, 46, 51, 0.4);
-} */
 .wrap_moneybag_all .txt_ccy [class^="ico_"] {
   left: 0;
   width: 3.0rem;
@@ -1187,36 +1146,197 @@
   background-size: 100%;
   transform: translate(-50%, -50%);
 }
-
-/* .wrap_moneybag_all .txt_center {
-  position: absolute;
-  bottom: 9.4rem;
-  left: 0;
-  width: 100%;
-  color: #fff;
-  font-size: 15px;
-  line-height: 20px;
-  text-align: center;
-} */
-/* .wrap_moneybag_all .visual_hmn_moneybag::before {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 4.8rem;
-  left: 50%;
-  width: 136.66vw;
-  height: 85.42vh;
-  background: url('../../images/global/visual_hmn_102.png') no-repeat 50%;
-  background-size: auto 100%;
-  transform: translateX(-50%);
-  user-select: none;
-  pointer-events: none;
-} */
 .wrap_layer:not(.show) .wrap_moneybag_all .visual_hmn_moneybag::before,
 .wrap_layer:not(.show) .wrap_moneybag_all .list_moneybag,
 .wrap_layer:not(.show) .wrap_moneybag_all .list_moneybag::after {
   display: none;
 }
+.wrap_coachmark.orderMoneybag {
+  background-image: linear-gradient(345.96deg, #2A3C69 0%, #5D3979 100%);
+}
+.wrap_coachmark.orderMoneybag .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: url('../../images/global/img_ordermoneybag_bg1.png') no-repeat left top;
+  background-size: 37.5rem auto;
+}
+.wrap_coachmark.orderMoneybag .txt {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.wrap_coachmark.orderMoneybag .stepbox {
+  position: fixed;
+  font-size: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.wrap_coachmark.orderMoneybag .stepbox.on {
+  visibility: visible;
+  opacity: 1;
+}
+.wrap_coachmark.orderMoneybag .stepbox.on .img_gesture_press {
+  transform: rotate(0deg) translate3d(0, 0.3rem, 0.1rem);
+}
+.wrap_coachmark.orderMoneybag .img_gesture_press {
+  position: absolute;
+  transform: rotate(5deg) translate3d(0, 0, 0);
+  transition: transform 0.2s 0.15s;
+}
+.wrap_coachmark.orderMoneybag .step1 {
+  top: 29.2rem;
+  left: 1.1rem;
+}
+.wrap_coachmark.orderMoneybag .step1 .inner {
+  display: flex;
+}
+.wrap_coachmark.orderMoneybag .step1 .guide_image {
+  position: relative;
+  padding-right: 3.8rem;
+}
+.wrap_coachmark.orderMoneybag .step1 .circle {
+  display: inline-block;
+  width: 5.8rem;
+  height: 5.8rem;
+  border-radius: 50%;
+  border: 1px dashed #13C9BE;
+  background-color: #403B71;
+}
+.wrap_coachmark.orderMoneybag .step1 .circle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5.8rem;
+  height: 5.8rem;
+  border-radius: 50%;
+  background: url('../../images/hmui/btn_star_off.png') no-repeat center;
+  background-size: 2.4rem;
+}
+.wrap_coachmark.orderMoneybag .step1 .img_gesture_press {
+  top: 2.0rem;
+  right: 0.8rem;
+}
+.wrap_coachmark.orderMoneybag .step1 .txt {
+  padding-top: 3.0rem;
+}
+.wrap_coachmark.orderMoneybag .step1.on .circle::after {
+  animation: orderMoneybagStep1 0.4s 0.2s forwards;
+}
+.wrap_coachmark.orderMoneybag .step2 {
+  top: 47.8rem;
+  left: 0;
+  padding: 0 1.2rem;
+  text-align: center;
+}
+.wrap_coachmark.orderMoneybag .step2 .guide_image {
+  padding: 1.3rem 0;
+}
+.wrap_coachmark.orderMoneybag .step2 .arrow {
+  visibility: hidden;
+  opacity: 0;
+  display: inline-block;
+  width: 1.6rem;
+  height: 2.5rem;
+  background: url('../../images/global/img_ordermoneybag_arrow.png') no-repeat 50%;
+  transition: opacity 0.2s 0.2s, transform;
+  background-size: auto 2.5rem;
+}
+.wrap_coachmark.orderMoneybag .step2 .box {
+  position: relative;
+  display: block;
+  width: calc(100vw - 2.4rem);
+  height: 7.2rem;
+  margin: 0.8rem 0;
+  border-radius: 1.4rem;
+  background: #403B71 url('../../images/global/img_ordermoneybag_step2.png') no-repeat 1.2rem 50%;
+  background-size: auto 4.1rem;
+}
+.wrap_coachmark.orderMoneybag .step2 .box::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url('../../images/hmui/btn_more_w.png') no-repeat 50%;
+  background-size: 100%;
+  transform: translateY(-50%);
+}
+.wrap_coachmark.orderMoneybag .step2 .box + .arrow {
+  transform: rotate(180deg);
+}
+.wrap_coachmark.orderMoneybag .step2 .img_gesture_press {
+  bottom: calc(-1.8rem + 4.6rem);
+  left: calc(50% + 8.0rem);
+}
+.wrap_coachmark.orderMoneybag .step2.on .arrow {
+  visibility: visible;
+  opacity: 1;
+  animation: orderMoneybagArrTop linear 0.5s 0.15s 2 forwards;
+}
+.wrap_coachmark.orderMoneybag .step2.on .box + .arrow {
+  animation: orderMoneybagArrBottom linear 0.5s 0.15s 2 forwards;
+}
+.wrap_coachmark.orderMoneybag .step3 {
+  top: 1.6rem;
+  right: 1.2rem;
+  text-align: right;
+}
+.wrap_coachmark.orderMoneybag .step3 .circle {
+  display: inline-block;
+  width: 15.7rem;
+  height: 5.2rem;
+  padding: 1.2rem;
+  border: 1px dashed #13C9BE;
+  border-radius: 2.6rem;
+  background: #403B71 url('../../images/global/img_ordermoneybag_step3.png') no-repeat center;
+  background-size: auto 2.8rem;
+}
+.wrap_coachmark.orderMoneybag .step3 .img_gesture_press {
+  top: 4.0rem;
+  right: -0.8rem;
+}
+.wrap_coachmark.orderMoneybag .step3 .txt {
+  padding-top: 1.5rem;
+  padding-right: 5.0rem;
+}
+@keyframes orderMoneybagStep1 {
+  from {
+    background-image: url('../../images/hmui/btn_star_off.png');
+  } to {
+    background-image: url('../../images/hmui/btn_star_on.png');
+  }
+}
+@keyframes orderMoneybagArrTop {
+  0% {
+    transform: translateY(0);
+  } 50% {
+    transform: translateY(-0.6rem);
+  } 100% {
+    transform: translateY(0);
+  }
+}
+@keyframes orderMoneybagArrBottom {
+  0% {
+    transform: translateY(0) rotate(180deg);
+  } 50% {
+    transform: translateY(0.6rem) rotate(180deg);
+  } 100% {
+    transform: translateY(0) rotate(180deg);
+  }
+}
+@media screen and (max-height: 667px) {
+  .wrap_coachmark.orderMoneybag .step2 {
+    top: 40.5rem;
+  }
+}
+/* 메인 이벤트팝업 */
 .wrap_banner.hmn_201 {
   background: url('../../images/global/bg_hmn_201.png') no-repeat 50%;
   background-size: cover;

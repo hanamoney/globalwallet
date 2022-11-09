@@ -42,7 +42,7 @@
             <div class="wrap_moneybag_all">
               <h2 class="blind">하나머니 전체보기</h2>
               <div class="wrap_btn type_justify">
-                <button type="button" class="btn_ico_howto left"><span>사용법</span><span class="ico_tap"></span></button>
+                <button type="button" class="btn_ico_howto left" data-name="coachmark"><span>사용법</span><span class="ico_tap"></span></button>
                 <button type="button" class="btn_ico_reordering right"><span>잔액기준 재정렬</span><span class="ico_refresh_2"></span></button>
               </div>
               <div class="list_moneybag wrap_show">
@@ -184,6 +184,40 @@
         </div>
         <button class="btn_close_txt type_bottom fnClosePop"><span>닫기</span><span class="btn_ico_close_wxs"></span></button><!-- 22.11.00 버튼 마크업 변경 -->
       </div>
+
+      <div id="coachmark" class="wrap_coachmark orderMoneybag">
+        <div class="bg"></div>
+        <div class="stepbox step1">
+          <div class="inner">
+            <div class="guide_image">
+              <span class="circle"></span>
+              <span class="img_gesture_press"></span>
+            </div>
+            <p class="txt">별을 켜면 해당 통화가<br>홈 화면에 나타나요.</p>
+          </div>
+        </div>
+        <div class="stepbox step2">
+          <div class="inner">
+            <p class="txt">꾸~욱 눌러서 내가 원하는 대로<br>순서를 조정할 수도 있어요.</p>
+            <div class="guide_image">
+              <span class="arrow"></span>
+              <span class="box"></span>
+              <span class="arrow"></span>
+              <span class="img_gesture_press"></span>
+            </div>
+          </div>
+        </div>
+        <div class="stepbox step3">
+          <div class="inner">
+            <div class="guide_image">
+              <span class="circle"></span>
+              <span class="img_gesture_press"></span>
+            </div>
+            <p class="txt">잔액 순서로 한번에 정렬하고 싶다면<br>재정렬 버튼을 눌러보세요.</p>
+          </div>
+        </div>
+        <button type="button" class="btn_ico_close"><span class="blind">닫기</span></button>
+      </div>
     </div>
     <!-- // popup -->
     
@@ -208,7 +242,27 @@
         setTimeout(function(){
           $(this).removeClass('loading');
         }.bind(this),2000);
-      }); 
+      });
+
+      // 코치마크
+      var $el = $('.wrap_coachmark');
+      var $btn = $('.btn_ico_howto');
+
+      $btn.on('click', function(){
+        $el = $('#' + $(this).data('name'));
+        $el.addClass('on');
+        $el.find('.stepbox').each(function(idx, el) {
+          setTimeout(function(){
+            $(el).addClass('on');
+          }, idx*1200 );
+        });
+      });
+
+      $el.find('.btn_ico_close').on('click', function(){
+        $el.removeClass('on')
+          .find('.stepbox').removeClass('on');
+        $btn.focus();
+      });
 
       // 순서변경
       // 별 체크 클릭 시
