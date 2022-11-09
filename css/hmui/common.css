@@ -5160,6 +5160,10 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   margin: 0;
   padding: 0.8rem 2.4rem;
 }
+.list_trans .trans_info .fnStickyTop.after {
+  border-top: 1px solid rgba(235, 235, 235, 0.6);
+  box-shadow: 0 0.2rem 0.4rem rgba(204, 204, 204, 0.25);
+}
 /* .list_trans .trans_info .fnStickyTop.fixed::before {
   content: '';
   display: block;

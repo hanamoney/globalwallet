@@ -185,15 +185,21 @@ var fnStickyTop = function(fixedEl, offsets, scrollTop, posY) {
     }
 
     if ($(this).is(':visible')){
-      if (scrollTop >= offset - 1 && !$(this).hasClass('fixed')) { 
+      if (scrollTop >= offset && !$(this).hasClass('fixed')) { 
+        // 고정 필터 있는 경우 필터 다음으로 높이 조정
         if ($('.wrap_filter.fixed').length) {
           top = top + ($('.wrap_filter.fixed').outerHeight(true) * 0.1);
         }
         $(this).addClass('fixed').css('top', top + 'rem');
-        
+        // 필터 고정 후 높이만큼 간격조정 
         if ($(this).hasClass('wrap_filter')) {
           $(this).closest('.section_list_trans').addClass('filterFixed');
         }
+      }
+      if ($('.trans_info h4.fixed').length && scrollTop + 36 >= offset && !$(this).hasClass('fixed')) {
+        $(this).addClass('after');
+      } else {
+        $(this).removeClass('after');
       }
       if (scrollTop < offset  && $(this).hasClass('fixed')) {
         $(this).removeClass('fixed').css('top','');
