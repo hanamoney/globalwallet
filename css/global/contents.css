@@ -1320,10 +1320,9 @@
   background: url('../../images/global/img_ordermoneybag_press.png') no-repeat left top;
   background-size: 4.8rem;
   opacity: 0;
-  transition: opacity 0.3s 0.3s;
 }
 .wrap_coachmark.orderMoneybag .step2.on .img_gesture_press::before {
-  opacity: 1;
+  animation: orderMoneybagLongPress 2s 0.2s 1 forwards;
 }
 .wrap_coachmark.orderMoneybag .step2.on .arrow {
   visibility: visible;
@@ -1378,6 +1377,17 @@
     transform: rotate(4deg) translateY(-0.4rem);
   } 100% {
     transform: rotate(0deg) translateY(0);
+  }
+}
+@keyframes orderMoneybagLongPress {
+  0% {
+    opacity: 0;
+  } 35% {
+    opacity: 1;
+  } 70% {
+    opacity: 0;
+  } 100% {
+    opacity: 1;
   }
 }
 @keyframes orderMoneybagStep1 {
