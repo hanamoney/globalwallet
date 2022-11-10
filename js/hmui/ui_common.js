@@ -1149,7 +1149,7 @@ var fnOpenLayerPop = function(popID) {
     var popup = $(this).closest('.wrap_layer');
     var popupID = $(this).closest('.wrap_layer').attr('id');
     // bottom sheet를 제외한 레이어 dim 클릭시 닫힘 기능 없음
-    if (popup.hasClass('type_alert') || popup.hasClass('type_center') || popup.hasClass('type_full')) { 
+    if (popup.hasClass('type_alert') || popup.hasClass('type_center') || popup.hasClass('type_full') || popup.hasClass('fnBlockDimClose')) { 
       return;
     }
     // select option list 레이어 인 경우 닫을 시 선택값 체크
