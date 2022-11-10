@@ -1308,6 +1308,11 @@
 .wrap_coachmark.orderMoneybag .step2 .img_gesture_press {
   bottom: calc(-1.8rem + 4.6rem);
   left: calc(50% + 8.0rem);
+  transform: translateY(1.0rem);
+  transform-origin: right bottom;
+}
+.wrap_coachmark.orderMoneybag .step2.on .img_gesture_press {
+  animation: orderMoneybagPress2 linear 0.3s 0.1s forwards;
 }
 .wrap_coachmark.orderMoneybag .step2 .img_gesture_press::before {
   content: '';
@@ -1377,6 +1382,15 @@
     transform: rotate(-4deg) translateY(0.4rem);
   } 100% {
     transform: rotate(0deg) translateY(0);
+  }
+}
+@keyframes orderMoneybagPress2 {
+  0% {
+    transform: rotate(8deg) translateY(1.0rem) translateX(1.0rem);
+  } 68% {
+    transform: rotate(8deg) translateY(0.4rem);
+  } 100% {
+    transform: rotate(0deg) translateY(0) translateX(0);
   }
 }
 @keyframes orderMoneybagLongPress {
