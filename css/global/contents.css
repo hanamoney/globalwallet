@@ -1218,7 +1218,7 @@
 .wrap_coachmark.orderMoneybag .img_gesture_press {
   position: absolute;
   opacity: 0;
-  transform: translateY(0.6rem);
+  transform: translateY(-1.2rem);
   transition: opacity 0.2s 0.15s;
 }
 .wrap_coachmark.orderMoneybag .step1 {
@@ -1372,9 +1372,9 @@
 }
 @keyframes orderMoneybagPress {
   0% {
-    transform: rotate(0deg) translateY(1.2rem);
+    transform: rotate(0deg) translateY(-1.2rem);
   } 68% {
-    transform: rotate(4deg) translateY(-0.4rem);
+    transform: rotate(-4deg) translateY(0.4rem);
   } 100% {
     transform: rotate(0deg) translateY(0);
   }
