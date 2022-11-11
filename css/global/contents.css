@@ -797,7 +797,10 @@
   color: #536067;
 }
 .section_list_trans.card_history {
-  padding: 0.8rem 0 3.2rem;
+  padding: calc(0.8rem + 3.8rem) 0 3.2rem;
+}
+.section_list_trans.card_history .wrap_filter {
+  top: 0.7rem;
 }
 .section_list_trans.card_history .wrap_inp.type_search {
   margin: 0 2.4rem 2.4rem;
