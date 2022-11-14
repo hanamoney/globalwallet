@@ -3689,7 +3689,14 @@
   text-align: right;
 }
 .wrap_top_info.exr_info .exch_rate_info .txt_amount_gap {
+  display: flex;
+  justify-content: flex-start;
   margin-top: 0.4rem;
+}
+.wrap_top_info.exr_info .exch_rate_info .txt_amount_gap span:first-child {
+  display: inline-block;
+  width: 6.4rem;
+  margin-right: 0.6rem;
 }
 .wrap_top_info.exr_info .exch_rate_info .txt_type {
   margin-bottom: 0.4rem;
