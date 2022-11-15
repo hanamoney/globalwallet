@@ -803,8 +803,8 @@
   top: 0.7rem;
 }
 .section_list_trans.card_history .wrap_inp.type_search {
-  margin: 0 2.4rem 2.4rem;
-  padding-top: 1.6rem;
+  margin: 0 2.4rem;
+  padding: 0.8rem 0 1.6rem;
 }
 .section_list_trans.card_history .wrap_list_trans {
   margin-top: 0;
@@ -878,8 +878,12 @@
 .content_layer .section_list_trans.card_history {
   padding: 0;
 }
+.content_layer .section_list_trans.card_history .wrap_list_trans {
+  padding-bottom: 1.6rem;
+}
 .content_layer .section_list_trans.card_history .list_trans .trans_info {
   margin-top: 3.0rem;
+  padding-top: 0;
 }
 .content_layer .section_list_trans.card_history .list_trans li .trans_item .txt_amount {
   font-size: 1.8rem;
@@ -3040,6 +3044,9 @@
 .section_top_info.vdb_saved {
   background: linear-gradient(157.38deg, #BBDDF2 -12.44%, #C3E1E2 48.65%, #EEF6EB 103.7%);
 }
+.section_list_trans.vdb_saved {
+  padding-top: 2.4rem;
+}
 .section_list_trans.vdb_saved .txt_amount.add {
   color: #844883;
 }
@@ -4088,7 +4095,11 @@
     backdrop-filter: blur(20px);
   }
 }
-
+@media screen and (max-width:320px) {
+  .section_top_info.card_history .list_info .tit {
+    padding-right: 0;
+  }
+}
 @media screen and (min-width:400px) {
   .my_benefit_info.no_saved .bubble,
   .my_benefit_info.no_accum .bubble {

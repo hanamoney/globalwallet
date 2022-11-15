@@ -253,8 +253,11 @@ section[data-roll] {
   top: 4.9rem;
   left: 0;
   right: 0;
-  z-index: 98;
+  z-index: 8;
   box-shadow: 0 0.2rem 0.4rem rgba(204, 204, 204, 0.25);
+}
+.fnStickyTop.fixed.prev {
+  box-shadow: none;
 }
 .page_full_flex {
   display: flex;
@@ -2484,6 +2487,7 @@ button.btn_secondary {
   position: fixed;
   right: 0;
   left: 0;
+  background-color: #fff;
 }
 .section_tab.type_scroll .btn_fold {
   position: fixed;
@@ -2581,6 +2585,16 @@ button.btn_secondary {
 }
 .section_tab.type_scroll .wrap_tab_all li.on .btn_tab_list {
   color: #000;
+}
+.section_tab.type_scroll.scrolled::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 1px;
+  background-color: #EBEBEB;
+  opacity: 0.6;
 }
 .section_tab_cont {
   padding: 0;
@@ -4966,11 +4980,11 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .trans_info h4.fnStickyTop {
   position: absolute;
-  top: 0;
+  top: 0.8rem;
   left: 0;
   right: 0;
   margin: 0;
-  z-index: 100;
+  z-index: 9;
 }
 .trans_info h4 + ul {
   padding-top: 1.6rem;
@@ -5136,13 +5150,16 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   font-weight: 700;
 }
 .list_trans .tit_divider + .trans_info {
-  padding-top: 1.6rem;
+  padding-top: calc(1.6rem + 3.6rem);
+}
+.list_trans .tit_divider + .trans_info h4.fnStickyTop {
+  top: 1.6rem;
 }
 .list_trans .trans_info {
   padding: calc(0.8rem + 3.6rem) 2.4rem 1.6rem;
 }
 .list_trans .trans_info + .trans_info {
-  padding-top: 0;
+  padding-top: calc(0rem + 3.6rem);
 }
 .list_trans .trans_info .tit {
   flex: 1;
@@ -5248,7 +5265,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .skeletonLoading .trans_info h4 {
   height: 2.4rem;
-  margin-bottom: 1.6rem;
+  margin: -2.4rem 0 1.6rem;
 }
 .skeletonLoading .trans_info > ul {
   padding-top: 0;

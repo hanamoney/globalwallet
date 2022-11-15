@@ -161,68 +161,43 @@ function _clearFixedTop(fixedEl, header) {
   * @name fnStickyTop()
   * @description 스크롤에 따른 콘텐츠 상단고정 position 설정
   * @param {element | string} fixedEl 고정할 element
+  * @param {number} scrollTop scroll 위치
   * @param {number} setHeight header 높이
   */
 var fnStickyTop = function(fixedEl, scrollTop, setHeight) {
-  var top = $(fixedEl).parents('.content_layer').length ? setHeight * 0.1 : setHeight * 0.1 - 0.1;
-  
+  // var scrollTop = scrollTop;
+  var top = setHeight * 0.1 - 0.1;
+  var filterHeight = $('.wrap_filter').outerHeight(true);
+
   $(fixedEl).each(function(idx, el){
-    var offset = $(this).offset().top;
-    if (scrollTop >= offset - setHeight && !$(this).hasClass('fixed')) {
+    var offset = $(this).offset().top - setHeight;
+    // layer popup인 경우
+    if ($(fixedEl).parents('.content_layer').length) {
+      var content = $(fixedEl).parents('.content_layer');
+      offset = !$(this).hasClass('wrap_filter') && $('.wrap_filter.fixed').length
+        ? offset - content.offset().top + scrollTop - filterHeight
+        : offset - content.offset().top + scrollTop;
+    } else {
+      // page인 경우
+      offset = !$(this).hasClass('wrap_filter') && $('.wrap_filter.fixed').length 
+        ? offset - filterHeight
+        : offset;
+    }
+
+    if (scrollTop >= offset && !$(this).hasClass('fixed')) {
       // 고정 필터 있는 경우 필터 다음으로 높이 조정
       if (!$(this).hasClass('wrap_filter') && $('.wrap_filter').length ) {
-        $(this).css('top', top + ($('.wrap_filter').outerHeight(true) * 0.1) + 'rem');
+        $(this).css('top', top + (filterHeight * 0.1) + 'rem');
       } else {
         $(this).css('top', top + 'rem');
       }
-      $(el).addClass('fixed').attr('data-offset', offset - setHeight);
+      $(el).addClass('fixed').attr('data-offset', offset);
     }
-    if (scrollTop < $(this).data('offset') && $(this).hasClass('fixed')) {
+
+    if (scrollTop < $(this).attr('data-offset') && $(this).hasClass('fixed')) {
       $(this).removeClass('fixed').css('top','');
     }
   });
-
-  // var top = $(fixedEl).parents('.content_layer').length ? posY * 0.1 : posY * 0.1 - 0.1 ;
-  // $(fixedEl).each(function(idx, el) {
-  //   // filter
-  //   if (!$(this).hasClass('wrap_filter') && $('.wrap_filter').length ) {
-  //     $(this).css('top', top + ($('.wrap_filter').outerHeight(true) * 0.1) + 'rem');
-  //   } else {
-  //     $(this).css('top', top + 'rem');
-  //   }
-  // });
-  
-  // $(fixedEl).each(function(idx, el){
-
-  //   if ($('.wrap_filter.fixed').length) { 
-  //     offset = offset - $('.wrap_filter.fixed').outerHeight(true);
-  //   }
-
-  //   if ($(this).is(':visible')){
-  //     if (scrollTop >= offset && !$(this).hasClass('fixed')) { 
-  //       // 고정 필터 있는 경우 필터 다음으로 높이 조정
-  //       if ($('.wrap_filter.fixed').length) {
-  //         top = top + ($('.wrap_filter.fixed').outerHeight(true) * 0.1);
-  //       }
-  //       $(this).addClass('fixed').css('top', top + 'rem');
-  //       // 필터 고정 후 높이만큼 간격조정 
-  //       if ($(this).hasClass('wrap_filter')) {
-  //         $(this).closest('.section_list_trans').addClass('filterFixed');
-  //       }
-  //     }
-  //     if ($('.trans_info h4.fixed').length && scrollTop + 36 >= offset && !$(this).hasClass('fixed')) {
-  //       $(this).addClass('after');
-  //     } else {
-  //       $(this).removeClass('after');
-  //     }
-  //     if (scrollTop < offset  && $(this).hasClass('fixed')) {
-  //       $(this).removeClass('fixed').css('top','');
-  //       if ($(this).hasClass('wrap_filter')) {
-  //         $(this).closest('.section_list_trans').removeClass('filterFixed');
-  //       }
-  //     }
-  //   }
-  // });
 };
 
 /**
@@ -1280,21 +1255,14 @@ var exeTransitionInLayer = function() {
     // Sticky element
     // VDB004
     if ($this.find('.fnStickyTop')) {
-      var el = $this.find('.fnStickyTop');
+      var $stickyEl = $this.find('.fnStickyTop');
       var $fixedEl = $this.find('.fnFixedTop');
-      var setHeight = $fixedEl.length ? parseInt($fixedEl.attr('data-height')) : 0;
-      var offsets = [];
-      setTimeout(function(){
-        el.each(function(idx, el){
-          offsets[idx] = $(this).offset().top;
-        });
-      }, 300);
+      var headerHeight = $this.find('.head_layer').outerHeight(true);
+      var setHeight = $fixedEl.length ? headerHeight + parseInt($fixedEl.attr('data-height')) : headerHeight;
 
-      var posY = $(window).width() > 320 ? setHeight : setHeight * 10 / 9;
-      fnStickyTop(el, posY);
-      
       $this.find('.content_layer').on('scroll', function(){
         var scrollTop = $(this).scrollTop();
+        fnStickyTop($stickyEl, scrollTop, setHeight);
       })
     }
   });
