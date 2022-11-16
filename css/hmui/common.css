@@ -4063,6 +4063,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   margin-bottom: 5.0rem;
 }
 .exr_inp {
+  position: relative;
   display: flex;
   align-items: flex-end;
   width: 100%;
@@ -4140,6 +4141,23 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .exr_inp .inp:focus {
   padding-bottom: 1px;
   border-bottom: 1px solid #D0D4D7;
+}
+.exr_inp .wrap_inp.ccy_label {
+  position: absolute;
+  bottom: 2.8rem;
+  left: 0;
+  padding-bottom: 1.0rem;
+}
+.exr_inp .wrap_inp.ccy_label .txt_ccy span:not([class^="ico_"]) {
+  color: #536067;
+  font-size: 1.8rem;
+  line-height: 3.0rem;
+}
+.exr_inp .wrap_inp.ccy_label [class^="ico_"] {
+  width: 3.0rem;
+  height: 3.0rem;
+  margin-right: 0.4rem;
+  vertical-align: bottom;
 }
 
 /*  FAQ */
