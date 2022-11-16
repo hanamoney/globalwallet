@@ -377,7 +377,7 @@
   padding: 1.6rem;
 }
 .section_set_list + .wrap_banner_box {
-  margin-top: 3.0rem;
+  margin-top: 3.2rem;
 }
 .section_set_list .prd_box_card {
   margin-bottom: 3.0rem;
@@ -4063,6 +4063,12 @@
 }
 .section_set_list + .wrap_banner_box .ban_EXR_autosave {
   margin-bottom: 8.0rem;
+}
+.section_set_list .msg_noresult {
+  padding-bottom: 2.4rem;
+}
+.section_set_list .msg_noresult::before {
+  margin-top: 5.0rem;
 }
 
 @supports ((-webkit-filter:none) or (filter:none)) {
