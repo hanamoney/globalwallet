@@ -351,12 +351,7 @@ var moving = false;
 document.querySelector('.line_chart').addEventListener('touchstart', function(e){
   startX = e.touches[0].clientX;
   startY = e.touches[0].clientY;
-});
 
-document.querySelector('.line_chart').addEventListener('touchmove', function(e){
-  endX = e.touches[0].clientX;
-  endY = e.touches[0].clientY;
-  
   if ( Math.abs(endX - startX) > Math.abs(endY - startY) ) {
     moving = true;
     if (e.cancelable) e.preventDefault();
@@ -372,9 +367,16 @@ document.querySelector('.line_chart').addEventListener('touchmove', function(e){
   }
 });
 
+document.querySelector('.line_chart').addEventListener('touchmove', function(e){
+  endX = e.touches[0].clientX;
+  endY = e.touches[0].clientY;
+});
+
 document.querySelector('.line_chart').addEventListener('touchend', function(){
-  document.querySelector('.chart_tooltip').style.display = 'none';
-  document.querySelector('.line').style.display = 'none';
+  if (document.querySelector('.chart_tooltip')) { 
+    document.querySelector('.chart_tooltip').style.display = 'none';
+    document.querySelector('.line').style.display = 'none';
+  }
   annotationOpts.maxText.display = true;
   annotationOpts.minText.display = true;
   annotationOpts.averageline.label.display = true;
