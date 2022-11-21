@@ -569,7 +569,7 @@
 .section_moneybag[data-ccy="cny"]::before {
   background-image: linear-gradient(135deg, #EEDCF9 0%, #DFEDF8 100%);
 } 
-.section_moneybag[data-ccy="sgb"]::before {
+.section_moneybag[data-ccy="sgd"]::before {
   background-image: linear-gradient(135deg, #F9E1DC 0%, #DFF8F5 100%);
 }
 .section_moneybag[data-ccy="vnd"]::before {
