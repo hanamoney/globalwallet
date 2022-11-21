@@ -385,7 +385,7 @@
 .wrap_banner_box .link_box.set_travlog_link::after {
   background-image: url('../../images/hmui/banner/ban_EXR_coinsUSD.png');
 }
-[data-roll="SET"] > .hmn_travlog_info {
+[data-roll="SET"] .hmn_travlog_info {
   width: calc(100% - 4.8rem);
   margin: 3.0rem 2.4rem 0;
   z-index: 2;
