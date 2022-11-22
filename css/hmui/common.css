@@ -1484,6 +1484,9 @@ section[data-roll] {
   font-size: 1.8rem;
   line-height: 2.0rem;
 }
+.wrap_box.bg_darkgrey .switch .slider {
+  background-color: #839097;
+}
 
 /* Input text */
 .inp {
