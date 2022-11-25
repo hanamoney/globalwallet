@@ -124,18 +124,32 @@ var _fixedTopInPage = function() {
   var headerHeight = $(window).width() > 320 ? $('#header').outerHeight(true) : $('#header').outerHeight(true) * 10 / 9;
   var setHeight = $fixedEl.length ? headerHeight + parseInt($fixedEl.attr('data-height')) : headerHeight;
   
-  $(window).on('scroll', function() {
-    var scrollTop = $(this).scrollTop();
-    if (scrollTop > 0) {
-      _setFixedTop($fixedEl, $header, setHeight);
-    } else {
-      _clearFixedTop($fixedEl, $header);
-    }
-
-    if ($stickyEl.length) {
-      fnStickyTop($stickyEl, scrollTop, setHeight);
-    }
-  });
+  // full flex 페이지인 경우
+  if ($('.page_full_flex.hasFixedTab').length > 0 ){
+    $('.page_full_flex').on('scroll', function(){
+      var scrollTop = $(this).scrollTop();
+      if (scrollTop > 50) {
+        _setFixedTop($fixedEl, $header, setHeight);
+        $('#header').addClass('scrolled');
+      } else {
+        _clearFixedTop($fixedEl, $header);
+        $('#header').removeClass('scrolled');
+      }
+    });
+  } else {
+    $(window).on('scroll', function() {
+      var scrollTop = $(this).scrollTop();
+      if (scrollTop > 0) {
+        _setFixedTop($fixedEl, $header, setHeight);
+      } else {
+        _clearFixedTop($fixedEl, $header);
+      }
+  
+      if ($stickyEl.length) {
+        fnStickyTop($stickyEl, scrollTop, setHeight);
+      }
+    });
+  }
 }
 
 /**
@@ -308,7 +322,7 @@ var _inpControl = function() {
 
     // 버튼이 있는 경우 간격 조정
     if ( $(el).closest('.box_inp').hasClass('hasBtn') ) {
-      var padding = $(el).closest('.box_inp').find('.btn_round').outerWidth() + 10;
+      var padding = $(el).closest('.box_inp').find('.btn_round, .btn_box_s').outerWidth() + 4;
       $(el).css('padding-right', padding + 18);
       $(el).closest('.box_inp').find('.btn_ico_clear').css('right', padding);
     }
