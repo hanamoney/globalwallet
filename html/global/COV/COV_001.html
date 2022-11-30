@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>COV_001</title>
+
+  <link rel="stylesheet" href="../../..../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+
+    <!-- // header -->
+
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="popupId" class="wrap_layer type_center" data-dim="true" data-pageid="COV001">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <div class="wrap_center cov001">
+            <p class="tit">
+              <span class="txt_point_2">2023년 1월 31일</span><span class="txt_light">부터</span><br>
+              중국 <span class="txt_light">CNY</span>, 싱가포르 <span class="txt_light">SGD</span>,<br>
+              캐나다 <span class="txt_light">CAD</span>, 호주 <span class="txt_light">AUD</span> 에서는<br>
+              <strong>달러머니 대신<br>현지통화로만 결제 가능해요!</strong>
+            </p>
+            <p class="txt"><span class="txt_point_2">2023년 2월 28일</span>까지<br>
+              <strong>달러머니를 추가된 통화로 바꿔드려요.</strong></p>
+          </div>
+          <div class="wrap_btn type_full">
+            <a href="#none" class="btn_box_big btn_primary">자세히 보기</a>
+          </div>
+        </div>
+        <div class="wrap_fixed_outside type_justify">
+          <span class="chk type_sub">
+            <input type="checkbox" id="chk1" name="chk1"/>
+            <label for="chk1">
+              <span class="label">3일동안 보지 않기</span>
+            </label>
+          </span>
+          <button type="button" class="btn_close_txt fnClosePop"><span class="btn_ico_close_ws"></span><span>닫기</span></button>
+        </div>
+      </div>
+    </div>
+    <!-- // popup -->
+
+    <!-- 대상자제외 알럿 -->
+    <div id="confirmId" class="wrap_layer type_alert" data-dim="true">
+      <div class="inner_layer">
+        <div class="content_layer">
+          <div class="wrap_center">
+            <p class="txt_alert">이벤트 적용 대상이 아니에요.<br>2023년 2월 1일 00시 기준<br>달러머니를 보유한 손님만참여할 수 있어요.</p>
+          </div>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <a href="#none" type="button" class="btn_full_primary fnClosePop">확인</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  
+  
+  <script>
+    $(function(){
+      // 팝업호출 param 오픈할 팝업 id
+      fnOpenLayerPop('popupId');
+      // 팝업닫기 param 닫을 팝업 id
+      // fnCloseLayerPop('popupId');
+
+      // 대상자제외 알럿 노출 예시
+      $('.btn_box_big').on('click', function(){
+        // 팝업호출 param 오픈할 팝업 id
+        fnOpenLayerPop('confirmId');
+      });
+
+      // 다시보지 않기 클릭시 팝업 닫기
+      $('#chk1').on('click', function() {
+        // param 닫을 팝업 id
+        fnCloseLayerPop('popupId');
+      }); 
+    });
+  </script>
+</body>
+</html>

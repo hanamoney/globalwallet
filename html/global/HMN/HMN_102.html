@@ -229,6 +229,26 @@
     </div>
     <!-- // 22.10.28 환종추가 마크업변경 -->
 
+    <!-- 22.11. 환추가업데이트 알럿 -->
+    <div id="confirmId" class="wrap_layer type_alert" data-dim="true"><!-- native dim 미사용 시 data-dim="true" 추가 -->
+      <div class="inner_layer">
+        <div class="content_layer">
+          <div class="wrap_center">
+            <p class="txt_alert">별★ 기능이 개선됐어요!<br><br>
+              새로워진 별★ 기능이 궁금하시면<br>
+              지금 바로 업데이트하고 사용해 보세요~
+          </div>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_secondary fnClosePop">다음에</button>
+            <button type="button" class="btn_full_primary fnClosePop">업데이트 하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 22.11. 환추가업데이트 알럿 -->
+
   </main>
   
   <script src="../../../js/hmui/lib/Sortable.js"></script>
@@ -236,6 +256,9 @@
     $(function(){
       // 팝업 열기 param 오픈할 팝업 id
       fnOpenLayerPop('popupId');
+      setTimeout(function(){
+        fnOpenLayerPop('confirmId');
+      },300);
 
       // 재정렬
       $('.btn_ico_reordering').on('click', function(){

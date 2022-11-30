@@ -544,6 +544,8 @@ section[data-roll] {
   position: absolute;
   left: 0;
   top: 0.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 [class^="flag_fill"] {
   display: inline-block;
@@ -870,20 +872,21 @@ section[data-roll] {
   height: 1.4rem;
   background-image: url('../../images/hmui/ico_add.png');
 }
-.ico_info {
+[class^="ico_info"] {
   width: 1.2rem;
   height: 1.2rem;
+  border-radius: 50%;
+  background-color: #9DAAB0;
   background-image: url('../../images/hmui/ico_info.png');
 }
 .ico_info_2 {
-  width: 1.2rem;
-  height: 1.2rem;
-  background-image: url('../../images/hmui/ico_info_2.png');
+  background-color: #69777E;
 }
 .ico_info_3 {
-  width: 1.2rem;
-  height: 1.2rem;
-  background-image: url('../../images/hmui/ico_info_3.png');
+  background-color: #13C9BE;
+}
+.ico_info_4 {
+  background-color: #FF5833;
 }
 .ico_alarm {
   width: 2.4rem;
@@ -1628,7 +1631,8 @@ section[data-roll] {
 .box_inp.err + .txt_inp_guide.type_noico::before {
   display: none;
 }
-.box_inp.hasBtn .btn_round {
+.box_inp.hasBtn .btn_round,
+.box_inp.hasBtn .btn_box_s {
   position: absolute;
   top: 1.0rem;
   right: 0;
@@ -2023,6 +2027,15 @@ button.btn_secondary {
   line-height: 2.0rem;
   font-weight: 700;
 }
+.btn_box_s {
+  padding: 0.6rem 1.2rem 0.6rem;
+  border-radius: 0.6rem;
+  background-color: #9DAAB0;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 400;
+}
 .btn_box_sm {
   padding: 0.6rem 1.4rem;
   background-color: #E7FAF9;
@@ -2359,7 +2372,7 @@ button.btn_secondary {
 .wrap_dropdown.on .list_dropdown::after {
   visibility: visible;
   opacity: 1;
-  box-shadow: 0px 10px 12px rgba(215, 186, 188, 0.4);
+  box-shadow: 0 1.0rem 2.0rem rgba(0, 0, 0, 0.24);
 }
 .wrap_dropdown.on .btn_dropdown::after {
   transform: translateY(-50%) rotate(-180deg);
@@ -3116,6 +3129,9 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   line-height: 2.0rem;
   text-align: left;
 }
+.section_prc_complete .wrap_list + .wrap_btn_center {
+  margin-top: 1.6rem;
+}
 .section_prc_complete + .wrap_notice {
   margin-top: 4.0rem;
 }
@@ -3553,6 +3569,9 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .wrap_layer.type_alert .txt_alert_m + .txt_alert,
 .wrap_layer.type_alert .txt_alert + .txt_alert {
   margin-top: 1.0rem;
+}
+.wrap_layer.type_alert .wrap_center {
+  text-align: center;
 }
 .section_button_alert {
   padding: 0;
@@ -4253,6 +4272,82 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .section_faq .wrap_btn_center {
   margin-top: 3.0rem;
+}
+.section_faq_bubble {
+  padding: 1.2rem 2.4rem 5.6rem;
+}
+
+.section_faq_bubble.cov_faq::before {
+  content: '';
+  display: block;
+  width: 4.0rem;
+  height: 0.8rem;
+  margin: 0 auto 4.0rem;
+  border-radius: 0.4rem;
+  background: #252E33;
+  opacity: 0.2;
+}
+.section_faq_bubble.cov_faq .speech_bubble {
+  display: flex;
+  width: 100%;
+  margin-top: 1.2rem;
+}
+.section_faq_bubble.cov_faq .speech_bubble:first-child {
+  margin-top: 0;
+}
+.section_faq_bubble.cov_faq .speech_bubble .thumb {
+  display: inline-block;
+  width: 5.2rem;
+  height: 6.4rem;
+  margin-right: 1.2rem;
+}
+.section_faq_bubble.cov_faq .speech_bubble .box {
+  position: relative;
+  display: inline-block;
+  padding: 1.4rem 1.8rem;
+  border-radius: 0.8rem;
+  background-color: #fff;
+  font-size: 1.8rem;
+  line-height: 1.32;
+}
+.section_faq_bubble.cov_faq .speech_bubble .box:not(:only-child) {
+  flex: 1;
+}
+.section_faq_bubble .speech_bubble .box::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  width: 1.6rem;
+  height: 2.0rem;
+  background: url('../../images/hmui/bubble_caret_white.png') no-repeat center;
+  background-size: 100%;
+  transform: translateY(-50%);
+}
+.section_faq_bubble .speech_bubble.left {
+  justify-content: flex-start;
+  padding: 1.2rem;
+}
+.section_faq_bubble .speech_bubble.left .box {
+  font-weight: 700;
+  margin: 1.2rem 0 1.2rem 1.6rem;
+}
+.section_faq_bubble .speech_bubble.left .box::before {
+  left: -1.6rem;
+}
+.section_faq_bubble .speech_bubble.right {
+  justify-content: flex-end;
+}
+.section_faq_bubble .speech_bubble.right .box {
+  margin-right: 1.6rem;
+  color: #839097;
+}
+.section_faq_bubble .speech_bubble.right .box::before {
+  right: -1.6rem;
+  transform: translateY(-50%) scaleX(-1);
+}
+.section_faq_bubble .speech_bubble.transform {
+  animation: itemUp30 0.4s forwards;
 }
 
 /* 환율정보 */

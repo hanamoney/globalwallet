@@ -58,6 +58,7 @@ var registUI = function(){
 
   if ( $('.gsp_travlog_info').length ) { _gspTravlogInfo(); } // 트래블로그 혜택안내 애니메이션 실행
   if ( $('.visual_usr_card').length ) { _usrCardAnimate(); } // 카드신청 브릿지 애니메이션 실행
+  if ( $('.section_top_visual.cov002').length ) { _covGuideInfo(); } // 카드신청 브릿지 애니메이션 실행
 
 };
 
@@ -1279,6 +1280,11 @@ var exeTransitionInLayer = function() {
         fnStickyTop($stickyEl, scrollTop, setHeight);
       })
     }
+
+    // HMN007
+    if ($this.find('.cov_update')) {
+      $('.tit_big').addClass('transform');
+    }
   });
 }
 
@@ -1607,6 +1613,34 @@ var _gspTravlogInfo = function(){
  */
 var _usrCardAnimate = function(){
   $('.visual_usr_card').addClass('transform');
+}
+
+/**
+  * @name _covGuideInfo()
+  * @description 애니메이트 콘텐츠 트랜지션 공통 컨트롤
+  * @url COV_002
+ */
+var _covGuideInfo = function(){
+  if ( parseInt(androidV(ua)) < 6 ) { return false; }
+  var $el = $('.section_top_visual.cov002').closest('[data-roll="COV"]').find('[data-animate="trans"]');
+
+  $el.each(function(){
+    var $this = $(this);
+    var $transCont = $this.find('[class^="visual_"]');
+
+    if ( !$transCont.length ) {
+      $transCont = $this;
+    }
+
+    $transCont.waypoint({
+      element: this,
+      handler: function() {
+        $transCont.addClass('transform');
+        this.destroy();
+      },
+      offset: '90%'
+    });
+  });
 }
 
 /**

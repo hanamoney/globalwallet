@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>HMN_207_2</title>
+
+  <link rel="stylesheet" href="../../..../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    
+    <!-- // header -->
+
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="popupId" class="wrap_layer type_center" data-dim="true" data-pageid="HMN007"><!-- native dim 미사용 시 data-dim="true" 추가 -->
+      <div class="inner_layer cov_update_2">
+        <div class="content_layer">
+          <div class="wrap_center">
+            <div class="top">
+              <p class="tit_big"><strong>끝없는 혜택</strong></p>
+              <p class="tit"><strong>환율 100%우대<br>통화 4종 추가!</strong></p>
+              <p class="txt_sub"><strong>중국</strong> CNY, <strong>싱가포르</strong> SGD, <strong>캐나다</strong> CAD, <strong>호주</strong> AUD</p>
+            </div>
+            <div class="bottom">
+              <p class="tit_sub">지금 업데이트하세요.</p>
+              <p class="txt_sub txt_point_2">1월 31일부터 위 국가에서는<br>달러머니를 사용할 수 없어요.</p>
+            </div>
+          </div>
+          <div class="wrap_btn type_full">
+            <button type="button" class="btn_box_big btn_primary fnClosePop">알려주세요</button>
+          </div>
+        </div>
+        <div class="wrap_fixed_outside type_justify">
+          <span class="chk type_sub">
+            <input type="checkbox" id="chk1" name="chk1"/>
+            <label for="chk1">
+              <span class="label">3일동안 보지 않기</span>
+            </label>
+          </span>
+          <button type="button" class="btn_close_txt fnClosePop"><span class="btn_ico_close_ws"></span><span>닫기</span></button>
+        </div>
+      </div>
+    </div>
+    <!-- // popup -->
+
+  </main>
+  
+  
+  <script>
+    $(function(){
+      // 팝업호출 param 오픈할 팝업 id
+      fnOpenLayerPop('popupId');
+      // 팝업닫기 param 닫을 팝업 id
+      // fnCloseLayerPop('popupId');
+
+      // 다시보지 않기 클릭시 팝업 닫기
+      $('#chk1').on('click', function() {
+        // param 닫을 팝업 id
+        fnCloseLayerPop('popupId');
+      }); 
+    });
+  </script>
+</body>
+</html>

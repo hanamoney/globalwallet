@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>HMN_208</title>
+
+  <link rel="stylesheet" href="../../..../../../css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../css/hmui/common.css">
+  <link rel="stylesheet" href="../../../css/global/contents.css">
+  <script src="../../../js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../js/hmui/lib/swiper.js"></script>
+  <script src="../../../js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../js/hmui/ui_common.js"></script>
+</head>
+<body>
+  <main id="root">
+    
+    <!-- // header -->
+
+    <!-- // contents-->
+
+    <!-- popup -->
+    <div id="confirmId" class="wrap_layer type_alert" data-dim="true" data-pageid="HMN008"><!-- native dim 미사용 시 data-dim="true" 추가 -->
+      <div class="inner_layer">
+        <div class="content_layer">
+          <div class="wrap_center hmn008">
+            <p class="tit">잠깐!</p>
+            <p class="txt"><strong class="txt_point_2">2023년 1월 31일</strong>부터<br>중국, 싱가포르, 캐나다, 호주에서는<br><em>달러머니 대신 현지통화를 이용해 주세요!</em></p>
+            <ul class="list_ccy_add">
+              <li><span class="img_ccy_cny"></span>중국<br>CNY</li>
+              <li><span class="img_ccy_sgd"></span>싱가포르<br>SGD</li>
+              <li><span class="img_ccy_cad"></span>캐나다<br>CAD</li>
+              <li><span class="img_ccy_aud"></span>호주<br>AUD</li>
+            </ul>
+          </div>
+          <div class="wrap_btn_center">
+            <a href="#none" class="btn_txt txt_point_1">통화 다시 선택하기</a>
+          </div>
+        </div>
+        <div class="section_button_alert">
+          <div class="wrap_btn_full">
+            <button type="button" class="btn_full_primary fnClosePop">네, 확인했어요</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // popup -->
+
+  </main>
+  
+  
+  <script>
+    $(function(){
+      // 팝업오픈 퍼블확인용 스크립트
+      fnOpenLayerPop('confirmId');
+    });
+  </script>
+</body>
+</html>
