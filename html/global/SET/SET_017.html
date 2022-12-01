@@ -18,18 +18,18 @@
 </head>
 <body>
   <main id="root">
-    <header id="header">
-      <div class="inner_fixed">
-        <button class="btn_ico_prev"><span class="blind">이전</span></button>
-        <h1>목표환율 자동충전</h1>
-        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
-      </div>
-    </header>
+  
     <!-- // header -->
 
-    <div id="contents" class="wrap_contents">
-      <div class="contents">
-        <section data-roll="EXR">
+    <!-- // contents-->
+
+    <!-- 22.12.01 팝업으로 변경 -->
+    <div id="popupId" class="wrap_layer type_full" data-pageid="SET017">
+      <div class="inner_layer">
+        <div class="head_layer">
+          <h2 class="tit_layer">목표환율 자동충전</h2>
+        </div>
+        <div class="content_layer">
           <div class="page_full_flex hasFixedBtn">
             <div class="section_form">
               <div class="exr_inp">
@@ -82,7 +82,7 @@
               
             </div>
           </div>
-        </section>
+        </div>
 
         <!-- 하단고정영역 -->
         <div class="section_bottom_fixed">
@@ -141,9 +141,10 @@
           </div>
         </div>
         <!-- // 하단고정영역 -->
+
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
       </div>
-    </div> 
-    <!-- // contents-->
+    </div>
 
     <!-- toast -->
     <div id="toast" class="wrap_toast">
@@ -162,6 +163,8 @@
     $('#testid2').attr('placeholder','65');
 
     $(function(){
+      fnOpenLayerPop('popupId');
+
       // 버튼 disabled 설정 샘플
       $('#testid1').on('keyup change', function(){
         if ($(this).val() == '') {
