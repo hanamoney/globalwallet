@@ -346,41 +346,53 @@ function createChart(el, idx, labels, datas) {
     el.update();
   }
 
-var startX,startY,endX,endY;
-var moving = false;
-document.querySelector('.line_chart').addEventListener('touchstart', function(e){
-  startX = e.touches[0].clientX;
-  startY = e.touches[0].clientY;
 
-  if ( Math.abs(endX - startX) > Math.abs(endY - startY) ) {
-    moving = true;
-    if (e.cancelable) e.preventDefault();
-    if (document.querySelector('.chart_tooltip')) {
-      document.querySelector('.chart_tooltip').style.display = 'block';
-      document.querySelector('.line').style.display = 'block';
+$(function(){
+
+  var startX,startY,endX,endY;
+  var moving = false;
+
+  // document.querySelector('.line_chart').addEventListener('touchstart', function(e){
+  $(document).on('touchstart', '.line_chart', function(e){
+    var e = e.originalEvent;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+
+    if ( Math.abs(endX - startX) > Math.abs(endY - startY) ) {
+        moving = true;
+        if (e.cancelable) e.preventDefault();
+        if (document.querySelector('.chart_tooltip')) {
+  
+        document.querySelector('.chart_tooltip').style.display = 'block';
+        document.querySelector('.line').style.display = 'block';
+      }
+      annotationOpts.maxText.display = false;
+      annotationOpts.minText.display = false;
+      annotationOpts.averageline.label.display = false;
+      
+      chartEXR.update();
     }
-    annotationOpts.maxText.display = false;
-    annotationOpts.minText.display = false;
-    annotationOpts.averageline.label.display = false;
-    
+  });
+
+  // document.querySelector('.line_chart').addEventListener('touchmove', function(e){
+  $(document).on('touchmove', '.line_chart', function(e){
+    var e = e.originalEvent;
+    endX = e.touches[0].clientX;
+    endY = e.touches[0].clientY;
+  });
+
+  // document.querySelector('.line_chart').addEventListener('touchend', function(){
+  $(document).on('touchend', '.line_chart', function(e){
+    if (document.querySelector('.chart_tooltip')) { 
+      document.querySelector('.chart_tooltip').style.display = 'none';
+      document.querySelector('.line').style.display = 'none';
+    }
+    annotationOpts.maxText.display = true;
+    annotationOpts.minText.display = true;
+    annotationOpts.averageline.label.display = true;
+
     chartEXR.update();
-  }
-});
+    moving = false;
+  });
 
-document.querySelector('.line_chart').addEventListener('touchmove', function(e){
-  endX = e.touches[0].clientX;
-  endY = e.touches[0].clientY;
-});
-
-document.querySelector('.line_chart').addEventListener('touchend', function(){
-  if (document.querySelector('.chart_tooltip')) { 
-    document.querySelector('.chart_tooltip').style.display = 'none';
-    document.querySelector('.line').style.display = 'none';
-  }
-  annotationOpts.maxText.display = true;
-  annotationOpts.minText.display = true;
-  annotationOpts.averageline.label.display = true;
-
-  chartEXR.update();
-  moving = false;
 });
