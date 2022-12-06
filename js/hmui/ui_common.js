@@ -68,7 +68,8 @@ var registUI = function(){
   */
 var _headerControl = function(){
 
-  if ($('.page_full_flex').length) {
+  if ($('.page_full_flex').length && !$('.page_full_flex').parents('.wrap_layer').length) {
+    // 페이지 내 flex layout일 경우
     _headerChange('section[data-roll]');
   } else {
     _headerChange($(window));
@@ -125,7 +126,7 @@ var _fixedTopInPage = function() {
   var headerHeight = $(window).width() > 320 ? $('#header').outerHeight(true) : $('#header').outerHeight(true) * 10 / 9;
   var setHeight = $fixedEl.length ? headerHeight + parseInt($fixedEl.attr('data-height')) : headerHeight;
   
-  // full flex 페이지인 경우
+  //상단 고정탭이 있는 경우 full flex 조건 추가  
   if ($('.page_full_flex.hasFixedTab').length > 0 ){
     $('.page_full_flex').on('scroll', function(){
       var scrollTop = $(this).scrollTop();
