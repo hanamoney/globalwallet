@@ -4276,7 +4276,6 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .section_faq_bubble {
   padding: 1.2rem 2.4rem 5.6rem;
 }
-
 .section_faq_bubble.cov_faq::before {
   content: '';
   display: block;
@@ -5391,7 +5390,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   margin-top: 1.1rem;
 }
 .skeletonLoading [class^="ico_refresh"] {
-  animation: 1.0s rotate360 cubic-bezier(0.24, 0, 0.5, 1) infinite;
+  animation: 1.0s rotate360 cubic-bezier(0.24, 0, 0.5, 1) infinite reverse;
 }
 
 /* list loader */
@@ -5561,7 +5560,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   margin: 0;
 }
 .section_moneybag .box_moneybag .btn_ico_refresh.loading .ico_refresh {
-  animation: 1.0s rotate360 cubic-bezier(0.24, 0, 0.5, 1) infinite;
+  animation: 1.0s rotate360 cubic-bezier(0.24, 0, 0.5, 1) infinite reverse;
 }
 .section_moneybag .box_moneybag .total_amount {
   margin-bottom: 3.0rem;
