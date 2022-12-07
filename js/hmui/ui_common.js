@@ -222,9 +222,11 @@ var fnStickyTop = function(fixedEl, scrollTop, setHeight) {
   */
 var _fixedBottomBtnGap = function() {
   var $fixedEl = $('.section_bottom_fixed.type_noFullBtn').find('.fnScrollEnd');
+  var windowH = $(window).height();
 
   $(window).on('scroll', function() {
-    if ( $(window).innerHeight() + $(window).scrollTop() >= ($('body').outerHeight(true) - $fixedEl.outerHeight(true)) )  {
+    var contentsH = $('body').outerHeight(true);
+    if ( windowH + $(window).scrollTop() >= (contentsH - $fixedEl.outerHeight(true)) && !(contentsH - windowH <= 0)) {
       $fixedEl.addClass('scrollEnd');
     } else {
       $fixedEl.removeClass('scrollEnd');
