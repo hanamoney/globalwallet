@@ -176,7 +176,7 @@ var externalTooltipHandler = (context) => {
     tooltipLine.style.bottom = '0';
     tooltipLine.style.left = '0';
     tooltipLine.style.width = '1px';
-    tooltipLine.style.height = '20rem';
+    tooltipLine.style.height = '16.8rem'; // 추후개선
     tooltipLine.style.backgroundColor = 'rgba(255, 255, 255, 0.4)';
     chart.canvas.parentNode.appendChild(tooltipLine);
   }
@@ -284,6 +284,7 @@ function createChart(el, idx, labels, datas) {
       },
       interaction: {
         mode: 'index',
+        axis: 'x',
         intersect: false,
       },
       plugins: {
@@ -352,17 +353,34 @@ $(function(){
   var startX,startY,endX,endY;
   var moving = false;
 
+  // function activeOnDrag(posX) {
+  //   var points = chartEXR.getDatasetMeta(0).data;
+  //   var pointX = points.map(point => point.x);
+  //   var nearest = pointX.reduce(function(acc, curr) {
+  //     return (Math.abs(curr - posX) < Math.abs(acc - posX) ? curr : acc );
+  //   });
+  //   console.log(pointX.indexOf(nearest));
+  //   chartEXR.setActiveElements([
+  //     {datasetIndex: 0, index: 1},
+  //   ]);
+  // };
+
   // document.querySelector('.line_chart').addEventListener('touchstart', function(e){
   $(document).on('touchstart', '.line_chart', function(e){
     var e = e.originalEvent;
     startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
 
-    if ( Math.abs(endX - startX) > Math.abs(endY - startY) ) {
-        moving = true;
-        if (e.cancelable) e.preventDefault();
-        if (document.querySelector('.chart_tooltip')) {
-  
+    // 추후개선
+    var posY = e.target.getBoundingClientRect().top;
+    if (startY - posY > 168 || startX < 24 || $(window).width() - startX < 24 ) {
+      return;
+    }
+    
+    if ( !moving ) {
+      moving = true;
+      if (e.cancelable) e.preventDefault();
+      if (document.querySelector('.chart_tooltip')) {
         document.querySelector('.chart_tooltip').style.display = 'block';
         document.querySelector('.line').style.display = 'block';
       }
