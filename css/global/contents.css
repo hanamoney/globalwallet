@@ -379,8 +379,57 @@
 .section_set_list + .wrap_banner_box {
   margin-top: 3.2rem;
 }
+.card_list_swiper {
+  margin: 0 -2.4rem 2.4rem;
+}
+.card_list_swiper .swiper-pagination {
+  position: static;
+  transform: none;
+}
 .section_set_list .prd_box_card {
-  margin-bottom: 3.0rem;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 0.8rem;
+}
+.card_list_swiper .prd_box_card .card_info {
+  padding-left: 0;
+  text-align: center;
+}
+.section_set_list .prd_box_card .card_img {
+  display: block;
+  width: 16.0rem;
+  height: 10rem;
+  margin: 0.7rem auto 1.5rem;
+}
+.section_set_list .prd_box_card .card_img img {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 0.6rem;
+  box-shadow: 0px 0.6rem 1.2rem rgba(0, 0, 0, 0.16);
+  transform: none;
+}
+.section_set_list .prd_box_card .card_info .card_name {
+  font-size: 2.0rem;
+  line-height: 1.32;
+}
+.section_set_list .prd_box_card .card_info .card_name [class^="img_logo"] {
+  width: 3.0rem;
+  height: 2.0rem;
+  margin: 0.3rem 0 0 0.6rem;
+  vertical-align: top;
+}
+.section_set_list .prd_box_card .card_info .card_name .img_logo_master {
+  background-size: 3.2rem auto;
+  background-position: 50% -0.17rem;
+}
+.section_set_list .prd_box_card .card_info .card_name .img_logo_unionpay {
+  background-size: 3.56rem auto;
+  background-position: 50% -0.18rem;
+}
+.section_set_list .prd_box_card .card_info .card_num {
+  padding-top: 0.2rem;
 }
 .wrap_banner_box .link_box.set_travlog_link::after {
   background-image: url('../../images/hmui/banner/ban_EXR_coinsUSD.png');

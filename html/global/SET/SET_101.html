@@ -15,6 +15,63 @@
   <script src="../../../js/hmui/lib/waypoints.min.js"></script>
   <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
   <script src="../../../js/hmui/ui_common.js"></script>
+
+  <!-- 22.12.09 테스트를 위한 별도 CSS -->
+  <style>
+  .card_list_swiper {
+    margin: 0 -2.4rem 2.4rem;
+  }
+  .card_list_swiper .swiper-pagination {
+    position: static;
+    transform: none;
+  }
+  .section_set_list .prd_box_card {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0.8rem;
+  }
+  .card_list_swiper .prd_box_card .card_info {
+    padding-left: 0;
+    text-align: center;
+  }
+  .section_set_list .prd_box_card .card_img {
+    display: block;
+    width: 16.0rem;
+    height: 10rem;
+    margin: 0.7rem auto 1.5rem;
+  }
+  .section_set_list .prd_box_card .card_img img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 0.6rem;
+    box-shadow: 0px 0.6rem 1.2rem rgba(0, 0, 0, 0.16);
+    transform: none;
+  }
+  .section_set_list .prd_box_card .card_info .card_name {
+    font-size: 2.0rem;
+    line-height: 1.32;
+  }
+  .section_set_list .prd_box_card .card_info .card_name [class^="img_logo"] {
+    width: 3.0rem;
+    height: 2.0rem;
+    margin: 0.3rem 0 0 0.6rem;
+    vertical-align: top;
+  }
+  .section_set_list .prd_box_card .card_info .card_name .img_logo_master {
+    background-size: 3.2rem auto;
+    background-position: 50% -0.17rem;
+  }
+  .section_set_list .prd_box_card .card_info .card_name .img_logo_unionpay {
+    background-size: 3.56rem auto;
+    background-position: 50% -0.18rem;
+  }
+  .section_set_list .prd_box_card .card_info .card_num {
+    padding-top: 0.2rem;
+  }
+  </style>
+
 </head>
 <body>
   <main id="root">
@@ -37,17 +94,40 @@
             </ul>
           </div>
 
-          <div class="">
+          <div class="section_tab_cont">
             <div class="section_set_list">
-              <div class="prd_box_card">
-                <div class="card_img">
-                  <img src="../../../images/global/@card.png" alt="">
+
+              <!-- 22.12.09 스와이프 -->
+              <div class="swiper-container card_list_swiper">
+                <div class="swiper-wrapper">
+                  <!-- loop -->
+                  <div class="swiper-slide">
+                    <div class="prd_box_card">
+                      <div class="card_img">
+                        <img src="../../../images/global/@card.png" alt="">
+                      </div>
+                      <div class="card_info">
+                        <p class="card_name">트래블로그 체크카드<span class="img_logo_master"></span></p>
+                        <p class="card_num">1234-56**-****-****</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- // loop -->
+                  <div class="swiper-slide">
+                    <div class="prd_box_card">
+                      <div class="card_img">
+                        <img src="../../../images/global/@card.png" alt="">
+                      </div>
+                      <div class="card_info">
+                        <p class="card_name">트래블로그 체크카드<span class="img_logo_unionpay"></span></p>
+                        <p class="card_num">1234-56**-****-****</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="card_info">
-                  <p class="card_name">트래블로그 체크카드</p>
-                  <p class="card_num">1234-56**-****-1234</p>
-                </div>
+                <div class="swiper-pagination"></div>
               </div>
+              <!-- // 22.12.09 스와이프 -->
 
               <ul class="wrap_box_list">
                 <li>
@@ -115,6 +195,19 @@
     $('#testid').on('click', function(){
       // 팝업호출 param 오픈할 팝업 id
       fnOpenLayerPop('confirmId1');
+    });
+
+    // 22.12.09 스와이프 
+    var swiper = new Swiper('.swiper-container', {
+      observer: true,
+      observeParents: true,
+      resistance: true,
+      resistanceRatio: 0,
+      direction: 'horizontal',
+      loop: false,
+      pagination: {
+        el: '.swiper-pagination',
+      },
     });
   });
 
