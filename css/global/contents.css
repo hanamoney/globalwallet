@@ -3671,8 +3671,8 @@
   width: calc(13.4rem - 2.0rem - 0.6rem);
   height: 2.0rem;
   border-radius: 0.8rem;
-  background-color: #f6f6f6;
-  background: linear-gradient(110deg, #f6f6f6 8%, #fbfbfb 18%, #f6f6f6 33%);
+  background-color: #ECEEEE;
+  background: linear-gradient(110deg, #ECEEEE 8%, #F0F0F0 18%, #ECEEEE 33%);
   background-size: 200% 100%;
   animation: 1.5s skeleton linear infinite;
 }
@@ -3690,8 +3690,13 @@
 .wrap_list_exr.skeletonLoading ul li .txt_amount [class^="ico"] {
   display: none;
 }
+.wrap_list_exr.skeletonLoading .wrap_chart::before,
+.wrap_list_exr.skeletonLoading .wrap_chart::after {
+  display: none;
+}
 .wrap_list_exr.skeletonLoading .wrap_chart .line_chart {
   z-index: -1;
+  visibility: hidden;
 }
 
 /* EXR_002 환율정보 */
@@ -3875,8 +3880,8 @@
 .wrap_top_info.exr_info.skeletonLoading .wrap_acco .list_info li,
 .wrap_top_info.exr_info.skeletonLoading .wrap_btn {
   border-radius: 0.4rem;
-  background-color: #D0D7D7;
-  background: linear-gradient(110deg, #D0D7D7 8%, #d8dede 18%, #D0D7D7 33%);
+  background-color: #ECEEEE;
+  background: linear-gradient(110deg, #ECEEEE 8%, #F0F0F0 18%, #ECEEEE 33%);
   background-size: 200% 100%;
   animation: 1.5s skeleton linear infinite;
   color: transparent !important;

@@ -5354,8 +5354,8 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .skeletonLoading .skeleton-item {
   border-radius: 0.8rem;
-  background-color: #f6f6f6;
-  background: linear-gradient(110deg, #f6f6f6 8%, #fbfbfb 18%, #f6f6f6 33%);
+  background-color: #ECEEEE;
+  background: linear-gradient(110deg, #ECEEEE 8%, #F0F0F0 18%, #ECEEEE 33%);
   background-size: 200% 100%;
   animation: 1.5s skeleton linear infinite;
 }
@@ -5363,8 +5363,8 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .skeletonLoading .btn_ico_filter {
   height: 2.8rem;
   border-radius: 0.8rem;
-  background-color: #f6f6f6;
-  background: linear-gradient(110deg, #f6f6f6 8%, #fbfbfb 18%, #f6f6f6 33%);
+  background-color: #ECEEEE;
+  background: linear-gradient(110deg, #ECEEEE 8%, #F0F0F0 18%, #ECEEEE 33%);
   background-size: 200% 100%;
   color: transparent;
   animation: 1.5s skeleton linear infinite;
