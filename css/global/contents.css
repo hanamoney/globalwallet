@@ -2317,6 +2317,10 @@
 .gsp_travlog_info .atm_info ul li > p span + span {
   margin-left: 0.2rem;
 }
+.gsp_travlog_info .atm_info ul li:only-child [class^="img_logo"] {
+  width: 9.7rem;
+  height: 8.0rem;
+}
 .gsp_travlog_info .atm_info .btn_txt {
   padding: 0.8rem 0 1.6rem;
   color: #fff;
