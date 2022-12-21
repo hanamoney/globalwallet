@@ -3792,6 +3792,9 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   line-height: 1;
   transform: translateX(-50%);
 }
+.tooltip_bubble .bubble_caret.reverse {
+  transform: translateX(-50%) scaleX(-1);
+}
 .tooltip_bubble.type_pink p {
   padding: 0.8rem 1.6rem 0.6rem;
   border-radius: 2.0rem;
@@ -4347,6 +4350,45 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .section_faq_bubble .speech_bubble.transform {
   animation: itemUp30 0.4s forwards;
+}
+.wrap_faq_single {
+  overflow: hidden;
+  border-radius: 1.4rem;
+}
+.wrap_faq_single [class^="box_"] {
+  display: flex;
+  padding: 2.0rem 2.4rem;
+}
+.wrap_faq_single [class^="box_"] .label {
+  display: block;
+  width: 2.4rem;
+  margin-right: 1.3rem;
+  font-size: 2.4rem;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+}
+.wrap_faq_single [class^="box_"] .cont {
+  flex: 1;
+}
+.wrap_faq_single [class^="box_"] p {
+  font-size: 1.6rem;
+  line-height: 1.32;
+}
+.wrap_faq_single .box_tit {
+  background-color: #374248;
+  color: #fff;
+}
+.wrap_faq_single .box_ans {
+  background-color: #fff;
+}
+.wrap_faq_single .box_ans .label {
+  color: #FF5833;
+}
+.wrap_faq_single .box_ans .tit {
+  color: #FF5833;
+  font-weight: 700;
+  padding-bottom: 0.4rem;
 }
 
 /* 환율정보 */

@@ -1822,6 +1822,15 @@
   line-height: 1.5;
   text-align: center;
 }
+.section_top_visual.travlog_benefit + .wrap_item_benefit .item_desc .txt .txt_bold {
+  position: relative;
+  display: inline-block;
+}
+.section_top_visual.travlog_benefit + .wrap_item_benefit .item_desc .tooltip_bubble {
+  top: -1.9rem;
+  left: 100%;
+  transform: translateX(-0.4rem);
+}
 .section_cont.about_travlog {
   background: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);
   text-align: center;
@@ -1933,6 +1942,61 @@
   font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 300;
+}
+.section_cont.gsp_unionpay {
+  padding: 3.2rem 2.4rem;
+  background-image: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);
+}
+.section_cont.gsp_unionpay .visial_gsp_unionpay {
+  position: relative;
+  height: 20.0rem;
+  margin-top: 1.6rem;
+  transform: translateY(3rem);
+}
+.section_cont.gsp_unionpay .visial_gsp_unionpay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: 20.0rem;
+  background: url('../../images/global/visual_gsp_unionpay.png') no-repeat center top;
+  background-size: auto 100%;
+  transform: translateX(-50%);
+}
+.section_cont.gsp_unionpay .visial_gsp_unionpay.transform {
+  animation: itemUp30 0.4s forwards;
+}
+.section_cont.gsp_unionpay .visial_gsp_unionpay .wrap_bubble {
+  position: absolute;
+  left: 50%;
+}
+.section_cont.gsp_unionpay .visial_gsp_unionpay .tooltip_bubble {
+  top: 1.3rem;
+  left: 2.8rem;
+  transform: none;
+}
+.section_cont.gsp_unionpay .txt_sub {
+  margin-top: 1.6rem;
+  color: #252E33;
+  font-size: 2.0rem;
+  line-height: 1.32;
+  font-weight: 300;
+}
+.section_cont.gsp_unionpay .txt_sub .img_ccy_cny {
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0 0.2rem;
+  vertical-align: top;
+  box-shadow: 0 0.4rem 0.4rem rgba(124, 23, 23, 0.25);
+}
+.section_cont.gsp_unionpay .txt_sub + .txt_sub {
+  margin-top: 0.8rem;
+}
+.section_cont.gsp_unionpay .wrap_faq_single {
+  margin-top: 2.4rem;
 }
 .section_cont.gsp_travlog_info .box_card_type {
   padding: 2.4rem 1.2rem 3.0rem;
@@ -4702,6 +4766,7 @@
 .AOS_old .visual_gsp_card::after,
 .AOS_old .section_cont.about_travlog .visual_gsp_travlog.transform,
 .AOS_old .section_cont.about_travlog .visual_gsp_travlog.transform::before,
+.AOS_old .section_cont.gsp_unionpay .visial_gsp_unionpay.transform,
 .AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_globe::before,
 .AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_krw,
 .AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_krw::before,
@@ -4711,6 +4776,7 @@
 .AOS_old .section_cont.guide_hanamoney_6::before,
 .AOS_old .visual_gsp_atm.transform { animation: none; }
 .AOS_old .section_cont.about_travlog .visual_gsp_travlog,
+.AOS_old .section_cont.gsp_unionpay .visial_gsp_unionpay,
 .AOS_old .visual_gsp_atm.transform { transform: none; }
 .AOS_old .gsp_travlog_info .visual_gsp_cashback .img_confetti_1,
 .AOS_old .gsp_travlog_info .visual_gsp_cashback .img_confetti_2,
@@ -4723,3 +4789,4 @@
 .AOS_old .gsp_travlog_info .visual_gsp_cashback .img_confetti_1,
 .AOS_old .gsp_travlog_info .visual_gsp_cashback .img_confetti_2 { transform: scale(1); }
 .AOS_old .gsp_travlog_info .visual_gsp_cashback .img_coinpop { transform: translateX(-50%); }
+.AOS_old .inner_layer.cov_update .tit_big.transform * { animation: none; transform: none; -webkit-filter: none; filter: none; }
