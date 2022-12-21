@@ -1730,3 +1730,11 @@ var disableUserScalable = function() {
     var observer = new MutationObserver(callback);
     observer.observe(targetNode, config);
   }
+
+function callNativeBridge(bridgeStr){
+  if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.hanamoneyiosinterface) {
+    window.webkit.messageHandlers.hanamoneyiosinterface.postMessage(bridgeStr);
+  } else {
+    location.href = bridgeStr;
+  }
+}
