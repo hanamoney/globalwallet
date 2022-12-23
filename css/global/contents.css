@@ -2001,6 +2001,9 @@
 .section_cont.gsp_travlog_info .box_card_type {
   padding: 2.4rem 1.2rem 3.0rem;
 }
+.section_cont.gsp_travlog_info .box_card_type .wrap_btn.type_full:last-child {
+  margin: 3.0rem -0.4rem -2.2rem;
+}
 .section_cont.gsp_travlog_info .wrap_tit {
   margin: 2.0rem 0;
 }

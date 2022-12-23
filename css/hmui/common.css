@@ -2077,6 +2077,10 @@ button.btn_secondary {
   background-color: #fff;
   color: #13C9BE;
 }
+[class^="btn_box"].bg_grey {
+  background-color: #6E7D85;
+  color: #fff;
+}
 [class^="btn_txt"] {
   color: #6E7D85;
   font-size: 1.4rem;
@@ -3006,7 +3010,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .box_card_type {
   position: relative;
   padding: 2.4rem;
-  border-radius: 2.0rem;
+  border-radius: 1.4rem;
   background-color: #fff;
 }
 .box_card_type .tit_counter {
