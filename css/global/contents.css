@@ -4010,12 +4010,15 @@
 .wrap_detail_exr .wrap_chart {
   position: relative;
   width: 100%;
-  height: 22.6rem;
-  margin: 0.8rem 0 0rem;
+  height: calc(22.6rem + 2.0rem);
+  margin: 1.6rem 0 0rem;
+  padding-top: 2.0rem;
+  border-radius: 1.4rem 1.4rem 0 0;
+  background-color: #252e33;
 }
 .wrap_detail_exr .wrap_chart .line_chart {
-  width: 100vw;
-  margin: 0 -2.4rem;
+  width: 100%;
+  margin: 0;
 }
 .wrap_detail_exr .wrap_chart .tooltip_EXR {
   position: absolute;
@@ -4036,6 +4039,18 @@
   font-size: 1.5rem;
   line-height: 1.5;
   letter-spacing: 0;
+}
+.wrap_detail_exr .wrap_chart + .txt_guide.type_ico {
+  padding: 0.8rem 0.8rem 1.2rem 3.6rem;
+  border-radius: 0 0 1.4rem 1.4rem;
+  background-color: #252e33;
+  color: #9DAAB0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+.wrap_detail_exr .wrap_chart + .txt_guide.type_ico [class^="ico_info"] {
+  left: 2.0rem;
+  top: 1.2rem;
 }
 .wrap_detail_exr .wrap_box {
   overflow: hidden;
@@ -4123,7 +4138,7 @@
 }
 .wrap_exch_monthly {
   margin-bottom: 1.6rem;
-  padding: 0.8rem 0 1.6rem;
+  padding: 4.0rem 0 1.6rem;
 }
 .wrap_exch_monthly .tit {
   font-size: 1.8rem;

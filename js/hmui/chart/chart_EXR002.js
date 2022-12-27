@@ -119,7 +119,7 @@ var averageline = {
   label: {
     display: true,
     padding: 4,
-    backgroundColor: 'rgba(37,46,51,0.9)',
+    backgroundColor: 'rgba(79,92,100,0.9)', // 22.12.27 수정
     color: 'rgba(183,197,200,1)',
     font: {
       size: 12,
@@ -142,7 +142,7 @@ const getOrCreateTooltip = (chart) => {
     tooltipEl.style.color = 'white';
     tooltipEl.style.pointerEvents = 'none';
     tooltipEl.style.position = 'absolute';
-    tooltipEl.style.top = 0;
+    tooltipEl.style.top = '2.0rem'; // 22.12.27 수정
     tooltipEl.style.padding = 0 + 'rem ' + 0.8 + 'rem';
     tooltipEl.style.transition = 'all .1s ease';
 
@@ -172,12 +172,12 @@ var externalTooltipHandler = (context) => {
     tooltipLine = document.createElement('p');
     tooltipLine.classList.add('line');
     tooltipLine.style.position = 'absolute';
-    tooltipLine.style.top = '0';
+    tooltipLine.style.top = '2.0rem'; // 22.12.27 수정
     tooltipLine.style.bottom = '0';
     tooltipLine.style.left = '0';
     tooltipLine.style.width = '1px';
-    tooltipLine.style.height = '20.0rem'; // 추후개선
-    tooltipLine.style.backgroundColor = 'rgba(255, 255, 255, 0.4)';
+    tooltipLine.style.height = '20.0rem'; // 22.12.27 수정
+    tooltipLine.style.backgroundColor = 'rgba(255, 255, 255, 0.4)'
     chart.canvas.parentNode.appendChild(tooltipLine);
   }
 
@@ -253,9 +253,9 @@ function createChart(el, idx, labels, datas) {
       layout: {
         padding: {
           top: 57,
-          bottom: 26, // 추후개선
-          right: 24,
-          left: 24,
+          bottom: 26, // 22.12.27 수정 / 추후개선
+          right: 20, // 22.12.27 수정
+          left: 20, // 22.12.27 수정
         }
       },
       scales: {
@@ -373,9 +373,9 @@ $(function(){
     startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
 
-    // 추후개선
     var posY = e.target.getBoundingClientRect().top;
-    if (startY - posY > 168 || startX < 24 || $(window).width() - startX < 24 ) {
+    // 22.12.27 수정 / 추후개선
+    if ( startY - posY < 57 || startY - posY >= 200 || startX < 44 || $(window).width() - startX < 44 ) {
       return;
     }
     
