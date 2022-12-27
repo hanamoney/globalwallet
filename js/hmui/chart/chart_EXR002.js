@@ -176,7 +176,7 @@ var externalTooltipHandler = (context) => {
     tooltipLine.style.bottom = '0';
     tooltipLine.style.left = '0';
     tooltipLine.style.width = '1px';
-    tooltipLine.style.height = '16.8rem'; // 추후개선
+    tooltipLine.style.height = '20.0rem'; // 추후개선
     tooltipLine.style.backgroundColor = 'rgba(255, 255, 255, 0.4)';
     chart.canvas.parentNode.appendChild(tooltipLine);
   }
@@ -253,7 +253,7 @@ function createChart(el, idx, labels, datas) {
       layout: {
         padding: {
           top: 57,
-          bottom: 58,
+          bottom: 26, // 추후개선
           right: 24,
           left: 24,
         }
@@ -321,6 +321,9 @@ function createChart(el, idx, labels, datas) {
           callbacks: {
             label: function(tooltipItems) {
               var text = tooltipItems.formattedValue;
+              text = text.replace(/[,]/g, '');
+              text = numberComma(Number(text).toFixed(2));
+
               return text + '원';
             }
           },
@@ -347,25 +350,24 @@ function createChart(el, idx, labels, datas) {
     el.update();
   }
 
+  /**
+  * @name numberComma()
+  * @description 숫자 콤마 표시
+  * @param {String} value
+  */
+  function numberComma(value) {
+    var reg = /(^[+-]?\d+)(\d{3})/;
+    var n = (value + '');
+    while(reg.test(n)) n = n.replace(reg, '$1' + ',' + '$2');
 
+    return n;
+  }
+
+  
 $(function(){
-
   var startX,startY,endX,endY;
   var moving = false;
 
-  // function activeOnDrag(posX) {
-  //   var points = chartEXR.getDatasetMeta(0).data;
-  //   var pointX = points.map(point => point.x);
-  //   var nearest = pointX.reduce(function(acc, curr) {
-  //     return (Math.abs(curr - posX) < Math.abs(acc - posX) ? curr : acc );
-  //   });
-  //   console.log(pointX.indexOf(nearest));
-  //   chartEXR.setActiveElements([
-  //     {datasetIndex: 0, index: 1},
-  //   ]);
-  // };
-
-  // document.querySelector('.line_chart').addEventListener('touchstart', function(e){
   $(document).on('touchstart', '.line_chart', function(e){
     var e = e.originalEvent;
     startX = e.touches[0].clientX;
@@ -392,14 +394,12 @@ $(function(){
     }
   });
 
-  // document.querySelector('.line_chart').addEventListener('touchmove', function(e){
   $(document).on('touchmove', '.line_chart', function(e){
     var e = e.originalEvent;
     endX = e.touches[0].clientX;
     endY = e.touches[0].clientY;
   });
 
-  // document.querySelector('.line_chart').addEventListener('touchend', function(){
   $(document).on('touchend', '.line_chart', function(e){
     if (document.querySelector('.chart_tooltip')) { 
       document.querySelector('.chart_tooltip').style.display = 'none';
@@ -412,5 +412,4 @@ $(function(){
     chartEXR.update();
     moving = false;
   });
-
 });

@@ -4017,7 +4017,7 @@
   position: relative;
   width: 100%;
   height: 22.6rem;
-  margin: 0.8rem 0 1.6rem;
+  margin: 0.8rem 0 0rem;
 }
 .wrap_detail_exr .wrap_chart .line_chart {
   width: 100vw;
@@ -4049,20 +4049,24 @@
   box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.25);
 }
 .wrap_detail_exr .wrap_box .box_tit {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
   border-bottom: 1px solid #323E43;
 }
 .wrap_detail_exr .wrap_box .box_tit .tit {
   font-size: 1.8rem;
   line-height: 2.4rem;
 }
+.wrap_detail_exr .wrap_box .box_tit .tit span:not(:first-child) {
+  font-weight: 700;
+}
 .wrap_detail_exr .wrap_box .box_tit .txt {
+  color: #B7C5C8;
   font-size: 1.3rem;
   line-height: 1.8rem;
+}
+.wrap_detail_exr .wrap_box .box_tit .txt:first-child {
+  padding-bottom: 0.4rem;
 }
 .wrap_detail_exr .wrap_box .list_info {
   margin-top: 0.8rem;
@@ -4082,6 +4086,10 @@
   position: relative;
   font-size: 1.5rem;
   line-height: 2.4rem;
+}
+.wrap_detail_exr .wrap_box .list_info li .tit {
+  max-width: 65%;
+  word-break: keep-all;
 }
 .wrap_detail_exr .wrap_box .list_info [class^="emoji_"] {
   display: inline-block;
@@ -4121,7 +4129,7 @@
 }
 .wrap_exch_monthly {
   margin-bottom: 1.6rem;
-  padding: 1.6rem 0 1.6rem;
+  padding: 0.8rem 0 1.6rem;
 }
 .wrap_exch_monthly .tit {
   font-size: 1.8rem;
@@ -4472,10 +4480,11 @@
 .wrap_box.cov_confirm + .wrap_btn_center {
   display: flex;
   flex-direction: column;
+  margin-top: 1.4rem;
 }
 .wrap_box.cov_confirm + .wrap_btn_center .txt_guide {
   display: inline-block;
-  margin: 1.4rem auto;
+  margin: 0 auto 1.4rem;
   padding-left: 1.6rem;
 }
 .wrap_box.cov_confirm + .wrap_btn_center .btn_txt {

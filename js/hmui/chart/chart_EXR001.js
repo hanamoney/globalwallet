@@ -53,7 +53,8 @@ function createChart(el, idx, labels, datas) {
         x: {
           grid: {
             display: false,
-            drawBorder: false
+            drawBorder: false,
+            drawTicks: false // 22.12.27 추가
           },
           ticks: {
             display: false,
@@ -63,13 +64,17 @@ function createChart(el, idx, labels, datas) {
         y: {
           grid: {
             display: false,
-            drawBorder: false
+            drawBorder: false,
+            drawTicks: false // 22.12.27 추가
           },
           ticks: {
             display: false,
             drawTicks: false
           }
         }
+      },
+      legend: {
+        display: false,
       },
       plugins: {
         title: {
