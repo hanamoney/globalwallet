@@ -4011,7 +4011,7 @@
   position: relative;
   width: 100%;
   height: calc(22.6rem + 2.0rem);
-  margin: 1.6rem 0 0rem;
+  margin: 1.6rem 0 0;
   padding-top: 2.0rem;
   border-radius: 1.4rem 1.4rem 0 0;
   background-color: #252e33;
