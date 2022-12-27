@@ -846,10 +846,7 @@
   color: #536067;
 }
 .section_list_trans.card_history {
-  padding: calc(0.8rem + 3.8rem) 0 3.2rem;
-}
-.section_list_trans.card_history .wrap_filter {
-  top: 0.7rem;
+  padding: 0.8rem 0 3.2rem;
 }
 .section_list_trans.card_history .wrap_inp.type_search {
   margin: 0 2.4rem;
@@ -858,9 +855,6 @@
 .section_list_trans.card_history .wrap_list_trans {
   margin-top: 0;
   padding-bottom: 2.4rem;
-}
-.section_list_trans.card_history .list_trans .trans_info > ul > li {
-  padding: 0;
 }
 .section_list_trans.card_history .list_trans .trans_info .hasBtn {
   padding-right: calc(3.0rem + 1.6rem);

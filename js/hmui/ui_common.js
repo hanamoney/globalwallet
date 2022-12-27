@@ -125,6 +125,10 @@ var _fixedTopInPage = function() {
   var $header = $fixedEl.closest('.wrap_contents').siblings('#header').find('.inner_fixed');
   var headerHeight = $(window).width() > 320 ? $('#header').outerHeight(true) : $('#header').outerHeight(true) * 10 / 9;
   var setHeight = $fixedEl.length ? headerHeight + parseInt($fixedEl.attr('data-height')) : headerHeight;
+
+  if ($stickyEl.length) {
+    fnStickyTop($stickyEl, setHeight);
+  }
   
   //상단 고정탭이 있는 경우 full flex 조건 추가  
   if ($('.page_full_flex.hasFixedTab').length > 0 ){
@@ -145,10 +149,6 @@ var _fixedTopInPage = function() {
         _setFixedTop($fixedEl, $header, setHeight);
       } else {
         _clearFixedTop($fixedEl, $header);
-      }
-  
-      if ($stickyEl.length) {
-        fnStickyTop($stickyEl, scrollTop, setHeight);
       }
     });
   }
@@ -177,44 +177,92 @@ function _clearFixedTop(fixedEl, header) {
   * @name fnStickyTop()
   * @description 스크롤에 따른 콘텐츠 상단고정 position 설정
   * @param {element | string} fixedEl 고정할 element
-  * @param {number} scrollTop scroll 위치
   * @param {number} setHeight header 높이
   */
-var fnStickyTop = function(fixedEl, scrollTop, setHeight) {
-  // var scrollTop = scrollTop;
+var fnStickyTop = function(fixedEl, setHeight) {
+  // IntersectionObserver 미지원시 sticky 실행X
+  if (!window.IntersectionObserver) {
+    $('.fnStickyTop').css('position','static');
+    return false;
+  }
+
   var top = setHeight * 0.1 - 0.1;
-  var filterHeight = $('.wrap_filter').outerHeight(true);
-
+  var filterHeight = $('.wrap_filter').outerHeight(true) * 0.1;
   $(fixedEl).each(function(idx, el){
-    var offset = $(this).offset().top - setHeight;
-    // layer popup인 경우
-    if ($(fixedEl).parents('.content_layer').length) {
-      var content = $(fixedEl).parents('.content_layer');
-      offset = !$(this).hasClass('wrap_filter') && $('.wrap_filter.fixed').length
-        ? offset - content.offset().top + scrollTop - filterHeight
-        : offset - content.offset().top + scrollTop;
-    } else {
-      // page인 경우
-      offset = !$(this).hasClass('wrap_filter') && $('.wrap_filter.fixed').length 
-        ? offset - filterHeight
-        : offset;
+    var fixed = top; 
+    if ( $('.wrap_filter').length && !$(this).hasClass('wrap_filter') ) {
+      fixed = top + filterHeight;
     }
-
-    if (scrollTop >= offset && !$(this).hasClass('fixed')) {
-      // 고정 필터 있는 경우 필터 다음으로 높이 조정
-      if (!$(this).hasClass('wrap_filter') && $('.wrap_filter').length ) {
-        $(this).css('top', top + (filterHeight * 0.1) + 'rem');
-      } else {
-        $(this).css('top', top + 'rem');
-      }
-      $(el).addClass('fixed').attr('data-offset', offset);
-    }
-
-    if (scrollTop < $(this).attr('data-offset') && $(this).hasClass('fixed')) {
-      $(this).removeClass('fixed').css('top','');
-    }
+    $(el).css('top', fixed + 'rem');
+    
+    // observeIntersection을 위한 element 추가
+    var sentinelTop = parseInt(fixed + setHeight*0.1);
+    var sentinel = '<div class="sticky_sentinel sticky_sentinel_top" style="height:'+ top +'rem; top:'+ -sentinelTop +'rem;"></div>'
+    $(el).parent().append(sentinel);
+    _observeIntersection(el);
   });
 };
+
+/**
+ * @name observeIntersection()
+ * @description detect stuck
+ * @param {element} el // fnStickyTop element 
+ */
+function _observeIntersection(el) {
+  var container = $(el).parents('.content_layer').length 
+    ? $(el).parents('.content_layer')[0]
+    : document;
+
+  _observe(container);
+
+  /**
+   * Dispatches a `sticky-event` custom event on the element.
+   * @param {boolean} stuck
+   * @param {!Element} target Target element of event.
+   */
+  function _fire(stuck, target) {
+    var evt = new CustomEvent('sticky-change', {detail: {stuck, target}});
+    document.dispatchEvent(evt);
+  }
+
+  function _observe(container) {
+    var observer = new IntersectionObserver((records, observer) => {
+      for (var record of records) {
+        var targetInfo = record.boundingClientRect;
+        var stickyTarget = record.target.parentElement.querySelector('.fnStickyTop');
+        var rootBoundsInfo = record.rootBounds;
+  
+        if (targetInfo.bottom < rootBoundsInfo.top) {
+          _fire(true, stickyTarget);
+        }
+  
+        if (targetInfo.bottom >= rootBoundsInfo.top &&
+            targetInfo.bottom < rootBoundsInfo.bottom) {
+          _fire(false, stickyTarget);
+        }
+      }
+    }, {
+      threshold: [0],
+      root: container
+    });
+  
+    $('.sticky_sentinel_top').each(function(idx, el){
+      observer.observe(el);
+    })
+  }
+  
+  // Update sticky element class
+  document.addEventListener('sticky-change', e => {
+    var [stickyEl, stuck] = [e.detail.target, e.detail.stuck];
+    stickyEl.classList.toggle('fixed', stuck);
+
+    if ( !$(stickyEl).hasClass('wrap_filter') && $('.wrap_filter.fixed').length) {
+      $('.wrap_filter').addClass('prev');
+    } else {
+      $('.wrap_filter').removeClass('prev');
+    }
+  });
+}
 
 /**
   * @name _fixedBottomBtnGap()
@@ -1270,18 +1318,15 @@ var exeTransitionInLayer = function() {
       }, 300);
     }
 
-    // Sticky element
+    // has Sticky element
     // VDB004
     if ($this.find('.fnStickyTop')) {
       var $stickyEl = $this.find('.fnStickyTop');
       var $fixedEl = $this.find('.fnFixedTop');
       var headerHeight = $this.find('.head_layer').outerHeight(true);
-      var setHeight = $fixedEl.length ? headerHeight + parseInt($fixedEl.attr('data-height')) : headerHeight;
+      var setHeight = $fixedEl.length ? parseInt($fixedEl.attr('data-height')) : 0;
 
-      $this.find('.content_layer').on('scroll', function(){
-        var scrollTop = $(this).scrollTop();
-        fnStickyTop($stickyEl, scrollTop, setHeight);
-      })
+      fnStickyTop($stickyEl, setHeight);
     }
 
     // HMN007
