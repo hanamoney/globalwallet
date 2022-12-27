@@ -54,7 +54,6 @@ function createChart(el, idx, labels, datas) {
           grid: {
             display: false,
             drawBorder: false,
-            drawTicks: false // 22.12.27 추가
           },
           ticks: {
             display: false,
