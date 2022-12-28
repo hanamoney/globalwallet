@@ -3807,14 +3807,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0 -1.6rem;
 }
 .wrap_top_info.exr_info .list_dropdown li {
   width: calc(4.0rem + 1.6rem);
   margin-top: 0.8rem;
-  margin-right: 1.6rem;
-}
-.wrap_top_info.exr_info .list_dropdown li:nth-child(4n) {
-  margin-right: 0;
+  margin: 0.8rem 0.8rem 0;
 }
 .wrap_top_info.exr_info .list_dropdown li button {
   height: auto;
