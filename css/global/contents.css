@@ -3811,7 +3811,6 @@
 }
 .wrap_top_info.exr_info .list_dropdown li {
   width: calc(4.0rem + 1.6rem);
-  margin-top: 0.8rem;
   margin: 0.8rem 0.8rem 0;
 }
 .wrap_top_info.exr_info .list_dropdown li button {
