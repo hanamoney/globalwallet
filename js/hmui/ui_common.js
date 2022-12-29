@@ -182,8 +182,8 @@ var fnStickyTop = (function() {
   // Dispatches a sticky-event
   function _fire(stuck, target) {
     var evt = new CustomEvent('sticky-change', {detail: {stuck, target}});
-    if ( !$(target).hasClass('wrap_filter') && $('.wrap_filter.fixed').length) {
-      $('.wrap_filter').addClass('prev');
+    if ( !$(target).hasClass('wrap_filter') && $(container).find('.wrap_filter.fixed').length) {
+      $(container).find('.wrap_filter').addClass('prev');
     }
     document.dispatchEvent(evt);
   }
@@ -229,7 +229,7 @@ var fnStickyTop = (function() {
   
   // sticky 설정 계산 최초만 실행
   function _getTop() {
-    stickyEl = document.querySelector('.fnStickyTop');
+    stickyEl = document.querySelectorAll('.fnStickyTop');
     // IntersectionObserver 미지원시 sticky 실행X
     if (!window.IntersectionObserver) {
       $(stickyEl).each(function(idx, el){
@@ -238,7 +238,7 @@ var fnStickyTop = (function() {
       return false;
     }
 
-    container = $(stickyEl).parents('.content_layer').length 
+    container = $(stickyEl).parents('.wrap_layer').hasClass('show') 
       ? $(stickyEl).parents('.content_layer')[0]
       : document;
     var headerHeight = $(window).width() > 320 // Header 기본 높이
@@ -248,8 +248,10 @@ var fnStickyTop = (function() {
     setHeight = $fixedEl.length 
       ? headerHeight + parseInt($fixedEl.attr('data-height'))
       : headerHeight; // Header blur 높이
+    top = container == document 
+      ? setHeight * 0.1 - 0.1                   // page인 경우
+      : (setHeight - headerHeight) * 0.1 - 0.1; // popup인 경우
     filterHeight = $('.wrap_filter').outerHeight(true) * 0.1;
-    top = setHeight * 0.1 - 0.1;
 
     // Update sticky element class
     document.addEventListener('sticky-change', e => {
@@ -261,12 +263,13 @@ var fnStickyTop = (function() {
   }
 
   function set() {
-    if (!stickyEl) {_getTop()}
+    if (!container || container != document) {_getTop();}
+    else if ($(stickyEl).parents('.wrap_layer').hasClass('show')) {_getTop();}
     var fixed = top;
 
-    $('.fnStickyTop').removeClass('fixed');
+    $(container).find('.fnStickyTop').removeClass('fixed');
     Array.from(container.querySelectorAll('.fnStickyTop')).map(el => {
-      if ( $('.wrap_filter').length && !$(el).hasClass('wrap_filter') ) {
+      if ( $(container).find('.wrap_filter').length && !$(el).hasClass('wrap_filter') ) {
         fixed = top + filterHeight;
       }
       el.style.top = fixed + 'rem'; // sticky position 설정
@@ -1334,6 +1337,7 @@ var exeTransitionInLayer = function() {
       }, 300);
     }
 
+    // HMN207
     if ($this.find('.cov_update')) {
       $('.tit_big').addClass('transform');
     }
