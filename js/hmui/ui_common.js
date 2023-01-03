@@ -251,7 +251,9 @@ var fnStickyTop = (function() {
     top = container == document 
       ? setHeight * 0.1 - 0.1                   // page인 경우
       : (setHeight - headerHeight) * 0.1 - 0.1; // popup인 경우
-    filterHeight = $('.wrap_filter').outerHeight(true) * 0.1;
+    filterHeight = $(window).width() > 320
+      ? 3.8
+      : 3.419;
 
     // Update sticky element class
     document.addEventListener('sticky-change', e => {
