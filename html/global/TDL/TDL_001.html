@@ -371,7 +371,6 @@
           </div>
           
           <!-- 조회 리스트 -->
-          <div id="test1" style="display: none;">
           <div class="section_list_trans">
             <!-- 조회필터 -->
             <div class="wrap_filter fnStickyTop"><!-- 22.11.18 fnStickyTop 클래스추가 -->
@@ -380,13 +379,89 @@
             </div>
             <!-- // 조회필터 -->
 
-            <div class="wrap_list_trans skeletondev"></div>
-            <div class="wrap_list_trans listTest" style="display: none;">
-              
+            <div class="wrap_list_trans">
+              <div class="list_trans">
+                <div class="trans_info">
+                  <h4 class="fnStickyTop">3월 24일 (토)</h4><!-- 22.10.28 fnStickyTop 클래스추가 -->
+                  <ul>
+                    <li>
+                      <button type="button" class="row">
+                        <strong class="tit">하나머니 → JPY</strong>
+                        <span class="txt_amount"><em class="txt_num">-999,999,999</em></span>
+                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                      </button>
+                      <div class="row">
+                        <ul class="desc"><li>11:31</li><li>JPY 환전</li></ul>
+                        <span class="desc"><span class="">잔액 </span><em class="txt_num">200,000,000</em></span><!-- 2022.10.04 blind 클래스제거 띄어쓰기추가 -->
+                      </div>
+                      <span class="txt_noti"><span class="exch_rate">적용환율 <em class="txt_num">1,231.23</em></span>수수료면제 <em class="txt_num">2,000,000</em>원</span><!-- 2022.10.04 외화충전시 적용환율노출추가 -->
+                    </li>
+                    <li>
+                      <button type="button" class="row">
+                        <strong class="tit">스타벅스 선유도역 1번출구점 스타벅스</strong>
+                        <span class="txt_amount add"><em class="txt_num">999,999,999</em></span>
+                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                      </button>
+                      <div class="row">
+                        <ul class="desc"><li>11:31</li><li>JPY 환전</li></ul>
+                        <span class="desc"><span class="">잔액 </span><em class="txt_num">200,000,000</em></span><!-- 2022.10.04 blind 클래스제거 및 띄어쓰기추가 -->
+                      </div>
+                      <p class="txt_sm">상품교환 전 취소 가능 <button type="button" class="btn_txt txt_point_1">취소</button></p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="trans_info">
+                  <h4 class="fnStickyTop">3월 23일 (금)</h4><!-- 22.10.28 fnStickyTop 클래스추가 -->
+                  <ul>
+                    <li>
+                      <div class="row">
+                        <strong class="tit">하나머니 → JPY</strong>
+                        <span class="txt_amount"><em class="txt_num">-20,000,000</em></span>
+                      </div>
+                      <div class="row">
+                        <ul class="desc"><li>11:31</li><li>JPY 환전</li></ul>
+                        <span class="desc"><span class="">잔액 </span><em class="txt_num">200,000,000</em></span><!-- 2022.10.04 blind 클래스제거 및 띄어쓰기추가 -->
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+  
+              <div class="list_trans">
+                <h3 class="tit_divider">2021</h3>
+                <div class="trans_info foriegn"><!-- 외화일 경우 foriegn 클래스 추가 -->
+                  <h4 class="fnStickyTop">3월 24일 (토)</h4><!-- 22.10.28 fnStickyTop 클래스추가 -->
+                  <ul>
+                    <li>
+                      <button type="button" class="row">
+                        <strong class="tit">CATHAY UNITED BANK 130061971 CATHAY UNITED BANK 130061971</strong>
+                        <span class="txt_amount">-USD <em class="txt_num">999,999,999</em></span>
+                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                      </button>
+                      <div class="row">
+                        <ul class="desc"><li>12:59</li><li>하나머니 환전</li></ul>
+                        <span class="desc"><span class="">잔액 </span><em class="txt_num">1042.00</em></span><!-- 2022.10.04 blind 클래스제거 및 띄어쓰기추가 -->
+                      </div>
+                      <span class="txt_noti">수수료면제 USD <em class="txt_num">3.78</em></span>
+                    </li>
+                    <li>
+                      <button type="button" class="row">
+                        <strong class="tit">CATHAY UNITED BANK 130061971 CATHAY UNITED BANK 130061971</strong>
+                        <span class="txt_amount add">USD <em class="txt_num">999,999,999</em></span>
+                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
+                      </button>
+                      <div class="row">
+                        <ul class="desc"><li>12:59</li><li>하나머니 환전</li></ul>
+                        <span class="desc"><span class="">잔액 </span><em class="txt_num">1042.00</em></span><!-- 2022.10.04 blind 클래스제거 및 띄어쓰기추가 -->
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>  
             </div>
             
             <!-- 내역없음 -->
-            <div class="msg_noresult" style="display: none;">
+            <div class="msg_noresult">
               <p class="tit">거래하신 내역이 없어요</p><!-- 22.05.31 문구변경 -->
               <div class="wrap_btn">
                 <a href="#none" class="btn_box_sm">무료적립받기</a>
@@ -405,43 +480,6 @@
             </div>
             <!-- // list loader -->
           </div>
-          </div>
-
-          <div id="test2" style="display: none;">
-            <div class="section_list_trans">
-              <!-- 조회필터 -->
-              <div class="wrap_filter fnStickyTop"><!-- 22.11.18 fnStickyTop 클래스추가 -->
-                <p class="filter_list"><span>이번달</span><span>최신순</span><span>전체</span></p>
-                <button type="button" class="btn_ico_filter"><span class="blind">상세조회 설정</span></button>
-              </div>
-              <!-- // 조회필터 -->
-  
-              <div class="wrap_list_trans skeletondev"></div>
-              <div class="wrap_list_trans listTest" style="display: none;">
-                
-              </div>
-              
-              <!-- 내역없음 -->
-              <div class="msg_noresult" style="display: none;">
-                <p class="tit">거래하신 내역이 없어요</p><!-- 22.05.31 문구변경 -->
-                <div class="wrap_btn">
-                  <a href="#none" class="btn_box_sm">무료적립받기</a>
-                </div>
-              </div>
-              <!-- // 내역없음 -->
-  
-              <!-- list loader -->
-              <div class="mesh-loader">
-                <div class="set-one">
-                    <div class="circle"></div><div class="circle"></div>
-                </div>
-                <div class="set-two">
-                  <div class="circle"></div><div class="circle"></div>
-                </div>
-              </div>
-              <!-- // list loader -->
-            </div>
-            </div>
           <!-- // 조회 리스트 -->
 
           <!-- 외화돈통 미오픈 -->
@@ -500,84 +538,6 @@
 
   <script>
   $(function(){
-    var defaultList = `<div class="list_trans">
-                <div class="trans_info">
-                  <h4 class="fnStickyTop">3월 24일 (토)</h4>
-                  <ul>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">하나머니 → JPY</strong>
-                        <span class="txt_amount"><em class="txt_num">-999,999,999</em></span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>JPY 환전</li></ul>
-                        <span class="desc"><span class="">잔액 </span><em class="txt_num">200,000,000</em></span>
-                      </div>
-                      <span class="txt_noti"><span class="exch_rate">적용환율 <em class="txt_num">1,231.23</em></span>수수료면제 <em class="txt_num">2,000,000</em>원</span>
-                    </li>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">스타벅스 선유도역 1번출구점 스타벅스</strong>
-                        <span class="txt_amount add"><em class="txt_num">999,999,999</em></span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>JPY 환전</li></ul>
-                        <span class="desc"><span class="">잔액 </span><em class="txt_num">200,000,000</em></span>
-                      </div>
-                      <p class="txt_sm">상품교환 전 취소 가능 <button type="button" class="btn_txt txt_point_1">취소</button></p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="trans_info">
-                  <h4 class="fnStickyTop">3월 23일 (금)</h4>
-                  <ul>
-                    <li>
-                      <div class="row">
-                        <strong class="tit">하나머니 → JPY</strong>
-                        <span class="txt_amount"><em class="txt_num">-20,000,000</em></span>
-                      </div>
-                      <div class="row">
-                        <ul class="desc"><li>11:31</li><li>JPY 환전</li></ul>
-                        <span class="desc"><span class="">잔액 </span><em class="txt_num">200,000,000</em></span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-  
-              <div class="list_trans">
-                <h3 class="tit_divider">2021</h3>
-                <div class="trans_info foriegn"><!-- 외화일 경우 foriegn 클래스 추가 -->
-                  <h4 class="fnStickyTop">3월 24일 (토)</h4><!-- 22.10.28 fnStickyTop 클래스추가 -->
-                  <ul>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">CATHAY UNITED BANK 130061971 CATHAY UNITED BANK 130061971</strong>
-                        <span class="txt_amount">-USD <em class="txt_num">999,999,999</em></span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>12:59</li><li>하나머니 환전</li></ul>
-                        <span class="desc"><span class="">잔액 </span><em class="txt_num">1042.00</em></span><!-- 2022.10.04 blind 클래스제거 및 띄어쓰기추가 -->
-                      </div>
-                      <span class="txt_noti">수수료면제 USD <em class="txt_num">3.78</em></span>
-                    </li>
-                    <li>
-                      <button type="button" class="row">
-                        <strong class="tit">CATHAY UNITED BANK 130061971 CATHAY UNITED BANK 130061971</strong>
-                        <span class="txt_amount add">USD <em class="txt_num">999,999,999</em></span>
-                        <span class="ico_arr_link_s"><span class="blind">상세내역</span></span>
-                      </button>
-                      <div class="row">
-                        <ul class="desc"><li>12:59</li><li>하나머니 환전</li></ul>
-                        <span class="desc"><span class="">잔액 </span><em class="txt_num">1042.00</em></span><!-- 2022.10.04 blind 클래스제거 및 띄어쓰기추가 -->
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>`
     // 돈통 swipe option
     var swiper = new Swiper('.swiper-container', {
       observer: true,
@@ -596,16 +556,6 @@
             delay: 20,
             time: 700
           });
-          skeletonLoading.start('.section_list_trans'); // 로딩 시
-          $('#test1').show();
-          $('#test1').find('.listTest').append(defaultList);
-              //로딩 시 wrap_list_trans에 skeleton loading을 위한 element prepend 후 end 시 삭제기능을 하는 함수 호출
-          setTimeout(function(){
-            skeletonLoading.end('.section_list_trans'); // 로딩 완료
-          },2000);
-          setTimeout(function(){
-            $('#test1').find('.listTest').show();
-          },2100);
         },
       }
     });
@@ -620,18 +570,6 @@
         delay: 20,
         time: 700
       });
-
-      skeletonLoading.start('.section_list_trans'); // 로딩 시
-      $('#test1').hide();
-      $('#test2').show();
-      $('#test2').find('.listTest').append(defaultList);
-          //로딩 시 wrap_list_trans에 skeleton loading을 위한 element prepend 후 end 시 삭제기능을 하는 함수 호출
-      setTimeout(function(){
-        skeletonLoading.end('.section_list_trans'); // 로딩 완료
-      },2000);
-      setTimeout(function(){
-        $('#test2').find('.listTest').show();
-      },2100);
 
       // 돈통 미오픈 slide 인 경우
       if ( $active.find('.msg_no_moneybag').length ){
@@ -680,6 +618,12 @@
       },300);
     });
 
+    //로딩 시 wrap_list_trans에 skeleton loading을 위한 element prepend 후 end 시 삭제기능을 하는 함수 호출
+    skeletonLoading.start('.section_list_trans'); // 로딩 시
+    setTimeout(function(){
+      skeletonLoading.end('.section_list_trans'); // 로딩 완료
+    },2000);
+
     // 22.10.28 환율정보 리프레시 버튼
     $('.btn_ico_refresh').on('click', function(){
       $(this).addClass('loading');
@@ -689,11 +633,6 @@
         $('.btn_ico_refresh').removeClass('loading');
       },2000);
     });
-
-    setTimeout(function(){
-      $('#test1').find('.listTest').append(defaultList);
-      fnStickyTop.set();
-    },3000);
   });
   </script>
 </body>
