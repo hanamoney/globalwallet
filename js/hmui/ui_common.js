@@ -218,8 +218,7 @@ var fnStickyTop = (function() {
         }
       }
     }, {
-      threshold: [0],
-      root: container
+      threshold: [0]
     });
 
     $('.sticky_sentinel_top').each(function(idx, el){
@@ -249,8 +248,8 @@ var fnStickyTop = (function() {
       ? headerHeight + parseInt($fixedEl.attr('data-height'))
       : headerHeight; // Header blur 높이
     top = container == document 
-      ? setHeight * 0.1 - 0.1                   // page인 경우
-      : (setHeight - headerHeight) * 0.1 - 0.1; // popup인 경우
+      ? setHeight * 0.1 - 0.2                   // page인 경우
+      : (setHeight - headerHeight) * 0.1 - 0.2; // popup인 경우
     filterHeight = $(window).width() > 320
       ? 3.8
       : 3.419;
