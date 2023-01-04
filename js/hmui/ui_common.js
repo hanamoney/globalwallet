@@ -273,6 +273,8 @@ var fnStickyTop = (function() {
     Array.from(container.querySelectorAll('.fnStickyTop')).map(el => {
       if ( $(container).find('.wrap_filter').length && !$(el).hasClass('wrap_filter') ) {
         fixed = top + filterHeight;
+      } else {
+        fixed = top;
       }
       el.style.top = fixed + 'rem'; // sticky position 설정
       _addSentinel(el, fixed);
