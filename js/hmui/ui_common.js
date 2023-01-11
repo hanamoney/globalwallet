@@ -13,7 +13,7 @@ function iosV(ua) {
   ua = (ua || navigator.userAgent).toLowerCase();
   var match = ua.match(/os (\d+)_(\d+)_?(\d+)?/);
   return match ? match[1] : undefined;
-}
+}  
 
 $(function(){
   if (isAOS) {
@@ -229,14 +229,6 @@ var fnStickyTop = (function() {
   // sticky 설정 계산 최초만 실행
   function _getTop() {
     stickyEl = document.querySelectorAll('.fnStickyTop');
-    // IntersectionObserver 미지원시 sticky 실행X
-    if (!window.IntersectionObserver) {
-      $(stickyEl).each(function(idx, el){
-        $(el).css('position','static');
-      })
-      return false;
-    }
-
     container = $(stickyEl).parents('.wrap_layer').hasClass('show') 
       ? $(stickyEl).parents('.content_layer')[0]
       : document;
@@ -251,8 +243,8 @@ var fnStickyTop = (function() {
       ? setHeight * 0.1 - 0.2                   // page인 경우
       : (setHeight - headerHeight) * 0.1 - 0.2; // popup인 경우
     filterHeight = $(window).width() > 320
-      ? 3.8
-      : 3.419;
+      ? 38 * 0.1
+      : (38 * 0.9) * 0.1;
 
     // Update sticky element class
     document.addEventListener('sticky-change', e => {
@@ -264,6 +256,14 @@ var fnStickyTop = (function() {
   }
 
   function set() {
+    // IntersectionObserver 미지원버전 sticky 실행X
+    if ( iosV() < 13 || parseInt(androidV(ua)) < 7 ) {
+      $('.fnStickyTop').each(function(idx, el){
+        $(el).css('position','static');
+      })
+      return;
+    }
+
     if (!container || container != document) {_getTop();}
     else if ($(stickyEl).parents('.wrap_layer').hasClass('show')) {_getTop();}
     var fixed = top;
