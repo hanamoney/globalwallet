@@ -202,7 +202,7 @@ var fnStickyTop = (function() {
 
   // detect stuck
   function _observeIntersection() {
-    var observer = new IntersectionObserver((records, observer) => {
+    var observer = new IntersectionObserver(function(records, observer) {
       for (var record of records) {
         var targetInfo = record.boundingClientRect;
         var stickyTarget = record.target.parentElement.querySelector('.fnStickyTop');
@@ -247,7 +247,7 @@ var fnStickyTop = (function() {
       : (38 * 0.9) * 0.1;
 
     // Update sticky element class
-    document.addEventListener('sticky-change', e => {
+    document.addEventListener('sticky-change', function(e) {
       var [stickyEl, stuck] = [e.detail.target, e.detail.stuck];
       stickyEl.classList.toggle('fixed', stuck);
     });
@@ -263,13 +263,14 @@ var fnStickyTop = (function() {
       })
       return;
     }
-
+    
     if (!container || container != document) {_getTop();}
     else if ($(stickyEl).parents('.wrap_layer').hasClass('show')) {_getTop();}
     var fixed = top;
 
     $(container).find('.fnStickyTop').removeClass('fixed');
-    Array.from(container.querySelectorAll('.fnStickyTop')).map(el => {
+    var stickyElements = container.querySelectorAll('.fnStickyTop');
+    stickyElements.forEach(function(el) {
       if ( $(container).find('.wrap_filter').length && !$(el).hasClass('wrap_filter') ) {
         fixed = top + filterHeight;
       } else {
