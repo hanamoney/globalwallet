@@ -1342,7 +1342,7 @@ var exeTransitionInLayer = function() {
     }
 
     // HMN207
-    if ($this.find('.cov_update')) {
+    if ($this.find('.cov_update').length) {
       $('.tit_big').addClass('transform');
     }
   });
