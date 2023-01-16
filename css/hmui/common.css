@@ -1170,6 +1170,11 @@ section[data-roll] {
   height: 3.0rem;
   background-image: url('../../images/hmui/emoji_forbidden.png');
 }
+.emoji_coin {
+  width: 3.0rem;
+  height: 3.0rem;
+  background-image: url('../../images/hmui/emoji_coin.png');
+}
 
 
 /* Checkbox */
