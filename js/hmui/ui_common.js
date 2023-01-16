@@ -260,10 +260,10 @@ var fnStickyTop = (function() {
     if ( iosV() < 13 || parseInt(androidV(ua)) < 7 ) {
       $('.fnStickyTop').each(function(idx, el){
         $(el).css('position','static');
-      })
+      });
       return;
     }
-    
+    $('section[data-roll]').css('overflow-x','unset');
     if (!container || container != document) {_getTop();}
     else if ($(stickyEl).parents('.wrap_layer').hasClass('show')) {_getTop();}
     var fixed = top;
