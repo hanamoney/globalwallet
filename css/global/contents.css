@@ -1168,6 +1168,14 @@
   font-size: 1.6rem;
   line-height: 1.5;
 }
+.wrap_moneybag_all .chk_star input + label,
+.wrap_moneybag_all a.txt_ccy,
+.wrap_moneybag_all .btn_ico_more {
+  outline:none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color:transparent;
+}
+
 .wrap_moneybag_all li.sortable-ghost {
   height: 7.3rem;
   background-color: rgba(0, 0, 0, 0.1);
