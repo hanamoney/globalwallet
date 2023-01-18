@@ -32,7 +32,7 @@ $(function(){
 var registUI = function(){
   if ( $('#header').length ) { _headerControl(); } // 스크롤에 따른 Header
   if ( $('.wrap_contents .fnFixedTop').length ) { _fixedTopInPage(); } // 스크롤에 따른 페이지 상단 fixed 고정
-  if ( $('.fnStickyTop').length ) { fnStickyTop.set(); } // 스크롤에 따른 상단 sticky 고정
+  if ( $('.wrap_contents .fnStickyTop').length ) { fnStickyTop.set(); } // 스크롤에 따른 상단 sticky 고정
   if ( $('.section_bottom_fixed.type_noFullBtn .fnScrollEnd').length ) { _fixedBottomBtnGap(); } // 스크롤에 따른 페이지 하단고정 위치
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
   if ( (iosV() >= 13) && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
@@ -231,7 +231,7 @@ var fnStickyTop = (function() {
     stickyEl = document.querySelectorAll('.fnStickyTop');
     container = $(stickyEl).parents('.wrap_layer').hasClass('show') 
       ? $(stickyEl).parents('.content_layer')[0]
-      : document;
+      : $(stickyEl).parents('.wrap_contents')[0];
     var headerHeight = $(window).width() > 320 // Header 기본 높이
       ? $('#header').outerHeight(true)
       : $('#header').outerHeight(true) * 10 / 9;
@@ -239,7 +239,7 @@ var fnStickyTop = (function() {
     setHeight = $fixedEl.length 
       ? headerHeight + parseInt($fixedEl.attr('data-height'))
       : headerHeight; // Header blur 높이
-    top = container == document 
+    top = container == $(stickyEl).parents('.wrap_contents')[0]
       ? setHeight * 0.1 - 0.2                   // page인 경우
       : (setHeight - headerHeight) * 0.1 - 0.2; // popup인 경우
     filterHeight = $(window).width() > 320
@@ -264,7 +264,7 @@ var fnStickyTop = (function() {
       return;
     }
     $('section[data-roll]').css('overflow-x','unset');
-    if (!container || container != document) {_getTop();}
+    if (!container || container !=  $(stickyEl).parents('.content_layer')[0]) {_getTop();}
     else if ($(stickyEl).parents('.wrap_layer').hasClass('show')) {_getTop();}
     var fixed = top;
 
@@ -1305,6 +1305,12 @@ var exeTransitionInLayer = function() {
 
   popup.on('layerOpened', function(e) {
     var $this = $(e.target);
+
+    if ($this.find('.fnStickyTop').length) {
+      setTimeout(function(){
+        fnStickyTop.set();
+      }, 300);
+    }
 
     // wrap_item_benefit 
     if ($this.find('.wrap_item_benefit')) {
