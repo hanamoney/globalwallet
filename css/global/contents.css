@@ -782,14 +782,27 @@
   margin: 1.2rem -0.45rem 0;
 }
 .section_top_info.card_history .prd_box_card .card_info {
-  padding: 0.1rem 0 0.1rem 1.6rem;
+  padding: 0.1rem 0 0;
 }
 .section_top_info.card_history .prd_box_card .card_info .card_name {
-  line-height: 1.5;
+  font-size: 0;
+  line-height: 1;
 }
-.section_top_info.card_history .prd_box_card .card_info .card_num {
-  padding-top: 0;
-  line-height: 1.5;
+.section_top_info.card_history .prd_box_card .card_info .card_name span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.section_top_info.card_history .prd_box_card .card_info .card_name span:first-child {
+  padding-right: 0.8rem;
+  font-size: 2.6rem;
+  line-height: 1.28;
+  font-weight: 300;
+}
+.section_top_info.card_history .prd_box_card .card_info .card_name [class^="img_logo"] {
+  width: 3.2rem;
+  height: 2.1rem;
+  background-size: 100% auto;
+  background-position: 50% -0.17rem;
 }
 .section_top_info.card_history .wrap_box {
   padding: 1.6rem 1.6rem 1.6rem 2.4rem;
@@ -936,6 +949,9 @@
 }
 .content_layer .section_list_trans.card_history .wrap_inp {
   margin: 0 2.4rem;
+}
+.content_layer .section_list_trans.card_history .list_txt {
+  margin: 1.0rem 2.4rem 0;
 }
 
 /* [HMN] - 하나머니 메인 */
