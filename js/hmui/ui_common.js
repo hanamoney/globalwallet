@@ -325,7 +325,7 @@ var _tabHightlight = function() {
   * @description // iOS 키패드 오픈시 하단고정 영역 키패드 위로 (ios13이상)
   */
 var _iOSInpFixdPos = function() {
-  var fixedEl = $('.contents, .inner_layer').find('.section_bottom_fixed > div');
+  var fixedEl = $('.contents, .wrap_layer.type_full .inner_layer').find('.section_bottom_fixed > div');
   var height = window.visualViewport.height;
   var viewport = window.visualViewport;
   window.visualViewport.addEventListener('resize', resizeHandler);
@@ -352,7 +352,7 @@ var _iOSInpFixdPos = function() {
   */
 var iOSKeyBoardHeight = function(keyboardHeight) {
   if ($('.section_bottom_fixed').length && iosV() < 13 ) {
-    $('.contents, .inner_layer').find('.section_bottom_fixed > div').each(function(idx, el) {
+    $('.contents, .wrap_layer.type_full .inner_layer').find('.section_bottom_fixed > div').each(function(idx, el) {
       var pos =  -keyboardHeight + 'px';
       $(el).css('transform', 'translateY(' +  pos + ')');
     });
