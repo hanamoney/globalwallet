@@ -1509,6 +1509,24 @@
   }
 }
 /* 메인 이벤트팝업 */
+.wrap_layer .content_layer.bg_hmn_201 {
+  padding-bottom: 1.3rem;
+  background-image: linear-gradient(111.11deg, #DBF2FF -2.65%, #FFDDD2 111.56%);
+}
+.wrap_layer .content_layer.bg_hmn_201::before {
+  display: none;
+}
+.wrap_layer .content_layer.bg_hmn_201 img {
+  display: block;
+  width: 36.0rem;
+  margin: 0 auto;
+  transform: translateY(-1.7rem);
+}
+.wrap_layer .content_layer.bg_hmn_201 .section_terms {
+  max-width: 36.0rem;
+  margin: -1.7rem auto 0.2rem;
+  padding-top: 0.6rem;
+}
 .wrap_banner.hmn_201 {
   background: url('../../images/global/bg_hmn_201.png') no-repeat 50%;
   background-size: cover;
@@ -1525,6 +1543,13 @@
   background: url('../../images/hmui/img_zero_charge_2.png') no-repeat 50%;
   background-size: 100%;
 }
+.wrap_banner.hmn_201 .btn_txt {
+  margin-top: 0.4rem;
+  font-size: 1.6rem;
+}
+.wrap_banner.hmn_201 .btn_txt {
+  font-size: 1.6rem;
+}
 .wrap_banner.hmn_202::after {
   content: '';
   display: inline-block;
@@ -1536,13 +1561,6 @@
   background: url('../../images/global/img_card_travlog.png') no-repeat 50%;
   background-size: 100%;
   transform: rotate(-15deg);
-}
-.wrap_banner.hmn_201 .btn_txt {
-  margin-top: 0.4rem;
-  font-size: 1.6rem;
-}
-.wrap_banner.hmn_201 .btn_txt {
-  font-size: 1.6rem;
 }
 .wrap_layer .content_layer.type_bg_coin .wrap_banner {
   padding-bottom: 1.0rem;
@@ -3085,7 +3103,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: url('../../images/global/bg_hmn_201.png') no-repeat left top;
+  background: url('../../images/global/bg_vdb_002.png') no-repeat left top;
   background-size: 100% auto;
   pointer-events: none;
 }
