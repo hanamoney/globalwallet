@@ -3689,8 +3689,8 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .wrap_toast {
   color: #fff;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
+  font-size: 1.6rem;
+  line-height: 1.32;
 }
 .txt_toast {
   text-align: center;

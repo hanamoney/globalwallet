@@ -140,6 +140,13 @@
       </div>
     </div>
 
+    <!-- 23.01.19 snackbar 추가 -->
+    <div id="snackbar" class="wrap_toast type_snackbar">
+      <p class="txt_toast">2월 28일까지 달러머니를 추가 통화로 수수료 없이 바꿀 수 있어요.</p>
+      <button class="btn_ico_close_w"><span class="blind">닫기</span></button>
+    </div>
+    <!-- // 23.01.19 snackbar 추가 -->
+
   </main>
 
   <script>
@@ -153,6 +160,11 @@
       $('#header').find('button').on('click', function(){
         fnOpenLayerPop('confirmId2');
       });
+
+      // snackbar 확인용
+      setTimeout(function(){
+        fnToastPop('snackbar');
+      },200);
 
       // 통화선택 시 컨텐츠 노출 제어 클래스 추가
       $('.list_dropdown').find('button').on('click', function(){
