@@ -2880,14 +2880,14 @@ button.wrap_box [class^="ico_arr_down"] {
   padding-top: 1.2rem;
   font-size: 2.0rem;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 700;
 }
 .wrap_box .txt_acc {
   padding-top: 0.4rem;
   color: #6E7D85;
   font-size: 1.6rem;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0;
 }
 .wrap_box > .tit {

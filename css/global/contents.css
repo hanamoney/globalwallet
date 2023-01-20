@@ -131,7 +131,7 @@
 }
 .section_chg_list.chg_list_acc li:first-child .txt_acc {
   padding-top: 1.2rem;
-  line-height: 2.4rem;
+  line-height: 1.32;
 }
 .section_chg_list.chg_list_acc .wrap_link_list {
   padding-top: 0;
@@ -165,7 +165,6 @@
 .section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey .txt_bank {
   font-size: 2rem;
   line-height: 3rem;
-  font-weight: 400;
 }
 .section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey .txt_acc {
   padding-top: 0.4rem;
