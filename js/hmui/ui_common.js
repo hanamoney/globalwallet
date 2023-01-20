@@ -177,7 +177,8 @@ var fnStickyTop = (function() {
       container,
       setHeight,
       filterHeight,
-      top;
+      top,
+      observer;
 
   // Dispatches a sticky-event
   function _fire(stuck, target) {
@@ -202,7 +203,7 @@ var fnStickyTop = (function() {
 
   // detect stuck
   function _observeIntersection() {
-    var observer = new IntersectionObserver(function(records, observer) {
+    observer = new IntersectionObserver(function(records, observer) {
       for (var record of records) {
         var targetInfo = record.boundingClientRect;
         var stickyTarget = record.target.parentElement.querySelector('.fnStickyTop');
@@ -255,6 +256,16 @@ var fnStickyTop = (function() {
     return container, setHeight, top;
   }
 
+  function unobserve() {
+    // 기존 element 삭제 시 observer 기능 중지
+    if ( iosV() < 13 || parseInt(androidV(ua)) < 7 ) {
+      return;
+    }
+    $('.sticky_sentinel_top').each(function(idx, el){
+      observer.unobserve(el);
+    });
+  }
+
   function set() {
     // IntersectionObserver 미지원버전 sticky 실행X
     if ( iosV() < 13 || parseInt(androidV(ua)) < 7 ) {
@@ -284,6 +295,7 @@ var fnStickyTop = (function() {
 
   return {
     set: set,
+    unobserve: unobserve
   }
 })();
 
