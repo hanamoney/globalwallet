@@ -35,7 +35,7 @@ var registUI = function(){
   if ( $('.wrap_contents .fnStickyTop').length ) { fnStickyTop.set(); } // 스크롤에 따른 상단 sticky 고정
   if ( $('.section_bottom_fixed.type_noFullBtn .fnScrollEnd').length ) { _fixedBottomBtnGap(); } // 스크롤에 따른 페이지 하단고정 위치
   if ( $('.wrap_link_list').length ) { _tabHightlight(); } // 링크 탭 하이라이트
-  if ( (iosV() >= 13) && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
+  // if ( (iosV() >= 13) && $('.inp').length ) { _iOSInpFixdPos(); } // iOS 키패드 하단고정영역(iOS13 이상)
   if ( $('.wrap_inp').length ) { _inpControl(); } // 인풋 인터렉션
   if ( $('.wrap_inp.type_decimal').length ) { _inpDecimal(); } // 인풋 인터렉션
   if ( $('.textarea.preventEnter').length ) { _inpPreventEnter(); } // textarea 엔터키 입력 방지
@@ -397,7 +397,8 @@ var _resetInpWithFixedBtn = function () {
   * @description // 인풋 입력창 인터렉션
   */
 var _inpControl = function() {
-  var inp = $('.wrap_inp .inp');
+  var inp = $('.wrap_inp .inp'),
+      isFixed = false;
   _inpChkVal(inp);
 
   inp.each(function(idx, el) { 
@@ -417,6 +418,12 @@ var _inpControl = function() {
     $(el).on('focus', function(e){
       var $thisInp = $(this);
       _inpChkVal($thisInp);
+
+      // iOS 키패드 하단고정영역
+      if ( (iosV() >= 13) && !isFixed ) {
+        _iOSInpFixdPos();
+        isFixed = true;
+      }
     });
 
     $(el).on('blur', function(e){
