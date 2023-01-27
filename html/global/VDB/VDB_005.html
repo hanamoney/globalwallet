@@ -246,6 +246,23 @@
                 </div>
               </div>
 
+              <!-- 내역없음 -->
+              <div class="msg_noresult">
+                <p class="tit">모은 내역이 없어요</p>
+              </div>
+              <!-- // 내역없음 -->
+
+              <!-- list loader -->
+              <div class="mesh-loader">
+                <div class="set-one">
+                    <div class="circle"></div><div class="circle"></div>
+                </div>
+                <div class="set-two">
+                  <div class="circle"></div><div class="circle"></div>
+                </div>
+              </div>
+              <!-- // list loader -->
+
             </div>
           </div>
         </div>
@@ -261,6 +278,14 @@
       fnOpenLayerPop('VDB005');
       // 팝업닫기 param 닫을 팝업 id
       // fnCloseLayerPop('VDB005');
+
+      // skeleton loading을 위한 element prepend 후 end 시 삭제기능을 하는 함수 호출
+      skeletonLoading.start('.section_list_trans'); // 로딩 시
+      skeletonLoading.start('.section_top_info'); // 로딩 시
+      setTimeout(function(){
+        skeletonLoading.end('.section_list_trans'); // 로딩 완료
+        skeletonLoading.end('.section_top_info'); // 로딩 완료
+      },2000); // setTime은 테스트용
     });
   </script>
 </body>

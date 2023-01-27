@@ -294,7 +294,13 @@
 
   <script>
   $(function(){
-    
+    // skeleton loading을 위한 element prepend 후 end 시 삭제기능을 하는 함수 호출
+    skeletonLoading.start('.section_top_info'); // 로딩 시
+    skeletonLoading.start('.section_list_trans'); // 로딩 시
+      setTimeout(function(){
+        skeletonLoading.end('.section_top_info'); // 로딩 완료
+        skeletonLoading.end('.section_list_trans'); // 로딩 완료
+      },2000); // setTime은 테스트용
   });
   </script>
 </body>
