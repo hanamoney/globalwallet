@@ -1113,7 +1113,7 @@
   width: 100%;
 }
 .wrap_moneybag_all {
-  padding-bottom: calc(env(safe-area-inset-bottom) + 6.4rem);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 6.4rem + 2.0rem);
 }
 .wrap_moneybag_all .wrap_btn.type_justify {
   padding-bottom: 2.4rem;
@@ -1221,7 +1221,7 @@
   white-space: nowrap;
 }
 .wrap_moneybag_all .txt_center {
-  margin-bottom: calc(4.0rem + 1.6rem);
+  /* margin-bottom: calc(4.0rem + 1.6rem); */
   padding: 1.6rem 0;
   color: #fff;
   font-size: 1.6rem;
