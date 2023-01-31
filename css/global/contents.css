@@ -343,6 +343,9 @@
   font-weight: 300;
   text-align: center;
 }
+.section_set_list .wrap_box_list.type_sub + .txt_guide {
+  margin-top: 1.0rem;
+}
 .section_set_list .tit_emoji {
   position: relative;
   color: #fff;
