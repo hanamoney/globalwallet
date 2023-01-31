@@ -4512,6 +4512,21 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .wrap_link_list + .wrap_btn_right .btn_txt {
   font-size: 1.5rem;
 }
+.wrap_link_list.type_img_banner li {
+  margin-top: 0.8rem;
+}
+.wrap_link_list.type_img_banner li:first-child {
+  margin-top: 0;
+}
+.wrap_link_list.type_img_banner li .wrap_box {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0;
+  font-size: 0;
+}
+.wrap_link_list.type_img_banner li .wrap_box .ico_arr_link {
+  right: 2.0rem;
+}
 
 /* 박스형 리스트 */
 .wrap_box_list li {
@@ -4590,9 +4605,6 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .wrap_box_list + .wrap_btn_right {
   padding-top: 1.7rem;
-}
-.section_acc_list .btn_txt {
-  font-size: 1.5rem;
 }
 
 /* 바텀시트 링크 리스트 */
@@ -4775,11 +4787,6 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .list_benefit.type_ico_s + .list_txt {
   margin-top: 1.6rem;
-}
-[data-roll="TDL"] .list_benefit.type_ico li .item_desc .tit,
-[data-roll="VDB"] .list_benefit.type_ico li .item_desc .tit {
-  font-size: 1.6rem;
-  line-height: 2.2rem;
 }
 .list_benefit.box_white .box {
   background-color: #fff;
@@ -5120,6 +5127,10 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   background-position: 100% 50%;
   transform: translateY(-50%);
 }
+.link_box.type_full_img {
+  overflow: hidden;
+  padding: 0;
+}
 .link_box.type_line {
   background-color: #fff;
   border: 1px solid #E3EBEE;
@@ -5138,7 +5149,12 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .link_box.bg_gradient_6 p {
   color: #844883;
 }
-
+.section_banner .wrap_banner_box {
+  padding: 0;
+}
+.section_banner .wrap_banner_box + .wrap_link_list {
+  margin-top: 0.8rem;
+}
 
 /* 조회 리스트 */
 .section_list_trans {
@@ -5912,6 +5928,11 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 }
 .wrap_layer .content_layer .wrap_banner[class*="type_bg"] .btn_txt {
   margin-top: 0;
+}
+.wrap_layer .content_layer .section_banner {
+  max-width: 36.0rem;
+  margin: 0 auto;
+  padding-top: 3.0rem;
 }
 .wrap_layer .content_layer .section_terms {
   margin-bottom: -1.0rem;

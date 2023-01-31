@@ -450,6 +450,9 @@
 .section_acc_list {
   padding-top: 3.0rem;
 }
+.section_acc_list .btn_txt {
+  font-size: 1.5rem;
+}
 .wrap_banner.usr_open_acc::after {
   content: '';
   display: block;
@@ -602,6 +605,10 @@
 }
 
 /* [TDL] - 하나머니 조회 */
+[data-roll="TDL"] .list_benefit.type_ico li .item_desc .tit {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
 .section_moneybag[data-ccy="usd"]::before {
   background-image: linear-gradient(135deg, #DBE0FC 0%, #F4DBDE 100%);
 }
@@ -2548,6 +2555,10 @@
 
 /* [VDB] - 혜택 */
 /* VDB_001 내가 받은 혜택 */
+[data-roll="VDB"] .list_benefit.type_ico li .item_desc .tit {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
 .section_top_visual.my_benefit {
   background: linear-gradient(157.38deg, #FFFAE0 -12.44%, #EBD6E6 103.69%, #F7FFDA 103.7%);
   text-align: center;
