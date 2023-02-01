@@ -4585,7 +4585,13 @@
   margin-top: 3.2rem !important;
 }
 .wrap_box.cov_confirm .list_info li:last-child {
-  padding-bottom: 0rem;
+  padding-bottom: 2.0rem;
+}
+.wrap_box.cov_confirm .list_info li:last-child .txt_info {
+  position: absolute;
+  right: 2.0rem;
+  bottom: 2.0rem;
+  white-space: nowrap;
 }
 .wrap_box.cov_confirm .list_info .tit {
   color: #536067;
