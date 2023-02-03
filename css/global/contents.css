@@ -35,6 +35,8 @@
   font-size: 1.5rem;
   line-height: 2.0rem;
 }
+/* [CHG] - 외화충전 */
+/* CHG_108 */
 .wrap_chg_autocharge {
   padding: 0 0 2.4rem;
   text-align: left; 
@@ -52,7 +54,6 @@
 .wrap_chg_autocharge .visual_chg_ccy [class^="ico_cur_"]:first-child {
   margin-left: 0;
 }
-/* CHG_108 */
 .wrap_chg_autocharge .wrap_tit .txt {
   margin-top: 0.8rem;
   color: #536067;
@@ -70,8 +71,7 @@
 .wrap_layer:not(.type_full,.type_center,.type_alert) .content_layer.autocharge::after{
   visibility: hidden;
 }
-
-/* [CHG] - 외화충전 */
+/* CHG_103  */
 .section_top_visual.chg_limit {
   background: linear-gradient(137.12deg, #DAFFED 0%, #EFCBEB 123.54%);
 }
@@ -118,11 +118,11 @@
   height: 3.0rem;
   margin: 0 0.8rem; */
 }
-/* CHG_103  */
 .wrap_item_benefit .list_benefit li .item_desc .tit + .txt {
   /* margin-top: 0.3rem;
   line-height: 2.4rem; */
 }
+/* CHG_107 */
 .section_chg_list.chg_list_ccy {
   padding-top: 0.8rem; 
 }
@@ -170,7 +170,6 @@
   padding-top: 0.4rem;
   line-height: 2.4rem;
 }
-/* CHG_107 */
 .section_chg_list.chg_list_acc .wrap_link_list li a.wrap_box [class^="ico_arr_link"] {
   right: 2.4rem;
   top: 62.015% !important;
