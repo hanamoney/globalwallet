@@ -893,6 +893,18 @@
   margin: 0 2.4rem;
   padding: 0.8rem 0 1.6rem;
 }
+.section_list_trans.card_history .wrap_inp.type_search .box_inp .btn_box_s {
+  display: none;
+}
+.section_list_trans.card_history .wrap_inp.type_search .box_inp.hasVal:not(.show_btn) .btn_ico_search {
+  display: none;
+}
+.section_list_trans.card_history .wrap_inp.type_search .box_inp.hasVal:not(.show_btn) .btn_box_s {
+  display: inline-block;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.6rem;
+}
 .section_list_trans.card_history .wrap_list_trans {
   margin-top: 0;
   padding-bottom: 2.4rem;

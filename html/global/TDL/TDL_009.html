@@ -106,16 +106,16 @@
             </div>
             <!-- // 조회필터 -->
 
-            <!-- 검색 -->
+            
             <form action="">
               <div class="wrap_inp type_search">
                 <div class="box_inp type_box">
                   <input type="search" class="inp" title="검색어 입력" placeholder="검색" value="">
                   <button type="button" class="btn_ico_search"><span class="blind">검색</span></button>
+                  <button type="button" class="btn_box_s">초기화</button><!-- 23.02.07 검색변경 -->
                 </div>
               </div>
             </form>
-            <!-- // 검색 -->
 
             <!-- 조회리스트 -->
             <div class="wrap_list_trans">
@@ -301,6 +301,11 @@
         skeletonLoading.end('.section_top_info'); // 로딩 완료
         skeletonLoading.end('.section_list_trans'); // 로딩 완료
       },2000); // setTime은 테스트용
+
+    // 검색초기화 확인용
+    $('.box_inp.type_box .btn_box_s').on('click', function(){
+      $('.inp').val('').parent().removeClass('hasVal');
+    });
   });
   </script>
 </body>
