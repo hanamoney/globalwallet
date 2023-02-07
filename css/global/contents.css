@@ -1827,6 +1827,11 @@
   word-break: keep-all;
 }
 /* GSP_002 트래블로그 혜택안내 */
+.btn_ico_share_header {
+  right: 5.8rem;
+  background-image: url('../../images/hmui/btn_ico_share_header.png');
+  background-size: 2.4rem;
+}
 .section_top_visual.travlog_benefit {
   background: linear-gradient(137.12deg, #DAFFED 0%, #EFCBEB 123.54%);
 }
