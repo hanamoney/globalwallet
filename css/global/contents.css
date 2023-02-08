@@ -324,6 +324,9 @@
 .section_set_list .wrap_box_list + .txt_guide {
   margin-top: 2.4rem;
 }
+.section_set_list .wrap_box_list + .txt_guide .txt {
+  word-break: keep-all;
+}
 .section_set_list .wrap_box_list .btn_ico_trash {
   position: absolute;
   top: 2.3rem;
