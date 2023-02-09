@@ -450,6 +450,10 @@
 .section_tab.scrolled + div .section_set_list:first-child {
   margin-top: 5.4rem;
 }
+/* CHG_109 */
+.section_banner > [class^="wrap_"] + [class^="wrap"] {
+  margin-top: 0.8rem;
+}
 
 /* [USR] - 회원가입 */
 .section_acc_list {
