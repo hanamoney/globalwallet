@@ -964,7 +964,7 @@
   line-height: 1.5;
 }
 .section_list_trans.card_history .list_trans li .trans_item .txt_amount + .desc {
-  padding-left: 0.4rem;
+  padding-left: 0.8rem;
 }
 .section_list_trans.card_history .list_trans li .trans_item .desc {
   font-size: 1.6rem;
