@@ -3292,7 +3292,7 @@
 .section_list_trans.vdb_saved {
   padding-top: 2.4rem;
 }
-.section_list_trans.vdb_saved .txt_amount.add {
+.section_list_trans.vdb_accum .txt_amount.add {
   color: #844883;
 }
 /* VDB_006 화폐선택 */
