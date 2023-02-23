@@ -39,9 +39,9 @@
           </div>
           <div class="section_form">
             <div class="wrap_inp type_cur">
-              <div class="box_inp"><!-- 에러,,케이스 시 box_inp에 err 클래스추가 -->
+              <div class="box_inp"><!-- 에러케이스 시 box_inp에 err 클래스추가 -->
                 <span class="unit">USD</span>
-                <input type="text" inputmode="numeric" class="inp" title="금액 입력" placeholder="얼마를 채울까요?" value="" />
+                <input type="tel" inputmode="numeric" class="inp" title="금액 입력" placeholder="얼마를 채울까요?" value="" />
                 <button type="button" class="btn_ico_clear"><span class="blind">입력삭제</span></button>
               </div>
               <p class="txt_inp_guide type_right">내가 보유한 <em>USD</em> <em class="txt_num">1,000.00</em></p>
@@ -58,7 +58,7 @@
           <div class="wrap_chk">
             <span class="chk_round">
               <input type="checkbox" id="chk2" name="chk2" />
-              <label for="chk2" id="test" onclick="test()">
+              <label for="chk2">
                 <span class="label">최대 <span>USD</span> <em class="txt_num">1,600.00</em> 채우기</span>
               </label>
             </span>
@@ -109,40 +109,15 @@
   </main>
 
   <script>
-    function updateTextView(_obj){
-  var num = getNumber(_obj.val());
-  if(num==0){
-    _obj.val('');
-  }else{
-    _obj.val(num.toLocaleString());
-  }
-}
-function getNumber(_str){
-  var arr = _str.split('');
-  var out = new Array();
-  for(var cnt=0;cnt<arr.length;cnt++){
-    if(isNaN(arr[cnt])==false){
-      out.push(arr[cnt]);
-    }
-  }
-  return Number(out.join(''));
-}
     $(function(){
       // 컨펌호출 param 오픈할 레이어 id
-      // fnOpenLayerPop('confirmId');
+      fnOpenLayerPop('confirmId');
 
       // value 값 설정 후 change 트리거
       $('#test').on('click', function(e){
         $('.inp').val('1,600.00').closest('.box_inp').addClass('hasVal');
       });
-
-      $('.inp').on('keyup', function(e){
-        updateTextView($(this));
-      });
     });
-    function test() {
-      console.log('label');
-    }
   </script>
 </body>
 </html>
