@@ -162,6 +162,18 @@
   background: #fff url('../../images/hmui/logo_hana.png') no-repeat 50%;
   background-size: 100%;
 } */
+.section_chg_list.chg_list_acc .wrap_link_list .wrap_box.type_line {
+  border: 2px solid #13c9be;
+  background-color: #fff;
+}
+.section_chg_list.chg_list_acc .wrap_link_list .wrap_box.type_line .txt_acc {
+  padding-top: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.32;
+  font-weight: 300;
+  color: #374248;
+  letter-spacing: -0.05rem;
+}
 .section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey .txt_bank {
   font-size: 2rem;
   line-height: 3rem;
@@ -169,23 +181,26 @@
 .section_chg_list.chg_list_acc .wrap_link_list .wrap_box.bg_bluegrey .txt_acc {
   padding-top: 0.4rem;
   line-height: 2.4rem;
+  color: #252E33;
 }
 .section_chg_list.chg_list_acc .wrap_link_list li a.wrap_box [class^="ico_arr_link"] {
-  right: 2.4rem;
-  top: 62.015% !important;
+  right: 1.6rem;
+  top: 50% !important;
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../../images/hmui/ico_arr_link_m.svg);
 }
 .section_chg_list.chg_list_acc li:first-child a.wrap_box [class^="ico_arr_link"]{
-  top: 66.15% !important;
+  top: 33% !important;
+  background-image: none;
+  background-color: #13C9BE;
+  -webkit-mask-image: url(../../images/hmui/ico_arr_link_m.svg);
+  mask-image: url(../../images/hmui/ico_arr_link_m.svg);
 }
 .section_chg_list.chg_list_acc li:first-child .txt_balance {
-  position: absolute;
-  right: 2.4rem;
-  top: 2.45rem;
-  text-align: right;
-  font-size: 1.4rem;
-  line-height: 2.1rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
   font-weight: 400;
-  color: #fff
 }
 
 /* CHG_101 */
