@@ -167,9 +167,7 @@
   background-color: #fff;
 }
 .section_chg_list.chg_list_acc .wrap_link_list .wrap_box.type_line .txt_acc {
-  padding-top: 1.2rem;
-  font-size: 1.4rem;
-  line-height: 1.32;
+  font-size: 1.5rem;
   font-weight: 300;
   color: #374248;
   letter-spacing: -0.05rem;
@@ -191,13 +189,13 @@
   background-image: url(../../images/hmui/ico_arr_link_m.svg);
 }
 .section_chg_list.chg_list_acc li:first-child a.wrap_box [class^="ico_arr_link"]{
-  top: 37% !important;
   background-image: none;
   background-color: #13C9BE;
   -webkit-mask-image: url(../../images/hmui/ico_arr_link_m.svg);
   mask-image: url(../../images/hmui/ico_arr_link_m.svg);
 }
 .section_chg_list.chg_list_acc li:first-child .txt_balance {
+  padding-top: 0.4rem;
   font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 400;
