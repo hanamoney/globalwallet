@@ -1027,6 +1027,15 @@
 .content_layer .section_list_trans.card_history .list_txt {
   margin: 1.0rem 2.4rem 0;
 }
+.wrap_layer[data-pageid="TDL011"]::before {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -4rem;
+  height: 8rem;
+  background-color: #000;
+}
 
 /* [HMN] - 하나머니 메인 */
 .section_moneybag_all {
