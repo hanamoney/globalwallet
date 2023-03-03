@@ -860,6 +860,9 @@
 .section_top_info.card_history .wrap_box .list_info .txt {
   text-align: right;
 }
+.section_top_info.card_history .wrap_box .list_info .txt.add {
+  color: #13C9BE;
+}
 .section_top_info.card_history .btn_acco {
   position: absolute;
   top: 0;
