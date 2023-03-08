@@ -3359,7 +3359,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   bottom:6.0rem;
 }
 .wrap_layer:not(.type_full).hasFixedBtn .content_layer {
-  max-height: calc(50rem - 6.0rem - 6.0rem);
+  max-height: calc(82vh - 6.0rem - 6.0rem);
 }
 .wrap_layer .btn_ico_close {
   position: absolute;
