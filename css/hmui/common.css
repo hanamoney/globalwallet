@@ -3319,11 +3319,11 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   overflow-x: hidden;
   overflow-y: auto;
   padding-bottom: 3.0rem;
-  max-height: calc(50rem - 6.0rem);
+  max-height: 82vh;
 }
 .wrap_layer .content_layer.type_bg {
   overflow: visible;
-  max-height: 50rem;
+  max-height: 82vh;
   border-radius: 2.4rem 2.4rem 0 0;
 }
 .wrap_layer:not(.type_full,.type_center,.type_alert) .content_layer.type_bg::after {
@@ -6215,11 +6215,11 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   html, body {
     font-size: 9px;
   }
-  .wrap_layer .content_layer {
+  /* .wrap_layer .content_layer {
     max-height: 500px;
-  }
+  } */
   .wrap_layer:not(.type_full).hasFixedBtn .content_layer {
-    max-height: calc(500px - 5.4rem - 6.0rem);
+    max-height: calc(82vh - 5.4rem - 6.0rem);
   }
 }
 
