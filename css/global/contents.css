@@ -123,6 +123,9 @@
   line-height: 2.4rem; */
 }
 /* CHG_107 */
+[data-roll="CHG"] .wrap_tit .tit.keep_all {
+  word-break: keep-all;
+}
 .section_chg_list.chg_list_ccy {
   padding-top: 0.8rem; 
 }
