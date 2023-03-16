@@ -398,7 +398,8 @@ var _resetInpWithFixedBtn = function () {
   */
 var _inpControl = function() {
   var inp = $('.wrap_inp .inp'),
-      isFixed = false;
+      isFixed = false,
+      returnFixed = inp.closest('.contents').find('.section_bottom_fixed').attr('data-fixed');
   _inpChkVal(inp);
 
   inp.each(function(idx, el) { 
@@ -420,7 +421,7 @@ var _inpControl = function() {
       _inpChkVal($thisInp);
 
       // iOS 키패드 하단고정영역
-      if ( (iosV() >= 13) && !isFixed ) {
+      if ( (iosV() >= 13) && !isFixed && !returnFixed ) {
         _iOSInpFixdPos();
         isFixed = true;
       }
