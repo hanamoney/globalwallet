@@ -38,14 +38,17 @@
           
           <div class="section_moneybag_all">
             <!-- CASE #3 약관동의O 계좌연결O -->
-            <!-- 22.11.11 환종추가 -->
+            <!-- 23.03.21 / 22.11.11 환종추가 -->
             <div class="wrap_moneybag_all">
               <h2 class="blind">하나머니 전체보기</h2>
               <div class="wrap_btn type_justify">
                 <button type="button" class="btn_ico_howto left" data-name="coachmark"><span>사용법</span><span class="ico_tap"></span></button>
                 <button type="button" class="btn_ico_reordering right"><span>잔액기준 재정렬</span><span class="ico_refresh_2"></span></button>
               </div>
-              <p class="txt_center">제공통화 외 지역에서는 달러머니를 이용하세요!</p><!-- 23.01.31 문구및위치변경 -->
+              <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip">
+                <span class="txt_center">제공통화 외 지역 사용안내</span>
+                <span class="ico_tooltip"><span class="blind">툴팁</span></span>
+              </button>
               <div class="list_moneybag wrap_show">
                 <h3><span class="txt">홈 화면에서 보여져요</span><span class="bor"></span></h3>
                 <ul id="showList">
@@ -120,8 +123,8 @@
                       <label for="ccy06"><span class="blind">홈 화면에 보이기</span></label>
                     </span>
                     <a href="#none" class="txt_ccy">
-                      <span class="ico_cur_cny"></span>
-                      <span>중국 CNY</span>
+                      <span class="ico_cur_cad"></span>
+                      <span>캐나다 CAD</span>
                       <span class="total_amount"><em class="txt_num">9,999.00</em></span>
                     </a>
                     <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
@@ -132,8 +135,8 @@
                       <label for="ccy07"><span class="blind">홈 화면에 보이기</span></label>
                     </span>
                     <a href="#none" class="txt_ccy">
-                      <span class="ico_cur_sgd"></span>
-                      <span>싱가포르 SGD</span>
+                      <span class="ico_cur_cny"></span>
+                      <span>중국 CNY</span>
                       <span class="total_amount"><em class="txt_num">9,999.00</em></span>
                     </a>
                     <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
@@ -144,9 +147,9 @@
                       <label for="ccy08"><span class="blind">홈 화면에 보이기</span></label>
                     </span>
                     <a href="#none" class="txt_ccy">
-                      <span class="ico_cur_vnd"></span>
-                      <span>베트남 VND</span>
-                      <span class="total_amount"><em class="txt_num">99,999,999</em></span>
+                      <span class="ico_cur_sgd"></span>
+                      <span>싱가포르 SGD</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
                     </a>
                     <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
                   </li>
@@ -156,9 +159,9 @@
                       <label for="ccy09"><span class="blind">홈 화면에 보이기</span></label>
                     </span>
                     <a href="#none" class="txt_ccy">
-                      <span class="ico_cur_cad"></span>
-                      <span>캐나다 CAD</span>
-                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                      <span class="ico_cur_vnd"></span>
+                      <span>베트남 VND</span>
+                      <span class="total_amount"><em class="txt_num">99,999,999</em></span>
                     </a>
                     <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
                   </li>
@@ -168,8 +171,116 @@
                       <label for="ccy10"><span class="blind">홈 화면에 보이기</span></label>
                     </span>
                     <a href="#none" class="txt_ccy">
+                      <span class="ico_cur_hkd"></span>
+                      <span>홍콩 HKD</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="ccy11" name="ccy" />
+                      <label for="ccy11"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="#none" class="txt_ccy">
+                      <span class="ico_cur_thb"></span>
+                      <span>태국 THB</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="ccy12" name="ccy" />
+                      <label for="ccy12"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="#none" class="txt_ccy">
+                      <span class="ico_cur_php"></span>
+                      <span>필리핀 PHP</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="ccy13" name="ccy" />
+                      <label for="ccy13"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="#none" class="txt_ccy">
+                      <span class="ico_cur_idr"></span>
+                      <span>인도네시아 IDR</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="ccy14" name="ccy" />
+                      <label for="ccy14"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="#none" class="txt_ccy">
                       <span class="ico_cur_aud"></span>
                       <span>호주 AUD</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="ccy15" name="ccy" />
+                      <label for="ccy15"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="#none" class="txt_ccy">
+                      <span class="ico_cur_nzd"></span>
+                      <span>뉴질랜드 NZD</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="ccy16" name="ccy" />
+                      <label for="ccy16"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="#none" class="txt_ccy">
+                      <span class="ico_cur_huf"></span>
+                      <span>헝가리 HUF</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="ccy17" name="ccy" />
+                      <label for="ccy17"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="#none" class="txt_ccy">
+                      <span class="ico_cur_chf"></span>
+                      <span>스위스 CHF</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="ccy18" name="ccy" />
+                      <label for="ccy18"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="#none" class="txt_ccy">
+                      <span class="ico_cur_sek"></span>
+                      <span>스웨덴 SEK</span>
+                      <span class="total_amount"><em class="txt_num">9,999.00</em></span>
+                    </a>
+                    <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
+                  </li>
+                  <li>
+                    <span class="chk_star">
+                      <input type="checkbox" id="ccy19" name="ccy" />
+                      <label for="ccy19"><span class="blind">홈 화면에 보이기</span></label>
+                    </span>
+                    <a href="#none" class="txt_ccy">
+                      <span class="ico_cur_czk"></span>
+                      <span>체코 CZK</span>
                       <span class="total_amount"><em class="txt_num">9,999.00</em></span>
                     </a>
                     <button type="button" class="btn_ico_more type_white"><span class="blind">돈통더보기</span></button>
@@ -177,7 +288,7 @@
                 </ul>
               </div>
             </div>
-            <!-- // 22.11.11 환종추가 -->
+            <!-- // 23.03.21 / 22.11.11 환종추가 -->
             <!-- // CASE #3 약관동의O 계좌연결O -->
 
           </div>
@@ -248,6 +359,19 @@
       </div>
     </div>
     <!-- // 22.12.01 환추가업데이트 알럿 -->
+
+    <!-- 23.03.14 툴팁 추가 -->
+    <!-- tooltip -->
+    <div id="tooltip" class="wrap_tooltip">
+      <div class="inner_tooltip">
+        <p class="txt_tooltip">
+          제공통화 외 지역에서는 <br><em class="txt_bold">달러머니(USD)를 이용</em>하세요!
+          <span class="txt_sub">충전한 달러머니 이용시 브랜드사 (Mastercard/UPI)에서 정한 환전수수료가 발생되지만, 기타지역 통화의 <span class="txt_bold">‘현찰 살 때’ 환율보다 더 저렴한 수수료로 이용</span>할 수 있어요.</span>
+        </p>
+        <button class="btn_ico_close fnCloseTooltip"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+    <!-- // tooltip -->
 
   </main>
   
