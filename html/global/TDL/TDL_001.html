@@ -32,7 +32,7 @@
     <div id="contents" class="wrap_contents">
       <div class="contents">
         <section data-roll="TDL">
-          <!-- 23.03.21 / 22.10.28 환종추가 -->
+          <!-- 23.03.24 / 22.10.28 환종추가 -->
           <div class="section_moneybag">
             <!-- 외화 돈통 오픈 시 노출 -->
             <div class="wrap_moneybag_tab fnFixedTop" data-height="56"><!-- 22.10.28 data-visible-type="hidden" attribute 삭제 -->
@@ -563,7 +563,7 @@
             </div>
             <div class="swiper-pagination"></div>
           </div>
-          <!-- // 23.03.21 / 22.10.28 환종추가 -->
+          <!-- // 23.03.24 / 22.10.28 환종추가 -->
 
           <div class="wrap_banner_box benefit_link">
             <!-- 이번달 받은 혜택이 있는 경우 -->
@@ -791,12 +791,13 @@
 
     // 싱단고정 탭
     var fixedTab = $('.wrap_moneybag_tab');
+    var tabUl = $('.wrap_moneybag_tab ul'); // <!-- 23.03.24 추가
     // var tabPosX = [0];
     // var tabLi = 0;
     // fixedTab.find('li').each(function(idx){
     //   tabLi += $(this).outerWidth(true);
     //   tabPosX[idx + 1] = tabLi;
-    // });
+    // }); <!-- 23.03.24 삭제
     $(document).on('click', '.wrap_moneybag_tab li', function(){
       var tabIdx = $(this).index();
       activeSlide(tabIdx);
@@ -807,9 +808,10 @@
       var activeTab = fixedTab.find('li').eq(slideIdx);
       if (!activeTab.hasClass('on')) {
         activeTab.addClass('on').siblings().removeClass('on');
-        // fixedTab.find('ul').scrollLeft(tabPosX[slideIdx]);
+        // fixedTab.find('ul').scrollLeft(tabPosX[slideIdx]); <!-- 23.03.24 삭제
       }
 
+      //<!-- 23.03.24 추가
       var activeTabLeft = $('.wrap_moneybag_tab ul li.on').offset().left;
       var tabLeft = $('.wrap_moneybag_tab ul').scrollLeft();
       var LeftValue = $('.wrap_moneybag_tab ul').css('padding-left').replace(/[^-\d\.]/g, '');

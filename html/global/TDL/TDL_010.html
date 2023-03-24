@@ -74,100 +74,164 @@
               </div>
               <!-- // 직접입력 선택 시 노출 -->
             </div>
-
-            <div class="wrap_chk">
+            <!-- 23.03.24 환종추가 -->
+            <div class="wrap_chk fnSimpleAcco_02">
               <div class="head_form">
-                <p class="tit_form">통화선택<span class="txt_sub">다중선택 가능</span></p>
+                <p class="tit_form">통화선택<span class="txt_sub"><em class="txt_point_1">18</em> / 18</span></p>
               </div>
-              <ul class="rdo_list type_col_3">
+              <button type="button" class="btn_acco_02"><span class="ico_arr_down_2"><span class="blind">상세보기</span></button>
+              <ul class="rdo_list type_col_3 cur_ico_list wrap_acco_02" style="display: none;">
                 <li>
                   <span class="box_rdo">
                     <input type="checkbox" id="rdo4_1" name="rdo4" checked>
-                    <label for="rdo4_1">전체</label>
+                    <label for="rdo4_1"><span class="ico_cur_all"></span>전체<br>ALL</label>
                   </span>
                 </li>
                 <li>
                   <span class="box_rdo">
                     <input type="checkbox" id="rdo4_2" name="rdo4" >
-                    <label for="rdo4_2">하나머니</label>
+                    <label for="rdo4_2"><span class="ico_cur_hanamoney"></span>하나머니<br>KRW</label>
                   </span>
                 </li>
                 <li>
                   <span class="box_rdo">
                     <input type="checkbox" id="rdo4_3" name="rdo4" >
-                    <label for="rdo4_3">미국</label>
+                    <label for="rdo4_3"><span class="ico_cur_usd"></span>미국<br>USD</label>
                   </span>
                 </li>
                 <li>
                   <span class="box_rdo">
                     <input type="checkbox" id="rdo4_4" name="rdo4" >
-                    <label for="rdo4_4">일본</label>
+                    <label for="rdo4_4"><span class="ico_cur_jpy"></span>일본<br>JPY</label>
                   </span>
                 </li>
                 <li>
                   <span class="box_rdo">
                     <input type="checkbox" id="rdo4_5" name="rdo4" >
-                    <label for="rdo4_5">유럽</label>
+                    <label for="rdo4_5"><span class="ico_cur_eur"></span>유럽<br>EUR</label>
                   </span>
                 </li>
                 <li>
                   <span class="box_rdo">
                     <input type="checkbox" id="rdo4_6" name="rdo4" >
-                    <label for="rdo4_6">영국</label>
+                    <label for="rdo4_6"><span class="ico_cur_gbp"></span>영국<br>GBP</label>
                   </span>
                 </li>
                 <li>
                   <span class="box_rdo">
                     <input type="checkbox" id="rdo4_7" name="rdo4" >
-                    <label for="rdo4_7">중국</label>
+                    <label for="rdo4_7"><span class="ico_cur_cad"></span>캐나다<br>CAD</label>
                   </span>
                 </li>
                 <li>
                   <span class="box_rdo">
                     <input type="checkbox" id="rdo4_8" name="rdo4" >
-                    <label for="rdo4_8">싱가포르</label>
+                    <label for="rdo4_8"><span class="ico_cur_cny"></span>중국<br>CNY</label>
                   </span>
                 </li>
-                <!-- <li>
+                <li>
                   <span class="box_rdo">
                     <input type="checkbox" id="rdo4_9" name="rdo4" >
-                    <label for="rdo4_9">베트남</label>
+                    <label for="rdo4_9"><span class="ico_cur_sgd"></span>싱가포르<br>SGD</label>
                   </span>
-                </li> -->
+                </li>
                 <li>
                   <span class="box_rdo">
                     <input type="checkbox" id="rdo4_10" name="rdo4" >
-                    <label for="rdo4_10">캐나다</label>
+                    <label for="rdo4_10"><span class="ico_cur_vnd"></span>베트남<br>VND</label>
                   </span>
                 </li>
                 <li>
                   <span class="box_rdo">
                     <input type="checkbox" id="rdo4_11" name="rdo4" >
-                    <label for="rdo4_11">호주</label>
+                    <label for="rdo4_11"><span class="ico_cur_hkd"></span>홍콩<br>HKD</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="checkbox" id="rdo4_12" name="rdo4" >
+                    <label for="rdo4_12"><span class="ico_cur_thb"></span>태국<br>THB</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="checkbox" id="rdo4_13" name="rdo4" >
+                    <label for="rdo4_13"><span class="ico_cur_php"></span>필리핀<br>PHP</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="checkbox" id="rdo4_14" name="rdo4" >
+                    <label for="rdo4_14"><span class="ico_cur_idr"></span>인도네시아<br>IDR</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="checkbox" id="rdo4_15" name="rdo4" >
+                    <label for="rdo4_15"><span class="ico_cur_aud"></span>호주<br>AUD</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="checkbox" id="rdo4_16" name="rdo4" >
+                    <label for="rdo4_16"><span class="ico_cur_nzd"></span>뉴질랜드<br>NZD</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="checkbox" id="rdo4_17" name="rdo4" >
+                    <label for="rdo4_17"><span class="ico_cur_huf"></span>헝가리<br>HUF</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="checkbox" id="rdo4_18" name="rdo4" >
+                    <label for="rdo4_18"><span class="ico_cur_chf"></span>스위스<br>CHF</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="checkbox" id="rdo4_19" name="rdo4" >
+                    <label for="rdo4_19"><span class="ico_cur_sek"></span>스웨덴<br>SEK</label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="checkbox" id="rdo4_20" name="rdo4" >
+                    <label for="rdo4_20"><span class="ico_cur_czk"></span>체코<br>CZK</label>
                   </span>
                 </li>
               </ul>
             </div>
+            <!-- // 23.03.24 환종추가 -->
 
             <!-- 23.01.19 카드2개 보유한경우 노출 -->
             <div class="wrap_chk">
               <div class="head_form">
                 <p class="tit_form">카드선택<span class="txt_sub">다중선택 가능</span></p>
               </div>
-              <ul class="rdo_list type_col_2">
+              <!-- 23.03.24 변경 -->
+              <ul class="rdo_list type_flex_1">
                 <li>
                   <span class="box_rdo">
-                    <input type="checkbox" id="rdo3_1" name="rdo3" checked>
-                    <label for="rdo3_1">마스터카드</label>
+                    <input type="checkbox" id="rdo3_1" name="rdo3" >
+                    <label for="rdo3_1">체크 <span class="emoji_master"></span></label>
                   </span>
                 </li>
                 <li>
                   <span class="box_rdo">
                     <input type="checkbox" id="rdo3_2" name="rdo3" checked>
-                    <label for="rdo3_2">유니온페이</label>
+                    <label for="rdo3_2">체크 <span class="img_logo_unionpay"></span></label>
+                  </span>
+                </li>
+                <li>
+                  <span class="box_rdo">
+                    <input type="checkbox" id="rdo3_3" name="rdo3" >
+                    <label for="rdo3_3">신용 <span class="emoji_master"></span></label>
                   </span>
                 </li>
               </ul>
+              <!-- 23.03.24 변경 -->
             </div>
             <!-- 23.01.19 카드2개 보유한경우 노출 -->
 
@@ -210,6 +274,20 @@
     // 팝업오픈 퍼블확인용 스크립트
     $(function(){
       fnOpenLayerPop('popupId');
+    });
+
+    // <!-- 23.03.24 추가
+    var accoBtn = $('.fnSimpleAcco_02').find('.btn_acco_02');
+    accoBtn.on('click',function(){
+      var $accoCont = $(this).siblings('.wrap_acco_02');
+
+      if ($(this).hasClass('on')) {
+        $(this).removeClass('on');
+        $accoCont.slideUp(600);
+      } else {
+        $(this).addClass('on');
+        $accoCont.slideDown(800);
+      }
     });
   </script>
 </body>

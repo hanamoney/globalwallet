@@ -940,7 +940,7 @@ var _tooltip = function() {
     var $tooltip = $('#' + $(this).attr('data-name'));
     var winW = $(window).outerWidth();
     var width = $tooltip.outerWidth(true)/2;
-    var posY = $focusEl.offset().top + $focusEl.outerHeight() + 5;
+    var posY = $focusEl.offset().top + $focusEl.outerHeight() + 5; // <!-- 23.03.24 수정
     var posX = winW/2 - width; // default center
     var btnX = 0;
     
