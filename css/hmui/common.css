@@ -6350,7 +6350,13 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   background-position: center center;
   background-color: #F5F8F9;
 }
-
+[class^=ico_auth_] {
+  display: inline-block;
+  width: 6.0rem;
+  height: 6.0rem;
+  border-radius: 1.4rem;
+  vertical-align: middle;
+}
 .wrap_tit.type_auth [class^=ico_auth_] {
   margin-bottom: 1.6rem;
 }
