@@ -1853,6 +1853,15 @@ input::-webkit-search-results-decoration{
 .wrap_inp.type_search .box_inp.type_box.show_btn .btn_ico_clear {
   right: 4.8rem;
 }
+.wrap_inp.type_flex {
+  display: flex;
+}
+.box_inp.type_flex > * + * {
+  margin-left: 1.6rem;
+}
+.box_inp.type_flex > *:first-child {
+  flex: 0 0 35%;
+}
 
 /* textarea */
 .box_inp .inp.textarea {
@@ -2963,6 +2972,10 @@ button.btn_secondary {
 .wrap_box.rounded12 {
   border-radius: 1.2rem;
 }
+.wrap_box.rounded10 {
+  border-radius: 1.0rem;
+  padding: 2.4rem;
+}
 .wrap_box.no_arr {
   padding-right: 2.0rem;
 }
@@ -3050,6 +3063,12 @@ a.wrap_box > .txt:first-child {
 .wrap_box .list_info li {
   margin-top: -0.2rem;
   padding: 0.5rem 0;
+}
+.wrap_box .list_txt {
+  margin-top: 0.8rem;
+}
+.wrap_box .list_txt li + li {
+  margin-top: 0.4rem;
 }
 .wrap_box .txt_info_center {
   text-align: center;
@@ -6286,6 +6305,99 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   height: 4.8rem;
   background: url('../../images/hmui/img_gesture_press.png') no-repeat 50%;
   background-size: 4.8rem;
+}
+
+/* 사설인증 */
+.ico_auth_oneq {
+  background-image: url("../../images/hmui/icon/ico_auth_oneq.png");
+  background-repeat: no-repeat;
+  background-size: 3.2rem;
+  background-position: center center;
+  background-color: #F5F8F9;
+}
+.ico_auth_hana {
+  background-image: url("../../images/hmui/icon/ico_auth_hana.png");
+  background-repeat: no-repeat;
+  background-size: 3.2rem;
+  background-position: center center;
+  background-color: #F5F8F9;
+}
+.ico_auth_mobile {
+  background-image: url("../../images/hmui/icon/ico_auth_mobile.png");
+  background-repeat: no-repeat;
+  background-size: 3.2rem;
+  background-position: center center;
+  background-color: #F5F8F9;
+}
+.ico_auth_naver {
+  background-image: url("../../images/hmui/icon/ico_auth_naver.png");
+  background-repeat: no-repeat;
+  background-size: 3.2rem;
+  background-position: center center;
+  background-color: #F5F8F9;
+}
+.ico_auth_pass {
+  background-image: url("../../images/hmui/icon/ico_auth_pass.png");
+  background-repeat: no-repeat;
+  background-size: 3.2rem;
+  background-position: center center;
+  background-color: #F5F8F9;
+}
+.ico_auth_toss {
+  background-image: url("../../images/hmui/icon/ico_auth_toss.png");
+  background-repeat: no-repeat;
+  background-size: 3.2rem;
+  background-position: center center;
+  background-color: #F5F8F9;
+}
+
+.wrap_tit.type_auth [class^=ico_auth_] {
+  margin-bottom: 1.6rem;
+}
+.wrap_tit.type_complete {
+  padding-top: 4.8rem;
+  padding-bottom: .8rem;
+  text-align: center;
+}
+.wrap_tit.type_complete .tit {
+  padding-bottom: .8rem;
+  text-align: center;
+}
+.wrap_tit.type_complete [class^=ico_auth_] {
+  margin-bottom: 2.4rem;
+}
+.section_auth__block {
+  margin-top: 5.6rem;
+}
+.section_auth__block + .section_auth__block {
+  margin-top: 3.2rem;
+}
+.section_auth__block h3 {
+  font-size: 1.8rem;
+  color: #69777E;
+  font-weight: 700;
+}
+.section_auth__block .auth_link__list li {
+  margin-top: 1.6rem;
+  padding: .2rem .4rem;
+  background: #F5F8F9;
+  border-radius: 1.4rem;
+}
+.section_auth__block .auth_link__list li button {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.section_auth__block .auth_link__list li button span {
+  font-size: 1.8rem;
+}
+.section_auth__block .auth_link__list li button .ico_arr_link {
+  position: absolute;
+  right: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @supports ((-webkit-backdrop-filter:none) or (backdrop-filter:none)) {
