@@ -191,6 +191,12 @@ body.overflow {
 #header.type_white:not(.scrolled) .btn_ico_menu {
   background-image: url('../../images/hmui/btn_menu_w.png');
 }
+#header.type_white:not(.scrolled) .btn_ico_prev {
+  background-image: url('../../images/hmui/btn_back_w.png');
+}
+#header.type_white:not(.scrolled) .btn_ico_share_header {
+  background-image: url('../../images/hmui/btn_ico_share_header_w.png');
+}
 .wrap_contents {
   background-color: #fff;
 }
@@ -1261,7 +1267,21 @@ section[data-roll] {
   height: 3.0rem;
   background-image: url('../../images/hmui/emoji_coin.png');
 }
-
+.emoji_purse {
+  width: 5.0rem;
+  height: 6.0rem;
+  background-image: url('../../images/hmui/emoji_purse.png');
+}
+.emoji_graph {
+  width: 5.6rem;
+  height: 6.0rem;
+  background-image: url('../../images/hmui/emoji_graph.png');
+}
+.emoji_clock {
+  width: 5.0rem;
+  height: 6.0rem;
+  background-image: url('../../images/hmui/emoji_clock.png');
+}
 
 /* Checkbox */
 .chk,

@@ -471,11 +471,14 @@
   display: block;
   width: 20rem;
   height: 9.6rem;
-  margin: 0 auto 1.6rem;
+  margin: 0 auto 1.0rem;
 }
 .list_txt.set107::before {
   background: url(../../images/global/visual_set_107.png) no-repeat center;
   background-size: 100%;
+}
+.list_txt.set107 li {
+  word-break: keep-all;
 }
 
 /* CHG_109 */
@@ -639,6 +642,238 @@
 }
 .section_top_visual.join_complete + .wrap_item_benefit {
   padding-top: 6.2rem;
+}
+/* USR_103 */
+.usr_travlog_join {
+  height: 100vh;
+  overflow: hidden;
+  transition: background-color 0.6s;
+}
+.usr_travlog_join > section {
+  padding-bottom: 0;
+}
+.usr_travlog_join .wrap_tit {
+  padding-top: 3.2rem;
+  text-align: center;
+}
+.usr_travlog_join .wrap_tit .tit_page {
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  color: #E8A9E1;
+  text-align: center;
+}
+.usr_travlog_join .wrap_tit .tit_sub {
+  margin-top: 1.6rem;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+.usr_travlog_join .wrap_tit .tit_sub em {
+  position: relative;
+  z-index: 2;
+}
+.usr_travlog_join .wrap_tit .tit_sub em::before {
+  content: '';
+  position: absolute;
+  top: -0.4rem;
+  right: -1.2rem;
+  width: 12.3rem;
+  height: 4.7rem;
+  background: url(../../images/global/img_line_circle.svg) no-repeat center;
+  filter: invert(58%) sepia(88%) saturate(1510%) hue-rotate(326deg) brightness(99%) contrast(91%);
+  z-index: -1;
+}
+.usr_travlog_join .wrap_tit .txt {
+  margin-top: 0.4rem;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: #fff;
+}
+.usr_travlog_join .wrap_tit .txt + .txt {
+  margin-top: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #B7C5C8;
+}
+.usr_travlog_join .img_credit_travlog,
+.usr_travlog_join .img_card_travlog {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 15.6rem;
+  height: 24.7rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.3);
+  transform: rotate(-15deg);
+}
+.usr_travlog_join .img_credit_travlog::before,
+.usr_travlog_join .img_card_travlog::before {
+  display: none;
+}
+.usr_travlog_join .img_credit_travlog::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -4.4rem;
+  top: -6.5rem;
+  width: 16.4rem;
+  height: 8.6rem;
+  background: url(../../images/global/img_txt_new.png) no-repeat center;
+  transform: rotate(10deg);
+  background-size: 100%;
+}
+.usr_travlog_join .img_credit_travlog::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../images/global/img_credit_travlog.png) no-repeat 50%;
+}
+.usr_travlog_join .img_credit_travlog::after,
+.usr_travlog_join .img_card_travlog::after {
+  background-size: cover;
+}
+.usr_travlog_join .usr_swiper {
+  height: calc(100vh - 30rem);
+  display: flex;
+  align-items: center;
+}
+.usr_travlog_join .usr_swiper > .swiper-wrapper {
+  height: auto;
+}
+.usr_travlog_join .usr_swiper > .swiper-wrapper .swiper-slide {
+  width: auto;
+}
+.usr_travlog_join .usr_swiper > .swiper-wrapper .swiper-slide-next,
+.usr_travlog_join .usr_swiper > .swiper-wrapper .swiper-slide-prev {
+  opacity: 0.3;
+}
+.usr_travlog_join .swiper-pagination {
+  margin-top: 4.0rem;
+  position: static;
+  transform: none;
+}
+.usr_travlog_join.type_credit {
+  background-color: #5D39C2;
+}
+.usr_travlog_join.type_credit .wrap_tit .tit_page {
+  color: #E8A9E1;
+}
+.usr_travlog_join.type_credit .wrap_tit .tit_sub {
+  color: #fff;
+}
+.usr_travlog_join.type_credit .wrap_tit .txt {
+  color: #fff;
+}
+.usr_travlog_join.type_credit .wrap_tit .txt + .txt {
+  color: #B7C5C8;
+}
+.usr_travlog_join.type_credit .swiper-pagination .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+.usr_travlog_join.type_credit .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+.btn_full_primary.type_credit {
+  background: linear-gradient(100.33deg, #FFABA6 7.68%, #9D6FE8 83.12%);
+}
+
+
+
+.usr_travlog_join.type_check .wrap_tit .tit_page {
+  color: #43B9C7;
+}
+.usr_travlog_join.type_check .wrap_tit .tit_sub {
+  color: #252E33;
+}
+.usr_travlog_join.type_check .wrap_tit .tit_sub em::before {
+  filter: invert(99%) sepia(81%) saturate(1331%) hue-rotate(90deg) brightness(93%) contrast(81%);
+}
+.usr_travlog_join.type_check .wrap_tit .txt {
+  color: #252E33;
+}
+.usr_travlog_join.type_check .wrap_tit .txt + .txt {
+  color: #69777E;
+}
+.usr_travlog_join.type_check .swiper-pagination .swiper-pagination-bullet {
+  background-color: rgba(79, 93, 100, 0.6);
+  opacity: 1;
+}
+.usr_travlog_join.type_check .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #4F5D64;
+}
+.btn_full_primary.type_check {
+  background: linear-gradient(100.33deg, #FFABA6 7.68%, #9D6FE8 83.12%);
+}
+
+
+
+.usr_travlog_join.type_credit .select_check {
+  display: none;
+}
+.usr_travlog_join.type_check .select_credit {
+  display: none;
+}
+
+/* USR_104 */
+.usr_travlog_complete .txt.type_gradien {
+  font-size: 2.4rem;
+  text-align: center;
+  line-height: 3rem;
+  font-weight: 700;
+  background: linear-gradient(100.33deg, #17D6A8 7.68%, #7551D9 83.12%);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.usr_travlog_complete .list_benefit_label.type_full_box li {
+  padding: 0;
+  align-items: center;
+  background-color: #314052;
+}
+.usr_travlog_complete .list_benefit_label.type_full_box li a {
+  width: 100%;
+  padding: 1.2rem 1.0rem;
+  display: flex;
+  align-items: center;
+}
+.usr_travlog_complete .list_benefit_label.type_full_box li [class^="emoji_"] {
+  width: 7.2rem;
+  height: 7.2rem;
+}
+.usr_travlog_complete .list_benefit_label.type_full_box li .emoji_drone {
+  background-image: url(../../images/hmui/emoji_drone_big.png);
+  background-size: 6.0rem auto;
+}
+.usr_travlog_complete .list_benefit_label.type_full_box li .emoji_purse {
+  background-size: 5.0rem auto;
+}
+.usr_travlog_complete .list_benefit_label.type_full_box li .emoji_graph {
+  background-size: 5.6rem auto;
+}
+.usr_travlog_complete .list_benefit_label.type_full_box li .emoji_clock {
+  background-size: 5.0rem auto;
+}
+.usr_travlog_complete .list_benefit_label.type_full_box li .tit {
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+}
+.usr_travlog_complete .list_benefit_label.type_full_box li .txt {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+}
+.usr_travlog_complete .list_benefit_label.type_full_box li .txt + .tit {
+  margin-top: 0.2rem;
+}
+.usr_travlog_complete .list_benefit_label.type_full_box + .wrap_btn_center {
+  margin-top: 2.4rem;
 }
 
 /* [TDL] - 하나머니 조회 */
@@ -2152,6 +2387,16 @@
   left: 100%;
   transform: translateX(-0.4rem);
 }
+.wrap_item_benefit .list_benefit li.type_center,
+.wrap_item_benefit .list_benefit li.type_center a {
+  align-items: center;
+}
+.wrap_item_benefit .list_benefit li.type_center .item_desc {
+  padding-top: 0;
+}
+.wrap_item_benefit .list_benefit li.type_center .item_desc .tit {
+  line-height: 2.2rem;
+}
 .section_cont.about_travlog {
   background: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);
   text-align: center;
@@ -2227,16 +2472,19 @@
 .section_cont.about_travlog .visual_gsp_travlog .list_ccy {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   margin-top: 1.2rem;
-  padding: 0 1.3rem;
+  /* padding: 0 1.3rem; */
 }
 .section_cont.about_travlog .visual_gsp_travlog .list_ccy li {
-  width: 3.0rem;
+  width: auto;
+  padding: 0 1.0rem;
   font-size: 1.4rem;
   line-height: 2.0rem;
   font-weight: 300;
   white-space: nowrap;
+  letter-spacing: 0;
 }
 .section_cont.about_travlog .visual_gsp_travlog .list_ccy li [class^="ico_cur"] {
   display: block;
@@ -2245,12 +2493,17 @@
   margin: 0 auto 0.6rem;
 }
 .section_cont.about_travlog .visual_gsp_travlog .list_ccy:last-child {
-  justify-content: space-evenly;
   margin-top: 1.6rem;
 }
 .section_cont.about_travlog .visual_gsp_travlog .list_ccy:last-child li {
   width: auto;
-  padding: 0 0.8rem;
+  padding: 0 0.6rem;
+}
+.section_cont.about_travlog .visual_gsp_travlog .list_ccy:last-child li:nth-child(3) {
+  padding-right: 0.7rem;
+}
+.section_cont.about_travlog .visual_gsp_travlog .list_ccy:last-child li:nth-child(4) {
+  padding-left: 0.7rem;
 }
 .section_cont.about_travlog .visual_gsp_travlog.transform {
   animation: itemUp30 0.4s forwards;
@@ -5450,7 +5703,7 @@
     height: 18.6rem;
     margin-left: -17.7rem;
   }
-  .section_cont.about_travlog .visual_gsp_travlog .list_ccy {
+  /* .section_cont.about_travlog .visual_gsp_travlog .list_ccy {
     justify-content: space-evenly;
   }
   .section_cont.about_travlog .visual_gsp_travlog .list_ccy:last-child {
@@ -5458,7 +5711,7 @@
   }
   .section_cont.about_travlog .visual_gsp_travlog .list_ccy:last-child li {
     padding: 0 3.2vw;
-  }
+  } */
   .gsp_travlog_info .visual_gsp_cashback {
     height: 14.0rem;
   }
