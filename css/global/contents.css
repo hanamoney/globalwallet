@@ -644,6 +644,108 @@
   padding-top: 6.2rem;
 }
 /* USR_103 */
+.usr_travlog_join .tit {
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+.usr_travlog_join .tit_sub {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  font-weight: 700;
+}
+.usr_travlog_join .tit_sub em {
+  position: relative;
+  z-index: 2;
+}
+.usr_travlog_join .tit_sub em::before {
+  content: '';
+  position: absolute;
+  top: -0.3rem;
+  right: 0rem;
+  width: 6.7rem;
+  height: 2.7rem;
+  object-fit: cover;
+  -webkit-mask-image: url(../../images/global/img_line_circle.svg);
+  mask-image: url(../../images/global/img_line_circle.svg);
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  z-index: -1;
+}
+.usr_travlog_join .type_flex {
+  margin-top: 2rem;
+  display: flex;
+}
+.usr_travlog_join .type_flex .swiper-container {
+  margin-right: 2rem;
+  width: 33%;
+  box-shadow: 6px 8px 8px rgba(88, 77, 112, 0.4);
+  overflow: hidden;
+  border-radius: 1.0rem;
+}
+.usr_travlog_join .type_flex .swiper-container .swiper-slide {
+  overflow: hidden;
+}
+.usr_travlog_join .type_flex .swiper-container img {
+  overflow: hidden;
+  display: block;
+}
+.usr_travlog_join .type_flex .wrap_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(67% - 2rem);
+}
+.usr_travlog_join .type_flex .wrap_info .txt {
+  margin-top: 1.8rem;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+}
+.usr_travlog_join .btn_primary {
+  padding: 0.95rem 1.4rem;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+}
+.usr_travlog_join .type_check,
+.usr_travlog_join .type_credit {
+  position: relative;
+  margin-top: 3.3rem;
+  padding: 0 2.4rem;
+}
+.usr_travlog_join .type_check .tit_sub em::before {
+  background-color: #13C9BE;
+}
+.usr_travlog_join .type_check .type_flex .wrap_info .txt {
+  color: #43B9C7;
+}
+.usr_travlog_join .type_credit {
+  margin-top: 4.6rem;
+}
+.usr_travlog_join .type_credit::before {
+  content: '';
+  position: absolute;
+  top: -2.6rem;
+  right: 1.7rem;
+  width: 18.33rem;
+  height: 9.66rem;
+  background: url(../../images/global/img_txt_new.png);
+  background-size: 100%;
+  transform: rotate(-5deg);
+}
+.usr_travlog_join .type_credit .tit_sub em::before {
+  background-color: #F17952;
+}
+.usr_travlog_join .type_credit .type_flex .wrap_info .txt {
+  color: #B168A9;
+}
+
+a.btn_primary.btn_credit,
+button.btn_primary.btn_credit {
+  background: linear-gradient(100.33deg, #FFABA6 7.68%, #9D6FE8 83.12%);
+}
+
+/* 혜택으로 이동예정
 .usr_travlog_join {
   height: 100vh;
   overflow: hidden;
@@ -657,16 +759,15 @@
   text-align: center;
 }
 .usr_travlog_join .wrap_tit .tit_page {
-  font-size: 2.0rem;
-  line-height: 2.6rem;
-  font-weight: 700;
-  color: #E8A9E1;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  color: #fff;
   text-align: center;
 }
 .usr_travlog_join .wrap_tit .tit_sub {
-  margin-top: 1.6rem;
-  font-size: 2.8rem;
-  line-height: 3.5rem;
+  margin-top: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
   font-weight: 700;
   color: #fff;
 }
@@ -678,10 +779,11 @@
   content: '';
   position: absolute;
   top: -0.4rem;
-  right: -1.2rem;
-  width: 12.3rem;
-  height: 4.7rem;
+  right: 0rem;
+  width: 6.7rem;
+  height: 2.7rem;
   background: url(../../images/global/img_line_circle.svg) no-repeat center;
+  background-size: 100%;
   filter: invert(58%) sepia(88%) saturate(1510%) hue-rotate(326deg) brightness(99%) contrast(91%);
   z-index: -1;
 }
@@ -761,9 +863,7 @@
 .usr_travlog_join.type_credit {
   background-color: #5D39C2;
 }
-.usr_travlog_join.type_credit .wrap_tit .tit_page {
-  color: #E8A9E1;
-}
+
 .usr_travlog_join.type_credit .wrap_tit .tit_sub {
   color: #fff;
 }
@@ -784,10 +884,8 @@
   background: linear-gradient(100.33deg, #FFABA6 7.68%, #9D6FE8 83.12%);
 }
 
-
-
 .usr_travlog_join.type_check .wrap_tit .tit_page {
-  color: #43B9C7;
+  color: #536067;
 }
 .usr_travlog_join.type_check .wrap_tit .tit_sub {
   color: #252E33;
@@ -812,14 +910,12 @@
   background: linear-gradient(100.33deg, #FFABA6 7.68%, #9D6FE8 83.12%);
 }
 
-
-
 .usr_travlog_join.type_credit .select_check {
   display: none;
 }
 .usr_travlog_join.type_check .select_credit {
   display: none;
-}
+} */
 
 /* USR_104 */
 .usr_travlog_complete .txt.type_gradien {

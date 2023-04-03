@@ -20,9 +20,10 @@
 <body>
   <main id="root">
     
-    <!-- 22.06.17 페이지로 변경 -->
+    <!-- 23.03.31 마크업변경 / 22.06.17 페이지로 변경 -->
     <header id="header">
       <div class="inner_fixed">
+        <button class="btn_ico_prev"><span class="blind">이전</span></button>
         <h1>트래블로그 카드 신청</h1>
         <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
       </div>
@@ -31,83 +32,68 @@
 
     <!-- // contents-->
     <div id="contents" class="wrap_contents">
-      <div class="contents">
+      <div class="contents usr_travlog_join">
         <section data-roll="USR">
-          <div class="section_top_visual join_card">
-            <div class="wrap_tit">
-              <h2 class="tit_page"><em>카드 신청</em>만 남았어요!</h2><!-- 22.06.17 문구변경 -->
-              <p class="txt">외화 하나머니를 사용하려면<br>트래블로그 체크카드가 꼭 필요해요.</p><!-- 22.06.17 문구변경 / 22.05.31 문구변경 -->
-            </div>
-            <div class="visual_usr_card" aria-hidden="true">
-              <span class="img_shoppingbag"></span>
-              <span class="img_card_travlog"></span>
-              <span class="img_card_travlog_2"></span><!-- 22.07.29 카드이미지추가 -->
-              <span class="img_character_luggage"></span>
+          <div class="wrap_tit">
+            <h2 class="tit">이제 카드 선택만 남았어요!</h2>
+          </div>
+          <div class="type_check">
+            <h3 class="tit_sub">트래블로그 <em>체크카드</em></h3>
+            <div class="type_flex">
+              <div class="swiper-container check_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="../../../images/global/img_card_travlog.png" alt=""></div>
+                  <div class="swiper-slide"><img src="../../../images/global/img_card_travlog.png" alt=""></div>
+                  <div class="swiper-slide"><img src="../../../images/global/img_card_travlog.png" alt=""></div>
+                </div>
+              </div>
+              <div class="wrap_info">
+                <p class="txt">무료환전 혜택과<br>해외 이용수수료 무료</p>
+                <button class="btn_box btn_primary">체크카드 발급받기</button>
+              </div>
             </div>
           </div>
-          <div class="wrap_item_benefit">
-            <!-- 22.06.17 문구및아이콘클래스변경 / 22.05.31 문구변경 -->
-            <h3 class="txt">트래블로그 서비스를 이용하시면</h3>
-            <ul class="list_benefit">
-              <li>
-                <span class="box"><span>1</span></span>
-                <div class="item_desc">
-                  <p class="tit">환율<span class="emoji_cashback"></span>100% 우대</p><!-- 22.08.10 문구변경 -->
-                  <p class="txt">외화 환전할 때마다<br><em class="txt_point_1">환전수수료가 무료예요.</em></p><!-- 22.08.10 / 22.07.13 문구변경 -->
+          <div class="type_credit">
+            <h3 class="tit_sub">트래블로그 <em>신용카드</em></h3>
+            <div class="type_flex">
+              <div class="swiper-container credit_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="../../../images/global/img_credit_travlog.png" alt=""></div>
+                  <div class="swiper-slide"><img src="../../../images/global/img_credit_travlog.png" alt=""></div>
+                  <div class="swiper-slide"><img src="../../../images/global/img_credit_travlog.png" alt=""></div>
                 </div>
-              </li>
-              <li>
-                <span class="box"><span>2</span></span>
-                <div class="item_desc">
-                  <p class="tit">9개 통화<span class="emoji_globe"></span> 충전 가능</p><!-- 23.01.19 문구변경 -->
-                  <p class="txt">한국, 미국, 일본, 유럽, 중국, 호주 등<br><em class="txt_point_1">9개 통화 충전이 가능해요.</em></p><!-- 23.01.19 문구변경 -->
-                </div>
-              </li>
-              <li>
-                <span class="box"><span>3</span></span>
-                <div class="item_desc">
-                  <p class="tit">해외에서<span class="emoji_zero_travlog"></span>카드 결제하면</p>
-                  <p class="txt">해외서비스수수료와 국제브랜드<br><em class="txt_point_1">수수료 모두 내드려요.</em></p>
-                </div>
-              </li>
-              <li>
-                <span class="box"><span>4</span></span>
-                <div class="item_desc">
-                  <p class="tit">해외 ATM에서<span class="emoji_atm"></span>인출하면</p>
-                  <p class="txt">국제브랜드수수료와 해외인출<br><em class="txt_point_1">수수료도 모두 내드려요.</em></p><!-- 22.07.29 문구변경 -->
-                </div>
-              </li>
-              <li>
-                <span class="box"><span>5</span></span>
-                <div class="item_desc">
-                  <p class="tit">국내에서<span class="emoji_cash"></span>결제할 때 마다</p>
-                  <p class="txt">국내 가맹점에서 조건없이<br><em class="txt_point_1">매번 <span class="txt_num">0.3</span>% 하나머니 적립까지!</em></p><!-- 22.07.13 띄어쓰기변경 -->
-                </div>
-              </li>
-            </ul>
-            <!-- // 22.06.17 문구및아이콘클래스변경 / 22.05.31 문구변경 -->
-            <div class="wrap_btn_center">
-              <a href="#none" class="btn_link">트래블로그 혜택 활용법 보기<span class="ico_arr_link_s"></span></a>
+              </div>
+              <div class="wrap_info">
+                <p class="txt">트래블로그 혜택에<br>신용의 혜택과<br>편리함을 담다!</p>
+                <button class="btn_box btn_primary btn_credit">신용카드 발급받기</button>
+              </div>
             </div>
           </div>
         </section>
-
-        <!-- 하단고정 영역 -->
-        <div class="section_bottom_fixed">
-          <div class="wrap_btn_full">
-            <button type="button" class="btn_full_primary">카드 신청하기</button>
-          </div>
-        </div>
-        <!-- // 하단고정 영역 -->
       </div>
     </div>
-    <!-- // 22.06.17 페이지로 변경 -->
+    <!-- // 23.03.31 마크업변경 / 22.06.17 페이지로 변경 -->
   </main>
 
   <script>
     $(function(){
-      // 팝업오픈 퍼블확인용 스크립트
-      // fnOpenLayerPop('popupId');
+      // swiper 23.03.31
+      var swiper = new Swiper(".check_swiper", {
+        loop: true,
+        loopAdditionalSlides: 1,
+        autoplay: {
+          delay: 2000,
+        },
+        roundLengths: true,
+      });
+      var swiper = new Swiper(".credit_swiper", {
+        loop: true,
+        loopAdditionalSlides: 1,
+        autoplay: {
+          delay: 2000,
+        },
+        roundLengths: true,
+      });
     });
   </script>
 </body>
