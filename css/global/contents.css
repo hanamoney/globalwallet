@@ -3190,6 +3190,15 @@ button.btn_primary.btn_credit {
   font-weight: 700;
   color: #13C9BE;
 }
+.benefit_cont.gsp_acco button .txt + .type_asterisk {
+  margin-top: 0.4rem;
+}
+.benefit_cont.gsp_acco button .txt + .type_asterisk li {
+  color: #839097;
+}
+.benefit_cont.gsp_acco button .txt + .type_asterisk li::before {
+  color: #839097;
+}
 .benefit_cont.gsp_acco button .tit + .txt {
   margin-top: 0.4rem;
 }
@@ -3251,7 +3260,7 @@ button.btn_primary.btn_credit {
   text-align: center;
 }
 .benefit_cont.gsp_acco .box_card_type .list_ccy {
-  margin: 3.2rem -0.8rem 0;
+  margin: 1.6rem -0.8rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -3271,6 +3280,9 @@ button.btn_primary.btn_credit {
   margin: 0 auto 1.0rem;
   box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.32);
 }
+.benefit_cont.gsp_acco .box_card_type .list_ccy + .sub_tit {
+  margin-top: 2.4rem;
+}
 .benefit_cont.gsp_acco .box_card_type .list_ccy + .list_ccy {
   margin-top: 2.4rem;
 }
@@ -3283,9 +3295,10 @@ button.btn_primary.btn_credit {
   justify-content: center;
 }
 .benefit_cont.gsp_acco .payment_info li {
+  margin: 0 .5rem;
   min-width: 10.8rem;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 2.3rem;
   color: #252E33;
 }
@@ -3304,6 +3317,12 @@ button.btn_primary.btn_credit {
 .benefit_cont.gsp_acco .payment_txt em {
   font-weight: 700;
   color: #13C9BE;
+}
+.benefit_cont.gsp_acco .payment_txt + .type_asterisk {
+  margin-top: 3.2rem;
+}
+.benefit_cont.gsp_acco .type_asterisk li.txt_black {
+  color: #000;
 }
 .benefit_cont.gsp_acco .visual_gsp_payment {
   display: inline-block;
@@ -3639,11 +3658,27 @@ button.btn_primary.btn_credit {
 .benefit_cont .gsp_swiper .swiper-slide .player {
   pointer-events: none;
   width: 100%;
-  height: 56rem;
+  height: 60vh;
   border-radius: 1.4rem;
 }
-
-
+/* .benefit_cont iframe {
+  width: 100%;
+  height: 85.00vh;
+} */
+.benefit_cont .youtube_iframe {
+  margin-top: 3.0rem;
+  position:relative; 
+  padding-bottom:calc(100% / 9 * 16);
+  height:0; 
+  overflow:hidden;
+}
+.benefit_cont .youtube_iframe iframe {
+  position:absolute;
+  top:0; 
+  left:0; 
+  width:100%; 
+  height:100%;
+}
 
 
 .btn_benefit {
@@ -3783,6 +3818,9 @@ button.btn_primary.btn_credit {
 }
 .type_credit .benefit_cont.gsp_acco .box_card_type .tit_2 + table {
   margin-top: 2.4rem;
+}
+.type_credit .benefit_cont.gsp_acco .payment_info li p em {
+  font-size: 1.6rem;
 }
 .type_credit .benefit_cont.bg_pink {
   background: linear-gradient(147.1deg, #FFF4F5 -17.36%, #D5D6FF 98.48%);
@@ -4058,9 +4096,6 @@ button.btn_primary.btn_credit {
   line-height: 2.1rem;
   color: #839097;
 }
-
-
-
 /*  */
 /*  */
 /*  */
@@ -4071,13 +4106,14 @@ button.btn_primary.btn_credit {
   transition: all linear 0.5s;
   background: #5D39C2;
   overflow: hidden;
+  z-index: 10;
 }
 .benefit_intro.final_intro {
   height: 0;
 }
 .benefit_intro .btn_skip {
   padding-right: 1.6rem;
-  position: absolute;
+  position: fixed;
   bottom: 2.3rem;
   right: 2.4rem;
   font-weight: 400;
@@ -4101,7 +4137,7 @@ button.btn_primary.btn_credit {
   mask-position: center;
 }
 .benefit_intro .btn_next {
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 1.6rem;
   transform: translateX(-50%);
@@ -4383,8 +4419,8 @@ button.btn_primary.btn_credit {
 .benefit_intro .intro_earth .img_coin_usd {
   position: absolute;
   background-image: none;
-  width: 8.0rem;
-  height: 8.0rem;
+  width: 7.0rem;
+  height: 7.0rem;
 }
 .benefit_intro .intro_earth .img_coin_krw::before, 
 .benefit_intro .intro_earth .img_coin_usd::before {
@@ -4396,15 +4432,15 @@ button.btn_primary.btn_credit {
   background-size: 100%;
 }
 .benefit_intro .intro_earth .img_coin_krw {
-  left: 0;
-  top: 0;
+  left: 1rem;
+  top: 1rem;
 }
 .benefit_intro .intro_earth .img_coin_krw::before {
   background-image: url("../../images/global/img_intro_coin_krw.png");
 }
 .benefit_intro .intro_earth .img_coin_usd {
-  right: 0;
-  bottom: 0;
+  right: 1rem;
+  bottom: 1rem;
 }
 .benefit_intro .intro_earth .img_coin_usd::before {
   background-image: url("../../images/global/img_intro_coin_usd.png");
@@ -4833,6 +4869,9 @@ button.btn_primary.btn_credit {
 }
 .section_cont.type_sub .type_check .list_benefit_label {
   margin-top: 2.7rem;
+}
+.section_cont.type_sub .type_check + .btn_learn {
+  margin-top: 3.2rem;
 }
 .section_cont.type_sub .type_credit {
   margin-top: 3.2rem;

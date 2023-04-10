@@ -16,15 +16,20 @@
   <script src="../../../js/hmui/lib/waypoints.min.js"></script>
   <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
   <script src="../../../js/hmui/ui_common.js"></script>
+
+  <!-- 별도스타일추가 -->
+  <style>
+    #header .btn_ico_share_header {
+      right: 2.2rem;
+    }
+  </style>
 </head>
 <body>
-  <main id="root" class="intro_ing">
-    <header id="header" class="type_white">
+  <main id="root" class="intro_ing"> <!-- 23.04.10 클래스추가 -->
+    <header id="header" class="type_white"> <!-- 23.04.10 클래스추가 -->
       <div class="inner_fixed">
-        <button class="btn_ico_prev"><span class="blind">이전</span></button>
         <h1>트래블로그 체크카드</h1>
         <button class="btn_ico_share_header"><span class="blind">공유</span></button>
-        <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
       </div>
     </header>
     <!-- // header -->
@@ -32,6 +37,7 @@
     <div id="contents" class="wrap_contents">
       <div class="contents type_check">
         <section data-roll="GSP">
+          <!-- 23.04.10 인트로추가 -->
           <div class="benefit_intro">
             <div class="area_center">
               <img src="../../../images/global/img_credit_travlog.png" alt="트래블로그 신용카드" class="intro_card">
@@ -84,9 +90,7 @@
             <button type="button" class="btn_next">다음</button>
             <button type="button" class="btn_skip">SKIP <span class="ico_skip"></span></button>
           </div>
-          
-
-
+          <!-- // 23.04.10 인트로추가 -->
           <div class="benefit_tab fnFixedTop" data-height="48">
             <ul class="wrap_tab_btn type_col type_samll">
               <li class="on"><a href="#benefit" class="btn_tab_box">혜택</a></li>
@@ -103,13 +107,13 @@
             <div class="fnSimpleAcco ico_exchange">
               <button type="button" class="btn_acco">
                 <h3 class="tit">환전 시</h3>
-                <p class="txt"><em>환율 최대 100% 우대</em><br>받고 환전</p>
+                <p class="txt"><em>환율 100% 우대</em><br>받고 환전</p>
                 <span class="ico_arr_down_2"><span class="blind">상세보기</span>
               </button>
               <div class="wrap_acco" style="display: none;">
                 <div class="box_card_type">
-                  <p class="sub_tit"><em class="txt_point_1">제공하는 통화 모두<br>환율 100% 우대 이벤트 진행중!</em></p>
-                  <p class="txt">2023년 6월 30일까지</p>
+                  <p class="sub_tit"><em class="txt_point_1">제공하는 통화 모두<br>환율 100% 우대</em></p> <!-- 23.04.10 문구변경 -->
+                  <!-- 23.04.10 삭제 <p class="txt">2023년 6월 30일까지</p> -->
                   <ul class="list_ccy">
                     <li><span class="img_ccy_krw"></span>KRW<br>한국</li>
                     <li><span class="img_ccy_usd"></span>USD<br>미국</li>
@@ -117,6 +121,7 @@
                     <li><span class="img_ccy_eur"></span>EUR<br>유럽</li>
                     <li><span class="img_ccy_gbp"></span>GBP<br>영국</li>
                   </ul>
+                  <p class="sub_tit"><em class="txt_point_3">EVENT</em></p> <!-- 23.04.10 추가 -->
                   <ul class="list_ccy">
                     <li><span class="img_ccy_nzd"></span>NZD<br>뉴질랜드</li>
                     <li><span class="img_ccy_vnd"></span>VND<br>베트남</li>
@@ -147,7 +152,7 @@
             <div class="fnSimpleAcco ico_payment">
               <button type="button" class="btn_acco">
                 <h3 class="tit">결제 시</h3>
-                <p class="txt"><em>해외 가맹점<br>이용수수료</em> 무료</p>
+                <p class="txt"><em>해외 가맹점<br>이용수수료</em> 면제</p> <!-- 23.04.10 문구변경 -->
                 <span class="ico_arr_down_2"><span class="blind">상세보기</span>
               </button>
               <div class="wrap_acco" style="display: none;">
@@ -157,11 +162,11 @@
                   <ul class="payment_info">
                     <li>
                       <span class="emoji_card"></span>
-                      <p>해외서비스<br>수수료 <em class="txt_point_2">$0.5</em></p>
+                      <p>해외서비스수수료<br><em class="txt_point_2">건당 $0.5</em></p> <!-- 23.04.10 문구변경 -->
                     </li>
                     <li>
                       <span class="emoji_tag"></span>
-                      <p>국제브랜드<br>수수료 <em class="txt_point_2">1%</em></p>
+                      <p>국제브랜드수수료<br><em class="txt_point_2">이용 금액의 1%</em></p> <!-- 23.04.10 문구변경 -->
                     </li>
                   </ul>
                   <p class="payment_txt"><em>아낄 수 있어요!</em></p>
@@ -169,7 +174,7 @@
               </div>
             </div>
 
-            <div class="fnSimpleAcco ico_payment">
+            <div class="fnSimpleAcco ico_franchisee">
               <button type="button" class="btn_acco">
                 <h3 class="tit">결제 시</h3>
                 <p class="txt"><em>국내 전가맹점 0.3%</em><br>하나머니 적립</p>
@@ -180,6 +185,11 @@
                   <p class="sub_tit"><em>국내 가맹점에서 결제할 때마다</em></p>
                   <span class="visual_gsp_payment"></span>
                   <p class="payment_txt">지난달 실적 관계없이<br><em>0.3% 하나머니 적립!</em></p>
+                  <!-- 23.04.10 추가 -->
+                  <ul class="list_txt type_asterisk">
+                    <li class="txt_black">적립 제외 대상은 상품약관 등을 통해 확인해주세요.</li>
+                  </ul>
+                  <!-- // 23.04.10 추가 -->
                 </div>
               </div>
             </div>
@@ -187,7 +197,7 @@
             <div class="fnSimpleAcco ico_withdrawal">
               <button type="button" class="btn_acco">
                 <h3 class="tit">해외 출금시</h3>
-                <p class="txt"><em>ATM 인출수수료</em> 무료</p>
+                <p class="txt"><em>ATM 인출수수료</em> 면제</p> <!-- 23.04.10 문구변경 -->
                 <span class="ico_arr_down_2"><span class="blind">상세보기</span>
               </button>
               <div class="wrap_acco" style="display: none;">
@@ -196,11 +206,11 @@
                   <ul class="payment_info">
                     <li>
                       <span class="emoji_card"></span>
-                      <p>해외서비스<br>수수료 <em class="txt_point_2">$3</em></p>
+                      <p>해외서비스수수료<br><em class="txt_point_2">건당 $3</em></p> <!-- 23.04.10 문구변경 -->
                     </li>
                     <li>
                       <span class="emoji_tag"></span>
-                      <p>국제브랜드<br>수수료 <em class="txt_point_2">1%</em></p>
+                      <p>국제브랜드수수료<br><em class="txt_point_2">이용 금액의 1%</em></p> <!-- 23.04.10 문구변경 -->
                     </li>
                   </ul>
                   <p class="payment_txt"><em>아낄 수 있어요!</em></p>
@@ -249,7 +259,7 @@
                 </div>
               </div>
             </div>
-            <div class="no_acco ico_drone">
+            <div class="no_acco ico_event_airplane">
               <button type="button" class="btn">
                 <h3 class="tit">다른 이벤트가 궁금하시다면?</h3>
                 <p class="txt"><em>트래블로그 이벤트<br>모아보기</em></p>
@@ -333,6 +343,7 @@
             <div class="wrap_tit">
               <h2 class="tit">프로 여행러<span class="txt_light">들의<br> 생생한 후기</span></h2>
             </div>
+            <!-- 23.04.10 추가 -->
             <div class="youtube_iframe">
               <iframe src="https://www.youtube.com/embed/q_9wBsOXPVs?rel=0" title="#유럽여행 오스트리아 비엔나 ATM에서 수수료 없이 현금 인출하는 방법 #트래블로그 #트래블로그체크카드 #해외여행카드 #해외여행수수료" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
@@ -342,26 +353,7 @@
             <div class="youtube_iframe">
               <iframe src="https://www.youtube.com/embed/TBDWT_io_aE?rel=0" title="#유럽여행 오스트리아 비엔나에서 해외수수료  없이 결제하는 팁(feat. 여행유튜버 쏘이) #트래블로그 #트래블로그체크카드 #해외여행카드 #해외여행수수료" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" fullscreen></iframe>
             </div>
-
-            <!-- <div class="gsp_swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="youtube-slide" data-video-id="q_9wBsOXPVs">
-                    <div class="player" id="player1"></div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="youtube-slide" data-video-id="5JSpkQ0xvMk">
-                    <div class="player" id="player2"></div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="youtube-slide" data-video-id="TBDWT_io_aE">
-                    <div class="player" id="player3"></div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
+            <!-- // 23.04.10 추가 -->
           </div>
 
           <!-- 자주 묻는 질문 -->
@@ -408,7 +400,7 @@
             <div class="wrap_btn">
               <button type="button" class="btn_box btn_full_primary"><span class="ico_share_w"></span> 트래블로그 시작하기</button>
             </div>
-            <div class="no_acco ico_credit">
+            <div class="no_acco ico_credit btn_learn">
               <button type="button" class="btn">
                 <h3 class="tit">트래블로그 신용카드도 있어요!</h3>
                 <p class="txt"><em>트래블로그 신용카드</em><br>알아보기</p>
@@ -418,6 +410,7 @@
 
           <div class="wrap_notice">
             <h4 class="tit_notice"><span class="ico_notice"></span>알려드립니다!</h4>
+            <!-- 23.04.10 문구변경 -->
             <ul class="list_txt">
               <li class="txt_black txt_em">트래블로그 서비스로 외화 환전 시 *무료환전 혜택(환율 100% 우대)을 제공합니다.<br>
                 <span class="txt_basis">총 18종 통화로 4종(미국 USD, 일본 JPY, 유럽 EUR, 영국 GBP)을 제외한 14종 통화는 이벤트로 진행</span><br>
@@ -453,6 +446,7 @@
                 <span>&middot; 무이자 할부 거래 연체 시 : 거래발생 시점의 동일한 할부 계약기간의 유이자 할부금리</span></li>
             </ul>
             <p class="txt_basis">준법심의 M-23-0506 (2023.03.28 ~ 2024.03.27)</p>
+            <!-- // 23.04.10 문구변경 -->
           </div>
 
         </section>
@@ -485,21 +479,25 @@
 
     <!-- popup -->
     <!-- // popup -->
+
   </main>
+  
+  
   <script>
   $(function(){
+    //상단탭이동
     $('.wrap_tab_btn li a').on('click', function() {  
       $('html, body').animate({scrollTop: $(this.hash).offset().top - 64}, 500);
       return false;
     });
 
+    //스크롤에 맞춰서 탭버튼 활성화
     $(window).on('scroll', function(){
       var benefit = $("#benefit").offset().top - 64;
       var use = $("#use").offset().top - 64;
       var tmi = $("#tmi").offset().top - 64;
       var dot = $(".wrap_tab_btn li");
       var wScroll = $(this).scrollTop();
-
       if(wScroll >= benefit){
         dot.removeClass('on');
         dot.eq(0).addClass('on');
@@ -514,7 +512,7 @@
       }
     })
 
-    //인트로관련 스크립트
+    //인트로관련 스크립트 <!-- 23.04.10 추가
     history.scrollRestoration = "manual" //새로고침 시 스크롤 상단으로 이동
     $('body').addClass('overflow');
 
@@ -590,59 +588,6 @@
       $('header').removeClass('type_white')
       $('.benefit_intro').addClass('final_intro');
     });
-
-    //
-    const youtubeScriptTag = document.createElement('script');
-    youtubeScriptTag.src = 'https://www.youtube.com/iframe_api';
-    document.body.appendChild(youtubeScriptTag);
-
-    let players = [];
-    let isVideoPlaying = false;
-
-    window.onYouTubeIframeAPIReady = () => {
-      const youtubeSlides = document.querySelectorAll('.youtube-slide');
-      youtubeSlides.forEach((youtubeSlide, index) => {
-        players[index] = new YT.Player(youtubeSlide.querySelector('.player'), {
-          videoId: youtubeSlide.dataset.videoId,
-          playerVars: {
-            // controls: 0,
-            modestbranding: 1,
-            rel: 0
-          },
-          events: {
-            onReady: (event) => {
-              youtubeSlide.addEventListener('click', () => {
-                if (isVideoPlaying) {
-                  event.target.pauseVideo();
-                } else {
-                  event.target.playVideo();
-                }
-                isVideoPlaying = !isVideoPlaying;
-              });
-            }
-          }
-        });
-      });
-    }
-
-    const swiper = new Swiper('.gsp_swiper', {
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      slidesOffsetBefore: 0,
-      spaceBetween: 16,
-      on: {
-        slideChange: () => {
-          if (isVideoPlaying) {
-            players.forEach(player => {
-              player.pauseVideo();
-            });
-            isVideoPlaying = false;
-          }
-        }
-      }
-    });
-
-    
   });
   </script>
 </body>

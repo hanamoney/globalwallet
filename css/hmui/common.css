@@ -1005,9 +1005,6 @@ section[data-roll] {
 .ico_cur_idr {
   background-image: url('../../images/hmui/ico_cur_idr.png');
 }
-.ico_cur_myr {
-  background-image: url('../../images/hmui/ico_cur_myr.png');
-}
 .ico_cur_php {
   background-image: url('../../images/hmui/ico_cur_php.png');
 }
@@ -1016,9 +1013,6 @@ section[data-roll] {
 }
 .ico_cur_thb {
   background-image: url('../../images/hmui/ico_cur_thb.png');
-}
-.ico_cur_twd {
-  background-image: url('../../images/hmui/ico_cur_twd.png');
 }
 .ico_cur_nzd {
   background-image: url('../../images/hmui/ico_cur_nzd.png');
@@ -1088,10 +1082,6 @@ section[data-roll] {
 .ico_cur_idr_off {
   background-image: url('../../images/hmui/ico_cur_idr_off.png');
 }
-.off .ico_cur_myr,
-.ico_cur_myr_off {
-  background-image: url('../../images/hmui/ico_cur_myr_off.png');
-}
 .off .ico_cur_php,
 .ico_cur_php_off {
   background-image: url('../../images/hmui/ico_cur_php_off.png');
@@ -1103,10 +1093,6 @@ section[data-roll] {
 .off .ico_cur_thb,
 .ico_cur_thb_off {
   background-image: url('../../images/hmui/ico_cur_thb_off.png');
-}
-.off .ico_cur_twd,
-.ico_cur_twd_off {
-  background-image: url('../../images/hmui/ico_cur_twd_off.png');
 }
 .off .ico_cur_nzd,
 .ico_cur_nzd_off {
@@ -5155,6 +5141,18 @@ div[class^="wrap_box"] .wrap_btn.type_full {
 .wrap_notice .list_txt .btn_txt {
   font-size: 1.3rem;
   line-height: 1.8rem;
+}
+.wrap_notice .list_txt li::before {
+  content: '*';
+  top: 0.4rem;
+  left: 0;
+  width: auto;
+  height: auto;
+  color: #252E33;
+  background-color: transparent;
+}
+.wrap_notice .list_txt li {
+  padding-left: 1.2rem;
 }
 .wrap_notice .list_txt + .list_txt {
   margin-top: 2.4rem;
