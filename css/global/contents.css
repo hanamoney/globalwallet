@@ -673,8 +673,14 @@
   mask-repeat: no-repeat;
   z-index: -1;
 }
+.usr_travlog_join .tit_sub + .txt {
+  margin-top: 0.2rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #536067;
+}
 .usr_travlog_join .type_flex {
-  margin-top: 2rem;
+  margin-top: 1.2rem;
   display: flex;
 }
 .usr_travlog_join .type_flex .swiper-container {
@@ -690,6 +696,7 @@
 .usr_travlog_join .type_flex .swiper-container img {
   overflow: hidden;
   display: block;
+  box-shadow: 6px 8px 8px rgba(88, 77, 112, 0.4);
 }
 .usr_travlog_join .type_flex .wrap_info {
   display: flex;
@@ -721,6 +728,7 @@
 }
 .usr_travlog_join .type_credit {
   margin-top: 4.6rem;
+  z-index: 1;
 }
 .usr_travlog_join .type_credit::before {
   content: '';
@@ -732,6 +740,7 @@
   background: url(../../images/global/img_txt_new.png);
   background-size: 100%;
   transform: rotate(-5deg);
+  z-index: -1;
 }
 .usr_travlog_join .type_credit .tit_sub em::before {
   background-color: #F17952;
@@ -745,7 +754,7 @@ button.btn_primary.btn_credit {
   background: linear-gradient(100.33deg, #FFABA6 7.68%, #9D6FE8 83.12%);
 }
 
-/* 혜택으로 이동예정
+/* 사용안할시 추후 삭제
 .usr_travlog_join {
   height: 100vh;
   overflow: hidden;
@@ -3322,6 +3331,7 @@ button.btn_primary.btn_credit {
   margin-top: 3.2rem;
 }
 .benefit_cont.gsp_acco .type_asterisk li.txt_black {
+  word-break: keep-all;
   color: #000;
 }
 .benefit_cont.gsp_acco .visual_gsp_payment {
@@ -3609,6 +3619,9 @@ button.btn_primary.btn_credit {
 .benefit_cont .benefit_step_list li.complete .tit {
   color: #13C9BE;
 }
+.benefit_cont .benefit_step_list li.complete a::before {
+  display: none;
+}
 .benefit_cont .benefit_step_list li.complete .tit span {
   display: inline-block;
 }
@@ -3653,7 +3666,6 @@ button.btn_primary.btn_credit {
 }
 .benefit_cont .gsp_swiper .swiper-slide {
   position: relative;
-  /* width: 315px; */
 }
 .benefit_cont .gsp_swiper .swiper-slide .player {
   pointer-events: none;
@@ -3661,16 +3673,13 @@ button.btn_primary.btn_credit {
   height: 60vh;
   border-radius: 1.4rem;
 }
-/* .benefit_cont iframe {
-  width: 100%;
-  height: 85.00vh;
-} */
 .benefit_cont .youtube_iframe {
+  overflow:hidden;
   margin-top: 3.0rem;
   position:relative; 
   padding-bottom:calc(100% / 9 * 16);
   height:0; 
-  overflow:hidden;
+  border-radius: 1.4rem;  
 }
 .benefit_cont .youtube_iframe iframe {
   position:absolute;
@@ -3679,8 +3688,6 @@ button.btn_primary.btn_credit {
   width:100%; 
   height:100%;
 }
-
-
 .btn_benefit {
   overflow: hidden;
   position: fixed;
@@ -3694,7 +3701,7 @@ button.btn_primary.btn_credit {
   text-align: left;
   color: #fff;
   border-radius: 4.4rem;
-  animation: btn_benefit 3s linear forwards;
+  animation: btn_benefit 2.5s linear forwards;
   z-index: 10;
 }
 .btn_benefit::before {
@@ -3711,7 +3718,7 @@ button.btn_primary.btn_credit {
 }
 .btn_benefit span {
   position: relative;
-  animation: opacity 3s linear forwards;
+  animation: opacity 2.5s linear forwards;
   opacity: 0;
   white-space: nowrap;
   left: 2.0rem;
@@ -3732,7 +3739,10 @@ button.btn_primary.btn_credit {
   0% {
     width: 4.8rem;
   }
-  50% {
+  20% {
+    width: 18.6rem;
+  }
+  80% {
     width: 18.6rem;
   }
   100% {
@@ -3743,10 +3753,10 @@ button.btn_primary.btn_credit {
   0% {
     opacity: 0;
   }
-  20% {
+  10% {
     opacity: 0;
   }
-  50% {
+  40% {
     opacity: 1;
   }
   80% {
@@ -3945,6 +3955,13 @@ button.btn_primary.btn_credit {
 .type_credit .benefit_cont.benefit_toggle_01 .btn_benefit_toggle .txt02 {
   opacity: 0.7;
 }
+.type_credit .benefit_cont.benefit_toggle_01 .type_asterisk li {
+  margin-top: 3.4rem;
+  color: #fff;
+}
+.type_credit .benefit_cont.benefit_toggle_01 .type_asterisk li::before {
+  color: #fff;
+}
 .type_credit .benefit_cont.benefit_toggle_02 {
   background-color: #5D39C2;
 }
@@ -3961,6 +3978,16 @@ button.btn_primary.btn_credit {
 }
 .type_credit .benefit_cont.benefit_toggle_02 button.btn_acco .txt em {
   color: #E8A9E1;
+}
+.type_credit .benefit_cont .benefit_step_list li.complete .step_num::after {
+  background: url(../../images/global/ico_chk_gsp_02.png) no-repeat center;
+  background-size: 100%;
+}
+.type_credit .benefit_cont .benefit_step_list li.complete .step_num::before {
+  background: rgba(93, 57, 194, 0.6);
+}
+.type_credit .benefit_cont .benefit_step_list li.complete .tit {
+  color: #5D39C2;
 }
 .btn_full_primary.type_credit {
   background-color: #AC7EFA;
@@ -4096,9 +4123,6 @@ button.btn_primary.btn_credit {
   line-height: 2.1rem;
   color: #839097;
 }
-/*  */
-/*  */
-/*  */
 /* GSP_002 intro */
 .benefit_intro {
   position: relative;
@@ -4189,30 +4213,33 @@ button.btn_primary.btn_credit {
   background-color: #fff;
   transition: width .5s;
 }
-.benefit_intro.intro_chapter_01::before {
-  width: 12.5%;
-}
 .benefit_intro.intro_chapter_02::before {
-  width: 25%;
+  width: 15%;
 }
 .benefit_intro.intro_chapter_03::before {
-  width: 37.5%;
+  width: 29%;
 }
 .benefit_intro.intro_chapter_04::before {
-  width: 50%;
+  width: 43%;
 }
 .benefit_intro.intro_chapter_05::before {
-  width: 62.5%;
+  width: 57%;
   background-color: #252E33;
 }
 .benefit_intro.intro_chapter_06::before {
-  width: 75%;
+  width: 71%;
 }
 .benefit_intro.intro_chapter_07::before {
-  width: 87.5%;
+  width: 85%;
   background-color: #fff;
 }
 .benefit_intro.intro_chapter_08::before {
+  width: 100%;
+}
+.type_check .benefit_intro.intro_chapter_05::before {
+  width: 0%;
+}
+.type_check .benefit_intro.intro_chapter_06::before {
   width: 100%;
 }
 .benefit_intro .area_center {
@@ -4221,6 +4248,7 @@ button.btn_primary.btn_credit {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  max-width: 40rem;
   height: 50vh;
 }
 .benefit_intro .intro_card {
@@ -4230,16 +4258,15 @@ button.btn_primary.btn_credit {
   right: 30%;
   bottom: -60vh;
   width: 44vw;
+  max-width: 18rem;
   box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.3);
   transform: rotate(-15deg);
   border-radius: 1rem;
   z-index: 5;
+  animation: chapter_01_card 0.5s 0.5s forwards;
 }
 .benefit_intro .chapter_01 {
   text-align: center;
-}
-.benefit_intro .chapter_01 > p {
-  transition: 0.5s;
 }
 .benefit_intro .chapter_01 .txt_01 {
   font-size: 5.6rem;
@@ -4248,6 +4275,7 @@ button.btn_primary.btn_credit {
   color: #fff;
   opacity: 0.5;
   transform: translateX(80%);
+  animation: chapter_01_txt01 0.5s 0.5s forwards;
 }
 .benefit_intro .chapter_01 .txt_02 {
   margin-top: -0.4rem;
@@ -4257,6 +4285,7 @@ button.btn_primary.btn_credit {
   color: #fff;
   opacity: 0.8;
   transform: translateX(-65%);
+  animation: chapter_01_txt02 0.5s 0.5s forwards;
 }
 .benefit_intro .chapter_01 .txt_03 {
   margin-top: -0.9rem;
@@ -4266,6 +4295,7 @@ button.btn_primary.btn_credit {
   color: #01061A;
   opacity: 0.6;
   transform: translateX(45%);
+  animation: chapter_01_txt03 0.5s 0.5s forwards;
 }
 .benefit_intro .chapter_01 .txt_04 {
   margin-top: -2.4rem;
@@ -4275,6 +4305,7 @@ button.btn_primary.btn_credit {
   color: #fff;
   opacity: 0.9;
   transform: translateX(-50%);
+  animation: chapter_01_txt04 0.5s 0.5s forwards;
 }
 .benefit_intro .chapter_01 .txt_05 {
   margin-top: -1.1rem;
@@ -4284,6 +4315,65 @@ button.btn_primary.btn_credit {
   color: #fff;
   opacity: 0.5;
   transform: translateX(45%);
+  animation: chapter_01_txt05 0.5s 0.5s forwards;
+}
+@keyframes chapter_01_bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 12.5%;
+  }
+}
+@keyframes chapter_01_card {
+  0% {
+    opacity: 0;
+    bottom: -60vh;
+  }
+  100% {
+    opacity: 1;
+    bottom: 10vh;
+  }
+}
+@keyframes chapter_01_txt01 {
+  0% {
+    transform: translateX(80%);
+  }
+  100% {
+    transform: translateX(17%);
+  }
+}
+@keyframes chapter_01_txt02 {
+  0% {
+    transform: translateX(-65%);
+  }
+  100% {
+    transform: translateX(-20%);
+  }
+}
+@keyframes chapter_01_txt03 {
+  0% {
+    transform: translateX(45%);
+  }
+  100% {
+    transform: translateX(-38%);
+  }
+}
+@keyframes chapter_01_txt04 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(48%);
+  }
+}
+@keyframes chapter_01_txt05 {
+  0% {
+    transform: translateX(45%);
+  }
+  100% {
+    transform: translateX(-8%);
+  }
 }
 .benefit_intro .chapter_02 .txt,
 .benefit_intro .chapter_03 .txt {
@@ -4346,11 +4436,25 @@ button.btn_primary.btn_credit {
   transform: translateY(-50%);
   transition: all 0.3s 0.3s;
 }
-.benefit_intro .txt_pink {
+.benefit_intro .chapter_04 .txt {
   opacity: 0;
   position: absolute;
+  top: calc(-10% - 3.4rem);
   left: 50%;
-  top: 100%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  font-weight: 700;
+  color: #839097;
+  text-align: center;
+  transition: 0.3s;
+}
+.benefit_intro .txt_pink {
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   font-size: 3.6rem;
@@ -4359,6 +4463,9 @@ button.btn_primary.btn_credit {
   color: #E8A9E1;
   text-align: center;
   transition: all 0.3s 0.3s;
+}
+.benefit_intro .chapter_04 {
+  opacity: 0;
 }
 .benefit_intro .txt_check {
   font-size: 2.8rem;
@@ -4533,6 +4640,9 @@ button.btn_primary.btn_credit {
   50% {opacity: 0.8;}
   100% {opacity: 0.3;}
 }
+.benefit_intro .chapter_07 {
+  opacity: 0;
+}
 .benefit_intro .chapter_07 .txt_pink {
   transition: all 0.3s 0.1s;
 }
@@ -4560,37 +4670,19 @@ button.btn_primary.btn_credit {
   margin-top: -0.6rem;
 }
 .benefit_intro .chapter_08 .area_banner_txt img:nth-child(1) {
-  transition: 0.2s 0.4s;
+  transition: all 0.2s 1.3s;
 }
 .benefit_intro .chapter_08 .area_banner_txt img:nth-child(2) {
-  transition: 0.2s 0.5s;
+  transition: all 0.2s 1.4s;
 }
 .benefit_intro .chapter_08 .area_banner_txt img:nth-child(3) {
-  transition: 0.2s 0.6s;
+  transition: all 0.2s 1.5s;
 } 
 /*모션스텝1 0.5초*/
-.benefit_intro.intro_chapter_01 .intro_card {
-  opacity: 1;
-  bottom: 10vh;
-}
-.benefit_intro.intro_chapter_01 .chapter_01 .txt_01 {
-  transform: translateX(17%);
-}
-.benefit_intro.intro_chapter_01 .chapter_01 .txt_02 {
-  transform: translateX(-20%);
-}
-.benefit_intro.intro_chapter_01 .chapter_01 .txt_03 {
-  transform: translateX(-38%);
-}
-.benefit_intro.intro_chapter_01 .chapter_01 .txt_04 {
-  transform: translateX(48%);
-}
-.benefit_intro.intro_chapter_01 .chapter_01 .txt_05 {
-  transform: translateX(-8%);
-}
 /*모션스텝2 0.6초*/
 .benefit_intro.intro_chapter_02 .chapter_01 > p {
-  transition: 0.17s;
+  animation: none;
+  transition: all 0.5s;
 }
 .benefit_intro.intro_chapter_02 .chapter_01 .txt_01 {
   transform: translateX(100%);
@@ -4608,6 +4700,8 @@ button.btn_primary.btn_credit {
   transform: translateX(-100%);
 }
 .benefit_intro.intro_chapter_02 .intro_card {
+  animation: none;
+  opacity: 1;
   right: 4vw;
   width: 30vw;
   bottom: 15vh;
@@ -4650,13 +4744,14 @@ button.btn_primary.btn_credit {
   top: 10%;
   transition: 0.15s;
 }
-.benefit_intro.intro_chapter_04 .chapter_04 p {
+.benefit_intro.intro_chapter_04 .chapter_04 {
+  transition: 0.45s;
   opacity: 1;
-  top: 50%;
 }
 
 /*모션스탭5 1.1초*/
 .benefit_intro.intro_chapter_05 {
+  transition-delay: 0.6s;
   background-color: #fff;
 }
 .benefit_intro.intro_chapter_05 .intro_card {
@@ -4665,37 +4760,46 @@ button.btn_primary.btn_credit {
 .benefit_intro.intro_chapter_05 .chapter_03 .txt {
   display: none;
 }
-.benefit_intro.intro_chapter_05 .chapter_04 p {
-  transition: 0.3s;
+.benefit_intro.intro_chapter_05 .chapter_04 .txt {
+  transition-delay: 0.9s;
+  opacity: 1;
+}
+.benefit_intro.intro_chapter_05 .chapter_04 .txt_pink {
+  transition: top 0.3s 0.6s;
   top: -10%;
 }
 .benefit_intro.intro_chapter_05 .btn_skip {
+  transition-delay: 0.9s;
   color: #252E33;
 }
 .benefit_intro.intro_chapter_05 .btn_skip::before {
+  transition-delay: 0.9s;
   background-color: rgba(37, 46, 51, 0.8);;
 }
 .benefit_intro.intro_chapter_05 .btn_next::before {
+  transition-delay: 0.9s;
   background-color: #252E33;
 }
 .benefit_intro.intro_chapter_05 .chapter_05 p {
+  transition-delay: 0.9s;
   opacity: 1;
   transform: translateY(0%);
 }
 .benefit_intro.intro_chapter_05 .chapter_05 .intro_earth {
+  transition-delay: 0.9s;
   opacity: 1;
   transform: translateY(0%);
 }
 .benefit_intro.intro_chapter_05 .chapter_05 .intro_earth {
-  animation: rotate360 7s 1.2s linear infinite;
+  animation: rotate360 7s 2.1s linear infinite;
 }
 .benefit_intro.intro_chapter_05 .chapter_05 .intro_earth .img_coin_krw::before, 
 .benefit_intro.intro_chapter_05 .chapter_05 .intro_earth .img_coin_usd::before {
-  animation: rotate360 7s 1.2s linear infinite reverse;
+  animation: rotate360 7s 2.1s linear infinite reverse;
   transform-origin: center;
 }
 .benefit_intro.intro_chapter_05 .chapter_05 .intro_earth .img_globe::before {
-  animation: rotate360 7s 1.2s linear infinite reverse;
+  animation: rotate360 7s 2.1s linear infinite reverse;
   transform-origin: center;
 }
 /*모션스탭6*/
@@ -4730,7 +4834,11 @@ button.btn_primary.btn_credit {
 }
 /*모션스탭7*/
 .benefit_intro.intro_chapter_07 {
+  transition-delay: 0s;
   background: #5D39C2;
+}
+.benefit_intro.intro_chapter_07 .chapter_07 {
+  opacity: 1;
 }
 .benefit_intro.intro_chapter_07 .btn_skip {
   color: #fff;
@@ -4744,9 +4852,9 @@ button.btn_primary.btn_credit {
 .benefit_intro.intro_chapter_07 .chapter_05 {
   display: none;
 }
-.benefit_intro.intro_chapter_07 .chapter_04 p {
+.benefit_intro.intro_chapter_07 .chapter_04 {
   opacity: 0;
-  top: -50%;
+  transition: 0.3s;
 }
 .benefit_intro.intro_chapter_07 .chapter_06 {
   transition: 0.2s;
@@ -4763,10 +4871,12 @@ button.btn_primary.btn_credit {
   top: 50%;
 }
 .benefit_intro.intro_chapter_08 .chapter_07 .txt_pink {
+  transition-delay: 0.6s;
   top: 0%;
   font-size: 2.0rem;
 }
 .benefit_intro.intro_chapter_08 .chapter_08 .txt {
+  transition-delay: 0.9s;
   opacity: 1;
   transform: translateY(0%);
 }
@@ -4774,10 +4884,6 @@ button.btn_primary.btn_credit {
   opacity: 1;
   transform: translateY(0%);
 }
-
-
-
-
 .intro_ing section {
   padding-top: 0;
 }
@@ -4785,9 +4891,6 @@ button.btn_primary.btn_credit {
   transition: all linear 3s;
   bottom: -100%;
 }
-
-
-
 
 /* GSP_004 해외직구 라운지 */
 .banner_overseas_lounge {
@@ -7246,7 +7349,10 @@ button.btn_primary.btn_credit {
   width: 100%;
   height: 100%;
   background: linear-gradient(159.61deg, #085E64 11.65%, #022220 52.89%);
-  opacity: 0.92;
+  opacity: 0.82;
+}
+.iOS .wrap_layer.dim_hmn_207_1::before {
+  opacity: 0.78;
 }
 .wrap_layer.dim_hmn_207_2::before {
   content: '';
@@ -7258,7 +7364,10 @@ button.btn_primary.btn_credit {
   width: 100%;
   height: 100%;
   background: linear-gradient(171.42deg, #527E9E 1.96%, #1C1049 99.27%);
-  opacity: 0.92;
+  opacity: 0.82;
+}
+.iOS .wrap_layer.dim_hmn_207_2::before {
+  opacity: 0.78;
 }
 .inner_layer[class*="cov_update"] {
   background: linear-gradient(171.42deg, #6BA8E1 1.96%, #FFE7E7 99.27%);
@@ -7618,7 +7727,15 @@ button.btn_primary.btn_credit {
 .AOS_old .section_cont.gsp_travlog_info .visual_gsp_exchange.transform .img_coin_usd::before,
 .AOS_old .wrap_vdb_list.transform li.empty::before,
 .AOS_old .section_cont.guide_hanamoney_6::before,
-.AOS_old .visual_gsp_atm.transform { animation: none; }
+.AOS_old .visual_gsp_atm.transform,
+.AOS_old .benefit_intro.intro_chapter_05 .chapter_05 .intro_earth,
+.AOS_old .benefit_intro.intro_chapter_05 .chapter_05 .intro_earth .img_coin_krw::before, 
+.AOS_old .benefit_intro.intro_chapter_05 .chapter_05 .intro_earth .img_coin_usd::before,
+.AOS_old .benefit_intro.intro_chapter_05 .chapter_05 .intro_earth .img_globe::before,
+.AOS_old .benefit_intro .chapter_06 .area_intro_billboard .txt .ico_dot,
+.AOS_old .btn_benefit,
+.AOS_old .benefit_intro .btn_next::before,
+.AOS_old .btn_benefit span { animation: none; }
 .AOS_old .section_cont.about_travlog .visual_gsp_travlog,
 .AOS_old .section_cont.gsp_unionpay .visial_gsp_unionpay,
 .AOS_old .visual_gsp_atm.transform { transform: none; }
@@ -7627,6 +7744,35 @@ button.btn_primary.btn_credit {
 .AOS_old .gsp_travlog_info .visual_gsp_cashback .img_coinpop,
 .AOS_old .wrap_vdb_list.transform .chart_coin .img_coin,
 .AOS_old .list_benefit_tower li { transition: none; }
+.AOS_old .benefit_intro,
+.AOS_old .benefit_intro::before,
+.AOS_old .benefit_intro .intro_card,
+.AOS_old .benefit_intro.intro_chapter_01::before,
+.AOS_old .benefit_intro .chapter_01 p,
+.AOS_old .benefit_intro .chapter_02 .txt,
+.AOS_old .benefit_intro .chapter_03 .txt,
+.AOS_old .benefit_intro .chapter_04 .txt,
+.AOS_old .benefit_intro .chapter_05 p,
+.AOS_old .benefit_intro .chapter_05 .intro_earth,
+.AOS_old .benefit_intro .chapter_06 P,
+.AOS_old .benefit_intro .chapter_06 .area_intro_billboard,
+.AOS_old .benefit_intro .chapter_08 .txt,
+.AOS_old .benefit_intro .txt_pink,
+.AOS_old .benefit_intro .intro_earth .img_globe,
+.AOS_old .benefit_intro.intro_chapter_01 .chapter_01 p,
+.AOS_old .benefit_intro.intro_chapter_02 .chapter_02 .txt,
+.AOS_old .benefit_intro.intro_chapter_05 .chapter_04 .txt_pink,
+.AOS_old .benefit_intro.intro_chapter_06 .chapter_06 p,
+.AOS_old .benefit_intro.intro_chapter_06 .chapter_06 .area_intro_billboard .intro_airplane,
+.AOS_old .benefit_intro.intro_chapter_07 .chapter_06,
+.AOS_old .benefit_intro.intro_chapter_07 .chapter_04,
+.AOS_old .benefit_intro .chapter_08 .area_banner_txt img {transform: none; transition: none;}
+.AOS_old .benefit_intro.intro_chapter_02 .chapter_01 p {display: none;}
+.AOS_old .benefit_intro .chapter_04 .txt,
+.AOS_old .benefit_intro .txt_pink {margin-left: -18rem;}
+.AOS_old .benefit_intro .intro_earth .img_globe {left: 0; top: -1.3rem;}
+.AOS_old .benefit_intro .chapter_05 {margin-top: 2rem;}
+.AOS_old .benefit_intro.intro_chapter_08 .chapter_07 .txt_pink {top: -10%;}
 .AOS_old .visual_usr_card { transform: translateY(0); }
 .AOS_old .wrap_vdb_list li.empty::before,
 .AOS_old .section_cont.guide_hanamoney_6::before,

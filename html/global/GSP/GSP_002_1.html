@@ -19,7 +19,7 @@
 </head>
 <body>
   <main id="root" class="intro_ing"> <!-- 23.04.10 클래스추가 -->
-    <header id="header" class="type_white"> <!-- 23.04.10 클래스추가 -->
+    <header id="header"> <!-- 23.04.12 클래스 삭제 / 23.04.10 클래스추가 -->
       <div class="inner_fixed">
         <button class="btn_ico_prev"><span class="blind">이전</span></button>
         <h1>트래블로그 체크카드</h1>
@@ -32,24 +32,12 @@
     <div id="contents" class="wrap_contents">
       <div class="contents type_check">
         <section data-roll="GSP">
-          <!-- 23.04.10 인트로추가 -->
-          <div class="benefit_intro">
+          <!-- 23.04.12 마크업수정 / 23.04.10 인트로추가 -->
+          <div class="benefit_intro intro_chapter_04 intro_chapter_05">
             <div class="area_center">
               <img src="../../../images/global/img_credit_travlog.png" alt="트래블로그 신용카드" class="intro_card">
-              <div class="chapter_01">
-                <p class="txt_01">여행을 위한</p>
-                <p class="txt_02">세계 어디에서나</p>
-                <p class="txt_03">TRAVLOG</p>
-                <p class="txt_04">새로운</p>
-                <p class="txt_05">국내에서도</p>
-              </div>
-              <div class="chapter_02">
-                <p class="txt">지금까지<br><strong>이런 <em class="intro_circle">카드</em>는<br>없었다</strong></p>
-              </div>
-              <div class="chapter_03">
-                <p class="txt"><strong><em class="intro_line">무료환전</em><br>혜택과<br><em class="intro_line">신용카드</em>의</strong><br>만남</p>
-              </div>
               <div class="chapter_04">
+                <p class="txt">외화하나머니</p> <!-- 23.04.12 추가 -->
                 <p class="txt_pink">해외 사용 시</p>
               </div>
               <div class="chapter_05">
@@ -69,23 +57,11 @@
                   <p class="txt">쌀국수 맛집에서 결제하고 있어요 <span class="ico_dot"></span><span class="ico_dot"></span><span class="ico_dot"></span></p>
                 </div>
               </div>
-              <div class="chapter_07">
-                <p class="txt_pink">국내에서는</p>
-                <div class="chapter_08">
-                  <p class="txt"><strong>실적 상관없이</strong><br><em class="intro_line"><strong>신용카드 혜택</strong>을</em> 누리세요</p>
-                  <div class="area_banner_txt">
-                    <img src="../../../images/global/img_intro_chapter8_01.png" alt="국내 전가냉점 1%적립" class="banner_txt_01">
-                    <img src="../../../images/global/img_intro_chapter8_02.png" alt="간편결제 최대 1.3% 적립" class="banner_txt_02">
-                    <img src="../../../images/global/img_intro_chapter8_03.png" alt="항공,면세,숙박 3% 적립" class="banner_txt_03">
-                  </div>
-                </div>
-              </div>
-
             </div>
             <button type="button" class="btn_next">다음</button>
             <button type="button" class="btn_skip">SKIP <span class="ico_skip"></span></button>
           </div>
-          <!-- // 23.04.10 인트로추가 -->
+          <!-- // 23.04.12 마크업수정 / 23.04.10 인트로추가 -->
           <div class="benefit_tab fnFixedTop" data-height="48">
             <ul class="wrap_tab_btn type_col type_samll">
               <li class="on"><a href="#benefit" class="btn_tab_box">혜택</a></li>
@@ -393,7 +369,7 @@
               <h2 class="tit">친구 가족에게<br>혜택을 공유해보세요!</h2>
             </div>
             <div class="wrap_btn">
-              <button type="button" class="btn_box btn_full_primary"><span class="ico_share_w"></span> 트래블로그 시작하기</button>
+              <button type="button" class="btn_box btn_full_primary"><span class="ico_share_w"></span> 트래블로그 공유하기</button> <!-- 23.04.12 문구변경 -->
             </div>
             <div class="no_acco ico_credit btn_learn">
               <button type="button" class="btn">
@@ -411,8 +387,7 @@
                 <span class="txt_basis">총 18종 통화로 4종(미국 USD, 일본 JPY, 유럽 EUR, 영국 GBP)을 제외한 14종 통화는 이벤트로 진행</span><br>
                 <span class="txt_basis">- 10종[2023년 6월 30일까지] : 뉴질랜드 NZD, 베트남 VND, 스웨덴 SEK, 스위스 CHF, 인도네시아 IDR, 체코 CZK, 태국 THB, 필리핀 PHP, 헝가리 HUF, 홍콩 HKD</span><br>
                 <span class="txt_basis">- 4종[2023년 12월 31일까지] : 싱가포르 SGD, 중국 CNY, 캐나다 CAD, 호주 AUD</span></li>
-              <li class="txt_black txt_em">외화 하나머니를 원화로 환급 시, 송금 받을 때(전신환 매입률)의 환율로 적용된 원화 환산 금액에서 <strong class="txt_point_2"><span class="txt_sup" aria-describedby="sup3">환급수수료</span>가 차감된 후 입금</strong>됩니다.<br>
-                <span id="sup3">- 환급수수료 할인 이벤트(<span>1%</span> &#9654; <span>0.5%</span>)는 2023년 6월 30일까지 진행됩니다.</span></li>
+              <li class="txt_black txt_em">외화 하나머니를 원화로 환급 시, 송금 받을 때(전신환 매입률)의 환율로 적용된 원화 환산 금액에서 <strong class="txt_point_2">환급수수료(1%)가 차감된 후 입금</strong>됩니다.<br>- 환급수수료 할인 이벤트(<span>1%</span> &#9654; <span>0.5%</span>)는 2023년 6월 30일까지 진행됩니다.</li> <!-- 23.04.12 문구변경 -->
               <li class="txt_black txt_em">외화 하나머니 사용(결제 및 ATM 인출)시 반드시 트래블로그 카드 발급이 필요합니다.</li>
               <li class="txt_black txt_em">충전한 원화 하나머니는 하나머니 앱 내 ‘ATM출금’ 기능을 이용하여 국내 인출이 가능하며, 환전한 외화 하나머니의 현금 인출은 해외 ATM에서만 가능합니다. (국내 은행 및 국내 ATM 인출 불가)</li>
               <li class="txt_black txt_em">트래블로그 서비스는 하나은행, 하나증권, 하나저축은행 중 하나의 본인 실명 계좌 등록 후 사용이 가능합니다.</li>
@@ -436,9 +411,10 @@
               <li class="txt_black txt_bold">개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.</li>
               <li class="txt_black txt_bold">일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</li>
               <li class="txt_black txt_bold">연체이자율(약정이율+최대3%)은 회원별·이용상품별로 차등 적용되며, 법정 최고금리(20%)를 초과하지 않습니다.<br>
-                <span>&#8251; 단, 연체 발생 시점에 약정이율이 없는 경우는 아래와 같이 적용함</span><br>
-                <span>&middot; 일시불 거래 연체 시 : 거래발생 시점의 최소기간(2개월) 유이자 할부금리</span><br>
-                <span>&middot; 무이자 할부 거래 연체 시 : 거래발생 시점의 동일한 할부 계약기간의 유이자 할부금리</span></li>
+                <!-- 23.04.12 문구변경 -->
+                <span>-약정이율은 상법 상 상사법정이율과 상호금융 가계자금대출금리*중 높은 금리</span><br>
+                <span>*한국은행에서 매월 발표하는 가장 최근의 비은행 금융기관 가중평균대출금리(신규대출 기준)</span></li>
+                <!-- // 23.04.12 문구변경 -->
             </ul>
             <p class="txt_basis">준법심의 M-23-0506 (2023.03.28 ~ 2024.03.27)</p>
             <!-- // 23.04.10 문구변경 -->
@@ -514,7 +490,7 @@
     //인트로화면 스와이프했을때 클래스 순차적으로 추가
     var startX, startY, endX, endY;
     var introBox = $('.benefit_intro');
-    var introclass = ['intro_chapter_01', 'intro_chapter_02', 'intro_chapter_03', 'intro_chapter_04', 'intro_chapter_05', 'intro_chapter_06', 'intro_chapter_07', 'intro_chapter_08', 'final_intro'];
+    var introclass = ['intro_chapter_06', 'final_intro']; // <!-- 23.04.12 수정
     var currentClass = 0;
 
     $(".benefit_intro").on('touchstart', function(event) {
@@ -550,11 +526,12 @@
           introBox.removeClass(introclass[currentClass-1]);
           currentClass--;
         }
-        if(!introBox.hasClass('intro_chapter_05')) {
-          $('header').addClass('type_white');
-        }
+        // <!-- 23.04.12 수정
         if(!introBox.hasClass('intro_chapter_07')) {
           $('header').removeClass('type_white');
+        }
+        if(!introBox.hasClass('intro_chapter_05')) {
+          $('header').addClass('type_white');
         }
       }
       
