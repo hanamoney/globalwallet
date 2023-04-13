@@ -621,7 +621,7 @@
 
     //인트로관련 스크립트 <!-- 23.04.10 추가
     history.scrollRestoration = "manual" //새로고침 시 스크롤 상단으로 이동
-    $('body').addClass('overflow');
+    $('html').addClass('overflow');
 
     //인트로화면 스와이프했을때 클래스 순차적으로 추가
     var startX, startY, endX, endY;
@@ -645,14 +645,14 @@
           introBox.addClass(introclass[currentClass]);
           currentClass++;
         }
-        if(introBox.hasClass('intro_chapter_05')) {
+        if(introBox.hasClass('intro_chapter_04 intro_chapter_05')) {
           $('header').removeClass('type_white');
         }
-        if(introBox.hasClass('intro_chapter_07')) {
+        if(introBox.hasClass('intro_chapter_07 intro_chapter_08')) {
           $('header').addClass('type_white');
         }
         if(introBox.hasClass('final_intro')) {
-          $('body').removeClass('overflow');
+          $('html').removeClass('overflow');
           $('main').removeClass('intro_ing');
           $('header').removeClass('type_white')
         }
@@ -663,10 +663,10 @@
           currentClass--;
         }
         // <!-- 23.04.12 수정
-        if(!introBox.hasClass('intro_chapter_07')) {
+        if(!introBox.hasClass('intro_chapter_07 intro_chapter_08')) {
           $('header').removeClass('type_white');
         }
-        if(!introBox.hasClass('intro_chapter_05')) {
+        if(!introBox.hasClass('intro_chapter_04 intro_chapter_05')) {
           $('header').addClass('type_white');
         }
       }
@@ -683,7 +683,7 @@
         $('header').removeClass('type_white');
       }
       if(introBox.hasClass('final_intro')) {
-        $('body').removeClass('overflow');
+        $('html').removeClass('overflow');
         $('main').removeClass('intro_ing');
         $('header').removeClass('type_white')
       }
@@ -691,7 +691,7 @@
 
     //인트로 스킵
     $('.btn_skip').on('click',function(){
-      $('body').removeClass('overflow');
+      $('html').removeClass('overflow');
       $('main').removeClass('intro_ing');
       $('header').removeClass('type_white')
       $('.benefit_intro').addClass('final_intro');

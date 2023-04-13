@@ -3945,7 +3945,7 @@ button.btn_primary.btn_credit {
   background-color: #E44E76;
 }
 .type_credit .benefit_cont.benefit_toggle_01 .btn_benefit_toggle {
-  box-shadow: inset 0 0.1rem 0.2rem #691662;
+  box-shadow: inset 0 0.1rem 0.2rem #951D3C;;
   background-color: #C53158;
 }
 .type_credit .benefit_cont.benefit_toggle_01 .btn_benefit_toggle .txt01 {
@@ -4131,6 +4131,7 @@ button.btn_primary.btn_credit {
   background: #5D39C2;
   overflow: hidden;
   z-index: 10;
+  will-change: height;
 }
 .benefit_intro.final_intro {
   height: 0;
@@ -4205,7 +4206,7 @@ button.btn_primary.btn_credit {
 }
 .benefit_intro::before {
   content: '';
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 0;
