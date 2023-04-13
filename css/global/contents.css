@@ -673,14 +673,8 @@
   mask-repeat: no-repeat;
   z-index: -1;
 }
-.usr_travlog_join .tit_sub + .txt {
-  margin-top: 0.2rem;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-  color: #536067;
-}
 .usr_travlog_join .type_flex {
-  margin-top: 1.2rem;
+  margin-top: 1.8rem;
   display: flex;
 }
 .usr_travlog_join .type_flex .swiper-container {
@@ -705,9 +699,15 @@
   width: calc(67% - 2rem);
 }
 .usr_travlog_join .type_flex .wrap_info .txt {
-  margin-top: 1.8rem;
   font-size: 2.0rem;
-  line-height: 2.6rem;
+  line-height: 2.3rem;
+}
+.usr_travlog_join .type_flex .wrap_info .txt .txt_info {
+  display: block;
+  margin-top: 1.0rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #536067;
 }
 .usr_travlog_join .btn_primary {
   padding: 0.95rem 1.4rem;
@@ -717,7 +717,7 @@
 .usr_travlog_join .type_check,
 .usr_travlog_join .type_credit {
   position: relative;
-  margin-top: 3.3rem;
+  margin-top: 4.0rem;
   padding: 0 2.4rem;
 }
 .usr_travlog_join .type_check .tit_sub em::before {
@@ -733,7 +733,7 @@
 .usr_travlog_join .type_credit::before {
   content: '';
   position: absolute;
-  top: -2.6rem;
+  top: -3.8rem;
   right: 1.7rem;
   width: 18.33rem;
   height: 9.66rem;
@@ -3119,8 +3119,8 @@ button.btn_primary.btn_credit {
   height: 0.4rem;
   border-radius: 0.3rem;
 }
-#header.scrolled + .wrap_contents .benefit_tab {
-  background-color: transparent;
+.benefit_tab.scrolled + .benefit_cont {
+  margin-top: 5.4rem;
 }
 .benefit_cont {
   padding: 5.6rem 2.4rem 6.4rem;
@@ -3369,10 +3369,11 @@ button.btn_primary.btn_credit {
   margin-top: 1.6rem;
 }
 .benefit_cont.gsp_acco .benefit_lounge {
-  margin-top: 1.6rem;
+  margin: 1.6rem -1.3rem 0 -0.3rem;
 }
 .benefit_cont.gsp_acco .benefit_lounge ul {
-  margin: 0 -1.3rem 0 -0.3rem;
+  margin: 0 auto;
+  max-width: 28.0rem;
   display: flex;
   flex-flow: wrap-reverse row-reverse;
   justify-content: center;
@@ -3703,6 +3704,7 @@ button.btn_primary.btn_credit {
   border-radius: 4.4rem;
   animation: btn_benefit 2.5s linear forwards;
   z-index: 10;
+  will-change: width;
 }
 .btn_benefit::before {
   content: '';
@@ -4055,6 +4057,9 @@ button.btn_primary.btn_credit {
   right: -1.1rem;
   transform: translate(50%);
 }
+.travlog_faq .section_faq_bubble .speech_bubble.left .box p + p {
+  margin-top: 0.8rem;
+}
 .travlog_faq .section_faq_bubble .speech_bubble.left .box em {
   font-weight: 700;
   background: linear-gradient(104.67deg, #7F5A9C 9.04%, #C07698 90.96%);
@@ -4124,16 +4129,26 @@ button.btn_primary.btn_credit {
   color: #839097;
 }
 /* GSP_002 intro */
+html.overflow {
+  overflow: hidden;
+  position: fixed;
+}
+html.overflow body {
+  overflow: hidden;
+  position: fixed;
+  position: relative;
+}
 .benefit_intro {
   position: relative;
   height: 100vh;
-  transition: all linear 0.5s;
+  transition: all linear 0.6s;
   background: #5D39C2;
   overflow: hidden;
   z-index: 10;
   will-change: height;
 }
 .benefit_intro.final_intro {
+  transition-delay: 0s !important;
   height: 0;
 }
 .benefit_intro .btn_skip {
@@ -4249,7 +4264,7 @@ button.btn_primary.btn_credit {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 40rem;
+  max-width: 50rem;
   height: 50vh;
 }
 .benefit_intro .intro_card {

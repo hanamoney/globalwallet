@@ -118,15 +118,6 @@ mark {
 body.overflow {
   overflow: hidden;
 }
-html.overflow {
-  overflow: hidden;
-  position: fixed;
-}
-html.overflow body {
-  overflow: hidden;
-  position: fixed;
-  position: relative;
-}
 #root {
   position: relative;
   height: 100%;
