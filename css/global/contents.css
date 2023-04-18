@@ -3794,7 +3794,6 @@ button.btn_primary.btn_credit {
   text-align: left;
   color: #fff;
   border-radius: 4.4rem;
-  animation: btn_benefit 2.6s 0.2s linear forwards;
   z-index: 10;
   will-change: contents;
 }
@@ -3812,10 +3811,15 @@ button.btn_primary.btn_credit {
 }
 .btn_benefit span {
   position: relative;
-  animation: opacity 2.5s linear forwards;
   opacity: 0;
   white-space: nowrap;
   left: 2.0rem;
+}
+.btn_benefit.active {
+  animation: btn_benefit 2.6s 0.3s linear forwards;
+}
+.btn_benefit.active span {
+  animation: opacity 2.5s linear forwards;
 }
 .btn_benefit.type_check {
   background: linear-gradient(0deg, #9D70E8, #9D70E8), linear-gradient(135deg, #5FE7F8 16.25%, #308EC2 86.25%);
@@ -4237,7 +4241,6 @@ html.intro_overflow body {
   background: #5D39C2;
   overflow: hidden;
   z-index: 10;
-  will-change: height;
 }
 .benefit_intro.final_intro {
   transition-delay: 0s !important;

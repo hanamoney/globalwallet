@@ -560,6 +560,9 @@
   
   <script>
   $(function(){
+    //화면로드되고 애니메이션
+    $('.btn_benefit').addClass('active');
+
     //상단탭이동
     $('.wrap_tab_btn li a').on('click', function() {  
       $('html, body').animate({scrollTop: $(this.hash).offset().top - 64}, 500);
