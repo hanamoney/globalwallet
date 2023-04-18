@@ -16,6 +16,10 @@
   <script src="../../../js/hmui/lib/waypoints.min.js"></script>
   <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
   <script src="../../../js/hmui/ui_common.js"></script>
+
+  <style>
+    .complete_intro {display: none;}
+  </style>
 </head>
 <body>
   <main id="root" class="intro_ing"> <!-- 23.04.10 클래스추가 -->
@@ -35,14 +39,112 @@
           <!-- 23.04.12 마크업수정 / 23.04.10 인트로추가 -->
           <div class="benefit_intro intro_chapter_04 intro_chapter_05">
             <div class="area_center">
-              <img src="../../../images/global/img_credit_travlog.png" alt="트래블로그 신용카드" class="intro_card">
               <div class="chapter_04">
                 <p class="txt">외화하나머니</p> <!-- 23.04.12 추가 -->
                 <p class="txt_pink">해외 사용 시</p>
               </div>
               <div class="chapter_05">
                 <p class="txt_check">내가 원하는 <em class="intro_circle">환율</em>로<br><em class="intro_line">무료환전하고</em></p>
-                <p class="txt_sub">환율 최대 100% 우대</p>
+                <!-- 23.04.14 추가 -->
+                <div class="type_tooltip">
+                  <p class="txt_sub">환율 최대 100% 우대</p>
+                  <div class="tooltip_bubble type_pupple">
+                    <p class="txt_bold">EVENT 통화 포함</p><span class="bubble_caret"></span>
+                  </div>
+                </div>
+                <!-- // 23.04.14 추가 -->
+                <div class="intro_earth">
+                  <span class="img_coin_krw"></span>
+                  <span class="img_globe"></span>
+                  <span class="img_coin_usd"></span>
+                </div>
+              </div>
+              <div class="chapter_06">
+                <p class="txt_check">전 <em class="intro_circle">세계</em>에서<br><em class="intro_line">수수료 없이</em> 결제/출금</p>
+                <div class="area_intro_billboard">
+                  <img src="../../../images/global/img_intro_airplane.png" alt="비행기이미지" class="intro_airplane">
+                  <img src="../../../images/global/img_intro_billboard.png" alt="전광판" class="intro_billboard">
+                  <p class="txt">쌀국수 맛집에서 결제하고 있어요 <span class="ico_dot"></span><span class="ico_dot"></span><span class="ico_dot"></span></p>
+                  <ul class="flip">
+                    <li>
+                      <div class="wrap_up_down">
+                        <div class="up">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_jpy"></span> <span>일본</span></div>
+                        </div>
+                        <div class="down">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_jpy"></span> <span>일본</span></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="wrap_up_down">
+                        <div class="up">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_eur"></span> <span>유럽</span></div>
+                        </div>
+                        <div class="down">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_eur"></span> <span>유럽</span></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="wrap_up_down">
+                        <div class="up">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_gbp"></span> <span>영국</span></div>
+                        </div>
+                        <div class="down">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_gbp"></span> <span>영국</span></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="wrap_up_down">
+                        <div class="up">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_nzd"></span> <span>뉴질랜드</span></div>
+                        </div>
+                        <div class="down">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_nzd"></span> <span>뉴질랜드</span></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="wrap_up_down">
+                        <div class="up">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_vnd"></span> <span>베트남</span></div>
+                        </div>
+                        <div class="down">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_vnd"></span> <span>베트남</span></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn_next">다음</button>
+            <button type="button" class="btn_skip">SKIP <span class="ico_skip"></span></button>
+          </div>
+          <!-- <div class="complete_intro intro_chapter_04 intro_chapter_05 intro_chapter_06">
+            <div class="area_center">
+              <div class="chapter_05">
+                <p class="txt">외화하나머니</p>
+                <p class="txt_pink">해외 사용 시</p>
+                <p class="txt_check">내가 원하는 <em class="intro_circle">환율</em>로<br><em class="intro_line">무료환전하고</em></p>
+                <div class="type_tooltip">
+                  <p class="txt_sub">환율 최대 100% 우대</p>
+                  <div class="tooltip_bubble type_pupple">
+                    <p class="txt_bold">EVENT 통화 포함</p><span class="bubble_caret"></span>
+                  </div>
+                </div>
                 <div class="intro_earth">
                   <span class="img_coin_krw"></span>
                   <span class="img_globe"></span>
@@ -58,9 +160,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="btn_next">다음</button>
-            <button type="button" class="btn_skip">SKIP <span class="ico_skip"></span></button>
-          </div>
+          </div> -->
           <!-- // 23.04.12 마크업수정 / 23.04.10 인트로추가 -->
           <div class="benefit_tab fnFixedTop" data-height="48">
             <ul class="wrap_tab_btn type_col type_samll">
@@ -73,7 +173,7 @@
           <!-- 혜택 BIG3 -->
           <div id="benefit" class="benefit_cont benefit_big gsp_acco">
             <div class="wrap_tit">
-              <h2 class="tit">혜택 BIG 3</h2>
+              <h2 class="tit">혜택 BIG 4</h2> <!-- 23.04.14 문구변경 -->
             </div>
             <div class="fnSimpleAcco ico_exchange">
               <button type="button" class="btn_acco">
@@ -83,16 +183,15 @@
               </button>
               <div class="wrap_acco" style="display: none;">
                 <div class="box_card_type">
-                  <p class="sub_tit"><em class="txt_point_1">제공하는 통화 모두<br>환율 100% 우대</em></p> <!-- 23.04.10 문구변경 -->
-                  <!-- 23.04.10 삭제 <p class="txt">2023년 6월 30일까지</p> -->
+                  <!-- 23.04.14 타이틀 삭제 -->
                   <ul class="list_ccy">
-                    <li><span class="img_ccy_krw"></span>KRW<br>한국</li>
+                    <!-- 23.04.14 한국 삭제 -->
                     <li><span class="img_ccy_usd"></span>USD<br>미국</li>
                     <li><span class="img_ccy_jpy"></span>JPY<br>일본</li>
                     <li><span class="img_ccy_eur"></span>EUR<br>유럽</li>
                     <li><span class="img_ccy_gbp"></span>GBP<br>영국</li>
                   </ul>
-                  <p class="sub_tit"><em class="txt_point_3">EVENT</em></p> <!-- 23.04.10 추가 -->
+                  <div class="tooltip_bubble type_pupple"><p class="txt_bold ico_heart">이벤트 진행중</p></div> <!-- 23.04.14 변경 -->
                   <ul class="list_ccy">
                     <li><span class="img_ccy_nzd"></span>NZD<br>뉴질랜드</li>
                     <li><span class="img_ccy_vnd"></span>VND<br>베트남</li>
@@ -129,18 +228,18 @@
               <div class="wrap_acco" style="display: none;">
                 <div class="box_card_type">
                   <p class="sub_tit">해외에서 결제할 때마다</p>
-                  <p class="tit"><em>나도 모르게 내고 있던</em></p>
+                  <p class="tit"><em class="txt_point_1">나도 모르게 내고 있던<br>수수료를 아낄 수 있어요!</em></p> <!-- 23.04.14 문구변경 -->
                   <ul class="payment_info">
                     <li>
                       <span class="emoji_card"></span>
-                      <p>해외서비스수수료<br><em class="txt_point_2">건당 $0.5</em></p> <!-- 23.04.10 문구변경 -->
+                      <p>해외서비스<br>수수료<br><em>건당 $0.5</em></p> <!-- 23.04.14 / 23.04.10 문구변경 -->
                     </li>
                     <li>
                       <span class="emoji_tag"></span>
-                      <p>국제브랜드수수료<br><em class="txt_point_2">이용 금액의 1%</em></p> <!-- 23.04.10 문구변경 -->
+                      <p>국제브랜드<br>수수료<br><em>이용 금액의 1%</em></p> <!-- 23.04.14 / 23.04.10 문구변경 -->
                     </li>
                   </ul>
-                  <p class="payment_txt"><em>아낄 수 있어요!</em></p>
+                  <!-- 23.04.14 삭제 <p class="payment_txt"><em>아낄 수 있어요!</em></p> -->
                 </div>
               </div>
             </div>
@@ -148,7 +247,7 @@
             <div class="fnSimpleAcco ico_franchisee">
               <button type="button" class="btn_acco">
                 <h3 class="tit">결제 시</h3>
-                <p class="txt"><em>국내 전가맹점 0.3%</em><br>하나머니 적립</p>
+                <p class="txt"><em>국내 전 가맹점 0.3%</em><br>하나머니 적립</p> <!-- 23.04.14 문구변경 -->
                 <span class="ico_arr_down_2"><span class="blind">상세보기</span>
               </button>
               <div class="wrap_acco" style="display: none;">
@@ -173,26 +272,30 @@
               </button>
               <div class="wrap_acco" style="display: none;">
                 <div class="box_card_type">
-                  <p class="sub_tit">전 세계 어디서나 <em>아깝게 내고 있던</em></p>
+                  <p class="sub_tit">전 세계 어디서나<br><em class="txt_point_1">수수료를 아낄 수 있어요!</em></p> <!-- 23.04.14 문구변경 -->
                   <ul class="payment_info">
                     <li>
                       <span class="emoji_card"></span>
-                      <p>해외서비스수수료<br><em class="txt_point_2">건당 $3</em></p> <!-- 23.04.10 문구변경 -->
+                      <p>해외서비스<br>수수료<br><em>건당 $3</em></p> <!-- 23.04.14 / 23.04.10 문구변경 -->
                     </li>
                     <li>
                       <span class="emoji_tag"></span>
-                      <p>국제브랜드수수료<br><em class="txt_point_2">이용 금액의 1%</em></p> <!-- 23.04.10 문구변경 -->
+                      <p>국제브랜드<br>수수료<br><em>이용 금액의 1%</em></p> <!-- 23.04.14 / 23.04.10 문구변경 -->
                     </li>
                   </ul>
-                  <p class="payment_txt"><em>아낄 수 있어요!</em></p>
-                  <div class="atm_caution">
-                    <span class="emoji_atm"></span>
-                    <p class="item_desc">주의하세요!<br>현지 ATM 운영사가 부과하는 수수료는 지원하지 않아요.</p>
+                  <!-- 23.04.14 삭제 <p class="payment_txt"><em>아낄 수 있어요!</em></p> -->
+                  <!-- 23.04.14 변경 -->
+                  <div class="bg_gray">
+                    <div class="atm_caution">
+                      <span class="emoji_atm"></span>
+                      <p class="item_desc">주의하세요!<br>현지 ATM 운영사가 부과하는 수수료는 지원하지 않아요.</p>
+                    </div>
+                    <div class="wrap_btn type_col">
+                      <a href="#none" class="btn_link"><span class="img_logo_master"></span>ATM 위치찾기<span class="ico_arr_link_s"></span></a>
+                      <a href="#none" class="btn_link"><span class="img_logo_unionpay"></span>ATM 위치찾기<span class="ico_arr_link_s"></span></a>
+                    </div>
                   </div>
-                  <div class="wrap_btn type_col">
-                    <a href="#none" class="btn_box btn_full_primary">마스터카드 ATM</a>
-                    <a href="#none" class="btn_box btn_full_primary">유니온페이 ATM</a>
-                  </div>
+                  <!-- // 23.04.14 변경 -->
                 </div>
               </div>
             </div>
@@ -348,7 +451,7 @@
               <li>
                 <button type="button" class="btn">
                   <span>Q3</span>
-                  <p class="item_desc">체크카드 대금결제는 연결된 계좌에서 출금되나요?</p>
+                  <p class="item_desc">체크카드 대금결제는 어디에서 출금되나요?</p> <!-- 23.04.14 문구변경 -->
                 </button>
               </li>
               <li>
@@ -383,6 +486,7 @@
             <h4 class="tit_notice"><span class="ico_notice"></span>알려드립니다!</h4>
             <!-- 23.04.10 문구변경 -->
             <ul class="list_txt">
+              
               <li class="txt_black txt_em">트래블로그 서비스로 외화 환전 시 *무료환전 혜택(환율 100% 우대)을 제공합니다.<br>
                 <span class="txt_basis">총 18종 통화로 4종(미국 USD, 일본 JPY, 유럽 EUR, 영국 GBP)을 제외한 14종 통화는 이벤트로 진행</span><br>
                 <span class="txt_basis">- 10종[2023년 6월 30일까지] : 뉴질랜드 NZD, 베트남 VND, 스웨덴 SEK, 스위스 CHF, 인도네시아 IDR, 체코 CZK, 태국 THB, 필리핀 PHP, 헝가리 HUF, 홍콩 HKD</span><br>
@@ -401,6 +505,7 @@
               <li class="txt_black txt_em">해외 결제 및 해외 ATM 인출 시 요구되는 PIN 번호는 카드 발급 시 등록한 4자리 비밀번호이며, 6자리 PIN 번호를 입력해야 하는 경우는 등록한 4자리 비밀번호 뒤에 ‘00’을 입력해주세요.</li>
               <li class="txt_black txt_em">트래블로그 체크카드는 해외 가맹점에서 사용 시 해외원화결제(DCC)를 사전에 차단되어 손님에게 추가로 부과될 수 있는 해외원화결제수수료(3~5%)를 방지할 수 있습니다.</li>
               <li class="txt_black txt_em">해외 현금 인출 기기에서 손님이 요청하고자 하는 현금인출 혹은 단기카드대출(현금서비스)이 지원되지 않을 수도 있습니다.</li>
+              <li class="txt_black txt_em">트래로그 체크카드 : 연회비 국내외겸용(Mastercard, UPI) 없음</li> <!-- 23.04.14 문구추가 -->
             </ul>
             <ul class="list_txt type_sub">
               <li>계약 체결 전 상품 설명서 및 상품 약관을 반드시 확인하시기 바랍니다. </li>
@@ -492,13 +597,14 @@
     var introBox = $('.benefit_intro');
     var introclass = ['intro_chapter_06', 'final_intro']; // <!-- 23.04.12 수정
     var currentClass = 0;
+    var scrollPosition = $('#benefit').offset().top - 64; // 현재 스크롤 위치 저장
 
-    $(".benefit_intro").on('touchstart', function(event) {
+    introBox.on('touchstart', function(event) {
       startX = event.originalEvent.changedTouches[0].screenX;
       startY = event.originalEvent.changedTouches[0].screenY;
     });
 
-    $(".benefit_intro").on('touchend', function(event) {
+    introBox.on('touchend', function(event) {
       endX = event.originalEvent.changedTouches[0].screenX;
       endY = event.originalEvent.changedTouches[0].screenY;
       var diffX = Math.abs(endX - startX);
@@ -512,13 +618,20 @@
         if(introBox.hasClass('intro_chapter_05')) {
           $('header').removeClass('type_white');
         }
+        if(introBox.hasClass('intro_chapter_06')) {
+          setTimeout(function() {
+            flipListItems(200);
+          }, 400);
+        }
         if(introBox.hasClass('intro_chapter_07')) {
           $('header').addClass('type_white');
         }
         if(introBox.hasClass('final_intro')) {
           $('body').removeClass('overflow');
           $('main').removeClass('intro_ing');
-          $('header').removeClass('type_white')
+          $('header').removeClass('type_white');
+          // $('.benefit_intro').hide();
+          $('html, body').animate({scrollTop: $('#benefit').offset().top - 64}, 500);
         }
       }
       if (diffY > diffX && startY - endY < -50) {
@@ -530,6 +643,11 @@
         if(!introBox.hasClass('intro_chapter_07')) {
           $('header').removeClass('type_white');
         }
+        if(introBox.hasClass('intro_chapter_06')) {
+          setTimeout(function() {
+            flipListItems(200);
+          }, 400);
+        }
         if(!introBox.hasClass('intro_chapter_05')) {
           $('header').addClass('type_white');
         }
@@ -540,16 +658,23 @@
     $('.btn_next').on('click',function(){
       introBox.addClass(introclass[currentClass]);
       currentClass = (currentClass + 1) % introclass.length;
-      if($(".benefit_intro").hasClass("intro_chapter_05") === true) {
+      if(introBox.hasClass("intro_chapter_05") === true) {
         $('header').removeClass('type_white');
       }
-      if($(".benefit_intro").hasClass("intro_chapter_07") === true) {
+      if(introBox.hasClass("intro_chapter_06") === true) {
+        setTimeout(function() {
+            flipListItems(200);
+          }, 400);
+      }
+      if(introBox.hasClass("intro_chapter_07") === true) {
         $('header').removeClass('type_white');
       }
       if(introBox.hasClass('final_intro')) {
           $('body').removeClass('overflow');
           $('main').removeClass('intro_ing');
-          $('header').removeClass('type_white')
+          $('header').removeClass('type_white');
+          // $('.benefit_intro').hide();
+          $('html, body').animate({scrollTop: $('#benefit').offset().top - 64}, 500);
         }
     });
 
@@ -558,8 +683,35 @@
       $('body').removeClass('overflow');
       $('main').removeClass('intro_ing');
       $('header').removeClass('type_white')
-      $('.benefit_intro').addClass('final_intro');
+      introBox.addClass('final_intro');
+      $('.benefit_intro').hide();
+      // $('.complete_intro').show();
+      var target = $('#benefit').prevAll().not('.benefit_intro').first();
+      $('html, body').animate({scrollTop: target.offset().top + target.outerHeight() - 64}, 500);
     });
+
+    function flipListItems(intervalDuration) {
+      var listItems = document.querySelectorAll('.flip li');
+      var currentIndex = 0;
+      var intervalId;
+
+      function activateNextItem() {
+        var lastIndex = listItems.length - 1;
+        var previousIndex = currentIndex;
+        currentIndex = (currentIndex + 1) % listItems.length;
+
+        listItems[previousIndex].classList.remove('active');
+        listItems[previousIndex].classList.add('before');
+        listItems[currentIndex].classList.remove('before');
+        listItems[currentIndex].classList.add('active');
+
+        if (currentIndex === lastIndex) {
+          clearInterval(intervalId);
+        }
+      }
+
+      intervalId = setInterval(activateNextItem, intervalDuration);
+    }
   });
   </script>
 </body>

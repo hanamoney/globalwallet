@@ -55,7 +55,14 @@
               </div>
               <div class="chapter_05">
                 <p class="txt_check">내가 원하는 <em class="intro_circle">환율</em>로<br><em class="intro_line">무료환전하고</em></p>
-                <p class="txt_sub">환율 최대 100% 우대</p>
+                <!-- 23.04.14 변경 -->
+                <div class="type_tooltip">
+                  <p class="txt_sub">환율 최대 100% 우대</p>
+                  <div class="tooltip_bubble type_pupple">
+                    <p class="txt_bold">EVENT 통화 포함</p><span class="bubble_caret"></span>
+                  </div>
+                </div>
+                <!-- // 23.04.14 변경 -->
                 <div class="intro_earth">
                   <span class="img_coin_krw"></span>
                   <span class="img_globe"></span>
@@ -78,6 +85,11 @@
                     <img src="../../../images/global/img_intro_chapter8_01.png" alt="국내 전가냉점 1%적립" class="banner_txt_01">
                     <img src="../../../images/global/img_intro_chapter8_02.png" alt="간편결제 최대 1.3% 적립" class="banner_txt_02">
                     <img src="../../../images/global/img_intro_chapter8_03.png" alt="항공,면세,숙박 3% 적립" class="banner_txt_03">
+                    <!-- 23.04.14 추가 -->
+                    <ul class="list_txt type_asterisk">
+                      <li>국내외 전 가맹점 적립 제외 대상은 상품약관 등을 통해 확인</li>
+                    </ul>
+                    <!-- // 23.04.14 추가 -->
                   </div>
                 </div>
               </div>
@@ -99,7 +111,7 @@
           <div id="benefit" class="benefit_cont gsp_acco benefit_toggle benefit_toggle_01">
             <div class="wrap_tit">
               <h2 class="tit">터치 한 번으로 바뀌는<br>해외혜택</h2>
-              <p class="sub_tit">트래블로그 해외 스위치 서비스</p> <!-- 23.04.12 문구변경 -->
+              <p class="sub_tit">트래블로그 해외 결제 설정</p> <!-- 23.04.14 / 23.04.12 문구변경 -->
             </div>
             <button type="button" class="btn_benefit_toggle btn_benefit_toggle_01">
               <p class="txt01">외화 하나머니</p>
@@ -113,16 +125,15 @@
               </span></button>
               <div class="wrap_acco" style="display: none;">
                 <div class="box_card_type">
-                  <p class="sub_tit"><em class="txt_point_1">제공하는 통화 모두<br>환율 100% 우대</em></p> <!-- 23.04.10 문구변경 -->
-                  <!-- 23.04.10 삭제 <p class="txt">2023년 6월 30일까지</p> -->
+                  <!-- 23.04.14 타이틀 삭제 -->
                   <ul class="list_ccy">
-                    <li><span class="img_ccy_krw"></span>KRW<br>한국</li>
+                    <!-- 23.04.14 한국 삭제 -->
                     <li><span class="img_ccy_usd"></span>USD<br>미국</li>
                     <li><span class="img_ccy_jpy"></span>JPY<br>일본</li>
                     <li><span class="img_ccy_eur"></span>EUR<br>유럽</li>
                     <li><span class="img_ccy_gbp"></span>GBP<br>영국</li>
                   </ul>
-                  <p class="sub_tit"><em class="txt_point_3">EVENT</em></p> <!-- 23.04.10 추가 -->
+                  <div class="tooltip_bubble type_pupple"><p class="txt_bold ico_heart">이벤트 진행중</p></div> <!-- 23.04.14 변경 / 23.04.10 추가 -->
                   <ul class="list_ccy">
                     <li><span class="img_ccy_nzd"></span>NZD<br>뉴질랜드</li>
                     <li><span class="img_ccy_vnd"></span>VND<br>베트남</li>
@@ -160,18 +171,18 @@
                   <div>
                     <p class="tit_2"><strong>‘외화 하나머니’ 설정</strong> 시<br>받을 수 있는 혜택이에요!</p>
                     <p class="sub_tit">해외에서 결제할 때마다</p>
-                    <p class="tit"><em>나도 모르게 내고 있던</em></p>
+                    <p class="tit"><em class="txt_point_1">나도 모르게 내고 있던<br>수수료를 아낄 수 있어요!</em></p> <!-- 23.04.14 문구변경 -->
                     <ul class="payment_info">
                       <li>
                         <span class="emoji_card"></span>
-                        <p>해외서비스수수료<br><em class="txt_point_2">이용 금액의 0.2%</em></p> <!-- 23.04.10 문구변경 -->
+                        <p>해외서비스<br>수수료<br><em>이용 금액의 0.2%</em></p> <!-- 23.04.14 / 23.04.10 문구변경 -->
                       </li>
                       <li>
                         <span class="emoji_tag"></span>
-                        <p>국제브랜드수수료<br><em class="txt_point_2">이용 금액의 1%</em></p> <!-- 23.04.10 문구변경 -->
+                        <p>국제브랜드<br>수수료<br><em>이용 금액의 1%</em></p> <!-- 23.04.14 / 23.04.10 문구변경 -->
                       </li>
                     </ul>
-                    <p class="payment_txt"><em>아낄 수 있어요!</em></p>
+                    <!-- 23.04.14 삭제 <p class="payment_txt"><em>아낄 수 있어요!</em></p> -->
                   </div>
                 </div>
               </div>
@@ -185,32 +196,36 @@
               <div class="wrap_acco" style="display: none;">
                 <div class="box_card_type">
                   <p class="tit_2"><strong>‘외화 하나머니’ 설정</strong> 시<br>받을 수 있는 혜택이에요!</p>
-                  <p class="sub_tit">전 세계 어디서나 <em>아깝게 내고 있던</em></p>
+                  <p class="sub_tit">전 세계 어디서나<br><em class="txt_point_1">수수료를 아낄 수 있어요!</em></p> <!-- 23.04.14 문구변경 -->
                   <ul class="payment_info">
                     <li>
                       <span class="emoji_card"></span>
-                      <p>해외서비스수수료<br><em class="txt_point_2">건당 $3</em></p> <!-- 23.04.10 변경 -->
+                      <p>해외서비스<br>수수료<br><em>건당 $3</em></p> <!-- 23.04.14 / 23.04.10 문구변경 -->
                     </li>
                     <li>
                       <span class="emoji_tag"></span>
-                      <p>국제브랜드수수료<br><em class="txt_point_2">이용 금액의 1%</em></p> <!-- 23.04.10 변경 -->
+                      <p>국제브랜드<br>수수료<br><em>이용 금액의 1%</em></p> <!-- 23.04.14 / 23.04.10 문구변경 -->
                     </li>
                   </ul>
-                  <p class="payment_txt"><em>아낄 수 있어요!</em></p>
-                  <div class="atm_caution">
-                    <span class="emoji_atm"></span>
-                    <p class="item_desc">주의하세요!<br>현지 ATM 운영사가 부과하는 수수료는 지원하지 않아요.</p>
+                  <!-- 23.04.14 삭제 <p class="payment_txt"><em>아낄 수 있어요!</em></p> -->
+                  <!-- 23.04.14 변경 -->
+                  <div class="bg_gray">
+                    <div class="atm_caution">
+                      <span class="emoji_atm"></span>
+                      <p class="item_desc">주의하세요!<br>현지 ATM 운영사가 부과하는 수수료는 지원하지 않아요.</p>
+                    </div>
+                    <div class="wrap_btn type_col">
+                      <a href="#none" class="btn_link"><span class="img_logo_master"></span>ATM 위치찾기<span class="ico_arr_link_s"></span></a>
+                      <a href="#none" class="btn_link"><span class="img_logo_unionpay"></span>ATM 위치찾기<span class="ico_arr_link_s"></span></a>
+                    </div>
                   </div>
-                  <div class="wrap_btn type_col">
-                    <a href="#none" class="btn_box btn_full_primary">마스터카드 ATM</a>
-                    <a href="#none" class="btn_box btn_full_primary">유니온페이 ATM</a>
-                  </div>
+                  <!-- // 23.04.14 변경 -->
                 </div>
               </div>
             </div>
             <!-- 23.04.12 추가 -->
             <ul class="list_txt type_asterisk">
-              <li>외화 하나머니는 하나머니 앱에서 해외 통화(18종)를 충전하여 사용할 수 있는 외화 선불전자지급수단입니다.</li>
+              <li>해외결제를 외화 하나머니(선불기반)로 설정 시 외화 하나머니(18종 통화) 잔액 내에서 결제 가능하며 해외 이용수수료 면제</li> <!-- 23.04.14 문구변경 -->
             </ul>
           </div>
 
@@ -218,16 +233,16 @@
           <div class="benefit_cont gsp_acco benefit_toggle benefit_toggle_02">
             <div class="wrap_tit">
               <h2 class="tit">해외에서도 신용으로<br>사용하고 싶다면?</h2>
-              <p class="sub_tit">신용결제로 스위치하고 신용 혜택 받자!</p> <!-- 23.04.10 문구변경 -->
+              <p class="sub_tit">‘신용결제’로 설정하고 신용 혜택 받자!</p> <!-- 23.04.14 / 23.04.10 문구변경 -->
             </div>
             <button type="button" class="btn_benefit_toggle btn_benefit_toggle_02">
               <p class="txt01">외화 하나머니</p>
               <p class="txt02">신용결제</p>
             </button>
-            <div class="fnSimpleAcco ico_payment">
+            <div class="fnSimpleAcco ico_franchisee"> <!-- 23.04.14 클래스변경 -->
               <button type="button" class="btn_acco">
                 <h3 class="tit">결제 시</h3>
-                <p class="txt"><em>해외 전가맹점 3%</em><br> 하나머니 적립</p> <!-- 23.04.12 문구변경 -->
+                <p class="txt"><em>해외 가맹점 3%</em><br> 하나머니 적립</p> <!-- 23.04.14 / 23.04.12 문구변경 -->
                 <span class="ico_arr_down_2"><span class="blind">상세보기</span>
               </span></button>
               <div class="wrap_acco" style="display: none;">
@@ -252,11 +267,11 @@
                     </tr></tbody>
                   </table>
                   <ul class="list_txt type_asterisk">
-                    <li>적립 한도까지 다 받으면 전가맹점, PAY 적립률(최대 1.3%)로 계속 적립받을 수 있어요.</li> <!-- 23.04.12 문구변경 -->
+                    <li>적립 한도까지 다 받으면 전가맹점 및 간편결제 적립률(최대 1.3%)로 계속 적립받을 수 있어요.</li> <!-- 23.04.14 / 23.04.12 문구변경 -->
                     <li>적립 제외 대상은 상품약관 등을 통해 확인해주세요.</li> <!-- 23.04.10 추가 -->
                   </ul>
                   <div class="wrap_btn type_full">
-                    <a href="#none" class="btn_box btn_full_primary">트래블로그 해외 스위치 서비스 설정</a> <!-- 23.04.10 문구변경 -->
+                    <a href="#none" class="btn_box btn_full_primary">트래블로그 해외 결제 설정</a> <!-- 23.04.14 / 23.04.10 문구변경 -->
                   </div>
                 </div>
               </div>
@@ -266,11 +281,12 @@
           <!-- 조건없이 누리는 혜택 -->
           <div class="benefit_cont bg_pink benefit_credit_cont gsp_acco">
             <div class="wrap_tit">
-              <h2 class="tit">조건없이 누리는 혜택</h2>
+              <h2 class="tit">실적 관계없이<br>누리는 혜택</h2>
             </div>
             <div class="no_acco ico_franchisee">
               <button type="button" class="btn">
-                <p class="txt">조건없이 <em>국내 전가맹점<br>1%</em> 하나머니 적립</p>
+                <h3 class="tit">실적 관계없이</h3> <!-- 23.04.14 추가 -->
+                <p class="txt"><em>국내 전 가맹점 1%</em><br>하나머니 적립</p> <!-- 23.04.14 문구변경 -->
                 <!-- 23.04.10 추가 -->
                 <ul class="list_txt type_asterisk">
                   <li>적립 제외 대상은 상품약관 등을 통해 확인</li>
@@ -281,7 +297,7 @@
 
             <div class="fnSimpleAcco ico_payment">
               <button type="button" class="btn_acco">
-                <p class="txt"><em>PAY 최대 1.3%</em><br> 하나머니 적립</p> <!-- 23.04.12 문구변경 -->
+                <p class="txt"><em>간편결제 최대 1.3%</em><br>하나머니 적립</p> <!-- 23.04.14 / 23.04.12 문구변경 -->
                 <span class="ico_arr_down_2"><span class="blind">상세보기</span>
               </button>
               <div class="wrap_acco" style="display: none;">
@@ -298,7 +314,7 @@
                       <span class="img_benefit_02"></span>
                       <div class="item_desc">
                         <p class="tit">전가맹점, 7대 간편결제<br><em>1.0% 적립</em></p>
-                        <p class="txt">삼성페이, 네이버페이, 카카오페이, SSG페이, 페이코, 쿠페이, SK PAY</p> <!-- 23.04.12 문구변경 -->
+                        <p class="txt">삼성페이, 네이버페이, 카카오페이, SSG페이, 페이코, 쿠페이, SK페이</p> <!-- 23.04.13 / 23.04.12 문구변경 -->
                       </div>
                     </li>
                   </ul>
@@ -309,7 +325,7 @@
 
             <div class="fnSimpleAcco ico_airplane">
               <button type="button" class="btn_acco">
-                <p class="txt"><em>항공/면세/OTA 3%</em><br>하나머니 적립</p> <!-- 23.04.12 문구변경 -->
+                <p class="txt"><em>해외/항공/면세점/여행<br>3%</em> 하나머니 적립</p> <!-- 23.04.14 / 23.04.12 문구변경 -->
                 <span class="ico_arr_down_2"><span class="blind">상세보기</span>
               </button>
               <div class="wrap_acco" style="display: none;">
@@ -344,14 +360,14 @@
                     <li>
                       <span class="img_benefit_04"></span>
                       <div class="item_desc">
-                        <p class="tit">면세점(온/오프라인)</p> <!-- 23.04.12 문구변경 -->
+                        <p class="tit">면세점</p> <!-- 23.04.14 / 23.04.12 문구변경 -->
                         <p class="txt">신라면세점, 신세계면세점, 롯데면세점, 현대백화점면세점</p>
                       </div>
                     </li>
                     <li>
                       <span class="img_benefit_05"></span>
                       <div class="item_desc">
-                        <p class="tit">OTA</p> <!-- 23.04.12 문구변경 -->
+                        <p class="tit">여행</p> <!-- 23.04.14 / 23.04.12 문구변경 -->
                         <p class="txt">하나투어, 아고다, 익스피디아, 호텔스닷컴</p>
                       </div>
                     </li>
@@ -469,21 +485,16 @@
               <li>
                 <button type="button" class="btn">
                   <span>Q1</span>
-                  <p class="item_desc">신용카드 대금 결제는 어떤 계좌에서 출금되나요?</p>
+                  <p class="item_desc">외화 하나머니를 해외 ATM에서 어떻게 출금하나요?</p> <!-- 23.04.14 문구변경 -->
                 </button>
               </li>
               <li>
                 <button type="button" class="btn">
                   <span>Q2</span>
-                  <p class="item_desc">몰디브에서 ATM출금하면 무슨 돈이 나오나요?</p>
+                  <p class="item_desc">트래블로그 해외 결제 설정이 무엇인가요?</p> <!-- 23.04.14 문구변경 -->
                 </button>
               </li>
-              <li>
-                <button type="button" class="btn">
-                  <span>Q3</span>
-                  <p class="item_desc">해외결제 스위치 설정이 무엇인가요?</p>
-                </button>
-              </li>
+              <!-- 23.04.14 Q3 삭제 -->
             </ul>
             <div class="wrap_btn_center">
               <a href="#none" class="btn_link">FAQ 더보기<span class="ico_arr_link_s"></span></a>
@@ -527,6 +538,7 @@
               <li class="txt_black txt_em">해외 결제 및 해외 ATM 인출 시 요구되는 PIN 번호는 카드 발급 시 등록한 4자리 비밀번호이며, 6자리 PIN 번호를 입력해야 하는 경우는 등록한 4자리 비밀번호 뒤에 ‘00’을 입력해주세요.</li>
               <!-- 23.04.12 삭제 <li class="txt_black txt_em">해외 가맹점에서 외화 하나머니로 결제 시 해외원화결제(DCC)를 사전에 차단되어 손님에게 추가로 부과될 수 있는 해외원화결제수수료(3~5%)를 방지할 수 있습니다.</li> -->
               <li class="txt_black txt_em">해외 현금 인출 기기에서 손님이 요청하고자 하는 현금인출 혹은 단기카드대출(현금서비스)이 지원되지 않을 수도 있습니다.</li>
+              <li class="txt_black txt_em">트래로그 신용카드 : 연회비 국내전용 / 국내외겸용(Mastercard) 2만 원</li> <!-- 23.04.14 문구추가 -->
               <li class="txt_black txt_em">신용결제로 해외 이용 시(해외사이트 거래 포함) 미화(USD) 기준 거래 금액에 접수일의 하나은행 최초고시 전신환 매도율을 적용한 후, 국제브랜드사가 부과하는 국제브랜드수수료(Mastercard 1.0%)와 하나카드가 부과하는 해외서비스수수료(신용카드 0.2%)를 포함하여 원화로 청구됩니다.</li> <!-- 23.04.12 문구추가 -->
             </ul>
             <ul class="list_txt type_sub">
@@ -559,7 +571,7 @@
           </div>
           <!-- case2 
           <div class="wrap_btn_full">
-            <button type="button" class="btn_full_secondary">tlsdyd카드 신청</button>
+            <button type="button" class="btn_full_secondary">신용카드 신청</button> 
             <button type="button" class="btn_full_primary type_credit">환전하기</button>
           </div>
           -->
