@@ -47,7 +47,7 @@
                 <p class="txt_check">내가 원하는 <em class="intro_circle">환율</em>로<br><em class="intro_line">무료환전하고</em></p>
                 <!-- 23.04.14 추가 -->
                 <div class="type_tooltip">
-                  <p class="txt_sub">환율 최대 100% 우대</p>
+                  <p class="txt_sub">환율 100% 우대</p>
                   <div class="tooltip_bubble type_pupple">
                     <p class="txt_bold">EVENT 통화 포함</p><span class="bubble_caret"></span>
                   </div>
@@ -133,34 +133,30 @@
             <button type="button" class="btn_next">다음</button>
             <button type="button" class="btn_skip">SKIP <span class="ico_skip"></span></button>
           </div>
-          <!-- <div class="complete_intro intro_chapter_04 intro_chapter_05 intro_chapter_06">
+          <div class="complete_intro">
             <div class="area_center">
               <div class="chapter_05">
                 <p class="txt">외화하나머니</p>
                 <p class="txt_pink">해외 사용 시</p>
                 <p class="txt_check">내가 원하는 <em class="intro_circle">환율</em>로<br><em class="intro_line">무료환전하고</em></p>
                 <div class="type_tooltip">
-                  <p class="txt_sub">환율 최대 100% 우대</p>
+                  <p class="txt_sub">환율 100% 우대</p>
                   <div class="tooltip_bubble type_pupple">
                     <p class="txt_bold">EVENT 통화 포함</p><span class="bubble_caret"></span>
                   </div>
                 </div>
                 <div class="intro_earth">
-                  <span class="img_coin_krw"></span>
-                  <span class="img_globe"></span>
-                  <span class="img_coin_usd"></span>
+                  <img src="../../../images/global/img_intro_earth.png" alt="">
                 </div>
               </div>
               <div class="chapter_06">
                 <p class="txt_check">전 <em class="intro_circle">세계</em>에서<br><em class="intro_line">수수료 없이</em> 결제/출금</p>
                 <div class="area_intro_billboard">
-                  <img src="../../../images/global/img_intro_airplane.png" alt="비행기이미지" class="intro_airplane">
                   <img src="../../../images/global/img_intro_billboard.png" alt="전광판" class="intro_billboard">
-                  <p class="txt">쌀국수 맛집에서 결제하고 있어요 <span class="ico_dot"></span><span class="ico_dot"></span><span class="ico_dot"></span></p>
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
           <!-- // 23.04.12 마크업수정 / 23.04.10 인트로추가 -->
           <div class="benefit_tab fnFixedTop" data-height="48">
             <ul class="wrap_tab_btn type_col type_samll">
@@ -590,7 +586,7 @@
 
     //인트로관련 스크립트 <!-- 23.04.10 추가
     history.scrollRestoration = "manual" //새로고침 시 스크롤 상단으로 이동
-    $('body').addClass('overflow');
+    $('html').addClass('intro_overflow');
 
     //인트로화면 스와이프했을때 클래스 순차적으로 추가
     var startX, startY, endX, endY;
@@ -627,10 +623,11 @@
           $('header').addClass('type_white');
         }
         if(introBox.hasClass('final_intro')) {
-          $('body').removeClass('overflow');
+          $('html').removeClass('intro_overflow');
           $('main').removeClass('intro_ing');
           $('header').removeClass('type_white');
-          // $('.benefit_intro').hide();
+          $('.benefit_intro').hide();
+          $('.complete_intro').show();
           $('html, body').animate({scrollTop: $('#benefit').offset().top - 64}, 500);
         }
       }
@@ -670,22 +667,23 @@
         $('header').removeClass('type_white');
       }
       if(introBox.hasClass('final_intro')) {
-          $('body').removeClass('overflow');
+          $('html').removeClass('intro_overflow');
           $('main').removeClass('intro_ing');
           $('header').removeClass('type_white');
-          // $('.benefit_intro').hide();
+          $('.benefit_intro').hide();
+          $('.complete_intro').show();
           $('html, body').animate({scrollTop: $('#benefit').offset().top - 64}, 500);
         }
     });
 
     //인트로 스킵
     $('.btn_skip').on('click',function(){
-      $('body').removeClass('overflow');
+      $('html').removeClass('intro_overflow');
       $('main').removeClass('intro_ing');
       $('header').removeClass('type_white')
       introBox.addClass('final_intro');
       $('.benefit_intro').hide();
-      // $('.complete_intro').show();
+      $('.complete_intro').show();
       var target = $('#benefit').prevAll().not('.benefit_intro').first();
       $('html, body').animate({scrollTop: target.offset().top + target.outerHeight() - 64}, 500);
     });
