@@ -4611,6 +4611,9 @@ html.intro_overflow body {
   height: 1.8rem;
   background-color: #47D8C2;
 }
+.benefit_intro .wrap_earth {
+  position: relative;
+}
 .benefit_intro .intro_earth {
   position: relative;
   width: 26.6rem;
@@ -4628,8 +4631,7 @@ html.intro_overflow body {
   background: url("../../images/global/img_intro_circular.png") no-repeat center;
   background-size: 22rem;
 }
-.benefit_intro .intro_earth .img_globe::before {
-  content: '';
+.benefit_intro .img_earth {
   position: absolute;
   width: 14rem;
   height: 14rem;
@@ -5139,15 +5141,16 @@ html.intro_overflow body {
   animation: rotate360 6.9s 1.6s linear infinite reverse;
   transform-origin: center;
 }
-.benefit_intro.intro_chapter_05 .chapter_05 .intro_earth .img_globe::before {
+/* .benefit_intro.intro_chapter_05 .chapter_05 .intro_earth .img_globe::before {
   animation: rotate360 6.9s 1.6s linear infinite reverse;
   transform-origin: center;
-}
+} */
 /*모션스탭6*/
 .benefit_intro.intro_chapter_06 .chapter_05 .intro_earth,
 .benefit_intro.intro_chapter_06 .chapter_05 .intro_earth .img_coin_krw::before, 
-.benefit_intro.intro_chapter_06 .chapter_05 .intro_earth .img_coin_usd::before,
-.benefit_intro.intro_chapter_06 .chapter_05 .intro_earth .img_globe::before {
+.benefit_intro.intro_chapter_06 .chapter_05 .intro_earth .img_coin_usd::before
+/* .benefit_intro.intro_chapter_06 .chapter_05 .intro_earth .img_globe::before  */
+{
   animation: none;
 }
 .benefit_intro.intro_chapter_06 .chapter_05 {
