@@ -22,7 +22,7 @@
     <header id="header">
       <div class="inner_fixed">
         <button class="btn_ico_prev"><span class="blind">이전</span></button>
-        <h1>트래블로그 결제내역</h1> <!-- 23.03.24 문구변경 -->
+        <h1>트래블로그 카드사용내역</h1> <!-- 23.03.24 문구변경 -->
         <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
       </div>
     </header>
@@ -275,9 +275,11 @@
     // skeleton loading을 위한 element prepend 후 end 시 삭제기능을 하는 함수 호출
     skeletonLoading.start('.section_top_info'); // 로딩 시
     skeletonLoading.start('.section_list_trans'); // 로딩 시
+    skeletonLoading.start('.wrap_btn.type_full'); // 로딩 시 23.04.18 추가
       setTimeout(function(){
         skeletonLoading.end('.section_top_info'); // 로딩 완료
         skeletonLoading.end('.section_list_trans'); // 로딩 완료
+        skeletonLoading.end('.wrap_btn.type_full'); // 로딩 완료 23.04.18 추가
       },2000); // setTime은 테스트용
 
     // 검색초기화 확인용

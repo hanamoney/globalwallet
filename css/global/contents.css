@@ -1161,6 +1161,7 @@ button.btn_primary.btn_credit {
 .section_top_info.card_history {
   margin-top: -5.0rem;
   padding-top: calc(5.0rem + 3.2rem);
+  padding-bottom: 2.4rem;
   background-image: linear-gradient(151.95deg, #E1FAEA 2.61%, #EFCBCB 89.47%);
   text-align: left;
 }
@@ -1261,6 +1262,7 @@ button.btn_primary.btn_credit {
   margin-top: 1.6rem;
 }
 .section_top_info.card_history .wrap_box + .wrap_btn_right .btn_link {
+  position: relative;
   color: #252E33;
 }
 .section_top_info.card_history .wrap_box + .wrap_btn_right .btn_link .ico_arr_link_s{
@@ -1270,7 +1272,9 @@ button.btn_primary.btn_credit {
   filter: invert(13%) sepia(33%) saturate(367%) hue-rotate(157deg) brightness(95%) contrast(87%);
 }
 .section_top_info.card_history.skeletonLoading .prd_box_card::after,
-.section_top_info.card_history.skeletonLoading .wrap_box::after {
+.section_top_info.card_history.skeletonLoading .wrap_box::after,
+.section_top_info.card_history.skeletonLoading .wrap_btn_right button:after,
+.wrap_btn.type_full.skeletonLoading:after  {
   content: '';
   position: absolute;
   top: 0;
@@ -1283,10 +1287,18 @@ button.btn_primary.btn_credit {
   background: linear-gradient(110deg, #ECEEEE 8%, #F0F0F0 18%, #ECEEEE 33%);
   background-size: 200% 100%;
   animation: 1.5s skeleton linear infinite;
+  z-index: 2;
+}
+.section_top_info.card_history.skeletonLoading .wrap_btn_right button:after {
+  left: -1rem;
+  border-radius: 0.8rem;
 }
 .section_top_info.card_history.skeletonLoading .prd_box_card::after {
   height: 4.0rem;
   border-radius: 0.8rem;
+}
+.wrap_btn.type_full.skeletonLoading:after {
+  border-radius: 0;
 }
 .wrap_btn .btn_box_m.type_credit {
   position: relative;
