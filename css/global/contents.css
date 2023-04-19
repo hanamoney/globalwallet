@@ -5338,10 +5338,6 @@ html.intro_overflow body {
   transform: none;
   transition: none;
 }
-@media (max-width:720px) {
-  .benefit_intro .area_center {top: 60%;}
-  .intro_chapter_04 .area_center {top: 50%;}
-}
 
 /* GSP_004 해외직구 라운지 */
 .banner_overseas_lounge {
