@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="format-detection" content="telephone=no">
-  <title>HMN_202</title>
+  <title>HMN_206</title>
 
   <link rel="stylesheet" href="../../..../../../css/hmui/swiper.css">
   <link rel="stylesheet" href="../../../css/hmui/animate.css">
@@ -16,6 +16,18 @@
   <script src="../../../js/hmui/lib/waypoints.min.js"></script>
   <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
   <script src="../../../js/hmui/ui_common.js"></script>
+  <!-- 23.04.18 수정 -->
+  <style>
+    .txt_info {padding-left: 1.0rem; font-size: 1.8rem; line-height:132%;}
+    .txt_info dd {color: #536067;}
+    .txt_info dd span {display: block; font-size: 1.6rem;}
+    .txt_info dd strong {color: #252E33;}
+    .txt_info dl + .txt_sub {margin-top: 1.5rem;}
+    .chk.type_sub {display: flex; justify-content: center; margin-top:2.5rem}
+    .chk.type_sub .label.txt_point_5.txt_underline {padding-left: 0; font-size: 1.6rem;}
+    .chk.type_sub input + label::before, .chk.type_sub input + label::after {display: none;}
+  </style>
+  <!-- // 23.04.18 수정 -->
 </head>
 <body>
   <main id="root">
@@ -29,20 +41,26 @@
       <div class="inner_layer">
         <div class="content_layer" style="max-height: 85% !important;">
           <div class="wrap_banner">
-            <p class="txt_sub_2">[하나머니 서비스 일시 중단 안내]</p>
-            <p class="tit_sub">보다 나은 서비스를 위해<br>하나머니 서비스가 11/19(토)에<br>일시 중단될 예정입니다.</p>
-            <ul class="list_txt" style="margin:1.6rem 0;">
-              <li style="font-size: 1.7rem !important; line-height: 1.3;">중단 일시 : <strong class="txt_black">11/19(토) 새벽 2시~7시<br></strong></li>
-              <li style="font-size: 1.7rem !important; line-height: 1.3;">중단 대상 : <span class="txt_point_2">트래블로그 결제 및 하나머니 서비스 전체</span></li>
-              <li style="font-size: 1.7rem !important; line-height: 1.3;">해외에 계신 분들은 서비스 중단 시각을 꼭 확인하신 후 트래블로그를 사용해 주시기 바랍니다.</li>
-            </ul>
-            <p class="txt_sub_2">이용에 불편을 끼쳐 드려 죄송합니다.<br>더 나은 서비스로 찾아뵙겠습니다.</p>
+            <p class="tit_sub" style="color: #252E33;">보다 나은 서비스 제공을 위해<br>하나머니 서비스가 <span class="txt_point_2">4/22(토)</span>에<br>일시 중단될 예정입니다.</p>
+            <div class="txt_info">
+              <dl>
+                <dt class="txt_point_2">[트래블로그 결제 및 하나머니 서비스 전체]</dt>
+                <dd>중단 시간 : <strong>새벽 4시 30분 ~ 5시 30분</strong><span>(GMT+9 한국표준시 기준)</span></dd> <!-- 23.04.18 문구추가 -->
+              </dl>
+              <dl style="margin-top:1.5rem;">
+                <dt class="txt_point_2">[푸시알림 서비스]</dt>
+                <dd>중단 시간 : <strong>새벽 2시 ~ 6시</strong><span>(GMT+9 한국표준시 기준)</span></dd> <!-- 23.04.18 문구추가 -->
+                <dd></dd>
+              </dl>
+              <p class="txt_sub" style="color: #374248; font-size:1.6rem;">해외에 계신 분들은 서비스 중단 시간을 꼭 확인하신 후 트래블로그를 사용해 주시기 바랍니다.</p>
+            </div>
+            <p class="txt_sub_2" style="margin-top:1.5rem; color: #536067;">이용에 불편을 끼쳐 드려 죄송합니다.<br>더 나은 서비스로 찾아뵙겠습니다.</p>
 
             <!-- 23.04.13 다시보지않기 추가 -->
             <span class="chk type_sub">
               <input type="checkbox" id="chk1" name="chk1">
               <label for="chk1" class="chk">
-                <span class="label">다시 보지 않기</span>
+                <span class="label txt_point_5 txt_underline">다시 보지 않기</span>
               </label>
             </span>
 
@@ -66,6 +84,12 @@
     $(function(){
       fnOpenLayerPop('popupId');
     });
+
+    // 다시보지 않기 클릭시 팝업 닫기
+    $('#chk1').on('click', function() {
+      // param 닫을 팝업 id
+      fnCloseLayerPop('popupId');
+    }); 
   </script>
 </body>
 </html>
