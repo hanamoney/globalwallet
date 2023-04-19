@@ -748,7 +748,6 @@
     var introBox = $('.benefit_intro');
     var introclass = ['intro_chapter_02', 'intro_chapter_03', 'intro_chapter_04', 'intro_chapter_05', 'intro_chapter_06', 'final_intro']; // <!-- 23.04.12 수정
     var currentClass = 0;
-    var scrollPosition = $('#benefit').offset().top - 64; // 현재 스크롤 위치 저장
 
     $(".benefit_intro").on('touchstart', function(event) {
       startX = event.originalEvent.changedTouches[0].screenX;
@@ -783,7 +782,7 @@
           $('header').removeClass('type_white');
           $('.benefit_intro').hide();
           $('.complete_intro').show();
-          $('html, body').animate({scrollTop: $('#benefit').offset().top - 64}, 500);
+          $('html, body').animate({scrollTop: $('#benefit').offset().top - 64}, 400);
         }
       }
       if (diffY > diffX && startY - endY < -50) {
@@ -821,7 +820,7 @@
         $('header').removeClass('type_white');
         $('.benefit_intro').hide();
         $('.complete_intro').show();
-        $('html, body').animate({scrollTop: $('#benefit').offset().top - 64}, 500);
+        $('html, body').animate({scrollTop: $('#benefit').offset().top - 64}, 400);
       }
     });
 
@@ -834,7 +833,7 @@
       $('.benefit_intro').hide();
       $('.complete_intro').show();
       var target = $('#benefit').prevAll().not('.benefit_intro').first();
-      $('html, body').animate({scrollTop: target.offset().top + target.outerHeight() - 64}, 500);
+      $('html, body').animate({scrollTop: $('#benefit').offset().top - 64}, 400);
     });
 
     //여행중 플립 스크립트
