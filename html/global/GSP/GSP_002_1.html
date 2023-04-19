@@ -16,10 +16,6 @@
   <script src="../../../js/hmui/lib/waypoints.min.js"></script>
   <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
   <script src="../../../js/hmui/ui_common.js"></script>
-
-  <style>
-    .complete_intro {display: none;}
-  </style>
 </head>
 <body>
   <main id="root" class="intro_ing"> <!-- 23.04.10 클래스추가 -->
@@ -36,8 +32,8 @@
     <div id="contents" class="wrap_contents">
       <div class="contents type_check">
         <section data-roll="GSP">
-          <!-- 23.04.12 마크업수정 / 23.04.10 인트로추가 -->
-          <div class="benefit_intro intro_chapter_04 intro_chapter_05">
+          <!-- 23.04.19 변경 / 23.04.12 마크업수정 / 23.04.10 인트로추가 -->
+          <div class="benefit_intro intro_chapter_04">
             <div class="area_center">
               <div class="chapter_04">
                 <p class="txt">외화하나머니</p> <!-- 23.04.12 추가 -->
@@ -160,7 +156,7 @@
               </div>
             </div>
           </div>
-          <!-- // 23.04.12 마크업수정 / 23.04.10 인트로추가 -->
+          <!-- // 23.04.19 변경 / 23.04.12 마크업수정 / 23.04.10 인트로추가 -->
           <div class="benefit_tab fnFixedTop" data-height="48">
             <ul class="wrap_tab_btn type_col type_samll">
               <li class="on"><a href="#benefit" class="btn_tab_box">혜택</a></li>
@@ -287,7 +283,7 @@
                   <div class="bg_gray">
                     <div class="atm_caution">
                       <span class="emoji_atm"></span>
-                      <p class="item_desc">주의하세요!<br>현지 ATM 운영사가 부과하는 수수료는 지원하지 않아요.</p>
+                      <p class="item_desc">주의하세요!<br>현지 ATM 운영사가 부과하는 수수료(Surcharge)는 지원하지 않아요.</p> <!-- 23.04.19 문구변경 -->
                     </div>
                     <div class="wrap_btn type_col">
                       <a href="#none" class="btn_link"><span class="img_logo_master"></span>ATM 위치찾기<span class="ico_arr_link_s"></span></a>
@@ -416,8 +412,28 @@
             <div class="wrap_tit">
               <h2 class="tit">프로 여행러<span class="txt_light">들의<br> 생생한 후기</span></h2>
             </div>
-            <!-- 23.04.10 추가 -->
-            <div class="youtube_iframe">
+            <!-- 23.04.19 추가 -->
+            <div class="gsp_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <button type="button" class="fnOpenPop" data-name="popupShorts01">
+                    <img src="../../../images/global/img_shorts_01.png" alt="유튜브 쇼츠 영상 팝업 열기 이미지">
+                  </button>
+                </div>
+                <div class="swiper-slide">
+                  <button type="button" class="fnOpenPop" data-name="popupShorts02">
+                    <img src="../../../images/global/img_shorts_02.png" alt="유튜브 쇼츠 영상 팝업 열기 이미지">
+                  </button>
+                </div>
+                <div class="swiper-slide">
+                  <button type="button" class="fnOpenPop" data-name="popupShorts03">
+                    <img src="../../../images/global/img_shorts_03.png" alt="유튜브 쇼츠 영상 팝업 열기 이미지">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- // 23.04.19 추가 -->
+            <!-- 23.04.19 삭제 <div class="youtube_iframe">
               <iframe src="https://www.youtube.com/embed/q_9wBsOXPVs?rel=0" title="#유럽여행 오스트리아 비엔나 ATM에서 수수료 없이 현금 인출하는 방법 #트래블로그 #트래블로그체크카드 #해외여행카드 #해외여행수수료" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div class="youtube_iframe">
@@ -425,8 +441,7 @@
             </div>
             <div class="youtube_iframe">
               <iframe src="https://www.youtube.com/embed/TBDWT_io_aE?rel=0" title="#유럽여행 오스트리아 비엔나에서 해외수수료  없이 결제하는 팁(feat. 여행유튜버 쏘이) #트래블로그 #트래블로그체크카드 #해외여행카드 #해외여행수수료" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" fullscreen></iframe>
-            </div>
-            <!-- // 23.04.10 추가 -->
+            </div> -->
           </div>
 
           <!-- 자주 묻는 질문 -->
@@ -552,21 +567,77 @@
     </div>
     <!-- // contents-->
 
-    <!-- popup -->
+    <!-- 23.04.19 추가 popup -->
+    <div id="popupShorts01" class="wrap_layer type_full type_full_iframe" data-dim="true">
+      <div class="inner_layer">
+        <div class="youtube" data-video-id="q_9wBsOXPVs">
+          <div class="player" id="player1"></div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+
+    <div id="popupShorts02" class="wrap_layer type_full type_full_iframe" data-dim="true">
+      <div class="inner_layer">
+        <div class="youtube" data-video-id="5JSpkQ0xvMk">
+          <div class="player" id="player2"></div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
+
+    <div id="popupShorts03" class="wrap_layer type_full type_full_iframe" data-dim="true">
+      <div class="inner_layer">
+        <div class="youtube" data-video-id="TBDWT_io_aE">
+          <div class="player" id="player3"></div>
+        </div>
+        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+      </div>
+    </div>
     <!-- // popup -->
 
   </main>
   
   
   <script>
+  // <!-- 23.04.19 수정. 부분부분 수정되어 제가 작성한 스크립트 아래걸로 교체 부탁드립니다.
   $(window).load(function(){
     //화면로드되고 애니메이션
     $('.btn_benefit').addClass('active');
   });
   $(function(){
+    //유튜브 api
+    var youtubeScriptTag = document.createElement('script');
+    youtubeScriptTag.src = 'https://www.youtube.com/iframe_api';
+    document.body.appendChild(youtubeScriptTag);
+    var players = [];
+    var isVideoPlaying = false;
+    window.onYouTubeIframeAPIReady = () => {
+      var youtubeSlides = document.querySelectorAll('.youtube');
+      youtubeSlides.forEach((youtubeSlide, index) => {
+        players[index] = new YT.Player(youtubeSlide.querySelector('.player'), {
+          videoId: youtubeSlide.dataset.videoId,
+          playerVars: {
+            rel: 0,
+            playsinline: 1,
+          }
+        });
+      });
+    };
+    var closeButtons = document.querySelectorAll('.fnClosePop');
+    closeButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        players.forEach(function(player) {
+          if (player && player.getPlayerState() === YT.PlayerState.PLAYING) {
+            player.pauseVideo();
+          }
+        });
+      });
+    });
+
     //상단탭이동
     $('.wrap_tab_btn li a').on('click', function() {  
-      $('html, body').animate({scrollTop: $(this.hash).offset().top - 64}, 500);
+      $('html, body').animate({scrollTop: $(this.hash).offset().top - 60}, 500);
       return false;
     });
 
@@ -598,7 +669,7 @@
     //인트로화면 스와이프했을때 클래스 순차적으로 추가
     var startX, startY, endX, endY;
     var introBox = $('.benefit_intro');
-    var introclass = ['intro_chapter_06', 'final_intro']; // <!-- 23.04.12 수정
+    var introclass = ['intro_chapter_05', 'final_intro']; // <!-- 23.04.12 수정
     var currentClass = 0;
     var scrollPosition = $('#benefit').offset().top - 64; // 현재 스크롤 위치 저장
 
@@ -619,15 +690,9 @@
           currentClass++;
         }
         if(introBox.hasClass('intro_chapter_05')) {
-          $('header').removeClass('type_white');
-        }
-        if(introBox.hasClass('intro_chapter_06')) {
           setTimeout(function() {
             flipListItems(200);
           }, 400);
-        }
-        if(introBox.hasClass('intro_chapter_07')) {
-          $('header').addClass('type_white');
         }
         if(introBox.hasClass('final_intro')) {
           $('html').removeClass('intro_overflow');
@@ -638,40 +703,15 @@
           $('html, body').animate({scrollTop: $('#benefit').offset().top - 64}, 500);
         }
       }
-      if (diffY > diffX && startY - endY < -50) {
-        if(currentClass > 0) {
-          introBox.removeClass(introclass[currentClass-1]);
-          currentClass--;
-        }
-        // <!-- 23.04.12 수정
-        if(!introBox.hasClass('intro_chapter_07')) {
-          $('header').removeClass('type_white');
-        }
-        if(introBox.hasClass('intro_chapter_06')) {
-          setTimeout(function() {
-            flipListItems(200);
-          }, 400);
-        }
-        if(!introBox.hasClass('intro_chapter_05')) {
-          $('header').addClass('type_white');
-        }
-      }
-      
     });
 
     $('.btn_next').on('click',function(){
       introBox.addClass(introclass[currentClass]);
       currentClass = (currentClass + 1) % introclass.length;
-      if(introBox.hasClass("intro_chapter_05") === true) {
-        $('header').removeClass('type_white');
-      }
       if(introBox.hasClass("intro_chapter_06") === true) {
         setTimeout(function() {
             flipListItems(200);
           }, 400);
-      }
-      if(introBox.hasClass("intro_chapter_07") === true) {
-        $('header').removeClass('type_white');
       }
       if(introBox.hasClass('final_intro')) {
           $('html').removeClass('intro_overflow');
@@ -695,6 +735,7 @@
       $('html, body').animate({scrollTop: target.offset().top + target.outerHeight() - 64}, 500);
     });
 
+    //여행중 플립 스크립트
     function flipListItems(intervalDuration) {
       var listItems = document.querySelectorAll('.flip li');
       var currentIndex = 0;
@@ -714,9 +755,14 @@
           clearInterval(intervalId);
         }
       }
-
       intervalId = setInterval(activateNextItem, intervalDuration);
     }
+
+    //쇼츠 이미지 슬라이드
+    var swiper = new Swiper('.gsp_swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+    });
   });
   </script>
 </body>
