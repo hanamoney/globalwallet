@@ -2422,7 +2422,9 @@ button.btn_primary.btn_credit {
   background-size: 2.4rem;
 }
 .gsp_travlog_join {
-  height: 100vh;
+  min-height: 100vh;
+  margin: -5.0rem 0 -6.0rem;
+  padding-top: 5.0rem;
   background: #5D39C2;
   transition: all 0.2s;
 }
