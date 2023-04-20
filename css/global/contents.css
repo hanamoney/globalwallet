@@ -2564,7 +2564,7 @@ button.btn_primary.btn_credit {
   max-width: 26.6rem;
 }
 .gsp_travlog_join.largeWidth .travlog_join_swiper .swiper-wrapper {
-  justify-content: space-between;
+  justify-content: center;
 }
 @media screen and (min-height:800px) {
   .gsp_travlog_join .wrap_tit {
