@@ -2425,6 +2425,7 @@ button.btn_primary.btn_credit {
   min-height: 100vh;
   margin: -5.0rem 0 -6.0rem;
   padding-top: 5.0rem;
+  padding-bottom: 3.2rem;
   background: #5D39C2;
   transition: all 0.2s;
 }
