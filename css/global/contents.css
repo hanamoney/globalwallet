@@ -2421,6 +2421,158 @@ button.btn_primary.btn_credit {
   background-image: url('../../images/hmui/btn_ico_share_header.png');
   background-size: 2.4rem;
 }
+.gsp_travlog_join {
+  height: 100vh;
+  background: #5D39C2;
+  transition: all 0.2s;
+}
+.gsp_travlog_join .wrap_tit {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 2.4rem 0.8rem;
+}
+.gsp_travlog_join .wrap_tit::before {
+  content: '';
+  display: inline-block;
+  width: 7.2rem;
+  height: 7.2rem;
+  background: url('../../images/global/img_benefit_credit_2.png') no-repeat center;
+  background-size: 100%;
+}
+.gsp_travlog_join .wrap_tit .tit_sub_2 {
+  color: #fff;
+  font-weight: 300;
+}
+.gsp_travlog_join .wrap_tit .tit_sub_2 span {
+  font-weight: 400;
+}
+.travlog_join_swiper .swiper-slide {
+  align-self: stretch;
+  width: auto;
+  width: 73.9vw;
+  height: auto;
+  margin-left: 1.6rem;
+}
+.travlog_join_swiper .swiper-slide:first-child {
+  margin-left: 0;
+}
+.travlog_join_swiper .swiper-slide .inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 1.6rem;
+  border-radius: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  transition: opacity 0.2s;
+}
+.travlog_join_swiper .swiper-slide .benefit_list li {
+  position: relative;
+  margin-top: 0.4rem;
+  padding: 2.0rem 4.4rem 2.0rem 1.6rem;
+  border-radius: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.travlog_join_swiper .swiper-slide .benefit_list li::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 4.4rem;
+  height: 4.4rem;
+  background: url('../../images/global/img_travlog_benefit_01.png') no-repeat right center;
+  background-size: 4.4rem auto;
+  transform: translateY(-50%);
+}
+.travlog_join_swiper .swiper-slide .benefit_list li:first-child {
+  margin-top: 0;
+}
+.travlog_join_swiper .swiper-slide .benefit_list li:first-child::after,
+.travlog_join_swiper .swiper-slide .benefit_list li:nth-child(2)::after {
+  top: 0.3rem;
+  transform: none;
+}
+.travlog_join_swiper .swiper-slide .benefit_list li:nth-child(2)::after {
+  background-image: url('../../images/global/img_travlog_benefit_02.png');
+}
+.travlog_join_swiper .swiper-slide .benefit_list li:nth-child(3)::after {
+  background-image: url('../../images/global/img_travlog_benefit_03.png');
+}
+.travlog_join_swiper .swiper-slide .benefit_list li:nth-child(4)::after {
+  background-image: url('../../images/global/img_travlog_benefit_04.png');
+}
+.travlog_join_swiper .swiper-slide .benefit_list li span {
+  display: block;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.32;
+}
+.travlog_join_swiper .swiper-slide .benefit_list li strong {
+  display: block;
+  color: #fff;
+  font-size: 2.0rem;
+  line-height: 1.32;
+  font-weight: 700;
+}
+.travlog_join_swiper .swiper-slide .benefit_info {
+  margin-top: auto;
+  text-align: center;
+}
+.travlog_join_swiper .swiper-slide .benefit_info p {
+  padding: 1.6rem 0;
+  color: #D0D7D7;
+  font-size: 1.4rem;
+  line-height: 1.32;
+}
+.travlog_join_swiper .swiper-slide .benefit_info .btn_box {
+  width: 100%;
+}
+.travlog_join_swiper .swiper-slide.swiper-slide-prev .inner,
+.travlog_join_swiper .swiper-slide.swiper-slide-next .inner {
+  opacity: 0.6;
+}
+.travlog_join_swiper .btn_primary {
+  background: linear-gradient(90.18deg, #3F99CB 3.49%, #47DCC1 100%);
+}
+.travlog_join_swiper .swiper-pagination {
+  position: relative;
+  margin-top: 1.6rem;
+  font-size: 0;
+}
+.travlog_join_swiper.swiper-container-horizontal .swiper-pagination.swiper-pagination-bullets {
+  bottom: unset;
+}
+.swiper-pagination.type_white .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+.swiper-pagination.type_white .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+.gsp_travlog_join.check {
+  background: #E44E76;
+}
+.gsp_travlog_join.largeWidth {
+  background: linear-gradient(121.01deg, #5D39C2 9.41%, #C44988 89.7%);
+}
+.gsp_travlog_join.largeWidth .travlog_join_swiper {
+  padding: 0 2.4rem;
+}
+.gsp_travlog_join.largeWidth .travlog_join_swiper .swiper-slide {
+  width: calc((100% - 1.6rem) / 2);
+  max-width: 26.6rem;
+}
+.gsp_travlog_join.largeWidth .travlog_join_swiper .swiper-wrapper {
+  justify-content: space-between;
+}
+@media screen and (min-height:800px) {
+  .gsp_travlog_join .wrap_tit {
+    padding-top: 6.0rem;
+  }
+}
+
+
 .section_top_visual.travlog_benefit {
   background: linear-gradient(137.12deg, #DAFFED 0%, #EFCBEB 123.54%);
 }
@@ -8227,3 +8379,5 @@ html.intro_overflow body {
 .AOS_old .gsp_travlog_info .visual_gsp_cashback .img_confetti_2 { transform: scale(1); }
 .AOS_old .gsp_travlog_info .visual_gsp_cashback .img_coinpop { transform: translateX(-50%); }
 .AOS_old .inner_layer.cov_update .tit_big.transform * { animation: none; transform: none; -webkit-filter: none; filter: none; }
+.AOS_old .gsp_travlog_join,
+.AOS_old .travlog_join_swiper .swiper-slide .inner { transition: none; }
