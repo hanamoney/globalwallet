@@ -32,13 +32,34 @@
 
     <!-- // contents-->
     <div id="contents" class="wrap_contents">
-      <div class="contents gsp_travlog_join" data-pageid="GSP002">
+      <div class="contents gsp_travlog_join check" data-pageid="GSP002">
         <section data-roll="GSP">
           <div class="wrap_tit">
             <h2 class="tit_sub_2"><span>혜택</span>을 선택해 주세요.</h2>
           </div>
-          <div class="swiper-container travlog_join_swiper">
+          <div class="swiper-container travlog_join_swiper" dir="rtl">
             <div class="swiper-wrapper">
+              <!-- 체크카드혜택 -->
+              <div class="swiper-slide">
+                <div class="inner">
+                  <ul class="benefit_list">
+                    <li>
+                      <strong>18종 통화 무료환전</strong>
+                    </li>
+                    <li>
+                      <strong>해외 이용수수료 면제</strong>
+                    </li>
+                    <li>
+                      <span>국내에서</span>
+                      <strong>0.3% 하나머니 적립</strong>
+                    </li>
+                  </ul>
+                  <div class="benefit_info">
+                    <p>연회비(국내외겸용) 없음</p>
+                    <a href="#none" class="btn_box btn_primary">이 혜택으로 알아보기</a>
+                  </div>
+                </div>
+              </div>
               <!-- 신용카드혜택 -->
               <div class="swiper-slide">
                 <div class="inner">
@@ -64,27 +85,6 @@
                   </div>
                 </div>
               </div>
-              <!-- 체크카드혜택 -->
-              <div class="swiper-slide">
-                <div class="inner">
-                  <ul class="benefit_list">
-                    <li>
-                      <strong>18종 통화 무료환전</strong>
-                    </li>
-                    <li>
-                      <strong>해외 이용수수료 면제</strong>
-                    </li>
-                    <li>
-                      <span>국내에서</span>
-                      <strong>0.3% 하나머니 적립</strong>
-                    </li>
-                  </ul>
-                  <div class="benefit_info">
-                    <p>연회비(국내외겸용) 없음</p>
-                    <a href="#none" class="btn_box btn_primary">이 혜택으로 알아보기</a>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="swiper-pagination type_white"></div>
           </div>
@@ -99,8 +99,9 @@
   <script>
     $(function(){
       var contents = $('.gsp_travlog_join');
-      if ($(window).width() <= 480) {
-        // swiper
+      var minWidth = 266 * 2 + 16 + 24;
+      if ($(window).width() < minWidth) {
+         // swiper
         var swiper = new Swiper(".travlog_join_swiper", {
           observer: true,
           observeParents: true,
@@ -115,15 +116,21 @@
             el: ".swiper-pagination",
             clickable: false,
           },
-        });
-
-        swiper.on('slideChange', function() {
-          var idx = this.realIndex;
-
-          if (idx == 0) {
-            contents.removeClass('check');
-          } else {
-            contents.addClass('check');
+          on: {
+            init: function(swiper) {
+              setTimeout(function(){
+                this.slideTo(1);
+                contents.removeClass('check');
+              }.bind(this), 300);
+            },
+            slideChange: function() {
+              var idx = this.realIndex;
+              if (idx == 1) {
+                contents.removeClass('check');
+              } else {
+                contents.addClass('check');
+              }
+            }
           }
         });
       } else {

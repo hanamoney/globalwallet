@@ -2451,10 +2451,10 @@ button.btn_primary.btn_credit {
   width: auto;
   width: 73.9vw;
   height: auto;
-  margin-left: 1.6rem;
+  margin-right: 1.6rem;
 }
 .travlog_join_swiper .swiper-slide:first-child {
-  margin-left: 0;
+  margin-right: 0;
 }
 .travlog_join_swiper .swiper-slide .inner {
   display: flex;
@@ -2472,6 +2472,7 @@ button.btn_primary.btn_credit {
   padding: 2.0rem 4.4rem 2.0rem 1.6rem;
   border-radius: 0.8rem;
   background-color: rgba(255, 255, 255, 0.12);
+  text-align: left;
 }
 .travlog_join_swiper .swiper-slide .benefit_list li::after {
   content: '';
@@ -2521,7 +2522,7 @@ button.btn_primary.btn_credit {
 }
 .travlog_join_swiper .swiper-slide .benefit_info p {
   padding: 1.6rem 0;
-  color: #D0D7D7;
+  color: #fff;
   font-size: 1.4rem;
   line-height: 1.32;
 }
