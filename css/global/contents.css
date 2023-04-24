@@ -753,179 +753,6 @@ a.btn_primary.btn_credit,
 button.btn_primary.btn_credit {
   background: linear-gradient(100.33deg, #FFABA6 7.68%, #9D6FE8 83.12%);
 }
-
-/* 사용안할시 추후 삭제
-.usr_travlog_join {
-  height: 100vh;
-  overflow: hidden;
-  transition: background-color 0.6s;
-}
-.usr_travlog_join > section {
-  padding-bottom: 0;
-}
-.usr_travlog_join .wrap_tit {
-  padding-top: 3.2rem;
-  text-align: center;
-}
-.usr_travlog_join .wrap_tit .tit_page {
-  font-size: 2.4rem;
-  line-height: 3.1rem;
-  color: #fff;
-  text-align: center;
-}
-.usr_travlog_join .wrap_tit .tit_sub {
-  margin-top: 1.9rem;
-  font-size: 1.8rem;
-  line-height: 2.3rem;
-  font-weight: 700;
-  color: #fff;
-}
-.usr_travlog_join .wrap_tit .tit_sub em {
-  position: relative;
-  z-index: 2;
-}
-.usr_travlog_join .wrap_tit .tit_sub em::before {
-  content: '';
-  position: absolute;
-  top: -0.4rem;
-  right: 0rem;
-  width: 6.7rem;
-  height: 2.7rem;
-  background: url(../../images/global/img_line_circle.svg) no-repeat center;
-  background-size: 100%;
-  filter: invert(58%) sepia(88%) saturate(1510%) hue-rotate(326deg) brightness(99%) contrast(91%);
-  z-index: -1;
-}
-.usr_travlog_join .wrap_tit .txt {
-  margin-top: 0.4rem;
-  font-size: 1.6rem;
-  line-height: 2.1rem;
-  color: #fff;
-}
-.usr_travlog_join .wrap_tit .txt + .txt {
-  margin-top: 1.6rem;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-  color: #B7C5C8;
-}
-.usr_travlog_join .img_credit_travlog,
-.usr_travlog_join .img_card_travlog {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  width: 15.6rem;
-  height: 24.7rem;
-  border-radius: 0.8rem;
-  box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.3);
-  transform: rotate(-15deg);
-}
-.usr_travlog_join .img_credit_travlog::before,
-.usr_travlog_join .img_card_travlog::before {
-  display: none;
-}
-.usr_travlog_join .img_credit_travlog::before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: -4.4rem;
-  top: -6.5rem;
-  width: 16.4rem;
-  height: 8.6rem;
-  background: url(../../images/global/img_txt_new.png) no-repeat center;
-  transform: rotate(10deg);
-  background-size: 100%;
-}
-.usr_travlog_join .img_credit_travlog::after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../../images/global/img_credit_travlog.png) no-repeat 50%;
-}
-.usr_travlog_join .img_credit_travlog::after,
-.usr_travlog_join .img_card_travlog::after {
-  background-size: cover;
-}
-.usr_travlog_join .usr_swiper {
-  height: calc(100vh - 30rem);
-  display: flex;
-  align-items: center;
-}
-.usr_travlog_join .usr_swiper > .swiper-wrapper {
-  height: auto;
-}
-.usr_travlog_join .usr_swiper > .swiper-wrapper .swiper-slide {
-  width: auto;
-}
-.usr_travlog_join .usr_swiper > .swiper-wrapper .swiper-slide-next,
-.usr_travlog_join .usr_swiper > .swiper-wrapper .swiper-slide-prev {
-  opacity: 0.3;
-}
-.usr_travlog_join .swiper-pagination {
-  margin-top: 4.0rem;
-  position: static;
-  transform: none;
-}
-.usr_travlog_join.type_credit {
-  background-color: #5D39C2;
-}
-
-.usr_travlog_join.type_credit .wrap_tit .tit_sub {
-  color: #fff;
-}
-.usr_travlog_join.type_credit .wrap_tit .txt {
-  color: #fff;
-}
-.usr_travlog_join.type_credit .wrap_tit .txt + .txt {
-  color: #B7C5C8;
-}
-.usr_travlog_join.type_credit .swiper-pagination .swiper-pagination-bullet {
-  background-color: rgba(255, 255, 255, 0.6);
-  opacity: 1;
-}
-.usr_travlog_join.type_credit .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #fff;
-}
-.btn_full_primary.type_credit {
-  background: linear-gradient(100.33deg, #FFABA6 7.68%, #9D6FE8 83.12%);
-}
-
-.usr_travlog_join.type_check .wrap_tit .tit_page {
-  color: #536067;
-}
-.usr_travlog_join.type_check .wrap_tit .tit_sub {
-  color: #252E33;
-}
-.usr_travlog_join.type_check .wrap_tit .tit_sub em::before {
-  filter: invert(99%) sepia(81%) saturate(1331%) hue-rotate(90deg) brightness(93%) contrast(81%);
-}
-.usr_travlog_join.type_check .wrap_tit .txt {
-  color: #252E33;
-}
-.usr_travlog_join.type_check .wrap_tit .txt + .txt {
-  color: #69777E;
-}
-.usr_travlog_join.type_check .swiper-pagination .swiper-pagination-bullet {
-  background-color: rgba(79, 93, 100, 0.6);
-  opacity: 1;
-}
-.usr_travlog_join.type_check .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #4F5D64;
-}
-.btn_full_primary.type_check {
-  background: linear-gradient(100.33deg, #FFABA6 7.68%, #9D6FE8 83.12%);
-}
-
-.usr_travlog_join.type_credit .select_check {
-  display: none;
-}
-.usr_travlog_join.type_check .select_credit {
-  display: none;
-} */
-
 /* USR_104 */
 .usr_travlog_complete .txt.type_gradien {
   font-size: 2.4rem;
@@ -2468,6 +2295,7 @@ button.btn_primary.btn_credit {
   border-radius: 1.2rem;
   background-color: rgba(255, 255, 255, 0.08);
   transition: opacity 0.2s;
+  direction: ltr;
 }
 .travlog_join_swiper .swiper-slide .benefit_list li {
   position: relative;
@@ -4181,39 +4009,80 @@ button.btn_primary.btn_credit {
   color: #FFECBB;
 }
 .type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle {
+  margin: 3.2rem 0;
+}
+.type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle .switch {
   display: flex;
   align-items: center;
-  margin: 3.2rem 0;
   width: 100%;
   height: 4.8rem;
   border-radius: 3.0rem;
 }
-.type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle > p {
-  flex: 1;
+.type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle .switch .slider {
+  background-color: #C53158;
+  box-shadow: inset 0 0.1rem 0.2rem #951D3C;;
+}
+.type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle .switch .slider::before {
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 4.8rem;
+  background: #FF85A5;
+  box-shadow: 0px 0.4rem 1.2rem rgba(166, 39, 73, 0.4);
+  border-radius: 3rem;
+  transition: 0.3s linear;
+}
+.type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle .switch .slider .txt01,
+.type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle .switch .slider .txt02 {
+  position: absolute;
+  width: 50%;
+  height: 4.8rem;
   font-size: 1.8rem;
   font-weight: 400;
+  line-height: 4.8rem;
   text-align: center;
   color: #fff;
-  height: 4.8rem;
-  line-height: 4.8rem;
-  border-radius: 3.0rem;
+  pointer-events: none;
+}
+.type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle .switch .slider .txt01 {
+  left: 0;
+}
+.type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle .switch .slider .txt02 {
+  right: 0;
+  opacity: 0.7;
+}
+.type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle .switch input:checked + .slider {
+  background: #3F1E9E;
+  box-shadow: inset 0 0.1rem 0.2rem #19084A;
+}
+.type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle .switch input:checked + .slider:before {
+  background: #8256FF;
+  box-shadow: 0 0.4rem 1.2rem #4923B6;
+  transform: translateX(100%);
+}
+.type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle .switch input:checked + .slider .txt01 {
+  opacity: 0.7;
+}
+.type_credit .benefit_cont.benefit_toggle .btn_benefit_toggle .switch input:checked + .slider .txt02 {
+  opacity: 1;
+}
+.type_credit .benefit_cont.benefit_toggle .benefit_toggle_tit_01,
+.type_credit .benefit_cont.benefit_toggle .benefit_toggle_tit_02,
+.type_credit .benefit_cont.benefit_toggle .benefit_toggle_cont_01,
+.type_credit .benefit_cont.benefit_toggle .benefit_toggle_cont_02 {
+  display: none;
 }
 .type_credit .benefit_cont.benefit_toggle_01 {
   background-color: #E44E76;
 }
-.type_credit .benefit_cont.benefit_toggle_01 .btn_benefit_toggle {
-  box-shadow: inset 0 0.1rem 0.2rem #951D3C;;
-  background-color: #C53158;
+.type_credit .benefit_cont.benefit_toggle_01 .benefit_toggle_tit_01,
+.type_credit .benefit_cont.benefit_toggle_01 .benefit_toggle_cont_01 {
+  display: block;
 }
-.type_credit .benefit_cont.benefit_toggle_01 .btn_benefit_toggle .txt01 {
-  background: #FF85A5;
-  box-shadow: 0 0.4rem 1.2rem rgba(166, 39, 73, 0.4);
-}
-.type_credit .benefit_cont.benefit_toggle_01 .btn_benefit_toggle .txt02 {
-  opacity: 0.7;
+.type_credit .benefit_cont.benefit_toggle_01 .type_asterisk {
+  margin-top: 3.4rem;
 }
 .type_credit .benefit_cont.benefit_toggle_01 .type_asterisk li {
-  margin-top: 3.4rem;
   color: #fff;
 }
 .type_credit .benefit_cont.benefit_toggle_01 .type_asterisk li::before {
@@ -4222,16 +4091,9 @@ button.btn_primary.btn_credit {
 .type_credit .benefit_cont.benefit_toggle_02 {
   background-color: #5D39C2;
 }
-.type_credit .benefit_cont.benefit_toggle_02 .btn_benefit_toggle {
-  box-shadow: inset 0 0.1rem 0.2rem #19084A;
-  background-color: #3F1E9E;
-}
-.type_credit .benefit_cont.benefit_toggle_02 .btn_benefit_toggle .txt01 {
-  opacity: 0.7;
-}
-.type_credit .benefit_cont.benefit_toggle_02 .btn_benefit_toggle .txt02 {
-  background: #8256FF;
-  box-shadow: 0 0.4rem 1.2rem #4923B6;
+.type_credit .benefit_cont.benefit_toggle_02 .benefit_toggle_tit_02,
+.type_credit .benefit_cont.benefit_toggle_02 .benefit_toggle_cont_02 {
+  display: block;
 }
 .type_credit .benefit_cont.benefit_toggle_02 button.btn_acco .txt em {
   color: #E8A9E1;
@@ -5151,28 +5013,33 @@ html.intro_overflow body {
   transition: 0.2s 0.3s;
 }
 .benefit_intro .chapter_08 .area_banner_txt {
-  max-width: 26rem;
+  max-width: 28rem;
   margin: 3rem auto 0;
 }
 .benefit_intro .chapter_08 .area_banner_txt img {
   opacity: 0;
   transform: translateY(50%);
+  border-radius: 1.4rem;
 }
 .benefit_intro .chapter_08 .area_banner_txt img + img,
 .complete_intro .chapter_08 .area_banner_txt img + img {
-  margin-top: -0.6rem;
+  margin-top: 1.2rem;
 }
 .benefit_intro .chapter_08 .area_banner_txt img:nth-child(1) {
+  box-shadow: 0 0.6rem 0.8rem rgba(250, 118, 149, 0.3);
   transition: all 0.2s 1.3s;
 }
 .benefit_intro .chapter_08 .area_banner_txt img:nth-child(2) {
+  box-shadow: 0 0.6rem 0.8rem rgba(152, 143, 255, 0.3);
   transition: all 0.2s 1.4s;
 }
 .benefit_intro .chapter_08 .area_banner_txt img:nth-child(3) {
+  box-shadow: 0 0.6rem 0.8rem rgba(61, 221, 192, 0.3);
   transition: all 0.2s 1.5s;
 } 
 .benefit_intro .chapter_08 .area_banner_txt .type_asterisk,
 .complete_intro .chapter_08 .area_banner_txt .type_asterisk {
+  margin-top: 1.2rem;
   opacity: 0.6;
 }
 .benefit_intro .chapter_08 .area_banner_txt .type_asterisk li,
