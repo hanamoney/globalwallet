@@ -189,13 +189,13 @@
   top: 50% !important;
   width: 3rem;
   height: 3rem;
-  background-image: url(../../images/hmui/ico_arr_link_m.svg);
+  background-image: url('../../images/hmui/ico_arr_link_m.svg');
 }
 .section_chg_list.chg_list_acc li:first-child a.wrap_box [class^="ico_arr_link"]{
   background-image: none;
   background-color: #13C9BE;
-  -webkit-mask-image: url(../../images/hmui/ico_arr_link_m.svg);
-  mask-image: url(../../images/hmui/ico_arr_link_m.svg);
+  -webkit-mask-image: url('../../images/hmui/ico_arr_link_m.svg');
+  mask-image: url('../../images/hmui/ico_arr_link_m.svg');
 }
 .section_chg_list.chg_list_acc li:first-child .txt_balance {
   padding-top: 0.4rem;
@@ -474,11 +474,25 @@
   margin: 0 auto 1.0rem;
 }
 .list_txt.set107::before {
-  background: url(../../images/global/visual_set_107.png) no-repeat center;
+  background: url('../../images/global/visual_set_107.png') no-repeat center;
   background-size: 100%;
 }
 .list_txt.set107 li {
   word-break: keep-all;
+}
+.visual_set_charge {
+  display: block;
+  margin: 2.4rem 0 0;
+  height: 9.6rem;
+  background: url('../../images/global/visual_set_charge.png') no-repeat center;
+  background-size: auto 9.6rem;
+}
+.visual_set_charge + .list_txt.type_nobul {
+  padding-top: 0.8rem;
+  padding-bottom: 0.2rem;
+}
+.list_txt.type_nobul.type_margin_s li + li {
+  margin-top: 0.8rem;
 }
 
 /* CHG_109 */
@@ -665,8 +679,8 @@
   width: 6.7rem;
   height: 2.7rem;
   object-fit: cover;
-  -webkit-mask-image: url(../../images/global/img_line_circle.svg);
-  mask-image: url(../../images/global/img_line_circle.svg);
+  -webkit-mask-image: url('../../images/global/img_line_circle.svg');
+  mask-image: url('../../images/global/img_line_circle.svg');
   -webkit-mask-size: 100%;
   mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
@@ -737,7 +751,7 @@
   right: 1.7rem;
   width: 18.33rem;
   height: 9.66rem;
-  background: url(../../images/global/img_txt_new.png);
+  background: url('../../images/global/img_txt_new.png');
   background-size: 100%;
   transform: rotate(-5deg);
   z-index: -1;
@@ -781,7 +795,7 @@ button.btn_primary.btn_credit {
   height: 7.2rem;
 }
 .usr_travlog_complete .list_benefit_label.type_full_box li .emoji_drone {
-  background-image: url(../../images/hmui/emoji_drone_big.png);
+  background-image: url('../../images/hmui/emoji_drone_big.png');
   background-size: 6.0rem auto;
 }
 .usr_travlog_complete .list_benefit_label.type_full_box li .emoji_purse {
@@ -1142,14 +1156,14 @@ button.btn_primary.btn_credit {
   left: 0;
   width: 4.3rem;
   height: 5.6rem;
-  background: url(../../images/global/img_credit_left.png) no-repeat left bottom;
+  background: url('../../images/global/img_credit_left.png') no-repeat left bottom;
   background-size: 4.4rem;
 }
 .wrap_btn .btn_box_m.type_credit.bg_card::after {
   right: 0;
   width: 5.3rem;
   height: 5.6rem;
-  background: url(../../images/global/img_credit_right.png) no-repeat right top;
+  background: url('../../images/global/img_credit_right.png') no-repeat right top;
   background-size: 5.8rem;
 }
 .section_list_trans.card_history {
@@ -1477,7 +1491,7 @@ button.btn_primary.btn_credit {
 .wrap_moneybag_all .wrap_btn.type_justify + .btn_tooltip [class^="ico_tooltip"] {
   width: 2.4rem;
   height: 2.4rem;
-  background-image: url(../../images/hmui/btn_tooltip_w.png);
+  background-image: url('../../images/hmui/btn_tooltip_w.png');
 }
 .wrap_moneybag_all .btn_ico_howto {
   padding: 0.4rem 0;
@@ -3341,7 +3355,7 @@ button.btn_primary.btn_credit {
   top: -3.6rem;
   left: 50%;
   transform: translateX(-50%);
-  background-image: url(../../images/global/emoji_card_big.png);
+  background-image: url('../../images/global/emoji_card_big.png');
 }
 .benefit_cont.gsp_acco .payment_info li .emoji_tag {
   width: 6.6rem;
@@ -3350,7 +3364,7 @@ button.btn_primary.btn_credit {
   top: -3.1rem;
   left: 50%;
   transform: translateX(-50%);
-  background-image: url(../../images/global/emoji_tag_big.png);
+  background-image: url('../../images/global/emoji_tag_big.png');
 }
 .benefit_cont.gsp_acco .payment_info + .payment_txt {
   margin-top: 1.6rem;
@@ -3423,8 +3437,8 @@ button.btn_primary.btn_credit {
   height: 1.2rem;
   background-image: none;
   background-color: #252E33;
-  -webkit-mask-image: url(../../images/hmui/ico_arr_link_s.svg);
-  mask-image: url(../../images/hmui/ico_arr_link_s.svg);
+  -webkit-mask-image: url('../../images/hmui/ico_arr_link_s.svg');
+  mask-image: url('../../images/hmui/ico_arr_link_s.svg');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -4099,7 +4113,7 @@ button.btn_primary.btn_credit {
   color: #E8A9E1;
 }
 .type_credit .benefit_cont .benefit_step_list li.complete .step_num::after {
-  background: url(../../images/global/ico_chk_gsp_02.png) no-repeat center;
+  background: url('../../images/global/ico_chk_gsp_02.png') no-repeat center;
   background-size: 100%;
 }
 .type_credit .benefit_cont .benefit_step_list li.complete .step_num::before {
@@ -4285,8 +4299,8 @@ html.intro_overflow body {
   width: 1.0rem;
   height: 1.8rem;
   background-color: rgba(255, 255, 255, 0.8);
-  -webkit-mask-image: url(../../images/global/ico_skip.svg);
-  mask-image: url(../../images/global/ico_skip.svg);
+  -webkit-mask-image: url('../../images/global/ico_skip.svg');
+  mask-image: url('../../images/global/ico_skip.svg');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -4311,8 +4325,8 @@ html.intro_overflow body {
   width: 3.0rem;
   height: 1.1rem;
   background-color: #fff;
-  -webkit-mask-image: url(../../images/global/ico_arr_down_w_w.svg);
-  mask-image: url(../../images/global/ico_arr_down_w_w.svg);
+  -webkit-mask-image: url('../../images/global/ico_arr_down_w_w.svg');
+  mask-image: url('../../images/global/ico_arr_down_w_w.svg');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -4526,6 +4540,10 @@ html.intro_overflow body {
   transform: translateY(-50%);
   transition: all 0.4s 0.2s;
 }
+.benefit_intro .intro_circle,
+.complete_intro .intro_circle {
+  z-index: -1;
+}
 .benefit_intro .intro_circle::before,
 .complete_intro .intro_circle::before {
   content: '';
@@ -4535,12 +4553,12 @@ html.intro_overflow body {
   width: 8.5rem;
   height: 6.7rem;
   background-color: #F17952;
-  -webkit-mask-image: url(../../images/global/img_intro_circle.svg);
-  mask-image: url(../../images/global/img_intro_circle.svg);
+  -webkit-mask-image: url('../../images/global/img_intro_circle.svg');
+  mask-image: url('../../images/global/img_intro_circle.svg');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
+  -webkit-mask-position: top center;
+  mask-position: top center;
   -webkit-mask-size: 100%;
   mask-size: 100%;
   z-index: -1;
@@ -4554,8 +4572,8 @@ html.intro_overflow body {
   width: 17.0rem;
   height: 1.8rem;
   background-color: #F17952;
-  -webkit-mask-image: url(../../images/global/img_intro_line.svg);
-  mask-image: url(../../images/global/img_intro_line.svg);
+  -webkit-mask-image: url('../../images/global/img_intro_line.svg');
+  mask-image: url('../../images/global/img_intro_line.svg');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -4606,10 +4624,12 @@ html.intro_overflow body {
 }
 .benefit_intro .txt_check,
 .complete_intro .txt_check {
+  position: relative;
   font-size: 2.8rem;
   line-height: 3.5rem;
   text-align: center;
   font-weight: 700;
+  z-index: 2;
 }
 .benefit_intro .txt_sub,
 .complete_intro .txt_sub {
@@ -4736,14 +4756,18 @@ html.intro_overflow body {
   margin-top: 2.0rem;
   transition: 0.35s 0.4s;
 }
-.benefit_intro .chapter_05 .type_tooltip {
+.benefit_intro .chapter_05 .type_tooltip,
+.complete_intro .chapter_05 .type_tooltip {
   position: relative;
 }
-.benefit_intro .chapter_05 .type_tooltip .tooltip_bubble {
+.benefit_intro .chapter_05 .type_tooltip .tooltip_bubble,
+.complete_intro .chapter_05 .type_tooltip .tooltip_bubble {
   top: -2.3rem;
   left: 73%;
+  z-index: 2;
 }
-.benefit_intro .chapter_05 .type_tooltip .tooltip_bubble .txt_bold {
+.benefit_intro .chapter_05 .type_tooltip .tooltip_bubble .txt_bold,
+.complete_intro .chapter_05 .type_tooltip .tooltip_bubble .txt_bold {
   padding: 0 1.2rem;
 }
 .benefit_intro .chapter_05 .intro_earth {
@@ -5162,6 +5186,7 @@ html.intro_overflow body {
   transition-delay: 0.9s;
   opacity: 1;
   transform: translateY(0%);
+  z-index: 1;
 }
 .benefit_intro.intro_chapter_04 .chapter_05 .img_earth {
   transition-delay: 0.9s;
@@ -5456,7 +5481,7 @@ html.intro_overflow body {
   padding-top: 1.6rem;
   min-height: 15.8rem;
   border-radius: 1.4rem;
-  background: url(../../images/global/img_worldmap_pin.png) no-repeat bottom center #4F5D64;
+  background: url('../../images/global/img_worldmap_pin.png') no-repeat bottom center #4F5D64;
   background-size: 30.2rem;
   text-align: center;
   color: #fff;
@@ -6907,7 +6932,7 @@ html.intro_overflow body {
   right: 0;
   width: 2rem;
   height: 2rem;
-  background: url(../../images/hmui/ico_arr_down.png) no-repeat 50%;
+  background: url('../../images/hmui/ico_arr_down.png') no-repeat 50%;
   background-size: 100%;
   transform: translateY(-50%);
 }
@@ -6940,7 +6965,7 @@ html.intro_overflow body {
 .wrap_top_info.exr_info .btn_select_ccy.type_big::after {
   width: 2.8rem;
   height: 2.8rem;
-  background-image: url(../../images/hmui/ico_arr_down_b.png);
+  background-image: url('../../images/hmui/ico_arr_down_b.png');
 }
 .wrap_top_info.exr_info .exch_rate_info {
   display: flex;
@@ -7382,7 +7407,7 @@ html.intro_overflow body {
 }
 .exr_inp .btn_select_ccy:after {
   top: 50%;
-  background-image: url(../../images/hmui/ico_arr_down_2.png);
+  background-image: url('../../images/hmui/ico_arr_down_2.png');
   transform: translateY(-50%);
 }
 .exr_inp .btn_select_ccy .txt_ccy {
@@ -7707,7 +7732,7 @@ html.intro_overflow body {
 .wrap_cov_ccy .cov_ccy_btn .ico_arr_down {
   width: 2.8rem;
   height: 2.8rem;
-  background-image: url(../../images/hmui/ico_arr_down_b.png);
+  background-image: url('../../images/hmui/ico_arr_down_b.png');
   vertical-align: middle;
 }
 .wrap_cov_ccy .cov_ccy_txt {
@@ -7948,7 +7973,7 @@ html.intro_overflow body {
   height: 3rem;
   top: 0.2rem;
   right: 0rem;
-  background: url(../../images/hmui/ico_heart_m.png) no-repeat;
+  background: url('../../images/hmui/ico_heart_m.png') no-repeat;
   background-size: 3rem;
   transform: rotate(0);
 }
