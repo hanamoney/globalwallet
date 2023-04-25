@@ -291,6 +291,17 @@
   margin-left: 0.5rem;
   margin-top: 0.2rem;
 }
+.section_set_list .type_bubble {
+  position: relative;
+}
+.section_set_list .type_bubble .tooltip_bubble {
+  top: -2.8rem;
+  left: 8rem;
+}
+.section_set_list .type_bubble .tooltip_bubble .bubble_caret {
+  left: 1.9rem;
+  transform: scaleX(-1);
+}
 .section_set_list .wrap_box {
   padding: 2.0rem 2.4rem;
 }
@@ -4268,6 +4279,7 @@ html.intro_overflow body {
   overflow: hidden;
   position: fixed;
   position: relative;
+  height: 100vh;
 }
 .benefit_intro {
   position: relative;
