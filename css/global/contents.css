@@ -4274,16 +4274,18 @@ button.btn_primary.btn_credit {
 html.intro_overflow {
   overflow: hidden;
   position: fixed;
+  height: 100vh;
 }
 html.intro_overflow body {
   overflow: hidden;
   position: fixed;
   position: relative;
+  height: 100vh;
 }
 .benefit_intro {
   position: relative;
   height: 100vh;
-  /* transition: all linear 0.6s; */
+  transition: all linear 0.6s;
   background: #5D39C2;
   overflow: hidden;
   z-index: 10;
@@ -5163,7 +5165,7 @@ html.intro_overflow body {
 }
 /*모션스탭5*/
 .benefit_intro.intro_chapter_04 {
-  /* transition-delay: 0.6s; */
+  transition-delay: 0.6s;
   background-color: #fff;
 }
 .benefit_intro.intro_chapter_04 .intro_card {
