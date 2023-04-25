@@ -4282,7 +4282,8 @@ html.intro_overflow body {
   height: 100vh;
 }
 html.intro_overflow .benefit_tab,
-html.intro_overflow .benefit_cont {
+html.intro_overflow .benefit_cont,
+html.intro_overflow .wrap_notice {
   display: none;
 }
 .benefit_intro {
