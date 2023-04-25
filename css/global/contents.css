@@ -4279,8 +4279,11 @@ html.intro_overflow {
 html.intro_overflow body {
   overflow: hidden;
   position: fixed;
-  position: relative;
   height: 100vh;
+}
+html.intro_overflow .benefit_tab,
+html.intro_overflow .benefit_cont {
+  display: none;
 }
 .benefit_intro {
   position: relative;
