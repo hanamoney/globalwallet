@@ -4286,6 +4286,9 @@ html.intro_overflow .benefit_cont,
 html.intro_overflow .wrap_notice {
   display: none;
 }
+html.intro_overflow .type_credit {
+  background-color: #5D39C2;
+}
 .benefit_intro {
   position: relative;
   height: 100vh;
@@ -4403,6 +4406,9 @@ html.intro_overflow .wrap_notice {
 }
 .type_check .benefit_intro.intro_chapter_05::before {
   width: 100%;
+}
+.type_check .benefit_intro.intro_chapter_04 {
+  transition: none;
 }
 .benefit_intro .area_center {
   position: absolute;
