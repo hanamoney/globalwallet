@@ -48,7 +48,7 @@
                 <p class="txt_check">내가 원하는 <em class="intro_circle">환율</em>로<br><em class="intro_line">무료환전하고</em></p>
                 <!-- 23.04.14 추가 -->
                 <div class="type_tooltip">
-                  <p class="txt_sub">환율 100% 우대</p>
+                  <p class="txt_sub">환율 최대 100% 우대</p> <!-- 23.04.28 문구변경 -->
                   <div class="tooltip_bubble type_pupple">
                     <p class="txt_bold">EVENT 통화 포함</p><span class="bubble_caret"></span>
                   </div>
@@ -144,13 +144,13 @@
                 <p class="txt_pink">해외 사용 시</p>
                 <p class="txt_check">내가 원하는 <em class="intro_circle">환율</em>로<br><em class="intro_line">무료환전하고</em></p>
                 <div class="type_tooltip">
-                  <p class="txt_sub">환율 100% 우대</p>
+                  <p class="txt_sub">환율 최대 100% 우대</p> <!-- 23.04.28 문구변경 -->
                   <div class="tooltip_bubble type_pupple">
                     <p class="txt_bold">EVENT 통화 포함</p><span class="bubble_caret"></span>
                   </div>
                 </div>
                 <div class="intro_earth">
-                  <img src="../../../images/global/img_intro_earth.png" alt="">
+                  <img src="../../../images/global/img_intro_earth.png" alt="지구 이미지">
                 </div>
               </div>
               <div class="chapter_06">
@@ -178,7 +178,7 @@
             <div class="fnSimpleAcco ico_exchange">
               <button type="button" class="btn_acco">
                 <h3 class="tit">18개 통화 환전 시</h3> <!-- 23.04.21 문구변경 -->
-                <p class="txt"><em>환율 100% 우대</em><br>받고 환전</p>
+                <p class="txt"><em>환율 최대 100% 우대</em><br>받고 환전</p> <!-- 23.04.28 문구변경 -->
                 <span class="ico_arr_down_2"><span class="blind">상세보기</span>
               </button>
               <div class="wrap_acco" style="display: none;">
@@ -657,7 +657,9 @@
 
     //인트로관련 스크립트 <!-- 23.04.10 추가
     history.scrollRestoration = "manual" //새로고침 시 스크롤 상단으로 이동
-    $('html').addClass('intro_overflow');
+    setTimeout(function() {
+      $('html').addClass('intro_overflow');
+    }, 0);
 
     //인트로화면 스와이프했을때 클래스 순차적으로 추가
     var startX, startY, endX, endY;
@@ -700,10 +702,10 @@
     $('.btn_next').on('click',function(){
       introBox.addClass(introclass[currentClass]);
       currentClass = (currentClass + 1) % introclass.length;
-      if(introBox.hasClass("intro_chapter_06") === true) {
+      if(introBox.hasClass("intro_chapter_05") === true) { // <!-- 23.04.28 수정
         setTimeout(function() {
-            flipListItems(200);
-          }, 400);
+          flipListItems(200);
+        }, 400);
       }
       if(introBox.hasClass('final_intro')) {
           $('html').removeClass('intro_overflow');

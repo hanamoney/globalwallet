@@ -505,6 +505,22 @@
 .list_txt.type_nobul.type_margin_s li + li {
   margin-top: 0.8rem;
 }
+.wrap_tooltip .list_txt li {
+  color: #6E7D85;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  counter-increment: numberlist;
+}
+.wrap_tooltip .list_txt li::before {
+  top: 0;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  content: counter(numberlist);
+}
+.wrap_tooltip .list_txt li + li {
+  margin-top: 0;
+}
 
 /* CHG_109 */
 .section_banner > [class^="wrap_"] + [class^="wrap"] {
@@ -752,8 +768,30 @@
   color: #43B9C7;
 }
 .usr_travlog_join .type_credit {
+  position: relative;
   margin-top: 4.6rem;
   z-index: 1;
+}
+.usr_travlog_join .type_credit .coming_soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -0.6rem;
+  right: 2.4rem;
+  left: 1.6rem;
+  height: calc(100% + 2rem);
+  background: url('../../images/global/bg_coming_soon_2.jpg') no-repeat center;
+  background-size: cover;
+  z-index: 10;
+}
+.usr_travlog_join .type_credit .coming_soon > p {
+  padding-left: 10rem;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  color: #374248;
+  background: url('../../images/global/img_hourglass.png') no-repeat left center;
+  background-size: 8rem;
 }
 .usr_travlog_join .type_credit::before {
   content: '';
@@ -766,6 +804,7 @@
   background-size: 100%;
   transform: rotate(-5deg);
   z-index: -1;
+  /* display: none; */
 }
 .usr_travlog_join .type_credit .tit_sub em::before {
   background-color: #F17952;
@@ -2312,6 +2351,8 @@ button.btn_primary.btn_credit {
   margin-right: 0;
 }
 .travlog_join_swiper .swiper-slide .inner {
+  overflow: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -2321,6 +2362,34 @@ button.btn_primary.btn_credit {
   background-color: rgba(255, 255, 255, 0.08);
   transition: opacity 0.2s;
   direction: ltr;
+}
+.travlog_join_swiper .swiper-slide .inner .coming_soon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url('../../images/global/bg_coming_soon.png');
+  background-size: 100%;
+  z-index: 10;
+}
+.travlog_join_swiper .swiper-slide .inner .coming_soon > p {
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  text-align: center;
+  color: #FFEA2E;
+}
+.travlog_join_swiper .swiper-slide .inner .coming_soon > p::before {
+  content: '';
+  margin: 0 auto 1.1rem;
+  display: block;
+  width: 9.7rem;
+  height: 12.3rem;
+  background: url('../../images/global/img_hourglass.png') no-repeat center;
+  background-size: 100%;
 }
 .travlog_join_swiper .swiper-slide .benefit_list li {
   position: relative;
@@ -3470,7 +3539,7 @@ button.btn_primary.btn_credit {
   height: 1.8rem;
 }
 .benefit_cont.gsp_acco .benefit_lounge {
-  margin: 1.6rem -1.3rem 0 -0.3rem;
+  margin: 1.6rem -0.8rem 0 -0.8rem;
 }
 .benefit_cont.gsp_acco .benefit_lounge ul {
   margin: 0 auto;
@@ -3480,21 +3549,20 @@ button.btn_primary.btn_credit {
   justify-content: center;
 }
 .benefit_cont.gsp_acco .benefit_lounge li {
-  margin: 0 0.3rem;
+  margin: 0 0.3rem 1.6rem;
 }
 .benefit_cont.gsp_acco .benefit_lounge li a {
   overflow: hidden;
   display: block;
   width: 6.4rem;
   height: 6.4rem;
-  border-radius: 50%;
-}
-.benefit_cont.gsp_acco .benefit_lounge li a img {
   box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.16);
+  border-radius: 50%;
 }
 .benefit_cont.gsp_acco .benefit_lounge li.btn_more a {
   position: relative;
   background-color: #EDF4F4;
+  box-shadow: none;
 }
 .benefit_cont.gsp_acco .benefit_lounge li.btn_more a::before {
   content: '';
@@ -3519,7 +3587,7 @@ button.btn_primary.btn_credit {
   background-color: #252E33;
 }
 .benefit_cont.gsp_acco .benefit_lounge + .wrap_btn {
-  margin-top: 3.2rem;
+  margin-top: 1.6rem;
 }
 .benefit_cont.gsp_acco .ico_exchange {
   background-image: url('../../images/global/img_exchange.png');
@@ -4000,6 +4068,9 @@ button.btn_primary.btn_credit {
 .type_credit .benefit_cont .list_benefit li.type_center {
   align-items: center;
 }
+.type_credit .benefit_cont .list_benefit + .list_txt.type_asterisk {
+  margin-top: 1.6rem;
+}
 .type_credit .benefit_cont .table_benefit {
   width: 100%;
 }
@@ -4159,8 +4230,8 @@ button.btn_primary.btn_credit {
   padding: 1.2rem 1.4rem;
   border-radius: 0.8rem;
   background-color: #fff;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
 }
 .travlog_faq .section_faq_bubble .speech_bubble .box::before {
   width: 1.1rem;
@@ -4189,8 +4260,6 @@ button.btn_primary.btn_credit {
 }
 .travlog_faq .section_faq_bubble .speech_bubble.left .box {
   margin: 0;
-  font-size: 1.6rem;
-  line-height: 2.1rem;
   font-weight: 400;
   color: #839097;
 }
@@ -4265,10 +4334,13 @@ button.btn_primary.btn_credit {
   line-height: 2.6rem;
 }
 .travlog_faq .travlog_faq_bottom_visual .txt_info p.txt {
-  margin-top: 2.0rem;
+  margin-top: 1.6rem;
   font-size: 1.6rem;
   line-height: 2.1rem;
   color: #839097;
+}
+.travlog_faq .travlog_faq_bottom_visual .txt_info p.txt + dl {
+  margin-top: 2.0rem;
 }
 /* GSP_002 intro */
 html.intro_overflow {
