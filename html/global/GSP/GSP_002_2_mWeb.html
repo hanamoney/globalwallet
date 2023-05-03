@@ -706,18 +706,17 @@
     //화면로드되고 애니메이션
     $('.btn_benefit').addClass('active');
   });
+  
+  // 카카오 인앱브라우저 대응
   $(window).bind('pageshow', function(e) {
-    // 카카오 인앱브라우저 대응
     if (navigator.userAgent.indexOf('KAKAO') >= 0) {
       $('.benefit_toggle').addClass('benefit_toggle_01');
       $('.benefit_toggle').removeClass('benefit_toggle_02');
       $('#benefit_switch').prop('checked',false);
     }
   });
+
   $(function(){
-    $('.btn_benefit').on('click', function(){
-      location.href = 'http://hanamoney.github.io/html/global/GSP/GSP_002_1_mWeb.html';
-    });
     // 해외 혜택 토글 <!-- 23.04.21 추가
     $('.btn_benefit_toggle label').click(function(){
       var checked = $('#benefit_switch').is(':checked');
