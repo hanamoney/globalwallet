@@ -87,6 +87,9 @@
   background-size: 100%;
   z-index: 1;
 }
+.section_top_visual.chg_limit .wrap_tit {
+  position: relative;
+}
 .wrap_item_benefit [class^="emoji_"] {
   position: relative;
 }
