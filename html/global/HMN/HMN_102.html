@@ -393,17 +393,19 @@
         }.bind(this),2000);
       });
 
-      // 코치마크
+      // 코치마크 <!-- 23.05.02 수정
       var $el = $('.wrap_coachmark');
       var $btn = $('.btn_ico_howto');
+      var timeoutIds = [];
 
       $btn.on('click', function(){
-        $el = $('#' + $(this).data('name'));
+        var elId = $(this).data('name');
+        $el = $('#' + elId);
         $el.addClass('on');
         $el.find('.stepbox').each(function(idx, el) {
-          setTimeout(function(){
+          timeoutIds.push(setTimeout(function(){
             $(el).addClass('on');
-          }, idx*1600 );
+          }, idx*1600));
         });
       });
 
@@ -411,6 +413,9 @@
         $el.removeClass('on')
           .find('.stepbox').removeClass('on');
         $btn.focus();
+        timeoutIds.forEach(function(id) {
+          clearTimeout(id);
+        });
       });
 
       // 순서변경
