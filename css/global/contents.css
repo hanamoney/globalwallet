@@ -1044,6 +1044,17 @@ button.btn_primary.btn_credit {
   left: 1.2rem;
   bottom: 0;
 }
+[data-roll="TDL"] .trans_info button.row:not([style*="display: none"]) + div.row + div.row,
+[data-roll="TDL"] .trans_info .txt_sm {
+  padding-right: 1.6rem;
+}
+[data-roll="TDL"] .trans_info .txt_noti {
+  margin-right: 0.5rem;
+}
+[data-roll="TDL"] .trans_info.foriegn div.row {
+  padding-right: 1.6rem;
+}
+
 /* TDL_006 하나머니안내 */
 .section_tab.about_hanamoney .wrap_tab_btn.type_box {
   padding-bottom: 6.2rem;
@@ -6349,6 +6360,20 @@ html.intro_overflow .type_credit {
 }
 .section_list_trans.vdb_saved {
   padding-top: 2.4rem;
+}
+.section_list_trans.vdb_accum .trans_info a.row + div.row,
+.section_list_trans.vdb_accum .trans_info button.row + .row,
+.section_list_trans.vdb_accum .trans_info a.row + .row + .txt_sm,
+.section_list_trans.vdb_accum .trans_info button.row + .row + .txt_sm,
+.section_list_trans.vdb_saved .trans_info a.row + div.row,
+.section_list_trans.vdb_saved .trans_info button.row + .row,
+.section_list_trans.vdb_saved .trans_info a.row + .row + .txt_sm,
+.section_list_trans.vdb_saved .trans_info button.row + .row + .txt_sm {
+  padding-right: 1.6rem;
+}
+.section_list_trans.vdb_accum .trans_info .txt_noti,
+.section_list_trans.vdb_saved .trans_info .txt_noti {
+  margin-right: 0.5rem;
 }
 /* VDB_006 화폐선택 */
 .wrap_cur_list {

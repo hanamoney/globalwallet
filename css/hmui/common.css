@@ -5341,12 +5341,6 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   width: 100%;
   padding-right: 1.6rem;
 }
-.trans_info a.row + .row,
-.trans_info button.row + .row,
-.trans_info a.row + .row + .txt_sm,
-.trans_info button.row + .row + .txt_sm {
-  padding-right: 1.6rem;
-}
 .trans_info .row .ico_arr_link_s {
   position: absolute;
   top: 0.3rem;
