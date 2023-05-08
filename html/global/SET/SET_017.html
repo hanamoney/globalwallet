@@ -78,6 +78,7 @@
                   </p>
                 </div>
               </div>
+              <p class="txt_inp_guide type_right txt_amount_gap">최근 3개월 기준 최저가</p> <!-- 23.05.08 추가 -->
               <div class="txt_inp_result">이하일 때 알림을 받을래요.</div>
               
             </div>
@@ -86,56 +87,7 @@
 
         <!-- 하단고정영역 -->
         <div class="section_bottom_fixed">
-          <div class="wrap_quick_sel on">
-            <button class="btn_acco"><span>빠른 환율 선택</span></button>
-            <ul>
-              <!-- loop -->
-              <li>
-                <button type="button" class="fnOptQuick" data-option="val1">
-                  <span class="right">
-                    <span class="txt_amount"><em class="txt txt_num">1,330.85</em>원</span>
-                    <span class="txt_amount_gap up">현재가보다 <strong class="txt_num">+12.34</strong></span>
-                  </span>
-                </button>
-              </li>
-              <!-- // loop -->
-              <li>
-                <button type="button" class="fnOptQuick" data-option="val2">
-                  <span class="right">
-                    <span class="txt_amount"><em class="txt txt_num">1,330.75</em>원</span>
-                    <span class="txt_amount_gap up">현재가보다 <strong class="txt_num">+12.34</strong></span>
-                  </span>
-                </button>
-              </li>
-              <!-- 3개월기준 최저가 -->
-              <li class="selected">
-                <button type="button" class="fnOptQuick" data-option="val3">
-                  <span class="left">최근 3개월 기준<em>최저가</em></span>
-                  <span class="right">
-                    <span class="txt_amount"><em class="txt txt_num">1,330.65</em>원</span>
-                    <span class="txt_amount_gap equal">현재가보다 <strong class="txt_num">00.00</strong></span>
-                  </span>
-                </button>
-              </li>
-              <!-- // 3개월기준 최저가 -->
-              <li>
-                <button type="button" class="fnOptQuick" data-option="val4">
-                  <span class="right">
-                    <span class="txt_amount"><em class="txt txt_num">1,330.55</em>원</span>
-                    <span class="txt_amount_gap down">현재가보다 <strong class="txt_num">-12.34</strong></span>
-                  </span>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="fnOptQuick" data-option="val5">
-                  <span class="right">
-                    <span class="txt_amount"><em class="txt txt_num">1,330.45</em>원</span>
-                    <span class="txt_amount_gap down">현재가보다 <strong class="txt_num">-12.34</strong></span>
-                  </span>
-                </button>
-              </li>
-            </ul>
-          </div>
+          <!-- 23.05.08 wrap_quick_sel 삭제 -->
           <div class="wrap_btn_full">
             <button type="button" id="testid" class="btn_full_primary fnClosePop">설정하기</button>
           </div>

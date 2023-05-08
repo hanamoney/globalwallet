@@ -61,8 +61,14 @@
             </div>
 
             <div class="section_set_list">
-              <h2 class="tit">
+              <h2 class="tit type_bubble"> <!-- 23.05.08 클래스추가 -->
                 <button type="button" class="btn_tooltip fnOpenTooltip" data-name="tooltip1">차액충전<span class="ico_tooltip"><span class="blind">툴팁</span></span></button>
+                <!-- 23.05.08 추가 -->
+                <div class="tooltip_bubble type_pink left">
+                  <p>새로워졌어요!</p>
+                  <span class="bubble_caret"></span>
+                </div>
+                <!-- // 23.05.08 추가 -->
               </h2>
               <ul class="wrap_box_list">
                 <li>
@@ -86,12 +92,14 @@
               <ul class="wrap_box_list">
                 <li>
                   <button type="button" id="" class="wrap_box">
+                    <span class="txt_sub">잔액부족 걱정없이</span> <!-- 23.05.08 문구추가 -->
                     <span class="label">잔액기준 자동충전</span>
                     <span class="ico_arr_link"></span>
                   </button>
                 </li>
                 <li>
                   <button type="button" id="" class="wrap_box">
+                    <span class="txt_sub">원하는 환율로</span> <!-- 23.05.08 문구추가 -->
                     <span class="label">목표환율 자동충전</span>
                     <span class="ico_arr_link"></span>
                   </button>
@@ -199,29 +207,36 @@
     <div id="tooltip1" class="wrap_tooltip">
       <div class="inner_tooltip">
         <p class="txt_tooltip">
-          차액충전은 송금, 선물하기 등의 서비스 이용 시 하나머니가 부족할 때 부족한 금액을 연결 계좌에서 바로 충전해 사용하는 서비스예요.<br><br>
-          충전 수단이 하나카드인 경우 1,000원 단위로 충전돼요.<br><br>
-          차액충전 불가 서비스 : 하나머니 결제, GLN 결제, 포인트 전환, 소액펀드(자동매수)</p>
+          차액충전은  체크카드 원화 결제, 송금, 선물하기 등의 서비스 이용 시 부족한 금액을 연결 계좌에서 바로 충전해 사용하는 서비스예요.<br><br>
+          차액충전 불가 서비스 : 외화 하나머니 결제, 카드 대금결제, GLN 결제, 포인트 전환, 소액펀드(자동매수) 서비스</p> <!-- 23.05.08 문구변경 -->
         <button class="btn_ico_close fnCloseTooltip"><span class="blind">닫기</span></button>
       </div>
     </div>
 
     <div id="tooltip2" class="wrap_tooltip">
       <div class="inner_tooltip">
-        <p class="txt_tooltip">
-          자동충전은 하나머니/대표 계좌에서 원하는 조건에 따라 알아서 충전해 주는 서비스예요.<br>
-          외화 하나머니 자동충전 설정 시 충전 시점의 환율이 적용되어 충전돼요.</p><!-- 22.11.11 / 22.10.26 문구변경 -->
+        <p class="txt_tooltip">자동충전은 원하는 조건에 따라 알아서 충전해 주는 서비스예요.</p>
+        <br>
+        <ul class="list_txt">
+          <li style="padding-left: 1.6rem">잔액기준 자동충전 서비스는 보유 하나머니가 일정한 금액 이하로 내려갔을 때 설정한 금액만큼 연결계좌에서 자동으로 충전해줘요.</span></li>
+          <li style="padding-left: 1.6rem">목표환율 자동충전 서비스에서는 목표한 환율에 도달 시, 설정한 금액만큼 하나머니 또는 연결계좌에서 자동으로 충전해줘요.</li>
+        </ul>
+        <br>
+        <p class="txt_tooltip">외화 하나머니 자동충전 설정 시 충전 시점의 하나은행 매매기준율(환율 100% 우대)로 충전돼요.</p><!-- 22.11.11 / 22.10.26 문구변경 -->
         <button class="btn_ico_close fnCloseTooltip"><span class="blind">닫기</span></button>
       </div>
     </div>
     <!-- // tooltip -->
 
     <!-- toast -->
-    <div id="toast" class="wrap_toast">
-      <!-- <p class="txt_toast_left">차액충전을 신청했어요.</p> -->
-      <!-- <p class="txt_toast_left">차액충전을 해지했어요.</p> -->
-      <p class="txt_toast_left">자동충전을 신청했어요.</p>
-      <!-- <p class="txt_toast_left">자동충전을 해지했어요.</p> -->
+    <div id="toast" class="wrap_toast show">
+      <!-- 23.05.08 클래스수정 -->
+      <p class="txt_toast">차액충전을 신청했어요.</p>
+      <p class="txt_toast">차액충전을 해지했어요.</p>
+      <p class="txt_toast">자동충전을 신청했어요.</p>
+      <p class="txt_toast">자동충전을 해지했어요.</p>
+      <p class="txt_toast">새로워진 차액충전 기능을 바로 이용해보세요!</p> <!-- 23.05.08 문구추가 -->
+      <!-- // 23.05.08 클래스수정 -->
     </div>
     <!-- // toast -->
 

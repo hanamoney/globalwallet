@@ -308,6 +308,19 @@
 .section_set_list .wrap_box {
   padding: 2.0rem 2.4rem;
 }
+.section_set_list .wrap_box .txt_sub {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  font-weight: 700;
+  color: #9DAAB0;
+}
+.section_set_list .wrap_box .txt_sub + .label {
+  display: block;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  margin-top: 0.4rem;
+}
 .section_set_list .wrap_box.type_narrow {
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;
@@ -522,6 +535,9 @@
   content: counter(numberlist);
 }
 .wrap_tooltip .list_txt li + li {
+  margin-top: 0;
+}
+.exr_inp + .txt_inp_guide {
   margin-top: 0;
 }
 
@@ -807,7 +823,6 @@
   background-size: 100%;
   transform: rotate(-5deg);
   z-index: -1;
-  /* display: none; */
 }
 .usr_travlog_join .type_credit .tit_sub em::before {
   background-color: #F17952;
@@ -8158,7 +8173,34 @@ html.intro_overflow .type_credit {
 .inner_layer.cov_update_2 .wrap_btn.type_full {
   margin-top: 2.4rem;
 }
-
+.inner_layer.type_after .tit_big span {
+  display: block;
+}
+.inner_layer.type_after .tit_big .txt_bold {
+  font-size: 4.0rem;
+  line-height: 5.3rem;
+}
+.inner_layer.type_after .tit_big .tit_sub {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 3.3rem;
+}
+.inner_layer.type_after .tit {
+  padding-top: 1.2rem;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+.inner_layer.type_after .tit .tooltip_bubble {
+  right: -0.3rem;
+}
+.inner_layer.type_after .ccy_add_center ul {
+  padding: 1.6rem 0 2.4rem;
+}
+.inner_layer.type_after .wrap_btn .btn_box_m.type_credit {
+  padding: 1.25rem;
+  font-size: 1.8rem;
+  border-radius: 0.8rem;
+}
 
 @supports ((-webkit-filter:none) or (filter:none)) {
   .vdb_swiper .swiper-slide.swiper-slide-prev,
