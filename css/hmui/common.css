@@ -5847,7 +5847,7 @@ div[class^="wrap_box"] .wrap_btn.type_full {
   display: block;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -1px;
   width: 1px;
   height: 1.2rem;
   background-color: #E3EBEE;
