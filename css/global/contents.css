@@ -2370,6 +2370,7 @@ button.btn_primary.btn_credit {
   font-weight: 400;
 }
 .travlog_join_swiper .swiper-slide {
+  padding-bottom: 1.6rem;
   align-self: stretch;
   width: auto;
   width: 73.9vw;
@@ -2380,7 +2381,7 @@ button.btn_primary.btn_credit {
   margin-right: 0;
 }
 .travlog_join_swiper .swiper-slide .inner {
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2471,6 +2472,7 @@ button.btn_primary.btn_credit {
   font-weight: 700;
 }
 .travlog_join_swiper .swiper-slide .benefit_info {
+  position: relative;
   margin-top: auto;
   text-align: center;
 }
@@ -2483,6 +2485,52 @@ button.btn_primary.btn_credit {
 .travlog_join_swiper .swiper-slide .benefit_info .btn_box {
   width: 100%;
 }
+.travlog_join_swiper .swiper-slide .benefit_info .tooltip_bubble {
+  top: auto;
+  bottom: -3.8rem;
+}
+.travlog_join_swiper .swiper-slide .benefit_info .tooltip_bubble a {
+  padding: 0 1.2rem 0 1.6rem;
+  display: inline-block;
+  background: linear-gradient(95.18deg, #36C9EA 2.86%, #2DD183 95.84%);
+  border-radius: 2rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(50, 206, 178, 0.5);
+}
+.travlog_join_swiper .swiper-slide .benefit_info .tooltip_bubble p {
+  padding: 0 1.8rem 0 0;
+  white-space: nowrap;
+  font-size: 1.4rem;
+  line-height: 3.6rem;
+  color: #fff;
+  background-color: transparent;
+}
+.travlog_join_swiper .swiper-slide .benefit_info .tooltip_bubble p::before {
+  content: '';
+  position: absolute;
+  right: 1.2rem;
+  top: 1rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  -webkit-mask-image: url(../../images/hmui/ico_arr_link_m.svg);
+  mask-image: url(../../images/hmui/ico_arr_link_m.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 1.8rem;
+  mask-size: 1.8rem;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #fff;
+}
+.travlog_join_swiper .swiper-slide .benefit_info .tooltip_bubble .bubble_caret {
+  bottom: auto;
+  top: -0.6rem;
+  width: 0.9rem;
+  height: 0.6rem;
+  border: 0;
+  background: url(../../images/global/bubble_caret_event_green.png) no-repeat 50%;
+  background-size: auto 100%;
+}
+
 .travlog_join_swiper .swiper-slide.swiper-slide-prev .inner,
 .travlog_join_swiper .swiper-slide.swiper-slide-next .inner {
   opacity: 0.6;
@@ -3666,7 +3714,9 @@ button.btn_primary.btn_credit {
   background-size: 10rem;
   background-position: top -0.1rem right;
 }
-
+.benefit_cont.gsp_acco .ico_event_cashback {
+  background: url('../../images/global/img_cashback.png') no-repeat center right / 9rem, linear-gradient(96.57deg, #E64592 0.56%, #FF7438 98.38%);
+}
 .benefit_cont.gsp_acco .btn_learn .txt {
   color: #252E33;
 }
@@ -3859,6 +3909,10 @@ button.btn_primary.btn_credit {
 }
 .benefit_cont.gsp_share .wrap_btn + .no_acco {
   margin-top: 3.2rem;
+}
+.benefit_cont.gsp_acco .ico_event_cashback .txt {
+  color: #FFF9BF;
+  font-weight: 700;
 }
 .benefit_cont .gsp_swiper {
   margin-top: 4.0rem;
@@ -5927,7 +5981,7 @@ html.intro_overflow .type_credit {
   transform: scale(1) translate(0,0);
 }
 .vdb_swiper .swiper-slide.swiper-slide-next .img_avatar,
-.vdb_swiper .sswiper-slide-duplicate.swiper-slide-next .img_avatar  {
+.vdb_swiper .swiper-slide-duplicate.swiper-slide-next .img_avatar {
   transform: scale(0.74) translate(-6.8rem, 0);
 }
 .vdb_swiper .swiper-pagination {
@@ -6165,7 +6219,7 @@ html.intro_overflow .type_credit {
   width: 13.2rem;
   height: 20.3rem;
 }
-.my_benefit_info.no_accum .bubble p ,
+.my_benefit_info.no_accum .bubble p,
 .my_benefit_info.no_saved .bubble p {
   font-size: 1.8rem;
 }
