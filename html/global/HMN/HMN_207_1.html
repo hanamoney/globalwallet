@@ -38,16 +38,16 @@
             <!-- 23.03.24 환종추가 -->
             <div class="swiper-container ccy_add_center">
               <ul class="swiper-wrapper">
-                <li class="swiper-slide"><span class="img_ccy_vnd"></span>베트남<br>VND</li>
-                <li class="swiper-slide"><span class="img_ccy_hkd"></span>홍콩<br>HKD</li>
-                <li class="swiper-slide"><span class="img_ccy_thb"></span>태국<br>THB</li>
-                <li class="swiper-slide"><span class="img_ccy_php"></span>필리핀<br>PHP</li>
-                <li class="swiper-slide"><span class="img_ccy_idr"></span>인도네시아<br>IDR</li>
-                <li class="swiper-slide"><span class="img_ccy_nzd"></span>뉴질랜드<br>NZD</li>
-                <li class="swiper-slide"><span class="img_ccy_huf"></span>헝가리<br>HUF</li>
-                <li class="swiper-slide"><span class="img_ccy_chf"></span>스위스<br>CHF</li>
-                <li class="swiper-slide"><span class="img_ccy_sek"></span>스웨덴<br>SEK</li>
-                <li class="swiper-slide"><span class="img_ccy_czk"></span>체코<br>CZK</li>
+                <li class="swiper-slide" data-swiper-autoplay="0"><span class="img_ccy_vnd"></span>베트남<br>VND</li>
+                <li class="swiper-slide" data-swiper-autoplay="0"><span class="img_ccy_hkd"></span>홍콩<br>HKD</li>
+                <li class="swiper-slide" data-swiper-autoplay="0"><span class="img_ccy_thb"></span>태국<br>THB</li>
+                <li class="swiper-slide" data-swiper-autoplay="0"><span class="img_ccy_php"></span>필리핀<br>PHP</li>
+                <li class="swiper-slide" data-swiper-autoplay="0"><span class="img_ccy_idr"></span>인도네시아<br>IDR</li>
+                <li class="swiper-slide" data-swiper-autoplay="0"><span class="img_ccy_nzd"></span>뉴질랜드<br>NZD</li>
+                <li class="swiper-slide" data-swiper-autoplay="0"><span class="img_ccy_huf"></span>헝가리<br>HUF</li>
+                <li class="swiper-slide" data-swiper-autoplay="0"><span class="img_ccy_chf"></span>스위스<br>CHF</li>
+                <li class="swiper-slide" data-swiper-autoplay="0"><span class="img_ccy_sek"></span>스웨덴<br>SEK</li>
+                <li class="swiper-slide" data-swiper-autoplay="0"><span class="img_ccy_czk"></span>체코<br>CZK</li>
               </ul>
             </div>
             <!-- // 23.03.24 환종추가 -->
@@ -88,14 +88,21 @@
 
       // <!-- 23.03.24 추가
       var ccyAddSwiper = new Swiper('.ccy_add_center', {
+        observer: true,
+        observeParents: true,
         autoplay: {
-          delay: 0, //add
+          // delay: 0, //add
           disableOnInteraction: false,
         },
         speed: 3000,
         loop: true,
         loopAdditionalSlides: 1,
         slidesPerView: '5',
+        on : {
+          init: function(swiper) {
+            this.autoplay.start();
+          }
+        }
       });
     });
   </script>
