@@ -18,7 +18,7 @@ function iosV(ua) {
 $(function(){
   if (isAOS) {
     $('html').addClass('AOS');
-    if ( parseInt(androidV(ua)) < 8) {
+    if ( parseInt(androidV(ua)) < 6) {
       $('html').addClass('AOS_old');
     }
   } else {
