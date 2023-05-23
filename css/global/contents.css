@@ -4467,6 +4467,10 @@ button.btn_primary.btn_credit {
   padding-bottom: 6.4rem;
   background: linear-gradient(178.56deg, #6944CF 2.14%, #5936BA 101.98%);
 }
+.intro_area .intro_section {
+  max-width: 40rem;
+  margin: 0 auto;
+}
 .intro_area .wrap_tit {
   padding: 6rem 4rem 0;
 }
