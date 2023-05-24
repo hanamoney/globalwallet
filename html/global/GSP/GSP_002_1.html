@@ -480,7 +480,6 @@
             <h4 class="tit_notice"><span class="ico_notice"></span>알려드립니다!</h4>
             <!-- 23.04.10 문구변경 -->
             <ul class="list_txt">
-              
               <li class="txt_black txt_em">트래블로그 서비스로 외화 환전 시 *무료환전 혜택(환율 100% 우대)을 제공합니다.<br>
                 <span class="txt_basis">총 18종 통화로 4종(미국 USD, 일본 JPY, 유럽 EUR, 영국 GBP)을 제외한 14종 통화는 이벤트로 진행</span><br>
                 <span class="txt_basis">- 10종[2023년 6월 30일까지] : 뉴질랜드 NZD, 베트남 VND, 스웨덴 SEK, 스위스 CHF, 인도네시아 IDR, 체코 CZK, 태국 THB, 필리핀 PHP, 헝가리 HUF, 홍콩 HKD</span><br>
@@ -640,17 +639,35 @@
         dot.removeClass('on');
         dot.eq(2).addClass('on');
       }
+
+      // <!-- 23.05.23 추가 스크립트 scroll 위치에 따라 컨텐츠 변화
+      $(window).scroll(function() {
+        var scrollTop = $(this).scrollTop();
+        var fontRatio = parseFloat($("html").css("font-size"));
+        var divOffset = $("#benefit").offset().top - (9.8 * fontRatio);
+        var boardOffset = $(".type_billboard").offset().top - ($(this).height() * 0.3);
+
+        var $header = $('#header');
+        var $billboard = $('.type_billboard');
+
+        if (scrollTop >= divOffset) {
+          $header.removeClass('type_white type_check');
+        } else {
+          $header.addClass('type_white type_check');
+        }
+
+        if (scrollTop >= boardOffset && !isFlipListItemsExecuted) {
+          $billboard.addClass('play');
+          setTimeout(function() {
+            flipListItems(210);
+          }, 100);
+          isFlipListItemsExecuted = true;
+        }
+      });
     })
 
     // <!-- 23.05.23 인트로관련 스크립트 삭제
 
-    //쇼츠 이미지 슬라이드
-    var swiper = new Swiper('.gsp_swiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 12,
-    });
-
-    // <!-- 23.05.23 추가 스크립트
     // flip 관련 스크립트
     function flipListItems(intervalDuration) {
       var listItems = document.querySelectorAll('.flip li');
@@ -674,31 +691,13 @@
       intervalId = setInterval(activateNextItem, intervalDuration);
     };
     var isFlipListItemsExecuted = false;
-    // header 색상 변경
-    $(window).scroll(function() {
-      var scrollTop = $(this).scrollTop();
-      var fontRatio = parseFloat($("html").css("font-size"));
-      var divOffset = $("#benefit").offset().top - (9.8 * fontRatio);
-      var boardOffset = $(".type_billboard").offset().top - ($(this).height() * 0.3);
 
-      var $header = $('#header');
-      var $billboard = $('.type_billboard');
-
-      if (scrollTop >= divOffset) {
-        $header.removeClass('type_white type_check');
-      } else {
-        $header.addClass('type_white type_check');
-      }
-
-      if (scrollTop >= boardOffset && !isFlipListItemsExecuted) {
-        $billboard.addClass('play');
-        setTimeout(function() {
-          flipListItems(210);
-        }, 100);
-        isFlipListItemsExecuted = true;
-      }
+    //쇼츠 이미지 슬라이드
+    var swiper = new Swiper('.gsp_swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 12,
     });
-
+    
   });
   </script>
 </body>

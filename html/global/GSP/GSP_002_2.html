@@ -643,12 +643,8 @@
         dot.removeClass('on');
         dot.eq(2).addClass('on');
       }
-    })
 
-    // <!-- 23.05.23 인트로관련 스크립트 삭제
-
-    // header 색상 변경
-    $(window).scroll(function() {
+      // <!-- 23.05.23 추가 스크립트 scroll 위치에 따라 컨텐츠 변화
       var scrollTop = $(this).scrollTop();
       var fontRatio = parseFloat($("html").css("font-size"));
       var divOffset = $("#benefit").offset().top - (9.8 * fontRatio);
@@ -672,7 +668,9 @@
       if (scrollTop >= switchOffset) {
         $switch.addClass('play');
       }
-    });
+    })
+
+    // <!-- 23.05.23 인트로관련 스크립트 삭제
   });
   </script>
 </body>
