@@ -4432,10 +4432,10 @@ button.btn_primary.btn_credit {
 }
 /* GSP_002 intro */
 #header.type_check {
-  background-color: #F65A79;
+  background-color: #F44F7B;
 }
 #header.type_credit {
-  background-color: #6945CF;
+  background-color: #6944CF;
 }
 #header.type_check.scrolled .inner_fixed::before,
 #header.type_check.scrolled .inner_fixed::after,
@@ -4461,13 +4461,14 @@ button.btn_primary.btn_credit {
 }
 .intro_area.type_check {
   padding-bottom: 6.4rem;
-  background: linear-gradient(172.33deg, #F44F7B -6.72%, #FF8271 101.37%);
+  background: linear-gradient(173.03deg, #F44F7B -3.92%, #FF8271 67.86%);
 }
 .intro_area.type_credit {
   padding-bottom: 6.4rem;
   background: linear-gradient(178.56deg, #6944CF 2.14%, #5936BA 101.98%);
 }
 .intro_area .intro_section {
+  overflow: hidden;
   max-width: 40rem;
   margin: 0 auto;
 }
@@ -4602,6 +4603,7 @@ button.btn_primary.btn_credit {
   width: 9.2rem;
   height: 14.7rem;
   transform: rotate(-11.58deg);
+  animation: floatingCheck 4s ease-in-out infinite;
 }
 .intro_area .check_card .check_card_01::after {
   content: '';
@@ -4630,6 +4632,7 @@ button.btn_primary.btn_credit {
   left: 11.7rem;
   width: 9.2rem;
   height: 14.7rem;
+  animation: floating10 4s -1.5s ease-in-out infinite;
 }
 .intro_area .check_card .check_card_02::after {
   content: '';
@@ -4655,17 +4658,18 @@ button.btn_primary.btn_credit {
   position: relative;
   width: 21.064rem;
   height: 25.698rem;
-  margin: -12.2rem 0 0 16rem;
+  margin: -9.2rem 0 0 16rem;
 }
 .intro_area .credit_card .credit_card_01 {
   display: block;
   position: absolute;
-  bottom: 1.498rem;
+  bottom: 4.498rem;
   left: 1.439rem;
   width: 8.117rem;
   height: 12.831rem;
   transform: rotate(-26.8deg);
   z-index: 2;
+  animation: floatingCredit 4s -1.5s ease-in-out infinite;
 }
 .intro_area .credit_card .credit_card_01::after {
   content: '';
@@ -4691,12 +4695,13 @@ button.btn_primary.btn_credit {
 .intro_area .credit_card .credit_card_02 {
   display: block;
   position: absolute;
-  bottom: 8.258rem;
+  bottom: 11.258rem;
   left: 6.179rem;
   width: 8.117rem;
   height: 12.831rem;
   transform: rotate(11.42deg);
   z-index: 1;
+  animation: floatingCredit_2 4s ease-in-out infinite;
 }
 .intro_area .credit_card .credit_card_02::after {
   content: '';
@@ -4724,6 +4729,7 @@ button.btn_primary.btn_credit {
   margin: 3.2rem auto 4.2rem;
 }
 .intro_area .visual_gsp_billboard {
+  position: relative;
   width: 29.6rem;
   margin: 4rem auto 0;
   padding: 1.6rem 0.8rem 1.7rem;
@@ -4739,6 +4745,7 @@ button.btn_primary.btn_credit {
   text-align: center;
 }
 .intro_area .visual_gsp_billboard .billboard {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4759,10 +4766,215 @@ button.btn_primary.btn_credit {
   font-weight: 700;
 }
 .intro_area .visual_gsp_billboard .bottom_txt {
+  opacity: 0;
+  display: flex;
+  align-items: center;
   padding-left: 2.1rem;
   color: #47DBC2;
   font-size: 1.6rem;
   line-height: 2.1rem;
+  transition: 0.5s 1s;
+  transform: translateY(30%);
+}
+.intro_area .visual_gsp_billboard .bottom_txt .ico_dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: #47DBC2;
+  margin-left: 0.6rem;
+  opacity: 0.3;
+}
+.intro_area .visual_gsp_billboard .intro_airplane {
+  opacity: 0;
+  position: absolute;
+  width: 10.9rem;
+  top: 4.9rem;
+  left: -6.9rem;
+  transition: 0.35s;
+}
+.intro_area .visual_gsp_billboard .flip {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  z-index: 4;
+  overflow: hidden;
+  width: 16.4rem;
+  height: 4.4rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+.intro_area .visual_gsp_billboard .flip li {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.intro_area .visual_gsp_billboard .flip li:first-child {
+  z-index: 2;
+}
+.intro_area .visual_gsp_billboard .flip li .up {
+  border-bottom: 1px solid #000;
+}
+.intro_area .visual_gsp_billboard .flip li .up::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.intro_area .visual_gsp_billboard .flip li .down::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+.intro_area .visual_gsp_billboard .flip li .wrap_up_down {
+  display: block;
+  height: 100%;
+  perspective: 20rem;
+}
+.intro_area .visual_gsp_billboard .flip li .wrap_up_down div {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+.intro_area .visual_gsp_billboard .flip li .wrap_up_down div .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.intro_area .visual_gsp_billboard .flip li .wrap_up_down div.up {
+  transform-origin: 50% 100%;
+  top: 0;
+}
+.intro_area .visual_gsp_billboard .flip li .wrap_up_down div.up div.inn {
+  top: 0;
+}
+.intro_area .visual_gsp_billboard .flip li .wrap_up_down div.down {
+  transform-origin: 50% 0%;
+  bottom: 0;
+}
+.intro_area .visual_gsp_billboard .flip li .wrap_up_down div.down div.inn {
+  bottom: 0;
+}
+.intro_area .visual_gsp_billboard .flip li .wrap_up_down div div.inn {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 200%;
+  background-color: #252E33;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro_area .visual_gsp_billboard .flip li .wrap_up_down div div.inn span {
+  line-height: 2.9rem;
+}
+.intro_area .visual_gsp_billboard .flip li .wrap_up_down [class^="ico_cur_"] {
+  margin-right: 0.8rem;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.intro_area .visual_gsp_billboard .flip li.before {
+  z-index: 3;
+}
+.intro_area .visual_gsp_billboard .flip li.before .up {
+  z-index: 2;
+}
+.intro_area .visual_gsp_billboard .flip li.before .up .shadow {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+  background: linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%);
+}
+.intro_area .visual_gsp_billboard .flip li.before .down .shadow {
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+.intro_area .visual_gsp_billboard .flip li.active {
+  z-index: 2;
+}
+.intro_area .visual_gsp_billboard .flip li.active .up .shadow {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+  background: linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%);
+}
+.intro_area .visual_gsp_billboard .flip li.active .down {
+  z-index: 2;
+}
+.intro_area .visual_gsp_billboard .flip li.active .down .shadow {
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+.intro_area .type_billboard.play .intro_airplane {
+  opacity: 1;
+  top: 0.7rem;
+  left: -3.5rem;
+}
+.intro_area .type_billboard.play .bottom_txt {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.intro_area .type_billboard.play .bottom_txt .ico_dot {
+  animation: opacity03 linear 2.4s infinite;
+}
+.intro_area .type_billboard.play .bottom_txt .ico_dot:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.intro_area .type_billboard.play .bottom_txt .ico_dot:nth-child(3) {
+  animation-delay: 1.6s;
+}
+.intro_area .type_billboard.play .flip li.active {
+  animation: zindex .1s .1s linear both;
+}
+.intro_area .type_billboard.play .flip li.active .up .shadow {
+  animation: hide .1s .06s linear both;
+}
+.intro_area .type_billboard.play .flip li.active .down {
+  animation: turn .1s .1s linear both;
+}
+.intro_area .type_billboard.play .flip li.active .down .shadow {
+  animation: hide .1s .06s linear both;
+}
+.intro_area .type_billboard.play .flip li.before .up {
+  animation: turn2 .1s linear both;
+}
+.intro_area .type_billboard.play .flip li.before .up .shadow {
+  animation: show .1s linear both;
+}
+.intro_area .type_billboard.play .flip li.before .down .shadow {
+  animation: show .1s linear both;
 }
 .intro_area .list_benefit {
   max-width: 38rem;
@@ -4781,6 +4993,10 @@ button.btn_primary.btn_credit {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 3rem;
+  opacity: 0;
+  transform: translateY(30%);
+  transition: transform .35s;
+  transition: opacity .35s;
 }
 .intro_area .list_benefit li:nth-child(1) {
   background: linear-gradient(180deg, rgba(61, 221, 192, 0.9) 0%, rgba(61, 221, 192, 0.7) 100%);
@@ -4791,11 +5007,13 @@ button.btn_primary.btn_credit {
   background: linear-gradient(180deg, rgba(152, 143, 255, 0.9) 0%, rgba(152, 143, 255, 0.7) 100%);
   border: 1px solid #988FFF;
   box-shadow: 0 0.6rem 0.8rem rgba(152, 143, 255, 0.3);
+  transition-delay: 0.3s;
 }
 .intro_area .list_benefit li:nth-child(3) {
   background: linear-gradient(180deg, rgba(250, 118, 149, 0.9) 0%, rgba(250, 118, 149, 0.7) 100%);
   border: 1px solid #FA7695;
   box-shadow: 0 0.6rem 0.8rem rgba(250, 118, 149, 0.3);
+  transition-delay: 0.6s;
 }
 .intro_area .list_benefit li + li {
   margin-top: 1.2rem;
@@ -4821,10 +5039,13 @@ button.btn_primary.btn_credit {
   background-image: url('../../images/global/img_benefit_list_03.png');
 }
 .intro_area .list_txt.type_asterisk {
+  opacity: 0;
   max-width: 38rem;
   margin: 1.2rem auto 0;
   padding: 0 2.8rem;
-  opacity: 0.6;
+  transform: translateY(30%);
+  transition: transform 0.35s 0.7s;
+  transition: opacity 0.35s 0.7s;
 }
 .intro_area .list_txt.type_asterisk li {
   color: #fff;
@@ -4837,6 +5058,15 @@ button.btn_primary.btn_credit {
 .intro_area .type_list {
   padding-bottom: 3rem;
 }
+.intro_area .type_list.play .list_benefit li {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.intro_area .type_list.play .list_txt.type_asterisk {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
 .intro_area .visual_switch_area {
   display: flex;
   align-items: center;
@@ -4878,6 +5108,88 @@ button.btn_primary.btn_credit {
   height: 8.1rem;
   background: url('../../images/global/img_gsp_finger.png') no-repeat center;
   background-size: 100%;
+}
+.intro_area .type_switch.play .visual_switch {
+  background: #6B4EBC;
+  transition: background 0.6s;
+}
+.intro_area .type_switch.play .visual_switch::before {
+  left: calc(100% - 2.75rem);
+  transition: left 0.6s;
+}
+.intro_area .type_switch.play .visual_switch::after {
+  left: calc(100% - 2.75rem);
+  transition: left 0.6s;
+}
+
+@keyframes zindex {
+  0% {
+    z-index: 2;
+  }
+  5% {
+    z-index: 4;
+  }
+  100% {
+    z-index: 4;
+  }
+}
+@keyframes turn {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes turn2 {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opacity03 {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes floatingCheck {
+  60% {
+    transform: translateY(1.0rem) rotate(-11.58deg);
+  }
+}
+@keyframes floatingCredit {
+  60% {
+    transform: translateY(1.0rem) rotate(-26.8deg);
+  }
+}
+@keyframes floatingCredit_2 {
+  60% {
+    transform: translateY(1.0rem) rotate(11.42deg);
+  }
 }
 
 

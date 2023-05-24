@@ -54,17 +54,85 @@
               </div>
               <div class="visual_gsp_earth"><img src="../../../images/global/img_gsp_earth.png" alt="무료환전 아이콘"></div>
             </div>
-            <div class="intro_section">
+            <div class="intro_section type_billboard">
               <div class="wrap_tit">
                 <h2 class="tit">전 세계에서<br><strong>수수료 없이</strong> 결제/인출</h2>
               </div>
               <div class="visual_gsp_billboard">
+                <img src="../../../images/global/img_intro_airplane.png" alt="비행기이미지" class="intro_airplane">
                 <p class="top_txt">트래블로그는 지금</p>
                 <div class="billboard">
                   <img src="../../../images/global/img_gsp_flip.png" alt="베트남">
+                  <ul class="flip">
+                    <li>
+                      <div class="wrap_up_down">
+                        <div class="up">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_jpy"></span> <span>일본</span></div>
+                        </div>
+                        <div class="down">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_jpy"></span> <span>일본</span></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="wrap_up_down">
+                        <div class="up">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_eur"></span> <span>유럽</span></div>
+                        </div>
+                        <div class="down">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_eur"></span> <span>유럽</span></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="wrap_up_down">
+                        <div class="up">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_gbp"></span> <span>영국</span></div>
+                        </div>
+                        <div class="down">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_gbp"></span> <span>영국</span></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="wrap_up_down">
+                        <div class="up">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_nzd"></span> <span>뉴질랜드</span></div>
+                        </div>
+                        <div class="down">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_nzd"></span> <span>뉴질랜드</span></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="wrap_up_down">
+                        <div class="up">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_vnd"></span> <span>베트남</span></div>
+                        </div>
+                        <div class="down">
+                          <div class="shadow"></div>
+                          <div class="inn"><span class="ico_cur_vnd"></span> <span>베트남</span></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                   <p>여행중</p>
                 </div>
-                <p class="bottom_txt">쌀국수 맛집에서 결제하고 있어요</p>
+                <p class="bottom_txt">
+                  쌀국수 맛집에서 결제하고 있어요
+                  <span class="ico_dot"></span>
+                  <span class="ico_dot"></span>
+                  <span class="ico_dot"></span>
+                </p>
               </div>
             </div>
           </div>
@@ -582,17 +650,54 @@
       spaceBetween: 12,
     });
 
+    // <!-- 23.05.23 추가 스크립트
+    // flip 관련 스크립트
+    function flipListItems(intervalDuration) {
+      var listItems = document.querySelectorAll('.flip li');
+      var currentIndex = 0;
+      var intervalId;
+
+      function activateNextItem() {
+        var lastIndex = listItems.length - 1;
+        var previousIndex = currentIndex;
+        currentIndex = (currentIndex + 1) % listItems.length;
+
+        listItems[previousIndex].classList.remove('active');
+        listItems[previousIndex].classList.add('before');
+        listItems[currentIndex].classList.remove('before');
+        listItems[currentIndex].classList.add('active');
+
+        if (currentIndex === lastIndex) {
+          clearInterval(intervalId);
+        }
+      }
+      intervalId = setInterval(activateNextItem, intervalDuration);
+    };
+
     // header 색상 변경
     $(window).scroll(function() {
-      var scrollTop = $(window).scrollTop();
-      var divOffset = parseInt($("#benefit").offset().top - 9.8 * parseFloat($("html").css("font-size")));
+      var scrollTop = $(this).scrollTop();
+      var fontRatio = parseFloat($("html").css("font-size"));
+      var divOffset = $("#benefit").offset().top - (9.8 * fontRatio);
+      var boardOffset = $(".type_billboard").offset().top - ($(this).height() * 0.3);
+
+      var $header = $('#header');
+      var $billboard = $('.type_billboard');
 
       if (scrollTop >= divOffset) {
-        $('#header').removeClass('type_white').removeClass('type_check');
+        $header.removeClass('type_white type_check');
       } else {
-        $('#header').addClass('type_white').addClass('type_check');
+        $header.addClass('type_white type_check');
+      }
+
+      if (scrollTop >= boardOffset) {
+        $billboard.addClass('play');
+        setTimeout(function() {
+          flipListItems(210);
+        }, 100);
       }
     });
+
   });
   </script>
 </body>
