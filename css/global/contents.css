@@ -4791,6 +4791,9 @@ button.btn_primary.btn_credit {
   left: -6.9rem;
   transition: 0.35s;
 }
+.intro_area .visual_gsp_billboard .flip_img {
+  display: none;
+}
 .intro_area .visual_gsp_billboard .flip {
   position: relative;
   z-index: 4;
@@ -8077,7 +8080,11 @@ button.btn_primary.btn_credit {
 .AOS_old .benefit_intro .btn_next::before,
 .AOS_old .btn_benefit span,
 .AOS_old .benefit_intro .intro_card,
-.AOS_old .benefit_intro .chapter_01 p { animation: none; }
+.AOS_old .benefit_intro .chapter_01 p,
+.AOS_old .intro_area .check_card .check_card_01,
+.AOS_old .intro_area .check_card .check_card_02,
+.AOS_old .intro_area .credit_card .credit_card_01,
+.AOS_old .intro_area .credit_card .credit_card_02 { animation: none; }
 .AOS_old .section_cont.about_travlog .visual_gsp_travlog,
 .AOS_old .section_cont.gsp_unionpay .visial_gsp_unionpay,
 .AOS_old .visual_gsp_atm.transform { transform: none; }
@@ -8088,7 +8095,12 @@ button.btn_primary.btn_credit {
 .AOS_old .benefit_intro.intro_chapter_04 .chapter_04,
 .AOS_old .list_benefit_tower li,
 .AOS_old .benefit_intro .btn_skip,
-.AOS_old .benefit_intro .btn_skip::before { transition: none; }
+.AOS_old .benefit_intro .btn_skip::before,
+.AOS_old .intro_area .visual_gsp_billboard .intro_airplane,
+.AOS_old .intro_area .type_billboard.play .bottom_txt,
+.AOS_old .intro_area .type_switch.play .visual_switch,
+.AOS_old .intro_area .type_switch.play .visual_switch::before,
+.AOS_old .intro_area .type_switch.play .visual_switch::after { transition: none; }
 .AOS_old .benefit_intro,
 .AOS_old .benefit_intro::before,
 .AOS_old .benefit_intro .intro_card,
@@ -8117,9 +8129,13 @@ button.btn_primary.btn_credit {
 .AOS_old .benefit_intro.intro_chapter_06 .chapter_06,
 .AOS_old .benefit_intro.intro_chapter_06 .chapter_04,
 .AOS_old .benefit_intro .chapter_08 .area_banner_txt img,
-.AOS_old .benefit_intro .chapter_08 .area_banner_txt .type_asterisk li {transform: none; transition: none;}
+.AOS_old .benefit_intro .chapter_08 .area_banner_txt .type_asterisk li,
+.AOS_old .intro_area .type_list.play .list_benefit li,
+.AOS_old .intro_area .type_list.play .list_txt.type_asterisk {transform: none; transition: none;}
 .AOS_old .benefit_intro.intro_chapter_02 .chapter_01 p,
-.AOS_old .benefit_intro .chapter_06 .area_intro_billboard .flip {display: none;}
+.AOS_old .benefit_intro .chapter_06 .area_intro_billboard .flip,
+.AOS_old .intro_area .visual_gsp_billboard .flip {display: none;}
+.AOS_old .intro_area .visual_gsp_billboard .flip_img {display: block;}
 .AOS_old .benefit_intro .chapter_01 .txt_03 {font-size: 8rem;}
 .AOS_old .benefit_intro .chapter_04 .txt,
 .AOS_old .benefit_intro .txt_pink {margin-left: -18rem;}

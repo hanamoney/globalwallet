@@ -62,7 +62,7 @@
                 <img src="../../../images/global/img_intro_airplane.png" alt="비행기이미지" class="intro_airplane">
                 <p class="top_txt">트래블로그는 지금</p>
                 <div class="billboard">
-                  <!-- <img src="../../../images/global/img_gsp_flip.png" alt="베트남"> -->
+                  <img src="../../../images/global/img_gsp_flip.png" alt="베트남" class="flip_img">
                   <ul class="flip">
                     <li>
                       <div class="wrap_up_down">
@@ -673,7 +673,7 @@
       }
       intervalId = setInterval(activateNextItem, intervalDuration);
     };
-
+    var isFlipListItemsExecuted = false;
     // header 색상 변경
     $(window).scroll(function() {
       var scrollTop = $(this).scrollTop();
@@ -690,11 +690,12 @@
         $header.addClass('type_white type_check');
       }
 
-      if (scrollTop >= boardOffset) {
+      if (scrollTop >= boardOffset && !isFlipListItemsExecuted) {
         $billboard.addClass('play');
         setTimeout(function() {
           flipListItems(210);
         }, 100);
+        isFlipListItemsExecuted = true;
       }
     });
 
