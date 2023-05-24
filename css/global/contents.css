@@ -4469,7 +4469,7 @@ button.btn_primary.btn_credit {
 }
 .intro_area .intro_section {
   overflow: hidden;
-  max-width: 40rem;
+  max-width: 41.4rem;
   margin: 0 auto;
 }
 .intro_area .wrap_tit {
@@ -4792,9 +4792,7 @@ button.btn_primary.btn_credit {
   transition: 0.35s;
 }
 .intro_area .visual_gsp_billboard .flip {
-  position: absolute;
-  top: 1.5rem;
-  left: 2rem;
+  position: relative;
   z-index: 4;
   overflow: hidden;
   width: 16.4rem;
