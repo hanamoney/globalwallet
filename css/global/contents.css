@@ -8150,7 +8150,8 @@ button.btn_primary.btn_credit {
 .AOS_old .gsp_travlog_join,
 .AOS_old .travlog_join_swiper .swiper-slide .inner { transition: none; }
 .AOS_old .intro_area .type_list .list_benefit li,
-.AOS_old .intro_area .type_billboard .intro_airplane {opacity: 1;}
+.AOS_old .intro_area .type_billboard .intro_airplane,
+.AOS_old .intro_area .type_billboard .bottom_txt {opacity: 1;}
 .AOS_old .intro_area .type_billboard .intro_airplane {top: 0.7rem; left: -3.5rem;}
 .AOS_old .intro_area .visual_switch_area .visual_switch {background: #E44E76;}
 .AOS_old .intro_area .type_switch.play .visual_switch::after {left: 0;}
