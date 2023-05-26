@@ -8129,7 +8129,8 @@ button.btn_primary.btn_credit {
 .AOS_old .benefit_intro .chapter_08 .area_banner_txt .type_asterisk li,
 .AOS_old .intro_area .type_list .list_benefit li,
 .AOS_old .intro_area .type_list .list_txt.type_asterisk,
-.AOS_old .intro_area .type_billboard .bottom_txt {transform: none; transition: none;}
+.AOS_old .intro_area .type_billboard .bottom_txt,
+.AOS_old .intro_area .type_billboard.play .bottom_txt {transform: none; transition: none;}
 .AOS_old .benefit_intro.intro_chapter_02 .chapter_01 p,
 .AOS_old .benefit_intro .chapter_06 .area_intro_billboard .flip,
 .AOS_old .intro_area .visual_gsp_billboard .flip {display: none;}
@@ -8151,7 +8152,8 @@ button.btn_primary.btn_credit {
 .AOS_old .travlog_join_swiper .swiper-slide .inner { transition: none; }
 .AOS_old .intro_area .type_list .list_benefit li,
 .AOS_old .intro_area .type_billboard .intro_airplane,
-.AOS_old .intro_area .type_billboard .bottom_txt {opacity: 1;}
+.AOS_old .intro_area .type_billboard .bottom_txt,
+.AOS_old .intro_area .type_list .list_txt.type_asterisk {opacity: 1;}
 .AOS_old .intro_area .type_billboard .intro_airplane {top: 0.7rem; left: -3.5rem;}
 .AOS_old .intro_area .visual_switch_area .visual_switch {background: #E44E76;}
 .AOS_old .intro_area .type_switch.play .visual_switch::after {left: 0;}
