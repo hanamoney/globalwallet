@@ -3293,7 +3293,7 @@ button.btn_primary.btn_credit {
   padding: 5.6rem 2.4rem 6.4rem;
 }
 .benefit_cont + .benefit_cont {
-  padding-top: 6.4rem; 
+  border-top: 8px solid #F3F8FA;
 }
 .benefit_cont .wrap_tit {
   padding: 0;
@@ -3318,9 +3318,6 @@ button.btn_primary.btn_credit {
 }
 .benefit_cont.benefit_big {
   background: linear-gradient(147.1deg, #EAFBFF -17.36%, #FFEACA 98.48%);
-}
-.benefit_cont.benefit_big + .gsp_acco {
-  border-top: 8px solid #F3F8FA;
 }
 .benefit_cont.gsp_acco .wrap_tit + .fnSimpleAcco,
 .benefit_cont.gsp_acco .wrap_tit + .no_acco {
@@ -3750,7 +3747,7 @@ button.btn_primary.btn_credit {
   background-clip: text;
   text-fill-color: transparent;
 }
-.benefit_cont.usr_travlog_complete:not(.gsp_question) {
+.benefit_cont.usr_travlog_complete {
   background-color: #F6F8F9;
 }
 .benefit_cont.usr_travlog_complete .wrap_tit .type_gradien {
@@ -3845,6 +3842,9 @@ button.btn_primary.btn_credit {
   color: #839097;
   word-break: keep-all;
 }
+.benefit_cont .benefit_step_list li .txt.type_complete {
+  display: none;
+}
 .benefit_cont .benefit_step_list li.complete .step_num::before {
   content: '';
   position: absolute;
@@ -3869,11 +3869,27 @@ button.btn_primary.btn_credit {
 .benefit_cont .benefit_step_list li.complete .tit {
   color: #13C9BE;
 }
+.benefit_cont .benefit_step_list li.complete .tit span {
+  display: inline-block;
+}
+.benefit_cont .benefit_step_list li.complete .txt.type_normal {
+  display: none;
+}
+.benefit_cont .benefit_step_list li.complete .txt.type_complete {
+  display: block;
+}
+.benefit_cont .benefit_step_list li.type_mid {
+  align-items: center;
+}
+.benefit_cont .benefit_step_list li.type_mid .tit {
+  margin-top: 0;
+}
 .benefit_cont .benefit_step_list li.complete a::before {
   display: none;
 }
-.benefit_cont .benefit_step_list li.complete .tit span {
-  display: inline-block;
+.benefit_cont .benefit_step_list li.type_mid a::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
 }
 .benefit_cont.gsp_question .list_benefit_label button {
   display: flex;
@@ -4078,6 +4094,11 @@ button.btn_primary.btn_credit {
   background-clip: text;
   text-fill-color: transparent;
 }
+.type_credit .benefit_cont.gsp_share .wrap_tit .tit {
+  background: linear-gradient(100.33deg, #17D6A8 7.68%, #7551D9 83.12%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .type_credit .benefit_cont.gsp_acco .box_card_type .tit_2 {
   font-size: 2.4rem;
   line-height: 3.0rem;
@@ -4095,7 +4116,11 @@ button.btn_primary.btn_credit {
   font-size: 1.6rem;
 }
 .type_credit .benefit_cont.bg_pink {
+  border: 0;
   background: linear-gradient(147.1deg, #FFF4F5 -17.36%, #D5D6FF 98.48%);
+}
+.type_credit .benefit_cont.gsp_question {
+  background-color: #fff;
 }
 .type_credit .benefit_credit_cont.gsp_acco button .txt em {
   color: #E8A9E1;
@@ -4347,9 +4372,9 @@ button.btn_primary.btn_credit {
   width: 4.2rem;
 }
 .travlog_faq .section_faq_bubble .speech_bubble.left .box {
+  color: #374248;
   margin: 0;
   font-weight: 400;
-  color: #839097;
 }
 .travlog_faq .section_faq_bubble .speech_bubble.left .box::before {
   top: 2.5rem;
@@ -4413,6 +4438,7 @@ button.btn_primary.btn_credit {
   font-weight: 700;
 }
 .travlog_faq .travlog_faq_bottom_visual .txt_info dd {
+  color: #374248;
   font-size: 2.0rem;
   line-height: 2.5rem;
   font-weight: 300;
@@ -8131,6 +8157,12 @@ button.btn_primary.btn_credit {
 .AOS_old .intro_area .type_list .list_txt.type_asterisk,
 .AOS_old .intro_area .type_billboard .bottom_txt,
 .AOS_old .intro_area .type_billboard.play .bottom_txt {transform: none; transition: none;}
+.AOS_old .intro_area .type_list .list_benefit li,
+.AOS_old .intro_area .type_billboard .intro_airplane {opacity: 1;}
+.AOS_old .intro_area .type_billboard .intro_airplane {top: 0.7rem;left: -3.5rem;}
+.AOS_old .intro_area .visual_switch_area .visual_switch {background: #E44E76;}
+.AOS_old .intro_area .type_switch.play .visual_switch::after {left: 0;}
+.AOS_old .intro_area .type_switch.play .visual_switch::before {left: 0.25rem;top: 0.2rem;}
 .AOS_old .benefit_intro.intro_chapter_02 .chapter_01 p,
 .AOS_old .benefit_intro .chapter_06 .area_intro_billboard .flip,
 .AOS_old .intro_area .visual_gsp_billboard .flip {display: none;}

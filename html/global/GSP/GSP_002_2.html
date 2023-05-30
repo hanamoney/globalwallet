@@ -50,7 +50,7 @@
               </div>
               <ul class="list_benefit">
                 <li>
-                  <p><i class="img_benefit_01"></i>해외,항공,면세점,여행</p>
+                  <p><i class="img_benefit_01"></i>항공,면세점,여행</p> <!-- 23.05.30 문구변경 -->
                   <p>3% 적립</p>
                 </li>
                 <li>
@@ -429,21 +429,34 @@
               <h2 class="tit">트래블로그<br>시작하는 방법</h2>
             </div>
             <div class="benefit_step_list">
+              <!-- 23.05.30 마크업수정 -->
               <ul>
-                <li class="complete"> <!-- 완료인 경우 -->
+                <li class="type_mid complete"> <!-- 완료인 경우 -->
                   <span class="step_num">1</span>
                   <a href="#none">
                     <h3 class="tit">계좌연결하기 <span>완료</span></h3>
-                    <p class="txt">하나머니 충전을 위해 계좌연결이 필요해요!</p>
                   </a>
                 </li>
-                <li>
+                <li class="type_mid complete"> <!-- 완료인 경우 -->
+                  <span class="step_num">2</span>
+                  <a href="#none">
+                    <h3 class="tit">트래블로그 신용카드<br>발급받기 <span>완료</span></h3>
+                  </a>
+                </li>
+                <li class="type_mid">
+                  <span class="step_num">1</span>
+                  <a href="#none">
+                    <h3 class="tit">계좌연결하기 <span>완료</span></h3>
+                  </a>
+                </li>
+                <li class="type_mid">
                   <span class="step_num">2</span>
                   <a href="#none">
                     <h3 class="tit">트래블로그 신용카드<br>발급받기 <span>완료</span></h3>
                   </a>
                 </li>
               </ul>
+              <!-- // 23.05.30 마크업수정 -->
             </div>
           </div>
 
@@ -530,9 +543,9 @@
               <li class="txt_black txt_em">트래로그 신용카드(내국인) : 연회비 국내전용 / 국내외겸용(Mastercard) 2만 원</li> <!-- 23.04.28 위치변경,문구변경 / 23.04.14 문구추가 -->
               <li class="txt_black txt_em">트래블로그 서비스로 외화 환전 시 *무료환전 혜택(환율 100% 우대)을 제공합니다.<br>
                 <span class="txt_basis">총 18종 통화로 4종(미국 USD, 일본 JPY, 유럽 EUR, 영국 GBP)을 제외한 14종 통화는 이벤트로 진행</span><br>
-                <span class="txt_basis">- 10종[2023년 6월 30일까지] : 뉴질랜드 NZD, 베트남 VND, 스웨덴 SEK, 스위스 CHF, 인도네시아 IDR, 체코 CZK, 태국 THB, 필리핀 PHP, 헝가리 HUF, 홍콩 HKD</span><br>
+                <span class="txt_basis">- 10종[2023년 8월 31일까지] : 뉴질랜드 NZD, 베트남 VND, 스웨덴 SEK, 스위스 CHF, 인도네시아 IDR, 체코 CZK, 태국 THB, 필리핀 PHP, 헝가리 HUF, 홍콩 HKD</span><br> <!-- 23.05.30 문구변경 -->
                 <span class="txt_basis">- 4종[2023년 12월 31일까지] : 싱가포르 SGD, 중국 CNY, 캐나다 CAD, 호주 AUD</span></li>
-              <li class="txt_black txt_em">외화 하나머니를 원화로 환급 시, 송금 받을 때(전신환 매입률)의 환율로 적용된 원화 환산 금액에서 <strong class="txt_point_2">환급수수료(1%)가 차감된 후 입금</strong>됩니다.<br>- 환급수수료 할인 이벤트(<span>1%</span> &#9654; <span>0.5%</span>)는 2023년 6월 30일까지 진행됩니다.</li> <!-- 23.04.12 문구변경 -->
+              <li class="txt_black txt_em">외화 하나머니를 원화로 환급 시, 송금 받을 때(전신환 매입률)의 환율로 적용된 원화 환산 금액에서 <strong class="txt_point_2">환급수수료(1%)가 차감된 후 입금</strong>됩니다.</li> <!-- 23.05.30 / 23.04.12 문구변경 -->
               <li class="txt_black txt_em">외화 하나머니 사용(결제 및 ATM 인출)시 반드시 트래블로그 카드 발급이 필요합니다.</li>
               <li class="txt_black txt_em">충전한 원화 하나머니는 하나머니 앱 내 ‘ATM출금’ 기능을 이용하여 국내 인출이 가능하며, 환전한 외화 하나머니의 현금 인출은 해외 ATM에서만 가능합니다. (국내 은행 및 국내 ATM 인출 불가)</li>
               <li class="txt_black txt_em">트래블로그 서비스는 하나은행, 하나증권, 하나저축은행 중 하나의 본인 실명 계좌 등록 후 사용이 가능합니다.</li>
@@ -618,17 +631,18 @@
       }
     });
 
-    //상단탭이동
+    //상단탭이동 <!-- 23.05.30 수정
+      var headerH = $('#header').outerHeight(true);
     $('.wrap_tab_btn li a').on('click', function() {  
-      $('html, body').animate({scrollTop: $(this.hash).offset().top - 60}, 500);
+      $('html, body').animate({scrollTop: $(this.hash).offset().top - headerH}, 500);
       return false;
     });
 
-    //스크롤에 맞춰서 탭버튼 활성화
+    //스크롤에 맞춰서 탭버튼 활성화 <!-- 23.05.30 수정
     $(window).on('scroll', function(){
-      var benefit = $("#benefit").offset().top - 64;
-      var use = $("#use").offset().top - 64;
-      var tmi = $("#tmi").offset().top - 64;
+      var benefit = $("#benefit").offset().top - headerH - 5;
+      var use = $("#use").offset().top - headerH - 5;
+      var tmi = $("#tmi").offset().top - headerH -5;
       var dot = $(".wrap_tab_btn li");
       var wScroll = $(this).scrollTop();
       if(wScroll >= benefit){
@@ -644,14 +658,12 @@
         dot.eq(2).addClass('on');
       }
 
-      // <!-- 23.05.23 추가 스크립트 scroll 위치에 따라 컨텐츠 변화
+      // <!-- 23.05.30 수정 스크립트 scroll 위치에 따라 컨텐츠 변화
       var scrollTop = $(this).scrollTop();
       var fontRatio = parseFloat($("html").css("font-size"));
-      var divOffset = $("#benefit").offset().top - (9.8 * fontRatio);
-      var listOffset = $(".type_list").offset().top - ($(this).height() * 0.3);
+      var divOffset = $(".benefit_tab").offset().top - headerH;
       var listOffset = $(".type_list").offset().top - ($(this).height() * 0.3);
       var switchOffset = $(".type_switch").offset().top - ($(this).height() * 0.3);
-      
       var $header = $('#header');
       var $list = $('.type_list');
       var $switch = $('.type_switch');
