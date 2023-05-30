@@ -632,7 +632,7 @@
     });
 
     //상단탭이동 <!-- 23.05.30 수정
-      var headerH = $('#header').outerHeight(true);
+    var headerH = $('#header').outerHeight(true);
     $('.wrap_tab_btn li a').on('click', function() {  
       $('html, body').animate({scrollTop: $(this.hash).offset().top - headerH}, 500);
       return false;
