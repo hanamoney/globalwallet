@@ -17,6 +17,7 @@
   <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
   <script src="../../../js/hmui/ui_common.js"></script>
   <style>
+    /* 23.06.01 수정 [s] */
     .hmn209 {background: linear-gradient(118.94deg, rgba(255, 194, 194, 0.7) 0.6%, rgba(240, 203, 247, 0.7) 42.02%, rgba(195, 210, 247, 0.7) 65.31%, rgba(155, 221, 207, 0.7) 100%), #FFFFFF;}
     .hmn209 .content_layer {overflow: visible;background: url('../../../images/global/visual_hmn_209.png') no-repeat top center;background-size:100%;}
     .hmn209 .wrap_tit {padding: 0;}
@@ -29,6 +30,7 @@
     .visual_travlog_100m .img_travlog_100 {max-width: 33rem;margin: -2.37rem auto -1.87rem;}
     .visual_travlog_100m .img_travlog_hands {max-width: 31.2rem;margin: 0.8rem auto 0;}
     .wrap_layer .hmn209 .wrap_btn.type_full {margin-top: 0rem;}
+    /* 23.06.01 수정 [e] */
   </style>
 </head>
 <body>
@@ -42,17 +44,21 @@
     <div id="popupId" class="wrap_layer type_center" data-dim="true" data-pageid="HMN209"><!-- native dim 미사용 시 data-dim="true" 추가 -->
       <div class="inner_layer hmn209">
         <div class="content_layer">
+          <!-- 23.06.01 마크업변경 [s] -->
           <div class="wrap_tit type_center">
-            <p class="tit">트래블로그 100만 돌파 이벤트</p>
+            <!-- <p class="tit">트래블로그 100만 돌파 이벤트</p> --> <!-- 본이벤트문구 -->
+            <p class="tit">트래블로그 100만 돌파</p> <!-- 사전이벤트문구 -->
           </div>
           <div class="visual_travlog_100m">
             <img src="../../../images/global/img_travlog_100.png" class="img_travlog_100">
-            <p class="txt">총 3천만 원 경품의<br>주인공이 되어보세요<span class="txt_ico_01">&#9825;</span><span class="txt_ico_02">&#9829;</span></p>
+            <!-- <p class="txt">총 3천만 원 경품의<br>주인공이 되어보세요<span class="txt_ico_01">&#9825;</span><span class="txt_ico_02">&#9829;</span></p> --> <!-- 본이벤트문구 -->
+            <p class="txt">지금 바로 이벤트 사전알림<br>신청하세요&#9829;</p> <!-- 사전이벤트문구 -->
             <img src="../../../images/global/img_travlog_hands.png" class="img_travlog_hands">
           </div>
           <div class="wrap_btn type_full">
             <button type="button" class="btn_box_m btn_primary">자세히 보기</button>
           </div>
+          <!-- 23.06.01 마크업변경 [e] -->
         </div>
         <div class="wrap_fixed_outside type_justify">
           <span class="chk type_sub">
