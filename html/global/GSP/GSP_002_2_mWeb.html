@@ -21,7 +21,7 @@
   <style>
   #header .btn_ico_share_header {right: 2.2rem;}
   .wrap_btn_full .type_ico .ico_share_w {width: 2.2rem;height: 2.2rem;background-image: url('../../../images/hmui/ico_share_w.png');}
-  .btn_full_secondary {background-color: #7F54F9;color: #fff;}
+  .btn_full_secondary {background: linear-gradient(72.42deg, #8B69EF 11.27%, #459BCE 90.38%); box-shadow: 0px 6px 14px rgba(124, 156, 230, 0.6); color: #fff;} /* <!-- 23.06.02 변경 */
   </style>
 </head>
 <body>
@@ -436,25 +436,27 @@
             <div class="benefit_step_list">
               <!-- 23.05.30 마크업수정 -->
               <ul>
-                <li class="type_mid complete"> <!-- 완료인 경우 -->
+                <li class="type_mid complete"> <!-- 완료인 경우 --> <!-- 23.06.02 type_mid 누락클래스 -->
                   <span class="step_num">1</span>
                   <a href="#none">
-                    <h3 class="tit">계좌연결하기 <span>완료</span></h3>
+                    <h3 class="tit">계좌 연결하기 <span>완료</span></h3> <!-- 23.06.02 문구변경 -->
+                    <p class="txt type_normal">하나머니 충전을 위해 계좌 연결이 필요해요!</p> <!-- 23.06.02 문구추가 -->
                   </a>
                 </li>
-                <li class="type_mid complete"> <!-- 완료인 경우 -->
+                <li class="complete"> <!-- 완료인 경우 -->
                   <span class="step_num">2</span>
                   <a href="#none">
                     <h3 class="tit">트래블로그 신용카드<br>발급받기 <span>완료</span></h3>
                   </a>
                 </li>
-                <li class="type_mid">
+                <li class="type_mid"> <!-- 23.06.02 type_mid 누락클래스 -->
                   <span class="step_num">1</span>
                   <a href="#none">
-                    <h3 class="tit">계좌연결하기 <span>완료</span></h3>
+                    <h3 class="tit">계좌 연결하기 <span>완료</span></h3> <!-- 23.06.02 문구변경 -->
+                    <p class="txt type_normal">하나머니 충전을 위해 계좌연결이 필요해요!</p> <!-- 23.06.02 문구추가 -->
                   </a>
                 </li>
-                <li class="type_mid">
+                <li>
                   <span class="step_num">2</span>
                   <a href="#none">
                     <h3 class="tit">트래블로그 신용카드<br>발급받기 <span>완료</span></h3>
@@ -611,28 +613,15 @@
   $(window).load(function(){
     //화면로드되고 애니메이션
     $('.btn_benefit').addClass('active');
-  });
-  $(function(){
-    // 해외 혜택 토글 <!-- 23.04.21 추가
-    $('.btn_benefit_toggle label').click(function(){
-      var checked = $('#benefit_switch').is(':checked');
-      if(checked){
-        $('.benefit_toggle').addClass('benefit_toggle_01');
-        $('.benefit_toggle').removeClass('benefit_toggle_02');
-      } else {
-        $('.benefit_toggle').addClass('benefit_toggle_02');
-        $('.benefit_toggle').removeClass('benefit_toggle_01');
-      }
-    });
 
-    //상단탭이동 <!-- 23.05.30 수정
+    //상단탭이동 <!-- 23.06.02 위치이통 / 23.05.30 수정
       var headerH = $('#header').outerHeight(true);
     $('.wrap_tab_btn li a').on('click', function() {  
       $('html, body').animate({scrollTop: $(this.hash).offset().top - headerH}, 500);
       return false;
     });
 
-    //스크롤에 맞춰서 탭버튼 활성화 <!-- 23.05.30 수정
+    //스크롤에 맞춰서 탭버튼 활성화 <!-- 23.06.02 위치이통 / 23.05.30 수정
     $(window).on('scroll', function(){
       var benefit = $("#benefit").offset().top - headerH - 5;
       var use = $("#use").offset().top - headerH - 5;
@@ -675,6 +664,20 @@
         $switch.addClass('play');
       }
     })
+  });
+
+  $(function(){
+    // 해외 혜택 토글 <!-- 23.04.21 추가
+    $('.btn_benefit_toggle label').click(function(){
+      var checked = $('#benefit_switch').is(':checked');
+      if(checked){
+        $('.benefit_toggle').addClass('benefit_toggle_01');
+        $('.benefit_toggle').removeClass('benefit_toggle_02');
+      } else {
+        $('.benefit_toggle').addClass('benefit_toggle_02');
+        $('.benefit_toggle').removeClass('benefit_toggle_01');
+      }
+    });
 
     // <!-- 23.05.23 인트로관련 스크립트 삭제
   });

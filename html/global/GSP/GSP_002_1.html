@@ -612,45 +612,15 @@
   $(window).load(function(){
     //화면로드되고 애니메이션
     $('.btn_benefit').addClass('active');
-  });
-  $(function(){
-    //유튜브 api
-    var youtubeScriptTag = document.createElement('script');
-    youtubeScriptTag.src = 'https://www.youtube.com/iframe_api';
-    document.body.appendChild(youtubeScriptTag);
-    var players = [];
-    var isVideoPlaying = false;
-    window.onYouTubeIframeAPIReady = () => {
-      var youtubeSlides = document.querySelectorAll('.youtube');
-      youtubeSlides.forEach((youtubeSlide, index) => {
-        players[index] = new YT.Player(youtubeSlide.querySelector('.player'), {
-          videoId: youtubeSlide.dataset.videoId,
-          playerVars: {
-            rel: 0,
-            playsinline: 1,
-          }
-        });
-      });
-    };
-    var closeButtons = document.querySelectorAll('.fnClosePop');
-    closeButtons.forEach(function(button) {
-      button.addEventListener('click', function() {
-        players.forEach(function(player) {
-          if (player && player.getPlayerState() === YT.PlayerState.PLAYING) {
-            player.pauseVideo();
-          }
-        });
-      });
-    });
 
-    //상단탭이동 <!-- 23.05.30 수정
-    var headerH = $('#header').outerHeight(true);
+    //상단탭이동 <!-- 23.06.02 위치이통 / 23.05.30 수정
+      var headerH = $('#header').outerHeight(true);
     $('.wrap_tab_btn li a').on('click', function() {  
       $('html, body').animate({scrollTop: $(this.hash).offset().top - headerH}, 500);
       return false;
     });
 
-    //스크롤에 맞춰서 탭버튼 활성화 <!-- 23.05.30 수정
+    //스크롤에 맞춰서 탭버튼 활성화 <!-- 23.06.02 위치이통 / 23.05.30 수정
     $(window).on('scroll', function(){
       var benefit = $("#benefit").offset().top - headerH - 5;
       var use = $("#use").offset().top - headerH - 5;
@@ -695,7 +665,7 @@
 
     // <!-- 23.05.23 인트로관련 스크립트 삭제
 
-    // flip 관련 스크립트
+    // <!-- 23.06.02 위치이통 / flip 관련 스크립트
     function flipListItems(intervalDuration) {
       var listItems = document.querySelectorAll('.flip li');
       var currentIndex = 0;
@@ -718,6 +688,36 @@
       intervalId = setInterval(activateNextItem, intervalDuration);
     };
     var isFlipListItemsExecuted = false;
+  });
+  $(function(){
+    //유튜브 api
+    var youtubeScriptTag = document.createElement('script');
+    youtubeScriptTag.src = 'https://www.youtube.com/iframe_api';
+    document.body.appendChild(youtubeScriptTag);
+    var players = [];
+    var isVideoPlaying = false;
+    window.onYouTubeIframeAPIReady = () => {
+      var youtubeSlides = document.querySelectorAll('.youtube');
+      youtubeSlides.forEach((youtubeSlide, index) => {
+        players[index] = new YT.Player(youtubeSlide.querySelector('.player'), {
+          videoId: youtubeSlide.dataset.videoId,
+          playerVars: {
+            rel: 0,
+            playsinline: 1,
+          }
+        });
+      });
+    };
+    var closeButtons = document.querySelectorAll('.fnClosePop');
+    closeButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        players.forEach(function(player) {
+          if (player && player.getPlayerState() === YT.PlayerState.PLAYING) {
+            player.pauseVideo();
+          }
+        });
+      });
+    });
 
     //쇼츠 이미지 슬라이드
     var swiper = new Swiper('.gsp_swiper', {

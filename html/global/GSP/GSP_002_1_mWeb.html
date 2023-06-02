@@ -21,7 +21,7 @@
   <style>
   #header .btn_ico_share_header {right: 2.2rem;}
   .wrap_btn_full .type_ico .ico_share_w {width: 2.2rem;height: 2.2rem;background-image: url('../../../images/hmui/ico_share_w.png');}
-  .btn_full_secondary {background-color: #7F54F9;color: #fff;}
+  .btn_full_secondary {background: linear-gradient(72.42deg, #8B69EF 11.27%, #459BCE 90.38%); box-shadow: 0px 6px 14px rgba(124, 156, 230, 0.6); color: #fff;} /* <!-- 23.06.02 변경 */
   </style>
 </head>
 <body>
@@ -608,6 +608,82 @@
   $(window).load(function(){
     //화면로드되고 애니메이션
     $('.btn_benefit').addClass('active');
+
+    //상단탭이동 <!-- 23.06.02 위치이통 / 23.05.30 수정
+      var headerH = $('#header').outerHeight(true);
+    $('.wrap_tab_btn li a').on('click', function() {  
+      $('html, body').animate({scrollTop: $(this.hash).offset().top - headerH}, 500);
+      return false;
+    });
+
+    //스크롤에 맞춰서 탭버튼 활성화 <!-- 23.06.02 위치이통 / 23.05.30 수정
+    $(window).on('scroll', function(){
+      var benefit = $("#benefit").offset().top - headerH - 5;
+      var use = $("#use").offset().top - headerH - 5;
+      var tmi = $("#tmi").offset().top - headerH -5;
+      var dot = $(".wrap_tab_btn li");
+      var wScroll = $(this).scrollTop();
+      if(wScroll >= benefit){
+        dot.removeClass('on');
+        dot.eq(0).addClass('on');
+      }
+      if(wScroll >= use){
+        dot.removeClass('on');
+        dot.eq(1).addClass('on');
+      }
+      if(wScroll >= tmi){
+        dot.removeClass('on');
+        dot.eq(2).addClass('on');
+      }
+
+      // <!-- 23.06.02 위치이통 / 23.05.30 수정 스크립트 scroll 위치에 따라 컨텐츠 변화
+      var scrollTop = $(this).scrollTop();
+      var fontRatio = parseFloat($("html").css("font-size"));
+      var divOffset = $(".benefit_tab").offset().top - headerH;
+      var boardOffset = $(".type_billboard").offset().top - ($(this).height() * 0.3);
+      var $header = $('#header');
+      var $billboard = $('.type_billboard');
+
+      if (scrollTop >= divOffset) {
+        $header.removeClass('type_white type_check');
+      } else {
+        $header.addClass('type_white type_check');
+      }
+
+      if (scrollTop >= boardOffset && !isFlipListItemsExecuted) {
+        $billboard.addClass('play');
+        setTimeout(function() {
+          flipListItems(210);
+        }, 100);
+        isFlipListItemsExecuted = true;
+      }
+    })
+
+    // <!-- 23.05.23 인트로관련 스크립트 삭제
+
+    // <!-- 23.06.02 위치이통 / flip 관련 스크립트
+    function flipListItems(intervalDuration) {
+      var listItems = document.querySelectorAll('.flip li');
+      var currentIndex = 0;
+      var intervalId;
+
+      function activateNextItem() {
+        var lastIndex = listItems.length - 1;
+        var previousIndex = currentIndex;
+        currentIndex = (currentIndex + 1) % listItems.length;
+
+        listItems[previousIndex].classList.remove('active');
+        listItems[previousIndex].classList.add('before');
+        listItems[currentIndex].classList.remove('before');
+        listItems[currentIndex].classList.add('active');
+
+        if (currentIndex === lastIndex) {
+          clearInterval(intervalId);
+        }
+      }
+      intervalId = setInterval(activateNextItem, intervalDuration);
+    };
+    var isFlipListItemsExecuted = false;
   });
   $(function(){
     //유튜브 api
@@ -638,82 +714,6 @@
         });
       });
     });
-
-    //상단탭이동 <!-- 23.05.30 수정
-      var headerH = $('#header').outerHeight(true);
-    $('.wrap_tab_btn li a').on('click', function() {  
-      $('html, body').animate({scrollTop: $(this.hash).offset().top - headerH}, 500);
-      return false;
-    });
-
-    //스크롤에 맞춰서 탭버튼 활성화 <!-- 23.05.30 수정
-    $(window).on('scroll', function(){
-      var benefit = $("#benefit").offset().top - headerH - 5;
-      var use = $("#use").offset().top - headerH - 5;
-      var tmi = $("#tmi").offset().top - headerH -5;
-      var dot = $(".wrap_tab_btn li");
-      var wScroll = $(this).scrollTop();
-      if(wScroll >= benefit){
-        dot.removeClass('on');
-        dot.eq(0).addClass('on');
-      }
-      if(wScroll >= use){
-        dot.removeClass('on');
-        dot.eq(1).addClass('on');
-      }
-      if(wScroll >= tmi){
-        dot.removeClass('on');
-        dot.eq(2).addClass('on');
-      }
-
-      // <!-- 23.05.30 수정 스크립트 scroll 위치에 따라 컨텐츠 변화
-      var scrollTop = $(this).scrollTop();
-      var fontRatio = parseFloat($("html").css("font-size"));
-      var divOffset = $(".benefit_tab").offset().top - headerH;
-      var boardOffset = $(".type_billboard").offset().top - ($(this).height() * 0.3);
-      var $header = $('#header');
-      var $billboard = $('.type_billboard');
-
-      if (scrollTop >= divOffset) {
-        $header.removeClass('type_white type_check');
-      } else {
-        $header.addClass('type_white type_check');
-      }
-
-      if (scrollTop >= boardOffset && !isFlipListItemsExecuted) {
-        $billboard.addClass('play');
-        setTimeout(function() {
-          flipListItems(210);
-        }, 100);
-        isFlipListItemsExecuted = true;
-      }
-    })
-
-    // <!-- 23.05.23 인트로관련 스크립트 삭제
-
-    // flip 관련 스크립트
-    function flipListItems(intervalDuration) {
-      var listItems = document.querySelectorAll('.flip li');
-      var currentIndex = 0;
-      var intervalId;
-
-      function activateNextItem() {
-        var lastIndex = listItems.length - 1;
-        var previousIndex = currentIndex;
-        currentIndex = (currentIndex + 1) % listItems.length;
-
-        listItems[previousIndex].classList.remove('active');
-        listItems[previousIndex].classList.add('before');
-        listItems[currentIndex].classList.remove('before');
-        listItems[currentIndex].classList.add('active');
-
-        if (currentIndex === lastIndex) {
-          clearInterval(intervalId);
-        }
-      }
-      intervalId = setInterval(activateNextItem, intervalDuration);
-    };
-    var isFlipListItemsExecuted = false;
 
     //쇼츠 이미지 슬라이드
     var swiper = new Swiper('.gsp_swiper', {

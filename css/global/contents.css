@@ -3878,18 +3878,17 @@ button.btn_primary.btn_credit {
 .benefit_cont .benefit_step_list li.complete .txt.type_complete {
   display: block;
 }
-.benefit_cont .benefit_step_list li.type_mid {
+.benefit_cont .benefit_step_list li.type_mid .tit {
+  margin-top: 0.8rem;
+}
+.benefit_cont .benefit_step_list li.type_mid.complete {
   align-items: center;
 }
-.benefit_cont .benefit_step_list li.type_mid .tit {
+.benefit_cont .benefit_step_list li.type_mid.complete .tit {
   margin-top: 0;
 }
 .benefit_cont .benefit_step_list li.complete a::before {
   display: none;
-}
-.benefit_cont .benefit_step_list li.type_mid a::before {
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
 }
 .benefit_cont.gsp_question .list_benefit_label button {
   display: flex;
