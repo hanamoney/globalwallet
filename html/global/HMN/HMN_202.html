@@ -16,6 +16,20 @@
   <script src="../../../js/hmui/lib/waypoints.min.js"></script>
   <script src="../../../js/hmui/lib/jquery.counterup.js"></script>
   <script src="../../../js/hmui/ui_common.js"></script>
+  <style>
+    /* 23.06.01 수정 [s] */
+    .hmn202 {background: linear-gradient(118.94deg, rgba(255, 194, 194, 0.7) 0.6%, rgba(240, 203, 247, 0.7) 42.02%, rgba(195, 210, 247, 0.7) 65.31%, rgba(155, 221, 207, 0.7) 100%), #FFFFFF;}
+    .hmn202 .content_layer {overflow: visible;background: url('../../../images/global/visual_hmn_209.png') no-repeat top -2rem center;background-size:100%;}
+    .hmn202 .content_layer::before {display: none !important;}
+    .hmn202 .wrap_tit .tit {color: #3D5770;font-size: 2.0rem;line-height: 1.32;font-weight: 700;}
+    .visual_travlog_100m {margin: 0 -0.8rem;}
+    .visual_travlog_100m .txt {margin-top:1.5rem; color: #3D5770;font-size: 3.2rem;line-height: 1.28;font-weight: 700;text-align: center;}
+    .visual_travlog_100m .txt .txt_ico_01 {font-size: 3.2rem;letter-spacing: -0.5rem;}
+    .visual_travlog_100m .txt .txt_ico_02 {position: relative;font-size: 2.0rem;left: -1rem;}
+    .visual_travlog_100m img {display: block;}
+    .visual_travlog_100m .img_travlog_100 {max-width: 33rem;margin: -2.37rem auto -1.87rem;}
+    /* 23.06.01 수정 [e] */
+  </style>
 </head>
 <body>
   <main id="root">
@@ -25,29 +39,35 @@
     <!-- // contents-->
 
     <!-- popup -->
-    <div id="popupId" class="wrap_layer">
-      <div class="inner_layer">
-        <div class="content_layer">
-          <div class="wrap_banner hmn_202">
-            <!-- 22.06.14 문구변경 -->
-            <p class="txt_sub_2">외화 하나머니를 충전하셨네요!</p> <!-- 23.04.26 문구변경 -->
-            <p class="tit_sub">환전한 외화를 사용하려면<br>트래블로그 카드가<br>꼭 필요해요.</p><!-- 23.03.24 / 22.08.10 문구변경 -->
-            <!-- // 22.06.14 문구변경 -->
-            <!-- 22.08.10 삭제 / 22.06.17 문구추가 -->
-            <!-- <div class="wrap_btn_center">
-              <button type="button" class="btn_txt txt_point_1">3일간 보지 않기</button>
-            </div> -->
-            <!-- // 22.08.10 삭제 / 22.06.17 문구추가 -->
+    <!-- 23.06.12 마크업변경 [s] -->
+    <div id="popupId" class="wrap_layer" data-dim="true"> <!-- native dim 미사용 시 data-dim="true" 추가 -->
+      <div class="inner_layer hmn202">
+        <div class="content_layer type_bg">
+          <div class="wrap_tit type_center">
+            <p class="tit">트래블로그 100만 돌파 이벤트</p>
+          </div>
+          <div class="visual_travlog_100m">
+            <img src="../../../images/global/img_travlog_100.png" class="img_travlog_100">
+            <p class="txt">총 경품 3천만원의<br>주인공이 되어보세요<span class="txt_ico_01">&#9825;</span><span class="txt_ico_02">&#9829;</span></p>
           </div>
         </div>
         <div class="section_bottom_fixed">
           <div class="wrap_btn_full">
-            <button type="button" class="btn_full_primary fnClosePop">카드 신청하기</button><!-- 22.06.14 문구변경 -->
+            <button type="button" class="btn_full_primary fnClosePop">지금 혜택받기</button>
           </div>
         </div>
-        <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+        <div class="wrap_fixed_outside pos_top type_justify">
+          <span class="chk type_sub">
+            <input type="checkbox" id="chk1" name="chk1"/>
+            <label for="chk1">
+              <span class="label">3일동안 보지 않기</span>
+            </label>
+          </span>
+          <button type="button" class="btn_ico_close_circle fnClosePop"><span class="blind">닫기</span></button>
+        </div>
       </div>
     </div>
+    <!-- // 23.06.12 마크업변경 [e] -->
     <!-- // popup -->
 
   </main>
