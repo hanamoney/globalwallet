@@ -7953,6 +7953,74 @@ button.btn_primary.btn_credit {
     animation-delay: 1.1s;
   }
 }
+/* [CMN] - 404 에러 */
+/* CMN_001 */
+.type_error_404 .page_full_flex {
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  min-height: auto;
+}
+.type_error_404 .wrap_tit {
+  padding: 1.4rem 0 0;
+}
+.type_error_404 .wrap_tit::before {
+  content: '';
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto 2.4rem;
+  background: url("../../images/global/logo_cmn_hanamoney.png") no-repeat center;
+  background-size: 100%;
+}
+.type_error_404 .wrap_tit .tit {
+  letter-spacing: -0.14rem;
+}
+.type_error_404 .wrap_tit .txt {
+  margin-top: 0.8rem;
+  color: #839097;
+  letter-spacing: -0.08rem;
+}
+.type_error_404 .wrap_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 41.4rem;
+  margin: 4rem auto 0;
+  padding: 2.4rem;
+  border-radius: 1.4rem;
+}
+.type_error_404 .wrap_box .txt {
+  color: #69777E;
+  font-size: 1.6rem;
+  letter-spacing: -0.08rem;
+}
+.type_error_404 .wrap_box .link_phone {
+  padding-left: 2rem;
+  background: url("../../images/global/ico_cmn_phone.svg") no-repeat left center;
+  background-size: 1.6rem;
+  color: #374248;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.type_error_404 .wrap_btn {
+  position: fixed;
+  right: 0;
+  bottom: calc(6rem + 2.4rem);
+  left: 0;
+  padding-top: 2.4rem;
+  text-align: center;
+}
+.type_error_404 .wrap_btn .btn_txt {
+  color: #00928F;
+  font-size: 1.6rem;
+  letter-spacing: -0.08rem;
+}
+@media screen and (max-height: 540px) {
+  .type_error_404 .wrap_btn {
+    position: static;
+    padding-bottom: calc(6rem + 2.4rem);
+  }
+}
 @supports ((-webkit-backdrop-filter:none) or (backdrop-filter:none)) {
   .wrap_box_blur .inner_box {
     background-color: transparent;
