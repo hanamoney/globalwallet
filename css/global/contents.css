@@ -7955,10 +7955,9 @@ button.btn_primary.btn_credit {
 }
 /* [CMN] - 404 에러 */
 /* CMN_001 */
-.type_error_404 .page_full_flex {
+.type_error_404 {
   padding-left: 2.4rem;
   padding-right: 2.4rem;
-  min-height: auto;
 }
 .type_error_404 .wrap_tit {
   padding: 1.4rem 0 0;
