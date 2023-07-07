@@ -208,7 +208,7 @@
 
   /* 팝업 */
   .pop_wrap {display:none;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.7);z-index:120;will-change:opacity;transition:opacity 0.3s;}
-  .pop_wrap .inner_layer{position:relative;padding-top:5.76rem;}
+  .pop_wrap .inner_layer{position:relative;padding-top:calc(5.76rem + var(--safeTop)); }
   .pop_wrap .inner_layer:not(.load){background:url('../../../../../../resources/event/images/goldbar/white_gd.png') no-repeat top center;background-size:contain;}
   .pop_wrap .inner_layer p {font-family:'Gmarket';font-size:1.7rem;font-weight:400;color:#fff;text-align:center;line-height:145%;}
   .pop_wrap .inner_layer .msg {display:block;width:25.6rem;height:4.2rem;margin:0 auto 1rem;-webkit-border-radius:2.1rem;border-radius:2.1rem;background:#fff;}
@@ -250,8 +250,8 @@
 	.box_link .chair {position:absolute;right:calc(52 / var(--width) * 100%);bottom:calc(88 / 1374 * 100%);width:calc(249 / var(--width) * 100%);}
 	.box_link .bebe {position:absolute;width:calc(284 / var(--width) * 100%);height:calc(406 /1374 * 100%);bottom:calc(69 / 1374 * 100%);right:calc(42 / var(--width) * 100%);transform:translateY(calc(34 / 1374 * 100rem));animation:bebe 5.5s infinite ease-in-out;}
 	.box_link .bebe_body {position:absolute;right:calc(41 / 284 * 100%);bottom:calc(157 / 406 * 100%);width:calc(260 / 284 * 100%)}
-	.box_link .left_hand {position:absolute;right:calc(276 / 284 * 100%);bottom:calc(270 / 406 * 100%);width:calc(19 / 284 * 100%);}
-	.box_link .right_hand {position:absolute;right:calc(75 / 284 * 100%);bottom:calc(249 / 406 * 100%);width:calc(18 / 284 * 100%);}
+	.box_link .left_hand {position:absolute;right:calc(275 / 284 * 100%);bottom:calc(266 / 406 * 100%);width:calc(23 / 284 * 100%);}
+	.box_link .right_hand {position:absolute;right:calc(68 / 284 * 100%);bottom:calc(244 / 406 * 100%);width:calc(25 / 284 * 100%);}
 	.box_link .spoon {position:absolute;right:calc(271 / 284 * 100%);bottom:calc(266 / 406 * 100%);width:calc(55 / 284 * 100%);transform-origin:bottom right;animation:spoon 0.9s infinite linear;}
 	.box_link .pork {position:absolute;right:calc(55 / 284 * 100%);bottom:calc(243 / 406 * 100%);width:calc(43 / 284 * 100%); transform-origin:bottom left;animation:pork 0.9s infinite linear;}
 	.sherbet .status {padding-bottom:calc(170 / var(--width) * 100%);background:url('../../../../../../resources/event/images/goldbar/seasonal/april2023_evt_02.jpg') no-repeat top left;background-size:100%;}
@@ -419,7 +419,7 @@
   var invH = window.innerHeight;
   var shown = false;
   var sclPos = 0;		
-  var carrot = 6; 
+  var carrot = 6;
   var myStatus = [0,0,1]; // 응모결과 [ X , 하나머니당첨, 골드바 당첨 ]  
   
   // myStatus[0]=true; //당첨없음
