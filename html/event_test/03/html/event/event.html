@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/swiper.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/mediaquery.css">
+	<script src="../../js/jquery-1.12.3.min.js"></script>
+	<script src="../../js/common_ver_02.js"></script><!-- 퍼블전용 js import 하지 마세요 -->
+	<script src="../../js/swiper.js"></script>
+	<script src="../../js/jquery.easing.1.3.js"></script>
+	<script src="../../js/TweenMax.js"></script>
+	<title> dir01_01 - dir01 - hanamembers</title>
+</head>
+<body>
+	<div id="contents" class="wrap_contents">
+		<div class="contents">
+			<section data-roll="">
+				<div class="list_smartMedia">
+					<div class="box_link">
+						<img src="../../images/event/infi_travlog_apr_01.jpg" aria-hidden="true" alt=""><!-- 2023.03.21 수정 -->
+ 						<h2 class="screen_out">초대장 보내고 여행자금 모으기</h2> 
+						<p class="screen_out">2023.04.01 ~ 2023.04.30</p> <!-- 2023.03.21 수정 -->
+						<p class="screen_out">하나머니의 <em>트래블로그 혜택</em>을 많은 친구들에게 알려주세요!</p> 
+ 					</div>
+					<div class="box_link" id="evt_1">
+						<img src="../../images/event/infi_travlog_mar_02.jpg" aria-hidden="true" alt="">
+ 						<h3 class="screen_out">여행자금 모으기</h3>
+						<h5 class="screen_out">초대장을 보내면 <em>10 하나머니</em><br>(최대 200명)</h5>
+						<h5 class="screen_out">친구가 신규 가입하면 <em>2,000 하나머니</em><br>(무제한)</h5>
+  					</div>
+					<div class="box_link" id="evt_2">
+						<img src="../../images/event/infi_travlog_mar_03.jpg" aria-hidden="true" alt="">
+						<h3 class="screen_out">초대받은 친구 혜택</h3>
+						<h5 class="screen_out">초대받은 친구는 <em>최대 5만 하나머니 ~ 1천 하나머니</em></h5>
+						<h5 class="screen_out">친구 초대코드로 <em>친구도 나도 여행자금 무제한</em> 모으세요!</h5>
+   					</div>
+					<div class="box_link" id="evt_3">
+						<h3 class="screen_out">나의 여행자금</h3>
+						<div class="status">
+							<dl class="m_total">
+								<dt>모은 하나머니</dt>
+								<dd></dd>
+							</dl>
+							<a class="btn_refresh" href="javascript:void(0)" target="_self" title="'나의 참여 현황 새로고침 버튼"><img src="../../images/event/btn_refresh.png" alt="새로고침"></a>
+							<dl class="f_invi">
+								<dt>보낸 초대장</dt>
+								<dd></dd>
+							</dl>
+							<dl class="f_join">
+								<dt>가입한 친구</dt>
+								<dd></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="box_link">
+						<img src="../../images/event/infi_travlog_apr_05.jpg" aria-hidden="true" alt=""> <!-- 2023.03.21 수정 -->
+						<dl class="screen_out">
+							<dt><h3>하나머니 지급일</h3></dt>
+							<dd>2023.05.11(목) 이전</dd> <!-- 2023.03.21 수정 -->
+						</dl>
+					</div>
+					<div class="box_link invitation">
+						<h4 class="screen_out">나의 초대코드</h4>
+						<a class="btn_gnerate" target="_self" href="#link" title="초대코드 생성">초대코드 생성</a> 
+						<form class="copy-code">
+							<input type="text" id="ucode" class="your-code" value="ABCDEFG123" readonly>
+						</form>
+ 						<p class="screen_out">초대코드를 복사해서 보내면 친구가 편리하게 입력할 수 있어요!</p>
+					</div>
+ 					<div class="box_link">
+						<img src="../../images/event/infi_travlog_apr_07.jpg" aria-hidden="true" alt=""><!-- 2023.03.21 수정 -->
+						<h4 class="screen_out">안내사항</h4>
+						<ul class="screen_out">
+							<li>
+								<em>친구초대 혜택은 친구가 신규 가입 또는 1년 이상 미이용한 휴면 회원일 경우 지급됩니다.</em> 
+								<dl>
+									<dt>미이용 회원이란?</dt>
+									<dd>최근 1년 하나머니 로그인, 하나머니 적립/사용, 하나머니 고객센터 상담, 하나머니 서비스와 연계한 하나금융 관게사 이용 실적이 없는 회원</dd>									    
+								</dl>
+							</li>
+							<li>5만 하나머니 초과 지급 대상자 분들께는 2023.05.09(화) 경 고객센터에서 연락드릴 예정이며, 2023.05.11(목)까지 전화 연결이 어려우실 경우 제세공과금 처리가 불가하여 5만 하나머니만 지급해드립니다.</li><!-- 2023.03.21 수정 -->
+							<li>경품에 대한 제세공과금은 하나머니에서 부담합니다.</li>
+							<li>친구초대를 비정상적인 방법으로 참여시 하나머니 적립이 제한될 수 있습니다.</li>
+							<li>본 이벤트는 하나머니의 사정에 의해 사전고지 없이 변경 또는 중단될 수 있습니다. (단, 이미 조건을 충족하신 분께는 혜택이 제공됩니다.)</li>
+							<li>문의 : 하나머니 고객센터 (1800-0000) </li> 
+						</ul>
+						
+					</div>
+					<div class="box_link">
+						<img src="../../images/event/infi_travlog_mar_08.jpg" aria-hidden="true" alt=""> 
+						<p class="screen_out">하나카드 준법심의 M-22-0121(2022.05.20 ~ 2023.05.19)</p> 
+					</div>
+ 			</section>
+			</div>
+		</div>
+	</div>
+	<div class="page_footer">
+		<div class="page_footer_fix nav_fix bg_white">
+			<a class="btn_greenFull" href="#insert_url" target="_blank" title="카카오톡 초대장 보내기"><b>카카오톡 초대장 보내기</b></a>
+		</div>
+	</div>
+<style>
+ 	.wrap_contents{background-color:#fff}
+	.list_smartMedia{padding:0;margin-top:-1px}
+	.canvas {position:relative;overflow:hidden;width:100%;height:inherit;padding:0 10.19vw;}
+	.canvas ul {position:relative;overflow:hidden;height:63.98vw;padding:0 9.07vw}
+	.canvas ul li {position:absolute;display:inline-block;width:16.67vw;height:16.67vw;top:0;color:transparent;font-size:0}
+	.status {padding:0 1.24vw 0 6.67vw}
+ 	#evt_3 {width:100vw;height:99.35vw;background:url('../../images/event/infi_travlog_mar_04.jpg') no-repeat top left;background-size:100vw 99.35vw;padding:20.83vw 7.1vw 0 6.67vw} 
+  	#evt_3 .status {position:relative;padding:0 0 0 6.67vw}
+	#evt_3 .status .btn_refresh {position:absolute;display:inline-block;padding:3.33vw 1.3vw;top:0;right:0}
+	#evt_3 .status .btn_refresh img{width:5.56vw;height:auto}
+ 	.status dl{display:-webkit-box;display:flex;justify-content:space-between;height:14.91vw;padding:3.98vw 0 }
+	.status dl dt{visibility:hidden;width:39.17vw;height:8.52vw;margin-bottom:2.78vw}
+	.status dl dd{text-align:right;font-size:7vw;color:#fff;font-weight:800;margin-right:1.11vw}
+	.status dl dd::after{font-size:4.35vw;font-weight:600}
+	.status dl.m_total{display:block;height:26.02vw;margin-bottom:2.50vw}
+	.status dl.m_total dd{height:10.65vw}
+	.status dl.m_total dd::after{content:' 원';}
+	.status dl.f_invi dd::after{content:' 개';}
+	.status dl.f_join dd::after{content:' 명';}
+ 	.status dl.f_invi {margin-bottom:2.04vw}
+	.items {position:relative;overflow:hidden;margin-top:18vw}
+	.items li{float:left;width:50%;height:68.43vw;color:transparent;font-size:0}
+  	.invitation {width:100vw;height:55.46vw;background:url('../../images/event/infi_travlog_mar_06.jpg') no-repeat top left;background-size:100vw 55.46vw}
+	.copy-code {position:relative;margin-top:7.13vw;display:none}
+	 input.your-code {width:100vw;height:13.98vw;line-height:13.98vw; padding:0; text-align:center;font-weight:800;font-size:18px;background-color:transparent;text-indent:0!important} 
+ 	.btn_gnerate{display:block;width:89vw;height:14.89vw;line-height:14.89vw;margin:7.13vw auto 0;background-color:#17191f;box-shadow:0px 16px 18px 0px rgba(0,0,0,0.16);text-align:center;color:#fff;font-size:5.37vw;font-weight:700;-webkit-border-radius:1.67vw;border-radius:1.67vw;transition:top 0.3s ease;-webkit-transition:top 0.3s ease} /* 2023.1.3 수정 */
+	.btn_gnerate.on{display:none}
+ 	.btn_gnerate.on +.copy-code{display:block;margin-top:7.8vw}
+</style>
+
+<script type="text/javascript">
+	$(function(){
+	/* DEV 변수값 */
+		var myStatus = ['56,575',187,75]; // 개발변수 [모은 하나머니, 보낸 초대장, 가입한 친구] ;
+		var myChance = 2.5; // '나의 당첨 확률' 개발변수
+
+	/* Display */
+		function setDisplay(){
+			for(var i=0;i<3;i++){
+				var db = myStatus[i];
+ 				$('#evt_3 .status dl').eq(i).find('dd').text(db);
+			}
+ 		}
+
+		setDisplay(); // 초기화면
+
+	/* 초대코드 복사 */
+		function copy() {
+		  var copyCode = document.querySelector("#ucode");
+		  copyCode.select();
+		  document.execCommand("copy");
+		}
+
+	/* 초대코드 생성 */
+		$('.btn_gnerate').on('click',function(e){
+			e.preventDefault();
+			$(this).addClass('on');
+			copy();
+		});
+
+ 		$('.btn_refresh').on('click',function(e){
+			e.preventDefault();
+			alert('새로고침 추가');
+		});
+		
+		document.querySelector("#ucode").addEventListener("click", copy);
+
+	});
+
+
+</script>
+</body>
+</html>
