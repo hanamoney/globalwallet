@@ -25,7 +25,7 @@
 <body>
 <main id="root">
   <!-- // header -->
-  <a href="#none" onclick="fnOpenLayerPop('popupfullId')">팝업열기</a>
+
   <!-- // contents-->
 
   <div id="popupfullId" class="wrap_layer type_full">
@@ -42,7 +42,8 @@
             <div class="event_visual_top">
               <img src="../../../../../../resources/event/images/renewal_top_bg.jpg" aria-hidden="true" alt="">
               <h2 class="screen_out">대개봉 새로워진 하나머니</h2> 
-              <p class="screen_out"></p>
+              <p class="screen_out">매달 200만 명이 사랑해주시는 하나머니, 트래블로그 1주년에 맞춰 단장했어요!</p>
+              <p class="event_date">2023.07.00 ~ 2023.08.00</p> <!-- 이벤트 날짜 -->
             </div>
             <div class="renewal_event_contents">
               <div class="renewal_event_tab">
@@ -282,7 +283,11 @@
                 </dl>
               </div>
             </div>
-            
+            <div class="event_btn_top">
+              <a href="#none">
+                <span class="blind">top button</span>
+              </a>
+            </div>
           </div>
           <!-- 이벤트 html [E] -->
         </div>
@@ -297,7 +302,8 @@
   @font-face {font-family:'Gmarket';font-style:normal;font-weight:400; src:url(../../../../../../resources/event/font/GmarketSansMedium.otf) format('opentype'),url('../../../../../../resources/event/font/GmarketSansTTFMedium.ttf') format('truetype')}
   @font-face {font-family:'Gmarket';font-style:normal;font-weight:700; src:url(../../../../../../resources/event/font/GmarketSansBold.otf) format('opentype'),url('../../../../../../resources/event/font/GmarketSansTTFBold.ttf') format('truetype')} 
   .list_smartMedia {--width:1080;}
-  .event_visual_top {margin-bottom: -2.8rem;}
+  .event_visual_top {position: relative; margin-bottom: -2.8rem;}
+  .event_visual_top .event_date {position: absolute; bottom:0; left: 50%; margin-bottom: calc(230 / var(--width) * 100%); transform: translateX(-50%); color: #FFF; text-align: center; font-family: 'Gmarket'; font-size: 1.4rem; font-weight: 400; line-height: 1.28; letter-spacing: -0.07rem; opacity: 0.8;}
   .event_box {position: relative;}
   .renewal_event_tab {position: sticky; top: 0; margin: 0 calc(60 / var(--width) * 100%); border-radius: 1.6rem; background: rgba(255, 255, 255, 0.90); box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25); backdrop-filter: blur(2rem); z-index: 100; transition: all 0.2s;}
   .renewal_event_tab.active {margin: 0; padding: 0 calc(60 / var(--width) * 100%); border-radius: 0; background: rgba(255, 255, 255, 0.90); backdrop-filter: blur(2px); box-shadow: none;}
@@ -306,7 +312,6 @@
   .renewal_event_tab li:nth-child(2) {width: 38%;}
   .renewal_event_tab li a {display: block; width: 100%; padding: 0.4rem 0; color: #4A28A7; font-size: 1.3rem; line-height: 1.2; letter-spacing: -0.065rem; font-family:'Gmarket'; font-weight: 700;}
   .renewal_event_tab li.on a {border-radius: 1.4rem; background: #895BE2; box-shadow: 0 0.4rem 0.8rem 0 rgba(74, 40, 167, 0.25); color: #fff;}
-
   .renewal_event01 {margin-top: -2rem;}
   .renewal_event01 .mission_count {position: absolute; right: calc(228 / var(--width) * 100%); bottom: calc(159 / 609 * 100%); font-size: 2rem; font-weight: 700; line-height: 1.28; letter-spacing: -0.1rem;}
   .renewal_event01 .wrap_gift {position: absolute; top: 0; left: calc(120 / var(--width) * 100%); right: calc(120 / var(--width) * 100%); padding: 0 0 calc(1152 / var(--width) * 100%);}
@@ -316,7 +321,6 @@
   .renewal_event01 .wrap_gift .inner_box > div:nth-child(2) {height: calc(50% - (calc(60 / var(--width) * 100%)));}
   .renewal_event01 .wrap_gift .complete {background: url('../../../../../../resources/event/images/ico_complete.png') no-repeat center rgba(255, 255, 255, 0.8); background-size: 8rem;}
   .renewal_event01 .wrap_gift .complete dl::after {content: '응모완료';}
-
   .event_mission_link {padding: 0 calc(72 / var(--width) * 100%) calc(240 / var(--width) * 100%); background: url('../../../../../../resources/event/images/renewal_event01_bg.jpg') no-repeat bottom left; background-size: 100%;}
   .event_link_box {margin-top: 3.2rem; padding: 3.2rem 2.4rem 2.4rem; border-radius: 3.2rem; background: #E4FFFD;}
   .event_link_box h3,
@@ -342,11 +346,9 @@
   .event_link_box.complete h2,
   .event_link_box.complete p {color: #69777E;}
   .event_link_box.complete button {background: #9DAAB0; box-shadow: 0 0 0 0 rgba(157, 170, 176, 0.20), 0 0.1rem .3rem 0 rgba(157, 170, 176, 0.20), 0 .5rem .5rem 0 rgba(157, 170, 176, 0.17), 0 1.1rem .7rem 0 rgba(157, 170, 176, 0.10), 0 2rem .8rem 0 rgba(157, 170, 176, 0.03), 0 3.1rem .9rem 0 rgba(157, 170, 176, 0.00);}
-
   .event_btn_area {position: absolute; bottom: 0; left: 0; width: 100%; margin-bottom: calc(267 / var(--width) * 100%); padding-bottom: calc(324 / var(--width) * 100%);}
   .event_btn_area > div {display: flex; justify-content: center; align-items: center; flex-direction: column; position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
   .event_btn_area button {display: inline-block; width: calc(840 / var(--width) * 100%); height: 100%; margin: calc(15 / var(--width) * 100%) 0;}
-
   .wrap_winner {padding: 0 calc(72 / var(--width) * 100%) calc(144 / var(--width) * 100%); background: url('../../../../../../resources/event/images/renewal_event02_bg.jpg') no-repeat bottom left #FDFCF1; background-size: 100%; text-align: center;}
   .wrap_winner .event_last_week {display: inline-block; margin: 0 0 1.2rem; padding: 0.8rem 1.6rem; align-items: center; border-radius: 1.6rem; background: #6D43E8; box-shadow: 0 0.4rem 0.4rem 0 rgba(109, 67, 232, 0.24); color: #FFF; text-align: center; font-size: 1.3rem; letter-spacing: -0.065rem;}
   .winner_list li {display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.4rem; padding: 1.6rem 2.4rem 1.6rem 8.8rem; border-radius: 1.6rem; background-color: #FFF; background-position: left 2.4rem center; background-repeat: no-repeat; background-size: 4.8rem; text-align: left;}
@@ -357,7 +359,6 @@
   .winner_list dd {margin-top: 0.2rem; color: #374248; font-size: 2.4rem; font-weight: 700; line-height: 1.28; letter-spacing: -0.12rem;}
   .winner_list .winner_name {margin-bottom: 0.4rem; color: #839097; font-size: 1.3rem; line-height: 1.28; letter-spacing: -0.065rem;}
   .wrap_winner .bottom_info {margin-top: 1.2rem; color: #555; font-family:'Gmarket'; font-size: 1.4rem; font-weight: 400; line-height: 1.28; letter-spacing: -0.07rem;}
-
   .visual_share {padding: 0 calc(72 / var(--width) * 100%); background-color: #F6FBFF;}
   .visual_share div div {display: none;}
   .visual_share .step0 .img_step0 {display: block;}
@@ -365,22 +366,25 @@
   .visual_share .step2 .img_step2 {display: block;}
   .visual_share .step3 .img_step3 {display: block;}
   .visual_share .step4 .img_step4 {display: block;}
-
   .event_refresh_btn {position: absolute; top: 0; right: calc(72 / var(--width) * 100%); padding: 0.8rem; padding-right: 3.2rem; background: url('../../../../../../resources/event/images/ico_refresh.jpg') no-repeat right 0.8rem top 0.65rem; background-size: 2.4rem; color: #454545; font-family:'Gmarket'; font-size: 1.3rem; line-height: 2.4rem; letter-spacing: -0.065rem;}
-
   .renewal_event03 .event_btn_area {margin-bottom: calc(144 / var(--width) * 100%); padding-bottom: calc(145 / var(--width) * 100%);}
   .renewal_event03 .event_btn_area button {width: calc(936 / var(--width) * 100%); margin: 0;}
   
+  .event_btn_top {position: fixed; bottom: calc(var(--safeBottom) + 3.2rem); right: 1.6rem; opacity: 0; transition: all .5s; z-index: 90;}
+  .event_btn_top.on {opacity: 1;}
+  .event_btn_top a {display: block; background: url('../../../../../../resources/event/images/img_event_top_btn.png') no-repeat center; background-size: 4rem; width: 4rem; height: 4rem; border-radius: 50%; box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.15);}
 </style>
 
 <script type="text/javascript">
+
 // 팝업오픈 퍼블확인용 스크립트
 $(function(){
   fnOpenLayerPop('popupfullId');
 });
 
+
+
 $(function(){
-  'use strict';
   safeArea.top = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--safeTop'));
   var event01 = $("#event01").position().top - safeArea.top - 95;
   var event02 = $("#event02").position().top - safeArea.top - 77;
@@ -388,6 +392,7 @@ $(function(){
   var tab = $('.renewal_event_tab')
   var dot = $('.renewal_event_tab li');
   
+  // 탭클릭 이동
   $(".renewal_event_tab li:nth-child(1) a").click(function(event){         
     event.preventDefault();
     $('.content_layer').animate({scrollTop: event01}, 500);
@@ -401,6 +406,7 @@ $(function(){
     $('.content_layer').animate({scrollTop: event03}, 500);
   });
 
+  // 스크롤 위치에 따른 탭 활성화
   $('.content_layer').on('scroll', function(){
     var wScroll = $(this).scrollTop() + 15;
     if(wScroll >= event01){
@@ -420,7 +426,15 @@ $(function(){
     } else {
       tab.removeClass('active');
     }
+
+    // 탑버튼 노출비노출
+    ($(this).scrollTop() > 300) ? $(".event_btn_top").addClass("on") : $(".event_btn_top").removeClass("on");
   })
+
+  // 탑버튼 스크롤
+  $('.event_btn_top').on("click", function () {
+    $('.content_layer').animate({scrollTop: 0}, 500);
+  });
 });
 
 
