@@ -303,7 +303,7 @@
   @font-face {font-family:'Gmarket';font-style:normal;font-weight:700; src:url(../../../../../../resources/event/font/GmarketSansBold.otf) format('opentype'),url('../../../../../../resources/event/font/GmarketSansTTFBold.ttf') format('truetype')} 
   .list_smartMedia {--width:1080;}
   .event_visual_top {position: relative; margin-bottom: -2.8rem;}
-  .event_visual_top .event_date {position: absolute; bottom:0; left: 50%; margin-bottom: calc(230 / var(--width) * 100%); transform: translateX(-50%); color: #FFF; text-align: center; font-family: 'Gmarket'; font-size: 1.4rem; font-weight: 400; line-height: 1.28; letter-spacing: -0.07rem; opacity: 0.8;}
+  .event_visual_top .event_date {position: absolute; bottom: 0; left: 50%; margin-bottom: calc(230 / var(--width) * 100%); transform: translateX(-50%); color: #FFF; text-align: center; font-family: 'Gmarket'; font-size: 1.5rem; font-weight: 400; line-height: 1.28; letter-spacing: -0.07rem; opacity: 0.8;}
   .event_box {position: relative;}
   .renewal_event_tab {position: sticky; top: 0; margin: 0 calc(60 / var(--width) * 100%); border-radius: 1.6rem; background: rgba(255, 255, 255, 0.90); box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25); backdrop-filter: blur(2rem); z-index: 100; transition: all 0.2s;}
   .renewal_event_tab.active {margin: 0; padding: 0 calc(60 / var(--width) * 100%); border-radius: 0; background: rgba(255, 255, 255, 0.90); backdrop-filter: blur(2px); box-shadow: none;}
@@ -385,10 +385,13 @@ $(function(){
 
 
 $(function(){
-  safeArea.top = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--safeTop'));
-  var event01 = $("#event01").position().top - safeArea.top - 95;
-  var event02 = $("#event02").position().top - safeArea.top - 77;
-  var event03 = $("#event03").position().top - safeArea.top - 77;
+  if($('.list_smartMedia').closest('.wrap_layer').hasClass('show') === true) {
+    safeArea.top = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--safeTop'));
+    var event01 = $("#event01").position().top - safeArea.top - 95;
+    var event02 = $("#event02").position().top - safeArea.top - 77;
+    var event03 = $("#event03").position().top - safeArea.top - 77;
+  }
+  
   var tab = $('.renewal_event_tab')
   var dot = $('.renewal_event_tab li');
   
