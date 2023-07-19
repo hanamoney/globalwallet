@@ -384,7 +384,7 @@ $(function(){
 
 
 
-$(function(){
+$(window).on('load', function(){
   if($('.list_smartMedia').closest('.wrap_layer').hasClass('show') === true) {
     safeArea.top = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--safeTop'));
     var event01 = $("#event01").position().top - safeArea.top - 95;
