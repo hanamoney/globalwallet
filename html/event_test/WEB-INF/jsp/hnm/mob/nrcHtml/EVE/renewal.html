@@ -390,54 +390,54 @@ $(function(){
     var event01 = $("#event01").position().top - safeArea.top - 95;
     var event02 = $("#event02").position().top - safeArea.top - 77;
     var event03 = $("#event03").position().top - safeArea.top - 77;
+    var tab = $('.renewal_event_tab')
+    var dot = $('.renewal_event_tab li');
+
+    // 탭클릭 이동
+    $(".renewal_event_tab li:nth-child(1) a").click(function(event){         
+      event.preventDefault();
+      $('.content_layer').animate({scrollTop: event01}, 500);
+    });
+    $(".renewal_event_tab li:nth-child(2) a").click(function(event){         
+      event.preventDefault();
+      $('.content_layer').animate({scrollTop: event02}, 500);
+    });
+    $(".renewal_event_tab li:nth-child(3) a").click(function(event){         
+      event.preventDefault();
+      $('.content_layer').animate({scrollTop: event03}, 500);
+    });
+
+    // 스크롤 위치에 따른 탭 활성화
+    $('.content_layer').on('scroll', function(){
+      var wScroll = $('.content_layer').scrollTop() + 15;
+      if(wScroll >= event01){
+        dot.removeClass('on');
+        dot.eq(0).addClass('on');
+      }
+      if(wScroll >= event02){
+        dot.removeClass('on');
+        dot.eq(1).addClass('on');
+      }
+      if(wScroll >= event03){
+        dot.removeClass('on');
+        dot.eq(2).addClass('on');
+      }
+      if(wScroll - 13 >= event01){
+        tab.addClass('active');
+      } else {
+        tab.removeClass('active');
+      }
+
+      // 탑버튼 노출비노출
+      ($(this).scrollTop() > 300) ? $(".event_btn_top").addClass("on") : $(".event_btn_top").removeClass("on");
+    })
+
+    // 탑버튼 스크롤
+    $('.event_btn_top').on("click", function () {
+      $('.content_layer').animate({scrollTop: 0}, 500);
+    });
   }
   
-  var tab = $('.renewal_event_tab')
-  var dot = $('.renewal_event_tab li');
-  
-  // 탭클릭 이동
-  $(".renewal_event_tab li:nth-child(1) a").click(function(event){         
-    event.preventDefault();
-    $('.content_layer').animate({scrollTop: event01}, 500);
-  });
-  $(".renewal_event_tab li:nth-child(2) a").click(function(event){         
-    event.preventDefault();
-    $('.content_layer').animate({scrollTop: event02}, 500);
-  });
-  $(".renewal_event_tab li:nth-child(3) a").click(function(event){         
-    event.preventDefault();
-    $('.content_layer').animate({scrollTop: event03}, 500);
-  });
-
-  // 스크롤 위치에 따른 탭 활성화
-  $('.content_layer').on('scroll', function(){
-    var wScroll = $(this).scrollTop() + 15;
-    if(wScroll >= event01){
-      dot.removeClass('on');
-      dot.eq(0).addClass('on');
-    }
-    if(wScroll >= event02){
-      dot.removeClass('on');
-      dot.eq(1).addClass('on');
-    }
-    if(wScroll >= event03){
-      dot.removeClass('on');
-      dot.eq(2).addClass('on');
-    }
-    if(wScroll - 13 >= event01){
-      tab.addClass('active');
-    } else {
-      tab.removeClass('active');
-    }
-
-    // 탑버튼 노출비노출
-    ($(this).scrollTop() > 300) ? $(".event_btn_top").addClass("on") : $(".event_btn_top").removeClass("on");
-  })
-
-  // 탑버튼 스크롤
-  $('.event_btn_top').on("click", function () {
-    $('.content_layer').animate({scrollTop: 0}, 500);
-  });
 });
 
 
