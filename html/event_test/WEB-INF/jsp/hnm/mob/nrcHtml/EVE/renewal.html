@@ -25,7 +25,7 @@
 <body>
 <main id="root">
   <!-- // header -->
-
+  <a href="#none" onclick="fnOpenLayerPop('popupfullId')">팝업열기</a>
   <!-- // contents-->
 
   <div id="popupfullId" class="wrap_layer type_full">
@@ -387,14 +387,14 @@
 <script type="text/javascript">
 
 // 팝업오픈 퍼블확인용 스크립트
-$(function(){
-  fnOpenLayerPop('popupfullId');
-});
+// $(function(){
+//   fnOpenLayerPop('popupfullId');
+// });
 
 
 
 $(window).on('load', function(){
-  if($('.list_smartMedia').closest('.wrap_layer').hasClass('show') === true) {
+  // if($('.list_smartMedia').closest('.wrap_layer').hasClass('show') === true) {
     safeArea.top = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--safeTop'));
     var event01 = $("#event01").position().top - safeArea.top - 95;
     var event02 = $("#event02").position().top - safeArea.top - 77;
@@ -445,7 +445,7 @@ $(window).on('load', function(){
     $('.event_btn_top').on("click", function () {
       $('.content_layer').animate({scrollTop: 0}, 500);
     });
-  }
+  // }
 });
 </script>
   
