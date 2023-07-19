@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <title>dir01_01 - dir01 - hanamembers</title>
+
+  <link rel="stylesheet" href="../../../../../../resources/gw/css/hmui/swiper.css">
+  <link rel="stylesheet" href="../../../../../../resources/gw/css/hmui/animate.css">
+  <link rel="stylesheet" href="../../../../../../resources/gw/css/hmui/common.css">
+  <link rel="stylesheet" href="../../../../../../resources/nrc/css/contents.css">
+  <script src="../../../../../../resources/gw/js/hmui/lib/jquery-1.12.3.min.js"></script>
+  <script src="../../../../../../resources/gw/js/hmui/lib/swiper.js"></script>
+  <script src="../../../../../../resources/gw/js/hmui/lib/waypoints.min.js"></script>
+  <script src="../../../../../../resources/gw/js/hmui/lib/jquery.counterup.js"></script>
+  <script src="../../../../../../resources/gw/js/hmui/ui_common.js"></script>
+  <script src="../../../../../../resources/nrc/js/ui_common_nrc.js"></script>
+
+  <link rel="stylesheet" href="../../../../../../resources/event/css/common.css"> <!-- 이벤트용 css -->
+</head>
+<body>
+<main id="root">
+  <!-- // header -->
+  <a href="#none" onclick="fnOpenLayerPop('popupfullId')">팝업열기</a>
+  <!-- // contents-->
+
+  <div id="popupfullId" class="wrap_layer type_full">
+    <div class="inner_layer">
+      <div class="head_layer">
+        <button type="button" class="btn_text_share"><i class="ico_share"></i><span>공유</span></button>
+        <button type="button" class="btn_text_heart" onclick="$(this).toggleClass('on').children('i').toggleClass('on');"><i class="ico_heart"></i><span>88</span></button>
+      </div>
+
+      <div class="content_layer htmlObj event_layer">
+        <div class="page_full_flex">
+          <!-- 이벤트 html [s] -->
+          <div class="list_smartMedia">
+            <div class="event_visual_top">
+              <img src="../../../../../../resources/event/images/renewal_top_bg.jpg" aria-hidden="true" alt="">
+              <h2 class="screen_out">대개봉 새로워진 하나머니</h2> 
+              <p class="screen_out"></p>
+            </div>
+            <div class="renewal_event_contents">
+              <div class="renewal_event_tab">
+                <ul>
+                  <li class="on"><a href="#event01">도전!<br>애플 맥북</a></li>
+                  <li><a href="#event02">도전!<br>100만 하나머니</a></li>
+                  <li><a href="#event03">전원!<br>100 하나머니</a></li>
+                </ul>
+              </div>
+              
+              <div id="event01" class="renewal_event01">
+                <div class="event_box">
+                  <img src="../../../../../../resources/event/images/renewal_event01_title.jpg" aria-hidden="true" alt="">
+                  <h2 class="screen_out">이벤트1 도전! 맥북!</h2> 
+                  <p class="screen_out">새로워진 서비스 체험하고 경품에 도전하세요!</p>
+                </div>
+                <div class="event_box">
+                  <img src="../../../../../../resources/event/images/renewal_event01_01.jpg" aria-hidden="true" alt="">
+                  <h3 class="screen_out">도전 경품</h3> 
+                  <p class="screen_out">미션을 달성하면 애플 맥북, 아이폰에 자동 응모!</p>
+                  <dl>
+                    <dt class="screen_out">달성한 미션</dt>
+                    <dd class="mission_count">1개</dd> <!-- 달성한 미션 갯수 -->
+                  </dl>
+                  <p class="screen_out">미션 달성 개수에 따라 경품에 응모돼요.</p>
+                </div>
+                <div class="event_box">
+                  <img src="../../../../../../resources/event/images/renewal_event01_02.jpg" aria-hidden="true" alt="">
+                  <div class="wrap_gift">
+                    <div class="inner_box">
+                      <div class="complete"> <!-- 응모완료 시 complete 클래스 추가 -->
+                        <dl class="screen_out">
+                          <dt>미션 5개 이상 완료</dt>
+                          <dd>애플 맥북 Air 13 (1명)</dd>
+                        </dl>
+                      </div>
+                      <div class=""> <!-- 응모완료 시 complete 클래스 추가 -->
+                        <dl class="screen_out">
+                          <dt>미션 4개 이상 완료</dt>
+                          <dd>애플 아이폰 14 (1명)</dd>
+                        </dl>
+                      </div>
+                      <div class=""> <!-- 응모완료 시 complete 클래스 추가 -->
+                        <dl class="screen_out">
+                          <dt>미션 3개 이상 완료</dt>
+                          <dd>스타벅스 아메리카노 (1,000명)</dd>
+                        </dl>
+                      </div>
+                      <div class=""> <!-- 응모완료 시 complete 클래스 추가 -->
+                        <dl class="screen_out">
+                          <dt>미션 1개 이상 완료</dt>
+                          <dd>배스킨라빈스 아이스크림 (2,000명)</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="screen_out">※ 경품은 중복 당첨될 수 있어요.</p>
+                </div>
+                <div class="event_box">
+                  <img src="../../../../../../resources/event/images/renewal_event01_04.jpg" aria-hidden="true" alt="">
+                  <h3 class="screen_out">도전 미션!</h3> 
+                  <p class="screen_out">새로워진 서비스 체험하고 미션을 달성해주세요!</p>
+                  <p class="screen_out">5개 이상 참여하시면 모든 선물에 응모돼요!</p>
+                </div>
+                <div class="event_mission_link">
+                  <div class="event_link_box bg01 complete"> <!-- 미션완료 시 complete 추가 -->
+                    <h3>무료적립</h3>
+                    <p>이제 이 곳에서<br>모든 무료적립에 참여할 수 있어요!</p>
+                    <button type="button" disabled>무료적립으로 500 하나머니 모으기</button>
+                  </div>
+                  <div class="event_link_box bg02"> <!-- 미션완료 시 complete 추가 -->
+                    <h3>마이페이지</h3>
+                    <p>내 쿠폰, 머니활동 살펴보고<br>뱃G를 모아보세요!</p>
+                    <button type="button">뱃G 1개 이상 획득하기</button>
+                  </div>
+                  <div class="event_link_box bg03"> <!-- 미션완료 시 complete 추가 -->
+                    <h3>출석체크 기분 공유</h3>
+                    <p>오늘 기분을 친구와 공유해요.<br>1만 하나머니 기회까지!</p>
+                    <button type="button">오늘의 기분 친구와 공유하기</button>
+                  </div>
+                  <div class="event_link_box bg04"> <!-- 미션완료 시 complete 추가 -->
+                    <h3>함께 걷고 머니 쌓기</h3>
+                    <p>걸음수 대결에서 이기면<br>하나머니를 더 드려요!</p>
+                    <button type="button">함께 걷기 시작하기</button>
+                  </div>
+                  <div class="event_link_box bg05"> <!-- 미션완료 시 complete 추가 -->
+                    <h3>머니로그#</h3>
+                    <p>하나머니에서 가입하면<br>더 큰 혜택을 드려요!</p>
+                    <button type="button">구경하고 10하나머니 1회 적립받기</button>
+                  </div>
+                  <div class="event_link_box bg06"> <!-- 미션완료 시 complete 추가 -->
+                    <h3>차액충전</h3>
+                    <p>국내 결제 시 부족한 하나머니는<br>계좌에서 바로 충전돼요.</p>
+                    <button type="button">차액충전 설정하기</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="event02" class="renewal_event02">
+                <div class="event_box">
+                  <img src="../../../../../../resources/event/images/renewal_event02_title.jpg" aria-hidden="true" alt="">
+                  <h2 class="screen_out">이벤트2 도전! 100만 하나머니</h2> 
+                  <p class="screen_out">매주 가장 낮은 환율에 충전하신 분께 100만 하나머니를 드려요.</p>
+                </div>
+                <div class="event_box">
+                  <img src="../../../../../../resources/event/images/renewal_event02_01.jpg" aria-hidden="true" alt="">
+                  <h3 class="screen_out">최저 환율 도전하기</h3> 
+                  <p class="screen_out">매주 달러, 유로, 엔화 3개 부문에 100만 하나머니 지급!</p>
+                  <div class="screen_out">
+                    <dl>
+                      <dt>달러 부문</dt>
+                      <dd>매주 1명</dd>
+                    </dl>
+                    <dl>
+                      <dt>유로 부문</dt>
+                      <dd>매주 1명</dd>
+                    </dl>
+                    <dl>
+                      <dt>엔화 부문</dt>
+                      <dd>매주 1명</dd>
+                    </dl>
+                  </div>
+                  <div class="event_btn_area">
+                    <div>
+                      <button type="button"><span class="screen_out">외화 하나머니 충전하기</span></button>
+                      <button type="button"><span class="screen_out">목표 환율 설정</span></button>
+                    </div>
+                  </div>
+                  <p class="screen_out">목표 환율 자동 충전을 설정해두시면 편리해요!</p>
+                </div>
+                <div class="event_box">
+                  <img src="../../../../../../resources/event/images/renewal_event02_02.jpg" aria-hidden="true" alt="">
+                  <h3 class="screen_out">당첨자 발표!</h3> 
+                  <p class="screen_out">지난주 당첨자는 다음주 화요일 오후 1시에 발표돼요.</p>
+
+                  <div class="wrap_winner">
+                    <p class="event_last_week">지난주 최저환율 당첨자 (<span>07.22 ~ 07.28</span>)</p>
+                    <div class="winner_list">
+
+                      <!-- 전주 당첨자가 없는 경우 첫주에 노출 -->
+                      <div class="not_winner">
+                        <img src="../../../../../../resources/event/images/not_winner.jpg" aria-hidden="true" alt="">
+                      </div>
+                      <!-- //전주 당첨자가 없는 경우 첫주에 노출 -->
+
+                      <ul>
+                        <li class="type_dollar">
+                          <dl>
+                            <dt>달러 부문 당첨자</dt>
+                            <dd><span>1,200.05</span>원</dd>
+                          </dl>
+                          <span class="winner_name">(박*진님)</span>
+                        </li>
+                        <li class="type_euro">
+                          <dl>
+                            <dt>유로 부문 당첨자</dt>
+                            <dd><span>1,300.05</span>원</dd>
+                          </dl>
+                          <span class="winner_name">(이*영님)</span>
+                        </li>
+                        <li class="type_yen">
+                          <dl>
+                            <dt>엔화 부문 당첨자</dt>
+                            <dd><span>890.12</span>원</dd>
+                          </dl>
+                          <span class="winner_name">(김*윤님)</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <p class="bottom_info">당첨자 분들께는 앱 알림으로 알려드린 후<br>하나머니 고객센터에서 개별 연락드려요.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="event03" class="renewal_event03">
+                <div class="event_box">
+                  <img src="../../../../../../resources/event/images/renewal_event03_title.jpg" aria-hidden="true" alt="">
+                  <h2 class="screen_out">이벤트3 도전! 100 하나머니</h2> 
+                  <p class="screen_out">카카오톡으로 3번 공유 하면 100 하나머니 바로 받아요.</p>
+                </div>
+                <div class="event_box visual_share"> 
+                  <div class="step0"> <!-- 클래스마다 노출되는 이미지가 다름 step0 공유0회, step1 공유1회, step2 공유2회, step3 공유3회(하나머니받기), step4 받기완료 -->
+                    <div class="img_step0">
+                      <img src="../../../../../../resources/event/images/img_share_step0.png" aria-hidden="true" alt="">
+                      <p class="screen_out">공유 0회</p>
+                    </div>
+                    <div class="img_step1">
+                      <img src="../../../../../../resources/event/images/img_share_step1.png" aria-hidden="true" alt="">
+                      <p class="screen_out">공유 1회</p>
+                    </div>
+                    <div class="img_step2">
+                      <img src="../../../../../../resources/event/images/img_share_step2.png" aria-hidden="true" alt="">
+                      <p class="screen_out">공유 2회</p>
+                    </div>
+                    <div class="img_step3">
+                      <img src="../../../../../../resources/event/images/img_share_step3.png" aria-hidden="true" alt="">
+                      <p class="screen_out">공유 3회 100 하나머니 받기</p>
+                    </div>
+                    <div class="img_step4">
+                      <img src="../../../../../../resources/event/images/img_share_step4.png" aria-hidden="true" alt="">
+                      <p class="screen_out">받기완료</p>
+                    </div>
+                  </div>
+                  <a href="#none" class="event_refresh_btn">새로고침</a>
+                </div>
+                <div class="event_box">
+                  <img src="../../../../../../resources/event/images/renewal_event03_01.jpg" aria-hidden="true" alt="">
+                  <div class="event_btn_area">
+                    <div>
+                      <button type="button"><span class="screen_out">외화 하나머니 충전하기</span></button>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="renewal_event_notice">
+                <img src="../../../../../../resources/event/images/renowal_notice.jpg" aria-hidden="true" alt="">
+                <h2 class="screen_out"></h2>
+                <dl class="screen_out">
+                  <dt>1. 도전! 맥북</dt>
+                  <dd>경품 제공일: 2023.09.00 (경품가액 5만 원 초과 경품 제외)</dd>
+                  <dd>경품가액 5만 원 초과 당첨자분들께는 제세공과금 처리를 위해 경품 제공일에 하나머니 고객센터에서 유선 연락드릴 예정입니다. 2023.09.00 까지 연락이 어려우실 경우 담첨이 취소될 수 있습니다.</dd>
+                  <dd>제공 경품: Apple 맥북 Air 13 M2 스페이스 그레이, Apple 아이폰 14 256GB (색상 선택 가능)</dd>
+                  <dd>재고 부족 등으로 경품 제공 불가 시, 경품 가액의 하나머니로 대체 지급하여 드립니다.</dd>
+                </dl>
+                <dl class="screen_out">
+                  <dt>2. 도전! 100만 하나머니</dt>
+                  <dd>동점자가 있을 경우, 해당 환율로 환전한 금액이 많은 분 → 기간 중 전체 환전 금액이 많은 분 → 추첨 순으로 당첨됩니다.</dd>
+                  <dd>100만 하나머니 당첨자분들께는 제세공과금 처리를 위해 당첨자 발표일에 하나머니 고객센터에서 유선 연락드릴 예정입니다. 발표 후 3영업일 내 연락이 어려우실 경우 당첨이 취소될 수 있습니다.</dd>
+                  <dd>비정상적인 방법으로 참여 시 당첨자에서 제외 될 수 있습니다.</dd>
+                </dl>
+                <dl class="screen_out">
+                  <dt>공통 유의사항</dt>
+                  <dd>본 이벤트는 하나머니의 사정에 의해 사전 고지 없이 조기 종료될 수 있습니다.</dd>
+                  <dd>경품에 대한 제세공과금은 하나머니에서 부담합니다.</dd>
+                  <dd>문의: 하나머니 고객센터 1800-0000</dd>
+                </dl>
+              </div>
+            </div>
+            
+          </div>
+          <!-- 이벤트 html [E] -->
+        </div>
+      </div>
+
+      <button class="btn_ico_close fnClosePop"><span class="blind">닫기</span></button>
+    </div>
+  </div>
+
+</main>
+<style>
+  @font-face {font-family:'Gmarket';font-style:normal;font-weight:400; src:url(../../../../../../resources/event/font/GmarketSansMedium.otf) format('opentype'),url('../../../../../../resources/event/font/GmarketSansTTFMedium.ttf') format('truetype')}
+  @font-face {font-family:'Gmarket';font-style:normal;font-weight:700; src:url(../../../../../../resources/event/font/GmarketSansBold.otf) format('opentype'),url('../../../../../../resources/event/font/GmarketSansTTFBold.ttf') format('truetype')} 
+  .list_smartMedia {--width:1080;}
+  .event_visual_top {margin-bottom: -2.8rem;}
+  .event_box {position: relative;}
+  .renewal_event_tab {position: sticky; top: 0; margin: 0 calc(60 / var(--width) * 100%); border-radius: 1.6rem; background: rgba(255, 255, 255, 0.90); box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25); backdrop-filter: blur(2rem); z-index: 100; transition: all 0.2s;}
+  .renewal_event_tab.active {margin: 0; padding: 0 calc(60 / var(--width) * 100%); border-radius: 0; background: rgba(255, 255, 255, 0.90); backdrop-filter: blur(2px); box-shadow: none;}
+  .renewal_event_tab ul {display: flex; padding: 0.4rem;}
+  .renewal_event_tab li {display: flex; align-items: center; justify-content: center; width: 31%; text-align: center;}
+  .renewal_event_tab li:nth-child(2) {width: 38%;}
+  .renewal_event_tab li a {display: block; width: 100%; padding: 0.4rem 0; color: #4A28A7; font-size: 1.3rem; line-height: 1.2; letter-spacing: -0.065rem; font-family:'Gmarket'; font-weight: 700;}
+  .renewal_event_tab li.on a {border-radius: 1.4rem; background: #895BE2; box-shadow: 0 0.4rem 0.8rem 0 rgba(74, 40, 167, 0.25); color: #fff;}
+
+  .renewal_event01 {margin-top: -2rem;}
+  .renewal_event01 .mission_count {position: absolute; right: calc(228 / var(--width) * 100%); bottom: calc(159 / 609 * 100%); font-size: 2rem; font-weight: 700; line-height: 1.28; letter-spacing: -0.1rem;}
+  .renewal_event01 .wrap_gift {position: absolute; top: 0; left: calc(120 / var(--width) * 100%); right: calc(120 / var(--width) * 100%); padding: 0 0 calc(1152 / var(--width) * 100%);}
+  .renewal_event01 .wrap_gift .inner_box {position: absolute; top: calc(24 / 1372 * 100%); left: 0; width: 100%; height: 100%; display: flex; flex-wrap: wrap; align-items: flex-start;}
+  .renewal_event01 .wrap_gift .inner_box > div {padding: 0 calc(24 / var(--width) * 100%) 0; width: 50%; height: 50%;}
+  .renewal_event01 .wrap_gift .inner_box > div:nth-child(1),
+  .renewal_event01 .wrap_gift .inner_box > div:nth-child(2) {height: calc(50% - (calc(60 / var(--width) * 100%)));}
+  .renewal_event01 .wrap_gift .complete {background: url('../../../../../../resources/event/images/ico_complete.png') no-repeat center rgba(255, 255, 255, 0.8); background-size: 8rem;}
+  .renewal_event01 .wrap_gift .complete dl::after {content: '응모완료';}
+
+  .event_mission_link {padding: 0 calc(72 / var(--width) * 100%) calc(240 / var(--width) * 100%); background: url('../../../../../../resources/event/images/renewal_event01_bg.jpg') no-repeat bottom left; background-size: 100%;}
+  .event_link_box {margin-top: 3.2rem; padding: 3.2rem 2.4rem 2.4rem; border-radius: 3.2rem; background: #E4FFFD;}
+  .event_link_box h3,
+  .event_link_box button {font-family:'Gmarket'; font-weight: 700;}
+  .event_link_box p {font-family:'Gmarket'; font-weight: 400;}
+  .event_link_box h3 {font-size: 2rem; line-height: 1.28; letter-spacing: -0.1rem;}
+  .event_link_box p {margin-top: 0.4rem; color: #555; font-size: 1.4rem; line-height: 1.28; letter-spacing: -0.07rem;}
+  .event_link_box button {margin-top: 1.6rem; height: 4.4rem; padding: 0 1.4rem; width: 100%; border-radius: 24rem; background: linear-gradient(135deg, #60D3DA 0%, #7144F0 73.61%, #8C4EDA 100%); box-shadow: 0 0 0 0 rgba(74, 40, 167, 0.20), 0 0.1rem 0.3rem 0 rgba(74, 40, 167, 0.20), 0 0.5rem 0.5rem 0 rgba(74, 40, 167, 0.17), 0 1.1rem 0.7rem 0 rgba(74, 40, 167, 0.10), 0 2.0 0.8rem 0 rgba(74, 40, 167, 0.03), 0 3.1rem 0.9rem 0 rgba(74, 40, 167, 0.00); color: #fff; font-size: 1.6rem; letter-spacing: -0.08rem; word-break: keep-all;}
+  .event_link_box.bg01 {position: relative; background: #E4FFFD;}
+  .event_link_box.bg02 {position: relative; background: #F3EBFE;}
+  .event_link_box.bg03 {position: relative; background: #FEEEEB;}
+  .event_link_box.bg04 {position: relative; background: #FCFEEB;}
+  .event_link_box.bg05 {position: relative; background: #EBFEED;}
+  .event_link_box.bg06 {position: relative; background: #EBF4FE;}
+  .event_link_box.bg01::before {content:''; position: absolute; top: -1.6rem; right: 1.6rem; width: 10.4rem; height: 10.4rem; background: url('../.../../../../../../../resources/event/images/img_link_bg01.png') no-repeat top center; background-size: 100%;}
+  .event_link_box.bg02::before {content:''; position: absolute; top: -1.6rem; right: 1.6rem; width: 10.4rem; height: 10.4rem; background: url('../.../../../../../../../resources/event/images/img_link_bg02.png') no-repeat top center; background-size: 100%;}
+  .event_link_box.bg03::before {content:''; position: absolute; top: -2.4rem; right: 1.6rem; width: 10.4rem; height: 10.4rem; background: url('../.../../../../../../../resources/event/images/img_link_bg03.png') no-repeat top center; background-size: 100%;}
+  .event_link_box.bg04::before {content:''; position: absolute; top: -1.6rem; right: 1.6rem; width: 10.4rem; height: 10.4rem; background: url('../.../../../../../../../resources/event/images/img_link_bg04.png') no-repeat top center; background-size: 100%;}
+  .event_link_box.bg05::before {content:''; position: absolute; top: -1.6rem; right: 1.3rem; width: 10.4rem; height: 10.4rem; background: url('../.../../../../../../../resources/event/images/img_link_bg05.png') no-repeat top center; background-size: 100%;}
+  .event_link_box.bg06::before {content:''; position: absolute; top: -1.6rem; right: 1.6rem; width: 10.4rem; height: 10.4rem; background: url('../.../../../../../../../resources/event/images/img_link_bg06.png') no-repeat top center; background-size: 100%;}
+  .event_link_box.complete {background: #F9F9F9;}
+  .event_link_box.complete::before {content:''; position: absolute; top: -1.6rem; right: 1.6rem; width: 8rem; height: 8rem; background: url('../.../../../../../../../resources/event/images/ico_complete2.png') no-repeat top center; background-size: 100%;}
+  .event_link_box.complete h2,
+  .event_link_box.complete p {color: #69777E;}
+  .event_link_box.complete button {background: #9DAAB0; box-shadow: 0 0 0 0 rgba(157, 170, 176, 0.20), 0 0.1rem .3rem 0 rgba(157, 170, 176, 0.20), 0 .5rem .5rem 0 rgba(157, 170, 176, 0.17), 0 1.1rem .7rem 0 rgba(157, 170, 176, 0.10), 0 2rem .8rem 0 rgba(157, 170, 176, 0.03), 0 3.1rem .9rem 0 rgba(157, 170, 176, 0.00);}
+
+  .event_btn_area {position: absolute; bottom: 0; left: 0; width: 100%; margin-bottom: calc(267 / var(--width) * 100%); padding-bottom: calc(324 / var(--width) * 100%);}
+  .event_btn_area > div {display: flex; justify-content: center; align-items: center; flex-direction: column; position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+  .event_btn_area button {display: inline-block; width: calc(840 / var(--width) * 100%); height: 100%; margin: calc(15 / var(--width) * 100%) 0;}
+
+  .wrap_winner {padding: 0 calc(72 / var(--width) * 100%) calc(144 / var(--width) * 100%); background: url('../../../../../../resources/event/images/renewal_event01_bg.jpg') no-repeat bottom left #FDFCF1; background-size: 100%; text-align: center;}
+  .wrap_winner .event_last_week {display: inline-block; margin: 0 0 1.2rem; padding: 0.8rem 1.6rem; align-items: center; border-radius: 1.6rem; background: #6D43E8; box-shadow: 0 0.4rem 0.4rem 0 rgba(109, 67, 232, 0.24); color: #FFF; text-align: center; font-size: 1.3rem; letter-spacing: -0.065rem;}
+  .winner_list li {display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.4rem; padding: 1.6rem 2.4rem 1.6rem 8.8rem; border-radius: 1.6rem; background-color: #FFF; background-position: left 2.4rem center; background-repeat: no-repeat; background-size: 4.8rem; text-align: left;}
+  .winner_list li.type_dollar {background-image: url('../../../../../../resources/event/images/img_winner_dollar.jpg');}
+  .winner_list li.type_euro {background-image: url('../../../../../../resources/event/images/img_winner_euro.jpg');}
+  .winner_list li.type_yen {background-image: url('../../../../../../resources/event/images/img_winner_yen.jpg');}
+  .winner_list dt {color: #5629B7; font-size: 1.3rem; font-weight: 700; line-height: 1.28; letter-spacing: -0.065rem;}
+  .winner_list dd {margin-top: 0.2rem; color: #374248; font-size: 2.4rem; font-weight: 700; line-height: 1.28; letter-spacing: -0.12rem;}
+  .winner_list .winner_name {margin-bottom: 0.4rem; color: #839097; font-size: 1.3rem; line-height: 1.28; letter-spacing: -0.065rem;}
+  .wrap_winner .bottom_info {margin-top: 0.8rem; color: #555; font-family:'Gmarket'; font-size: 1.4rem; font-weight: 400; line-height: 1.28; letter-spacing: -0.07rem;}
+
+  .visual_share {padding: 0 calc(72 / var(--width) * 100%); background-color: #F6FBFF;}
+  .visual_share div div {display: none;}
+  .visual_share .step0 .img_step0 {display: block;}
+  .visual_share .step1 .img_step1 {display: block;}
+  .visual_share .step2 .img_step2 {display: block;}
+  .visual_share .step3 .img_step3 {display: block;}
+  .visual_share .step4 .img_step4 {display: block;}
+
+  .event_refresh_btn {position: absolute; top: 0; right: calc(72 / var(--width) * 100%); padding: 0.8rem; padding-right: 3.2rem; background: url('../../../../../../resources/event/images/ico_refresh.jpg') no-repeat right 0.8rem top 0.65rem; background-size: 2.4rem; color: #454545; font-family:'Gmarket'; font-size: 1.3rem; line-height: 2.4rem; letter-spacing: -0.065rem;}
+
+  .renewal_event03 .event_btn_area {margin-bottom: calc(144 / var(--width) * 100%); padding-bottom: calc(145 / var(--width) * 100%);}
+  .renewal_event03 .event_btn_area button {width: calc(936 / var(--width) * 100%); margin: 0;}
+  
+</style>
+
+<script type="text/javascript">
+// 팝업오픈 퍼블확인용 스크립트
+$(function(){
+  fnOpenLayerPop('popupfullId');
+});
+
+$(document).ready(function() {
+  'use strict';
+  safeArea.top = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--safeTop'));
+  var event01 = $("#event01").position().top - safeArea.top - 95;
+  var event02 = $("#event02").position().top - safeArea.top - 77;
+  var event03 = $("#event03").position().top - safeArea.top - 77;
+  var tab = $('.renewal_event_tab')
+  var dot = $('.renewal_event_tab li');
+  
+  $(".renewal_event_tab li:nth-child(1) a").click(function(event){         
+    event.preventDefault();
+    $('.content_layer').animate({scrollTop: event01}, 500);
+  });
+  $(".renewal_event_tab li:nth-child(2) a").click(function(event){         
+    event.preventDefault();
+    $('.content_layer').animate({scrollTop: event02}, 500);
+  });
+  $(".renewal_event_tab li:nth-child(3) a").click(function(event){         
+    event.preventDefault();
+    $('.content_layer').animate({scrollTop: event03}, 500);
+  });
+
+  $('.content_layer').on('scroll', function(){
+    var wScroll = $(this).scrollTop() + 15;
+    if(wScroll >= event01){
+      dot.removeClass('on');
+      dot.eq(0).addClass('on');
+    }
+    if(wScroll >= event02){
+      dot.removeClass('on');
+      dot.eq(1).addClass('on');
+    }
+    if(wScroll >= event03){
+      dot.removeClass('on');
+      dot.eq(2).addClass('on');
+    }
+    if(wScroll - 13 >= event01){
+      tab.addClass('active');
+    } else {
+      tab.removeClass('active');
+    }
+  })
+});
+
+
+</script>
+  
+</body>
+</html>
