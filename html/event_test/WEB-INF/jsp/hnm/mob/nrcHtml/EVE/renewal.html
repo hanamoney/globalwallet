@@ -25,7 +25,7 @@
 <body>
 <main id="root">
   <!-- // header -->
-  <a href="#none" onclick="fnOpenLayerPop('popupfullId')">팝업열기</a>
+
   <!-- // contents-->
 
   <div id="popupfullId" class="wrap_layer type_full">
@@ -107,32 +107,32 @@
                   <p class="screen_out">새로워진 서비스 체험하기</p>
                 </div>
                 <div class="event_mission_link">
-                  <div class="event_link_box bg01 complete"> <!-- 미션완료 시 complete 추가 -->
+                  <div class="event_link_box bg01 complete"> <!-- 미션완료 시 complete 클래스 추가 -->
                     <h3>무료적립</h3>
                     <p>하나머니는 여기서 다 모아요!</p>
                     <button type="button">500 하나머니 모으기</button>
                   </div>
-                  <div class="event_link_box bg02"> <!-- 미션완료 시 complete 추가 -->
+                  <div class="event_link_box bg02"> <!-- 미션완료 시 complete 클래스 추가 -->
                     <h3>마이페이지</h3>
                     <p>머니활동으로 뱃G를 모아보세요.</p>
                     <button type="button">뱃G 획득하기</button>
                   </div>
-                  <div class="event_link_box bg03"> <!-- 미션완료 시 complete 추가 -->
+                  <div class="event_link_box bg03"> <!-- 미션완료 시 complete 클래스 추가 -->
                     <h3>출석체크 기분 공유</h3>
                     <p>기분 출석으로 안부를 주고 받아요.</p>
                     <button type="button">친구와 기분 공유하기</button>
                   </div>
-                  <div class="event_link_box bg04"> <!-- 미션완료 시 complete 추가 -->
+                  <div class="event_link_box bg04"> <!-- 미션완료 시 complete 클래스 추가 -->
                     <h3>함께 걷고 머니 쌓기</h3>
                     <p>걸음수 대결하고 하나머니 받아요.</p>
                     <button type="button">함께 걷기 시작하기</button>
                   </div>
-                  <div class="event_link_box bg05"> <!-- 미션완료 시 complete 추가 -->
+                  <div class="event_link_box bg05"> <!-- 미션완료 시 complete 클래스 추가 -->
                     <h3>머니로그#</h3>
                     <p>가입하면 하나머니 혜택이!</p>
                     <button type="button"><span class="point_icon">찾고 적립받기</span></button>
                   </div>
-                  <div class="event_link_box bg06"> <!-- 미션완료 시 complete 추가 -->
+                  <div class="event_link_box bg06"> <!-- 미션완료 시 complete 클래스 추가 -->
                     <h3>차액충전</h3>
                     <p>결제할 때 하나머니 잔액 걱정마세요.</p>
                     <button type="button">차액충전 설정하기</button>
@@ -276,12 +276,22 @@
                   <dd>100만 하나머니 당첨자분들께는 제세공과금 처리를 위해 당첨자 발표일에 하나머니 고객센터에서 유선 연락드릴 예정입니다. 발표 후 3영업일 내 연락이 어려우실 경우 당첨이 취소될 수 있습니다.</dd>
                   <dd>비정상적인 방법으로 참여 시 당첨자에서 제외 될 수 있습니다.</dd>
                 </dl>
+                <!-- 2023.07.20 수정 [s] -->
                 <dl class="screen_out">
                   <dt>공통 유의사항</dt>
                   <dd>본 이벤트는 하나머니의 사정에 의해 사전 고지 없이 조기 종료될 수 있습니다.</dd>
                   <dd>경품에 대한 제세공과금은 하나머니에서 부담합니다.</dd>
+                  <dd>계약 체결 전 상품설명서 및 상품약관을 반드시 확인하시기 바랍니다.</dd>
+                  <dd>신용카드 발급이 부적정한 경우(개인신용평점 낮음 등) 카드발급이 제한될 수 있습니다.</dd>
+                  <dd>카드이용대금과 이에 수반되는 모든 수수료를 지정된 대금결제일에 상환하여야 합니다.</dd>
+                  <dd>금융소비자는 해당 상품 또는 서비스에 대하여 설명을 받을 권리가 있습니다</dd>
+                  <dd><em>상환능력에 비해 신용카드 사용액이 과도할 경우, 귀하의 개인신용평점이 하락할 수 있습니다.</em></dd>
+                  <dd><em>개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.</em></dd>
+                  <dd><em>일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</em></dd>
                   <dd>문의: 하나머니 고객센터 1800-0000</dd>
                 </dl>
+                <p class="screen_out">준법심의 M-23-0000(2023.07.22 ~ 2023.08.23)</p>
+                <!-- 2023.07.20 수정 [e] -->
               </div>
             </div>
             <div class="event_btn_top">
@@ -387,14 +397,14 @@
 <script type="text/javascript">
 
 // 팝업오픈 퍼블확인용 스크립트
-// $(function(){
-//   fnOpenLayerPop('popupfullId');
-// });
+$(function(){
+  fnOpenLayerPop('popupfullId');
+});
 
 
 
 $(window).on('load', function(){
-  // if($('.list_smartMedia').closest('.wrap_layer').hasClass('show') === true) {
+  // 2023.07.20 if문 삭제 if($('.list_smartMedia').closest('.wrap_layer').hasClass('show') === true) { 
     safeArea.top = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--safeTop'));
     var event01 = $("#event01").position().top - safeArea.top - 95;
     var event02 = $("#event02").position().top - safeArea.top - 77;
