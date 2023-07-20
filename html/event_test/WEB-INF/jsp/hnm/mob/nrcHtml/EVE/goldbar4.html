@@ -64,6 +64,7 @@
             <h2 class="screen_out">골드바의 주인공은?</h2>	  
             <p class="screen_out">2023.08.01 ~ 2023.08.31</p> <!-- 2023.07.20 수정 -->
           </div>
+
           <!-- 2023.07.20 추가 [s] -->
           <div class="box_link goldbar_result_box">
             <img src="../../../../../../resources/event/images/goldbar/seasonal/august2023_evt_box.jpg" aria-hidden="true" alt="">
@@ -72,10 +73,11 @@
               <dt class="screen_out">모은 하나머니</dt>
               <dd class="evt_money">140</dd> <!-- 모은하나머니 -->
             </dl>
-            <div class="goldbar_area"></div> <!-- 당첨 시 goldbar_winner 클래스 추가 -->
+            <div class="goldbar_area goldbar_winner"></div> <!-- 당첨 시 goldbar_winner 클래스 추가 -->
             <!-- <div class="goldbar_area goldbar_winner"></div> -->
           </div>
           <!-- 2023.07.20 추가 [e] -->
+
           <div class="box_link status">
             <h3 class="screen_out">오늘 모은 팥빙수</h3> 
             <p class="screen_out">매일 '팥빙수 9개'를 모두 모으고 경품에 응모하세요.</p>
@@ -439,8 +441,8 @@
   var myStatus = [0,0,1]; // 응모결과 [ X , 하나머니당첨, 골드바 당첨 ]  
   
   // myStatus[0]=true; //당첨없음
-  myStatus[1]=true; //하나머니당첨
-  // myStatus[2]=true; //골드바 당첨
+  // myStatus[1]=true; //하나머니당첨
+  myStatus[2]=true; //골드바 당첨
 
   function setDisplay(){
     for(var i=0; i<carrot;i++){
