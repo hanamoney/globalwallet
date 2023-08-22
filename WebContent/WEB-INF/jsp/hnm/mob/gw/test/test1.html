@@ -1,13 +1,336 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+<html lang="ko">
 
-  <link rel="stylesheet" href="/WebContent//resources/gw/css/hmui/common.css">
-</head>
-<body>
-  테스트
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no">
+    <title>HAN_303</title>
+    <link rel="stylesheet" href="../../../../../../resources/gw/css/hmui/swiper.css">
+    <link rel="stylesheet" href="../../../../../../resources/gw/css/hmui/animate.css">
+    <link rel="stylesheet" href="../../../../../../resources/gw/css/hmui/common.css">
+    <link rel="stylesheet" href="../../../../../../resources/nrc/css/contents.css">
+    <script src="../../../../../../resources/gw/js/hmui/lib/jquery-1.12.3.min.js"></script>
+    <script src="../../../../../../resources/gw/js/hmui/lib/swiper.js"></script>
+    <script src="../../../../../../resources/gw/js/hmui/lib/waypoints.min.js"></script>
+    <script src="../../../../../../resources/gw/js/hmui/lib/jquery.counterup.js"></script>
+    <script src="../../../../../../resources/gw/js/hmui/ui_common.js"></script>
+    <script src="../../../../../../resources/nrc/js/ui_common_nrc.js"></script>
+  </head>
+
+  <body>
+    <main id="root">
+      <header id="header">
+        <div class="inner_fixed">
+          <button class="btn_ico_prev"><span class="blind">이전</span></button>
+          <h1>ATM 출금</h1>
+          <button class="btn_ico_menu"><span class="blind">전체메뉴</span></button>
+        </div>
+      </header>
+      <!-- // header -->
+      <div id="contents" class="wrap_contents">
+        <div class="contents" data-pageid="HAN303">
+          <section data-roll="HAN">
+            <!-- tab -->
+            <div class="section_tab fnFixedTop" data-height="54">
+              <ul class="wrap_tab_btn type_col">
+                <li><a href="#none" class="btn_tab_box" data-tab="link">국내</a></li>
+                <li class="on"><a href="#none" class="btn_tab_box" data-tab="link">해외</a></li>
+              </ul>
+            </div>
+            <!-- // tab -->
+            <!-- 23.08.23 해외 ATM 인출 관련 콘텐츠 개선 -->
+            <div class="section_cont atm_overseas kv">
+              <!-- KV -->
+              <div class="atm_overseas_top">
+                <h2><strong>트래블로그 카드</strong>가<br><strong class="txt_primary">있다면?</strong></h2>
+              </div>
+              <!-- // KV -->
+              <div class="atm_overseas_info">
+                <div class="wrap_tit type_center">
+                  <h3 class="tit_sub">외화 하나머니로 인출하면<br><strong>인출수수료가 없어요</strong></h3>
+                </div>
+                <ul class="list_benefit type_ico type_full_box">
+                  <li>
+                    <span class="box"><span class="emoji_overseas_4"></span></span>
+                    <div class="item_desc">
+                      <p class="tit">해외인출수수료 무료</p>
+                      <p class="txt"><span>건당 3달러 면제</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="box"><span class="emoji_overseas_5"></span></span>
+                    <div class="item_desc">
+                      <p class="tit">국제브랜드 수수료 무료</p>
+                      <p class="txt">인출 금액의 1% 면제</span></p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="wrap_box_guide">
+                  <p class="tit"><i class="ico_tip"></i>ATM 기기 이용수수료의 경우</p>
+                  <p class="txt_sub">운용사가 부과하는 수수료이기 때문에 기기에 따라 부과될 수 있어요</p>
+                </div>
+                <div class="wrap_box_guide">
+                  <p class="tit"><i class="ico_tip"></i>국내에서는 외화 인출이 안돼요</p>
+                  <p class="txt_sub">국내에서 외화를 인출하고 싶다면 하나은행 환전지갑 서비스를 이용해 주세요.</p>
+                  <div class="wrap_btn">
+                    <a href="#none" class="btn_txt_sm txt_point_5">하나은행 환전지갑 서비스 바로가기</a>
+                  </div>
+                </div>
+                <div class="wrap_btn type_full">
+                  <a href="#none" class="btn_box_m">트래블로그 카드 발급받고 헤택 누리기</a>
+                </div>
+              </div>
+            </div>
+            <div class="section_cont atm_overseas howto">
+              <div class="wrap_tit">
+                <h3 class="tit_sub"><strong class="txt_point_5">트래블로그 카드</strong>로<br><strong>외화 하나머니 인출</strong>하는 방법</h3>
+              </div>
+              <div class="section_tab type_toggle">
+                <ul class="wrap_tab_btn type_col" data-role="tabtoggle" data-target=".tab_cont">
+                  <li class="on"><a href="#tab1" class="btn_tab_box">체크카드</a></li>
+                  <li><a href="#tab2" class="btn_tab_box">신용카드</a></li>
+                </ul>
+              </div>
+              <div class="wrap_tab_container">
+                <!-- 체크카드 선택 시 -->
+                <div id="tab1" class="tab_cont">
+                  <h4 class="blind">체크카드</h4>
+                  <div class="wrap_stepper">
+                    <ol class="stepper_list">
+                      <li>
+                        <div class="tit_stepper">ATM 기기 위치 검색</div>
+                        <div class="item_desc">
+                          <ul class="wrap_box_flex atm_location_link">
+                            <li>
+                              <a href="#none" class="wrap_box bg_white master"><span class="btn_txt">마스터카드 ATM</span></a>
+                            </li>
+                            <li>
+                              <a href="#none" class="wrap_box bg_white union"><span class="btn_txt">유니온페이 ATM</span></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">비밀번호 입력</div>
+                        <div class="item_desc">
+                          <p class="txt_stepper"><strong class="txt_point_5">PIN번호 4자리 요청 시</strong><br>카드 비밀번호 4자리</p>
+                          <p class="txt_stepper"><strong class="txt_point_5">PIN번호 6자리 요청 시</strong><br>카드 비밀번호 4자리 + 00(숫자)</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">인출방법 선택</div>
+                        <div class="item_desc">
+                          <p class="txt_stepper">출금(Withdrawal) 혹은 잔액(Balance) 버튼 터치</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">출금 계좌 유형 선택</div>
+                        <div class="item_desc">
+                          <p class="txt_stepper">보통예금(Savings 혹은 Checking account) 버튼 터치</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">출금 금액 입력</div>
+                        <div class="item_desc">
+                          <p class="txt_stepper"><strong class="txt_point_5">ATM 인출 한도</strong><br>
+                            일 USD 6,000 / 월 USD 10,000<br>
+                            (기기마다 1회 인출 가능 금액 다름)
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">출금 통화 선택</div>
+                        <div class="item_desc">
+                          <p class="txt_stepper"><strong class="txt_point_5">현지 통화 선택</strong><br>
+                            ex. 일본에서 출금 시 JPY 선택
+                          </p>
+                          <div class="wrap_box_guide">
+                            <p class="tit size_s"><i class="ico_ban"></i>USD Conversion, 원화(KRW)를 선택하면 안돼요</p>
+                            <p class="txt_sub">수수료가 부과되거나 거래가 거절돼요.</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">인출결과 확인 후 수령하면 끝!</div>
+                      </li>
+                    </ol>
+                    <div class="wrap_box_guide">
+                      <p class="tit size_s"><i class="ico_tip"></i>ATM 기기마다 진행 순서가 다를 수 있어요.</p>
+                    </div>
+                    <div class="wrap_box_guide">
+                      <p class="tit size_s"><i class="ico_tip"></i>현금 인출 후 카드를 꼭 챙겨주세요!</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 신용카드 선택 시 -->
+                <div id="tab2" class="tab_cont">
+                  <h4 class="blind">신용카드</h4>
+                  <div class="wrap_stepper">
+                    <ol class="stepper_list">
+                      <li>
+                        <div class="tit_stepper">해외결제 설정 확인</div>
+                        <div class="item_desc">
+                          <p class="txt_stepper">하나Pay앱의 ‘내 카드관리’ 화면에서 해외결제 설정 확인</p>
+                          <div class="figure_list">
+                            <p class="noshadow"><img src="../../../../../../resources/nrc/images/HAN/img_atm_overseas_0201.png" alt="하나페이앱 내카드관리 화면 해외결제 설정 이미지"></p>
+                          </div>
+                          <p class="txt_stepper"><strong class="txt_point_5">충전한 외화 하나머니 인출 시</strong><br>‘외화 하나머니’로 설정</p>
+                          <a href="#none" class="btn_round_m type_line"><span class="txt">해외결제 설정하러 가기</span><span class="ico_arr_link_s"></span></a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">ATM 기기 위치 검색</div>
+                        <div class="item_desc">
+                          <ul class="wrap_box_flex atm_location_link">
+                            <li>
+                              <a href="#none" class="wrap_box bg_white master"><span class="btn_txt">마스터카드 ATM</span></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">비밀번호 입력</div>
+                        <div class="item_desc">
+                          <p class="txt_stepper"><strong class="txt_point_5">PIN번호 4자리 요청 시</strong><br>카드 비밀번호 4자리</p>
+                          <p class="txt_stepper"><strong class="txt_point_5">PIN번호 6자리 요청 시</strong><br>카드 비밀번호 4자리 + 00(숫자)</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">인출방법 선택</div>
+                        <div class="item_desc">
+                          <p class="txt_stepper">출금(Withdrawal) 혹은 잔액(Balance) 버튼 터치</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">출금 계좌 유형 선택</div>
+                        <div class="item_desc">
+                          <p class="txt_stepper">보통예금(Savings 혹은 Checking account) 버튼 터치</p>
+                          <div class="wrap_box_guide">
+                            <p class="tit size_s"><i class="ico_tip"></i>출금계좌 유형을 선택할 수 없다면?</p>
+                            <p class="txt_sub">해당 기기에서 인출할 수 없어요.<br>주변의 <strong>은행 ATM 기기</strong>를 이용해 주세요.</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">출금 금액 입력</div>
+                        <div class="item_desc">
+                          <p class="txt_stepper"><strong class="txt_point_5">외화 하나머니 ATM 인출 한도</strong><br>
+                            일 USD 6,000 / 월 USD 10,000<br>
+                            (기기마다 1회 인출 가능 금액 다름)
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">출금 통화 선택</div>
+                        <div class="item_desc">
+                          <p class="txt_stepper"><strong class="txt_point_5">현지 통화 선택</strong><br>
+                            ex. 일본에서 출금 시 JPY 선택
+                          </p>
+                          <div class="wrap_box_guide">
+                            <p class="tit size_s"><i class="ico_ban"></i>USD Conversion, 원화(KRW)를 선택하면 안돼요</p>
+                            <p class="txt_sub">수수료가 부과되거나 거래가 거절돼요.</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tit_stepper">인출결과 확인 후 수령하면 끝!</div>
+                      </li>
+                    </ol>
+                    <div class="wrap_box_guide">
+                      <p class="tit size_s"><i class="ico_tip"></i>ATM 기기마다 진행 순서가 다를 수 있어요.</p>
+                    </div>
+                    <div class="wrap_box_guide">
+                      <p class="tit size_s"><i class="ico_tip"></i>현금 인출 후 카드를 꼭 챙겨주세요!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wrap_banner_box">
+                <a href="#none" class="link_box type_ico ban_FAQ">
+                  <p class="tit_2">더 궁금한 사항이 있다면?</p>
+                  <p class="btn_link">FAQ 바로가기<span class="ico_arr_link_s"></span></p>
+                </a>
+              </div>
+            </div>
+            <!-- // 23.08.23 해외 ATM 인출 관련 콘텐츠 개선 -->
+            <div class="section_cont atm_overseas type_black">
+              <div class="atm_overseas_top">
+                <h2><strong>트래블로그 카드</strong>가<br><strong class="txt_point_1">없다면?</strong></h2>
+                <p>일본, 베트남, 라오스에서는<br>
+                  <strong class="txt_point_1">하나머니로 인출</strong>할 수 있어요
+                </p>
+              </div>
+              <div class="atm_overseas_content">
+                <ol class="list_num type_step">
+                  <li>
+                    <p class="tit">하나머니 앱에서 <br> 하나머니를 <strong class="txt_point_1">GLN머니</strong>로 바꾸세요</p>
+                    <div class="figure_list">
+                      <p class="txt">‘결제/정산 &gt; 해외 GLN 결제’ 메뉴에서 [충전/환급]을 통해 전환이 가능해요</p>
+                      <p class="noshadow small"><img src="../../../../../../resources/nrc/images/HAN/img_atm_overseas_0101.png" alt=""></p>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="tit">현지 ATM 기기에서<br>
+                      <strong class="txt_point_1">[QR코드] 버튼</strong>을 눌러 주세요
+                    </p>
+                    <div class="figure_list">
+                      <p class="noshadow shadow_img"><img src="../../../../../../resources/nrc/images/HAN/img_atm_overseas_0102.png" alt=""></p>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="tit">하나머니 앱에서 GLN 결제 메뉴
+                      진입 후 <strong class="txt_point_1">[ATM]</strong>을 눌러 주세요</p>
+                    <div class="figure_list">
+                      <p class="noshadow shadow_img"><img src="../../../../../../resources/nrc/images/HAN/img_atm_overseas_0103.png" alt=""></p>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="tit">ATM 기기에서 생성된 <strong class="txt_point_1">QR코드</strong>를 찍으면 바로 인출 가능해요</p>
+                    <div class="figure_list">
+                      <p class="noshadow shadow_img"><img src="../../../../../../resources/nrc/images/HAN/img_atm_overseas_0104.png" alt=""></p>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="section_cont atm_overseas type_gnl">
+              <h3>GLN머니는 <strong>아래 브랜드</strong><br><strong>ATM에서만</strong> 인출할 수 있어요</h3>
+              <p><strong>ATM 위치를 확인</strong>해 보세요</p>
+              <ul class="gnl_nation__list">
+                <li>
+                  <div class="gnl_nation__unit">
+                    <em class="flag_fill_purple">일본</em>
+                    <a href="#" class="gnl_jpy"><span class="btn_txt">SEVENBANK</span></a>
+                  </div>
+                </li>
+                <li>
+                  <div class="gnl_nation__unit">
+                    <em class="flag_fill_purple">베트남</em>
+                    <a href="#" class="gnl_vnd"><span class="btn_txt">BIDV</span></a>
+                  </div>
+                </li>
+                <li>
+                  <div class="gnl_nation__unit">
+                    <em class="flag_fill_purple">라오스</em>
+                    <a href="#" class="gnl_laos"><span class="btn_txt">BCEL</span></a>
+                  </div>
+                </li>
+              </ul>
+              <div class="wrap_btn type_full">
+                <a href="#none" class="btn_box_m btn_primary">GLN 서비스 이용하러 가기</a>
+              </div>
+            </div>
+          </section>
+          <!-- // section -->
+        </div>
+      </div>
+      <!-- // contents-->
+      <!-- 6a : confirm -->
+    </main>
+  </body>
+
 </html>

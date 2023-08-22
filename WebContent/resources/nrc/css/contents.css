@@ -2,6 +2,12 @@
 /** mixins / functions **/
 /** image folder 경로 **/
 /* 공통*/
+.link_box.ban_FAQ {
+  background-color: #fff;
+}
+.link_box.ban_FAQ::before {
+  background-image: url("../../gw/images/hmui/ico_faq.png");
+}
 .msg_noresult:before {
   width: 6.4rem;
   height: 6.4rem;
@@ -643,40 +649,6 @@ section > .fnFixedTop.scrolled + div {
 }
 .wrap_tab_btn li.on .btn_tab_box strong {
   color: #13C9BE;
-}
-.section_tab.type_toggle .wrap_tab_btn {
-  padding: .4rem;
-  border: 0;
-  background: #EDF4F4;
-  border-radius: 1.4rem;
-  align-items: center;
-}
-.section_tab.type_toggle .wrap_tab_btn > li {
-  width: 50%;
-}
-.section_tab.type_toggle .wrap_tab_btn > li .btn_tab_box {
-  height: auto;
-  width: 100%;
-  padding: .8rem 1.6rem;
-}
-.section_tab.type_toggle .wrap_tab_btn > li .btn_tab_box span {
-  color: #9DAAB0;
-  font-size: 1.4rem;
-  font-weight: 400;
-}
-.section_tab.type_toggle .wrap_tab_btn > li.on .btn_tab_box {
-  color: #374248;
-  font-weight: 700;
-  border: 1px solid #D4E0E2;
-  border-radius: 1rem;
-  background-color: #fff;
-}
-.section_tab.type_toggle .wrap_tab_btn > li.on .btn_tab_box:after {
-  display: none;
-  font-weight: 700;
-}
-.section_tab.type_toggle .wrap_tab_btn > li.on .btn_tab_box span {
-  color: #69777E;
 }
 .section_tab.type_toggle .wrap_tab_container .tab_cont {
   padding: 2.4rem 0 0 0;
@@ -3651,16 +3623,11 @@ span.ico_logo {
   align-items: center;
 }
 .atm_overseas {
-  background-image: url("../../nrc/images/HAN/bg_atm_overseas.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-color: transparent;
+  position: relative;
 }
 .atm_overseas h3 {
   font-size: 2.4rem;
   font-weight: 300;
-  text-align: center;
 }
 .atm_overseas h3 + p {
   text-align: center;
@@ -3701,128 +3668,25 @@ span.ico_logo {
   background-position: center center;
   background-color: transparent;
 }
-.atm_overseas_location {
+.atm_overseas.kv {
+  z-index: 1;
+  padding-bottom: 0;
+  border-radius: 0 0 2.4rem 2.4rem;
+  background: linear-gradient(153.98deg, #DEF7FF 28.81%, #F5CEFF 75.52%) no-repeat center top;
+  background-size: auto 40rem;
+}
+.atm_overseas_info {
   margin: -6.5rem -2.4rem 0 -2.4rem;
   padding: 8.0rem 2.4rem 4.0rem 2.4rem;
   text-align: center;
   background: #fff;
   border-radius: 2.4rem;
 }
-.atm_overseas_location .atm_location_link {
-  display: flex;
+.atm_overseas_info .list_benefit + .wrap_box_guide {
   margin-top: 2.4rem;
-}
-.atm_overseas_location .atm_location_link > a {
-  background: #F5F8F9;
-  border-radius: 1.2rem;
-  width: 50%;
-  padding: 2.4rem 0;
-  text-align: center;
-}
-.atm_overseas_location .atm_location_link > a:before {
-  content: "";
-  display: block;
-  height: 3.6rem;
-  margin-bottom: .8rem;
-  background-image: url("../../nrc/images/HAN/atm_card_master.png");
-  background-repeat: no-repeat;
-  background-size: auto 36px;
-  background-position: center center;
-  background-color: transparent;
-}
-.atm_overseas_location .atm_location_link > a.union:before {
-  background-image: url("../../nrc/images/HAN/atm_card_union.png");
-}
-.atm_overseas_location .atm_location_link > a .btn_txt {
-  font-size: 1.4rem;
-  color: #252E33;
-}
-.atm_overseas_location .atm_location_link > a + a {
-  margin-left: 1rem;
-}
-.atm_overseas_location .atm_location_link + p {
-  text-align: center;
-  margin-top: 3.2rem;
-  font-size: 1.8rem;
-}
-.atm_overseas_location .wrap_btn.type_full {
-  margin-top: 2.4rem;
-}
-.atm_overseas_info {
-  padding: 4.8rem 0 0 0;
-  text-align: center;
-}
-.atm_overseas_info .wrap_btn {
-  margin-top: 4.0rem;
-}
-.atm_overseas.benefit {
-  background: #fff;
-}
-.atm_overseas.benefit h3 {
-  font-size: 2.0rem;
-  font-weight: 300;
-}
-.atm_overseas.benefit h3 strong {
-  font-size: 2.2rem;
-}
-.atm_overseas.benefit .wrap_box_guide {
-  margin-top: 2.4rem;
-}
-.atm_overseas.benefit .wrap_box_guide .tit {
-  position: relative;
-  padding-left: 3.0rem;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-.atm_overseas.benefit .wrap_box_guide .tit .ico_caution {
-  width: 2.4rem;
-  height: 2.4rem;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  margin-top: -1.2rem;
-}
-.atm_overseas.benefit .wrap_box_guide .txt_sub {
-  padding-left: 3.0rem;
-  line-height: 1.32;
-  color: #536067;
-  font-size: 1.4rem;
-  word-break: keep-all;
-  margin-top: .6rem;
-}
-.atm_overseas.benefit .list_benefit li {
-  background: #F5F8F9;
-  align-items: center;
-}
-.atm_overseas.benefit .list_benefit li .item_desc .tit + .txt {
-  margin-top: .4rem;
-}
-.atm_overseas.benefit .list_benefit li .item_desc .txt {
-  font-size: 1.4rem;
-  color: #69777E;
 }
 .atm_overseas .list_benefit {
   margin-top: 2.4rem;
-  padding-bottom: 0;
-}
-.atm_overseas .list_benefit li {
-  margin-bottom: 1.6rem;
-  background: #fff;
-  border-radius: 1.4rem;
-  padding: 1.6rem;
-}
-.atm_overseas .list_benefit li + li {
-  margin-top: 0;
-}
-.atm_overseas .list_benefit li .box {
-  width: 4.8rem;
-  height: 4.8rem;
-  background: transparent;
-  margin-right: 1.2rem;
-}
-.atm_overseas .list_benefit li .box [class^="emoji_overseas_"] {
-  width: 4.8rem;
-  height: 4.8rem;
 }
 .atm_overseas .list_benefit li .box .emoji_overseas_1 {
   background-image: url("../../nrc/images/HAN/emoji_overseas_1.png");
@@ -3839,34 +3703,70 @@ span.ico_logo {
 .atm_overseas .list_benefit li .box .emoji_overseas_5 {
   background-image: url("../../nrc/images/HAN/emoji_overseas_5.png");
 }
-.atm_overseas .list_benefit li .item_desc {
-  padding-top: 0;
-  text-align: left;
-  line-height: 1.32;
-}
-.atm_overseas .list_benefit li .item_desc .txt {
-  font-size: 1.8rem;
-  line-height: 1.32;
-  color: #536067;
-}
-.atm_overseas .list_benefit li .item_desc .txt strong {
-  color: #252E33;
-}
-.atm_overseas .list_benefit li .item_desc .txt + .txt {
-  margin-top: .8rem;
-}
 .atm_overseas .list_benefit li .item_desc .tit {
-  font-size: 1.8rem;
-  line-height: 1.32;
+  font-size: 1.8rem !important;
 }
-.atm_overseas .list_benefit li .item_desc .tit + .txt .txt_cancel {
-  color: #839097;
-  padding-right: .6rem;
+.atm_overseas.howto {
+  margin-top: -2.4rem;
+  padding-top: calc(4.8rem + 2.4rem);
+  background-color: #F0F7F9;
+}
+.atm_overseas.howto .section_tab {
+  margin-top: 3.2rem;
+}
+.atm_overseas .wrap_stepper {
+  margin-top: 4rem;
+}
+.atm_overseas .wrap_stepper .stepper_list + .wrap_box_guide {
+  margin-top: 2.4rem;
+}
+.atm_overseas .wrap_stepper .stepper_list .txt_stepper + .btn_round_m {
+  margin-top: 1.6rem;
+}
+.atm_overseas .wrap_stepper > .wrap_box_guide {
+  margin-top: 0.8rem;
+}
+.atm_overseas .atm_location_link {
+  display: flex;
+}
+.atm_overseas .atm_location_link > li {
+  flex: 1;
+  max-width: 12.8rem;
+  margin-left: 0.8rem;
+}
+.atm_overseas .atm_location_link > li:first-child {
+  margin-left: 0;
+}
+.atm_overseas .atm_location_link > li:only-child {
+  flex: none !important;
+  width: 12.8rem;
+}
+.atm_overseas .atm_location_link .wrap_box {
+  padding: 1.6rem 0;
+  text-align: center;
+}
+.atm_overseas .atm_location_link .wrap_box::before {
+  content: '';
+  display: block;
+  height: 3.6rem;
+  margin-bottom: 0.8rem;
+  background-image: url("../../nrc/images/HAN/atm_card_master.png");
+  background-repeat: no-repeat;
+  background-size: auto 3.6rem;
+  background-position: center center;
+  background-color: transparent;
+}
+.atm_overseas .atm_location_link .wrap_box.union::before {
+  background-image: url("../../nrc/images/HAN/atm_card_union.png");
+}
+.atm_overseas .wrap_banner_box {
+  margin-top: 4rem;
+  padding: 0;
 }
 .atm_overseas.type_black {
   position: relative;
   background: #323E43;
-  padding-bottom: 2.4rem;
+  padding-bottom: 4.8rem;
 }
 .atm_overseas.type_black:before {
   content: "";
@@ -3955,9 +3855,12 @@ span.ico_logo {
 .atm_overseas.type_gnl .gnl_nation__list > li .gnl_nation__unit {
   position: relative;
   background: #fff;
-  padding: 2.4rem 0;
   border-radius: 1.4rem;
   text-align: center;
+}
+.atm_overseas.type_gnl .gnl_nation__list > li .gnl_nation__unit a {
+  display: block;
+  padding: 2.4rem 0;
 }
 .atm_overseas.type_gnl .gnl_nation__list > li .gnl_nation__unit a:before {
   content: "";
@@ -18085,7 +17988,7 @@ section[data-roll="BAK"] .section_shop .wrap_filter .btn_ico_filter {
 }
 .wrap_toast_recommend p {
   color: #fff;
-  padding-left: 2.8rem;
+  padding-left: calc(2.4rem + 0.8rem);
   line-height: 1;
   background-image: url("../../nrc/images/BAK/ico_recommend_list.svg");
   background-repeat: no-repeat;
