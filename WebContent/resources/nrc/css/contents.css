@@ -3673,7 +3673,7 @@ span.ico_logo {
   padding-bottom: 0;
   border-radius: 0 0 2.4rem 2.4rem;
   background: linear-gradient(153.98deg, #DEF7FF 28.81%, #F5CEFF 75.52%) no-repeat center top;
-  background-size: auto 40rem;
+  background-size: 100% 40rem;
 }
 .atm_overseas_info {
   margin: -6.5rem -2.4rem 0 -2.4rem;
