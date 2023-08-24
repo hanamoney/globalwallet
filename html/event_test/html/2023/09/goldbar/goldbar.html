@@ -232,7 +232,8 @@
 
   /* 팝업 2023.08.24 수정 */ 
   .pop_wrap {display:none;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.7);z-index:120;will-change:opacity;transition:opacity 0.3s;}
-  .pop_wrap .inner_layer {position:relative; padding-top: calc(var(--safeTop) + (calc(150 / var(--width) * 100%))); background: transparent;}
+  /* .pop_wrap .inner_layer {position:relative; padding-top: calc(var(--safeTop) + (calc(150 / var(--width) * 100%))); background: transparent;} */
+  .pop_wrap .inner_layer {position:relative; top: 50% !important; background: transparent; transform: translateY(-60%) !important;}
   /* .pop_wrap .inner_layer:not(.load){background:url('../../../../images/2023/09/goldbar/white_gd.png') no-repeat top center;background-size:contain;} */
   .pop_wrap .inner_layer p {text-align: center; font-size: 2.8rem; font-weight: 700; line-height: 1.28; letter-spacing: -0.14rem;}
   .pop_wrap .inner_layer p span {background: linear-gradient(174deg, #FFDF38 0%, #F99B0D 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; -webkit-filter: drop-shadow(0 0.4rem 0.4rem rgba(0, 0, 0, 0.25)); filter: drop-shadow(0 0.4rem 0.4rem rgba(0, 0, 0, 0.25));}
@@ -241,7 +242,6 @@
   .pop_wrap .inner_layer.load .msg p.loading {display:block;}
   .pop_wrap .inner_layer .msg p,
   .pop_wrap .inner_layer .msg p span {font-size: 3.2rem; letter-spacing: -0.16rem;}
-  .pop_wrap .inner_layer.gold {padding-top: 5.3rem;}
   /* .pop_wrap .inner_layer.gold .msg {padding-top: 6.66rem; background: url('../../../../images/2023/09/goldbar/seasonal/img_goldbar_txt.png') no-repeat top center; background-size: auto 6.66rem;} */
   .pop_wrap .inner_layer.gold .msg p {font-size: inherit;}
   .pop_wrap .inner_layer.gold .msg p span {font-size: 2.8rem; font-weight: 400;}
