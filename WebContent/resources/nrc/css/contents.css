@@ -11657,7 +11657,7 @@ img.mascot {
   }
   90% {
     transform: translate(0, 0) scale(1);
-    opacity: 0;
+    opacity: 0.5;
   }
   100% {
     transform: translate(0, 0) scale(1);
@@ -11666,6 +11666,7 @@ img.mascot {
 }
 @keyframes pinchDot2 {
   0% {
+    transform: translate(0, 0) scale(1);
     opacity: 0;
   }
   5% {
@@ -11682,7 +11683,7 @@ img.mascot {
   }
   90% {
     transform: translate(0, 0) scale(1);
-    opacity: 0;
+    opacity: 0.5;
   }
   100% {
     transform: translate(0, 0) scale(1);
