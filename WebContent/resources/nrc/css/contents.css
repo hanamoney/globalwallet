@@ -11551,6 +11551,324 @@ img.mascot {
   background-position: center center;
   background-color: transparent;
 }
+.wrap_haha_datail.pinch .haha_detail_top {
+  height: auto;
+  padding-bottom: 0;
+}
+.wrap_haha_datail.pinch .visual_eve_pinch {
+  position: relative;
+  width: 17.6rem;
+  height: 20rem;
+  margin: 4.0rem auto 0;
+  background-image: url("../../nrc/images/EVE/img_pinch_bg.png");
+  background-repeat: no-repeat;
+  background-size: auto 20rem;
+  background-position: center top;
+  background-color: transparent;
+}
+.wrap_haha_datail.pinch .visual_eve_pinch .pinch_txt {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10.4rem;
+  height: 18.8rem;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  background-image: url("../../nrc/images/EVE/img_pinch_txt.png");
+  background-repeat: no-repeat;
+  background-size: 5.9rem auto;
+  background-position: 2.4rem 3rem;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+  animation: pinchText 3s 0.3s 3;
+}
+.wrap_haha_datail.pinch .visual_eve_pinch .pinch_dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4.0rem;
+  height: 4.0rem;
+  transform: translate(-50%, -50%);
+}
+.wrap_haha_datail.pinch .visual_eve_pinch .pinch_dot::before, .wrap_haha_datail.pinch .visual_eve_pinch .pinch_dot::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  background-color: #13C9BE;
+  opacity: 0;
+  transform: translate(0, 0);
+  animation: pinchDot1 3s 0.3s 3;
+}
+.wrap_haha_datail.pinch .visual_eve_pinch .pinch_dot::before {
+  bottom: 0;
+  left: 0;
+}
+.wrap_haha_datail.pinch .visual_eve_pinch .pinch_dot::after {
+  top: 0;
+  right: 0;
+  animation: pinchDot2 3s 0.3s 3;
+}
+@keyframes pinchText {
+  0% {
+    background-size: 5.9rem auto;
+    background-position: 2.4rem 3.0rem;
+  }
+  5% {
+    background-size: 5.9rem auto;
+    background-position: 2.4rem 3.0rem;
+  }
+  50% {
+    background-size: 10.6rem auto;
+    background-position: 1.4rem -1.6rem;
+  }
+  55% {
+    background-size: 10.6rem auto;
+    background-position: 1.4rem -1.6rem;
+  }
+  90% {
+    background-size: 5.9rem auto;
+    background-position: 2.4rem 3.0rem;
+  }
+  100% {
+    background-size: 5.9rem auto;
+    background-position: 2.4rem 3.0rem;
+  }
+}
+@keyframes pinchDot1 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  5% {
+    transform: translate(0, 0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-1.8rem, 1.8rem);
+    opacity: 0.8;
+  }
+  55% {
+    transform: translate(-1.8rem, 1.8rem);
+    opacity: 0.8;
+  }
+  90% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+@keyframes pinchDot2 {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    transform: translate(0, 0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(1.8rem, -1.8rem);
+    opacity: 0.8;
+  }
+  55% {
+    transform: translate(1.8rem, -1.8rem);
+    opacity: 0.8;
+  }
+  90% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+.wrap_haha_datail.pinch .haha_detail_list {
+  padding-top: 4.0rem;
+  text-align: center;
+}
+.wrap_haha_datail.pinch .haha_detail_list .img_downward {
+  margin-top: 2.4rem;
+  padding-bottom: 1.8rem;
+  color: #69777E;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background-image: url("../../nrc/images/EVE/img_downward.png");
+  background-repeat: no-repeat;
+  background-size: 1.7rem auto;
+  background-position: center bottom;
+  background-color: transparent;
+}
+.wrap_haha_datail.pinch .haha_detail_list .small {
+  margin-top: 4.8rem;
+  font-size: 1.2rem;
+}
+.wrap_haha_datail.pinch .haha_detail_list .small em {
+  font-weight: 700;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box {
+  width: 16.4rem;
+  margin: 2.4rem auto;
+  padding: 0.8rem 0.4rem 0.4rem;
+  border-radius: 2rem;
+  background-color: #E7FAF9;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .quiz {
+  position: relative;
+  color: #fff;
+  font-size: 4.4rem;
+  line-height: 1.28;
+  font-weight: 700;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .quiz span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  color: #252E33;
+  font-size: 0.8rem;
+  word-break: keep-all;
+  transform: translate(-50%, -50%);
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box {
+  margin-top: 1.2rem;
+  padding: 0.8rem;
+  border-radius: 1.6rem;
+  background-color: #fff;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box p {
+  padding: 0.8rem 1.6rem;
+  border-radius: 1.0rem;
+  background-color: #325677;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.28;
+  font-weight: 700;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box p::before {
+  content: '';
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: -2.0rem auto 0.4rem;
+  background-image: url("../../nrc/images/EVE/img_quiz.png");
+  background-repeat: no-repeat;
+  background-size: 1.6rem;
+  background-position: center center;
+  background-color: transparent;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul {
+  margin-top: 1.1rem;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li {
+  position: relative;
+  margin-top: 0.4rem;
+  border-radius: 1.0rem;
+  font-size: 0;
+  text-align: left;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li button {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2.9rem;
+  padding-left: 1.0rem;
+  border-radius: 1rem;
+  background: #F5F8F9 url("../../nrc/images/EVE/flag_ghana.png") no-repeat right center;
+  background-size: 4.0rem 2.9rem;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li button span {
+  display: inline-block;
+  padding-right: 0.4rem;
+  font-size: 1rem;
+  line-height: 1.28;
+  font-weight: 700;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li button span:first-child {
+  color: #13C9BE;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li button.egypt {
+  background-image: url("../../nrc/images/EVE/flag_egypt.png");
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li button.tailand {
+  background-image: url("../../nrc/images/EVE/flag_tailand.png");
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li button.southafrica {
+  background-image: url("../../nrc/images/EVE/flag_southafrica.png");
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li button.india {
+  background-image: url("../../nrc/images/EVE/flag_india.png");
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li button.laos {
+  background-image: url("../../nrc/images/EVE/flag_laos.png");
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li .tip {
+  position: relative;
+  display: none;
+  margin-top: -1.0rem;
+  padding: 1.8rem 1.0rem 0.8rem;
+  border-radius: 0 0 1.0rem 1.0rem;
+  background-color: #EC4361;
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.28;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li .tip em {
+  display: block;
+  padding-bottom: 0.2rem;
+  font-size: 1.0rem;
+  font-weight: 700;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li:first-child {
+  margin-top: 0;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li.correct::before, .wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li.wrong::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border: 2px solid #EC4361;
+  border-radius: 1.0rem;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li.correct::after, .wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li.wrong::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -0.55rem;
+  right: calc(100% - 1.3rem);
+  z-index: 2;
+  width: 2.8rem;
+  height: 2.8rem;
+  background-image: url("../../nrc/images/EVE/img_wrong.png");
+  background-repeat: no-repeat;
+  background-size: 2.7rem auto;
+  background-position: right top;
+  background-color: transparent;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li.correct::before {
+  border-color: #13C9BE;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li.correct::after {
+  width: 3.5rem;
+  background-image: url("../../nrc/images/EVE/img_correct.png");
+  background-size: 3.5rem auto;
+}
+.wrap_haha_datail.pinch .haha_detail_list .quiz_box .box ul li.correct .tip {
+  background-color: #13C9BE;
+}
 .wrap_haha_datail .haha_detail_bottom {
   position: relative;
   padding: 4rem 2.4rem 0;
@@ -11586,6 +11904,10 @@ img.mascot {
 }
 .wrap_haha_datail .haha_detail_bottom .btn_txt_s {
   color: #00928F;
+}
+.AOS_old .wrap_haha_datail.pinch .visual_eve_pinch .pinch_txt,
+.AOS_old .wrap_haha_datail.pinch .visual_eve_pinch .pinch_dot::before, .AOS_old .wrap_haha_datail.pinch .visual_eve_pinch .pinch_dot::after {
+  animation: none;
 }
 .hahanews_container {
   padding-bottom: 0 !important;
@@ -17389,16 +17711,14 @@ section[data-roll].section_exchange-wallet .bg_botttom {
   z-index: 99;
   left: 0;
   bottom: -1px;
+  padding-bottom: calc(var(--safeBottom));
   width: 100%;
+  background: #fff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 32px 32px 0px 0px;
 }
 #mainFooter > ul {
   display: flex;
-  position: relative;
-  z-index: 99;
-  padding-bottom: calc(var(--safeBottom));
-  border-radius: 3.2rem 3.2rem 0 0;
-  background: #fff;
-  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
 }
 #mainFooter > ul li {
   position: relative;
@@ -17482,43 +17802,9 @@ section[data-roll].section_exchange-wallet .bg_botttom {
 #mainFooter > ul li a.on.navi:before {
   background-image: url("../../nrc/images/MAI/ico-main__navi_new_on.png");
 }
-#mainFooter .pay_area {
-  position: absolute;
-  top: -4.8rem;
-  left: 0;
-  width: 100%;
-  padding-bottom: 4.0rem;
-  border-radius: 3.2rem 3.2rem 0 0;
-  background-color: #13C9BE;
-  transform: translateY(100%);
-  transition: transform 0.5s cubic-bezier(0.12, 0.86, 0.21, 1);
-}
-#mainFooter .pay_area a {
-  display: block;
-  width: 100%;
-  height: 4.8rem;
-  padding: 0.8rem 0;
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: center;
-}
-#mainFooter .pay_area a span {
-  display: inline-block;
-  padding-left: 4.0rem;
-  line-height: 3.2rem;
-  background-image: url("../../gw/images/hmui/btn_ico_pay.svg");
-  background-repeat: no-repeat;
-  background-size: 3.2rem;
-  background-position: left center;
-  background-color: transparent;
-}
-#mainFooter .pay_area.show {
-  transform: translateY(0);
-}
 .btn_top {
   position: fixed;
-  bottom: calc(var(--safeBottom) + 6.4rem + 4.8rem + 2.0rem);
+  bottom: calc(var(--safeBottom) + 9.6rem);
   right: 1.6rem;
   opacity: 0;
   transition: all .5s;
@@ -17554,10 +17840,9 @@ section[data-roll].section_exchange-wallet .bg_botttom {
 section[data-roll="MAI"] {
   background: #F5F8F9;
   padding-top: 0;
-  padding-bottom: calc(var(--safeBottom) + 6.4rem + 4.8rem);
 }
 .main-top__section {
-  height: calc(40.2rem - var(--safeTop) - 5rem);
+  height: 29rem;
   background: #f5f8f9;
 }
 .main-contents__section {
@@ -22146,12 +22431,34 @@ section[data-roll="LOG"] + .section_faq.type_category.travlog_manual_faq {
   font-weight: 700;
   font-size: 1.4rem;
 }
+.contents_logreport .wrap_logreport_top > .inner .tit_wrap .btn_select {
+  position: relative;
+  padding: 0.3rem 4.0rem 0.1rem 0;
+  border-bottom: 2px solid #252E33;
+}
+.contents_logreport .wrap_logreport_top > .inner .tit_wrap .btn_select::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.6rem;
+  right: 0;
+  width: 2.0rem;
+  height: 2.0rem;
+  background-color: #000;
+  -webkit-mask: url("../../gw/images/hmui/ico_arr_down.svg") no-repeat center;
+  mask: url("../../gw/images/hmui/ico_arr_down.svg") no-repeat center;
+}
+.contents_logreport .wrap_logreport_top > .inner .tit_wrap .btn_select em {
+  font-size: 2rem;
+  font-weight: 700;
+}
 .contents_logreport .wrap_logreport_top > .inner .tit_wrap .tit {
   padding: 1.6rem 0 .8rem;
   color: #252E33;
   font-size: 2.8rem;
   line-height: 1.28;
   font-weight: 300;
+  text-align: center;
 }
 .contents_logreport .wrap_logreport_top > .inner .tit_wrap .desc {
   color: #536067;
@@ -22461,6 +22768,9 @@ section[data-roll="LOG"] + .section_faq.type_category.travlog_manual_faq {
 .contents_logreport .wrap_logreport_con {
   padding: 4rem 2.4rem;
 }
+.contents_logreport .wrap_logreport_con:last-child {
+  padding-bottom: calc(var(--safeBottom) + 6.4rem);
+}
 .contents_logreport .wrap_logreport_con.bg01 {
   background: linear-gradient(135deg, #DCF5FD 0%, #EFF8D8 100%);
 }
@@ -22469,23 +22779,38 @@ section[data-roll="LOG"] + .section_faq.type_category.travlog_manual_faq {
 }
 .contents_logreport .wrap_logreport_con.bg03 {
   background: linear-gradient(135deg, #FCEAE6 0%, #FAE4FB 100%);
-  padding-bottom: calc(var(--safeBottom) + 6.4rem);
 }
-.contents_logreport .wrap_logreport_con > .tit {
+.contents_logreport .wrap_logreport_con.bg04 {
+  background-color: #EBF5F5;
+}
+.contents_logreport .wrap_logreport_con[class*="bg"] .logreport_box {
+  background-color: #fff;
+}
+.contents_logreport .wrap_logreport_con .tit {
   padding-bottom: 2.4rem;
   color: #252E33;
   font-size: 2.4rem;
   font-weight: 300;
   text-align: center;
 }
-.contents_logreport .wrap_logreport_con > .desc {
+.contents_logreport .wrap_logreport_con h3.tit {
+  padding-bottom: 0;
+  font-size: 2.0rem;
+}
+.contents_logreport .wrap_logreport_con h3.tit em {
+  font-weight: 700;
+}
+.contents_logreport .wrap_logreport_con .desc {
   padding-top: 2.4rem;
   color: #839097;
   font-size: 1.6rem;
   text-align: center;
 }
-.contents_logreport .wrap_logreport_con > .desc span {
+.contents_logreport .wrap_logreport_con .desc span {
   font-weight: 300;
+}
+.contents_logreport .wrap_logreport_con .wrap_btn_center {
+  margin-top: 2.4rem;
 }
 .contents_logreport .wrap_logreport_con .wrap_travellog_list .travellog_list.type2 .list .con {
   width: calc(100% - 5.6rem);
@@ -22531,6 +22856,165 @@ section[data-roll="LOG"] + .section_faq.type_category.travlog_manual_faq {
 .contents_logreport .wrap_logreport_con .country_slide2 .swiper-pagination {
   margin-top: 1.6rem;
 }
+.contents_logreport .info_con .img {
+  width: 12.0rem;
+  height: 10.4rem;
+  margin: 0 auto 1.6rem;
+}
+.contents_logreport .info_con .rank_num {
+  padding-bottom: 0.2rem;
+  color: #13C9BE;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.contents_logreport .info_con .name {
+  font-size: 4.0rem;
+  font-weight: 700;
+}
+.contents_logreport .info_con .summary {
+  padding-top: 0.6rem;
+  color: #69777E;
+  font-size: 1.8rem;
+}
+.contents_logreport .info_con .summary em {
+  font-weight: 700;
+}
+.contents_logreport .info_con .logreport_box {
+  margin-top: 3.2rem;
+}
+.contents_logreport .thumb_img {
+  margin-top: 3.2rem;
+  border-radius: 1.4rem;
+}
+.contents_logreport .logreport_box {
+  counter-reset: reportListNum;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2.4rem;
+  background-color: #F5F8F9;
+}
+.contents_logreport .logreport_box .report_list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.8rem;
+}
+.contents_logreport .logreport_box .report_list li {
+  counter-increment: reportListNum;
+  position: relative;
+  width: 100%;
+  margin-top: 0.8rem;
+  padding-left: 2.6rem;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+.contents_logreport .logreport_box .report_list li:first-child {
+  margin-top: 0;
+}
+.contents_logreport .logreport_box .report_list li::before {
+  content: counter(reportListNum);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.8rem;
+  height: 2.0rem;
+  color: #13C9BE;
+}
+.contents_logreport .logreport_box .report_list + .report_list {
+  padding-right: 0;
+  padding-left: 0.8rem;
+}
+.contents_logreport .logreport_swiper {
+  padding-bottom: 2.4rem;
+  text-align: center;
+}
+.contents_logreport .logreport_swiper .info_con {
+  padding-top: 4.0rem;
+}
+.contents_logreport .logreport_swiper .wrap_travellog_list {
+  padding-top: 2.4rem;
+}
+.contents_logreport .logreport_swiper .wrap_travellog_list .travellog_list .list {
+  text-align: left;
+}
+.contents_logreport .logreport_swiper .swiper-pagination {
+  margin-top: 3.2rem;
+}
+.contents_logreport .fav_city {
+  padding: 4.0rem 0 0;
+}
+.contents_logreport .fav_city .tit {
+  padding: 0 2.4rem;
+}
+.contents_logreport .fav_city .logreport_swiper {
+  padding-bottom: 0;
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-slide {
+  padding: 0 2.4rem 10.2rem;
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-slide::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 11.8rem;
+  background-image: url("../../nrc/images/LOG/report/img_fav_japan.png");
+  background-repeat: no-repeat;
+  background-size: auto 11.8rem;
+  background-position: right bottom;
+  background-color: transparent;
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-slide.japan::after {
+  background-image: url("../../nrc/images/LOG/report/img_fav_japan.png");
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-slide.usa::after {
+  background-image: url("../../nrc/images/LOG/report/img_fav_usa.png");
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-slide.vietnam::after {
+  background-image: url("../../nrc/images/LOG/report/img_fav_vietnam.png");
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-slide.france::after {
+  background-image: url("../../nrc/images/LOG/report/img_fav_france.png");
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-slide.italy::after {
+  background-image: url("../../nrc/images/LOG/report/img_fav_italy.png");
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-slide.uk::after {
+  background-image: url("../../nrc/images/LOG/report/img_fav_uk.png");
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-slide.spain::after {
+  background-image: url("../../nrc/images/LOG/report/img_fav_spain.png");
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-slide.tailand::after {
+  background-image: url("../../nrc/images/LOG/report/img_fav_tailand.png");
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-slide.germany::after {
+  background-image: url("../../nrc/images/LOG/report/img_fav_germany.png");
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-slide.austria::after {
+  background-image: url("../../nrc/images/LOG/report/img_fav_austria.png");
+}
+.contents_logreport .fav_city .logreport_swiper .swiper-pagination {
+  margin-top: 0;
+  bottom: 4.8rem;
+}
+.contents_logreport .reco_city .logreport_swiper {
+  max-width: 41.4rem;
+}
+.contents_logreport .travel_expenses {
+  background-image: url("../../nrc/images/LOG/report/bg_travel_expenses.png");
+  background-repeat: no-repeat;
+  background-size: auto 48.7rem;
+  background-position: center bottom -3.4rem;
+  background-color: transparent;
+}
 .ico_cur_egp {
   background-image: url("../../nrc/images/LOG/ico_cur_egp.png");
 }
@@ -22550,12 +23034,45 @@ section[data-roll="LOG"] + .section_faq.type_category.travlog_manual_faq {
   background-image: url("../../nrc/images/LOG/ico_cur_tai.png");
 }
 @media screen and (max-width: 359px) {
+  .contents_logreport .wrap_logreport_top > .inner .flip_wrap {
+    padding: 0.8rem;
+  }
+  .contents_logreport .wrap_logreport_top > .inner .flip_wrap .txt {
+    top: 0.9rem;
+    font-size: 2rem;
+  }
+  .contents_logreport .wrap_logreport_top > .inner .flip_wrap .flip {
+    width: 70%;
+  }
+  .contents_logreport .wrap_logreport_top > .inner .flip_wrap .flip .name {
+    font-size: 2rem;
+    line-height: 4.4rem;
+  }
+  .contents_logreport .wrap_logreport_top > .inner .flip_wrap .flip .name span {
+    background-size: 2.4rem auto;
+  }
+  .contents_logreport .logreport_box {
+    padding: 1.6rem;
+  }
+  .contents_logreport .logreport_box .report_list {
+    padding-right: 0.4rem;
+  }
+  .contents_logreport .logreport_box .report_list li {
+    padding-left: 1.9rem;
+    font-size: 1.3rem;
+    white-space: normal;
+  }
+  .contents_logreport .logreport_box .report_list li::before {
+    width: 1.5rem;
+  }
+  .contents_logreport .logreport_box .report_list + .report_list {
+    padding-left: 0.4rem;
+  }
+}
+@media screen and (max-width: 359px) {
   .wrap_travellog_list .travellog_list .tit_year .ico_tooltip {
     width: 2rem;
     height: 2rem;
-  }
-  .contents_logreport .wrap_logreport_top > .inner .flip_wrap .flip {
-    width: 140px;
   }
   .contents_travshop .wrap_travshop_tab .tab a {
     width: 100%;
