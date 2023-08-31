@@ -11601,7 +11601,6 @@ img.mascot {
   background-color: #13C9BE;
   opacity: 0;
   transform: translate(0, 0);
-  animation: pinchDot1 3s 0.3s 3;
 }
 .wrap_haha_datail.pinch .visual_eve_pinch .pinch_dot::before {
   bottom: 0;
@@ -11610,6 +11609,14 @@ img.mascot {
 .wrap_haha_datail.pinch .visual_eve_pinch .pinch_dot::after {
   top: 0;
   right: 0;
+}
+.wrap_haha_datail.pinch .visual_eve_pinch.transition .pinch_txt {
+  animation: pinchText 3s 0.3s 3;
+}
+.wrap_haha_datail.pinch .visual_eve_pinch.transition .pinch_dot::before {
+  animation: pinchDot1 3s 0.3s 3;
+}
+.wrap_haha_datail.pinch .visual_eve_pinch.transition .pinch_dot::after {
   animation: pinchDot2 3s 0.3s 3;
 }
 @keyframes pinchText {
