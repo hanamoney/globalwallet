@@ -11581,7 +11581,7 @@ img.mascot {
   background-position: 2.4rem 3rem;
   background-color: transparent;
   transform: translate(-50%, -50%);
-  animation: pinchText 3s 0.3s 3;
+  /* animation: pinchText 3s 0.3s 3; */
 }
 .wrap_haha_datail.pinch .visual_eve_pinch .pinch_dot {
   position: absolute;
